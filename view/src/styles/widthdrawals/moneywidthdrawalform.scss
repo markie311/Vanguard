@@ -1,0 +1,174 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#moneywidthdrawalform {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.moneywidthdrawalform-amountfieldheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+}
+.moneywidthdrawalform-fieldheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.moneywidthdrawalform-field {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:70%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+text-align:center;
+left:-1vh;
+}
+.moneywidthdrawalform-passwordfield {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:100%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+text-align:center;
+left:-1vh;
+}
+//// widthdraw button container 
+#moneywidthdrawalform-widthdrawbuttoncontainer {
+position:relative;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:50px 10px;
+}
+#moneywidthdrawalform-widthdrawbutton {
+position:relative;
+border-radius:20px;
+height:9vh;
+width:auto;
+font: auto {
+family: $sub-font;
+size:14px;
+weight:900;
+}
+color:black;
+letter-spacing:2px;
+outline-style:none;
+padding:5px 30px;
+}
+///// widthdrawal response message container
+#moneywidthdrawalform-widthdrawalresponsemessagecontainer {
+position:relative;
+padding:0px 10px;
+display:none;
+}
+#moneywidthdrawalform-widthdrawalresponsemessage {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+}
+}
+@media only screen and (min-width:1200px) {
+#moneywidthdrawalform {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.moneywidthdrawalform-amountfieldheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+}
+.moneywidthdrawalform-fieldheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+margin-left:1vh;
+}
+.moneywidthdrawalform-field {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:12%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+text-align:center;
+}
+.moneywidthdrawalform-passwordfield {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:80%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+text-align:center;
+}
+//// widthdraw button container 
+#moneywidthdrawalform-widthdrawbuttoncontainer {
+position:relative;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:50px 20px;
+}
+#moneywidthdrawalform-widthdrawbutton {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+letter-spacing:2px;
+outline-style:none;
+padding:5px 40px;
+right:1vh;
+}
+///// widthdrawal response message container
+#moneywidthdrawalform-widthdrawalresponsemessagecontainer {
+position:relative;
+padding:20px 10px;
+display:none;
+}
+#moneywidthdrawalform-widthdrawalresponsemessage {
+position:relative;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+}
+}

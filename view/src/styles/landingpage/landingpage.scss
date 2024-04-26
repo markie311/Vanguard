@@ -1,0 +1,277 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width: 600px) {
+#landingpage {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#landingpage-navigationbargraphcontainer {
+position:absolute;
+background-color:rgba(0,0,0,0.8);
+border-top:0.1vh solid white;
+border-right:0.1vh solid white;
+border-bottom:0.1vh solid white;
+height:100vh;
+margin-left:auto;
+margin-right:auto;
+z-index:1;
+transition:1s ease;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar {
+width: 3px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#landingpage-navigationbargraphheadercontainer {
+position:relative;
+height:5%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+}
+#landingpage-navigationbargraphclosebutton {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:right;
+letter-spacing:1px;
+top:2vh;
+}
+#landingpage-navigationbargraphcomponentcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+#landingpage-widthdrawalsnavigationcontainer {
+position:absolute;
+background-color:rgba(0,0,0,0.8);
+border-top:0.1vh solid white;
+border-right:0.1vh solid white;
+border-bottom:0.1vh solid white;
+height:100vh;
+margin-left:auto;
+margin-right:auto;
+z-index:1;
+transition:1s ease;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar {
+width: 3px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#landingpage-widthdrawalsnavigationheadercontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#landingpage-widthdrawalsnavigationcontainerclosebutton {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:2vh;
+}
+#landingpage-widthdrawalsnavigationcontainer-widthdrawalsnavigationcomponentcontainer {
+position:relative;
+height:90%;
+width:100%;
+padding:0;
+}
+#landingpage-content {
+position:absolute;
+background-color:rgba(0,0,0,0.5);
+height:100vh;
+width:100vw;
+padding:0;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#landingpage-content::-webkit-scrollbar {
+display: none;
+}
+#landingpage-content {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
+}
+@media only screen and (min-width: 1200px) {
+#landingpage {
+position:relative;
+height:100vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow:hidden;
+}
+#landingpage-navigationbargraphcontainer {
+position:absolute;
+background-color:rgba(0,0,0, 0.9);
+border-top:0.1vh solid white;
+border-right:0.1vh solid white;
+border-bottom:0.1vh solid white;
+height:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-y:scroll;
+overflow-x:scroll;
+transition:1s ease;
+z-index:1;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar {
+width: 3px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#landingpage-navigationbargraphcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#landingpage-navigationbargraphheadercontainer {
+position:relative;
+height:5%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+}
+#landingpage-navigationbargraphclosebutton {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:white;
+letter-spacing:1px;
+user-select:none;
+top:1vh;
+}
+#landingpage-navigationbargraphcomponentcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+#landingpage-widthdrawalsnavigationcontainer {
+position:absolute;
+background-color:rgba(0,0,0,0.8);
+border-top:0.1vh solid white;
+border-right:0.1vh solid white;
+border-bottom:0.1vh solid white;
+height:100vh;
+margin-left:auto;
+margin-right:auto;
+z-index:1;
+transition:1s ease;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar {
+width: 3px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#landingpage-widthdrawalsnavigationcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#landingpage-widthdrawalsnavigationheadercontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#landingpage-widthdrawalsnavigationcontainerclosebutton {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:white;
+letter-spacing:1px;
+user-select:none;
+top:1vh;
+}
+#landingpage-widthdrawalsnavigationcontainer-widthdrawalsnavigationcomponentcontainer {
+position:relative;
+height:90%;
+width:100%;
+padding:0;
+}
+#landingpage-content {
+position:absolute;
+background-color:rgba(0,0,0,0.5);
+height:100vh;
+padding:0;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#landingpage-navigationbarclosebutton {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+text-align:right;
+letter-spacing:1px;
+}
+#landingpage-content::-webkit-scrollbar {
+display: none;
+}
+#landingpage-content {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
+}
+  

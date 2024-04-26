@@ -1,0 +1,128 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#transactionfunds {
+position:relative;
+height:auto;
+padding:0;
+}
+/// modal container 
+#transactionfunds-transactionfunds-modalcontainer {
+position:relative;
+height: 0vh;
+width:100%;
+overflow:hidden;
+transition:1s ease;
+}
+/// navigation container 
+#transactionfunds-transactionfunds-modalcontainer-navigationcontainer {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:10%;
+width:100%;
+overflow:hidden;
+}
+/// content container 
+#transactionfunds-transactionfunds-modalcontainer-contentcontainer {
+border:0.1vh solid white;
+height:90%;
+width:100%;
+}
+#transactionfunds-transactionfundsamountcontainer {
+position:relative;
+height:10vh;
+display:flex;
+justify-content:space-between;
+padding:10px 10px;
+}
+.transactionfunds-transactionfundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:1vh;
+}
+.transactionfunds-transactionfundsamountheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:red;
+top:1vh;
+}
+}
+@media only screen and (min-width:1200px) {
+#transactionfunds {
+position:relative;
+height:auto;
+padding:0;
+}
+/// modal container 
+#transactionfunds-transactionfunds-modalcontainer {
+position:relative;
+height: 0vh;
+width:100%;
+overflow:hidden;
+transition:1s ease;
+}
+/// navigation container 
+#transactionfunds-transactionfunds-modalcontainer-navigationcontainer {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:10%;
+width:100%;
+overflow:hidden;
+}
+.transaction-transactiongraphnavigationbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto { 
+family: $sub-font; 
+}
+color:white;
+margin-left:1vh;
+padding:10px 50px;
+}
+/// content container 
+#transactionfunds-transactionfunds-modalcontainer-contentcontainer {
+border:0.1vh solid white;
+height:90%;
+width:100%;
+}
+#transactionfunds-transactionfundsamountcontainer {
+position:relative;
+height:10vh;
+display:flex;
+justify-content:space-between;
+padding:15px 20px;
+}
+.transactionfunds-transactionfundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:white;
+top:1vh;
+user-select:none;
+}
+.transactionfunds-transactionfundsamountheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:red;
+top:1vh;
+}
+}

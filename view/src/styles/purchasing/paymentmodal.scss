@@ -1,0 +1,702 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#paymentmodal {
+position:relative;
+height:auto;
+width:100%;
+padding:0;
+}
+#paymentmodal-gridcontainer {
+position:relative;
+border:0.1vh solid white;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#paymentmodal-gridcontainer-paymentcontainer {
+position:relative;
+height:auto;   
+padding:0;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+height:auto;
+padding:20px 5px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-merchandiselistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:70px 5px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-pricelistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:15px 5px;  
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-weightlistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;   
+padding:15px 5px;  
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalheaderindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-moneyheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-moneyamountheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglecontainer {
+position:relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:60%;
+overflow:hidden;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:100%;
+width:50%;
+transition: margin-left 0.5s ease;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglecontainer {
+position:relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:60%;
+overflow:hidden;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:100%;
+width:50%;
+transition: margin-left 0.5s ease;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-fundsheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-fundsamountheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalsigncontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:flex-end; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalamounttobepaidcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;  
+}
+//// payment response message container 
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 30px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:tomato;
+letter-spacing:3px;
+top:2.1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+display:none;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionscontainer {
+position:relative;
+border:0.1vh solid white;
+padding:10px 10px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentbuttoncontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:center;
+align-items:center; 
+padding:30px 30px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:auto;
+width:50vh;
+font: auto {
+family: $sub-font;
+size:16px;
+weight:900;
+}
+color:white;
+padding:5px 20px;
+letter-spacing:1px;
+margin-top:3vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentloadingspinner {
+position:relative;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-cantproceestopaymentheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:tomato;
+letter-spacing:3px;
+top:2vh;
+right:2vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-merchandiselistheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-pricelistheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center; 
+top:1vh; 
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-weightlistheaderindication {
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindication {
+position:relative;
+width:auto;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;
+}
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer {
+position:relative;
+height:50%;
+padding:80px 15px;
+}
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-purchaseheader {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraphheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+margin-top:5vh;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraph {
+position: relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:1vh;
+width:90%;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraphindication{
+position:relative;
+background-color:white;
+border-radius:20px;
+height:100%;
+width:90%;
+}
+}
+@media only screen and (min-width:1200px) {
+#paymentmodal {
+position:relative;
+height:auto;
+width:100%;
+padding:0;
+}
+#paymentmodal-gridcontainer {
+position:relative;
+border:0.1vh solid white;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#paymentmodal-gridcontainer-paymentcontainer {
+position:relative;
+height:auto;   
+padding:0;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+height:auto;
+padding:20px 5px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-merchandiselistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:70px 5px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-pricelistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:15px 5px;  
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-weightlistcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;   
+padding:15px 5px;  
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalheaderindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-moneyheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-moneyamountheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglecontainer {
+position:relative;
+border:0.1vh solid white;
+border-radius:40px;
+height:5vh;
+width:10%;
+overflow:hidden;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:100%;
+width:50%;
+transition: margin-left 0.5s ease;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglecontainer {
+position:relative;
+border:0.1vh solid white;
+border-radius:40px;
+height:5vh;
+width:10%;
+overflow:hidden;
+}
+#paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:100%;
+width:50%;
+transition: margin-left 0.5s ease;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-fundsheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-fundsamountheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalsigncontainer {
+position:relative;
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+align-items:flex-end; 
+padding:10px;
+padding-top:4vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalamounttobepaidcontainer {
+position:relative;
+border-bottom:0.1vh solid white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center; 
+padding:10px;
+padding-top:4vh;  
+}
+//// payment response message container 
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer {
+position:relative;
+padding:30px 10px;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:tomato;
+letter-spacing:3px;
+top:2.1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+display:none;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionscontainer {
+position:relative;
+border:0.1vh solid white;
+padding:10px 10px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:18px;
+}
+color:white;
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentbuttoncontainer {
+position:relative;
+display:flex;
+justify-content:flex-end;
+padding:30px 10px;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentloadingspinner {
+position:relative;
+top:7vh;
+right:18vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:7vh;
+width:65%;
+font: auto {
+  family: $sub-font;
+  size:16px;
+  weight:900;
+}
+color:white;
+padding:10px 20px;
+letter-spacing:1px;
+top:5vh;
+right:5vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-cantproceestopaymentheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:20px;
+}
+color:tomato;
+letter-spacing:3px;
+top:2vh;
+right:2vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-merchandiselistheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family:$robotic-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-pricelistheaderindication {
+position:relative;
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center; 
+top:1vh; 
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-weightlistheaderindication {
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;  
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindication {
+position:relative;
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;
+overflow-wrap: break-word; 
+text-align:center;
+}
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer {
+position:relative;
+height:50%;
+padding:80px 15px;
+}
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-purchaseheader {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraphheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+margin-top:5vh;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraph {
+position: relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:1vh;
+width:40%;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-bargraphindication{
+position:relative;
+background-color:white;
+border-radius:20px;
+height:100%;
+width:90%;
+}
+}

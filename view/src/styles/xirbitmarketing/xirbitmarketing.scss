@@ -1,0 +1,668 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#xirbitmarketing {
+position:relative;
+background-color:black;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#xirbitmarketing::-webkit-scrollbar {
+display: none;
+}
+#xirbitmarketing  {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
+}
+//// navigation container
+#xirbitmarketing-navigationheadercontainer {
+position:relative;
+background-color:white;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+margin-left:auto;
+margin-right:auto;
+padding:10px 5px;
+}
+.xirbitmarketing-navigationviewbutton {
+position:relative;
+background-color:black;
+border:none;
+border-radius: 10px;
+height:5vh;
+width:auto;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+margin-top:1vh;
+margin-left:1vh;
+padding:0px 10px;
+outline-style:none;
+}
+.xirbitmarketing-navigationpositioningviewbutton {
+position:relative;
+background-color:black;
+border:none;
+height:70%;
+height:5vh;
+width:auto;
+font: auto {
+family: $sub-font;
+}
+color:white;  
+outline-style:none;
+}
+//// view
+#xirbitmarketing-viewcontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:0;
+}
+///// marketing indication state
+#xirbitmarketingloadingindicationstatemodal {
+position:relative;
+height:100vh;
+width:100vw;
+justify-content:center;
+align-items:center;
+}
+.xirbitmarketingloadingindicationstatemodalspinner {
+position:relative;
+}
+//// marketing navigation bar
+#xirbitmarketingnavigationbar {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:100px 5px;
+}
+#xirbitmarketingnavigationbar-navigationcontainer {
+position:relative;
+height:100%;
+}
+#xirbitmarketingnavigationbar-marketdetailscontainer {
+position:relative;
+height: 100%;
+}
+#xirbitmarketingnavigationbar-marketingcontentanddetailscontainer {
+position:relative;
+height:100%;
+}
+#xirbitmarketingnavigationbar-headercontainer {
+position:relative;
+height:40%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.xirbitmarketingnavigationbar-headercontainer-headerindication {
+position:relative;
+font: auto {
+ family:$sub-font;
+ size:40px;
+ weight:900;
+}
+color:white;
+text-align:center;
+}
+.xirbitmarketingnavigationbar-headercontainer-subheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+weight:900;
+}
+color:white;
+text-align:center;
+}
+#xirbitmarketingnavigationbar-navigationsnippetcontainer {
+position:relative;
+height:100%;
+width:100%;
+}
+#xirbitmarketingnavigationbar-navigationsnippet-gridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:2vh;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer {
+position:relative;
+background-color:white;
+border-radius:25px; 
+height:20vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+overflow:hidden;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer {
+position:relative;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:0px 10px;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer {
+position:relative;
+height:100%;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer {
+position:relative;
+background-color:black;
+border-radius: 15px;
+height:12vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph {
+position:relative;
+border:0.1vh solid  black;
+border-radius:20px;
+height:1vh;
+width:100%;
+overflow:hidden;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication {
+position:relative;
+background-color:black;
+border-radius:20px;
+height:100%;
+width:0%;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader {
+position:relative;
+font: auto {
+family:$main-font;
+size:30px;
+}
+color:white;
+top:0.2vh;
+}
+//// marketing view
+#marketingview {
+position:relative;
+height:100%;
+width:100%;
+padding:0;
+}
+#marketingview-navigationbarcontainer {
+position:relative;
+background-color:white;
+height:6%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0px 1vh;
+}
+.markertingview-navigationbarcontaine-purchasingbutton {
+position:relative;
+background-color:black;
+border-radius:10px;
+height:5vh;
+width:auto;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+}
+.markertingview-navigationbarcontaine-purchasingbutton-purchasingcountheaderindication {
+position:relative;
+background-color:red;
+border-radius:50%;
+font-weight:900;
+padding:2px 9px;
+left:0.5vh;
+}
+//// marketing display container
+#marketing-marketingdisplaycontainer {
+position:relative;
+height:94%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:50px 0px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar {
+width: 7px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white; 
+border-radius: 10px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-thumb {
+background: black; 
+border-radius: 10px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-thumb:hover {
+background: darken(gray,20%); 
+}
+//// xirbit graph container 
+#xirbitmarketing-xirbitgraphmarketing {
+position:relative;
+border-top:0.3vh solid white;
+height:auto;
+width:100%;
+padding:10px 0px;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-container1 { 
+position:relative;
+height:100%;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barheader {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:16px;
+}
+color:white;
+letter-spacing:3px;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation {
+position:relative;
+background-color:white;
+border-radius:50%;
+font-weight: 900;
+color: black;
+top:-0.1vh;
+padding:10px 15px;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:4vh;
+padding:10px;
+}
+.xirbitmarketing-xirbitgraphmarketing-graphbar {
+position:relative;
+background-color:black;
+border:1px solid white;
+border-radius:20px;
+color:green;
+height:1vh;
+width:100%;
+}
+.xirbitmarketing-xirbitgraphmarketing-graphbarindication {
+position:relative;
+background-color:white;
+height:100%;
+width:80%;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-container2 { 
+position:relative;
+height:100%;
+}
+}
+@media only screen and (min-width:1200px) {
+#xirbitmarketing {
+position:relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#xirbitmarketing::-webkit-scrollbar {
+display: none;
+}
+#xirbitmarketing  {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
+}
+//// xirbit marketing header
+#xirbitmarketing-navigationheadercontainer {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:8%;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketing-navigationviewbutton {
+position:relative;
+background-color:black;
+border:none;
+border-radius: 10px;
+height:75%;
+width:20vh;
+font: auto {
+family: $sub-font;
+}
+color:white;
+margin-right:1vh;
+padding:0px 10px;
+}
+.xirbitmarketing-navifgationpositioningviewbutton {
+position:relative;
+background-color:black;
+border:none;
+height:75%;
+width:20vh;
+font: auto {
+family: $sub-font;
+}
+color:white;  
+padding:0px 10px;
+margin-left: 0.5vh;
+}
+//// market view 
+#xirbitmarketing-viewcontainer {
+position:relative;
+height:94%;
+width:100%;
+display:flex;
+padding:0px;
+overflow:hidden;
+}
+///// marketing indication state
+#xirbitmarketingloadingindicationstatemodal {
+position:relative;
+height:94%;
+width:100%;
+justify-content:center;
+align-items:center;
+}
+.xirbitmarketingloadingindicationstatemodalspinner {
+position:relative;
+}
+//// marketing navigation bar
+#xirbitmarketingnavigationbar {
+position:relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#xirbitmarketingnavigationbar-navigationcontainer {
+position:relative;
+border:0.1vh solid white;
+height:100%;
+padding:10px 15px;
+}
+#xirbitmarketingnavigationbar-marketdetailscontainer {
+position:relative;
+border:0.1vh solid white;
+height: 100%;
+}
+/* width */
+#xirbitmarketingnavigationbar-marketdetailscontainer::-webkit-scrollbar {
+width: 5px;
+}
+#xirbitmarketingnavigationbar-marketdetailscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+#xirbitmarketingnavigationbar-marketdetailscontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#xirbitmarketingnavigationbar-marketdetailscontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#xirbitmarketingnavigationbar-headercontainer {
+position:relative;
+height:20%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+.xirbitmarketingnavigationbar-headercontainer-headerindication {
+position:relative;
+font: auto {
+family:$sub-font;
+size:40px;
+weight:900;
+}
+color:white;
+text-align:left;
+}
+.xirbitmarketingnavigationbar-headercontainer-subheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+weight:900;
+}
+color:white;
+text-align:left;
+}
+#xirbitmarketingnavigationbar-navigationsnippet-gridcontainer {
+position:relative;
+height:75%;
+margin-top:3vh;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer {
+position:relative;
+height:10vh;
+}
+.xirbitmarketingnavigationbar-navigationsnippet {
+position:relative;
+background-color:white;
+border:1px solid white;
+border-radius:25px; 
+height:14vh;
+width:100%;
+overflow:hidden;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer {
+position:relative;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px 15px;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer {
+position:relative;
+background-color:black;
+border-radius: 15px;
+height:80%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph {
+position:relative;
+border:0.1vh solid  black;
+border-radius:20px;
+height:1vh;
+width:100%;
+overflow:hidden;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication {
+position:relative;
+background-color:black;
+border-radius:20px;
+height:100%;
+width:0%;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer {
+position:relative;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0px 20px 5px 0px;
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+}
+.xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader {
+position:relative;
+font: auto {
+family:$main-font;
+size:30px;
+}
+color:white;
+top:0.2vh;
+}
+//// marketing view
+#marketingview {
+position:relative;
+height:100%;
+width:100%;
+padding:0px;
+display:block;
+overflow:hidden;
+}
+#marketingview-navigationbarcontainer {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:7%;
+display:flex;
+align-items:center;
+}
+.markertingview-navigationbarcontaine-purchasingbutton {
+position:relative;
+background-color:black;
+border-radius:10px;
+height:80%;
+width:15vh;
+font: auto {
+family:$sub-font;
+}
+color:white;
+margin-left:1vh;
+}
+.markertingview-navigationbarcontaine-purchasingbutton-purchasingcountheaderindication {
+position:relative;
+background-color:red;
+border-radius:50%;
+font-weight:900;
+padding:8px 13px;
+left:0.5vh;
+}
+#marketing-marketingdisplaycontainer {
+position:relative;
+height:93%;
+width:100%;
+padding:50px 50px;
+overflow-y:scroll;
+overflow-x:hidden;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar {
+width: 11px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-thumb {
+background: gray; 
+border-radius: 10px;
+}
+#marketing-marketingdisplaycontainer::-webkit-scrollbar-thumb:hover {
+background: darken(gray,20%); 
+}
+//// xirbit graph container 
+#xirbitmarketing-xirbitgraphmarketing {
+position:relative;
+border-top:0.3vh solid white;
+height:100%;
+width:100%;
+padding:60px 15px;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-container1 {
+position:relative;
+height:100%;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer {
+position:relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barheader {
+position:relative;
+font: auto {
+family: $sub-font;
+size:16px;
+}
+color:white;
+letter-spacing:3px;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation {
+position:relative;
+background-color:white;
+border-radius:50%;
+font-weight: 900;
+color: black;
+top:-0.1vh;
+padding:10px 15px;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:5vh;
+padding:0;
+}
+.xirbitmarketing-xirbitgraphmarketing-graphbar {
+position:relative;
+background-color:black;
+border:1px solid white;
+border-radius:20px;
+color:green;
+height:0.7vh;
+width:100%;
+}
+.xirbitmarketing-xirbitgraphmarketing-graphbarindication {
+position:relative;
+background-color:white;
+height:100%;
+width:80%;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph-container2 { 
+position:relative;
+height:100%;
+}
+}

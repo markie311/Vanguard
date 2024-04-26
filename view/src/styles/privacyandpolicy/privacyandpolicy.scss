@@ -1,0 +1,75 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#privacyandpolicy {
+position:relative;
+height:auto;
+width:100%;
+padding:5px 10px;
+}
+.privacyandpolicy-privacyandpolicyheaderindication {
+position:relative;
+font: auto {
+ family: $main-font;
+ weight:900;
+}
+color:white;
+}
+.privacyandpolicy-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color: white;
+text-decoration:underline;
+}
+.privacyandpolicy-subheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color: white;
+} 
+}
+@media only screen and (min-width:1200px) {
+#privacyandpolicy {
+position:relative;
+height:auto;
+width:100%;
+padding:5px 450px;
+margin-top:20vh;
+}
+.privacyandpolicy-privacyandpolicyheaderindication {
+position:relative;
+font: auto {
+family: $main-font;
+weight:900;
+}
+color:white;
+}
+.privacyandpolicy-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color: white;
+text-decoration:underline;
+margin-top:5vh;
+}
+.privacyandpolicy-subheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+weight:900;
+}
+color: white;
+margin-top:3vh;
+} 
+}

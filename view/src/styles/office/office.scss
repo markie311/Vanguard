@@ -1,0 +1,311 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#office {
+position:relative;
+background-color:black;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-y:scroll;
+}
+#office-mainnavigationcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto; 
+display:flex;
+align-items:center;
+padding:30px 0px;
+}
+.office-mainnavigationcontainer-mainnavigationbuttoncontainer {
+position:relative;
+height:7vh;
+padding:5px 0px;
+}
+.office-mainnavigationcontainer-mainnavigationbutton {
+position:relative;
+background-color:white;
+border:0.5vh solid none;
+border-radius:20px;
+height:90%;
+width:auto;
+font: auto {
+ family: $sub-font;
+}
+color:black;
+margin-top:0.5vh;
+padding:5px 30px;
+}
+#office-view { 
+position:relative; 
+height:auto;
+width:100%;
+}
+#office-officeviewmodalscontainer {
+position:relative;
+height:auto;
+width:100%;	
+}
+.office-mainnavigationcontainer-positioningmainnavigationbutton {
+position:relative;
+background-color:white;
+border:0.5vh solid none;
+border-radius:20px;
+height:90%;
+width:auto;
+font: auto {
+ family: $sub-font;
+}
+color:black;
+padding:5px 30px;
+margin-top:0.5vh;
+}
+//// content navigation container 
+#office-contentnavigationcontainer {
+position:relative;
+height:auto;
+}
+#office-contentnavigationview {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+display:flex;
+align-items:center;
+}
+//// content view
+#office-contentview {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+}
+#office-contentcontainer {
+position:relative;
+border:1vh solid white;
+height:90%;
+}
+//// hamburger
+#office-hamburgercontent {
+position:relative;
+border:0.5vh solid gray;
+border-top-left-radius:40px;
+border-top-right-radius:40px;
+height:100%;
+width:100%;
+}
+/// assistant 
+#office-assistantcontentnavigation {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+}
+#office-assistantcontent {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+}
+//// office data content navigation
+#office-datacontentnavigation {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+#office-datacontentview {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+}
+@media only screen and (min-width:1200px) {
+#office {
+position:relative;
+border:1vh solid white;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#office-mainnavigationcontainer {
+position:relative;
+border:1vh solid gray;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+.office-mainnavigationcontainer-mainnavigationbutton {
+position:relative;
+background-color:white;
+border:0.5vh solid none;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: auto {
+    family: $sub-font;
+}
+color:black;
+padding:5px 30px;
+margin-left:3vh;
+}
+.office-mainnavigationcontainer-positioningmainnavigationbutton {
+position:relative;
+background-color:white;
+border:0.5vh solid none;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: auto {
+    family: $sub-font;
+}
+color:black;
+padding:5px 30px;
+margin-left:0px;
+}
+//// content navigation container 
+#office-contentnavigationcontainer {
+position:relative;
+border:1vh solid gray;
+height:90%;
+}
+#office-contentnavigationview {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+display:flex;
+align-items:center;
+}
+//// content view
+#office-contentview {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+#office-contentcontainer {
+position:relative;
+border:1vh solid white;
+height:90%;
+}
+#office-login {
+position:relative;
+height:100%;
+width:100%;
+}
+#office-login-headercontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+#office-login-headercontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+user-select:none;
+}
+.office-login-userinputfield {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:70%;
+font: auto {
+ family: $sub-font;
+}
+color:black;
+text-align:center;
+}
+#office-login-loginbutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:5vh;
+width:30%;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+outline-style:none;
+}
+#office-login-fieldscontainer {
+position:relative;
+height:90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#office-loginintroductionpage {
+position:relative;
+border:1vh solid white;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+#office-loginintroductionpage-loginheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:65px;
+}
+//// hamburger
+#office-hamburgercontentnavigation {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+#office-hamburgercontent {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+/// assistant 
+#office-assistantcontentnavigation {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+}
+#office-assistantcontent {
+position:relative;
+border:1vh solid red;
+height:100%;
+width:100%;
+}
+//// office data content navigation
+#office-datacontentnavigation {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+#office-datacontentview {
+position:relative;
+border:1vh solid gray;
+height:100%;
+width:100%;
+}
+}

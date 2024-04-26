@@ -1,0 +1,235 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#fundstransaction{
+position:relative;
+height:auto;
+padding:0px 0px;
+}
+#fundstransaction-fundstransactiongridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#fundstransaction-fundstransactiongridcontainer-headercontainer {
+position:relative;
+height:10%;
+width:100%;
+}
+#fundstransaction-fundstransactiongridcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+left:-1vh;
+}
+#fundstransaction-fundstransactiongridcontainer-historycontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-wrap: wrap;
+}
+.fundstransaction-fundstransactiongridcontainer-transaction {
+background-color:white;
+border-radius:50%;
+height:7vh;
+width:7vh;
+margin-top:2vh;
+margin-left:1vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.fundstransaction-fundstransactiongridcontainer-transaction-transactionheaderindication {
+position:relative;
+background-color:white;
+border-radius:50%;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+top:0.7vh;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontentcontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:20px;
+height:25%;
+width:100%;
+top:0;
+left:0;
+z-index:1;
+display:none;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent {
+position:relative;
+border:0.1vh solid black;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:18px 13px;
+z-index:2;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar {
+width: 5px;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.fundstransaction-moneytransactiongridcontainer-transactioncontent::-webkit-scrollbar-thumb {
+background: red; 
+border-radius: 10px;
+}
+.fundstransaction-fundstransactiongridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontenheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontentclosebuttonheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+text-align:right;
+right:1vh;
+user-select:none;
+}
+}
+@media only screen and (min-width:1200px) {
+#fundstransaction{
+position:relative;
+height:auto;
+padding:30px 0px;
+}
+#fundstransaction-fundstransactiongridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#fundstransaction-fundstransactiongridcontainer-headercontainer {
+position:relative;
+height:10%;
+width:100%;
+}
+#fundstransaction-fundstransactiongridcontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:-3vh;
+left:0.5vh;
+}
+#fundstransaction-fundstransactiongridcontainer-historycontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-wrap: wrap;
+padding:0px 35px;
+}
+.fundstransaction-fundstransactiongridcontainer-transaction {
+background-color:white;
+border-radius:50%;
+height:7vh;
+width:7vh;
+margin-top:1vh;
+margin-left:1vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.fundstransaction-fundstransactiongridcontainer-transaction-transactionheaderindication {
+position:relative;
+background-color:white;
+border-radius:50%;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:black;
+top:0.7vh;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontentcontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:20px;
+height:60%;
+width:70%;
+top:0;
+left:0;
+z-index:1;
+display:none;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent {
+position:relative;
+border:0.1vh solid black;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:18px 13px;
+z-index:2;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar {
+width: 5px;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black; 
+border-radius: 10px;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontent::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontenheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+}
+.fundstransaction-fundstransactiongridcontainer-transactioncontentclosebuttonheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:black;
+text-align:right;
+right:1vh;
+user-select:none;
+}
+}

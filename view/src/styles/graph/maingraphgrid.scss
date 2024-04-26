@@ -1,0 +1,263 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#maingraphgrid {
+position:relative;
+height:100%;
+padding:0;
+}
+#maingraphgrid-graphnavigationcontainer {
+position:relative;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+align-items:center;
+padding:0;
+}
+#maingraphgrid-graphnavigationcontainer-mapbackgroundimagecontainer {
+position:relative;
+height:40vh;
+}
+#maingraphgrid-graphnavigationcontainer-mapbackgroundimage {
+position:relative;
+height:100%;
+width:100%;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer {
+position:relative;
+height:40%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphcontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:5px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraph {
+position:relative;
+border:1px solid white;
+border-radius:20px;
+height:1.5vh;
+width:100%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphindication {
+position:relative;
+background-color:white;
+border:1px solid white;
+border-radius:20px;
+height:100%;
+width:80%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-toggledbargraphcontainer {
+position:relative;
+border:1px solid white;
+height:auto;
+width:100%;
+padding:5px;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:0px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphcontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:5px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainercontributionsbargraph {
+position:relative;
+border:1px solid white;
+border-radius:20px;
+height:90%;
+width:100%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraph {
+position:relative;
+border:1px solid white;
+border-radius:20px;
+height:1.5vh;
+width:100%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphindication {
+position:relative;
+background-color:white;
+border:1px solid white;
+border-radius:20px;
+height:100%;
+width:0%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphfundsheaderindication {
+position:relative;
+font:auto {
+ family: $sub-font;
+ weight:900;
+}
+color:red;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionscontainer-seeimportantcontentsheader {
+position:relative;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:white;
+margin-top:3vh;
+}
+}
+@media only screen and (min-width:1200px) {
+#maingraphgrid {
+position:relative;
+height:100%;
+padding:0px 10px;
+}
+#maingraphgrid-graphnavigationcontainer {
+position:relative;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+align-items:center;
+padding:0;
+}
+#maingraphgrid-graphnavigationcontainer-mapbackgroundimagecontainer {
+position:relative;
+border:0.1vh solid white;
+height:60vh;
+padding:50px 100px;
+}
+#maingraphgrid-graphnavigationcontainer-mapbackgroundimage {
+position:relative;
+height:100%;
+width:100%;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer {
+position:relative;
+height:60vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:0px 20px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphcontainer {
+position:relative;
+height:auto;
+width:70%;
+padding:5px;
+margin-top:5vh;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraph {
+position:relative;
+border:1px solid white;
+border-radius:20px;
+height:1vh;
+width:100%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-bargraphindication {
+position:relative;
+background-color:white;
+border:1px solid white;
+border-radius:20px;
+height:100%;
+width:0%;
+transition:3s ease;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-toggledbargraphcontainer {
+position:relative;
+height:auto;
+width:70%;
+padding:20px 10px;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-presentcontributionscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:20px 10px;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-pastcontributionscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:20px 10px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphcontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:5px;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+margin-top:5vh;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraph {
+position:relative;
+border:1px solid white;
+border-radius:20px;
+height:1vh;
+width:40%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphindication {
+position:relative;
+background-color:white;
+border:1px solid white;
+border-radius:20px;
+height:100%;
+width:0%;
+}
+.maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionsbargraphfundsheaderindication {
+position:relative;
+font:auto {
+family: $sub-font;
+weight:900;
+}
+color:red;
+}
+#maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionscontainer-seeimportantcontentsheader {
+position:relative;
+font: auto {
+family: $sub-font;
+size:20px;
+weight:900;
+}
+color:white;
+margin-top:10vh;
+}
+}

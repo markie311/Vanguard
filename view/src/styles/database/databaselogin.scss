@@ -1,0 +1,1411 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#databaselogin {
+position:relative;
+background-color:black;
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:10px;
+}
+#databaselogin::-webkit-scrollbar {
+width: 5px;
+}
+#databaselogin::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black;
+border-radius: 10px;
+}
+#databaselogin::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#databaselogin::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#databaselogin-authenticationpublicitytypecontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.databaselogin-authenticationpublicitytypecontainer-authenticationpublicitytypecontainer {
+position:relative;
+padding:50px 20px;
+}
+.databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypeheaderindication {
+position:relative;
+width:5vh;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:white;
+}
+.databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:16px;
+}
+color:white;
+}
+.databaselogin-authenticationpublicitytypecontainer-privateauthenticationpublicitytypeheaderindication {
+position:relative;
+width:5vh;
+font: auto {
+family: $sub-font;
+size:20px;
+}
+color:white;
+margin-top:5vh;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+width:100%;
+font: auto {
+family: $sub-font;
+size:14px;
+weight:900;
+}
+color:black;
+word-wrap: break-word;
+letter-spacing:5px;
+padding:5px 10px;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+width:5vh;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:white;
+letter-spacing:5px;
+user-select:none;
+padding:5px 20px;
+top:1vh;
+left:65%;
+}  
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-paswordsettrueheaderindication {
+position:relative;
+background-color:chocolate;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: white;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-paswordsetfalseheaderindication {
+position:relative;
+background-color:tomato;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: black;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-candeposittrueheaderindication {
+position:relative;
+background-color:chocolate;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: white;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-candepositfalseheaderindication {
+position:relative;
+background-color:tomato;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: black;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+#databaselogin-authenticationpublicitytypecontainer-authenticationdetailscontainer {
+position:relative;
+height:auto;
+padding:10px 10px;
+}
+//// public authentication details
+#publicahtneticationdetails {
+position:relative;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:100%;
+padding:20px;
+margin-left:auto;
+margin-right:auto;
+}
+#publicahtneticationdetails-publicauthenticationdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+margin-top:3vh;
+}
+//// money 
+#databaselogin-moneydetailscontainer {
+position:relative;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:100%;
+padding:15px 15px;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+}
+#databaselogin-moneydetailscontainer-moneyheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+padding:0;
+}
+#databaselogin-moneydetailscontainer-moneyheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+//// funds 
+#databaselogin-fundsdetailscontainer {
+position:relative;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:100%;
+padding:10px 10px;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+}
+#databaselogin-fundsdetailscontainer-fundsheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+#databaselogin-fundsdetailscontainer-fundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+///// requests
+#databaselogin-requesttransactioncontainer {
+position:relative;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:100%;
+padding:10px 10px;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+}
+///// authentication details configuration modal 
+#configurationauthenticationdetailsmodal {
+position:relative;
+background-color:white;
+height:auto;
+width:100%;
+margin-top:10vh;
+margin-left:auto;
+margin-right:auto;
+padding:10px 30px;
+}
+.configurationauthenticationdetailsmodal-headerindicationcontainer {
+position:relative;
+height:15vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px 0px;
+}
+.configurationauthenticationdetailsmodal-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+text-align:center;
+word-break: break-all;
+letter-spacing:3px;
+top:6vh;
+}
+.configurationauthenticationdetailsmodal-fieldcontainer {
+position:relative;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-field {
+position:relative;
+border:none;
+height:auto;
+width:100%;
+border-bottom:0.1vh solid black;
+font: auto {
+family: $sub-font;
+}
+outline-style:none;
+padding-left:10px;
+}
+.configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer {
+position:relative;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-savebuttoncontainer {
+position:absolute;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-savebutton {
+position:relative;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+padding:10px 50px;
+outline-style:none;
+}
+.configurationauthenticationdetailsmodal-loadingindicationcontainer {
+position:absolute;
+height:10vh;
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+display:none;
+}
+.configurationauthenticationdetailsmodal-responsemessagecontainer {
+position:relative;
+height:10vh;  
+display:none;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-responsemessage {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+letter-spacing:1px;
+top:1.3vh;
+}
+.configurationauthenticationdetailsmodal-cardidpicturescontainer-frontdetailscontainer {
+position:relative;
+height:35vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.configurationauthenticationdetailsmodal-cardidpicturescontainer-backdetailscontainer {
+position:relative;
+height:35vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer {
+position:relative;
+height:30vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px;
+}
+#configurationauthenticationdetailsmodal-cardiduserpicture {
+position:relative;
+height:30vh;
+width:65%;
+}
+.configurationauthenticationdetailsmodal-cardiddisplaymodal {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(0%, -80%);
+display:none;
+z-index:1;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebuttoncontainer {
+position:relative;
+height:100%;
+width:120%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+margin-top:4.5vh;
+right:1vh;
+}
+#configurationauthenticationdetailsmodal-userpicture {
+position:relative;
+display:none;
+}
+#configurationauthenticationdetailsmodal-usersigniture {
+position:relative;
+display:none;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+left:3vh;
+padding:10px 20px;
+}
+
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+#configurationauthenticationdetailsmodal-usersigniturehr {
+position:relative;
+margin-top:10vh;
+}
+/// pasword set up
+#passwordsetup {
+position:relative;
+background-color:chocolate;
+border:0.1vh solid white;
+border-radius:30px;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+padding:10px 20px;
+}
+.passwordsetup-fieldandheaderindicationcontainer {
+position:relative;
+padding:30px 10px;
+}
+.passwordsetup-fieldandheaderindicationcontainer-fieldheaderindcation {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+}
+.passwordsetup-fieldandheaderindicationcontainer-field {
+position:relative;
+border:none;
+border-radius:20px;
+height:5vh;
+width:100%;
+padding:5px 10px;
+outline-style:none;
+}
+.passwordsetup-button {
+position:relative;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:black;
+padding: 10px 30px;
+margin-top:5vh;
+margin-left:1vh;
+}
+.passwordsetup-fieldandheaderindicationcontainer-responsemessage {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:1.5vh;
+}
+#databasemobileidcard-layoutcontainer {
+position:relative;
+background-color:white;
+border:1.5vh dotted gray;
+border-radius:20px;
+height:85vh;
+width:100%;
+margin-top:5vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px;
+}
+#databasemobileidcard  {
+position:relative;
+background-color:$subbgcolor;
+border:0.1vh solid black;
+border-radius:20px;
+height:38vh;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+transform-style:preserve-3d;
+transition:1s ease;
+}
+#databasemobileidcard:hover {
+transform:rotateY(180deg);
+}
+#databasemobileidcard-frontlayout {
+position:absolute;
+background-color:$subbgcolor;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:10px;
+backface-visibility:hidden;
+}
+#databasemobileidcard-frontlayout-cardidpicturecontainer {
+position:relative;
+height:30%;
+width:100%;
+padding:10px;
+}
+#databasemobileidcard-frontlayout-cardiduserpicture {
+position:relative;
+height:100%;
+width:45%;
+}
+#databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer {
+position:relative;
+height:35%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:16px;
+}
+color:white;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(-2.5%, -50%);
+display:none;
+z-index:1;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+#databasemobileidcard-backlayout {
+position:absolute;
+background-color:$subbgcolor;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:20px 10px;
+transform:rotateY(180deg);
+backface-visibility:hidden;
+}
+#databasemobileidcard-backlayout-cardidpicturecontainer {
+position:relative;
+height:19vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px;
+}
+#databasemobileidcard-backlayout-cardiduserpicture {
+position:relative;
+height:85%;
+width:85%;
+}
+#databasemobileidcard-backlayout-cardidpicturescontainer-backdetailsgridcontainer {
+position:relative;
+height:17vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer {
+position:relative;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:0;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:16px;
+}
+color:white;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication {
+position:relative;                                    font: auto {                                           family: $sub-font;                                    size:16px;                                           }                                                     color:white;       
+left:-12%;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(-2.5%, -50%);
+display:none;
+z-index:1;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+}
+@media only screen and (min-width:1200px) {
+#databaselogin {
+position:relative;
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:30px 30px;
+}
+#databaselogin::-webkit-scrollbar {
+width: 5px;
+}
+#databaselogin::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px black;
+border-radius: 10px;
+}
+#databaselogin::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+#databaselogin::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+#databaselogin-authenticationpublicitytypecontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.databaselogin-authenticationpublicitytypecontainer-authenticationpublicitytypecontainer {
+position:relative;
+padding:50px 30px;
+}
+.databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypeheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:35px;
+}
+color:white;
+}
+.databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ style:italic;
+ size:18px;
+}
+color:white;
+margin-top:3.5vh;
+left:1vh;
+}
+.databaselogin-authenticationpublicitytypecontainer-privateauthenticationpublicitytypeheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:35px;
+}
+color:white;
+margin-top:5vh;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+width:5vh;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+letter-spacing:5px;
+padding:5px 30px;
+margin-left:2vh;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+width:5vh;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:white;
+letter-spacing:5px;
+user-select:none;
+padding:5px 20px;
+margin-left:2vh;
+}  
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-paswordsettrueheaderindication {
+position:relative;
+background-color:chocolate;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: white;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-paswordsetfalseheaderindication {
+position:relative;
+background-color:tomato;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+ family: $sub-font;
+}
+color: black;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-candeposittrueheaderindication {
+position:relative;
+background-color:chocolate;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+family: $sub-font;
+}
+color: white;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-candepositfalseheaderindication {
+position:relative;
+background-color:tomato;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: {
+ family: $sub-font;
+}
+color: black;
+letter-spacing:2px;
+padding:10px 30px;
+margin-left:1vh;
+} 
+#databaselogin-authenticationpublicitytypecontainer-authenticationdetailscontainer {
+position:relative;
+height:auto;
+padding:10px 20px;
+}
+//// public authentication details
+#publicahtneticationdetails {
+position:relative;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:100%;
+padding:20px;
+}
+#publicahtneticationdetails-publicauthenticationdetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+margin-top:3vh;
+}
+//// money 
+#databaselogin-moneydetailscontainer {
+position:relative;
+border:0.5vh dotted white;
+height:auto;
+width:100%;
+padding:10px 10px;
+margin-top:5vh;
+}
+#databaselogin-moneydetailscontainer-moneyheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+#databaselogin-moneydetailscontainer-moneyheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+//// funds 
+#databaselogin-fundsdetailscontainer {
+position:relative;
+border:0.5vh dotted white;
+height:auto;
+width:100%;
+padding:10px 10px;
+margin-top:5vh;
+}
+#databaselogin-fundsdetailscontainer-fundsheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+#databaselogin-fundsdetailscontainer-fundsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+///// requests
+#databaselogin-requesttransactioncontainer {
+position:relative;
+border:0.5vh dotted white;
+height:auto;
+width:100%;
+margin-top:5vh;
+left:-1vh;
+}
+///// authentication details configuration modal 
+#configurationauthenticationdetailsmodal {
+position:relative;
+background-color:white;
+height:auto;
+width:100%;
+margin-top:10vh;
+margin-left:auto;
+margin-right:auto;
+padding:10px 30px;
+}
+.configurationauthenticationdetailsmodal-headerindicationcontainer {
+position:relative;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+letter-spacing:3px;
+top:1vh;
+}
+.configurationauthenticationdetailsmodal-fieldcontainer {
+position:relative;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-field {
+position:relative;
+border:none;
+border-bottom:0.1vh solid black;
+font: auto {
+ family: $sub-font;
+}
+outline-style:none;
+padding-left:10px;
+}
+.configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer {
+position:relative;
+height:10vh;
+}
+.configurationauthenticationdetailsmodal-savebuttoncontainer {
+position:absolute;
+height:10vh;
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-savebutton {
+position:relative;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+padding:10px 50px;
+outline-style:none;
+}
+.configurationauthenticationdetailsmodal-loadingindicationcontainer {
+position:absolute;
+height:10vh;
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+display:none;
+}
+.configurationauthenticationdetailsmodal-responsemessagecontainer {
+position:relative;
+height:10vh;  
+display:flex;
+align-items:center;
+}
+.configurationauthenticationdetailsmodal-responsemessage {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+letter-spacing:1px;
+top:1.3vh;
+}
+.configurationauthenticationdetailsmodal-cardidpicturescontainer-frontdetailscontainer {
+position:relative;
+height:35vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.configurationauthenticationdetailsmodal-cardidpicturescontainer-backdetailscontainer {
+position:relative;
+height:35vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer {
+position:relative;
+height:30vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px;
+}
+#configurationauthenticationdetailsmodal-cardiduserpicture {
+position:relative;
+height:30vh;
+width:65%;
+}
+.configurationauthenticationdetailsmodal-cardiddisplaymodal {
+position:relative;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(0%, -80%);
+display:none;
+z-index:1;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebuttoncontainer {
+position:relative;
+height:100%;
+width:120%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+margin-top:4.5vh;
+right:1vh;
+}
+#configurationauthenticationdetailsmodal-userpicture {
+position:relative;
+display:none;
+}
+#configurationauthenticationdetailsmodal-usersigniture {
+position:relative;
+display:none;
+}
+.configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+left:3vh;
+padding:10px 20px;
+}
+
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#configurationauthenticationdetailsmodal-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+#configurationauthenticationdetailsmodal-usersigniturehr {
+position:relative;
+margin-top:10vh;
+}
+/// pasword set up
+#passwordsetup {
+position:relative;
+background-color:chocolate;
+border:0.1vh solid white;
+border-radius:30px;
+height:20vh;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+padding:10px 20px;
+}
+.passwordsetup-fieldandheaderindicationcontainer {
+position:relative;
+padding:30px 10px;
+}
+.passwordsetup-fieldandheaderindicationcontainer-fieldheaderindcation {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:18px;
+}
+color:white;
+}
+.passwordsetup-fieldandheaderindicationcontainer-field {
+position:relative;
+border:none;
+border-radius:20px;
+height:5vh;
+width:60%;
+padding:5px 10px;
+outline-style:none;
+}
+.passwordsetup-button {
+position:relative;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:black;
+padding: 10px 30px;
+margin-top:5vh;
+margin-left:1vh;
+}
+.passwordsetup-fieldandheaderindicationcontainer-responsemessage {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:1.5vh;
+}
+#databasemobileidcard-layoutcontainer {
+position:relative;
+background-color:white;
+border:1.5vh dotted gray;
+border-radius:20px;
+height:85vh;
+width:100%;
+margin-top:5vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px;
+}
+#databasemobileidcard  {
+position:relative;
+background-color:$subbgcolor;
+border:0.1vh solid black;
+border-radius:20px;
+height:38vh;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+transform-style:preserve-3d;
+transition:1s ease;
+}
+#databasemobileidcard:hover {
+transform:rotateY(180deg);
+}
+#databasemobileidcard-frontlayout {
+position:absolute;
+background-color:$subbgcolor;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:10px;
+backface-visibility:hidden;
+}
+#databasemobileidcard-frontlayout-cardidpicturecontainer {
+position:relative;
+height:30%;
+width:100%;
+padding:10px;
+}
+#databasemobileidcard-frontlayout-cardiduserpicture {
+position:relative;
+height:100%;
+width:45%;
+}
+#databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer {
+position:relative;
+height:35%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:16px;
+}
+color:white;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(-2.5%, -50%);
+display:none;
+z-index:1;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#databasemobileidcard-frontlayout-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+#databasemobileidcard-backlayout {
+position:absolute;
+background-color:$subbgcolor;
+border-radius:20px;
+height:100%;
+width:100%;
+padding:20px 10px;
+transform:rotateY(180deg);
+backface-visibility:hidden;
+}
+#databasemobileidcard-backlayout-cardidpicturecontainer {
+position:relative;
+height:19vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px;
+}
+#databasemobileidcard-backlayout-cardiduserpicture {
+position:relative;
+height:85%;
+width:85%;
+}
+#databasemobileidcard-backlayout-cardidpicturescontainer-backdetailsgridcontainer {
+position:relative;
+height:17vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+padding:0px 10px;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer {
+position:relative;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:0;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:16px;
+}
+color:white;
+}
+.databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication {
+position:relative;                                    font: auto {                                           family: $sub-font;                                    size:16px;                                           }                                                     color:white;       
+left:-12%;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+height:60vh;
+width:100%;
+transform: translate(-2.5%, -50%);
+display:none;
+z-index:1;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicturecontainer {
+position:relative;
+height:85%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicture {
+position:relative;
+height:80%;
+width:100%;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 10px;
+}
+#databasemobileidcard-backlayout-cardiddisplaymodal-closebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+}
+}

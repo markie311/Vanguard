@@ -1,0 +1,246 @@
+
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#officehamburger {
+position:relative; 
+border:1vh solid red; 
+height:100%; 
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#office-hamburgercontentnavigation {
+position:relative;
+border:1vh solid gray;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.office-hamburgercontent-navigationbuttoncontainer {
+position:relative;
+height:7vh;
+display:flex;
+align-items:center;
+padding:5px 5px;
+}
+.office-hamburgercontent-navigationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+height:90%;
+width:100%;                                       font: auto {
+ family:$sub-font;
+}
+color:white;
+outline-style:none;
+}
+#office-hamburgercontent {
+position:relative;
+border:1vh solid yellow;
+height:125vh;
+margin-left:auto;                                 margin-right:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#office-hamburgerofficeview {
+position:relative; 
+border:1vh solid gray;
+height:100%; 
+width:100%;
+margin-left:auto; 
+margin-right:auto;
+}
+#officehamburgercontentview {
+position:relative;                                border:1vh solid gray;
+height:auto;                                      width:100%;                                       margin-left:auto;                                 margin-right:auto;
+}
+#officehamburgerview {
+position:relative;
+border:1vh solid yellow;
+height:auto; 
+width:100%;
+margin-left:auto;                                 margin-right:auto;
+}
+#officehamburger-dataview {
+position:relative;
+border:1vh solid white;
+height:auto;                                      width:100%;
+margin-left:auto;                                 margin-right:auto;
+}
+#officehamburger-dataview-navigationpositioningcontainer {
+position:relative;
+border:0.5vh solid red;
+height:35%;
+width:100%;
+padding:0;
+}
+#officehamburger-dataview-navigationgridcontainer {
+position:relative;
+border:0.1vh solid gray;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-navigationgridcontainer-navigationbuttoncontainer {
+position:relative;
+border:0.5vh solid gray;
+height:20%;
+margin-left:auto;
+margin-right:auto;
+display: flex;
+justify-content:center;
+align-items: center;
+}
+.officehamburger-dataview-navigationgridcontainer-navigationbutton {
+position:relative;
+background-color:black;
+border:0.1 solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font
+}
+color:white;
+padding: 5px 20px;
+outline-style:none;
+}
+///// data 
+#officehamburger-dataview-datacontainer {
+position:relative;
+border:1vh solid red;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+#officehamburger-dataview-datacontainer-datacontainer-data {
+position:absolute;
+border:1vh solid yellow;
+height:100%;
+width:100%;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataresultscontainer {
+position:absolute;
+border:1vh solid yellow;
+height:100%;
+width:100%;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataconfigurationcontainer {
+position:absolute;
+border:1vh solid yellow;
+height:100%;
+width:100%;
+}
+#officehamburger-dataview-datamodal {
+position:relative;
+border:1vh solid pink;
+height:auto;
+width:100%;
+padding:0;
+}
+//// monitoring 
+#officehamburger-dataview-datacontainer-monitoring {
+ position:relative;
+ border:1vh solid yellow;
+ height:auto;
+ width:100%;
+ margin-left:auto;
+ margin-right:auto;
+}
+///// people 
+#officehamburger-dataview-datacontainer-people {
+ position:relative;
+ border:1vh solid red;
+ height:auto;
+ width:100%; 
+ margin-left:auto;
+ margin-right:auto;
+
+}
+///// marketing
+#officehamburger-dataview-datacontainer-marketing {
+ position:relative;
+ border:1vh solid red;
+ height:auto;
+ width:100%; 
+ margin-left:auto;
+ margin-right:auto;
+}
+#officehamburger-dataview-datacontainer-marketingnavigtionbuttongridcontainer {
+position:relative;
+border:1vh solid gray;
+height:20vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer {
+position:relative;
+border:1vh solid red;
+height:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-dataview-datacontainer-marketing-navigtionbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+padding:5px 15px;
+outline-style:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer {
+position: relative;
+border:1vh solid gray;
+height:70vh;
+width:100%;
+}
+///// money and funds 
+#officehamburger-dataview-datacontainer-moneyandfunds {
+ position:relative;
+ border:1vh solid red;
+ height:auto;
+ width:100%; 
+ margin-left:auto;
+ margin-right:auto;
+}
+///// cargo 
+#officehamburger-dataview-datacontainer-cargo{
+ position:relative;
+ border:1vh solid red;
+ height:auto;
+ width:100%; 
+ margin-left:auto;
+ margin-right:auto;
+}
+//// modal
+#officehamburger-modalcontainer {
+position:absolute;
+background-color:red;
+border:1vh solid gray;
+height:80%; 
+width:80%;
+margin-left:auto;                                 margin-right:auto;
+top:0;
+left:0;
+transform: translate(12.5%, 0%) scale(0, 0);
+transition:1s ease;
+display:none;
+}
+}

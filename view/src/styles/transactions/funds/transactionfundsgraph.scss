@@ -1,0 +1,102 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#transactionfundsgraph {
+position:relative;
+height:auto;
+padding:0;
+}
+#transactionfundsgraph-transactionfundsgraphgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer {
+position:relative;
+height:auto;
+padding:30px 5px;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+.transactionmoneygraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph {
+position:relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:1vh;
+width:100%;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:100%;
+width:80%;
+}
+}
+
+@media only screen and (min-width:1200px) {
+#transactionfundsgraph {
+position:relative;
+height:auto;
+padding:0;
+}
+#transactionfundsgraph-transactionfundsgraphgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer {
+position:relative;
+height:auto;
+padding:40px 10px;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph {
+position:relative;
+border:0.1vh solid white;
+border-radius:20px;
+height:1vh;
+width:100%;
+}
+.transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:100%;
+width:80%;
+}
+}

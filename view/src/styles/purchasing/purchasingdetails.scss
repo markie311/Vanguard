@@ -1,0 +1,1174 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width:600px) {
+#purchasingdetails {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-purchasedetailscontainer {
+position:relative;
+height:20vh;
+width:100%;
+padding:0;
+}
+#purchasingdetails-purchasedetailsgridcontainer {
+position:relative;
+height:20vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+/// map container 
+#purchasingdetails-mapcontainer {
+position:relative;
+height:auto;
+padding:50px 0px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-automaticselectioncontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 10px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 10px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer-currentcoordinatesbutton {
+position:relative;
+background-color:white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:black;
+user-select:none;
+outline-style:none;
+padding:10px 30px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-manualcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 0px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-manualgridcontainer {
+position:relative;
+margin-left:auto;
+margin-right:auto;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:3vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-coordinatesheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:3.5vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield {
+position:relative;
+background-color:transparent;
+border:none;
+border-bottom:0.1vh solid white;
+width:100%;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+outline-style:none;
+top:2.1vh;
+}
+#purchasingdetails-mapcontainer-maptile {
+position:relative;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:30px 15px;
+overflow-x:hidden;
+overflow-y:hidden;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar {
+width: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-thumb {
+background: black; 
+border-radius: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-statusheaderindication {
+margin-top:10vh;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton {
+position:relative;
+background-color:black;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+user-select:none;
+outline-style:none;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+left:0.5vh;
+padding: 5px 9px;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:yellow; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:lighten(red,10%);    
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:lighten(red,10%);    
+}
+#purchasingdetails-mapcontainer-maptile-searchcontainer {
+position:relative;
+background-color:white;
+height:65vh;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationcontainer {
+position:relative;
+height:30vh;
+width:15vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
+} 
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:15px;
+weight:900;
+}
+color:black;
+}
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationheaderindicationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:10px 30px;
+}
+//// merchandise details tag
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-tagcontainer {
+position:relative;
+height:auto;
+padding:0px;
+margin-top:3vh;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag {
+position:relative;
+background-color:transparent;
+height:auto;
+width:100%;
+margin-top:10vh;
+margin-left:auto;
+margin-right:auto;
+}
+/// new 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productindexcontainer {
+position:relative;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productindexheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer {
+position:relative;
+height:auto;
+padding:10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailslayoutcontainer {
+position:relative;
+background-color:white;
+border-radius:15px;
+height:100%;
+width:100%;
+padding:20px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+}
+/// product selection 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productselectionontainer {
+position:relative;
+height:auto;
+padding:10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionlayoutcontainer {
+position:relative;
+background-color:white;
+border-radius:15px;
+height:100%;
+width:100%;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsgridcontainer {
+position:relative;
+height:15vh;
+width:100%;
+margin-left: auto;
+margin-right:auto;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionimagescontainer {
+position:relative;
+height:100%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer {
+position:absolute;
+background-color:black;
+border:0.2vh solid gray;
+height:60vh;
+width:100%;
+top:0;
+left:0;
+transform: translate(-0%, -35%);
+padding:0;
+display:none;
+z-index:1;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductpcsindication {
+position:relative;
+height:5vh;
+width:10vh;
+text-align:center;
+outline-style:none;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication {
+position:relative;
+height:20vh;
+width:80%;
+padding:10px 20px;
+outline-style:none;  
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer {
+position:relative;
+height:90%;
+width:100%;
+overflow-x: hidden;
+overflow-y: scroll;
+padding:30px 20px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar {
+width: 5px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-thumb:hover {
+background: black; 
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdisplayimagescontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:20px 0px;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdisplayimage {
+position:relative;
+height:20vh;
+width:20vh;
+margin-top:1vh;
+margin-left:1vh;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer-selectedproductclosebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer-selectedproductclosebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+outline-style:none;
+right:1vh;
+}
+//// purchase details 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer {
+position:relative;
+height:auto;
+padding:20px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:left;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailssubheaderindicationcontainer {
+position:relative;
+height:auto;
+padding:20px 5px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailssubheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsrequestlimitreachheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:red;
+letter-spacing:2px;
+}
+//// payment button container 
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbuttoncontainer {
+position:relative;
+height:auto;
+width:100%;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-posbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 50px;
+margin-top:5vh;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:10px 100px;
+display:block;
+margin-top:2vh;
+margin-left:auto;
+margin-right:auto;
+}
+//// graphs container 
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer {
+position:relative;
+border:0.1vh solid white;
+height:80vh;
+width:100%;
+padding:0;
+margin-top:20vh;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carousellayoutcontainer {
+position:relative;
+height:80%;
+width:100%;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer {
+position:relative;
+height:100%;
+width:100%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselitemcontainer {
+position:relative;
+height:53vh;
+width:100%;   
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-navigationcontainer {
+position:relative;
+background-color:white;
+height:7vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-navigationcontainer-activitybutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: auto {
+    family: $sub-font;
+}
+padding:0px 20px;
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer {
+position:relative;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:flex-end;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer {
+position:absolute;
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:30px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar {
+width: 5%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px skyblue; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer-fullmodalviewdisplaycontainer {
+position:relative;
+background-color:rgba(255,255,255,0.3);
+height:20%;
+width:100%;
+padding:15px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer-fullmodalviewdisplaycontainer-fullmodalviewdisplayheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+text-decoration:underline;
+}
+}
+@media only screen and (min-width:1200px) {
+#purchasingdetails {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-purchasedetailscontainer {
+position:relative;
+height:20vh;
+width:100%;
+padding:0;
+}
+#purchasingdetails-purchasedetailsgridcontainer {
+position:relative;
+height:20vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+/// map container 
+#purchasingdetails-mapcontainer {
+position:relative;
+height:150vh;
+padding:50px 0px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer {
+position:relative;
+height:40%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-automaticselectioncontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 10px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 10px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer-currentcoordinatesbutton {
+position:relative;
+background-color:white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:black;
+user-select:none;
+outline-style:none;
+padding:10px 30px;
+}
+#purchasingdetails-mapcontainer-configurationscontainer-manualcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+justify-content:center;
+padding:30px 10px;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:3vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-coordinatesheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+top:3.5vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield {
+position:relative;
+background-color:transparent;
+border:none;
+border-bottom:0.1vh solid white;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+top:3.5vh;
+outline-style:none;
+}
+#purchasingdetails-mapcontainer-maptile {
+position:relative;
+border:1vh solid black;
+height:60%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer {
+position:relative;
+border:0.1vh solid white;
+height:100%;
+margin-left:auto;
+margin-right:auto;
+padding:30px 20px;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar {
+width: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-thumb {
+background: black; 
+border-radius: 10px;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+#purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton {
+position:relative;
+background-color:black;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 20px;
+user-select:none;
+outline-style:none;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+left:0.5vh;
+padding: 5px 9px;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:yellow; 
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:lighten(red,10%);    
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:lighten(red,10%);    
+}
+#purchasingdetails-mapcontainer-maptile-searchcontainer {
+position:relative;
+background-color:white;
+height:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationcontainer {
+position:relative;
+height:30vh;
+width:50vh;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
+} 
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:15px;
+weight:900;
+}
+color:black;
+}
+.purchasingdetails-mapcontainer-maptile-searchcontainer-marketdetailsandconfigurationheaderindicationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:10px 30px;
+}
+//// merchandise details tag
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-tagcontainer {
+position:relative;
+border:0.1vh solid white;
+height:auto;
+padding:50px 50px 50px 50px;
+margin-top:3vh;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag {
+position:relative;
+background-color:transparent;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+/// new 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productindexcontainer {
+position:relative;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productindexheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer {
+position:relative;
+height:42vh;
+padding:10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailslayoutcontainer {
+position:relative;
+background-color:white;
+border-radius:15px;
+height:100%;
+width:100%;
+padding:20px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+}
+/// product selection 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productselectionontainer {
+position:relative;
+height:42vh;
+padding:10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionlayoutcontainer {
+position:relative;
+background-color:white;
+border-radius:15px;
+height:100%;
+width:100%;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsgridcontainer {
+position:relative;
+height:13vh;
+width:100%;
+margin-left: auto;
+margin-right:auto;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionimagescontainer {
+position:relative;
+height:13vh;
+padding:5px 50px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+height:75vh;
+width:90%;
+top:0;
+left:0;
+transform: translate(5%, -15%);
+display:none;
+z-index:1;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductpcsindication {
+position:relative;
+height:5vh;
+width:10vh;
+text-align:center;
+outline-style:none;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication {
+position:relative;
+height:20vh;
+width:80%;
+padding:10px 20px;
+outline-style:none;  
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer {
+position:relative;
+height:90%;
+width:100%;
+overflow-x: hidden;
+overflow-y: scroll;
+padding:30px 20px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar {
+width: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-thumb {
+background: white; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer::-webkit-scrollbar-thumb:hover {
+background: black; 
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdisplayimagescontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:20px 0px;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdisplayimage {
+position:relative;
+height:20vh;
+width:20vh;
+margin-top:1vh;
+margin-left:1vh;
+} 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer-selectedproductclosebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer-selectedproductclosebutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+outline-style:none;
+}
+//// purchase details 
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
+padding:20px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailssubheaderindicationcontainer {
+position:relative;
+height:auto;
+padding:20px 5px;
+display:flex;
+flex-direction:column;
+justify-content:flex-start;
+align-items:flex-start;
+padding-right:20px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailssubheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsrequestlimitreachheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:red;
+letter-spacing:2px;
+}
+//// payment button container 
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbuttoncontainer {
+position:relative;
+height:auto;
+width:100%;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-posbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 50px;
+margin-top:5vh;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 50px;
+left:1.5vh;
+}
+//// graphs container 
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer {
+position:relative;
+border:0.1vh solid white;
+height:80vh;
+width:100%;
+padding:0;
+margin-top:20vh;
+margin-left:auto;
+margin-right:auto;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carousellayoutcontainer {
+position:relative;
+height:80%;
+width:100%;
+}
+#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer {
+position:relative;
+height:100%;
+width:100%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselitemcontainer {
+position:relative;
+height:53vh;
+width:100%;   
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-navigationcontainer {
+position:relative;
+background-color:white;
+height:7vh;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-navigationcontainer-activitybutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:auto;
+font: auto {
+ family: $sub-font;
+}
+padding:0px 20px;
+color:white;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer {
+position:relative;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:flex-end;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer {
+position:absolute;
+height:100%;
+width:100%;
+overflow-y:scroll;
+overflow-x:hidden;
+padding:30px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar {
+width: 5%;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px skyblue; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer::-webkit-scrollbar-thumb:hover {
+background: white; 
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer-fullmodalviewdisplaycontainer {
+position:relative;
+background-color:rgba(255,255,255,0.3);
+height:20%;
+width:100%;
+padding:15px 10px;
+}
+.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer-fullmodalviewdisplaycontainer-fullmodalviewdisplayheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-decoration:underline;
+}
+}

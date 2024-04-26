@@ -1,0 +1,185 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+#marketing {
+position: relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+#marketing-marketingheadercontainer {
+position:relative;
+background-color:white;
+height:6%;
+width:100%;
+}
+#marketing-marketing {
+position:relative;
+height:100%;
+width:100%;
+padding:0px;
+}
+#marketing-marketing-gridcontainer {
+position:relative;
+border:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:30px 10px;
+}
+.marketing-marketingsnippet {
+position:relative;
+height:auto;
+}
+.marketing-marketingsnippet-statisticsgridcontainer {
+position:relative;
+background-color:white;
+height:40vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.marketing-marketingsnipper-merchandiseindicationheader-merchandisedescriptionheader {
+position: relative;
+font: auto {
+ family: $sub-font;
+ size:15px;
+}
+}
+.marketing-marketingsnipper-merchandiseindicationheader {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:30px;
+ weight:900;
+}
+color:white;
+text-align:center;
+}
+#marketing-marketing-togglebuttoncontainer {
+position:relative;
+border:1px solid red;
+height:10%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+#marketing-marketing-togglebutton {
+position:relative;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+}
+//// marketing statistics container 
+#marketing-marketing-statisticscontainer {
+position:relative;
+border:1vh solid green;
+height:100%;
+width:100%;
+padding:0px;
+}
+#marketing-marketing-statisticsgridcontainer {
+position:relative;
+border:1vh solid red;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-y:scroll;
+overflow-x:none;
+}
+#marketing-marketing-statisticsgridcontainer-statisticssalescontainer {
+position:relative;
+border:1vh solid pink;
+height:100%;
+width:100%;
+}
+#marketing-marketing-statisticsgridcontainer-peoplestatisticscontainer {
+position:relative;
+border:1vh solid pink;
+height:100%;
+width:100%;
+}
+#marketing-marketing-statisticscontainer-togglebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+#marketing-marketing-statisticscontainer-togglebutton {
+position:relative;
+font: auto {
+ family:$sub-font;
+ size:30px;
+}
+color:white;
+}
+//// marketing updates container 
+#marketing-marketing-updatescontainer {
+position:relative;
+border:1px solid red;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0px;
+}
+#marketing-marketing-updatescontainer-mainneedsupdatescontainer {
+position:relative;
+border:1px solid green;
+height:100vh;
+}
+#marketing-marketing-updatescontainer-configurationscontainer {
+position:relative;
+border:1px solid red;
+height:100vh;
+}
+#marketing-marketing-sellingauthenticationcodecontainer {
+position:relative;
+background-color:white;
+height:10%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#marketing-marketing-sellingauthenticationcodecontainer-authenticationcodecontainer {
+position:relative;
+height:100%;
+display:flex;
+align-items:center;
+padding:0px;
+}
+#marketing-marketing-sellingauthenticationcodecontainer-authenticationcode {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+top:1vh;
+}
+#marketing-marketing-sellingauthenticationcodecontainer-showauthenticationcodecontainer {
+position:relative;
+height:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#marketing-marketing-sellingauthenticationcodecontainer-showauthenticationcodebutton {
+position:relative;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+top:1vh;
+left:1vh;
+}
