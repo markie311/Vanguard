@@ -27,7 +27,7 @@ export default function Header(props) {
            id='header-headercontainer2'>
        <p id='header-headercontainer2-loginheader'
           onClick={(evt)=> {
-             navigate('/database/login')
+             navigate('/database/accounts')
           }}>login</p>
       </Col>
       <ActiveBarGraphToggle bargraphintervalcb={props.bargraphintervalcb}/>
