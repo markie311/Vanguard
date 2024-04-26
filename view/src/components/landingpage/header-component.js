@@ -19,16 +19,19 @@ export default function Header(props) {
            md={8}
            lg={8}
            id='header-headercontainer1'>
-       <p id='header-headercontainer1-databaseloginheader'>database login</p>
+       <p id='header-headercontainer1-databaseloginheader'
+          onClick={(evt)=> {
+             navigate('/database')
+          }}>database login</p>
       </Col>
       <Col xs={4}
            md={4}
            lg={4}
            id='header-headercontainer2'>
-       <p id='header-headercontainer2-loginheader'
-          onClick={(evt)=> {
-             navigate('/database/account')
-          }}>login</p>
+       <p id='header-headercontainer1-databaseloginheader'
+           onClick={(evt)=> {
+            navigate('/database/account')
+         }}>holder</p>
       </Col>
       <ActiveBarGraphToggle bargraphintervalcb={props.bargraphintervalcb}/>
     </Row>
