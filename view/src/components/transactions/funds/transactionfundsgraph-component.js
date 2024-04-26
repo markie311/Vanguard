@@ -76,7 +76,7 @@ export default function TransactionFundsGraph() {
             md={12}
             lg={12}
             className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Funds: 0</p>
+         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-myfundsheaderindication'>My Funds: 0</p>
          <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Account strenght: weak</p>
        </Col>
      </Row>

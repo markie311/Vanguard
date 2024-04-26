@@ -30,6 +30,13 @@ font: auto {
 }
 color:white;
 }
+.transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-myfundsheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+    size:40px;
+}
+}
 .transactionmoneygraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication {
 position:relative;
 font: auto {
@@ -77,6 +84,13 @@ font: auto {
  family: $sub-font;
 }
 color:white;
+}
+.transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-myfundsheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+    size:40px;
+}
 }
 .transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication {
 position:relative;

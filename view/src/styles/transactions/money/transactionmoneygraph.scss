@@ -27,8 +27,16 @@ padding:20px 5px;
 position:relative;
 font: auto {
     family: $sub-font;
+    size:20px;
 }
 color:white;
+}
+.transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-mymoneyheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:40px;
+}
 }
 .transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication {
 position:relative;
@@ -76,6 +84,13 @@ font: auto {
  family: $sub-font;
 }
 color:white;
+}
+.transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-mymoneyheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:40px;
+}
 }
 .transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication {
 position:relative;

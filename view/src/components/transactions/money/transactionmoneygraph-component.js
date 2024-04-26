@@ -64,7 +64,7 @@ export default function TransactionMoneyGraph() {
             md={12}
             lg={12}
             className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Money: 0</p>
+         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-mymoneyheaderindication'>My Money: 0</p>
          <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Account strenght: weak</p>
        </Col>
      </Row>
