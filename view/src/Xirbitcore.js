@@ -340,9 +340,9 @@ const [databasedata, databasedatacb] = useState({
 
 const [user, usercb] = useState({
  authentications: {
-  authenticationtype: 'Public',
+  authenticationtype: 'Common public',
   privateauthenticationkey: 'Privateauthenticationkey',
-  authenticationid: '213ad12312awdas123123',
+  authenticationid: 'ASAD-1234-QWERTYTREWQ',
   password: {
    set: false,
    password: 'String'
@@ -350,19 +350,19 @@ const [user, usercb] = useState({
  },
  details: {
   surials: {
-   firstname: 'String',
-   middlename: 'String',
-   lastname: 'String',
-   nickname: 'String',
+   firstname: 'Commoner 1 FIRST NAME' ,
+   middlename: 'Commoner 1 MIDDLE NAME',
+   lastname: 'Commoner 1 LAST NAME',
+   nickname: 'Commoner 1 NICKNAME',
   },
   location: {
     address: {
-     street: 'street',
-     baranggay: 'baranggay',
-     trademark: 'trademark',
-     city: 'city',
-     province: 'province',
-     country: 'country',
+     street: 'Current address',
+     baranggay: 'Current address',
+     trademark: 'Current address',
+     city: 'Current address',
+     province: 'Current address',
+     country: 'Current address',
      coordinates: {
       lat: 0,
       lon: 0
@@ -383,7 +383,7 @@ const [user, usercb] = useState({
         }
       }
     }
-  }
+  },
  },
  moneyandfunds: {
   money: {
@@ -396,7 +396,8 @@ const [user, usercb] = useState({
  }
  },
  transactions: [],
- purchases: []
+ purchases: [],
+ upgradedregistrations: []
 })
 
 const $viewportscreenbreakpoints = {
@@ -2908,7 +2909,9 @@ const navigate = useNavigate()
         </Route>
 
         <Route path='/database/account'
-               element={<DatabaseLogin viewport={viewport}/>}> 
+               element={<DatabaseLogin viewport={viewport}
+                                       user={user}
+                                       usercb={usercb}/>}> 
         </Route>
        
          <Route path='/database'

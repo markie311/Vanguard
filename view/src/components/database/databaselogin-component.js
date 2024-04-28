@@ -111,13 +111,13 @@ export default function DatabaseLogin(props) {
 	       0995874922 - Gcash account number
        </p>
 
-    </Col>                                                                                                                                                                                                                                  
-
+    </Col>   
      <Col xs={12}
           md={6}
           lg={6}
           id='databaselogin-authenticationpublicitytypecontainer-authenticationdetailscontainer'>
-       <PublicAuthenticationDetails />
+       <PublicAuthenticationDetails user={props.user}
+                                    usercb={props.usercb}/>
      </Col>
    </Row>
    <Money viewport={props.viewport}/>
@@ -130,12 +130,12 @@ export default function DatabaseLogin(props) {
    </Col>
    <ConfigurationAuthenticationModal />
    <PasswordSetup />
-   <DatabasePictureContainer />
+   <DatabasePictureContainer user={props.user}/>
   </Col>
  )
 }
 
-function PublicAuthenticationDetails() {
+function PublicAuthenticationDetails(props) {
   return (
     <Row id='publicahtneticationdetails'>
       <Col xs={12}
@@ -151,7 +151,7 @@ function PublicAuthenticationDetails() {
       <Col xs={12}
            md={7}
            lg={7}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>21312213989908sad1232</span></p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.authentications.authenticationid}</span></p>
       </Col>
 
       <Col xs={12}
@@ -162,7 +162,7 @@ function PublicAuthenticationDetails() {
       <Col xs={12}
            md={7}
            lg={7}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Non-unauthentication</span></p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.authentications.authenticationtype}</span></p>
       </Col>
 
       <Col xs={12}
@@ -173,19 +173,19 @@ function PublicAuthenticationDetails() {
       <Col xs={12}
            md={8}
            lg={8}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Revice as a public authentication</span></p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Life time free common public logged in authentication</span></p>
       </Col>
 
       <Col xs={12}
            md={3}
            lg={3}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Unthentication:</p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Unauthentication:</p>
       </Col>
 
       <Col xs={12}
            md={8}
            lg={8}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Non-authentication</span></p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Will not unauthenticate. Common public are a free life-time registrations</span></p>
       </Col>
 
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Password set: {
@@ -207,7 +207,7 @@ function PublicAuthenticationDetails() {
       <Col xs={12}
            md={12}
            lg={12}>
-         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Will recieve funds as a part of Xirbit's public transactions</span></p>
+         <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'> <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Will recieve funds as a part of Vanguard's public transactions</span></p>
       </Col>
       
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Deposits: 0 count</p>
@@ -225,32 +225,57 @@ function PublicAuthenticationDetails() {
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Total widthdrawals: 0</p>
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Total deposits or money converted to Xirbit funds: 0</p>
       <br />
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>First name: ●●●●●●●●●●●●●●●● <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
-                                                                                                                                                                           onClick={(evt)=> {
-                                                                                                                                                                              alert("Alert 1")
-                                                                                                                                                                           }}>show</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Middle name: ●●●●●●●●●●●●●●●● <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
-                                                                                                                                                                             onClick={(evt)=> {
-                                                                                                                                                                              alert("Alert 2")
-                                                                                                                                                                           }}>show</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Last name: ●●●●●●●●●●●●●●●● <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
-                                                                                                                                                                            onClick={(evt)=> {
-                                                                                                                                                                              alert("Alert 3")
-                                                                                                                                                                           }}>show</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>First name: ●●●●●●●●●●●●●●●●</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
+            onClick={(evt)=> {
+              const _userfirstname = document.querySelectorAll(".publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication");
+              if ( _userfirstname[16].innerText.includes("●")) {
+                _userfirstname[16].innerText = `Firstname: ${props.user.details.surials.firstname}`;
+              } else {
+                _userfirstname[16].innerText = "Firstname: ●●●●●";
+              }
+            }}>
+       show
+      </p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Middle name: ●●●●●●●●●●●●●●●●</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
+            onClick={(evt)=> {
+            const _userfirstname = document.querySelectorAll(".publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication");
+              if ( _userfirstname[17].innerText.includes("●")) {
+                _userfirstname[17].innerText = `Middle name: ${props.user.details.surials.middlename}`;
+              } else {
+                _userfirstname[17].innerText = "Middle name: ●●●●●";
+              }
+          }}>show</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Last name: ●●●●●●●●●●●●●●●●</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
+      onClick={(evt)=> {
+          const _userfirstname = document.querySelectorAll(".publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication");
+        if ( _userfirstname[18].innerText.includes("●")) {
+                _userfirstname[18].innerText = `Last name: ${props.user.details.surials.lastname}`;
+              } else {
+                _userfirstname[18].innerText = "Last name: ●●●●●";
+         }
+      }}>show</p>
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>or</p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Nickname: ●●●●●●●●●●●●●●●● <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
-                                                                                                                                                                          onClick={(evt)=> {
-                                                                                                                                                                            alert("Alert 4")
-                                                                                                                                                                         }}>show</span></p>
-
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Nickname: ●●●●●●●●●●●●●●●●</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-nametogglebutton'
+            onClick={(evt)=> {
+               const _userfirstname = document.querySelectorAll(".publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication");
+              if ( _userfirstname[20].innerText.includes("●")) {
+                _userfirstname[20].innerText = `Nick name: ${props.user.details.surials.nickname}`;
+              } else {
+                _userfirstname[20].innerText = "Nick name: ●●●●●";
+         }
+            }}>show</p>
       <br />
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Delivery/Door to door address: </p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Street: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Street</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Baranggay: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Baranggay</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Trademark: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Trademark</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>City: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>City</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Province: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Province</span></p>
-      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Country: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>Country</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Given address</p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Street: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.street}</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Baranggay: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.trademark}</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Trademark: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.city}</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>City: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.province}</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Province: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.province}</span></p>
+      <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Country: <span className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication-informatioonheaderindication'>{props.user.details.location.address.country}</span></p>
     </Row>
   )
 }
@@ -797,8 +822,8 @@ return (
       </Col>
      </Col>
      <Col id="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer">
-       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">Fisrt name Middle name Last Name</p>
-       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">Street, trademark, baramggay, city, province, country</p>
+       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">{props.user.details.surials.firstname} {props.user.details.surials.middlename} {props.user.details.surials.lastname}</p>
+       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">{props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street},</p>
      </Col>
     </Col>
 
