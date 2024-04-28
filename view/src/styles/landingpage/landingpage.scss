@@ -135,6 +135,7 @@ scrollbar-width: none;
 #vanguardwelcomeintroduction {
 position:absolute;
 background-color: rgb(2, 58, 114);
+border:0.1vh solid white;
 border-radius:20px;
 height:70vh;
 width:85%;
@@ -156,14 +157,14 @@ position:relative;
 background-color:red;
 border:0.1vh solid white;
 border-radius:50%;
-height:75%;
-width:12%;
+height:70%;
+width:11%;
 font: auto {
  family: $sub-font;
 }
 color:white;
 right:0vh;
-padding-bottom:1vh;
+padding-bottom:0.5vh;
 }
 #vanguardwelcomeintroduction-welcomeintroductionheadercontainer {
 position:relative;

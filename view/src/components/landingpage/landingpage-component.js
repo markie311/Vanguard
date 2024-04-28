@@ -85,7 +85,10 @@ function WelcomeIntroduction(props) {
 return (
   <Col id="vanguardwelcomeintroduction">
    <Col id="vanguardwelcomeintroduction-closebuttoncontainer">
-    <button id="vanguardwelcomeintroduction-closebutton">
+    <button id="vanguardwelcomeintroduction-closebutton"
+            onClick={(evt)=> {
+              alert("Synced")
+            }}>
      x
     </button>
    </Col>
