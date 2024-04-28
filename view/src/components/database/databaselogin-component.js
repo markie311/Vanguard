@@ -801,8 +801,8 @@ return (
          <img src="../images/landingpage/bondpaperimage.jpg"
               id="databasemobileidcard-frontlayout-cardiduserpicture"
 	      onClick={(evt)=> {
-               const _picturemodal = document.querySelector("#databasemobileidcard-frontlayout-cardiddisplaymodal");
-	      _picturemodal.style.display = "block";
+           const _picturemodal = document.querySelector("#databasemobileidcard-frontlayout-cardiddisplaymodal");
+	         _picturemodal.style.display = "block";
 	     }}/>
       </Col>
       <Col id="databasemobileidcard-frontlayout-cardiddisplaymodal"> 

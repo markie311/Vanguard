@@ -545,7 +545,7 @@ backface-visibility:hidden;
 }
 #databasemobileidcard-frontlayout-cardidpicturecontainer {
 position:relative;
-height:30%;
+height:40%;
 width:100%;
 padding:10px;
 }
@@ -556,12 +556,11 @@ width:45%;
 }
 #databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer {
 position:relative;
-height:35%;
+height:60%;
 width:100%;
 display:flex;
 flex-direction:column;
-justify-content:space-between;
-padding:0px 10px;
+padding:15px 10px;
 }
 .databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication {
 position:relative;
@@ -627,7 +626,7 @@ backface-visibility:hidden;
 }
 #databasemobileidcard-backlayout-cardidpicturecontainer {
 position:relative;
-height:19vh;
+height:35vh;
 width:100%;
 display:flex;
 flex-direction:column;
@@ -668,7 +667,7 @@ font: auto {
 }
 color:white;
 text-align:center;
-margin-top:1.5vh;
+margin-top:3.5vh;
 }
 .databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication {
 position:relative;                                 
