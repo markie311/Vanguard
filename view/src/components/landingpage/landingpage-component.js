@@ -76,6 +76,15 @@ export default function LandingPage(props) {
     <PrivacyAndPolicy />
     <Footer />
    </Col>
+   <WelcomeIntroduction />
   </Row>
  )
 } 
+
+function WelcomeIntroduction(props) {
+return (
+  <Col id="vanguardwelcomeintroduction">
+   <p>Welcome introduction</p>
+  </Col>
+)
+}

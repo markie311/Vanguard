@@ -132,6 +132,17 @@ display: none;
 -ms-overflow-style: none;  
 scrollbar-width: none;  
 }
+#vanguardwelcomeintroduction {
+position:absolute;
+background-color: dodgerblue;
+border-radius:20px;
+height:70vh;
+width:85%;
+z-index:5;
+top:0;
+left:0;
+transform: translate(10%, 22%);
+}
 }
 @media only screen and (min-width: 1200px) {
 #landingpage {
