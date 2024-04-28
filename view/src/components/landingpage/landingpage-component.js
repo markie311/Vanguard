@@ -84,7 +84,15 @@ export default function LandingPage(props) {
 function WelcomeIntroduction(props) {
 return (
   <Col id="vanguardwelcomeintroduction">
-   <p>Welcome introduction</p>
+   <Col id="vanguardwelcomeintroduction-closebuttoncontainer">
+    <button id="vanguardwelcomeintroduction-closebutton">
+     x
+    </button>
+   </Col>
+   <Col id="vanguardwelcomeintroduction-welcomeintroductionheadercontainer">
+     <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Welcome to Vanguard public website</p>
+     <p id="vanguardwelcomeintroduction-welcomeintroductionheader">You're suppose to enter as a common public account holder</p>
+   </Col>
   </Col>
 )
 }
