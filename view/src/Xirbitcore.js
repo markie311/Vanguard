@@ -2825,12 +2825,25 @@ const [purchasing, purchasingcb] = useState([
 ]); 
 
 useEffect(()=> {
-  $viewportscreenbreakpoints.xsviewportscreenbreakpoint();
-  $viewportscreenbreakpoints.mdviewportscreenbreakpoint();
-  $viewportscreenbreakpoints.lgviewportscreenbreakpoint();
+
+   $viewportscreenbreakpoints.xsviewportscreenbreakpoint();
+   $viewportscreenbreakpoints.mdviewportscreenbreakpoint();
+   $viewportscreenbreakpoints.lgviewportscreenbreakpoint();
+
   //getUIUserAuthenticationData()
   //getDatabaseData()
+
+  loadWelcomeIntroductionModal()
+
 }, [location, $xsviewport, $mdviewport, $lgviewport, viewport, uidata, user, databasedata]);
+
+async function loadWelcomeIntroductionModal() {
+ if ( location.pathname === "/" ) {
+   const _welcomeintroductionmodal = document.getElementById("vanguardwelcomeintroduction");
+   _welcomeintroductionmodal.style.top = "0";
+   _welcomeintroductionmodal.style.opacity = "1";
+ }
+}
 
 async function getUIUserAuthenticationData() {
 

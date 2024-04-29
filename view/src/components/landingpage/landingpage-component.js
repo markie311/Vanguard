@@ -87,7 +87,9 @@ return (
    <Col id="vanguardwelcomeintroduction-closebuttoncontainer">
     <button id="vanguardwelcomeintroduction-closebutton"
             onClick={(evt)=> {
-              alert("Synced")
+              const _welcomeintroductionmodal = document.getElementById("vanguardwelcomeintroduction");
+              _welcomeintroductionmodal.style.top = "-100vh";
+              _welcomeintroductionmodal.style.opacity = "0";
             }}>
      x
     </button>
@@ -95,6 +97,9 @@ return (
    <Col id="vanguardwelcomeintroduction-welcomeintroductionheadercontainer">
      <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Welcome to Vanguard public website</p>
      <p id="vanguardwelcomeintroduction-welcomeintroductionheader">You're suppose to enter as a common public account holder</p>
+     <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Common public account's are free of registration and for a Life-time recieving transactions give aways even without maintaining a balance on your accounts</p>
+     <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Your currently the number 1 common public account holder after closing this modal</p>
+     <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Vanguard's public website is out and all data are with freedom to use without worrying for real transactions to a purpose of being comfortable with the system using self given data to practice.</p>
    </Col>
   </Col>
 )

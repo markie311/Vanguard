@@ -143,6 +143,9 @@ z-index:5;
 top:0;
 left:0;
 transform: translate(10%, 18%);
+transition: all 6s ease;
+top:-100vh;
+opacity: 0;
 }
 #vanguardwelcomeintroduction-closebuttoncontainer {
 position:relative;
@@ -331,6 +334,68 @@ display: none;
 #landingpage-content {
 -ms-overflow-style: none;  
 scrollbar-width: none;  
+}
+#vanguardwelcomeintroduction {
+position:absolute;
+background-color: rgb(2, 58, 114);
+border:0.1vh solid white;
+border-radius:20px;
+height:70vh;
+width:85%;
+z-index:5;
+top:0;
+left:0;
+transform: translate(10%, 18%);
+transition: all 6s ease;
+top:-100vh;
+opacity: 0;
+}
+#vanguardwelcomeintroduction-closebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display: flex;
+align-items:center;
+justify-content:flex-end;
+}
+#vanguardwelcomeintroduction-closebutton {
+position:relative;
+background-color:red;
+border:0.1vh solid white;
+border-radius:50%;
+height:50%;
+width:2%;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+right:0vh;
+padding-bottom:0.5vh;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheadercontainer {
+position:relative;
+height:90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader {
+position:relative;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+text-align:center;
+}
+.vanguardwelcomeintroduction-welcomeintroductionheader {
+position:relative;
+font: auto {
+    family:$sub-font;
+    weight:900;
+}
+color:white;
 }
 }
   
