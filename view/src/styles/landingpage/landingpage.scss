@@ -137,12 +137,12 @@ position:absolute;
 background-color: rgb(2, 58, 114);
 border:0.1vh solid white;
 border-radius:20px;
-height:70vh;
-width:85%;
+height:90vh;
+width:90%;
 z-index:5;
 top:0;
 left:0;
-transform: translate(10%, 18%);
+transform: translate(5%, 5%);
 transition: all 6s ease;
 top:-100vh;
 opacity: 0;
@@ -193,6 +193,51 @@ font: auto {
  weight:900;
 }
 color:white;
+text-align:center;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-registermenowbutton {
+position:relative;
+background-color:gray;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:15px 20px;
+outline-style:none;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountbutton {
+position:relative;
+background-color:gray;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:15px 20px;
+outline-style:none;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage {
+position:relative;
+font: auto {
+ family:$sub-font;
+ size:14px;
+ style:italic;
+}
+color:white;
+letter-spacing:0.5vh;
+text-align:center;
+margin-top:1.5vh;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage {
+position:relative;
+font: auto {
+ family:$sub-font;
+ style:italic;
+ size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+margin-top:1.5vh;
 }
 }
 @media only screen and (min-width: 1200px) {
@@ -396,6 +441,43 @@ font: auto {
     weight:900;
 }
 color:white;
+text-align:center;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-registermenowbutton {
+position:relative;
+background-color:gray;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+outline-style:none;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountbutton {
+position:relative;
+background-color:gray;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+outline-style:none;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage {
+position:relative;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+margin-top:1.5vh;
+visibility:hidden;
+}
+#vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage {
+position:relative;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+margin-top:1.5vh;
+visibility:hidden;
 }
 }
   

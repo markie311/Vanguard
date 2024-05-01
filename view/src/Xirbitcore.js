@@ -15,6 +15,7 @@ import { Container } from 'react-bootstrap';
 import './styles/xirbitcore/xirbitcore.scss';
 
 import axiosCreatedInstance from './components/lib/axiosutil.js';
+import { timestamp } from './components/lib/timestamps';
 
 import LandingPage from './components/landingpage/landingpage-component.js';
 import XirbitMarketing from './components/xirbitmarketing/xirbitmarketing-component.js';
@@ -34,6 +35,8 @@ const $mdviewport = window.matchMedia('(min-width: 992px)');
 const $lgviewport = window.matchMedia('(min-width: 1200px)');
 
 const [viewport, viewportcb] = useState('xs');
+
+const [welcomeinmtroductionmesssage, welcomeinmtroductionmesssagecb] = useState("commonpublicaccountactivation");
 
 const [landingpagenavigationbargraphwidthproperty, landingpagenavigationbargraphwidthpropertycb] = useState('90%');
 const [landingpagenavigationbargraphleftproperty, landingpagenavigationbargraphleftpropertycb] = useState('-100%'); 
@@ -2833,9 +2836,31 @@ useEffect(()=> {
   //getUIUserAuthenticationData()
   //getDatabaseData()
 
-  loadWelcomeIntroductionModal()
+  //assistcommonpublicregistration()
+  loadWelcomeIntroductionModal();
 
 }, [location, $xsviewport, $mdviewport, $lgviewport, viewport, uidata, user, databasedata]);
+
+async function assistcommonpublicregistration() {
+
+    const _usercookie = document.cookie;
+
+     await axiosCreatedInstance.get("/userauthentication/commonpublicaccountauthentication", {
+        $usercookie: _usercookie
+      }).then((response)=> {
+        const _responsedata = response.data;
+        console.log(_responsedata)
+        if ( _responsedata === "Assist common public account authentication and it's registration" ) {
+          document.cookie = `thisuser=${_responsedata.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
+          welcomeinmtroductionmesssagecb((message)=> message = "commonpublicaccountactivation");
+          loadWelcomeIntroductionModal();
+        } else {
+          welcomeinmtroductionmesssagecb((message)=> message = "commonpublicaccountconfiguration");  
+          loadWelcomeIntroductionModal();
+        }
+      })
+
+}
 
 async function loadWelcomeIntroductionModal() {
  if ( location.pathname === "/" ) {
@@ -2881,7 +2906,7 @@ async function getDatabaseData() {
 
 }
 
-const navigate = useNavigate()
+const navigate = useNavigate();
 
   return (
     <Container fluid
@@ -2894,6 +2919,9 @@ const navigate = useNavigate()
       <Routes>
         <Route path='/'
                element={<LandingPage viewport={viewport}
+
+                                     welcomeinmtroductionmesssage={welcomeinmtroductionmesssage}
+                                     welcomeinmtroductionmesssagecb={welcomeinmtroductionmesssagecb}
                
                                      landingpagenavigationbargraphwidthproperty={landingpagenavigationbargraphwidthproperty}
                                      landingpagenavigationbargraphwidthpropertycb={landingpagenavigationbargraphwidthpropertycb}
