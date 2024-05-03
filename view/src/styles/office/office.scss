@@ -133,10 +133,12 @@ width:100%;
 #office {
 position:relative;
 border:1vh solid white;
+border:1vh solid red;
 height:100%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+overflow-y:scroll;
 }
 #office-mainnavigationcontainer {
 position:relative;

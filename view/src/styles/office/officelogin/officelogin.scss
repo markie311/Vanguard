@@ -77,3 +77,75 @@ color:white;
 letter-spacing:65px;
 }
 }
+@media only screen and (min-width:1200px) {
+#office-login {
+position:relative;
+height:100%;
+width:100%;
+padding:150px 40px;
+}
+#office-login-headercontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+align-items:center;
+}
+#office-login-headercontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+user-select:none;
+}
+.office-login-userinputfield {
+position:relative;
+border-radius:20px;
+height:5vh;
+width:70%;
+font: auto {
+family: $sub-font;
+}
+color:black;
+text-align:center;
+}
+#office-login-loginbutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:5vh;
+width:30%;
+font: auto {
+family: $sub-font;
+}
+color:white;
+outline-style:none;
+}
+#office-login-fieldscontainer {
+position:relative;
+height:90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#office-loginintroductionpage {
+position:relative;
+border:1vh solid white;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+#office-loginintroductionpage-loginheaderindication {
+position:relative;
+font: auto { 
+family: $sub-font;
+}
+color:white;
+letter-spacing:65px;
+}
+}

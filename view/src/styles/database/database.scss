@@ -788,1600 +788,820 @@ width:80%;
 ////
 
 }
-@media only screen and (max-width:600px) {
-#database {
-position:relative;
-background-color:black;
-height:100%;
-width:100%;
-padding:0;
-}
-/// new 
-#database-navigationgridcontainer {
-position:relative;
-background-color:white;
-height:15%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:0px;
-}
-.database-navigationcontainer {
-position:relative;
-height:auto;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-.database-navigationcontainer-navigationheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-margin-top:1.5vh;
-}
-.database-navigationcontainer-navigationbutton {
-position:relative;
-background-color:black;
-border-radius:20px;
-font: auto {
-family: $sub-font;
-}
-color: white;
-outline-style:none;
-padding:5px 30px;
-top:-1vh;
-}
-#database-viewcontainer {   
-position:relative;
-border:1vh solid gray;
-height:85%;
-width:100%;
-padding:0;
-overflow:scroll;
-}
-#database-dataview {
-position:relative;
-height:100%;
-width:100%;
-overflow-y:scroll;
-overflow-x:hidden;
-}
-#database-dataview::-webkit-scrollbar {
-width: 2px;
-}
-#database-dataview::-webkit-scrollbar-track {
-box-shadow: inset 0 0 5px grey; 
-border-radius: 10px;
-}
-#database-dataview::-webkit-scrollbar-thumb {
-background: white; 
-border-radius: 10px;
-}
-#database-dataview::-webkit-scrollbar-thumb:hover {
-background: black; 
-}
-#database-datanavigation {
-position:relative;
-background-color:white;
-height:auto;
-width:100%;
-}
-#database-datanavigationbuttons {
-position:relative;
-background-color:white;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-#database-datanavigationbutton-navigationheaderindicationcontainer {
-position:relative;
-background-color:white;
-height:auto;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:50px 40px;
-}
-.database-datanavigationbutton-navigationbuttoncontainer {
-position:relative;
-height:10%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.database-datanavigationbutton-navigationbuttoncontainer-navigationheaderindication {
-position: relative;
-font: auto {
-family: $sub-font;
-}
-color:black;
-text-align:center;
-}
-.database-datanavigationbutton-navigationbutton {
-position:relative;
-background-color:black;
-border-radius:20px;
-font: auto {
-family: $sub-font;
-}
-color: white;
-outline-style:none;
-padding:5px 30px;
-margin-top:5vh;
-}
-#database-databasepeople {
-position:relative;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:50px 10px;
-}
-#databaase-databasepeople-mapcontainer {
-position:relative;
-height:100%;
-}
-#databaase-databasepeople-mapcontainer-datapopulationheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#databaase-databasepeople-peopledatacontainer {
-position:relative;
-border:0.5vh dotted gray;
-height:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:50px 10px;
-margin-top:5vh;
-}
-.databaase-databasepeople-peopledatacontainer-displaydataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#databaase-databasepeople-map {
-position:relative;
-background-color:white;
-height:80vh;
-width:100%;
-margin-top:10vh;
-}
-#database-databasepeople-mapnavigationcontainer {
-position:relative;
-background-color:black;
-height:10%;
-width:100%;
-}
-#database-databasepeople-navigationcontainer-maptiler {
-position:relative;
-border:0.1vh solid gray;
-height:90%;
-width:100%;
-}
-#databaase-databasepeople-peopledataconfigurationcontainer {
-position:relative;
-background-color:gray;
-height:75vh;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:50px 10px;
-margin-top:5vh;
-}
-.databaase-databasepeople-peopledataconfigurationcontainer-peopledataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-#database-databasepeople-backtomonitoringviewbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:80%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:15vh;
-margin-left:20%;
-}
-#database-databasemoneyandfunds {
-position:relative;  
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding-bottom:30px
-}
-#database-databasemoneyandfunds-navigationgridcontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:10%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:15px 10px;
-}
-.database-databasemoneyandfunds-navigationcontainer {
-position:relative;
-height:100%;
-}
-.database-databasemoneyandfunds-navigationbuttonheaderindication {
-position:relative;
-border-bottom:0.1vh solid none;
-font: auto {
-family: $sub-font;
-}
-color:white;
-top:1vh;
-}
-#database-databasemoneyandfunds-datacontentcontainer {
-position:relative;
-height:auto;
-width:100%;
-padding:0;
-}
-#database-databasemoneydata {
-position:relative;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemoneyanddata-datacontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:auto;
-padding:130px 30px;
-}
-.database-databasemoneyanddata-datacontainer-dataheaderindication {
-position:relative;
-font: auto {
-family:$sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyanddata-datacontainer-datapercentageheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyanddata-datacontainer-bargraphcontainer {
-position:relative;
-border:0.1vh solid white;
-border-radius:20px;
-height:1vh;
-width:100%;
-}
-.database-databasemoneyanddata-datacontainer-bargraph {
-position:relative;
-background-color:white;
-height:100%;
-width:80%;
-}
-.database-databasemoneyanddata-datacontainer-dataheadersubindication {
-position:relative;
-background-color:gray;
-border-radius:20px;
-font: auto {
-family: $sub-font;
-}
-color:black;
-text-align:center;
-padding:10px 10px;
-margin-top:5vh;
-}
-#database-databasemoneyanddata-locationsdatalayoutcontainer {
-position:relative;
-border:1vh solid red;
-height:auto;
-padding:50px 10px;
-}
-#database-databasemoneyanddata-locationsdatagridcontainer {
-position:relative;
-border:1vh solid gray;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemoneyanddata-locationsdatacontainer {
-position:relative;
-border:1vh solid red;
-height:100%;
-}
-.database-databasemoneyanddata-locationsdatacontainer-locationsheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white; 
-}
-.database-databasemoneyanddata-locationsdatacontainer-listgroup {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-databasemoneyanddata-locationsdatacontainer-listgroupheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-databasemoneyanddata-locationsdatacontainer-databreakdowncontainer {
-position:relative;
-border:1vh solid red;
-height:20vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-.database-databasemoneyanddata-locationsdatacontainer-databreakdowncontaine-headerindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemoneyanddata-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:70%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:15vh;
-margin-left:27%;
-}
-#database-databasehistory {
-position:relative;
-border:1vh solid white;
-height:auto;
-width:100%;
-padding:30px 10px 3cqmax 10px;
-}
-.database-databasehistory-historycontentcontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:auto;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:100px 10px;
-}
-.database-databasehistory-headerindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white; 
-}
-#database-databasehistory-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:80%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:30vh;
-margin-left:22%;   
-}
-#database-databasemarketing {
-position:relative;
-position:relative;
-border:1vh solid white;
-height:auto;
-width:100%;
-padding:30px 10px 3cqmax 10px;
-}
-.database-databasemarketing-headerindicationcontainer {
-position:relative;
-height:auto;
-width:100%;
-padding:10px 10px;
-}
-.database-databasemarketing-headerindicationcontainer-headerindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-navigationgridcontainer {
-position:relative;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemarketing-navigationbuttoncontainer {
-position:relative;
-height:15vh;
-margin-left:auto;
-margin-right:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.database-databasemarketing-navigationbutton {
-position:relative;
-background-color:transparent;
-border:none;
-border:0.1vh solid none;
-height:100%;
-width:100%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-}
-#database-databasemarketing-viewcontainer {
-position:relative;
-height:60vh;
-width:100%;
-}
-#database-databasemarketing-databasemarketingview {
-position:relative;
-height:100%;
-width:100%;
-}
-#database-databasemarketing-mainmonitoringdatacontainer {
-position:relative;
-border:1vh solid gray;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-mainmonitoringdatacontainer-mainmonitoringdataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-marketingdata {
-position:relative;
-border:1vh solid gray;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-marketingdata-marketingdataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-production {
-position:relative;
-border:1vh solid gray;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-production-productheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-peoplesdata {
-position:relative;
-border:1vh solid gray;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-peoplesdata-peoplesdataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-sales {
-position:relative;
-border:1vh solid gray;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-salesheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:80%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:30vh;
-margin-left:22%;   
-}
-#database-databasefundsdata {
-position:relative;
-height:67vh;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-#database-databasefundsdata-ownpersonalcurrencyheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyandfunds-headerindicationcontainer {
-position:relative;
-border:1vh solid red;
-height:20vh;
-}
-.database-databasemoneyandfunds-headerindicationlayoutgridcontainer {
-position:relative;
-background-color:white;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemoneyandfunds-headerindicationcontainer-headerindication {
-position:relative;
-font: auto {
-family:$sub-font;
-}
-color:white;
-}
-#database-requestsview {
-position:absolute;
-height:auto;
-width:100%;
-padding:10px 0px;
-}
-#database-requestsview-nowdatagridcontainer {
-position:relative;
-height:auto;
-border-bottom:0.1vh solid white;
-}
-.database-requestsview-nowdatacontainer {
-position:relative;
-height:100%;
-padding:30px 20px;
-}
-.database-requestsview-recentdatacontainer-nowdataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-#database-requestsview-requestsdatagridcontainer {
-position:relative;
-height:auto;
-}
-.database-requestsview-requestsdatacontainer {
-position:relative;
-height:100%;
-padding:30px 20px;
-}
-.database-requestsview-recentdatacontainer-requestsdataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-requestsview-recentdatacontainer-listgroupheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-requestsview-recentdatacontainer-listgroupheaderindication-productbreakdownspanbutton {
-position:relative;
-outline-style:none;
-}
-#database-requestsview-backtomonitoringviewbutton{
-position:relative;
-background-color:black;
-border:0.1vh solid white;
-border-radius:20px;
-font: auto {
-family: $sub-font;
-}
-color:white;
-outline-style:none;
-padding:5px 30px;
-margin-top:15vh;
-margin-left:28%;
-}
-#database-databasetransactions {
-position:relative;
-background-color:black;
-height:auto;
-width:100%;
-padding:40px 20px;
-}
-.database-databasetransactions-databasetransactionbaranggayheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-databasetransactions-dataheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-margin-top:3vh;
-}
-.database-databasetransactions-databargraphpercentageheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;   
-}
-.database-databasetransactions-datalistgroupheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white; 
-margin-top:3.5vh;
-}
-#database-databasetransactions-backtomonitoringviewbutton {
-position:relative;
-background-color:black;
-border:0.1vh solid white;
-border-radius:20px;
-font: auto {
-family: $sub-font;
-}
-color:white;
-outline-style:none;
-padding:5px 30px;
-margin-top:15vh;
-margin-left:22%;
-}
-.database-databasetransacations-bargraphcontainer {
-position:relative;
-border:0.1vh solid white;
-border-radius:20px;
-height:1vh;
-width:100%;
-}
-.database-databasetransacations-bargraph {
-position:relative;
-background-color:white;
-height:100%;
-width:90%;
-}
-#database-monitoring {
-position:relative;
-background-color:white;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:0;
-}
-.database-monitoring-contentcontainer {
-position:relative;
-border-right:0.1vh solid white;
-border-bottom:0.1vh solid white;
-padding:50px 70px 20px 20px;
-}
-.database-monitoringheaderindication {
-position:relative;
-height:auto;
-width:100%;
-font: auto {
-family:$sub-font;
-weight:900;
-}
-color:black;
-}
-.database-monitoringheaderindication-spanbuttonheaderindication {
-position:relative;
-background-color:black;
-border:0.5vh solid gray;
-border-radius:20px;
-color:white;
-padding:10px 15px;
-left:0.5vh;
-user-select:none;
-}
-.database-monitoring-bargraphcontainer {
-position:relative;
-border:0.1vh solid black;
-border-radius:20px;
-height:1vh;
-width:100%;
-}
-.database-monitoring-bargraph {
-position:relative;
-background-color:black;
-height:100%;
-width:80%;
-}
-////
-}
 @media only screen and (min-width:1200px) {
-#database {
-position:relative;
-background-color:black;
-height:100%;
-width:100%;
-padding:0;
-}
-/// new 
-#database-navigationgridcontainer {
-position:relative;
-background-color:white;
-height:15%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:0px;
-}
-.database-navigationcontainer {
-position:relative;
-height:auto;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-.database-navigationcontainer-navigationheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-margin-top:1.5vh;
-}
-.database-navigationcontainer-navigationbutton {
-position:relative;
-background-color:black;
-border-radius:20px;
-font: auto {
- family: $sub-font;
-}
-color: white;
-outline-style:none;
-padding:5px 30px;
-top:-1vh;
-}
-#database-viewcontainer {   
-position:relative;
-height:85%;
-width:100%;
-padding:0;
-overflow:scroll;
-}
-#database-dataview {
-position:relative;
-height:100%;
-width:100%;
-overflow-y:scroll;
-overflow-x:hidden;
-}
-#database-dataview::-webkit-scrollbar {
-width: 2px;
-}
-#database-dataview::-webkit-scrollbar-track {
-box-shadow: inset 0 0 5px grey; 
-border-radius: 10px;
-}
-#database-dataview::-webkit-scrollbar-thumb {
-background: white; 
-border-radius: 10px;
-}
-#database-dataview::-webkit-scrollbar-thumb:hover {
-background: black; 
-}
-#database-datanavigation {
-position:relative;
-background-color:white;
-height:auto;
-width:100%;
-}
-#database-datanavigationbuttons {
-position:relative;
-background-color:white;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-#database-datanavigationbutton-navigationheaderindicationcontainer {
-position:relative;
-background-color:white;
-height:100%;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:100px 500px;
-}
-.database-datanavigationbutton-navigationbuttoncontainer {
-position:relative;
-height:10%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.database-datanavigationbutton-navigationbuttoncontainer-navigationheaderindication {
-position: relative;
-font: auto {
- family: $sub-font;
-}
-color:black;
-text-align:center;
-}
-.database-datanavigationbutton-navigationbutton {
-position:relative;
-background-color:black;
-border-radius:20px;
-font: auto {
- family: $sub-font;
-}
-color: white;
-outline-style:none;
-padding:5px 30px;
-margin-top:5vh;
-}
-#database-databasepeople {
-position:relative;
-border:1vh solid gray;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:50px 10px;
-}
-#databaase-databasepeople-mapcontainer {
-position:relative;
-height:100%;
-}
-#databaase-databasepeople-mapcontainer-datapopulationheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
- size:20px;
-}
-color:white;
-}
-#databaase-databasepeople-peopledatacontainer {
-position:relative;
-border:0.5vh dotted gray;
-height:80vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:50px 10px;
-margin-top:5vh;
-}
-.databaase-databasepeople-peopledatacontainer-displaydataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#databaase-databasepeople-map {
-position:relative;
-background-color:white;
-height:80vh;
-width:100%;
-margin-top:10vh;
-}
-#database-databasepeople-mapnavigationcontainer {
-position:relative;
-background-color:black;
-height:10%;
-width:100%;
-}
-#database-databasepeople-navigationcontainer-maptiler {
-position:relative;
-height:90%;
-width:100%;
-}
-#databaase-databasepeople-peopledataconfigurationcontainer {
-position:relative;
-background-color:gray;
-height:30vh;
-width:35%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:50px 10px;
-margin-top:5vh;
-margin-left:auto;
-margin-right:auto;
-}
-.databaase-databasepeople-peopledataconfigurationcontainer-peopledataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-#database-databasepeople-backtomonitoringviewbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:35%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:15vh;
-margin-left:65%;
-}
-#database-databasemoneyandfunds {
-position:relative;  
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding-bottom:30px
-}
-#database-databasemoneyandfunds-navigationgridcontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:10%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:20px 10px;
-}
-.database-databasemoneyandfunds-navigationcontainer {
-position:relative;
-height:100%;
-}
-.database-databasemoneyandfunds-navigationbuttonheaderindication {
-position:relative;
-border-bottom:0.1vh solid none;
-font: auto {
- family: $sub-font;
-}
-color:white;
-user-select:none;
-top:1vh;
-}
-#database-databasemoneyandfunds-datacontentcontainer {
-position:relative;
-height:auto;
-width:100%;
-padding:0;
-}
-#database-databasemoneydata {
-position:relative;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-padding:100px 10px;
-}
-.database-databasemoneyanddata-datacontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:auto;
-padding:50px 150px;
-}
-.database-databasemoneyanddata-datacontainer-dataheaderindication {
-position:relative;
-font: auto {
- family:$sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyanddata-datacontainer-datapercentageheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyanddata-datacontainer-bargraphcontainer {
-position:relative;
-border:0.1vh solid white;
-border-radius:20px;
-height:1vh;
-width:100%;
-}
-.database-databasemoneyanddata-datacontainer-bargraph {
-position:relative;
-background-color:white;
-height:100%;
-width:80%;
-}
-.database-databasemoneyanddata-datacontainer-dataheadersubindication {
-position:relative;
-background-color:gray;
-border-radius:20px;
-font: auto {
- family: $sub-font;
-}
-color:black;
-text-align:center;
-padding:10px 10px;
-margin-top:5vh;
-}
-#database-databasemoneyanddata-locationsdatalayoutcontainer {
-position:relative;
-height:auto;
-margin-top:10vh;
-padding:50px 10px;
-}
-#database-databasemoneyanddata-locationsdatagridcontainer {
-position:relative;
-border:1vh solid gray;
-height:auto;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemoneyanddata-locationsdatacontainer {
-position:relative;
-height:100%;
-padding:10px;
-}
-.database-databasemoneyanddata-locationsdatacontainer-locationsheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white; 
-}
-.database-databasemoneyanddata-locationsdatacontainer-listgroup {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-.database-databasemoneyanddata-locationsdatacontainer-listgroupheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-.database-databasemoneyanddata-locationsdatacontainer-databreakdowncontainer {
-position:relative;
-border:1vh dotted gray;
-height:20vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-}
-.database-databasemoneyanddata-locationsdatacontainer-databreakdowncontaine-headerindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemoneyanddata-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:30%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:15vh;
-margin-left:69%;
-}
-#database-databasehistory {
-position:relative;
-border:1vh solid white;
-height:auto;
-width:100%;
-padding-bottom:30px;
-}
-.database-databasehistory-historycontentcontainer {
-position:relative;
-border-bottom:0.1vh solid white;
-height:auto;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:200px 10px;
-}
-.database-databasehistory-headerindication {
-position:relative;
-font: auto {
- family: $sub-font;
- size:35px;
-}
-color:white; 
-}
-#database-databasehistory-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:30%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:30vh;
-margin-left:69%;   
-}
-#database-databasemarketing {
-position:relative;
-position:relative;
-border:1vh solid white;
-height:auto;
-width:100%;
-padding:30px 10px 3cqmax 10px;
-}
-.database-databasemarketing-headerindicationcontainer {
-position:relative;
-height:auto;
-width:100%;
-padding:10px 10px;
-}
-.database-databasemarketing-headerindicationcontainer-headerindication {
-position:relative;
-font: auto {
- family: $sub-font;
- size:20px;
-}
-color:white;
-}
-#database-databasemarketing-navigationgridcontainer {
-position:relative;
-height:auto;
-width:100%;
-margin-top:5vh;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemarketing-navigationbuttoncontainer {
-position:relative;
-height:15vh;
-margin-left:auto;
-margin-right:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-.database-databasemarketing-navigationbutton {
-position:relative;
-background-color:transparent;
-border:none;
-border:0.1vh solid none;
-height:100%;
-width:100%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-}
-#database-databasemarketing-viewcontainer {
-position:relative;
-height:80vh;
-width:100%;
-margin-top:7vh;
-}
-#database-databasemarketing-databasemarketingview {
-position:relative;
-height:100%;
-width:100%;
-}
-#database-databasemarketing-mainmonitoringdatacontainer {
-position:relative;
-border:0.5vh solid gray;
-border-radius:20px;
-height:100%;
-width:100%;
-padding:20px 10px;
-}
-.database-databasemarketing-mainmonitoringdatacontainer-mainmonitoringdataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-marketingdata {
-position:relative;
-border:0.5vh solid gray;
-border-radius:20px;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-marketingdata-marketingdataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-production {
-position:relative;
-border:0.5vh solid gray;
-border-radius:20px;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-production-productheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-peoplesdata {
-position:relative;
-border:0.5vh solid gray;
-border-radius:20px;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-peoplesdata-peoplesdataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-sales {
-position:relative;
-border:0.5vh solid gray;
-border-radius:20px;
-height:100%;
-width:100%;
-padding:30px 10px;
-}
-.database-databasemarketing-salesheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-databasemarketing-backtomonitoringbutton {
-position:relative;
-background-color:transparent;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:30%;
-font: auto {
-family: $sub-font;
-}
-color:white;
-letter-spacing:2px;
-padding:5px 0px;
-margin-top:30vh;
-margin-left:69%;   
-}
-#database-databasefundsdata {
-position:relative;
-height:67vh;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-#database-databasefundsdata-ownpersonalcurrencyheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-text-align:center;
-}
-.database-databasemoneyandfunds-headerindicationcontainer {
-position:relative;
-border:1vh solid red;
-height:20vh;
-}
-.database-databasemoneyandfunds-headerindicationlayoutgridcontainer {
-position:relative;
-background-color:white;
-height:100%;
-width:100%;
-margin-left:auto;
-margin-right:auto;
-}
-.database-databasemoneyandfunds-headerindicationcontainer-headerindication {
-position:relative;
-font: auto {
- family:$sub-font;
-}
-color:white;
-}
-#database-requestsview {
-position:absolute;
-height:auto;
-width:100%;
-padding:10px 0px;
-}
-#database-requestsview-nowdatagridcontainer {
-position:relative;
-height:auto;
-border-bottom:0.1vh solid white;
-}
-.database-requestsview-nowdatacontainer {
-position:relative;
-height:100%;
-padding:30px 20px;
-}
-.database-requestsview-recentdatacontainer-nowdataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-#database-requestsview-requestsdatagridcontainer {
-position:relative;
-height:auto;
-padding:70px 10px;
-}
-.database-requestsview-requestsdatacontainer {
-position:relative;
-height:100%;
-padding:30px 20px;
-}
-.database-requestsview-recentdatacontainer-requestsdataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-.database-requestsview-recentdatacontainer-listgroupheaderindication {
-position:relative;
-font: auto {
-family: $sub-font;
-}
-color:white;
-}
-.database-requestsview-recentdatacontainer-listgroupheaderindication-productbreakdownspanbutton {
-position:relative;
-outline-style:none;
-}
-#database-requestsview-backtomonitoringviewbutton{
-position:relative;
-background-color:black;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:30%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-outline-style:none;
-padding:5px 30px;
-margin-top:15vh;
-margin-left:69%;
-}
-#database-databasetransactions {
-position:relative;
-background-color:black;
-height:auto;
-width:100%;
-padding:50px 20px;
-}
-.database-databasetransactions-databasetransactionbaranggayheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-}
-.database-databasetransactions-dataheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-margin-top:3vh;
-margin-left:2vh;
-}
-.database-databasetransactions-positioningdataheaderindication  {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;
-margin-top:7vh;
-margin-left:2vh;  
-}
-.database-databasetransactions-databargraphpercentageheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white;   
-margin-left:2vh;
-}
-.database-databasetransactions-datalistgroupheaderindication {
-position:relative;
-font: auto {
- family: $sub-font;
-}
-color:white; 
-margin-top:3.5vh;
-}
-.database-databasetransacations-bargraphcontainer {
-position:relative;
-border:0.1vh solid white;
-border-radius:20px;
-height:1vh;
-width:100%;
-margin-left:2vh;
-}
-.database-databasetransacations-bargraph {
-position:relative;
-background-color:white;
-height:100%;
-width:90%;
-}
-#database-databasetransactions-backtomonitoringviewbutton {
-position:relative;
-background-color:black;
-border:0.1vh solid white;
-border-radius:20px;
-height:5vh;
-width:30%;
-font: auto {
- family: $sub-font;
-}
-color:white;
-outline-style:none;
-padding:5px 30px;
-margin-top:15vh;
-margin-left:69%;
-}
-#database-monitoring {
-position:relative;
-background-color:white;
-border:0.1vh solid gray;
-border-top: none;
-height:auto;
-width:100%;
-margin-top:5vh;
-margin-left:auto;
-margin-right:auto;
-padding:0;
-}
-.database-monitoring-contentcontainer {
-position:relative;
-border-right:0.1vh solid white;
-border-bottom:0.1vh solid white;
-padding:50px 70px 20px 20px;
-}
-.database-monitoringheaderindication {
-position:relative;
-height:auto;
-width:100%;
-font: auto {
- family:$sub-font;
- weight:900;
-}
-color:black;
-}
-.database-monitoringheaderindication-spanbuttonheaderindication {
-position:relative;
-background-color:black;
-border:0.5vh solid gray;
-border-radius:20px;
-color:white;
-padding:10px 15px;
-left:0.5vh;
-user-select:none;
-}
-.database-monitoring-bargraphcontainer {
-position:relative;
-border:0.1vh solid black;
-border-radius:20px;
-height:1vh;
-width:100%;
-}
-.database-monitoring-bargraph {
-position:relative;
-background-color:black;
-height:100%;
-width:80%;
-}
-////
-}
+  #database {
+  position:relative;
+  background-color:black;
+  height:100%;
+  width:100%;
+  padding:0;
+  }
+  /// new 
+  #database-navigationgridcontainer {
+  position:relative;
+  background-color:white;
+  height:15%;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0px;
+  }
+  .database-navigationcontainer {
+  position:relative;
+  height:auto;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  }
+  .database-navigationcontainer-navigationheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  margin-top:1.5vh;
+  }
+  .database-navigationcontainer-navigationbutton {
+  position:relative;
+  background-color:black;
+  border-radius:20px;
+  font: auto {
+   family: $sub-font;
+  }
+  color: white;
+  outline-style:none;
+  padding:5px 30px;
+  top:-1vh;
+  }
+  #database-viewcontainer {   
+  position:relative;
+  height:85%;
+  width:100%;
+  padding:0;
+  overflow:scroll;
+  }
+  #database-dataview {
+  position:relative;
+  height:100%;
+  width:100%;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  }
+  #database-dataview::-webkit-scrollbar {
+  width: 2px;
+  }
+  #database-dataview::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  }
+  #database-dataview::-webkit-scrollbar-thumb {
+  background: white; 
+  border-radius: 10px;
+  }
+  #database-dataview::-webkit-scrollbar-thumb:hover {
+  background: black; 
+  }
+  #database-datanavigation {
+  position:relative;
+  background-color:white;
+  height:auto;
+  width:100%;
+  }
+  #database-datanavigationbuttons {
+  position:relative;
+  background-color:white;
+  height:100%;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  #database-datanavigationbutton-navigationheaderindicationcontainer {
+  position:relative;
+  background-color:white;
+  height:100%;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:100px 500px;
+  }
+  .database-datanavigationbutton-navigationbuttoncontainer {
+  position:relative;
+  height:10%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  }
+  .database-datanavigationbutton-navigationbuttoncontainer-navigationheaderindication {
+  position: relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:black;
+  text-align:center;
+  }
+  .database-datanavigationbutton-navigationbutton {
+  position:relative;
+  background-color:black;
+  border-radius:20px;
+  font: auto {
+   family: $sub-font;
+  }
+  color: white;
+  outline-style:none;
+  padding:5px 30px;
+  margin-top:5vh;
+  }
+  #database-databasepeople {
+  position:relative;
+  border:1vh solid gray;
+  height:auto;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:50px 10px;
+  }
+  #databaase-databasepeople-mapcontainer {
+  position:relative;
+  height:100%;
+  }
+  #databaase-databasepeople-mapcontainer-datapopulationheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+   size:20px;
+  }
+  color:white;
+  }
+  #databaase-databasepeople-peopledatacontainer {
+  position:relative;
+  border:0.5vh dotted gray;
+  height:80vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:50px 10px;
+  margin-top:5vh;
+  }
+  .databaase-databasepeople-peopledatacontainer-displaydataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #databaase-databasepeople-map {
+  position:relative;
+  background-color:white;
+  height:80vh;
+  width:100%;
+  margin-top:10vh;
+  }
+  #database-databasepeople-mapnavigationcontainer {
+  position:relative;
+  background-color:black;
+  height:10%;
+  width:100%;
+  }
+  #database-databasepeople-navigationcontainer-maptiler {
+  position:relative;
+  height:90%;
+  width:100%;
+  }
+  #databaase-databasepeople-peopledataconfigurationcontainer {
+  position:relative;
+  background-color:gray;
+  height:30vh;
+  width:35%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:50px 10px;
+  margin-top:5vh;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  .databaase-databasepeople-peopledataconfigurationcontainer-peopledataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  text-align:center;
+  }
+  #database-databasepeople-backtomonitoringviewbutton {
+  position:relative;
+  background-color:transparent;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:35%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  letter-spacing:2px;
+  padding:5px 0px;
+  margin-top:15vh;
+  margin-left:65%;
+  }
+  #database-databasemoneyandfunds {
+  position:relative;  
+  height:auto;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding-bottom:30px
+  }
+  #database-databasemoneyandfunds-navigationgridcontainer {
+  position:relative;
+  border-bottom:0.1vh solid white;
+  height:10%;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:20px 10px;
+  }
+  .database-databasemoneyandfunds-navigationcontainer {
+  position:relative;
+  height:100%;
+  }
+  .database-databasemoneyandfunds-navigationbuttonheaderindication {
+  position:relative;
+  border-bottom:0.1vh solid none;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  user-select:none;
+  top:1vh;
+  }
+  #database-databasemoneyandfunds-datacontentcontainer {
+  position:relative;
+  height:auto;
+  width:100%;
+  padding:0;
+  }
+  #database-databasemoneydata {
+  position:relative;
+  height:100%;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  padding:100px 10px;
+  }
+  .database-databasemoneyanddata-datacontainer {
+  position:relative;
+  border-bottom:0.1vh solid white;
+  height:auto;
+  padding:50px 150px;
+  }
+  .database-databasemoneyanddata-datacontainer-dataheaderindication {
+  position:relative;
+  font: auto {
+   family:$sub-font;
+  }
+  color:white;
+  text-align:center;
+  }
+  .database-databasemoneyanddata-datacontainer-datapercentageheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  text-align:center;
+  }
+  .database-databasemoneyanddata-datacontainer-bargraphcontainer {
+  position:relative;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:1vh;
+  width:100%;
+  }
+  .database-databasemoneyanddata-datacontainer-bargraph {
+  position:relative;
+  background-color:white;
+  height:100%;
+  width:80%;
+  }
+  .database-databasemoneyanddata-datacontainer-dataheadersubindication {
+  position:relative;
+  background-color:gray;
+  border-radius:20px;
+  font: auto {
+   family: $sub-font;
+  }
+  color:black;
+  text-align:center;
+  padding:10px 10px;
+  margin-top:5vh;
+  }
+  #database-databasemoneyanddata-locationsdatalayoutcontainer {
+  position:relative;
+  height:auto;
+  margin-top:10vh;
+  padding:50px 10px;
+  }
+  #database-databasemoneyanddata-locationsdatagridcontainer {
+  position:relative;
+  border:1vh solid gray;
+  height:auto;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  .database-databasemoneyanddata-locationsdatacontainer {
+  position:relative;
+  height:100%;
+  padding:10px;
+  }
+  .database-databasemoneyanddata-locationsdatacontainer-locationsheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white; 
+  }
+  .database-databasemoneyanddata-locationsdatacontainer-listgroup {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  .database-databasemoneyanddata-locationsdatacontainer-listgroupheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  .database-databasemoneyanddata-locationsdatacontainer-databreakdowncontainer {
+  position:relative;
+  border:1vh dotted gray;
+  height:20vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  }
+  .database-databasemoneyanddata-locationsdatacontainer-databreakdowncontaine-headerindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemoneyanddata-backtomonitoringbutton {
+  position:relative;
+  background-color:transparent;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:30%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  letter-spacing:2px;
+  padding:5px 0px;
+  margin-top:15vh;
+  margin-left:69%;
+  }
+  #database-databasehistory {
+  position:relative;
+  border:1vh solid white;
+  height:auto;
+  width:100%;
+  padding-bottom:30px;
+  }
+  .database-databasehistory-historycontentcontainer {
+  position:relative;
+  border-bottom:0.1vh solid white;
+  height:auto;
+  width:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:200px 10px;
+  }
+  .database-databasehistory-headerindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+   size:35px;
+  }
+  color:white; 
+  }
+  #database-databasehistory-backtomonitoringbutton {
+  position:relative;
+  background-color:transparent;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:30%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  letter-spacing:2px;
+  padding:5px 0px;
+  margin-top:30vh;
+  margin-left:69%;   
+  }
+  #database-databasemarketing {
+  position:relative;
+  position:relative;
+  border:1vh solid white;
+  height:auto;
+  width:100%;
+  padding:30px 10px 3cqmax 10px;
+  }
+  .database-databasemarketing-headerindicationcontainer {
+  position:relative;
+  height:auto;
+  width:100%;
+  padding:10px 10px;
+  }
+  .database-databasemarketing-headerindicationcontainer-headerindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+   size:20px;
+  }
+  color:white;
+  }
+  #database-databasemarketing-navigationgridcontainer {
+  position:relative;
+  height:auto;
+  width:100%;
+  margin-top:5vh;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  .database-databasemarketing-navigationbuttoncontainer {
+  position:relative;
+  height:15vh;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  }
+  .database-databasemarketing-navigationbutton {
+  position:relative;
+  background-color:transparent;
+  border:none;
+  border:0.1vh solid none;
+  height:100%;
+  width:100%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  letter-spacing:2px;
+  }
+  #database-databasemarketing-viewcontainer {
+  position:relative;
+  height:80vh;
+  width:100%;
+  margin-top:7vh;
+  }
+  #database-databasemarketing-databasemarketingview {
+  position:relative;
+  height:100%;
+  width:100%;
+  }
+  #database-databasemarketing-mainmonitoringdatacontainer {
+  position:relative;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  height:100%;
+  width:100%;
+  padding:20px 10px;
+  }
+  .database-databasemarketing-mainmonitoringdatacontainer-mainmonitoringdataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemarketing-marketingdata {
+  position:relative;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  height:100%;
+  width:100%;
+  padding:30px 10px;
+  }
+  .database-databasemarketing-marketingdata-marketingdataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemarketing-production {
+  position:relative;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  height:100%;
+  width:100%;
+  padding:30px 10px;
+  }
+  .database-databasemarketing-production-productheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemarketing-peoplesdata {
+  position:relative;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  height:100%;
+  width:100%;
+  padding:30px 10px;
+  }
+  .database-databasemarketing-peoplesdata-peoplesdataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemarketing-sales {
+  position:relative;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  height:100%;
+  width:100%;
+  padding:30px 10px;
+  }
+  .database-databasemarketing-salesheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-databasemarketing-backtomonitoringbutton {
+  position:relative;
+  background-color:transparent;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:30%;
+  font: auto {
+  family: $sub-font;
+  }
+  color:white;
+  letter-spacing:2px;
+  padding:5px 0px;
+  margin-top:30vh;
+  margin-left:69%;   
+  }
+  #database-databasefundsdata {
+  position:relative;
+  height:67vh;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  }
+  #database-databasefundsdata-ownpersonalcurrencyheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  text-align:center;
+  }
+  .database-databasemoneyandfunds-headerindicationcontainer {
+  position:relative;
+  border:1vh solid red;
+  height:20vh;
+  }
+  .database-databasemoneyandfunds-headerindicationlayoutgridcontainer {
+  position:relative;
+  background-color:white;
+  height:100%;
+  width:100%;
+  margin-left:auto;
+  margin-right:auto;
+  }
+  .database-databasemoneyandfunds-headerindicationcontainer-headerindication {
+  position:relative;
+  font: auto {
+   family:$sub-font;
+  }
+  color:white;
+  }
+  #database-requestsview {
+  position:absolute;
+  height:auto;
+  width:100%;
+  padding:10px 0px;
+  }
+  #database-requestsview-nowdatagridcontainer {
+  position:relative;
+  height:auto;
+  border-bottom:0.1vh solid white;
+  }
+  .database-requestsview-nowdatacontainer {
+  position:relative;
+  height:100%;
+  padding:30px 20px;
+  }
+  .database-requestsview-recentdatacontainer-nowdataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  #database-requestsview-requestsdatagridcontainer {
+  position:relative;
+  height:auto;
+  padding:70px 10px;
+  }
+  .database-requestsview-requestsdatacontainer {
+  position:relative;
+  height:100%;
+  padding:30px 20px;
+  }
+  .database-requestsview-recentdatacontainer-requestsdataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  .database-requestsview-recentdatacontainer-listgroupheaderindication {
+  position:relative;
+  font: auto {
+  family: $sub-font;
+  }
+  color:white;
+  }
+  .database-requestsview-recentdatacontainer-listgroupheaderindication-productbreakdownspanbutton {
+  position:relative;
+  outline-style:none;
+  }
+  #database-requestsview-backtomonitoringviewbutton{
+  position:relative;
+  background-color:black;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:30%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  outline-style:none;
+  padding:5px 30px;
+  margin-top:15vh;
+  margin-left:69%;
+  }
+  #database-databasetransactions {
+  position:relative;
+  background-color:black;
+  height:auto;
+  width:100%;
+  padding:50px 20px;
+  }
+  .database-databasetransactions-databasetransactionbaranggayheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  }
+  .database-databasetransactions-dataheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  margin-top:3vh;
+  margin-left:2vh;
+  }
+  .database-databasetransactions-positioningdataheaderindication  {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  margin-top:7vh;
+  margin-left:2vh;  
+  }
+  .database-databasetransactions-databargraphpercentageheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;   
+  margin-left:2vh;
+  }
+  .database-databasetransactions-datalistgroupheaderindication {
+  position:relative;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white; 
+  margin-top:3.5vh;
+  }
+  .database-databasetransacations-bargraphcontainer {
+  position:relative;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:1vh;
+  width:100%;
+  margin-left:2vh;
+  }
+  .database-databasetransacations-bargraph {
+  position:relative;
+  background-color:white;
+  height:100%;
+  width:90%;
+  }
+  #database-databasetransactions-backtomonitoringviewbutton {
+  position:relative;
+  background-color:black;
+  border:0.1vh solid white;
+  border-radius:20px;
+  height:5vh;
+  width:30%;
+  font: auto {
+   family: $sub-font;
+  }
+  color:white;
+  outline-style:none;
+  padding:5px 30px;
+  margin-top:15vh;
+  margin-left:69%;
+  }
+  #database-monitoring {
+  position:relative;
+  background-color:white;
+  border:0.1vh solid gray;
+  border-top: none;
+  height:auto;
+  width:100%;
+  margin-top:5vh;
+  margin-left:auto;
+  margin-right:auto;
+  padding:0;
+  }
+  .database-monitoring-contentcontainer {
+  position:relative;
+  border-right:0.1vh solid white;
+  border-bottom:0.1vh solid white;
+  padding:50px 70px 20px 20px;
+  }
+  .database-monitoringheaderindication {
+  position:relative;
+  height:auto;
+  width:100%;
+  font: auto {
+   family:$sub-font;
+   weight:900;
+  }
+  color:black;
+  }
+  .database-monitoringheaderindication-spanbuttonheaderindication {
+  position:relative;
+  background-color:black;
+  border:0.5vh solid gray;
+  border-radius:20px;
+  color:white;
+  padding:10px 15px;
+  left:0.5vh;
+  user-select:none;
+  }
+  .database-monitoring-bargraphcontainer {
+  position:relative;
+  border:0.1vh solid black;
+  border-radius:20px;
+  height:1vh;
+  width:100%;
+  }
+  .database-monitoring-bargraph {
+  position:relative;
+  background-color:black;
+  height:100%;
+  width:80%;
+  }
+  ////
+  }
+
+

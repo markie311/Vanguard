@@ -1412,3 +1412,1409 @@ transition:1s ease;
 display:none;
 }
 }
+@media only screen and (min-width:1200px) {
+#officehamburger {
+position:relative; 
+height:100%; 
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#office-hamburgercontentnavigation {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:30px 0px;
+}
+.office-hamburgercontent-navigationbuttoncontainer {
+position:relative;
+height:7vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px 0px;
+}
+.office-hamburgercontent-navigationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 15px;
+outline-style:none;
+}
+#office-hamburgercontent {
+position:relative;
+height:125vh;
+margin-left:auto;                                 margin-right:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#office-hamburgerofficeview {
+position:relative; 
+height:100%; 
+width:100%;
+margin-left:auto; 
+margin-right:auto;
+}
+#officehamburgercontentview {
+position:relative;  
+height:auto;                                      width:100%;                                       margin-left:auto;                                 margin-right:auto;
+}
+#officehamburgerview {
+position:relative;
+height:auto; 
+width:100%;
+margin-left:auto;                                 margin-right:auto;
+}
+#officehamburger-dataview {
+position:relative;
+height:auto;                                      width:100%;
+margin-left:auto;                                 margin-right:auto;
+}
+#officehamburger-dataview-navigationpositioningcontainer {
+position:relative;
+height:35%;
+width:100%;
+padding:0;
+}
+#officehamburger-dataview-navigationgridcontainer {
+position:relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:50px 0px;
+}
+.officehamburger-dataview-navigationgridcontainer-navigationbuttoncontainer {
+position:relative;
+height:20%;
+margin-left:auto;
+margin-right:auto;
+padding:10px 0px;
+display: flex;
+justify-content:center;
+align-items: center;
+}
+.officehamburger-dataview-navigationgridcontainer-navigationbutton {
+position:relative;
+background-color:black;
+border:0.1 solid white;
+border-radius:20px;
+font: auto {
+    family: $sub-font
+}
+color:white;
+padding: 5px 20px;
+outline-style:none;
+}
+///// data 
+#officehamburger-dataview-datacontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#officehamburger-dataview-datacontainer-datacontainer-data {
+position:absolute;
+height:100%;
+width:100%;
+}
+#officehamburger-dataview-datamodal {
+position:relative;
+height:auto;
+width:100%;
+padding:0;
+}
+//// monitoring 
+#officehamburger-dataview-datacontainer-monitoring {
+    position:relative;
+    border:1vh solid yellow;
+    height:auto;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+}
+///// people 
+#officehamburger-dataview-datacontainer-people {
+    position:relative;
+    border:1vh solid red;
+    height:auto;
+    width:100%; 
+    margin-left:auto;
+    margin-right:auto;
+}
+///// marketing
+#officehamburger-dataview-datacontainer-marketing {
+    position:relative;
+    height:auto;
+    width:100%; 
+    margin-left:auto;
+    margin-right:auto;
+}
+#officehamburger-dataview-datacontainer-marketingnavigtionbuttongridcontainer {
+position:relative;
+height:20vh;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer {
+position:relative;
+height:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-dataview-datacontainer-marketing-navigtionbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 15px;
+outline-style:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer {
+position:relative;
+border:0.1vh solid black;
+height:70vh;
+width:100%;
+margin-top:10vh;
+overflow:hidden;
+padding:0px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview {
+position:relative;
+height:100%;
+width:100%;
+}
+//// marketing merchandise
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer {
+position:absolute;
+height:100%;
+width:100%;
+overflow:hidden;
+padding:0;
+}
+//// merchandise data
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata {
+position:absolute;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:0;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationcontainer {
+position:relative;
+height:100%;
+width:100%;
+padding:0;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer {
+position:relative;
+height:30%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:5px 0px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-enterproductidheaderindication {
+position: relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield {
+position: relative;
+background-color: transparent;
+border:none;
+border-bottom:0.1vh solid white;
+height:5vh;
+width:90%;
+font: auto {
+    family: $sub-font;
+}
+color: white;
+outline-style:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-searchfieldresponsemessage {
+position: relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+top:2vh;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttonsgridcontainer {
+position:relative;
+height:70%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer {
+position:relative;
+height:25%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton {
+position: relative;
+background-color: black;
+border-radius: 20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding: 5px 15px;
+outline-style:none;
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer {
+position:absolute;
+background-color:white;
+height:100%;
+width:100%;
+left:-100%;
+z-index:1;
+transition:0.5s ease;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer {
+position:absolute;
+background-color:white;
+border-radius:35px;
+height:100%;
+width:100%;
+left:0%;
+padding:10px;
+z-index:1;
+transition:0.5s ease;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer {
+position:relative;
+border:0.3vh solid black;
+border-radius:35px;
+height:100%;
+width:100%;
+padding:5px;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar {
+    height:10px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer {
+position: relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color: black;
+letter-spacing:2px;
+user-select:none;
+top:1.3vh;
+right:1.5vh;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:0
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer {
+position:absolute;
+background-color: white;
+height:80%;
+width:80%;
+transform:translate(13%, 13%) scale(0, 0);
+transition: 1s ease;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer {
+position:absolute;
+background-color:white;
+height:90%;
+width:90%;
+transform:translate(5%, 5%) scale(1, 1);
+transition: 1s ease;
+overflow-x:hidden;
+overflow-y:scroll;
+padding:15px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer {
+position:relative;
+border:0.3vh solid black;
+border-radius:35px;
+height:100%;
+width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:flex-end;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+user-select:none;
+top:1vh;
+right:2vh;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer {
+position:relative;
+height:auto;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer {
+position:relative;
+height:auto;
+display: flex;
+justify-content:center;
+align-items:center;
+padding:10px 0px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+user-select:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationscontainer {
+position:relative;
+height:auto;
+margin-left:auto;
+margin-right:auto;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px 0px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px 0px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication {
+position:relative;
+font: auto {
+    family:$sub-font;
+}
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field {
+position:relative;
+border:0.1vh solid black;
+border-radius:20px;
+height:5vh;
+width:80%;
+font: auto {
+    family:$sub-font;
+}
+padding:5px 10px;
+outline-style:none;
+}
+//// display images
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer { 
+position:relative;
+border:1vh solid red;
+height:auto;
+width:100%;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimageheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+text-align:center;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+top:1vh;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-displayimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+left:105%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer-configurationbutton {
+position:relative;
+background-color:gray;
+border:0.1vh solid black;
+border-radius:15px;
+height:5vh;
+width:30vh;
+font: auto {
+    family: $sub-font;
+}
+color:red;
+user-select:none;
+outline-style:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer {
+position:relative;
+height:40vh;
+width:100%;
+padding:0;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer {
+position:absolute;
+height:85%;
+width:100%;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:20px;
+height:50vh;
+width:100%;
+transform:translate(-0%, -15%);
+padding:15px 20px;
+display:none;
+z-index:1;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimagecontainer {
+position:relative;
+background-color:chocolate;
+height:85%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimage {
+position:relative;
+height:100%;
+width:100%;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebutton {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+letter-spacing:2px;
+user-select:none;
+top:2vh; 
+right:-0.5vh;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:15px 0px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:10px 0px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield {
+position:relative;
+border:0.1vh solid black;
+border-radius:15px;
+height:5vh;
+width:95%;
+font: auto {
+    family: $sub-font;
+}
+outline-style:none;
+padding:5px 15px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer {
+position:relative;
+height:auto;
+display:flex;
+align-items:center;
+padding:10px;
+display:none;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage {
+position:relative;
+font: auto {
+    family:$sub-font;
+    weight:900;
+}
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer {
+position: relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0px 5px 20px 5px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-productspecificationdatmodal {
+position:relative;
+border:0.5vh dotted black;
+border-radius:20px;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+padding:5px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-productspecificationstocksdatmodal {
+position:relative;
+background-color: $subbgcolor;
+border-radius:20px;
+height:auto;
+width:100%;
+margin-top:5vh;
+margin-left:auto;
+margin-right:auto;
+color:white;
+padding:30px 20px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-adddifferentproductspecificationheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+text-align:center;
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-addproductsconfigurationbuttoncontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid black;
+border-radius:20px;
+height:100%;
+width:90%;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 20px;
+right:1.5vh;
+outline-style:none;
+}
+//// main display images
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer {
+position:relative;
+height:20vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimagecontainer {
+position:absolute;
+background-color:white;
+border-radius:50%;
+height:80%;
+width:50%;
+padding:3px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage{
+position:relative;
+border-radius:50%;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid;
+border-radius:20px;
+height:50vh;
+width:100%;
+transform:translate(0%, 10%);
+display:none;
+z-index:1;
+padding:15px 20px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimagecontainer {
+position:relative;
+background-color:chocolate;
+height:85%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+letter-spacing:2px;
+top:2vh;
+right:-0.5vh;
+user-select:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagesgridcontainer-selectiondisplayimagecontainer {
+position:relative;
+height:30vh;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:0;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagecontainer-displayimagecontainer {
+position:absolute;
+background-color:white;
+height:100%;
+width:100%;
+padding:3px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagecontainer-displayimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagemodalcontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:20px;
+height:50vh;
+width:100%;
+transform:translate(0%, 10%);
+display:none;
+z-index:1;
+padding:15px 20px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagemodalcontainer-displayimagecontainer {
+position:relative;
+background-color:chocolate;
+height:85%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagemodalcontainer-displayimage {
+position:relative;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-selectiondisplayimagemodalcontainer-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+align-items:center;
+justify-content:flex-end;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+letter-spacing:2px;
+top:2vh;
+right:-0.5vh;
+user-select:none;
+}
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-videoplayerdisplaycontainercontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandise-videoplayerdisplaycontainercontainer-videoplayerdisplaycontainercontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:0;
+}
+////
+#officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:10px;
+}
+//// marketing load products
+#officehamburger-dataview-datacontainer-datacontainer-loadproductsdatacontainer {
+position:relative;
+border:1vh solid pink;
+height:100%;
+width:100%;
+padding:0;
+overflow:hidden;
+}
+#officehamburger-dataview-datacontainer-datacontainer-loadproductsdata {
+position:absolute;
+border:1vh solid gray;
+height:100%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:0;
+}
+#officehamburger-dataview-datacontainer-datacontainer-loadproductsdataresultscontainer {
+position:absolute;
+border:1vh solid yellow;
+height:100%;
+width:100%;
+left:-100%;
+z-index:1;
+transition:0.5s ease;
+}
+.officehamburger-dataview-datacontainer-datacontainer-loadproductsdataconfigurationcontainer {
+position:absolute;
+background-color: $subbgcolor;
+border:1vh solid yellow;
+height:90%;
+width:90%;
+overflow:hidden;
+transform:translate(5%, 5%) scale(0, 0);
+transition: 1s ease;
+}
+///// money and funds 
+#officehamburger-dataview-datacontainer-moneyandfunds {
+    position:relative;
+    border:1vh solid red;
+    height:auto;
+    width:100%; 
+    margin-left:auto;
+    margin-right:auto;
+}
+///// cargo 
+#officehamburger-dataview-datacontainer-cargo{
+    position:relative;
+    height:auto;
+    width:100%; 
+    margin-left:auto;
+    margin-right:auto;
+}
+/// transaction list data
+#officehamburger-transactionsdata {
+position:relative;
+height:85vh;
+width:100%;
+padding:0;
+}
+#officehamburger-transactionsdata-navigationcontainer {
+position:relative;
+height:30%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-transactionsdata-navigationcontainer-navigationbutton {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+height:90%;
+width:auto;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 10px;
+outline-style:none;
+}
+#officehamburger-transactionsdata-view {
+position:relative;
+height:70%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+#officehamburger-transactionsdata-indicationscontainer {
+position:absolute;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+padding:15px 0px;
+}
+#officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar {
+    height:30px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+.officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+text-align:center;
+text-decoration:underline;
+}
+//// baranggays data
+#officehamburger-transactionsdata-baranggaydatamodal {
+position:absolute;
+background-color:$subbgcolor;
+border:0.1vh solid white;
+height:90%;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+display:none;
+transform:translate(6%, 5%);
+padding:0;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer {
+position:relative;
+height:85%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer ::-webkit-scrollbar {
+    height:30px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+.officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer {
+position:relative;
+padding:0;
+}
+.officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay {
+position:relative;
+border-radius:20px;
+background-color:black;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:10px;
+outline-style:none;
+}
+.officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+.officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font; 
+}
+color:white;
+outline-style:none;
+padding:5px 20px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:end;
+align-items:center;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-closebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 20px;
+outline-style:none;
+}
+///// streets data
+#officehamburger-transactionsdata-streetsdatamodal{
+position:absolute;
+background-color:$subbgcolor;
+border:0.1vh solid gray;
+height:90%;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+display:none;
+transform:translate(6%, 5%);
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer {
+position:relative;
+height:85%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar {
+    height:30px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+.officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer {
+position:relative;
+padding:0;
+}
+.officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay {
+position:relative;
+border-radius:20px;
+background-color:black;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:10px;
+outline-style:none;
+}
+.officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+.officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font; 
+}
+color:white;
+outline-style:none;
+padding:5px 20px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:end;
+align-items:center;
+}
+#officehamburger-transactionsdata-streetsdatamodal-closebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 20px;
+outline-style:none;
+}
+//// requests data
+#officehamburger-transactionsdata-requestsdatamodal {
+position:absolute;
+background-color:$subbgcolor;
+border:0.1vh solid gray;
+height:90%;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+display:none;
+transform:translate(6%, 5%);
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer {
+position:relative;
+height:85%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar {
+    height:30px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+.officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer {
+position:relative;
+padding:0;
+}
+.officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay {
+position:relative;
+border-radius:20px;
+background-color:black;
+height:auto;
+width:100%;
+margin-top:3vh;
+padding:10px;
+outline-style:none;
+}
+.officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+.officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font; 
+}
+color:white;
+margin-top:2vh;
+outline-style:none;
+padding:5px 20px;
+}
+.officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 5px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:end;
+align-items:center;
+}
+#officehamburger-transactionsdata-requestsdatamodal-closebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family:$sub-font;
+}
+color:white;
+padding:5px 20px;
+outline-style:none;
+}
+//// requests data
+#officehamburger-transactionsdata-requestdatamodal {
+position:absolute;
+background-color:white;
+border:0.3vh solid $subbgcolor;
+height:90%;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+display:none;
+transform:translate(6%, 5%);
+}
+#officehamburger-transactionsdata-requestdatamodal-datagridcontainer {
+position:relative;
+height:85%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+padding:10px 5px;
+}
+#officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar {
+    height:30px;
+    width: 5px;
+    border-radius:25px;
+}
+#officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb:hover {
+    background: #b30000;
+}
+.officehamburger-transactionsdata-requestdatamodal-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+}
+.officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer {
+position:relative;
+height:auto;
+width:auto;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-transactionsdata-requestdatamodal-merchandiseimagecontainer {
+position:relative;
+height:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:5px 20px;
+}
+.officehamburger-transactionsdata-requestdatamodal-merchandiseimage {
+position:relative;
+height:10vh;
+width:100%;
+}
+.officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer {
+position:relative;
+height:auto;
+padding:5px;
+}
+.officehamburger-transactionsdata-requestdatamodal-merchandisespecificationcontainer {
+position:relative;
+height:auto;
+width:auto;
+}
+#officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer {
+position:relative;
+border:0.1vh solid black;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-transactionsdata-requestdatamodal-closebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 15px;
+left:1vh;
+}
+#officehamburger-transactionsdata-requestmapmodal {
+position:absolute;
+background-color: $subbgcolor;
+border:0.3vh solid white;
+height:90%;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+display:none;
+transform:translate(6%, 5%);
+}
+#officehamburger-transactionsdata-requestmapmodal-mapcontainer {
+position:relative;
+background-color: $subbgcolor;
+border:0.3vh solid white;
+height:85%;
+width:100%;
+}
+#officehamburger-transactionsdata-requestmapmodal-closebuttoncontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-transactionsdata-requestmapmodal-closebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 15px;
+left:1vh;
+}
+//// modal
+#officehamburger-modalcontainer {
+position:absolute;
+background-color:red;
+border:1vh solid red;
+height:80%; 
+width:80%;
+margin-left:auto;                           margin-right:auto;
+top:0;
+left:0;
+transform: translate(12.5%, 0%) scale(0, 0);
+transition:1s ease;
+display:none;
+}
+}
