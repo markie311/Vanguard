@@ -137,7 +137,7 @@ position:absolute;
 background-color: rgb(2, 58, 114);
 border:0.1vh solid white;
 border-radius:20px;
-height:95vh;
+height:auto;
 width:95%;
 z-index:5;
 top:0;
@@ -149,11 +149,12 @@ opacity: 0;
 }
 #vanguardwelcomeintroduction-closebuttoncontainer {
 position:relative;
-height:10%;
+height:10vh;
 width:100%;
 display: flex;
 align-items:center;
 justify-content:flex-end;
+padding:5px;
 }
 #vanguardwelcomeintroduction-closebutton {
 position:relative;
@@ -210,8 +211,8 @@ outline-style:none;
 position:relative;
 background-color:gray;
 font: auto {
-    family:$sub-font;
-    weight:900;
+  family:$sub-font;
+  weight:900;
 }
 color:black;
 padding:15px 20px;
@@ -461,8 +462,8 @@ outline-style:none;
 position:relative;
 background-color:gray;
 font: auto {
-    family:$sub-font;
-    weight:900;
+ family:$sub-font;
+ weight:900;
 }
 color:black;
 outline-style:none;
@@ -470,19 +471,21 @@ outline-style:none;
 #vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage {
 position:relative;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
 color:white;
-margin-top:1.5vh;
+text-align:center;
+margin-top:2.5vh;
 visibility:hidden;
 }
 #vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage {
 position:relative;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
 color:white;
-margin-top:1.5vh;
+text-align:center;
+margin-top:2.5vh;
 visibility:hidden;
 }
 }

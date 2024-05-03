@@ -10,6 +10,8 @@ import '../../styles/landingpage/landingpage.scss';
 
 import { timestamp } from '../lib/timestamps';
 
+import axiosCreatedInstance from '../lib/axiosutil.js';
+
 import Header from './header-component.js';
 import LandingPageIntroduction from './landingpageintroduction-component.js';
 import LPSemiFooter from './lpsemifooter-component';
@@ -82,8 +84,11 @@ export default function LandingPage(props) {
     <PrivacyAndPolicy />
     <Footer />
    </Col>
-   <WelcomeIntroduction  welcomeinmtroductionmesssage={props.elcomeinmtroductionmesssage}
-                         welcomeinmtroductionmesssagecb={props.welcomeinmtroductionmesssagecb}
+   <WelcomeIntroduction    user={props.user}
+                           usercb={props.usercb}
+                           setCommonPublicAccountAuthenticationIDCookie={props.setCommonPublicAccountAuthenticationIDCookie}
+                           welcomeinmtroductionmesssage={props.elcomeinmtroductionmesssage}
+                           welcomeinmtroductionmesssagecb={props.welcomeinmtroductionmesssagecb}
                          />
   </Row>
  )
@@ -102,8 +107,31 @@ function WelcomeIntroduction(props) {
               onClick={(evt)=> {
 
                 const _welcomeintroductionmodal = document.getElementById("vanguardwelcomeintroduction");
+
+                const _usercookie = document.cookie;
+                const _parsedcookie = _usercookie.slice(9,31);
+
                 _welcomeintroductionmodal.style.top = "-100vh";
                 _welcomeintroductionmodal.style.opacity = "0";
+
+                const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+
+                _registermenowresponsemessage.style.visibility = "hidden";
+                _continuewithapracticingaccountresponsemessage.style.visibility = "hidden";
+
+                axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
+                  $usercookie: _parsedcookie
+                }).then( async (response)=> {
+
+                  const responsedata = response.data;
+                  const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
+                  _responsemessage.style.visibility = "visible";
+                  _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+                  registermenowrequestloadingstatecb((state)=> state = false);
+                  
+                }) 
 
               }}>
         x
@@ -115,11 +143,62 @@ function WelcomeIntroduction(props) {
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Common public are determined by locations, anywhere, that the public is more of on the spot, on a topic by interests.</p>
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Common public account's are free of registration and for a Life-time recieving transactions give aways even without maintaining a balance on your accounts</p>
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader">Vanguard's public website is out and all data are with freedom to use without worrying for real transactions to a purpose of being comfortable with the system using self given data to practice.</p>
+
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-registermenowbutton"
                 onClick={()=> {
-                  registermenowrequestloadingstatecb((state)=> state = true)
+
+                  const _usercookie = document.cookie;
+                  const _parsedcookie = _usercookie.slice(9,31);
+
+                  registermenowrequestloadingstatecb((state)=> state = true);
+
+                  axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
+                    $usercookie: _parsedcookie
+                  }).then( async (response)=> {
+
+                   const responsedata = response.data;
+                   const responsedatamessage = responsedata.message;
+                   const authenticationtype = responsedata.userauthentication.authentications.authenticationtype;
+
+                   if ( responsedatamessage === "Authenticated" ) {
+
+                      switch(authenticationtype) {
+                        case "Common public": 
+                          const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                          _responsemessage.style.visibility = "visible";
+                          props.usercb((user)=> user = responsedata)
+                          _responsemessage.innerText = "You are already authenticated as a Common public account holder. This registration type is for a Life-time. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+                          registermenowrequestloadingstatecb((state)=> state = false);
+                        break;
+                     //   case "Public":
+                     //   _responsemessage.style.visibiliy = "visible";
+                     //   _responsemessage.innerText = "You are already authenticated as a Common public account holder. This registration type is for a Life-time Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+                     //    registermenowrequestloadingstatecb((state)=> state = false);
+                     //    break;
+                     //    case "Private": 
+                    //     break;
+                    //     case "Practicing account": 
+                    //     break;
+                        default:
+
+                      }
+
+                   } else {
+
+                     const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                     _responsemessage.style.visibility = "visible";
+                     props.usercb((user)=> user = responsedata)
+                     _responsemessage.innerText = "You are now registered as a Common Public account holder having it's authentication. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+                     registermenowrequestloadingstatecb((state)=> state = false);
+                      await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
+
+                   }
+
+                  })  
+
                 }}>
-          {
+
+           {
             registermenowrequestloadingstate ? 
             (
              <Spinner animation="border" variant="dark" />
@@ -128,14 +207,57 @@ function WelcomeIntroduction(props) {
             (
               <span>Register and authenticate me now to practice this public website</span>
             )
-          }
-        </button>
+           }
 
+        </button>
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage">You are already done with this process</p>
 
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountbutton"
                 onClick={(evt)=> {
-                  continuewithapracticingcb((state)=> state = true)
+
+                  continuewithapracticingcb((state)=> state = true);
+
+                  const _usercookie = document.cookie;
+                  const _parsedcookie = _usercookie.slice(9,31);
+
+                  axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication/practicingaccount", {
+                    $usercookie: _parsedcookie  
+                   })
+                  .then( async (response)=> {
+
+                  const responsedata = response.data;
+                  const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+                 
+                    switch(responsedata.authentications.authenticationtype) {
+                       case "Common public": 
+                        props.usercb((user)=> user = responsedata)
+                        _responsemessage.style.visibility = "visible";
+                        _responsemessage.innerText = "You are already authenticated as a common public account holder and it's registration is for a Life-time. No need to get a practicing account.";
+                        continuewithapracticingcb((state)=> state = false);
+                       break;
+                       case "Public":
+                        // _responsemessage.style.visibility = "visible";
+                        // _responsemessage.innerText = "You are already authenticated as a common public account holder and it's registration is for a Life-time. No need to get a practicing account.";
+                        // continuewithapracticingcb((state)=> state = false);
+                       break;
+                       case "Private":
+                        //  _responsemessage.style.visibility = "visible";
+                        //    _responsemessage.innerText = "You are already authenticated as a common public account holder and it's registration is for a Life-time. No need to get a practicing account.";
+                        //  continuewithapracticingcb((state)=> state = false);
+                       break;
+                       case "Practicing account":
+                          props.usercb((user)=> user = responsedata)
+                          continuewithapracticingcb((state)=> state = false);
+                          _responsemessage.style.visibility = "visible";
+                          _responsemessage.innerText = "You now got a practicing account. There a lot to be observed and take your moments doing it specially on mappings. Enjoy practicing transactions on purchases and widthdrawal buttons.";
+                       break;
+                      default:
+                    }
+
+                    await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
+
+                    }) 
+
                 }}>
           {
            continuewithapracticing ?
@@ -150,9 +272,8 @@ function WelcomeIntroduction(props) {
            )
 
           }
-          </button>
-          
-          <p id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage">You can close the modal now</p>
+        </button>
+        <p id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage">You can close the modal now</p>
 
       </Col>
     </Col>

@@ -2836,10 +2836,13 @@ useEffect(()=> {
   //getUIUserAuthenticationData()
   //getDatabaseData()
 
-  //assistcommonpublicregistration()
   loadWelcomeIntroductionModal();
 
 }, [location, $xsviewport, $mdviewport, $lgviewport, viewport, uidata, user, databasedata]);
+
+function setCommonPublicAccountAuthenticationIDCookie(userauthentication) {
+  document.cookie = `thisuser=${userauthentication.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
+}
 
 async function assistcommonpublicregistration() {
 
@@ -2920,8 +2923,15 @@ const navigate = useNavigate();
         <Route path='/'
                element={<LandingPage viewport={viewport}
 
+                                      user={user}
+                                      usercb={usercb}
+
+                                     setCommonPublicAccountAuthenticationIDCookie={setCommonPublicAccountAuthenticationIDCookie}
+
                                      welcomeinmtroductionmesssage={welcomeinmtroductionmesssage}
                                      welcomeinmtroductionmesssagecb={welcomeinmtroductionmesssagecb}
+
+
                
                                      landingpagenavigationbargraphwidthproperty={landingpagenavigationbargraphwidthproperty}
                                      landingpagenavigationbargraphwidthpropertycb={landingpagenavigationbargraphwidthpropertycb}
