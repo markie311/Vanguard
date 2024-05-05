@@ -1415,13 +1415,14 @@ display:none;
 @media only screen and (min-width:1200px) {
 #officehamburger {
 position:relative; 
-height:100%; 
+height:auto; 
 width:100%;
 margin-left:auto;
 margin-right:auto;
 }
 #office-hamburgercontentnavigation {
 position:relative;
+border:none;
 height:auto;
 width:100%;
 margin-left:auto;
@@ -1432,16 +1433,15 @@ padding:30px 0px;
 position:relative;
 height:7vh;
 display:flex;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
-padding:30px 0px;
 }
 .office-hamburgercontent-navigationbutton {
 position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
 color:white;
 padding:5px 15px;
@@ -1449,14 +1449,22 @@ outline-style:none;
 }
 #office-hamburgercontent {
 position:relative;
+border:0.3vh solid white;
+border-radius:40px;
 height:125vh;
-margin-left:auto;                                 margin-right:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 padding:0;
 overflow-x:hidden;
 overflow-y:scroll;
+}
+#office-hamburgercontent::-webkit-scrollbar {
+display: none;
+}
+#office-hamburgercontent {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
 }
 #office-hamburgerofficeview {
 position:relative; 
@@ -1467,18 +1475,24 @@ margin-right:auto;
 }
 #officehamburgercontentview {
 position:relative;  
-height:auto;                                      width:100%;                                       margin-left:auto;                                 margin-right:auto;
+height:auto;                                    
+width:100%;                                   
+margin-left:auto;                              
+margin-right:auto;
 }
 #officehamburgerview {
 position:relative;
 height:auto; 
 width:100%;
-margin-left:auto;                                 margin-right:auto;
+margin-left:auto;                                 
+margin-right:auto;
 }
 #officehamburger-dataview {
 position:relative;
-height:auto;                                      width:100%;
-margin-left:auto;                                 margin-right:auto;
+height:auto;                                      
+width:100%;
+margin-left:auto;                                 
+margin-right:auto;
 }
 #officehamburger-dataview-navigationpositioningcontainer {
 position:relative;
@@ -1537,29 +1551,98 @@ padding:0;
 }
 //// monitoring 
 #officehamburger-dataview-datacontainer-monitoring {
-    position:relative;
-    border:1vh solid yellow;
-    height:auto;
-    width:100%;
-    margin-left:auto;
-    margin-right:auto;
+position:relative;
+border:1vh solid yellow;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
 }
 ///// people 
 #officehamburger-dataview-datacontainer-people {
-    position:relative;
-    border:1vh solid red;
-    height:auto;
-    width:100%; 
-    margin-left:auto;
-    margin-right:auto;
+position:relative;
+border-top:0.3vh solid white;
+height:100vh;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
+padding:20px 10px;
+}
+#officehamburger-dataview-datacontainer-people-datagridcontainer {
+position:absolute;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer {
+position:relative;
+height:50%;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer-subheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.1vh;
+user-select:none;
+text-decoration:underline;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer {
+position:absolute;
+background-color: $mainbgcolor;
+border:0.1vh solid white;
+border-radius:20px;
+height:80%;
+width:70%;
+top:0;
+left:0;
+transform: translate(20%,10%);
+padding:0;
+display:none;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-closebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-closebuttoncontainer-closebutton {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:16px;
+}
+letter-spacing:0.5vh;
+color:white;
+user-select:none;
+top:0.5vh;
+right:1vh;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-contentcontainer {
+position:relative;
+border:0.1vh solid white;
+height:90%;
+width:100%;
+padding:0;
 }
 ///// marketing
 #officehamburger-dataview-datacontainer-marketing {
-    position:relative;
-    height:auto;
-    width:100%; 
-    margin-left:auto;
-    margin-right:auto;
+position:relative;
+height:auto;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
 }
 #officehamburger-dataview-datacontainer-marketingnavigtionbuttongridcontainer {
 position:relative;
@@ -1723,20 +1806,20 @@ overflow-x:hidden;
 overflow-y:scroll;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar {
-    height:10px;
-    width: 5px;
-    border-radius:25px;
+height:10px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer {
 position: relative;
@@ -1870,7 +1953,6 @@ outline-style:none;
 //// display images
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer { 
 position:relative;
-border:1vh solid red;
 height:auto;
 width:100%;
 }
@@ -1964,7 +2046,7 @@ align-items:center;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebutton {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 letter-spacing:2px;
 user-select:none;
@@ -1994,7 +2076,7 @@ border-radius:15px;
 height:5vh;
 width:95%;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 outline-style:none;
 padding:5px 15px;
@@ -2289,20 +2371,70 @@ transition: 1s ease;
 }
 ///// money and funds 
 #officehamburger-dataview-datacontainer-moneyandfunds {
-    position:relative;
-    border:1vh solid red;
-    height:auto;
-    width:100%; 
-    margin-left:auto;
-    margin-right:auto;
+position:relative;
+height:100vh;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
+padding:30px 10px;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-navigationscontainer {
+position:relative;
+height:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:30px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-navigationscontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+transition:all 1s ease;
+user-select:none;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer {
+position:relative;
+height:100%;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer {
+position:absolute;
+height:100%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer {
+position:relative;
+height:50%;
+padding:30px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentmodal {
+position:absolute;
+background-color:$mainbgcolor;
+border:0.1vh solid white;
+border-radius:30px;
+height:80%;
+width:70%;
+top:0;
+left:0;
+transform: translate(22%,10%);
+display:none;
 }
 ///// cargo 
 #officehamburger-dataview-datacontainer-cargo{
-    position:relative;
-    height:auto;
-    width:100%; 
-    margin-left:auto;
-    margin-right:auto;
+position:relative;
+height:auto;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
 }
 /// transaction list data
 #officehamburger-transactionsdata {
@@ -2322,21 +2454,23 @@ padding:0;
 .officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer {
 position:relative;
 height:auto;
+width:33.3%;
 display:flex;
 justify-content:center;
 align-items:center;
 }
 .officehamburger-transactionsdata-navigationcontainer-navigationbutton {
 position:relative;
-background-color:black;
-border:0.1vh solid white;
-height:90%;
-width:auto;
+background-color: rgb(241, 192, 68);
+border:0.1vh solid goldenrod;
+height:30%;
+width:60%;
 border-radius:20px;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
+ weight:900;
 }
-color:white;
+color:black;
 padding:5px 10px;
 outline-style:none;
 }
@@ -2356,20 +2490,20 @@ margin-right:auto;
 padding:15px 0px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar {
-    height:30px;
-    width: 5px;
-    border-radius:25px;
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer {
 position:relative;
@@ -2382,31 +2516,34 @@ align-items:center;
 .officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 text-align:center;
+user-select:none;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ size:24px;
 }
 color:white;
 text-align:center;
 text-decoration:underline;
+user-select:none;
 }
 //// baranggays data
 #officehamburger-transactionsdata-baranggaydatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid white;
-height:90%;
+height:90vh;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
+transform:translate(6%, -25%);
 padding:0;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer {
@@ -2418,21 +2555,21 @@ margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
 }
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer ::-webkit-scrollbar {
-    height:30px;
-    width: 5px;
-    border-radius:25px;
+#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar {
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -2443,15 +2580,18 @@ position:relative;
 border-radius:20px;
 background-color:black;
 height:auto;
-width:100%;
+width:70%;
+display:block;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:60px 10px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 }
@@ -2460,7 +2600,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
-    family: $sub-font; 
+ family: $sub-font; 
 }
 color:white;
 outline-style:none;
@@ -2490,12 +2630,13 @@ outline-style:none;
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
-height:90%;
-width:90%;
+border-radius:20px; 
+height:100%;
+width:50%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
+transform:translate(5%, -35%);
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer {
 position:relative;
@@ -2507,20 +2648,20 @@ overflow-x:hidden;
 overflow-y:scroll;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar {
-    height:30px;
-    width: 5px;
-    border-radius:25px;
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -2531,15 +2672,19 @@ position:relative;
 border-radius:20px;
 background-color:black;
 height:auto;
-width:100%;
+width: 70%;
+display:flex;
+flex-direction:column;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:50px 20px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 }
@@ -2579,11 +2724,11 @@ position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
 height:90%;
-width:90%;
+width:55%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
+transform:translate(78%, 20%);
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer {
 position:relative;
@@ -2595,20 +2740,20 @@ overflow-x:hidden;
 overflow-y:scroll;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar {
-    height:30px;
-    width: 5px;
-    border-radius:25px;
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -2616,12 +2761,15 @@ padding:0;
 }
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay {
 position:relative;
-border-radius:20px;
 background-color:black;
+border-radius:20px;
 height:auto;
-width:100%;
+width:70%;
+display:block;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:30px 30px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
@@ -2695,25 +2843,25 @@ overflow-y:scroll;
 padding:10px 5px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar {
-    height:30px;
-    width: 5px;
-    border-radius:25px;
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px white;
-    border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb {
-    background: black;
-    border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb:hover {
-    background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-requestdatamodal-headerindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+family: $sub-font;
 }
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer {
@@ -2810,7 +2958,8 @@ background-color:red;
 border:1vh solid red;
 height:80%; 
 width:80%;
-margin-left:auto;                           margin-right:auto;
+margin-left:auto;                        
+margin-right:auto;
 top:0;
 left:0;
 transform: translate(12.5%, 0%) scale(0, 0);

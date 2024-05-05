@@ -13,12 +13,14 @@ export default function OfficeLogin(props) {
     <p id='office-login-headercontainer-headerindication'>Note: {props.loginauthenticationtype} login</p>
    </Col>
    <Col id='office-login-fieldscontainer'>
+
     <input type='text'
            className='office-login-userinputfield'/>
     <br />
-    <input type='text'
+    <input type='password'
 	   className='office-login-userinputfield'/>
     <br />
+    
     <button id='office-login-loginbutton'
 	     onClick={(evt)=> {
 

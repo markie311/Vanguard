@@ -132,21 +132,33 @@ width:100%;
 @media only screen and (min-width:1200px) {
 #office {
 position:relative;
-border:1vh solid white;
-border:1vh solid red;
 height:100%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 overflow-y:scroll;
 }
+#office::-webkit-scrollbar {
+display: none;
+}
+#office {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
 #office-mainnavigationcontainer {
 position:relative;
-border:1vh solid gray;
 height:10%;
 width:100%;
+margin-left:auto;
+margin-right:auto;
 display:flex;
-align-items:center;
+}
+.office-mainnavigationcontainer-mainnavigationbuttoncontainer {
+position:relative;
+height:100%;
+width:12%;
+display:flex;
+align-items:center
 }
 .office-mainnavigationcontainer-mainnavigationbutton {
 position:relative;
@@ -156,7 +168,7 @@ border-radius:20px;
 height:5vh;
 width:auto;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:black;
 padding:5px 30px;
@@ -176,10 +188,23 @@ color:black;
 padding:5px 30px;
 margin-left:0px;
 }
+/// ofice view 
+#office-view {
+position:relative;
+height:90%;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+#office-officeviewmodalscontainer {
+position:relative;
+height:90%;
+width:100%;
+}
 //// content navigation container 
 #office-contentnavigationcontainer {
 position:relative;
-border:1vh solid gray;
 height:90%;
 }
 #office-contentnavigationview {

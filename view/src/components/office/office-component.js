@@ -20,73 +20,73 @@ export default function Office(props) {
  return (
   <Row id='office'>
     <Row id='office-mainnavigationcontainer'
-	 style={{display: mainnavigationbuttonscontainerdisplayproperty}}>
-   <Col xs={12}
-	md={3}
-	lg={3}
-	className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
-    <button className='office-mainnavigationcontainer-positioningmainnavigationbutton office-mainnavigationcontainer-mainnavigationbutton'
-            onClick={(evt)=> {
-               const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
-               const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
-               for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
-                 const _button = _mainnavigationbuttons[i];
-                 _button.style.border = 'none';
-               }
-               _hamburgernavigationbutton.style.border = '0.5vh solid gray';
-               loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Hamburger');
-            }}>
-     Hamburger
-    </button>
-    </Col>
-    <Col xs={12}
-	 md={3}
-	 lg={3} 
-	 className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
-	 <button className='office-mainnavigationcontainer-mainnavigationbutton'
-            onClick={(evt)=> {
-               const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
-               const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
-               for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
-                 const _button = _mainnavigationbuttons[i];
-                 _button.style.border = 'none';
-               }
-               _hamburgernavigationbutton.style.border = '0.5vh solid none';
-               _mainnavigationbuttons[1].style.border = '0.5vh solid gray';
-               loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Assistant');
-            }}>
-     Assistants
-    </button>
-    </Col>
-    <Col xs={12}
-	 md={3} 
-	 lg={3} 
-	 className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
-    <button className='office-mainnavigationcontainer-mainnavigationbutton'
-            onClick={(evt)=> {
-               const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
-               const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
-               for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
-                 const _button = _mainnavigationbuttons[i];
-                 _button.style.border = 'none';
-               }
-               _hamburgernavigationbutton.style.border = '0.5vh solid none';
-               _mainnavigationbuttons[2].style.border = '0.5vh solid gray';
-               loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Office');
-            }}>
-     Office
-    </button>
-    </Col>
+	       style={{display: mainnavigationbuttonscontainerdisplayproperty}}>
+     <Col xs={12}
+          md={3}
+          lg={3}
+          className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
+            <button className='office-mainnavigationcontainer-positioningmainnavigationbutton office-mainnavigationcontainer-mainnavigationbutton'
+                    onClick={(evt)=> {
+                      const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
+                      const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
+                      for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
+                        const _button = _mainnavigationbuttons[i];
+                        _button.style.border = 'none';
+                      }
+                      _hamburgernavigationbutton.style.border = '0.5vh solid gray';
+                      loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Hamburger');
+                    }}>
+              Hamburger
+            </button>
+     </Col>
+     <Col xs={12}
+          md={3}
+          lg={3} 
+          className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
+          <button className='office-mainnavigationcontainer-mainnavigationbutton'
+                    onClick={(evt)=> {
+                      const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
+                      const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
+                      for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
+                        const _button = _mainnavigationbuttons[i];
+                        _button.style.border = 'none';
+                      }
+                      _hamburgernavigationbutton.style.border = '0.5vh solid none';
+                      _mainnavigationbuttons[1].style.border = '0.5vh solid gray';
+                      loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Assistant');
+                    }}>
+            Assistants
+            </button>
+     </Col>
+     <Col xs={12}
+          md={3} 
+          lg={3} 
+          className="office-mainnavigationcontainer-mainnavigationbuttoncontainer">
+            <button className='office-mainnavigationcontainer-mainnavigationbutton'
+                    onClick={(evt)=> {
+                      const _hamburgernavigationbutton =  document.querySelector('.office-mainnavigationcontainer-positioningmainnavigationbutton');
+                      const _mainnavigationbuttons = document.querySelectorAll('.office-mainnavigationcontainer-mainnavigationbutton');
+                      for ( let i = 0; i < _mainnavigationbuttons.length; i++) {
+                        const _button = _mainnavigationbuttons[i];
+                        _button.style.border = 'none';
+                      }
+                      _hamburgernavigationbutton.style.border = '0.5vh solid none';
+                      _mainnavigationbuttons[2].style.border = '0.5vh solid gray';
+                      loginauthenticationtypecb((loginauthentication)=> loginauthentication = 'Office');
+                    }}>
+            Office
+            </button>
+     </Col>
     </Row>
     <Col xs={12}
-	 md={12}
+	       md={12}
          lg={12}
          id="office-view">
      <OfficeViewModalsContainer loginauthenticationtype={loginauthenticationtype}
-	                        officemainnavigationcontentview={officemainnavigationcontentview}
-	                        officemainnavigationcontentviewcb={officemainnavigationcontentviewcb}
-	                         mainnavigationbuttonscontainerdisplayproperty={mainnavigationbuttonscontainerdisplayproperty}
-	                         mainnavigationbuttonscontainerdisplaypropertycb={mainnavigationbuttonscontainerdisplaypropertycb}/>
+                                officemainnavigationcontentview={officemainnavigationcontentview}
+                                officemainnavigationcontentviewcb={officemainnavigationcontentviewcb}
+                                mainnavigationbuttonscontainerdisplayproperty={mainnavigationbuttonscontainerdisplayproperty}
+                                mainnavigationbuttonscontainerdisplaypropertycb={mainnavigationbuttonscontainerdisplaypropertycb}/>
     </Col>
   </Row>
  )
@@ -109,7 +109,7 @@ function OfficeViewModalsContainer(props) {
   return (
    <Col id="office-officeviewmodalscontainer">
      <OfficeHamburger officemainnavigationcontentviewcb={props.officemainnavigationcontentviewcb}
-	              mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}/>
+	                   mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}/>
    </Col>
    )
  }

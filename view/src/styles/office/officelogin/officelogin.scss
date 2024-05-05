@@ -82,7 +82,7 @@ letter-spacing:65px;
 position:relative;
 height:100%;
 width:100%;
-padding:150px 40px;
+padding:10px 30px;
 }
 #office-login-headercontainer {
 position:relative;
@@ -103,7 +103,7 @@ user-select:none;
 position:relative;
 border-radius:20px;
 height:5vh;
-width:70%;
+width:20%;
 font: auto {
 family: $sub-font;
 }
@@ -115,7 +115,7 @@ position:relative;
 background-color:gray;
 border-radius:20px;
 height:5vh;
-width:30%;
+width:15%;
 font: auto {
 family: $sub-font;
 }
@@ -128,8 +128,8 @@ height:90%;
 width:100%;
 display:flex;
 flex-direction:column;
-justify-content:center;
-align-items:center;
+justify-content:flex-start;
+align-items:flex-start;
 }
 #office-loginintroductionpage {
 position:relative;
