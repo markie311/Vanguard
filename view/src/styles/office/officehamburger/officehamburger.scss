@@ -2409,12 +2409,155 @@ position:relative;
 height:50%;
 padding:30px;
 }
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer {
+position:absolute;
+height:10%;
+width:100%;
+}
 .officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication {
 position:relative;
 font: auto {
  family: $sub-font;
 }
 color:white;
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-moneybutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+margin-top:1.5vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-fundsbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+margin-top:1.5vh;
+left:3vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer {
+position:absolute;
+background-color:$mainbgcolor;
+border:0.1vh solid white;
+border-radius:20px;
+height:90%;
+width:90%;
+display:none;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar {
+width: 5px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-thumb {
+background:dodgerblue; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+//// main data indications 
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 60px;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-closebutton {
+position:relative;
+background-color:black;
+border-radius:5px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.5vh;
+padding:5px 15px;
+left:48%;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-datacontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:30px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusandaccomodationbuttoncontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content: space-between;
+align-items: space-between;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton {
+position:relative;
+background-color: chocolate;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+left:-1vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusloadingindication {
+position:relative;
+display:none;   
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton {
+position:relative;
+background-color:dodgerblue;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+right:-4vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication {
+position:relative;
+display:none;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication {
+position:relative;
+display:none;   
 }
 #officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentmodal {
 position:absolute;

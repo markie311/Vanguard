@@ -5045,25 +5045,83 @@ function OfficeHamburgerMoneyAndFundsDataView() {
              md={6}
              lg={6}
              className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
-          <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Widthdrawals</p>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+            <h6 className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Widthdrawals</h6>
+            <br />
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests, 0</p>
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests completion, <span>0</span> out <span>0</span></p>
+            <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-moneybutton"
+                    onClick={()=> {
+                      const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                      _requestsdatamodal[0].style.display = "block";
+                    }}>
+              Money
+            </button>
+            <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-fundsbutton"
+                    onClick={()=> {
+                      const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                      _requestsdatamodal[0].style.display = "block";
+                    }}>
+              Funds
+            </button>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+            <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer">
+              <button id="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-closebutton"
+                      onClick={(evt)=> {
+                        const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                        _requestsdatamodal[0].style.display = "none";
+                      }}>
+                close
+              </button>
+              {
+              ["0", "1", "2", "3"].map((widthdrawaldata, widthdrawaldataidx)=> {
+                return (
+                  <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-datacontainer">
+                     <p key={widthdrawaldataidx}
+                        className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication">
+                     <span>Amount: 30</span> <span>Date: Mar 1, 2024, 24:23</span> <span>Name: Mark Beloy</span> <span>Authentication ID: ASAD-1234-QWERTYTREWQ</span> <span>Phone number: 09958749222</span></p>
+                     <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusandaccomodationbuttoncontainer">
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton">Status: <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusheaderindication">Accomodate</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                      <p></p>
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton"><span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateheaderindication">Confirmed and Money was already sent</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                     </div>
+                  </div>
+                )
+              })
+             }
+            </Col>
+          </Col>
         </Col>
         <Col xs={12}
              md={6}
              lg={6}
              className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
-          <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Flow</p>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+           <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Flow</p>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+          </Col>
         </Col>
         <Col xs={12}
              md={6}
              lg={6}
              className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
-          <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Absorb</p>
-        </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Absorb</p>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+          </Col>
+          </Col>
         <Col xs={12}
              md={6}
              lg={6}
              className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
-          <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Exchange</p>
+           <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Exchange</p>
+           </Col>
+           <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+           </Col>   
         </Col>
        </Row>
        <Col id="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentmodal">
