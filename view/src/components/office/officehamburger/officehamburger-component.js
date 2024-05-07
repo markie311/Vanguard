@@ -1693,65 +1693,63 @@ function OfficeHamburgerMarketingDataView(props) {
    <Row id="officehamburger-dataview-datacontainer-marketing">
 
     <Row id="officehamburger-dataview-datacontainer-marketingnavigtionbuttongridcontainer">
-     <Col xs={12}
-	  md={3}
-	  lg={3}
-	  className="officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer">
-	<button className="officehamburger-dataview-datacontainer-marketing-navigtionbutton"
-	        onClick={(evt)=> {
+       <Col xs={12}
+	          md={3}
+	          lg={3}
+	         className="officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer">
+    	<button className="officehamburger-dataview-datacontainer-marketing-navigtionbutton"
+	            onClick={(evt)=> {
                   props.officehamburgermarketingdataviewcb((view)=> view = evt.target.innerText);
- }}>
-	  Merchandise
-	</button>
+              }}>
+	     Merchandise
+	    </button>
      </Col>
      <Col xs={12}
-	  md={3}
-	  lg={3}
-	  className="officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer">
-	<button className="officehamburger-dataview-datacontainer-marketing-navigtionbutton"
-	        onClick={(evt)=> {
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-marketing-navigtionbuttoncontainer">
+	    <button className="officehamburger-dataview-datacontainer-marketing-navigtionbutton"
+	            onClick={(evt)=> {
                    props.officehamburgermarketingdataviewcb((view)=> view = evt.target.innerText);
- }}>
-	  Load product's
-	</button>
-     </Col>
-   </Row>
+              }}>
+	       Load product's
+	    </button>
+    </Col>
+    </Row>
    
-   <Col id="officehamburger-dataview-datacontainer-datacontainer">
+    <Col id="officehamburger-dataview-datacontainer-datacontainer"> 
      <HamburgerMarketingDataView officehamburgermarketingdataview={props.officehamburgermarketingdataview}
-	                         officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
-officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
-	                        officehamburgerproductdatascheme={props.officehamburgerproductdatascheme}
-	                        officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
+	                               officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
+                                 officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
+	                               officehamburgerproductdatascheme={props.officehamburgerproductdatascheme}
+	                               officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
            
-	                       officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
-	                      officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
+                                 officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
+                                 officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
 
-	                      officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
-	                  officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
+	                               officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
+	                               officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
 
-	                  officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
-	                  officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
+                                 officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
+                                 officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
 
-                          officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
-	                  officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
+                                 officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
+	                               officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
 
-	                  officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
-	                  officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
+                                 officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
+                                officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
 
-                          officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
-	                  officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
+                                officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
+	                              officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
                             
-	                  officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
-	                  officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
+                                officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
+                                officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
 
-	                 officehamburgerproductspecification={props.officehamburgerproductspecification}
-	                 officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
+                                officehamburgerproductspecification={props.officehamburgerproductspecification}
+                                officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
 
-	                 compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}
-
-/>
-   </Col>
+                                compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}/>
+    </Col>
 
    </Row>
  )
@@ -1762,38 +1760,36 @@ function HamburgerMarketingDataView(props) {
  if ( props.officehamburgermarketingdataview === "Merchandise") {
  return (
   <Col id="officehamburger-dataview-datacontainer-datacontainer-dataview">
-  <HamburgerMarketingMerchandiseDataView officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
-                                         officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
+   <HamburgerMarketingMerchandiseDataView officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
+                                          officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
    
-	                                officehamburgerproductdatascheme={props.officehamburgerproductdatascheme}
-	                               officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
- 
-	                               officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
-	                               officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
+ 	                                        officehamburgerproductdatascheme={props.officehamburgerproductdatascheme} 
+	                                        officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
+       
+	                                        officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
+	                                        officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
 
-	                               officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
-	                  officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
+	                                        officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
+	                                        officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
 
-	                  officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
-	                  officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
+	                                        officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
+	                                        officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
 
-                          officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
-	                  officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
+                                          officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
+	                                        officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
 
-	                  officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
-	                  officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
+	                                        officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
+	                                        officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
 
-                          officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
-	                  officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
+                                          officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
+	                                        officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
                             
-	                  officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
-	                  officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
+                                          officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
+                                          officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
 
-	                 officehamburgerproductspecification={props.officehamburgerproductspecification}
-	                 officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
-                          compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}
-
-/>
+                                          officehamburgerproductspecification={props.officehamburgerproductspecification}
+                                          officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
+                                          compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction} />
   </Col>
  )
  }
@@ -1801,7 +1797,7 @@ function HamburgerMarketingDataView(props) {
  if ( props.officehamburgermarketingdataview === "Load product\'s") {
  return (
   <Col id="officehamburger-dataview-datacontainer-datacontainer-dataview">
-  <HamburgerMarketingLoadProductsDataView />
+   <HamburgerMarketingLoadProductsDataView />
   </Col>
  )
  }
@@ -1816,196 +1812,205 @@ function HamburgerMarketingMerchandiseDataView(props) {
 
        <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationcontainer">
 
-       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer">
-	 <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-enterproductidheaderindication">
-	  Enter product id:
-	 </p>
-	 <input type="text"
-	        id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield"/>
-	 <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-searchfieldresponsemessage">
-	 Response message
-	 </p>
-       </Col>
-       <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttonsgridcontainer">
-	 <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
-	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
-	           onClick={(evt)=> {
+        <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer">
+	        <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-enterproductidheaderindication">
+	         Enter product id:
+	        </p>
+	        <input type="text"
+	               id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield"/>
+           <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-searchfieldresponsemessage">
+	           Response message
+	         </p>
+        </Col>
 
-                    const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
+        <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttonsgridcontainer">
 
-		    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
-
-		    _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
-
-		   }}>
-	     Search
-           </button>
-	 </Col>
          <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
-	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
-	           onClick={(evt)=> {
+              md={3}
+              lg={3}
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
+          <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
+                  onClick={(evt)=> {
+
+                          const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
+
+              props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+
+              _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
+
+            }}>
+            Search
+          </button>
+         </Col>
+
+         <Col xs={12}
+	           md={3}
+	           lg={3}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
+    	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
+	               onClick={(evt)=> {
 
                     const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer");
 
-		   const _productid = document.querySelector("#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield") 
-		    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+		                const _productid = document.querySelector("#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield")             
+		                props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
                     
-		    props.officehamburgerproductdatascheme.authentications.productid = _productid.value;
+		                props.officehamburgerproductdatascheme.authentications.productid = _productid.value;
 
-		    props.officehamburgerproductdataschemeproductidcb((productid)=> productid = _productid.value);
+		                props.officehamburgerproductdataschemeproductidcb((productid)=> productid = _productid.value);
 
-		    _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
+		               _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
 
-		   }}>
-	     Add product
-	   </button>
-	 </Col>
-	 <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
-	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
-	           onClick={(evt)=> {
-
-                    const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer");
-
-		   const _productid = document.querySelector("#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield") 
-		    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
-                    
-		    props.officehamburgerproductdatascheme.authentications.productid = _productid.value;
-
-		    props.officehamburgerproductdataschemeproductidcb((productid)=> productid = _productid.value);
-
-		    _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
-
-		   }}>
-	     Add a product specification
-	   </button>
-	 </Col>
+		     }}>
+	         Add product
+	       </button>
+	       </Col>
 
          <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
-	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
-	           onClick={(evt)=> {
+              md={3}
+              lg={3}
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
+        <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
+                onClick={(evt)=> {
 
-                     const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer");
+                  const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer");
 
-		    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
-
-		    _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
-
-		   }}>
-	     Edit
-	   </button>
-	 </Col>
-         <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
-	   <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
-	           onClick={(evt)=> {
-
-                    const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
-
-		    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
-
-		    _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
-
-		   }}>
-	     Delete
-	   </button>
-	 </Col>
-
-       </Row>
-
-       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-buttonscontainer">
-       </Col>
-
-      </Col>
-
-      </Col>
-
-     <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer">
-      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer">
-      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer">
-       <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-closebuttonheaderindication"
-	  onClick={(evt)=> {
+                  const _productid = document.querySelector("#officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-productidsearchfield") 
+                  props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+                        
+                  props.officehamburgerproductdatascheme.authentications.productid = _productid.value;
     
-            const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
-           
-	   _merchandisedatacontainer.classList.remove("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
-		   }}>
-	 close
-       </p>
-       </Col>
-       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer">
-         <HamburgerMarketingMerchandiseFormDataModal 
-	  officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
-officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
+                  props.officehamburgerproductdataschemeproductidcb((productid)=> productid = _productid.value); 
 
-/>
+                  _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
+
+          }}>
+          Add a product specification
+        </button>
+         </Col>
+
+         <Col xs={12}
+              md={3}
+              lg={3}
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
+          <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
+                  onClick={(evt)=> {
+
+                          const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer");
+
+              props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+
+              _merchandisedataconfigurationcontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
+
+            }}>
+            Edit
+          </button>
+         </Col>
+
+         <Col xs={12}
+              md={3}
+              lg={3}
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbuttoncontainer">
+          <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
+                  onClick={(evt)=> {
+
+                          const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
+
+              props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+
+              _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
+
+            }}>
+            Delete
+          </button>
+         </Col>
+
+        </Row>
+
+        <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-buttonscontainer">
+        </Col>
+
        </Col>
+
       </Col>
-     </Col>
+
+      <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer">
+
+      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer">
+
+       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer">
+           <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-closebuttonheaderindication"
+	            onClick={(evt)=> {   
+    
+                 const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
+           
+	              _merchandisedatacontainer.classList.remove("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
+		         }}>
+	         close
+          </p>
+       </Col>
+
+       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer">
+         <HamburgerMarketingMerchandiseFormDataModal  officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
+                                                      officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb} />
+       </Col>
+
+      </Col>
+
+      </Col>
 
      <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer">
+
      <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer">
 
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindicationcontainer">
-       <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindication"
-	  onClick={(evt)=> {
+           <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindication"
+	             onClick={(evt)=> {
 
-            const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
+              const _merchandisedataconfigurationcontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
 
-            _merchandisedataconfigurationcontainer.classList.remove("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
-		   }}>
-	 close
+              _merchandisedataconfigurationcontainer.classList.remove("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataconfigurationcontainer");
+
+		         }}> 
+	       close
        </p>
       </Col>
+
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-formdatacontainer">
-       <HamburgerMarketingMerchandiseFormDataModal          officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
-officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
-    officehamburgerproductdatascheme={props.officehamburgerproductdatascheme}
-	                 officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
+       <HamburgerMarketingMerchandiseFormDataModal officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
+                                                   officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
+                                                   officehamburgerproductdatascheme={props.officehamburgerproductdatascheme}
+	                                                 officehamburgerproductdataschemecb={props.officehamburgerproductdataschemecb}
                            
-	                  officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
-	                 officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
+	                                                 officehamburgerproductdataschemeproductid={props.officehamburgerproductdataschemeproductid}
+	                                                 officehamburgerproductdataschemeproductidcb={props.officehamburgerproductdataschemeproductidcb}
 
-                        officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
-	                  officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
+                                                   officehamburgerproducttypeproductspecification={props.officehamburgerproducttypeproductspecification} 
+	                                                 officehamburgerproducttypeproductspecificationcb={props.officehamburgerproducttypeproductspecificationcb}
 
-	                  officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
-	                  officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
+	                                                 officehamburgerproductidproductspecification={props.officehamburgerproductidproductspecification} 
+	                                                 officehamburgerproductidproductspecificationcb={props.officehamburgerproductidproductspecificationcb}
 
-                          officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
-	                  officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
+                                                   officehamburgerproductcategoryproductspecification={props.officehamburgerproductcategoryproductspecification} 
+	                                                 officehamburgerproductcategoryproductspecificationcb={props.officehamburgerproductcategoryproductspecificationcb}
 
-	                  officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
-	                  officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
+	                                                 officehamburgerproductnameproductspecification={props.officehamburgerproductnameproductspecification} 
+	                                                 officehamburgerproductnameproductspecificationcb={props.officehamburgerproductnameproductspecificationcb}
 
-                          officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
-	                  officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
+                                                   officehamburgerproductrapportnameproductspecification={props.officehamburgerproductrapportnameproductspecification} 
+	                                                 officehamburgerproductrapportnameproductspecificationcb={props.officehamburgerproductrapportnameproductspecificationcb}
                             
-	                  officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
-	                  officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
- 
-	                 officehamburgerproductspecification={props.officehamburgerproductspecification}
-	                 officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
+                                                   officehamburgerproductdefinitionproductspecification={props.officehamburgerproductdefinitionproductspecification} 
+                                                   officehamburgerproductdefinitionproductspecificationcb={props.officehamburgerproductdefinitionproductspecificationcb}
+                                
+                                                   officehamburgerproductspecification={props.officehamburgerproductspecification}
+                                                   officehamburgerproductspecificationcb={props.officehamburgerproductspecificationcb}
 
-                         compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}
-
-/>
+                                                   compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction} />
       </Col>
      </Col>
-   </Col>
+     </Col>
+
   </Col>
  )
 }
@@ -2021,6 +2026,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
  if ( props.officehamburgerformdataconfigurationviewtypeview === "Search" ) {
    return (
    <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer">
+
    </Row> 
    )
 
@@ -2040,51 +2046,49 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product type
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              props.officehamburgerproductdatascheme.authentications.producttype = evt.target.value;
-             }}/>
-
+        md={3}
+        lg={3}
+        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+        Product type
+            </p>
+            <input type="text"
+                  className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                  onChange={(evt)=> {
+                    props.officehamburgerproductdatascheme.authentications.producttype = evt.target.value;
+                  }}/>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product id
-      </p>
-      <input type="text"		
-	     value={props.officehamburgerproductdataschemeproductid}
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-	      props.officehamburgerproductdatascheme.authentications.productid = evt.target.value;
-             }}/>
-
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+             Product id
+            </p>
+            <input type="text"		
+                   value={props.officehamburgerproductdataschemeproductid}
+                   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                   onChange={(evt)=> {
+                   props.officehamburgerproductdatascheme.authentications.productid = evt.target.value;
+                  }}/>
     </Col>
      
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	Primary details
-      </p>
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+	          Primary details
+        </p>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product category
+      	Product category
       </p>
       <input type="text"
 	     value={samplevalue}
@@ -2096,26 +2100,26 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product name
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              samplevaluecb((sv)=> sv = evt.target.value)
-             }}/>
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+             Product name
+            </p>
+            <input type="text"
+                  className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                  onChange={(evt)=> {
+                    samplevaluecb((sv)=> sv = evt.target.value)
+                  }}/>
 
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product rapport name
+	      Product rapport name
       </p>
       <input type="text"
 	     value={samplevalue}
@@ -2127,32 +2131,33 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
   
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product definition
-      </p>
-     <input type="text"
-	     value={samplevalue}
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              samplevaluecb((sv)=> sv = evt.target.value)
-             }}/>
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+              Product definition
+            </p>
+          <input type="text"
+            value={samplevalue}
+                  className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                  onChange={(evt)=> {
+                    samplevaluecb((sv)=> sv = evt.target.value)
+                  }}/>
 
     </Col>
  
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
-       <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
+
+     <Col xs={12}
+	        md={12}
+	        lg={12}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage">Product successfully added</p>
-       </Col>
-       <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+    </Col>
+    <Col xs={12}
+	       md={12}
+	       lg={12}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
       {
        addingproductloadingindication ? 
        (
@@ -2161,8 +2166,8 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
        :
        (
         <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton">
-        add
-       </button> 
+          add
+        </button> 
        )
       }
       </Col>
@@ -2178,20 +2183,20 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
   <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer"> 
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-        Authentications
-      </p>
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+          Authentications
+        </p>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product type
+	       Product type
       </p>
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        {props.officehamburgerproducttypeproductspecification}
@@ -2199,76 +2204,74 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product id
-      </p>
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	{props.officehamburgerproductidproductspecification}
-
+	       Product id
+       </p>
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	      {props.officehamburgerproductidproductspecification}
       </p>
    </Col>
      
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	Primary details
+         Primary details        
       </p>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product category
-      </p>
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	{props.officehamburgerproductcategoryproductspecification}
-
-      </p>
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+             Product category
+            </p>
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+              {props.officehamburgerproductcategoryproductspecification}
+            </p>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product name
-      </p>
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	{props.officehamburgerproductnameproductspecification}
-      </p>
+         md={3}
+         lg={3}
+        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+              Product name
+            </p>
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+             {props.officehamburgerproductnameproductspecification}
+            </p>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication"
-	 onClick={(evt)=> {
-          alert(props.officehamburgerproductrapportnameproductspecification)
-	 }}>
-	Product rapport name
-      </p>
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-       {props.officehamburgerproductrapportnameproductspecification}
-      </p>
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication"
+             onClick={(evt)=> {
+                alert(props.officehamburgerproductrapportnameproductspecification)
+            }}>
+             Product rapport name
+            </p>
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+             {props.officehamburgerproductrapportnameproductspecification}
+            </p>
     </Col>
   
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Product definition
+	      Product definition
       </p>
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	{props.officehamburgerproductdefinitionproductspecification}
+	     {props.officehamburgerproductdefinitionproductspecification}
       </p>
     </Col>
 
@@ -2276,8 +2279,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     {
      officehamburgerproductspecification.length === 0 ?
      (
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-adddifferentproductspecificationheaderindication">Add different product specification to this product
-      </p>
+      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-adddifferentproductspecificationheaderindication">Add different product specification to this product</p>
      )
      :
      (
@@ -2286,54 +2288,55 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
       officehamburgerproductspecification.map((productspecification, productspecificationindx)=> {
        return (
         <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-productspecificationdatmodal"
-	     key={productspecificationindx}>
+	           key={productspecificationindx}>
 
          <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-           <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	    Product specification {productspecificationindx + 1} 
-           </p>
+              md={3}
+              lg={3}
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+                <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+                 Product specification {productspecificationindx + 1} 
+                </p>
         </Col>
 
        <Col xs={12}
-	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	Display image
-      </p>
-    </Col>
+            md={3}
+            lg={3}
+            className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+             Display image
+            </p>
+       </Col>
 
-    <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer">
+      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer">
 
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">main</p>
 
      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer">
-      <img src="../images/landingpage/bondpaperimage.jpg"                                                      id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-displayimage"
-	  className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-productspecification${productspecificationindx}displayimage`}
-	 onClick={(evt)=>{
-          const _imagecontainer = evt.target.parentElement.parentElement;
-          const _displayimagemodal = _imagecontainer.children[2];
-         _displayimagemodal.style.display = "block";
-	 }}/>
+       <img src="../images/landingpage/bondpaperimage.jpg"                                                      
+            id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-displayimage"
+	          className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-productspecification${productspecificationindx}displayimage`}
+	          onClick={(evt)=>{
+              const _imagecontainer = evt.target.parentElement.parentElement;
+              const _displayimagemodal = _imagecontainer.children[2];
+            _displayimagemodal.style.display = "block";
+	          }}/>
      </Col>
 
      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer">
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimagecontainer">
        <img src="../images/landingpage/bondpaperimage.jpg"
-	    id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimage"/>
+	          id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimage"/>
 
       </Col>
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebuttoncontainer">
        <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebutton" 
-	 onClick={(evt)=>{
-          const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
-          const _displayimagemodal = _closebuttoncontainer.children[2];
-	  _displayimagemodal.style.display = "none";
-	 }}>
-	 close
+	        onClick={(evt)=>{
+            const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
+            const _displayimagemodal = _closebuttoncontainer.children[2];
+	         _displayimagemodal.style.display = "none";      
+	        }}>
+	         close
        </p>
       </Col>
      </Col>
@@ -2341,26 +2344,26 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
-       <input type="text"
-              className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield${productspecificationindx}`  }
-             onChange={(evt)=> {
-              samplevaluecb((sv)=> sv = evt.target.value)
-             }}/>
+           md={12}
+           lg={12}
+           className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
+           <input type="text"
+                  className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield${productspecificationindx}`  }
+                  onChange={(evt)=> {
+                      samplevaluecb((sv)=> sv = evt.target.value)
+                    }}/>
       </Col>
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
        <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton" onClick={(evt)=> {
      
-	const _inputfieldimgeurlvalue = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield${productspecificationindx}`);
+	         const _inputfieldimgeurlvalue = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield${productspecificationindx}`);
 
-        const _productspecifiationimage = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-productspecification0displayimage")
+           const _productspecifiationimage = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-productspecification0displayimage")
        
-      _productspecifiationimage.src = `../images/${_inputfieldimgeurlvalue}`;
+          _productspecifiationimage.src = `../images/${_inputfieldimgeurlvalue}`;
 
        }}>
         add image url to change product main display image
@@ -2371,22 +2374,22 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer">
      
       <Col xs={12}
-	   md={12}
-	   lg={12}>
-	<p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">other image's</p>
+	         md={12}
+	         lg={12}>
+	      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">other image's</p>
       </Col>
 
       {
        productspecification.details.product.cybervisual.images.maindisplayimages.length === 0 ?
       (
        <Col xs={12}
-	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-       Add image url
-      </p>
-    </Col>
+            md={3}
+            lg={3}
+            className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+             Add image url
+            </p>
+      </Col>
       )
       :
       (
@@ -2395,7 +2398,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
         productspecification.details.product.cybervisual.images.maindisplayimages.map((maindisplayimages, maindisplayimagesindx)=> {
        return (
        <Col xs={12}
-	    md={12}
+	          md={12}
             lg={12}
             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer">
         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimagecontainer">
@@ -2403,19 +2406,18 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 	      onClick={(evt)=>{
 
                const _imagecontainer = evt.target.parentElement.parentElement;
-	       const _displayimagemodal = _imagecontainer.children[1];
-	       _displayimagemodal.style.display = "block";
+               const _displayimagemodal = _imagecontainer.children[1];
+              _displayimagemodal.style.display = "block";
 
-	 }}/>
+	      }}/>
 
          <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer">
           <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer-configurationbutton"
-	        onClick={(evt)=> {
-                  productspecification.details.product.cybervisual.images.maindisplayimages.splice(maindisplayimagesindx, 1);
-	         props.compttemptforceupdatetempfunction();
-
-		}}>
-	   delete
+	                onClick={(evt)=> {
+                    productspecification.details.product.cybervisual.images.maindisplayimages.splice(maindisplayimagesindx, 1);
+	                  props.compttemptforceupdatetempfunction();
+                  }}>
+	         delete
          </button>
          </Col>
 
@@ -2424,18 +2426,18 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer">
          <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimagecontainer">
 
-             <img src="../images/landingpage/bondpaperimage.jpg" 
-	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage" />
+           <img src="../images/landingpage/bondpaperimage.jpg" 
+	              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage" />
          </Col>
          <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer">
-         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication"
-           onClick={(evt)=> {
-            const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
-            const _displayimagemodal = _closebuttoncontainer.children[1]
+          <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication"
+             onClick={(evt)=> {
+              const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
+              const _displayimagemodal = _closebuttoncontainer.children[1]
 
-	    _displayimagemodal.style.display = "none";
-	   }}>
-	   close
+	           _displayimagemodal.style.display = "none";
+	        }}>
+	        close
          </p>
          </Col>
         </Col>
@@ -2451,9 +2453,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
        <input type="text"
               className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationproductspecificaionmaindisplayimage${productspecificationindx}field`}
              onChange={(evt)=> {
@@ -2461,17 +2463,17 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              }}/>
       </Col>
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
        <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
 	      onClick={(evt)=> {
 
-	       const _productspecificationrelavantmaindisplayimageurlfield = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationproductspecificaionmaindisplayimage${productspecificationindx}field`);
+	         const _productspecificationrelavantmaindisplayimageurlfield = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationproductspecificaionmaindisplayimage${productspecificationindx}field`);
 
-              productspecification.details.product.cybervisual.images.maindisplayimages.push(`../iamges/${_productspecificationrelavantmaindisplayimageurlfield.value}`)
+           productspecification.details.product.cybervisual.images.maindisplayimages.push(`../iamges/${_productspecificationrelavantmaindisplayimageurlfield.value}`)
  
-	     props.compttemptforceupdatetempfunction();
+	         props.compttemptforceupdatetempfunction();
 
 	      }}>
         add
@@ -2480,20 +2482,20 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
      </Row>  
 
      <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	        md={3}
+	        lg={3}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
        Purchasing details
       </p>
     </Col>
 
      <Col xs={12}
-	  md={3}
-	  lg={3}
-	  className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set
+	      Set
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -2504,65 +2506,63 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set sequence number
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	        Set sequence number
+        </p>
+        <input type="text"
+               className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+               onChange={(evt)=> {
               
              }}/>
-
     </Col>
 
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Pcs
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              productspecification.details.product.specification.set.pcs = evt.target.value;
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	        Pcs
+         </p>
+         <input type="text"
+                className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                onChange={(evt)=> {
+                productspecification.details.product.specification.set.pcs = evt.target.value;
              }}/>
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set type product indication
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              productspecification.details.product.specification.set.productindication = evt.target.value;
-             }}/>
-
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+          <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	           Set type product indication
+          </p>
+         <input type="text"
+                className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                 onChange={(evt)=> {
+                  productspecification.details.product.specification.set.productindication = evt.target.value;
+                }}/>
     </Col>
 
 
      <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-       Details
-      </p>
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+           <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+            Details
+           </p>
     </Col>
 
-       <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Part
+    <Col xs={12}
+   	     md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	       Part
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -2573,54 +2573,51 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Gender
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
-              productspecification.details.product.specification.for.gender = evt.target.value; 
-             }}/>
-
+   	     md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+          <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	         Gender
+          </p>
+          <input type="text"
+                 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+                 onChange={(evt)=> {
+                  productspecification.details.product.specification.for.gender = evt.target.value; 
+                }}/>
     </Col>
 
    <Col xs={12}
-   	md={3}
+       	md={3}
         lg={3}
         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Category
+	     Category
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.for.category = evt.target.value;
              }}/>
-
     </Col>
 
    <Col xs={12}
- 	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+ 	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Size
+	      Size
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.size = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Color
       </p>
@@ -2629,13 +2626,12 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              onChange={(evt)=> {
               productspecification.details.product.specification.color = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Weight
       </p>
@@ -2647,9 +2643,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
  
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
        Design
       </p>
@@ -2658,7 +2654,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     <Col xs={12}
          md={3}
          lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Top design
       </p>
@@ -2667,7 +2663,6 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              onChange={(evt)=> {
               productspecification.details.product.specification.top= evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
@@ -2675,91 +2670,86 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
          lg={3}
          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Left design
+	       Left design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.left = evt.target.value;
              }}/>
-
     </Col>
     
     <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Bottom design
-      </p>
+   	     md={3}
+	      lg={3}
+        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	      Bottom design
+       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.bottom = evt.target.value;
              }}/>
-
     </Col>
 
    <Col xs={12}
    	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Right deaign
-      </p>
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	       Right deaign
+       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.right = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-   	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Back design
-      </p>
+   	     md={3}
+	       lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	       Back design
+       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.back = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Front design
+    	   md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+      	Front design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               productspecification.details.product.specification.front = evt.target.value;
              }}/>
-
     </Col>
 	
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+        md={3}
+        lg={3}
+        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-       Price's breakdown
+        Price's breakdown
       </p>
     </Col>
 
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Price
+      	Price
       </p>
      <input type="text"
             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -2769,24 +2759,23 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+          md={3}
+          lg={3}
+          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Capital
+        Capital
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
                productspecification.details.product.pricesbreakdown.capital = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+         md={3}
+         lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Suggested Retail Price
       </p>
@@ -2795,13 +2784,12 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              onChange={(evt)=> {
                productspecification.details.product.pricesbreakdown.suggested_retail_price = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+      	 md={3}
+      	 lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
         Vat
       </p>
@@ -2813,9 +2801,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+         md={3}
+         lg={3}
+         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Marketing fee
       </p>
@@ -2827,25 +2815,25 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col> 
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	About stocks
-      </p>
+	       md={3}
+	       lg={3}
+	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+	        About stocks
+       </p>
     </Col>
+
     {
      productspecification.system.stocks.length === 0 ?
      (
      <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+          md={3}
+          lg={3}
+          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	no similar stocks
+        no similar stocks
       </p>
-    </Col>
- 
+     </Col>
      )
      :
      (
@@ -2854,54 +2842,54 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
      productspecification.system.stocks.map((stocksproductspecification, stocksproductspecificationindx)=> {
        return (
         <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-productspecificationstocksdatmodal"
-	     key={stocksproductspecificationindx}>
+	           key={stocksproductspecificationindx}>
 
           <Col xs={12}
-	      md={3}
-	      lg={3}
-	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-           <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	    Relavant stocks specification {stocksproductspecificationindx + 1} 
-           </p>
-        </Col>
+	             md={3}
+	             lg={3}
+	             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+              <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+	             Relavant stocks specification {stocksproductspecificationindx + 1} 
+              </p>
+         </Col>
 
        <Col xs={12}
-	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-	Display image
-      </p>
-    </Col>
+            md={3}
+            lg={3}
+            className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+            <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+            Display image
+            </p>
+       </Col>
 
     <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer">
 
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">main</p>
 
      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer">
-      <img src="../images/landingpage/bondpaperimage.jpg"                                                      id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-displayimage"
-	  className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-stocksproductspecification${stocksproductspecificationindx}displayimage`}
-	 onClick={(evt)=>{
-          const _imagecontainer = evt.target.parentElement.parentElement;
-          const _displayimagemodal = _imagecontainer.children[2];
-         _displayimagemodal.style.display = "block";
-	 }}/>
+      <img src="../images/landingpage/bondpaperimage.jpg"                                                     
+           id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-displayimage"
+	        className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-stocksproductspecification${stocksproductspecificationindx}displayimage`}
+          onClick={(evt)=>{
+                  const _imagecontainer = evt.target.parentElement.parentElement;
+                  const _displayimagemodal = _imagecontainer.children[2];
+                _displayimagemodal.style.display = "block";
+          }}/>
      </Col>
 
      <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer">
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimagecontainer">
        <img src="../images/landingpage/bondpaperimage.jpg"
-	    id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimage"/>
-
+	          id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-displayimage"/>
       </Col>
       <Col id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebuttoncontainer">
        <p id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebutton" 
-	 onClick={(evt)=>{
-          const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
-          const _displayimagemodal = _closebuttoncontainer.children[2];
-	  _displayimagemodal.style.display = "none";
-	 }}>
-	 close
+	       onClick={(evt)=>{
+           const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
+           const _displayimagemodal = _closebuttoncontainer.children[2];
+	         _displayimagemodal.style.display = "none";
+       	 }}>
+	         close
        </p>
       </Col>
      </Col>
@@ -2909,9 +2897,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
        <input type="text"
               className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationfield${stocksproductspecificationindx}`  }
              onChange={(evt)=> {
@@ -2919,16 +2907,17 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              }}/>
       </Col>
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
-       <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton" onClick={(evt)=> {
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+       <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
+               onClick={(evt)=> {
      
-	const _inputfieldimgeurlvalue = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationfield${stocksproductspecificationindx}`);
+	       const _inputfieldimgeurlvalue = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationfield${stocksproductspecificationindx}`);
 
-        const _productspecifiationimage = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-stocksproductspecification0displayimage")
+         const _productspecifiationimage = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaycontainer-stocksproductspecification0displayimage")
        
-      _productspecifiationimage.src = `../images/${_inputfieldimgeurlvalue}`;
+         _productspecifiationimage.src = `../images/${_inputfieldimgeurlvalue}`;
 
        }}>
         add image url to change product main display image
@@ -2936,77 +2925,78 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
       </Col>
      </Row>
 
-    <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer">
+     <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer">
      
       <Col xs={12}
-	   md={12}
-	   lg={12}>
-	<p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">other image's</p>
+	         md={12}
+	         lg={12}>
+	       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication">other image's</p>
       </Col>
 
       {
        stocksproductspecification.details.product.cybervisual.images.maindisplayimages.length === 0 ?
       (
        <Col xs={12}
-	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-       Add image url
-      </p>
-    </Col>
+	          md={3}
+	          lg={3}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+           Add image url
+         </p>
+       </Col>
       )
       :
       (
        <React.Fragment>
         {
         stocksproductspecification.details.product.cybervisual.images.maindisplayimages.map((stocksmaindisplayimages, stocksmaindisplayimagesindx)=> {
-       return (
-       <Col xs={12}
-	    md={12}
-            lg={12}
-            className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer"
-	   key={stocksmaindisplayimages}>
+        return (
+          <Col xs={12}
+	             md={12}
+               lg={12}
+               className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer"
+	             key={stocksmaindisplayimages}>
         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimagecontainer">
-         <img src="../images/landingpage/bondpaperimage.jpg"                                                      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage"
-	      onClick={(evt)=>{
+         <img src="../images/landingpage/bondpaperimage.jpg"                                                      
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage"
+	           onClick={(evt)=>{
 
                const _imagecontainer = evt.target.parentElement.parentElement;
-	       const _displayimagemodal = _imagecontainer.children[1];
-	       _displayimagemodal.style.display = "block";
+	             const _displayimagemodal = _imagecontainer.children[1];
+	             _displayimagemodal.style.display = "block";
 
-	 }}/>
+	           }}/>
 
          <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer">
-          <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer-configurationbutton"
-	        onClick={(evt)=> {
-                  stocksproductspecification.details.product.cybervisual.images.maindisplayimages.splice(stocksmaindisplayimagesindx, 1);
-	         props.compttemptforceupdatetempfunction();
-
-		}}>
-	   delete
-         </button>
+           <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimageconfigurationcontainer-configurationbutton"
+	                onClick={(evt)=> {
+                   stocksproductspecification.details.product.cybervisual.images.maindisplayimages.splice(stocksmaindisplayimagesindx, 1);
+	                props.compttemptforceupdatetempfunction();
+		      }}>
+	            delete
+          </button>
          </Col>
 
         </Col>
 
         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer">
-         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimagecontainer">
 
+         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimagecontainer">
              <img src="../images/landingpage/bondpaperimage.jpg" 
 	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage" />
          </Col>
-         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer">
-         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication"
-           onClick={(evt)=> {
-            const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
-            const _displayimagemodal = _closebuttoncontainer.children[1]
 
-	    _displayimagemodal.style.display = "none";
-	   }}>
-	   close
-         </p>
+         <Col className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer">
+           <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication"
+              onClick={(evt)=> {
+               const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
+               const _displayimagemodal = _closebuttoncontainer.children[1];
+	             _displayimagemodal.style.display = "none";
+       	   }}>
+	           close
+          </p>
          </Col>
+
         </Col>
         </Col>
        )
@@ -3020,49 +3010,49 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
-       <input type="text"
-              className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationproductspecificaionmaindisplayimage${stocksproductspecificationindx}field`}
-             onChange={(evt)=> {
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationfieldcontainer">
+           <input type="text"
+                  className={`officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-imageconfigurationfield officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationproductspecificaionmaindisplayimage${stocksproductspecificationindx}field`}
+                  onChange={(evt)=> {
 
-             }}/>
+                  }}/>
       </Col>
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
-       <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
-	      onClick={(evt)=> {
+	         md={12}
+	         lg={12}
+	         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+         <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
+	               onClick={(evt)=> {
 
-	       const _productspecificationrelavantmaindisplayimageurlfield = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationproductspecificaionmaindisplayimage${stocksproductspecificationindx}field`);
+	               const _productspecificationrelavantmaindisplayimageurlfield = document.querySelector(`.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-stocksimageconfigurationproductspecificaionmaindisplayimage${stocksproductspecificationindx}field`);
 
-              stocksproductspecification.details.product.cybervisual.images.maindisplayimages.push(`../iamges/${_productspecificationrelavantmaindisplayimageurlfield.value}`)
+                 stocksproductspecification.details.product.cybervisual.images.maindisplayimages.push(`../iamges/${_productspecificationrelavantmaindisplayimageurlfield.value}`)
 
-	     props.compttemptforceupdatetempfunction();
-
-	      }}>
+	               props.compttemptforceupdatetempfunction();
+ 
+	           }}>
         add
        </button>
       </Col>
      </Row>  
 
      <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
        Purchasing details
       </p>
     </Col>
 
      <Col xs={12}
-	  md={3}
-	  lg={3}
-	  className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set
+      	Set
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3073,11 +3063,11 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+      	 md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set sequence number
+      	Set sequence number
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3088,11 +3078,11 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Pcs
+      	Pcs
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3102,38 +3092,37 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Set type product indication
+	       Set type product indication
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.set.productindication = evt.target.value;
              }}/>
-
     </Col>
 
 
      <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	        md={3}
+	        lg={3}
+	        className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
        Details
       </p>
     </Col>
 
        <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Part
-      </p>
-      <input type="text"
+   	        md={3}
+	          lg={3}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	       Part
+        </p>
+        <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.for.part = evt.target.value;
@@ -3142,11 +3131,11 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-   	    md={3}
-	    lg={3}
+    	   md={3}
+   	    lg={3}
 	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Gender
+      	Gender
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3157,12 +3146,12 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
    <Col xs={12}
-   	md={3}
+       	md={3}
         lg={3}
         className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Category
-      </p>
+         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+	       Category
+        </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
@@ -3172,11 +3161,11 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
    <Col xs={12}
- 	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+     	  md={3}
+   	    lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Size
+     	Size
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3187,24 +3176,23 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-       Color
-      </p>
-      <input type="text"
-             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
-             onChange={(evt)=> {
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+        Color
+       </p>
+       <input type="text"
+              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
+              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.color = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Weight
       </p>
@@ -3216,18 +3204,18 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
  
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
-       Design
-      </p>
-    </Col>
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
+        Design
+       </p>
+   </Col>
 
     <Col xs={12}
          md={3}
          lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+      	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Top design
       </p>
@@ -3243,38 +3231,36 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
          md={3}
          lg={3}
          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
-      <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Left design
+       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
+       	Left design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.left = evt.target.value;
              }}/>
-
     </Col>
     
     <Col xs={12}
-   	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+   	     md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Bottom design
+	      Bottom design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.bottom = evt.target.value;
              }}/>
-
     </Col>
 
    <Col xs={12}
         md={3}
-	lg={3}
-	className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Right deaign
+	     Right deaign
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3285,50 +3271,48 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-   	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+      	 md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Back design
+	      Back design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.back = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-   	    md={3}
-	    lg={3}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+   	     md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Front design
+	      Front design
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
               stocksproductspecification.details.product.specification.front = evt.target.value;
              }}/>
-
     </Col>
 	
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
        Price's breakdown
       </p>
-    </Col>
+  </Col>
 
    <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	      md={3}
+	      lg={3}
+	      className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Price
+	      Price
       </p>
      <input type="text"
             className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
@@ -3338,24 +3322,23 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
-	Capital
+	     Capital
       </p>
       <input type="text"
              className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-field"
              onChange={(evt)=> {
                stocksproductspecification.details.product.pricesbreakdown.capital = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+      	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Suggested Retail Price
       </p>
@@ -3364,13 +3347,12 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              onChange={(evt)=> {
                stocksproductspecification.details.product.pricesbreakdown.suggested_retail_price = evt.target.value;
              }}/>
-
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
         Vat
       </p>
@@ -3382,9 +3364,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
     </Col>
 
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
+	       md={3}
+      	 lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication">
        Marketing fee
       </p>
@@ -3394,7 +3376,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
                stocksproductspecification.details.product.pricesbreakdown.marketingfee = evt.target.value;
              }}/>
     </Col> 
-       </Row>
+  </Row>
        )
       })
      }
@@ -3406,15 +3388,15 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
    <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage">Product successfully added</p>
        </Col>
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
       {
        addingproductloadingindication ? 
        (
@@ -3425,76 +3407,77 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
         <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
 	        onClick={(evt)=> {
 	    
-		 const produtspecificationdata = {
-                   details: {
-                      product: {
-                       name: 'Product name',
-                       rapportname: 'Product rapport name',
-                        definition: 'Product definition',
-                        category: 'MRN',
-                        specification: {
-                         for: {
-                          part: 'Product part',
-                          gender: 'Male',
-                          category: 'Adults'
-                         },
-                         set: {
-                          set: false,
-                          productindication: 'Oridinary',
-                          pcs: 10
-                         },
-                         size: 'Product size',
-                         color: 'Product color',
-                         weight: 'Product weight',
-                         top: 'Top product specification',
-                         left: 'Left product specification',
-                         bottom: 'Bottom product specification',
-                         right: 'Right product specification',
-                         back: 'Back product specification',
-                         front: 'Front product specification',
-                     },
-                     pricesbreakdown: {
-                      price: 10,
-                      capital: 8,
-                      suggested_retail_price: 10,
-                      vat: 2,
-		      marketingfee: 10
-                    },
-                    cybervisual: {
-                      images: {
-                       maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                       maindisplayimages: [
-                       ]
-                      },
-                      videos: [
-                      ]
-                     },
-                    },
-                    locations: {
-                     operations: [
-                 
-                     ]
+              const produtspecificationdata = {
+                            details: {
+                                product: {
+                                name: 'Product name',
+                                rapportname: 'Product rapport name',
+                                  definition: 'Product definition',
+                                  category: 'MRN',
+                                  specification: {
+                                  for: {
+                                    part: 'Product part',
+                                    gender: 'Male',
+                                    category: 'Adults'
+                                  },
+                                  set: {
+                                    set: false,
+                                    productindication: 'Oridinary',
+                                    pcs: 10
+                                  },
+                                  size: 'Product size',
+                                  color: 'Product color',
+                                  weight: 'Product weight',
+                                  top: 'Top product specification',
+                                  left: 'Left product specification',
+                                  bottom: 'Bottom product specification',
+                                  right: 'Right product specification',
+                                  back: 'Back product specification',
+                                  front: 'Front product specification',
+                              },
+                              pricesbreakdown: {
+                                price: 10,
+                                capital: 8,
+                                suggested_retail_price: 10,
+                                vat: 2,
+                    marketingfee: 10
+                              },
+                              cybervisual: {
+                                images: {
+                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                                maindisplayimages: [
+                                ]
+                                },
+                                videos: [
+                                ]
+                              },
+                              },
+                              locations: {
+                              operations: [
+                          
+                              ]
+                              }
+                },
+                system: {
+                            request: {
+                              product: [],
+                              shipping: {
+                              category: 'Shipping category',
+                              weight: 'Shipping weight',
+                              fee: 0
+                            }
+                          },
+                          stocks: [],
+                          purchase: {
+                            people: [],
+                            xirbit: []
+                          }
                     }
-		  },
-		  system: {
-                   request: {
-                    product: [],
-                    shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                   }
-                 },
-                stocks: [],
-                 purchase: {
-                   people: [],
-                   xirbit: []
-                }
-           }
-	  }
+              }
         
-	 productspecification.system.stocks.push(produtspecificationdata) 
-         props.compttemptforceupdatetempfunction();
+	           productspecification.system.stocks.push(produtspecificationdata) 
+             props.compttemptforceupdatetempfunction();
+
         }}>
          add similar stocks
         </button> 
@@ -3515,15 +3498,15 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
     <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage">Product successfully added</p>
        </Col>
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbuttoncontainer">
       {
        addingproductloadingindication ? 
        (
@@ -3532,78 +3515,79 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
        :
        (
         <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
-	       onClick={(evt)=> {
-	    
-		 const produtspecificationdata = {
-                   details: {
-                      product: {
-                       name: 'Product name',
-                       rapportname: 'Product rapport name',
-                        definition: 'Product definition',
-                        category: 'MRN',
-                        specification: {
-                         for: {
-                          part: 'Product part',
-                          gender: 'Male',
-                          category: 'Adults'
-                         },
-                         set: {
-                          set: false,
-                          productindication: 'Oridinary',
-                          pcs: 10
-                         },
-                         size: 'Product size',
-                         color: 'Product color',
-                         weight: 'Product weight',
-                         top: 'Top product specification',
-                         left: 'Left product specification',
-                         bottom: 'Bottom product specification',
-                         right: 'Right product specification',
-                         back: 'Back product specification',
-                         front: 'Front product specification',
-                     },
-                     pricesbreakdown: {
-                      price: 10,
-                      capital: 8,
-                      suggested_retail_price: 10,
-                      vat: 2,
-		      marketingfee: 10
-                    },
-                    cybervisual: {
-                      images: {
-                       maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                       maindisplayimages: [
-                       ]
+	              onClick={(evt)=> {
+	      
+             const produtspecificationdata = {
+                details: {
+                            product: {
+                            name: 'Product name',
+                            rapportname: 'Product rapport name',
+                              definition: 'Product definition',
+                              category: 'MRN',
+                              specification: {
+                              for: {
+                                part: 'Product part',
+                                gender: 'Male',
+                                category: 'Adults'
+                              },
+                              set: {
+                                set: false,
+                                productindication: 'Oridinary',
+                                pcs: 10
+                              },
+                              size: 'Product size',
+                              color: 'Product color',
+                              weight: 'Product weight',
+                              top: 'Top product specification',
+                              left: 'Left product specification',
+                              bottom: 'Bottom product specification',
+                              right: 'Right product specification',
+                              back: 'Back product specification',
+                              front: 'Front product specification',
+                          },
+                          pricesbreakdown: {
+                            price: 10,
+                            capital: 8,
+                            suggested_retail_price: 10,
+                            vat: 2,
+                marketingfee: 10
+                          },
+                          cybervisual: {
+                            images: {
+                            maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                            maindisplayimages: [
+                            ]
+                            },
+                            videos: [
+                            ]
+                          },
+                          },
+                          locations: {
+                          operations: [
+                      
+                          ]
+                          }
+                },
+                system: {
+                        request: {
+                          product: [],
+                          shipping: {
+                          category: 'Shipping category',
+                          weight: 'Shipping weight',
+                          fee: 0
+                        }
                       },
-                      videos: [
-                      ]
-                     },
-                    },
-                    locations: {
-                     operations: [
-                 
-                     ]
-                    }
-		  },
-		  system: {
-                   request: {
-                    product: [],
-                    shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                   }
-                 },
-                stocks: [],
-                 purchase: {
-                   people: [],
-                   xirbit: []
+                      stocks: [],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
                 }
-           }
-	  }
-        
-	 officehamburgerproductspecification.push(produtspecificationdata);
-	 props.compttemptforceupdatetempfunction();
+             }
+         
+	           officehamburgerproductspecification.push(produtspecificationdata);
+	           props.compttemptforceupdatetempfunction();
+
         }}>
         add product specs
        </button> 
@@ -3614,15 +3598,15 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
      <Row className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationcotaniner">
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
-        <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage">Product successfully added</p>
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessagecontainer">
+         <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage">Product successfully added</p>
        </Col>
        <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-addproductsconfigurationbuttoncontainer">
+	          md={12}
+	          lg={12}
+	          className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-addproductsconfigurationbuttoncontainer">
       {
        addingproductloadingindication ? 
        (
@@ -3633,8 +3617,8 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
         <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-configurationbutton"
 	       onClick={(evt)=> {
 	    
-        }}>
-        add product/product's
+         }}>
+         add product/product's
        </button> 
        )
       }
@@ -5131,7 +5115,6 @@ function OfficeHamburgerMoneyAndFundsDataView() {
    </Row>
  )
 }
-
 
 function OfficeHamburgerAssistantsView() {
  return (

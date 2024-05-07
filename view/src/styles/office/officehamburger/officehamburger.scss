@@ -1451,11 +1451,11 @@ outline-style:none;
 position:relative;
 border:0.3vh solid white;
 border-radius:40px;
-height:125vh;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-padding:0;
+padding:30px 0px;
 overflow-x:hidden;
 overflow-y:scroll;
 }
@@ -1663,7 +1663,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
 color:white;
 padding:5px 15px;
@@ -1672,7 +1672,7 @@ outline-style:none;
 #officehamburger-dataview-datacontainer-datacontainer {
 position:relative;
 border:0.1vh solid black;
-height:70vh;
+height:90vh;
 width:100%;
 margin-top:10vh;
 overflow:hidden;
@@ -1682,6 +1682,22 @@ padding:0px;
 position:relative;
 height:100%;
 width:100%;
+//overflow-x:hidden;
+//overflow-y:scroll;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar {
+width: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 //// marketing merchandise
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer {
@@ -1720,7 +1736,7 @@ padding:5px 0px;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-enterproductidheaderindication {
 position: relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 }
@@ -1730,17 +1746,18 @@ background-color: transparent;
 border:none;
 border-bottom:0.1vh solid white;
 height:5vh;
-width:90%;
+width:30%;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color: white;
+text-align:center;
 outline-style:none;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-searchfieldresponsemessage {
 position: relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 top:2vh;
@@ -1768,7 +1785,7 @@ position: relative;
 background-color: black;
 border-radius: 20px;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 padding: 5px 15px;
@@ -1778,8 +1795,8 @@ user-select:none;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer {
 position:absolute;
 background-color:white;
-height:100%;
-width:100%;
+height:80%;
+width:80%;
 left:-100%;
 z-index:1;
 transition:0.5s ease;
@@ -1798,6 +1815,7 @@ transition:0.5s ease;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer {
 position:relative;
 border:0.3vh solid black;
+border:1vh solid red;
 border-radius:35px;
 height:100%;
 width:100%;
@@ -1823,16 +1841,17 @@ background: #b30000;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer {
 position: relative;
-height:10%;
+border:1vh solid red;
+height:5%;
 width:100%;
 display:flex;
 justify-content:flex-end;
-align-items:flex-end;
+align-items:center;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color: black;
 letter-spacing:2px;
@@ -1842,7 +1861,8 @@ right:1.5vh;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer {
 position:relative;
-height:auto;
+border:1vh solid red;
+height:95%;
 width:100%;
 padding:0
 }
@@ -1861,8 +1881,6 @@ height:90%;
 width:90%;
 transform:translate(5%, 5%) scale(1, 1);
 transition: 1s ease;
-overflow-x:hidden;
-overflow-y:scroll;
 padding:15px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer {
@@ -1874,13 +1892,41 @@ width:100%;
 overflow-x:hidden;
 overflow-y:scroll;
 }
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar {
+width: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar {
+width: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer ::-webkit-scrollbar-thumb {
+background: red; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer ::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindicationcontainer {
 position:relative;
-height:10%;
+height:5%;
 width:100%;
 display:flex;
 justify-content:flex-end;
-align-items:flex-end;
+align-items:center;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindication {
 position:relative;
@@ -1908,7 +1954,8 @@ padding:10px 0px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 user-select:none;
 }
@@ -1934,7 +1981,8 @@ padding:30px 0px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication {
 position:relative;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
+ weight:900;
 }
 user-select:none;
 }
@@ -1945,8 +1993,9 @@ border-radius:20px;
 height:5vh;
 width:80%;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
+text-align:center;
 padding:5px 10px;
 outline-style:none;
 }
@@ -1966,7 +2015,8 @@ text-align:center;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 top:1vh;
 }
@@ -2131,7 +2181,8 @@ padding:30px 20px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-adddifferentproductspecificationheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 text-align:center;
 user-select:none;
@@ -2140,7 +2191,7 @@ user-select:none;
 position:relative;
 height:auto;
 display:flex;
-justify-content:flex-end;
+justify-content:flex-start;
 align-items:center;
 padding:0;
 }
@@ -2158,13 +2209,12 @@ background-color:black;
 border:0.1vh solid black;
 border-radius:20px;
 height:100%;
-width:90%;
+width:25%;
 font: auto {
-    family:$sub-font;
+ family:$sub-font;
 }
 color:white;
 padding:5px 20px;
-right:1.5vh;
 outline-style:none;
 }
 //// main display images
@@ -2174,25 +2224,25 @@ height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-padding:0;
+padding:30px 0px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer {
 position:relative;
-height:20vh;
+height:23vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:0;
+padding:30px 0px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimagecontainer {
 position:absolute;
 background-color:white;
 border-radius:50%;
-height:80%;
-width:50%;
+height:95%;
+width:14%;
 padding:3px;
 }
-.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage{
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage {
 position:relative;
 border-radius:50%;
 height:100%;
@@ -2201,11 +2251,13 @@ width:100%;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer {
 position:absolute;
 background-color:white;
-border:0.1vh solid;
+border:0.1vh solid black;
 border-radius:20px;
-height:50vh;
-width:100%;
-transform:translate(0%, 10%);
+height:70vh;
+width:80%;
+top:0;
+left:0;
+transform:translate(15%, -32%);
 display:none;
 z-index:1;
 padding:15px 20px;
@@ -2215,11 +2267,14 @@ position:relative;
 background-color:chocolate;
 height:85%;
 width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage {
 position:relative;
-height:100%;
-width:100%;
+height:80%;
+width:40%;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer {
 position:relative;
@@ -2232,7 +2287,8 @@ justify-content:flex-end;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 letter-spacing:2px;
 top:2vh;
@@ -2302,7 +2358,7 @@ justify-content:flex-end;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 letter-spacing:2px;
 top:2vh;
@@ -2325,10 +2381,12 @@ padding:0;
 ////
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer {
 position:relative;
-height:auto;
+height:95vh;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
 padding:10px;
 }
 //// marketing load products
@@ -2572,7 +2630,7 @@ transform: translate(22%,10%);
 display:none;
 }
 ///// cargo 
-#officehamburger-dataview-datacontainer-cargo{
+#officehamburger-dataview-datacontainer-cargo {
 position:relative;
 height:auto;
 width:100%; 
@@ -2836,7 +2894,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
-    family: $sub-font; 
+ family: $sub-font; 
 }
 color:white;
 outline-style:none;
