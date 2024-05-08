@@ -620,7 +620,7 @@ function MarketingDisplayMerchandiseDetails(props) {
           props.productdisplayimages.length === 0 ? 
           (
             <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainerdetailscontainer-merchandiseimagelistpreparingforadisplayheaderindication'>
-              Preparing for an entire viewable global display
+              Choose a merchandise details find view image's and video's to be displayed on the modal
             </p>
           )
           :
@@ -687,7 +687,7 @@ function MarketingDisplayMerchandiseDetails(props) {
          props.productavailablevideos.length === 0 ? 
          (
           <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainerdetailscontainer-merchandiseimagelistpreparingforadisplayheaderindication'>
-           Preparing for an entire viewable global display
+           Choose a merchandise details find view image's and video's to be displayed on the modal
           </p>
          )
          :
@@ -788,20 +788,21 @@ function MarketingDisplayMerchandiseDetails(props) {
 
                                                                                                                                                                                                                                                   const _productdata =  props.selectedmerchandise.specifications.find((product)=> product = stocks);
 
+                                                                                                                                                                                                                                                
                                                                                                                                                                                                                                                   for ( let x = 0; x < _allbuttons.length; x++) {
-                                                                                                                                                                                                                                                    _allbuttons[x].innerText = 'view product/parcel/box';
+                                                                                                                                                                                                                                                    _allbuttons[x].innerText = 'load parcel display';
                                                                                                                                                                                                                                                   }
 
-                                                                                                                                                                                                                                                  if ( _buttonindication === 'view product/parcel/box' ) {
+                                                                                                                                                                                                                                                  if ( _buttonindication === 'load parcel display' ) {
                                                                                                                                                                                                                                                      props.productdisplayimagescb((displayimages)=> displayimages = _productdata.details.product.cybervisual.images.maindisplayimages)
                                                                                                                                                                                                                                                      props.productavailablevideoscb((availablevids)=> availablevids = _productdata.details.product.cybervisual.videos)
-                                                                                                                                                                                                                                                    _button.innerText = 'All clicks preparation display ....';
+                                                                                                                                                                                                                                                    _button.innerText = 'Parcel display prepared';
                                                                                                                                                                                                                                                   } else {
-                                                                                                                                                                                                                                                    _button.innerText = 'view product/parcel/box';
+                                                                                                                                                                                                                                                    _button.innerText = 'load parcel display';
                                                                                                                                                                                                                                                   }
 
                                                                                                                                                                                                                                                 }}>
-                                                                                                                                                                                                                                            view product/parcel/box
+                                                                                                                                                                                                                                           load parcel display
                                                                                                                                                                                                                                           </span>
                     </p>
                   )
@@ -819,9 +820,13 @@ function MarketingDisplayMerchandiseDetails(props) {
                 <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
                   Xirbit transaction give away covered 
                 </button>
+                <br />
+                <br />
                 <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
                   Prepared, as a shipment 
                 </button>
+                <br />
+                <br />
                 <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
                   Prepared, as any type of a cargo
                 </button>
@@ -860,19 +865,19 @@ function MarketingDisplayMerchandiseDetails(props) {
           lg={12}
           className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-       Handing out service fee: Foods are free for deliveries below 10 kilo's.
+       Handing out service fee: Foods are free for deliveries below 10 kilo's within public and private authentication location scope. Common public are not included having common public authentications.
       </p>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-       For shipment's are negotionable due to categorization, that is for shipments, for a delivery and/or of the same consideration of a door to door delivery or service see purchasing for total delivery or door to door fee 
+       For shipment's are negotionable due to categorization, that is for shipments, for  delivery andr of the same consideration of a door to door delivery of the same service. See purchasing for total delivery or door to door fee 
       </p>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-       Shipment fee: Tempo E-car spacing, always 300 pesos weighting more than 10 kilo's, delay for solid and an organized transaction will be expected. 
+       Shipment fee: Tempo E-car and its space for storage, always 300 pesos weighting more than 10 kilo's, delays are handled solid and an organized transaction will be expected. 
       </p>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
        Cargo: Delivery and door to door service:  
       </p>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-       Organized transactions: always 100 pesos for each kilo ( 200 pesos on 2 kilo's cargo) .
+       Organized transactions: always 100 pesos for each kilo ( 200 pesos on 2 kilo's cargo).
       </p>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
        Friendly transactions: always 100 pesos even weighting more than 10 kilo's
@@ -894,7 +899,7 @@ function MarketingDisplayMerchandiseDetails(props) {
           lg={12}
           className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
       <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-        Delay for shipments, cargo e.g a delivery and a door to door service: 1 night within the day of handling
+        Delay for shipments, cargo e.g delivery or a door to door service: 1 night within the day of handling
       </p>
      </Col>
      </Row>

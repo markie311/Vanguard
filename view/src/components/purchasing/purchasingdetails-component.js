@@ -823,6 +823,7 @@ return (
          Current coordinates
        </button>
      </Col>
+     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
    </Row>
 
    <Row id='purchasingdetails-mapcontainer-maptile'>
@@ -928,7 +929,7 @@ return (
 
                 }
                }}>
-         Use what I given location as my cargo destination address
+         Use what location I given as my cargo destination address
        </button>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication purchasingdetails-mapcontainer-maptile-addresscontainer-statusheaderindication'>Status: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>CARGO DESTINATION UNSET</span></p>
@@ -974,6 +975,7 @@ return (
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Standard fee: 100 peso's per kilo to non-mrn and mrn purchases:</p>         
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Set express location</p>
      </Col>
+     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>or find your current location via sattelite and adjust cursor for shipping location</p>
      <Col xs={9}
           md={9}
           lg={9}

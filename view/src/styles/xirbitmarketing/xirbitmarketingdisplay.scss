@@ -216,7 +216,7 @@ padding:0;
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-productheaderindication {
 position:relative;
 font: auto {
- famlly: $sub-font;
+ family: $sub-font;
 }
 color:white;
 }
@@ -232,6 +232,7 @@ padding:10px 10px 20px 10px;
 position:relative;
 font: auto {
  family: $sub-font;
+ weight:900;
 }
 color:black;
 }
@@ -291,9 +292,11 @@ position:relative;
 border:0.5vh dotted black;
 font: auto {
  family: $sub-font;
+ weight:900;
 }
 color:black;
-padding:20px 5px;
+text-align:center;
+padding:80px 30px;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton {
 position:relative;
@@ -305,8 +308,9 @@ font: auto {
 }
 word-break:keep-all;
 color:white;
-padding:5px 5px;
-top:1vh;
+text-align:center;
+padding:10px 30px;
+top:5vh;
 }
 //// display images container 
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-displayimagescontainer {
@@ -418,10 +422,16 @@ text-decoration:underline;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton {
 position:relative;
+background-color:transparent;
+border:0.7vh dotted chocolate;
 font: auto {
  family: $sub-font;
+ weight:900;
 }
+color:white;
+letter-spacing:1vh;
 outline-style:none;
+padding:15px 10px;
 margin-top:0.5vh;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsstocksheaderindication {
