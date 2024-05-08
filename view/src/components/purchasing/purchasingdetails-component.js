@@ -597,11 +597,14 @@ return (
       id='purchasingdetails-mapcontainer'>
 
    <Row id='purchasingdetails-mapcontainer-configurationscontainer'>
+    <h1 className="purchasingdetails-mapcontainer-configurationscontainer-headerindication">Cargo assistace/Shipping assistance/Delivery need assistance</h1>
+    <h4 className="purchasingdetails-mapcontainer-configurationscontainer-headerindication">select location for shipping</h4>
      <Col xs={12}
           md={6}
           lg={6}
           id='purchasingdetails-mapcontainer-configurationscontainer-automaticselectioncontainer'>
-     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>Private authentication</p>
+             
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>01. Private authentication</p>
 
       <DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={(evt)=> {
 
@@ -712,12 +715,13 @@ return (
       </DropdownButton>
 
      </Col>
+     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
      <Col xs={12}
           md={6}
           lg={6}
           id='purchasingdetails-mapcontainer-configurationscontainer-manualcontainer'>
        <Row id='purchasingdetails-mapcontainer-configurationscontainer-manualgridcontainer'>
-        <p className='purchasingdetails-mapcontainer-configurationscontainer-manualconfigurationheaderindication'>Manual</p>
+        <p className='purchasingdetails-mapcontainer-configurationscontainer-manualconfigurationheaderindication'>02. Manual</p>
          <Col xs={6}
               md={4}
               lg={4}>
@@ -802,11 +806,12 @@ return (
          </Col>
        </Row>
      </Col>
+     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
      <Col xs={12}
           md={12}
           lg={12}
           id='purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer'>
-        <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>By click selection</p>
+        <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>03. By click selection</p>
        <button id='purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer-currentcoordinatesbutton'
                onClick={(evt)=> {
                  if (navigator.geolocation) {
