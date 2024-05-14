@@ -343,7 +343,7 @@ const [databasedata, databasedatacb] = useState({
 
 const [user, usercb] = useState({
  authentications: {
-  authenticationtype: 'Common public',
+  authenticationtype: 'Private',
   privateauthenticationkey: 'Privateauthenticationkey',
   authenticationid: 'ASAD-1234-QWERTYTREWQ',
   password: {
@@ -793,7 +793,7 @@ const [merchandisescheme, merchandiseschemecb] = useState(
 
 const [products, productscb] = useState([
   {
-    productname: 'Product name',
+    productname: 'Kohaku',
     rapportname: 'Rapport name',
     definition: 'Product definition',
     authentications: {
@@ -804,38 +804,38 @@ const [products, productscb] = useState([
       {
         details: {
         product: {
-         name: 'Product name',
+         name: 'Kohaku Yellow',
          rapportname: 'Product rapport name',
          definition: 'Product definition',
          category: 'MRN',
          specification: {
-          for: {
-           part: 'Product part',
-           gender: 'Male',
-           category: 'Adults' 
-          },
-          set: {
-           set: false,
-           productindication: 'Oridinary',
-           pcs: 10
-          },
-          size: 'Product size',
-          color: 'Product color',
-          weight: 'Product weight',
-          top: 'Top product specification',
-          left: 'Left product specification',
-          bottom: 'Bottom product specification',
-          right: 'Right product specification',
-          front: 'Front product specification',
-          back: 'Back product specification'
-          },
-          pricesbreakdown: {
+           for: {
+            part: 'Product part',
+            gender: "Male of Female, for all type's of gender",
+            category: 'For adults and children above 4-6 months' 
+           },
+           set: {
+            set: false,
+            productindication: 'Oridinary',
+            pcs: 10
+           },
+           size: 'Product size',
+           color: 'Product color',
+           weight: 'Product weight',
+           top: 'Top product specification',
+           left: 'Left product specification',
+           bottom: 'Bottom product specification',
+           right: 'Right product specification',
+           front: 'Front product specification',
+           back: 'Back product specification'
+         },
+         pricesbreakdown: {
             price: 10,
             capital: 8,
             suggested_retail_price: 10,
             vat: 2
-          },
-          cybervisual: {
+         },
+         cybervisual: {
             images: {
               maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
               maindisplayimages: [
@@ -864,7 +864,7 @@ const [products, productscb] = useState([
                 youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
               }
             ]
-          },
+         },
         },
         locations: {
           operations: [

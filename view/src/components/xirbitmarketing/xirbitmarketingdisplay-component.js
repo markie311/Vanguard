@@ -79,7 +79,1092 @@ export default function MarketingDisplay(props) {
   },
  ]
 
- const [selectedmerchandise, selectedmerchandisecb] = useState(
+const [selectedmerchandise, selectedmerchandisecb] = useState({
+    productname: 'Rice',
+    rapportname: 'Rapport name',
+    definition: 'Product definition',
+    authentications: {
+     producttype: 'Product type',
+     productid: 'Product id'
+    },
+    specifications: [
+      {
+        details: {
+        product: {
+         name: 'Kohaku',
+         rapportname: 'Product rapport name',
+         definition: 'Product definition',
+         category: 'MRN',
+         specification: {
+           for: {
+            part: 'Product part',
+            gender: 'Male',
+            category: 'Adults' 
+           },
+           set: {
+            set: false,
+            productindication: 'Oridinary',
+            pcs: 10
+           },
+           size: 'Product size',
+           color: 'Product color',
+           weight: 'Product weight',
+           top: 'Top product specification',
+           left: 'Left product specification',
+           bottom: 'Bottom product specification',
+           right: 'Right product specification',
+           front: 'Front product specification',
+           back: 'Back product specification'
+         },
+         pricesbreakdown: {
+            price: 10,
+            capital: 8,
+            suggested_retail_price: 10,
+            vat: 2
+         },
+         cybervisual: {
+            images: {
+              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+              maindisplayimages: [
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              }
+              ]
+            },
+            videos: [
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              }
+            ]
+         },
+        },
+        locations: {
+          operations: [
+            {
+              street: 'Street',
+              baranggay: 'Baranggay',
+              trademark: 'Trademark',
+              city: 'City',
+              province: 'Province',
+              country: 'Country'
+            }
+          ]
+        }
+        },
+        system: {
+          request: {
+            product: [
+             {
+             pcs: 0,
+             details: {
+              for: {
+                  part: 'Product part',
+                  gender: 'Male',
+                  category: 'Adults' 
+              },
+              set: {
+                  set: false,
+                  productindication: 'Oridinary',
+                  pcs: 10
+              },
+              size: 'Product size',
+              color: 'Product color',
+              weight: 'Product weight',
+              top: 'Top product specification',
+              left: 'Left product specification',
+              bottom: 'Bottom product specification',
+              right: 'Right product specification',
+              front: 'Front product specification',
+              back: 'Back product specification'
+             },
+             pricesbreakdown: {
+              price: 0,
+              capital: 0,
+              suggested_retail_price: 0,
+              vat:0
+             },
+             specification: 'Order specification'
+             }
+            ],
+            shipping: {
+             category: 'Shipping category',
+             weight: 'Shipping weight',
+             fee: 0
+            }
+          },
+          stocks: [
+            {
+              details: {
+              product: {
+               name: 'Product name',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: 'Male',
+                 category: 'Adults' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 'Product weight',
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+                },
+                pricesbreakdown: {
+                  price: 10,
+                  capital: 8,
+                  suggested_retail_price: 10,
+                  vat: 2
+                },
+                cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+                },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+              },
+              system: {
+                request: {
+                  product: [
+                  ],
+                  shipping: {
+                   category: 'Shipping category',
+                   weight: 'Shipping weight',
+                   fee: 0
+                  }
+                },
+                stocks: [
+                  {
+                    details: {
+                    product: {
+                     name: 'Product name',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 'Product weight',
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                    },
+                    system: {
+                      request: {
+                        product: [
+                        
+                        ],
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        }
+                      },
+                      stocks: [
+                        
+                      ],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                    }
+                  }, 
+                  {
+                    details: {
+                    product: {
+                     name: 'Product name',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Kids' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 'Product weight',
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                    },
+                    system: {
+                      request: {
+                        product: [
+                         {
+                         pcs: 0,
+                         details: {
+                          for: {
+                              part: 'Product part',
+                              gender: 'Male',
+                              category: 'Adults' 
+                          },
+                          set: {
+                              set: false,
+                              productindication: 'Oridinary',
+                              pcs: 10
+                          },
+                          size: 'Product size',
+                          color: 'Product color',
+                          weight: 'Product weight',
+                          top: 'Top product specification',
+                          left: 'Left product specification',
+                          bottom: 'Bottom product specification',
+                          right: 'Right product specification',
+                          front: 'Front product specification',
+                          back: 'Back product specification'
+                         },
+                         pricesbreakdown: {
+                          price: 0,
+                          capital: 0,
+                          suggested_retail_price: 0,
+                          vat:0
+                         },
+                         specification: 'Order specification'
+                         }
+                        ],
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        }
+                      },
+                      stocks: [
+                        {
+                          details: {
+                            product: {
+                              name: 'Product name',
+                              rapportname: 'Product rapport name',
+                              definition: 'Product definition',
+                              specification: {
+                                for: {
+                                  gender: 'Gender specification',
+                                  category: 'Gender specificaiton category'
+                                },
+                                part: 'Product part',
+                                size: 'Product size',
+                                color: 'Product color',
+                                weight: 'Product weight',
+                                top: 'Top product specification',
+                                left: 'Left product specification',
+                                bottom: 'Bottom product specification',
+                                right: 'Right product specifi ation'
+                              },
+                              pricesbreakdown: {
+                              price: 10,
+                              capital: 8,
+                              suggested_retail_price: 10,
+                              vat: 2
+                              },
+                              cybervisual: {
+                                images: {
+                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                                maindisplayimages: [
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  },
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  },
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  }
+                                ]
+                                },
+                                videos: [
+                                  {
+                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                                  }
+                                ]
+                              },
+                            },
+                            locations: {
+                            operations: [
+                              {
+                                street: 'Street',
+                                baranggay: 'Baranggay',
+                                trademark: 'Trademark',
+                                city: 'City',
+                                province: 'Province',
+                                country: 'Country'
+                              }
+                            ]
+                            }
+                          },
+                          system: {
+                            order: {
+                              specification: 'Order specification'
+                            },
+                            stocks: [],
+                            purchase: {
+                              people: [],
+                              xirbit: []
+                            },
+                            pricesbreakdown: {
+                              shipping: {
+                                category: 'Shipping category',
+                                weight: 'Shipping weight',
+                                fee: 0
+                              }
+                            }
+                          }
+                        },
+                        {
+                          details: {
+                            product: {
+                              name: 'Product name',
+                              rapportname: 'Product rapport name',
+                              definition: 'Product definition',
+                              specification: {
+                                for: {
+                                  gender: 'Gender specification',
+                                  category: 'Gender specificaiton category'
+                                },
+                                part: 'Product part',
+                                size: 'Product size',
+                                color: 'Product color',
+                                weight: 'Product weight',
+                                top: 'Top product specification',
+                                left: 'Left product specification',
+                                bottom: 'Bottom product specification',
+                                right: 'Right product specifi ation'
+                              },
+                              pricesbreakdown: {
+                              price: 10,
+                              capital: 8,
+                              suggested_retail_price: 10,
+                              vat: 2
+                              },
+                              cybervisual: {
+                                images: {
+                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                                maindisplayimages: [
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  }
+                                ]
+                                },
+                                videos: [
+                                  {
+                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                                  }
+                                ]
+                              },
+                            },
+                            locations: {
+                            operations: [
+                              {
+                                street: 'Street',
+                                baranggay: 'Baranggay',
+                                trademark: 'Trademark',
+                                city: 'City',
+                                province: 'Province',
+                                country: 'Country'
+                              }
+                            ]
+                            }
+                          },
+                          system: {
+                            order: {
+                              specification: 'Order specification'
+                            },
+                            stocks: [],
+                            purchase: {
+                              people: [],
+                              xirbit: []
+                            },
+                            pricesbreakdown: {
+                              shipping: {
+                                category: 'Shipping category',
+                                weight: 'Shipping weight',
+                                fee: 0
+                              }
+                            }
+                          }
+                        },
+                      ],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                    }
+                  }
+                ],
+                purchase: {
+                  people: [],
+                  xirbit: []
+                }
+              }
+            },
+            {
+            details: {
+              product: {
+               name: 'Product name',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: 'Male',
+                 category: 'Adults' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 'Product weight',
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+                },
+                pricesbreakdown: {
+                  price: 10,
+                  capital: 8,
+                  suggested_retail_price: 10,
+                  vat: 2
+                },
+                cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+                },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+            },
+            system: {
+                request: {
+                  product: [
+                  ],
+                  shipping: {
+                   category: 'Shipping category',
+                   weight: 'Shipping weight',
+                   fee: 0
+                  }
+                },
+                stocks: [
+                  {
+                    details: {
+                    product: {
+                     name: 'Product name',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 'Product weight',
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                    },
+                    system: {
+                      request: {
+                        product: [
+                        
+                        ],
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        }
+                      },
+                      stocks: [
+                        
+                      ],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                    }
+                  }, 
+                  {
+                    details: {
+                    product: {
+                     name: 'Product name',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Kids' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 'Product weight',
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                    },
+                    system: {
+                      request: {
+                        product: [
+                         {
+                         pcs: 0,
+                         details: {
+                          for: {
+                              part: 'Product part',
+                              gender: 'Male',
+                              category: 'Adults' 
+                          },
+                          set: {
+                              set: false,
+                              productindication: 'Oridinary',
+                              pcs: 10
+                          },
+                          size: 'Product size',
+                          color: 'Product color',
+                          weight: 'Product weight',
+                          top: 'Top product specification',
+                          left: 'Left product specification',
+                          bottom: 'Bottom product specification',
+                          right: 'Right product specification',
+                          front: 'Front product specification',
+                          back: 'Back product specification'
+                         },
+                         pricesbreakdown: {
+                          price: 0,
+                          capital: 0,
+                          suggested_retail_price: 0,
+                          vat:0
+                         },
+                         specification: 'Order specification'
+                         }
+                        ],
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        }
+                      },
+                      stocks: [
+                        {
+                          details: {
+                            product: {
+                              name: 'Product name',
+                              rapportname: 'Product rapport name',
+                              definition: 'Product definition',
+                              specification: {
+                                for: {
+                                  gender: 'Gender specification',
+                                  category: 'Gender specificaiton category'
+                                },
+                                part: 'Product part',
+                                size: 'Product size',
+                                color: 'Product color',
+                                weight: 'Product weight',
+                                top: 'Top product specification',
+                                left: 'Left product specification',
+                                bottom: 'Bottom product specification',
+                                right: 'Right product specifi ation'
+                              },
+                              pricesbreakdown: {
+                              price: 10,
+                              capital: 8,
+                              suggested_retail_price: 10,
+                              vat: 2
+                              },
+                              cybervisual: {
+                                images: {
+                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                                maindisplayimages: [
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  },
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  },
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  }
+                                ]
+                                },
+                                videos: [
+                                  {
+                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                                  }
+                                ]
+                              },
+                            },
+                            locations: {
+                            operations: [
+                              {
+                                street: 'Street',
+                                baranggay: 'Baranggay',
+                                trademark: 'Trademark',
+                                city: 'City',
+                                province: 'Province',
+                                country: 'Country'
+                              }
+                            ]
+                            }
+                          },
+                          system: {
+                            order: {
+                              specification: 'Order specification'
+                            },
+                            stocks: [],
+                            purchase: {
+                              people: [],
+                              xirbit: []
+                            },
+                            pricesbreakdown: {
+                              shipping: {
+                                category: 'Shipping category',
+                                weight: 'Shipping weight',
+                                fee: 0
+                              }
+                            }
+                          }
+                        },
+                        {
+                          details: {
+                            product: {
+                              name: 'Product name',
+                              rapportname: 'Product rapport name',
+                              definition: 'Product definition',
+                              specification: {
+                                for: {
+                                  gender: 'Gender specification',
+                                  category: 'Gender specificaiton category'
+                                },
+                                part: 'Product part',
+                                size: 'Product size',
+                                color: 'Product color',
+                                weight: 'Product weight',
+                                top: 'Top product specification',
+                                left: 'Left product specification',
+                                bottom: 'Bottom product specification',
+                                right: 'Right product specifi ation'
+                              },
+                              pricesbreakdown: {
+                              price: 10,
+                              capital: 8,
+                              suggested_retail_price: 10,
+                              vat: 2
+                              },
+                              cybervisual: {
+                                images: {
+                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                                maindisplayimages: [
+                                  {
+                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                                  }
+                                ]
+                                },
+                                videos: [
+                                  {
+                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                                  }
+                                ]
+                              },
+                            },
+                            locations: {
+                            operations: [
+                              {
+                                street: 'Street',
+                                baranggay: 'Baranggay',
+                                trademark: 'Trademark',
+                                city: 'City',
+                                province: 'Province',
+                                country: 'Country'
+                              }
+                            ]
+                            }
+                          },
+                          system: {
+                            order: {
+                              specification: 'Order specification'
+                            },
+                            stocks: [],
+                            purchase: {
+                              people: [],
+                              xirbit: []
+                            },
+                            pricesbreakdown: {
+                              shipping: {
+                                category: 'Shipping category',
+                                weight: 'Shipping weight',
+                                fee: 0
+                              }
+                            }
+                          }
+                        },
+                      ],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                    }
+                  }
+                ],
+                purchase: {
+                  people: [],
+                  xirbit: []
+                }
+            }   
+            }      
+          ],
+          purchase: {
+            people: [],
+            xirbit: []
+          }
+        }
+      }
+    ]
+});
+
+ const [selectedmerchandisepast, selectedmerchandisepastcb] = useState(
   {
     productname: 'Product name',
     rapportname: 'Rapport name',
@@ -114,7 +1199,7 @@ export default function MarketingDisplay(props) {
           left: 'Left product specification',
           bottom: 'Bottom product specification',
           right: 'Right product specification',
-	  back: 'Back product specification',
+	        back: 'Back product specification',
           front: 'Front product specification',
           },
           pricesbreakdown: {
@@ -451,11 +1536,11 @@ export default function MarketingDisplay(props) {
                                               productavailablevideos={productavailablevideos}
                                               productavailablevideoscb={productavailablevideoscb}
            />
+
           <MarketingDisplayPaymentDetails user={props.user}
                                           selectedmerchandise={selectedmerchandise}
                                           purchasing={props.purchasing}
-                                          purchasingcb={props.purchasingcb}
-          />
+                                          purchasingcb={props.purchasingcb}/>
             
 
           </Col>
@@ -721,136 +1806,137 @@ function MarketingDisplayMerchandiseDetails(props) {
       </Col>
 
       <Col className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-forgridlayoutcontainer'>
-        {
-          props.selectedmerchandise.specifications.map((specification, specificationidx)=> {
-            return (
-              <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-forgridcontainer'
-                   key={specificationidx}>
+       
+        <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-forgridcontainer'>
 
+          {
+            props.selectedmerchandise.specifications.map((specification, specificationidx)=> {
+            return (
+              <React.Fragment key={specificationidx}>
                 <Col xs={12}
                       md={12}
                       lg={12}
                       className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                  <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-forgenderpecificationheaderindication'>
-                    {specification.details.product.specification.for.gender}
-                  </p>
-                </Col>
-              
-                <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-forgridcontainer-forsdetailsandspecificationscontainer'>
-                 <Col xs={12}
-                      md={12}
-                      lg={12}
-                      className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                   <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-forcategoryspecificationheaderindication'>
-                   {specification.details.product.specification.for.category}
-                   </p>
-                </Col>
-                <Col  xs={12}
-                      md={12}
-                      lg={12}
-                      className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
-                  Product name: {specification.details.product.name}
-                </p>
-              </Col>
-              <Col xs={12}
-                   md={12}
-                   lg={12}
-                   className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
-                  Value: {specification.details.product.pricesbreakdown.price}
-                </p>
-              </Col>
-              <Col xs={12}
-                    md={12}
-                    lg={12}
-                    className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
-                  Need's available for 
-                </p>
-              </Col>
-
-              <Col xs={12}
-                    md={12}
-                    lg={12}
-                    className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-productavailabilitiescontainer'>
-               {
-                specification.system.stocks.map((stocks, stocksidx)=> {
-                  return (
-                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-stocksspecificationsheaderindication'
-                       key={stocksidx}>
-                       0{stocksidx}. product category, xs size, color green weighting 0 grams, that has a front design, that has a back design, that has a top design, that has a left design, that has a bottom design, that has a right design -> <br /> <span className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton'
-                                                                                                                                                                                                                                                onClick={(evt)=> {
-
-                                                                                                                                                                                                                                                  const _allbuttons = document.querySelectorAll('.marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton');
-                                                                                                                                                                                                                                                  const _button = evt.target;
-                                                                                                                                                                                                                                                  const _buttonindication = _button.innerText;
-
-                                                                                                                                                                                                                                                  const _productdata =  props.selectedmerchandise.specifications.find((product)=> product = stocks);
-
-                                                                                                                                                                                                                                                
-                                                                                                                                                                                                                                                  for ( let x = 0; x < _allbuttons.length; x++) {
-                                                                                                                                                                                                                                                    _allbuttons[x].innerText = 'load parcel display';
-                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                  if ( _buttonindication === 'load parcel display' ) {
-                                                                                                                                                                                                                                                     props.productdisplayimagescb((displayimages)=> displayimages = _productdata.details.product.cybervisual.images.maindisplayimages)
-                                                                                                                                                                                                                                                     props.productavailablevideoscb((availablevids)=> availablevids = _productdata.details.product.cybervisual.videos)
-                                                                                                                                                                                                                                                    _button.innerText = 'Parcel display prepared';
-                                                                                                                                                                                                                                                  } else {
-                                                                                                                                                                                                                                                    _button.innerText = 'load parcel display';
-                                                                                                                                                                                                                                                  }
-
-                                                                                                                                                                                                                                                }}>
-                                                                                                                                                                                                                                           load parcel display
-                                                                                                                                                                                                                                          </span>
+                        <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-forgenderpecificationheaderindication'>
+                          {specification.details.product.specification.for.gender}
+                        </p>
+                  </Col>
+          
+                  <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-forgridcontainer-forsdetailsandspecificationscontainer'>
+                  <Col xs={12}
+                        md={12}
+                        lg={12}
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-forcategoryspecificationheaderindication'>
+                    {specification.details.product.specification.for.category}
                     </p>
-                  )
-                })
-               }
-                
-              </Col>
-              <Col xs={12}
-                    md={12}
-                    lg={12} 
-                    className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-tagspecificationheaderindication'>
-                  Tags: 
-                </p>
-                <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
-                  Xirbit transaction give away covered 
-                </button>
-                <br />
-                <br />
-                <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
-                  Prepared, as a shipment 
-                </button>
-                <br />
-                <br />
-                <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
-                  Prepared, as any type of a cargo
-                </button>
-              </Col>
-              <Col xs={12}
-                    md={12}
-                    lg={12}
-                    className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p></p>
-              </Col>
-              <Col xs={12}
-                    md={12}
-                    lg={12}
-                  className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
-                <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
-                  Category: Mrn
-                </p>
-              </Col>
+                  </Col>
+                  <Col  xs={12}
+                        md={12}
+                        lg={12}
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                  <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
+                    Product name: {specification.details.product.name}
+                  </p>
+                  </Col>
+                  <Col xs={12}
+                      md={12}
+                      lg={12}
+                      className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
+                      Value: {specification.details.product.pricesbreakdown.price}
+                    </p>
+                  </Col>
+                  <Col xs={12}
+                        md={12}
+                        lg={12}
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-specificationsheaderindication'>
+                      Need's available for 
+                    </p>
+                  </Col>
+                  <Col xs={12}
+                        md={12}
+                        lg={12}
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-productavailabilitiescontainer'>
+                  {
+                    specification.system.stocks.map((stocks, stocksidx)=> {
+                      return (
+                        <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-stocksspecificationsheaderindication'
+                            key={stocksidx}>
+                            0{stocksidx}. product category, xs size, color green weighting 0 grams, that has a front design, that has a back design, that has a top design, that has a left design, that has a bottom design, that has a right design -> <br /> <span className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton'
+                                                                                                                                                                                                                                                    onClick={(evt)=> {
 
-                </Row>
-              </Row>   
+                                                                                                                                                                                                                                                      const _allbuttons = document.querySelectorAll('.marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton');
+                                                                                                                                                                                                                                                      const _button = evt.target;
+                                                                                                                                                                                                                                                      const _buttonindication = _button.innerText;
+                                                                                                                                                                                                                                                      const _productdata =  props.selectedmerchandise.specifications.find((product)=> product = stocks);
+
+                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                      for ( let x = 0; x < _allbuttons.length; x++) {
+                                                                                                                                                                                                                                                        _allbuttons[x].innerText = 'load parcel display';
+                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                      if ( _buttonindication === 'load parcel display' ) {
+                                                                                                                                                                                                                                                        props.productdisplayimagescb((displayimages)=> displayimages = _productdata.details.product.cybervisual.images.maindisplayimages)
+                                                                                                                                                                                                                                                        props.productavailablevideoscb((availablevids)=> availablevids = _productdata.details.product.cybervisual.videos)
+                                                                                                                                                                                                                                                        _button.innerText = 'Parcel display prepared';
+                                                                                                                                                                                                                                                      } else {
+                                                                                                                                                                                                                                                        _button.innerText = 'load parcel display';
+                                                                                                                                                                                                                                                      }
+
+                                                                                                                                                                                                                                                    }}>
+                                                                                                                                                                                                                                              load parcel display
+                                                                                                                                                                                                                                              </span>
+                        </p>
+                      )
+                    })
+                  }
+                    
+                  </Col>
+                  <Col xs={12}
+                        md={12}
+                        lg={12} 
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-tagspecificationheaderindication'>
+                      Tags: 
+                    </p>
+                    <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
+                      Xirbit transaction give away covered 
+                    </button>
+                    <br />
+                    <br />
+                    <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
+                      Prepared, as a shipment 
+                    </button>
+                    <br />
+                    <br />
+                    <button className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-tagsbutton'>
+                      Prepared, as any type of a cargo
+                    </button>
+                  </Col>
+                  <Col xs={12}
+                        md={12}
+                        lg={12}
+                        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p></p>
+                  </Col>
+                  <Col xs={12}
+                        md={12}
+                        lg={12}
+                      className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer'>
+                    <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication'>
+                      Category: Mrn
+                    </p>
+                  </Col>
+                  </Row>  
+              </React.Fragment>
             )
-          })
-        }
+            })
+          }
+            
+        </Row>
+
       </Col>
 
      <Col xs={12}
@@ -915,30 +2001,7 @@ function MarketingDisplayPaymentDetails(props) {
        lg={12}
        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer'>
  
-    {
-       props.selectedmerchandise.specifications.map((selectedmerchandise, selectedmerchandiseidx)=> {
-        return (
-          <Col xs={12}
-               md={6}
-               lg={6}
-               key={selectedmerchandiseidx}
-               className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer'>
-            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>For</p>
-            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>{selectedmerchandise.details.product.specification.for.gender}, {selectedmerchandise.details.product.specification.for.category}</p>
-            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>Dont worry about the EXPERIENCES. All of this was prepared PERSONALLY. PREPARATIONS WILL TELL IT WILL HAVE FREEDOM, BEFORE SELECTING "ALONE".</p>
-            <Col className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingcontainer'>
-            <button className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingbutton'
-                    onClick={(evt)=> {
-                      alert(JSON.stringify(selectedmerchandise))
-                 props.purchasingcb((selectedmerchandises) => [...selectedmerchandises, selectedmerchandise])
-                }}>
-              add to purchasing
-            </button>
-      </Col>
-          </Col> 
-        )
-       })
-     }
+  
 
    </Row>
  )

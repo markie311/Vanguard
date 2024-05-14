@@ -237,146 +237,146 @@ function XirbitMarketingNavigationBar(props) {
         <p className='xirbitmarketingnavigationbar-headercontainer-subheaderindication'>You can navigate anywhere and check your own Public Marketing Portfolio</p>
      </Col>
      <Row id='xirbitmarketingnavigationbar-navigationsnippet-gridcontainer'>
-      
-            <Col xs={12}
-                 md={6}
-                 lg={6}
-                className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
-              <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
-              <Col xs={4}
-                   md={4}
-                   lg={4}
-                   className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                  <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>A</h4>
-                </div>
-              </Col>
-              <Col xs={8}
-                   md={8}
-                   lg={8}
-                   className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
-                  <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
-                  </div>
-                </div>
-              </Col>
-            </Row>
+        <Col xs={12}
+              md={6}
+              lg={6}
+            className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
+          <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
+            <Col xs={4}
+                md={4}
+                lg={4}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
+                <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>A</h4>
+              </div>
             </Col>
+            <Col xs={8}
+                md={8}
+                lg={8}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
-            <Col xs={12}
-                md={6}
-                lg={6}
-                className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
-              <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
-              <Col xs={4}
-                    md={4}
-                    lg={4}
-                    className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                  <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>F</h4>
                 </div>
-              </Col>
-              <Col xs={8}
-                  md={8}
-                  lg={8}
-                  className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
-                  <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
-
-                  </div>
-                </div>
-              </Col>
-            </Row>
+              </div>
             </Col>
+          </Row>
+        </Col>
 
-            <Col xs={12}
-                md={6}
-                lg={6}
-                className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
-              <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
-              <Col xs={4}
-                    md={4}
-                    lg={4}
-                    className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                  <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>SN</h4>
-                </div>
-              </Col>
-              <Col xs={8}
-                  md={8}
-                  lg={8}
-                  className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
-                  <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+        <Col xs={12}
+             md={6}
+             lg={6}
+             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
+          <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
+          <Col xs={4}
+                md={4}
+                lg={4}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
+              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>F</h4>
+            </div>
+          </Col>
+          <Col xs={8}
+              md={8}
+              lg={8}
+              className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            </Col>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        </Col>
 
-            <Col xs={12}
-                md={6}
-                lg={6}
-                className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
-              <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
-              <Col xs={4}
-                    md={4}
-                    lg={4}
-                    className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                  <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>AP</h4>
-                </div>
-              </Col>
-              <Col xs={8}
-                  md={8}
-                  lg={8}
-                  className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
-                  <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+        <Col xs={12}
+            md={6}
+            lg={6}
+            className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
+          <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
+          <Col xs={4}
+                md={4}
+                lg={4}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
+              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>SN</h4>
+            </div>
+          </Col>
+          <Col xs={8}
+              md={8}
+              lg={8}
+              className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            </Col>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        </Col>
 
-            <Col xs={12}
-                md={6}
-                lg={6}
-                className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
-              <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
-              <Col xs={4}
-                    md={4}
-                    lg={4}
-                    className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                  <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>MRN</h4>
-                </div>
-              </Col>
-              <Col xs={8}
-                  md={8}
-                  lg={8}
-                  className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-                <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-                <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
-                  <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+        <Col xs={12}
+            md={6}
+            lg={6}
+            className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
+          <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
+            <Col xs={4}
+                md={4}
+                lg={4}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
+              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>AP</h4>
+            </div>
+          </Col>
+          <Col xs={8}
+                md={8}
+                lg={8}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
-                  </div>
-                </div>
-              </Col>
-            </Row>
-            </Col>
+              </div>
+            </div>
+          </Col>
+        </Row>
+        </Col>
+
+        <Col xs={12}
+            md={6}
+            lg={6}
+            className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
+          <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
+          <Col xs={4}
+                md={4}
+                lg={4}
+                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
+              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>MRN</h4>
+            </div>
+          </Col>
+          <Col xs={8}
+              md={8}
+              lg={8}
+              className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+              </div>
+            </div>
+          </Col>
+        </Row>
+        </Col>
 
      </Row>
     </Col>

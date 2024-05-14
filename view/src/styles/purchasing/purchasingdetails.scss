@@ -57,6 +57,36 @@ color:white;
 text-align:center;
 margin-top:15vh;
 }
+.purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+text-align:center;
+top:2vh;
+display:none;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:center;
+top:2vh; 
+display:none;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+text-align:center;
+top:2vh; 
+display:none;
+}
 #purchasingdetails-mapcontainer-configurationscontainer-automaticselectioncontainer {
 position:relative;
 height:auto;
@@ -119,6 +149,19 @@ family: $sub-font;
 }
 color:white;
 top:3vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication-satellitebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+outline-style:none;
+padding:10px 15px;
+top:0.5vh;
+left:1vh;
 }
 .purchasingdetails-mapcontainer-configurationscontainer-coordinatesheaderindication {
 position:relative;
@@ -186,6 +229,20 @@ family: $sub-font;
 color:white;
 text-align:center;
 }
+.purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:tomato;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:chocolate;  
+}
 .purchasingdetails-mapcontainer-maptile-addresscontainer-statusheaderindication {
 margin-top:10vh;
 }
@@ -218,6 +275,7 @@ font: auto {
 family: $sub-font;
 }
 color:white; 
+text-align:center;
 }
 .purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication {
 position:relative;
@@ -225,13 +283,15 @@ font: auto {
 family: $sub-font;
 }
 color:yellow; 
+text-align:center;
 }
 .purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication {
 position:relative;
 font: auto {
 family: $sub-font;
 }
-color:lighten(red,10%);    
+color:lighten(red,10%);  
+text-align:center;  
 }
 .purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication {
 position:relative;
@@ -645,15 +705,58 @@ margin-right:auto;
 /// map container 
 #purchasingdetails-mapcontainer {
 position:relative;
-height:150vh;
+height:auto;
 padding:50px 0px;
 }
 #purchasingdetails-mapcontainer-configurationscontainer {
 position:relative;
-height:40%;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+padding:60px 0px;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+margin-top:10vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:2vh;
+display:none;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:2vh; 
+display:none;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+top:2vh; 
+display:none;
 }
 #purchasingdetails-mapcontainer-configurationscontainer-automaticselectioncontainer {
 position:relative;
@@ -663,6 +766,7 @@ flex-direction:column;
 align-items:flex-start;
 justify-content:center;
 padding:30px 10px;
+margin-top:10vh;
 }
 #purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer {
 position:relative;
@@ -672,6 +776,7 @@ flex-direction:column;
 align-items:flex-start;
 justify-content:center;
 padding:30px 10px;
+margin-top:10vh;
 }
 #purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer-currentcoordinatesbutton {
 position:relative;
@@ -693,6 +798,20 @@ flex-direction:column;
 align-items:flex-start;
 justify-content:center;
 padding:30px 10px;
+margin-top:10vh;
+}
+.purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication-satellitebutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family:$sub-font;
+}
+color:white;
+outline-style:none;
+padding:10px 15px;
+top:0.5vh;
+left:1vh;
 }
 .purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication {
 position:relative;
@@ -734,7 +853,7 @@ outline-style:none;
 #purchasingdetails-mapcontainer-maptile {
 position:relative;
 border:1vh solid black;
-height:60%;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -746,8 +865,6 @@ height:100%;
 margin-left:auto;
 margin-right:auto;
 padding:30px 20px;
-overflow-x:hidden;
-overflow-y:scroll;
 }
 #purchasingdetails-mapcontainer-maptile-addresscontainer::-webkit-scrollbar {
 width: 10px;
@@ -769,6 +886,20 @@ font: auto {
 family: $sub-font;
 }
 color:white;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:tomato;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:chocolate;  
 }
 #purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton {
 position:relative;
@@ -821,10 +952,45 @@ family: $sub-font;
 }
 color:lighten(red,10%);    
 }
+.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication {
+position:relative;
+background-color:white;
+border:0.1vh solid white;
+border-radius:20px;
+display:block;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color: black;
+padding:10px 15px;
+text-align:center;
+margin-top:1vh;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield {
+position:relative;
+background-color:transparent;
+border:none;
+border-bottom:0.1vh solid white;
+width:100%;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color: white;
+outline-style:none;
+margin-top:2vh;
+margin-left:0.5vh;
+display:none;
+}
+.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield::placeholder {
+text-align:center;
+color:white;
+}
 #purchasingdetails-mapcontainer-maptile-searchcontainer {
 position:relative;
 background-color:white;
-height:100%;
+height:auto;
 margin-left:auto;
 margin-right:auto;
 padding:0;

@@ -1,124 +1,16 @@
 
 
-export const operations = [
+export const operations = [ 
 {
 baranggay: 'Maa',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
+street: 'Trinidad street',
+trademark: 'Above Insta grill',
+city: 'Davao City',
+province: 'Davao Del Sur',
+country: 'Philippines',
 coordinates: {
-lat: 7.0885,
-lon: 125.5804
+lat: 7.0791,
+lon: 125.5812
 }
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
 }
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
-{
-baranggay: 'baranggay',  
-street: 'street',
-trademark: 'trademark',
-city: 'city',
-province: 'province',
-country: 'country',
-coordinates: {
-lat: 0,
-lon: 0
-}
-},
 ]

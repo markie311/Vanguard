@@ -42,6 +42,7 @@ export default function Purchasing(props) {
       }
     }
   });
+  
   const [totaldeliveryfee, totaldeliveryfeecb] = useState(0);
   const [requestlimitreacherrormessage, requestlimitreacherrormessagecb] = useState('');
   const [cargodestinationset, cargodestinationsetcb] = useState(false);

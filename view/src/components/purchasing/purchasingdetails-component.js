@@ -7,9 +7,12 @@ import React, {
 
 import { Row,
          Col,
+         Spinner,
          Carousel,
          Dropdown,
          DropdownButton } from 'react-bootstrap';
+
+import axiosCreatedInstance from '../lib/axiosutil.js';
 
 import L from 'leaflet';
 
@@ -32,6 +35,12 @@ import { operations } from '../lib/operations.js';
 import XirbitGraph from '../graph/xirbitgraph-component.js';
 
 export default function PurchasingDetais(props) { 
+
+const [manualcargoaddressdestinationloadingindication, manualcargoaddressdestinationloadingindicationcb] = useState(false);
+
+const [setascargodestinationloadingindication, setascargodestinationloadingindicationcb] = useState(false);
+
+const [privateauthenticationlocations, privateauthenticationlocationscb] = useState(false);
 
 const [selectedproduct, selectedproductcb] = useState(
 {
@@ -553,27 +562,30 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 function purchasinggetcurrentposition(position) {
 
-const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+ const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
 
-locationdestinationcb((coordinates)=> coordinates = {
+ console.log(position);
+
+ locationdestinationcb((coordinates)=> coordinates =  {
   lat: position.coords.latitude,
   lng: position.coords.longitude
-})
-searchmapmarkerreferencecb((coordinates)=> coordinates = {
+ })
+ searchmapmarkerreferencecb((coordinates)=> coordinates = {
   lat: locationdestination.lat,
-  lng: locationdestination.lon
-})
-geocoordinatesresultcb((coordinates)=> coordinates = {
+  lng: locationdestination.lng
+ })
+ geocoordinatesresultcb((coordinates)=> coordinates = {
   lat: position.coords.latitude,
   lon: position.coords.longitude
-})
+ })
 
- const center = [position.coords.latitude, position.coords.longitude];
- const zoom = 13;
- searchmapreference.setView(center, zoom);
 
- _cargolocationdestinationheaderindications[8].innerText = `Lat: ${position.coords.latitude}`;
- _cargolocationdestinationheaderindications[9].innerText = `Lon: ${position.coords.longitude}`;
+const center = [position.coords.latitude, position.coords.longitude];
+const zoom = 17;
+searchmapreference.setView(center, zoom);
+
+_cargolocationdestinationheaderindications[8].innerText = `Lat: ${position.coords.latitude}`;
+_cargolocationdestinationheaderindications[9].innerText = `Lon: ${position.coords.longitude}`;
 
 }
 
@@ -597,8 +609,10 @@ return (
       id='purchasingdetails-mapcontainer'>
 
    <Row id='purchasingdetails-mapcontainer-configurationscontainer'>
+
     <h1 className="purchasingdetails-mapcontainer-configurationscontainer-headerindication">Cargo assistace/Shipping assistance/Delivery need assistance</h1>
     <h4 className="purchasingdetails-mapcontainer-configurationscontainer-headerindication">select location for shipping</h4>
+
      <Col xs={12}
           md={6}
           lg={6}
@@ -606,103 +620,190 @@ return (
              
       <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>01. Private authentication</p>
 
-      <DropdownButton id="dropdown-basic-button" title="Dropdown button" onSelect={(evt)=> {
+      <DropdownButton id="dropdown-basic-button" 
+                      title="Dropdown button" disabled={privateauthenticationlocations} 
+                      onClick={()=> {
 
-         const _operation = JSON.parse(evt);
-         const _privateauthenticationlocation = operations.find((location)=> location.coordinates.lat ===  _operation.coordinates.lat && location.coordinates.lon ===  _operation.coordinates.lon );
-         const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                        const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                        const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+                        const _bysatellitecargodestinationaddressresponseheaderindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication");
 
-         locationdestination.lat = _privateauthenticationlocation.coordinates.lat;
-         locationdestination.lon =  _privateauthenticationlocation.coordinates.lon;
+                      if ( props.user.authentications.authenticationtype === "Private" ) {
 
-         const center = [locationdestination.lat, locationdestination.lon];
+                            privateauthenticationlocationscb((selections)=> selections = false); 
+                            _manualshippinglocationupdateresponseindication[0].style.display = "none";
+                            _manualshippinglocationupdateresponseindication[1].style.display = "none";
+                            _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
 
-         const zoom = 13;
-         searchmapreference.setView(center, zoom);
+                      } else {
+                          privateauthenticationlocationscb((selections)=> selections = true);
+                          _yourprivateauthenticationisnotprivate[0].innerText = "You're authentication is not private. Proceeding with this option setting a cargo destination address will result into an error response. Change your authentication as Private.";
+                          _manualshippinglocationupdateresponseindication[0].style.display = "none";
+                          _manualshippinglocationupdateresponseindication[1].style.display = "none";
+                          _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
+                      }
+                     }}             
+                      onSelect={(evt)=> {
 
-         locationdestinationcb((coordinates)=> coordinates = {
-            lat: locationdestination.lat,
-            lng: locationdestination.lon
-         })
-         searchmapmarkerreferencecb((coordinates)=> coordinates = {
-          lat: locationdestination.lat,
-          lng: locationdestination.lon
-        })
-         geocoordinatesresultcb((coordinates)=> coordinates = {
-          lat: locationdestination.lat,
-          lon: locationdestination.lon
-         })
+                        const _cargostatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication");
 
+                        const _cargolocationdestinationstatus =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+                        const _shipmentstatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication");
+                        const _shipmentauthenticationremark =  _cargostatusindication[6];
+                        const _shipmentlocationstatus =  _cargostatusindication[7];
+                        const _shipmentlatitudestatus = _cargostatusindication[8];
+                        const _shipmentlongtitudestatus =  _cargostatusindication[9];
+                        const _shipmentslocationsresultindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication"); 
+                        const _shipmentlocationresultsresponseindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication");
 
-         props.purchaseauthenticationcb((purchaseauthentication)=> purchaseauthentication = {
-          authentication: 'Less charge transactions',
-          destination: {
-            address: {
-              street: _privateauthenticationlocation.street,
-              baranggay: _privateauthenticationlocation.baranggay,
-              trademark: _privateauthenticationlocation.trademark,
-              province: _privateauthenticationlocation.province,
-              city: _privateauthenticationlocation.city,
-              country: _privateauthenticationlocation.country
-            }
-          }
-         });
+                        const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                        const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+                        const _bysatellitecargodestinationaddressresponseheaderindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication");
 
-         _cargolocationdestinationheaderindications[8].innerText = `Lat: ${locationdestination.lat}`;
-         _cargolocationdestinationheaderindications[9].innerText = `Lon: ${locationdestination.lon}`; 
+                        const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+      
+                        if ( props.user.authentications.authenticationtype === "Private" ) {
 
-         const _cargolocationdestinationspanheaderindication = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2]
-         _cargolocationdestinationspanheaderindication.innerText = 'Location for less charge transaction was set';
-         document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Door to door';
-         _cargolocationdestinationspanheaderindication.classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
+                         const _operation = JSON.parse(evt);
 
-         const _purchasingmrntotalproductweight = props.allmrnselectedproduct.reduce((previousValue, currentValue)=> previousValue + currentValue.details.weight,0);
+                         const _privateauthenticationlocation = operations.find((location)=> location.coordinates.lat ===  _operation.coordinates.lat && location.coordinates.lon ===  _operation.coordinates.lon );
+     
+                         locationdestination.lat = _privateauthenticationlocation.coordinates.lat;
+                         locationdestination.lon =  _privateauthenticationlocation.coordinates.lon;
 
-         switch (true) {
-           case _purchasingmrntotalproductweight === 0: 
-            props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
-           break;
-           case _purchasingmrntotalproductweight <= 1000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight =  100);
-           break;
-           case _purchasingmrntotalproductweight > 1000 && _purchasingmrntotalproductweight <= 2000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 200);
-           break;
-           case _purchasingmrntotalproductweight > 2000 && _purchasingmrntotalproductweight <= 3000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 300);
-           break;
-           case _purchasingmrntotalproductweight > 3000 && _purchasingmrntotalproductweight <= 4000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 400);
-           break;
-           case _purchasingmrntotalproductweight > 4000 && _purchasingmrntotalproductweight <= 5000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 500);
-           break;
-           case _purchasingmrntotalproductweight > 5000 && _purchasingmrntotalproductweight <= 6000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 600);
-           break;
-           case _purchasingmrntotalproductweight > 6000 && _purchasingmrntotalproductweight <= 7000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 700);
-           break;
-           case _purchasingmrntotalproductweight > 8000 && _purchasingmrntotalproductweight <= 9000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 800);
-           break;
-           case _purchasingmrntotalproductweight > 9000 && _purchasingmrntotalproductweight <= 10000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 900);
-           break;
-           break;
-           case _purchasingmrntotalproductweight === 10000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 10000);
-           break;
-           break;
-           case _purchasingmrntotalproductweight > 10000:
-             props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
-           break;
-         }
+                         const center = [locationdestination.lat, locationdestination.lon];
 
-         cargotypecb((cargotype)=> cargotype = 'Location less charge transactions');
+                         const zoom = 17;
+                         searchmapreference.setView(center, zoom);
 
+                         locationdestinationcb((coordinates)=> coordinates = {
+                          lat: locationdestination.lat,
+                          lng: locationdestination.lon
+                         })
+                         searchmapmarkerreferencecb((coordinates)=> coordinates = {
+                          lat: locationdestination.lat,
+                          lng: locationdestination.lon
+                        })
+                        geocoordinatesresultcb((coordinates)=> coordinates = {
+                          lat: locationdestination.lat,
+                          lon: locationdestination.lon
+                        })
+
+                        props.purchaseauthenticationcb((purchaseauthentication)=> purchaseauthentication = {
+                        authentication: 'Less charge transactions',
+                        destination: {
+                          address: {
+                            street: _privateauthenticationlocation.street,
+                            baranggay: _privateauthenticationlocation.baranggay,
+                            trademark: _privateauthenticationlocation.trademark,
+                            province: _privateauthenticationlocation.province,
+                           city: _privateauthenticationlocation.city,
+                           country: _privateauthenticationlocation.country
+                          }
+                        }
+                        });
+
+                       _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+                       _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+                       _cargolocationdestinationstatus[0].style.color = "white";
+                       _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+                       _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+
+                       _shipmentstatusindication[0].innerText ="Private. Less charge transactions.";
+                       _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+                       _shipmentstatusindication[0].style.color = "white";
+                       _shipmentstatusindication[0].style.borderRadius = "20px";
+                       _shipmentstatusindication[0].style.padding = "5px 15px";
+
+                       _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location for cargo was within less charge transactions.`;
+                       _shipmentauthenticationremark.style.color = "dodgerblue";
+
+                       _shipmentlocationstatus.innerText = `Location: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                       _shipmentlocationstatus.style.color = "dodgerblue";
+
+                       _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+                       _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+
+                       _shipmentslocationsresultindication[0].innerText = `Results: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                       _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+                       _shipmentslocationsresultindication[0].style.color = "white";
+                       _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+                       _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+
+                       _shipmentlocationresultsresponseindication[0].innerText = "Location visual was displayed on the map, view and toggle cargo address using the marker.";
+                       _shipmentlocationresultsresponseindication[0].style.color = "violet";
+
+                       _yourprivateauthenticationisnotprivate[0].innerText = "Your location was set as a cargo address. Type: Cargo/Delivery.";
+                       _yourprivateauthenticationisnotprivate[0].style.display = "block";
+                       _manualshippinglocationupdateresponseindication[0].style.display = "none";
+                       _manualshippinglocationupdateresponseindication[1].style.display = "none";
+                       _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
+
+                 //      _shipmentstatusindication.innerText = "Private authentication. Less charge transactions. Cargo type delivery.";
+
+                     //  _cargolocationdestinationstatus.innerText = 'Private authentication. Less charge transactions. Cargo type delivery';
+
+               //       _cargolocationdestinationspanheaderindication.innerText = "Private authentication shipping set. This location if for less charge transactions";
+
+                  //    _cargolocationdestinationheaderindications[8].innerText = `Lat: ${locationdestination.lat}`;
+                 //     _cargolocationdestinationheaderindications[9].innerText = `Lon: ${locationdestination.lon}`; 
+
+                 //     _cargolocationdestinationspanheaderindication.classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
+
+                  //    const _purchasingmrntotalproductweight = props.allmrnselectedproduct.reduce((previousValue, currentValue)=> previousValue + currentValue.details.weight,0);
+
+                 //     switch (true) {
+                //         case _purchasingmrntotalproductweight === 0: 
+                //          props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
+              //          break;
+                //         case _purchasingmrntotalproductweight <= 1000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight =  100);
+                //         break;
+              //          case _purchasingmrntotalproductweight > 1000 && _purchasingmrntotalproductweight <= 2000:
+              //            props.totaldeliveryfeecb((totalweight)=> totalweight = 200);
+              //          break;
+              //          case _purchasingmrntotalproductweight > 2000 && _purchasingmrntotalproductweight <= 3000:
+              //            props.totaldeliveryfeecb((totalweight)=> totalweight = 300);
+              //          break;
+              //          case _purchasingmrntotalproductweight > 3000 && _purchasingmrntotalproductweight <= 4000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 400);
+                //         break;
+                //         case _purchasingmrntotalproductweight > 4000 && _purchasingmrntotalproductweight <= 5000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 500);
+                //         break;
+                //         case _purchasingmrntotalproductweight > 5000 && _purchasingmrntotalproductweight <= 6000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 600);
+                //         break;
+                //         case _purchasingmrntotalproductweight > 6000 && _purchasingmrntotalproductweight <= 7000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 700);
+                //        break;
+                //         case _purchasingmrntotalproductweight > 8000 && _purchasingmrntotalproductweight <= 9000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 800);
+                //         break;
+                //         case _purchasingmrntotalproductweight > 9000 && _purchasingmrntotalproductweight <= 10000:
+                //          props.totaldeliveryfeecb((totalweight)=> totalweight = 900);
+                //         break;
+                //        break;
+                //        case _purchasingmrntotalproductweight === 10000:
+                //           props.totaldeliveryfeecb((totalweight)=> totalweight = 10000);
+                //        break;
+                //        break;
+                //        case _purchasingmrntotalproductweight > 10000:
+                //          props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
+                //        break;
+                //      }
+
+                //      cargotypecb((cargotype)=> cargotype = 'Location less charge transactions');
  
-      }}>
+                        } else {
+                         _yourprivateauthenticationisnotprivate[0].style.display = "block";
+                         _manualshippinglocationupdateresponseindication[0].style.display = "none";
+                         _manualshippinglocationupdateresponseindication[1].style.display = "none";
+                         _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
+                        }
+                      
+                     }}>
+
          {
            operations.map((operation, operationidx)=> {
              return (
@@ -712,14 +813,20 @@ return (
              )
            })
          }
+
       </DropdownButton>
 
+     <p className='purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication'>You're authentication is not private. Proceeding with this option setting a cargo destination address will result into an error response. Change your authentication as Private.</p>
+
      </Col>
+
      <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
+
      <Col xs={12}
           md={6}
           lg={6}
           id='purchasingdetails-mapcontainer-configurationscontainer-manualcontainer'>
+
        <Row id='purchasingdetails-mapcontainer-configurationscontainer-manualgridcontainer'>
         <p className='purchasingdetails-mapcontainer-configurationscontainer-manualconfigurationheaderindication'>02. Manual</p>
          <Col xs={6}
@@ -734,17 +841,44 @@ return (
                   className='purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield'
                   onChange={(evt)=> {
 
-                   const _lat = evt.target.value;
-                   const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                    const _lat = evt.target.value;
+                    const _coordinatesfield = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield");
 
-                   const _coordinates = {
+                    const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                    const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+                    const _bysatellitecargodestinationaddressresponseheaderindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication");
+
+                    const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                    
+                    const _cargostatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication");
+
+                    const _cargolocationdestinationstatus =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+                    const _shipmentstatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication");
+                    const _shipmentauthenticationremark =  _cargostatusindication[6];
+                    const _shipmentlocationstatus =  _cargostatusindication[7];
+                    const _shipmentlatitudestatus = _cargostatusindication[8];
+                    const _shipmentlongtitudestatus =  _cargostatusindication[9];
+                    const _shipmentslocationsresultindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication"); 
+                    const _shipmentlocationresultsresponseindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication");
+                 
+                   if (  _coordinatesfield[0].value === "" || _coordinatesfield[1].value === "" ) {
+
+                    _manualshippinglocationupdateresponseindication[0].style.display = "block";  
+                    _manualshippinglocationupdateresponseindication[1].style.display = "none";  
+                    _yourprivateauthenticationisnotprivate[0].style.display = "none";
+                    _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
+                    _cargolocationdestinationheaderindications[8].innerText = `Lat: 0`;
+
+                   } else {
+
+                    const _coordinates = {
                      lat: Number(_lat),
                      lon: Number(geocoordinatesresult.lon)
-                   };
-
+                    };
+ 
                    locationdestinationcb((coordinates)=> coordinates = {
-                    lat: Number(_lat),
-                    lng: geocoordinatesresult.lon 
+                     lat: Number(_lat),
+                     lng: geocoordinatesresult.lon 
                    })
                    searchmapmarkerreferencecb((coordinates)=> coordinates = {
                     lat: Number(_lat),
@@ -758,11 +892,47 @@ return (
                    geocoordinatesresult.lat = _lat;
 
                    const center = [Number(geocoordinatesresult.lat), Number(_lat)];
-                   const zoom = 13;
+                   const zoom = 17;
                    searchmapreference.setView(center, zoom);
                    
-                   _cargolocationdestinationheaderindications[8].innerText = `Lat: ${_lat}`;;
+                   _cargolocationdestinationheaderindications[8].innerText = `Lat: ${_lat}`;
 
+                   _yourprivateauthenticationisnotprivate[0].style.display = "none";
+                   _manualshippinglocationupdateresponseindication[0].style.display = "none";
+                   _manualshippinglocationupdateresponseindication[1].style.display = "none";
+                   _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "none";
+
+                   //  _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+                   //  _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+                   //  _cargolocationdestinationstatus[0].style.color = "white";
+                   //  _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+                   //  _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+
+                   //   _shipmentstatusindication[0].innerText ="Private. Less charge transactions.";
+                   //   _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+                   //   _shipmentstatusindication[0].style.color = "white";
+                  //   _shipmentstatusindication[0].style.borderRadius = "20px";
+                  //   _shipmentstatusindication[0].style.padding = "5px 15px";
+
+                 //   _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location for cargo was within less charge transactions.`;
+                 //   _shipmentauthenticationremark.style.color = "dodgerblue";
+
+                 //   _shipmentlocationstatus.innerText = `Location: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                 //   _shipmentlocationstatus.style.color = "dodgerblue";
+
+                 //    _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+                 //    _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+
+                 //    _shipmentslocationsresultindication[0].innerText = `Results: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                 //    _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+                 //    _shipmentslocationsresultindication[0].style.color = "white";
+                 //    _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+                 //    _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+
+                 //    _shipmentlocationresultsresponseindication[0].innerText = "Location is already had a visual on the map, view.";
+                 //    _shipmentlocationresultsresponseindication[0].style.color = "violet";
+
+                   }
 
                   }}/>
          </Col>
@@ -779,8 +949,30 @@ return (
                   onChange={(evt)=> {
 
                     const _lon = evt.target.value;
-                    const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                    const _coordinatesfield = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield");
 
+                    const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                    const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+
+                    const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                    
+                    const _cargostatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication");
+
+                    const _cargolocationdestinationstatus =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+                    const _shipmentstatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication");
+                    const _shipmentauthenticationremark =  _cargostatusindication[6];
+                    const _shipmentlocationstatus =  _cargostatusindication[7];
+                    const _shipmentlatitudestatus = _cargostatusindication[8];
+                    const _shipmentlongtitudestatus =  _cargostatusindication[9];
+                    const _shipmentslocationsresultindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication"); 
+                    const _shipmentlocationresultsresponseindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication");
+
+                    if (  _coordinatesfield[0].value === "" || _coordinatesfield[1].value === "" ) {
+                       _manualshippinglocationupdateresponseindication[0].style.display = "block";  
+                       _yourprivateauthenticationisnotprivate[0].style.display = "none";
+                       _cargolocationdestinationheaderindications[9].innerText = `Lon: 0`;
+                    } else {
+                      
                     locationdestinationcb((coordinates)=> coordinates = {
                      lat: Number(geocoordinatesresult.lat),
                      lng: Number(_lon)
@@ -797,33 +989,149 @@ return (
                     geocoordinatesresult.lon = _lon;
 
                     const center = [Number(geocoordinatesresult.lat), Number(_lon)];
-                    const zoom = 13;
 
+                    const zoom = 17;
                     searchmapreference.setView(center, zoom);
-                    _cargolocationdestinationheaderindications[9].innerText = `Lat: ${_lon}`;;
+
+                    _cargolocationdestinationheaderindications[9].innerText = `Lon: ${_lon}`;
+
+                    }
 
                   }}/>
          </Col>
        </Row>
+
      </Col>
-     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
-     <Col xs={12}
+     
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication'>Fill the latitude and longitude fields first with 1 and 1. Change it accordingly with your latitide and longitide. View and toggle sateliite button to set the the exact location on the Map. Change's can be made by the updating marker.<button className="purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication-satellitebutton"
+                                                                                                                                                                                                                                                                                                                                                                                                                                                 onClick={ async ()=> {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  manualcargoaddressdestinationloadingindicationcb((status)=> status = true); 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _coordinatesfield = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-coordinatesfield");
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _cargostatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication");
+                                                                                                                                                                                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _cargolocationdestinationstatus =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentstatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication");
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentauthenticationremark =  _cargostatusindication[6];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentlocationstatus =  _cargostatusindication[7];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentlatitudestatus = _cargostatusindication[8];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentlongtitudestatus =  _cargostatusindication[9];
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentslocationsresultindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication"); 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _shipmentlocationresultsresponseindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication");
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _lat = _coordinatesfield[0].value;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  const _lon = _coordinatesfield[1].value;
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  await axiosCreatedInstance.post("/purchasing/manualcoordinates/cargoaddress", {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    lat: _lat,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    lon: _lon
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  }).then((response)=> {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   const _responsedata = response.data;
+ 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   if ( _responsedata.message === "Success getting location by coordinates" ) {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _cargolocationdestinationstatus[0].style.color = "white";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentstatusindication[0].innerText ="Manual enter of coordinates for cargo destination address. Public. Location for less charge transaction will vary.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentstatusindication[0].style.color = "white";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentstatusindication[0].style.borderRadius = "20px";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentstatusindication[0].style.padding = "5px 15px";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location will be detected within the system for cargo less charge transactions.`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentauthenticationremark.style.color = "dodgerblue";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlocationstatus.innerText = `Location: ${_responsedata.location.address.road}, ${_responsedata.location.address.neighbourhood}, ${_responsedata.location.address.suburb}, ${_responsedata.location.address.city}, ${_responsedata.location.address.road}, ${_responsedata.location.address.region}, ${_responsedata.location.address.country_code.toUpperCase()}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlocationstatus.style.color = "dodgerblue";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentslocationsresultindication[0].innerText = `Results: ${_responsedata.location.address.road}, ${_responsedata.location.address.neighbourhood}, ${_responsedata.location.address.suburb}, ${_responsedata.location.address.city}, ${_responsedata.location.address.road}, ${_responsedata.location.address.region}, ${_responsedata.location.address.country_code.toUpperCase()}`;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentslocationsresultindication[0].style.color = "white";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlocationresultsresponseindication[0].innerText = "Location visual was displayed on the map, view and toggle cargo address using the marker.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _shipmentlocationresultsresponseindication[0].style.color = "violet";
+                                                                                                                                                                                                                                                                                                                                                                                                                             
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _yourprivateauthenticationisnotprivate[0].innerText = "Your location was set as a cargo address. Type: Cargo/Delivery.";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _yourprivateauthenticationisnotprivate[0].style.display = "block";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                      manualcargoaddressdestinationloadingindicationcb((status)=> status = false); 
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _yourprivateauthenticationisnotprivate[0].style.display = "none";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _manualshippinglocationupdateresponseindication[1].style.display = "block";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   } else {
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _yourprivateauthenticationisnotprivate[0].style.display = "none";
+
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _manualshippinglocationupdateresponseindication[1].innerText = `Getting location using manual options got an error response: ${_responsedata}`;        
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     _manualshippinglocationupdateresponseindication[1].style.display = "block";
+                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   }                                                                                                                                                                                                                                                                
+                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  })
+
+                                                          
+                                                                                                                                                                                                                                                                                                                                                                                                                                                }}>   
+                                                                                                                                                                                                                                                                                                                                                                                                                                                {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  manualcargoaddressdestinationloadingindication ? 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  (  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <Spinner animation="border" variant="info" />                      
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  :
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  (
+                                                                                                                                                                                                                                                                                                                                                                                                                                                    <span>Satellite</span>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                  )
+                                                                                                                                                                                                                                                                                                                                                                                                                                                }             
+                                                                                                                                                                                                                                                                                                                                                                                                                                        </button> 
+      </p>
+
+      <p className="purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication">Location was found and the location is already viewable in the map using the manual option preparing the cargo address destination.</p> 
+
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
+
+      <Col xs={12}
           md={12}
           lg={12}
           id='purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer'>
-        <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>03. By click selection</p>
+        <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationheaderindication'>03. By satellite</p>
        <button id='purchasingdetails-mapcontainer-configurationscontainer-byclickcontainer-currentcoordinatesbutton'
-               onClick={(evt)=> {
+               onClick={ async (evt)=> {
+
+                const _bysatellitecargodestinationaddressresponseheaderindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication");
+
                  if (navigator.geolocation) {
-                   navigator.geolocation.getCurrentPosition(purchasinggetcurrentposition);
+                  await navigator.geolocation.getCurrentPosition(purchasinggetcurrentposition);
+                  _bysatellitecargodestinationaddressresponseheaderindication[0].style.display = "block";
                  } else { 
                   alert('Synced')
                  }
                }}>
          Current coordinates
        </button>
-     </Col>
-     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
+      </Col>
+
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-byclicklocationselectionresponseheaderindication'>Your current location was found and set. You can now view map for location view and set shipping configuration.</p>
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>OR</p>
+      <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>or find your current location via sattelite and adjust cursor for shipping location</p>
+
    </Row>
 
    <Row id='purchasingdetails-mapcontainer-maptile'>
@@ -834,10 +1142,14 @@ return (
        <button id='purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton'
                onClick={(evt)=> {
 
+                 const _cargodestiantionstatus = document.querySelector(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+
+                 alert(_cargodestiantionstatus.innerText);
+
                  const _lesschargetransactions = operations.find((location)=> location.street === props.user.details.location.address.street &&  location.baranggay === props.user.details.location.address.baranggay && location.trademark === props.user.details.location.address.trademark  && location.city === props.user.details.location.address.city && location.province === props.user.details.location.address.province  && location.country === props.user.details.location.address.country);
                  const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
                  const _cargolocationdestinationspanheaderindication = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2];
-             
+
                  if ( _lesschargetransactions === undefined ) { 
                   props.purchaseauthenticationcb((location)=> location = {
                     authentication: 'Standard',
@@ -880,46 +1192,46 @@ return (
 
                   const _purchasingmrntotalproductweight = props.allmrnselectedproduct.reduce((previousValue, currentValue)=> previousValue + currentValue.details.weight,0);
 
-                  switch (true) {
-                    case _purchasingmrntotalproductweight === 0: 
-                     props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
-                    break;
-                    case _purchasingmrntotalproductweight <= 1000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight =  100);
-                    break;
-                    case _purchasingmrntotalproductweight > 1000 && _purchasingmrntotalproductweight <= 2000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 200);
-                    break;
-                    case _purchasingmrntotalproductweight > 2000 && _purchasingmrntotalproductweight <= 3000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 300);
-                    break;
-                    case _purchasingmrntotalproductweight > 3000 && _purchasingmrntotalproductweight <= 4000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 400);
-                    break;
-                    case _purchasingmrntotalproductweight > 4000 && _purchasingmrntotalproductweight <= 5000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 500);
-                    break;
-                    case _purchasingmrntotalproductweight > 5000 && _purchasingmrntotalproductweight <= 6000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 600);
-                    break;
-                    case _purchasingmrntotalproductweight > 6000 && _purchasingmrntotalproductweight <= 7000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 700);
-                    break;
-                    case _purchasingmrntotalproductweight > 8000 && _purchasingmrntotalproductweight <= 9000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 800);
-                    break;
-                    case _purchasingmrntotalproductweight > 9000 && _purchasingmrntotalproductweight <= 10000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 900);
-                    break;
-                    break;
-                    case _purchasingmrntotalproductweight === 10000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 10000);
-                    break;
-                    break;
-                    case _purchasingmrntotalproductweight > 10000:
-                      props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
-                    break;
-                  }
+              //    switch (true) {
+              //   case _purchasingmrntotalproductweight === 0: 
+              //       props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
+             //       break;
+             //       case _purchasingmrntotalproductweight <= 1000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight =  100);
+             //       break;
+            //        case _purchasingmrntotalproductweight > 1000 && _purchasingmrntotalproductweight <= 2000:
+            //          props.totaldeliveryfeecb((totalweight)=> totalweight = 200);
+            //        break;
+            //        case _purchasingmrntotalproductweight > 2000 && _purchasingmrntotalproductweight <= 3000:
+            //          props.totaldeliveryfeecb((totalweight)=> totalweight = 300);
+            //        break;
+             //       case _purchasingmrntotalproductweight > 3000 && _purchasingmrntotalproductweight <= 4000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight = 400);
+             //       break;
+             //       case _purchasingmrntotalproductweight > 4000 && _purchasingmrntotalproductweight <= 5000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight = 500);
+             //       break;
+             //       case _purchasingmrntotalproductweight > 5000 && _purchasingmrntotalproductweight <= 6000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight = 600);
+              //      break;
+              //      case _purchasingmrntotalproductweight > 6000 && _purchasingmrntotalproductweight <= 7000:
+              //        props.totaldeliveryfeecb((totalweight)=> totalweight = 700);
+               //     break;
+                //    case _purchasingmrntotalproductweight > 8000 && _purchasingmrntotalproductweight <= 9000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight = 800);
+             //       break;
+             //       case _purchasingmrntotalproductweight > 9000 && _purchasingmrntotalproductweight <= 10000:
+             //         props.totaldeliveryfeecb((totalweight)=> totalweight = 900);
+             //       break;
+              ///      break;
+               //     case _purchasingmrntotalproductweight === 10000:
+               //       props.totaldeliveryfeecb((totalweight)=> totalweight = 10000);
+               //     break;
+               //     break;
+                //    case _purchasingmrntotalproductweight > 10000:
+                //      props.totaldeliveryfeecb((totalweight)=> totalweight = 0);
+                //    break;
+          //        }
               
                   //props.totalmerchandisepricecb((totalpurchasingpayment)=> totalpurchasingpayment = props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.pricesbreakdown.price,0))
 
@@ -928,44 +1240,197 @@ return (
                  //alert(JSON.stringify(operations))
 
                 }
+
                }}>
-         Use what location I given as my cargo destination address
+         USE WHAT LOCATION I GAVE AS MY CARGO, SHIPPING, OR DELIVERY ADDRESS
        </button>
+       <br />
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
-       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication purchasingdetails-mapcontainer-maptile-addresscontainer-statusheaderindication'>Status: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>CARGO DESTINATION UNSET</span></p>
-       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Shipment: Cargo type/Delivery</p>
-       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Destination address not set to as default authentication address</p>
+       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Status: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication'>CARGO DESTINATION UNSET</span></p>
+       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Shipment: <span className="purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication">Cargo type/Delivery</span></p>
+       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>For shipment address will have a remark if it was set using default authentication address or configured address</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>The authenticaion was public and location for cargo was within less charge transactions.</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Location: Search location on map</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Lat: {geocoordinatesresult.lat}</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Lon: {geocoordinatesresult.lon}</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication'>Results: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication'></span></p>
-       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication'>Response: <span classMame='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication'></span></p>
+       <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication'>Response: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication'></span></p>
+       <p className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication">Marker location: Latitude: {geocoordinatesresult.lat}, Longitude: {geocoordinatesresult.lon} </p>
+       <p className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication">Cargo destination: <span className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication">Cargo destination address here, Complete address.</span> <input className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield" type="text" placeholder="Type your cargo destination address here"/></p>
        <button id='purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton'
                onClick={(evt)=> {
-                 alert('Set as cargo destination address')
+
+                 const _cargodestinationaddressheaderindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication");
+                 const _cargodestinationaddressinputfield = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield");
+                 
+                 _cargodestinationaddressheaderindication[0].style.display = "none";
+                 _cargodestinationaddressinputfield[0].style.display = "block";
+
                }}>
-         Find location
+         Update cargo destination address
        </button>
        <br />
        <button id='purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton'
                onClick={(evt)=> {
-                   if ( cargotype === 'Location less charge transactions') {
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/${cargotype}`;
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Door to door'
-                    props.cargodestinationsetcb((location)=> location = true)
+
+             //   setascargodestinationloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                const _cargodestinationaddressheaderindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication");
+                const _cargodestinationaddressinputfield = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield");
+                 
+                if ( _cargodestinationaddressinputfield[0].value === "" ) {
+
+                  _cargodestinationaddressheaderindication[0].innerText =  "Cargo destination address here, Complete address";
+                  _cargodestinationaddressheaderindication[0].style.display = "block";
+                  _cargodestinationaddressinputfield[0].style.display = "none";
+
+                } else {
+
+                 _cargodestinationaddressheaderindication[0].innerText =  _cargodestinationaddressinputfield[0].value;
+                 _cargodestinationaddressheaderindication[0].style.display = "block";
+                 _cargodestinationaddressinputfield[0].style.display = "none";
+
+                }
+
+                const _yourprivateauthenticationisnotprivate = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-privateauthenticationresponseheaderindication");
+                const _manualshippinglocationupdateresponseindication = document.querySelectorAll(".purchasingdetails-mapcontainer-configurationscontainer-manualshipinglocationselectionresponseheaderindication");
+
+                const _cargolocationdestinationheaderindications = document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication');
+                
+                const _cargostatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication");
+
+                const _cargolocationdestinationstatus =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-cargodestinationsetstatusheaderindication");
+                const _shipmentstatusindication = document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-shipmenttypeheaderindication");
+                const _shipmentauthenticationremark =  _cargostatusindication[6];
+                const _shipmentlocationstatus =  _cargostatusindication[7];
+                const _shipmentlatitudestatus = _cargostatusindication[8];
+                const _shipmentlongtitudestatus =  _cargostatusindication[9];
+                const _shipmentslocationsresultindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication"); 
+                const _shipmentlocationresultsresponseindication =  document.querySelectorAll(".purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication");
+
+                if ( props.user.authentications.authenticationtype === "Private") {
+
+         //           _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+         //           _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+         //           _cargolocationdestinationstatus[0].style.color = "white";
+         //           _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+         //           _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+
+         //           _shipmentstatusindication[0].innerText ="Private. Less charge transactions.";
+         //           _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+         //           _shipmentstatusindication[0].style.color = "white";
+         //           _shipmentstatusindication[0].style.borderRadius = "20px";
+         //           _shipmentstatusindication[0].style.padding = "5px 15px";
+
+        //           _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location for cargo was within less charge transactions.`;
+         //           _shipmentauthenticationremark.style.color = "dodgerblue//";
+
+                 //   _shipmentlocationstatus.innerText = `Location: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+        //            _shipmentlocationstatus.style.color = "dodgerblue";
+
+       //             _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+       //             _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+
+                //    _shipmentslocationsresultindication[0].innerText = `Results: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+       //             _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+        //            _shipmentslocationsresultindication[0].style.color = "white";
+        //            _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+        //            _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+
+        //            _shipmentlocationresultsresponseindication[0].innerText = "Location is already had a visual on the map, view.";
+        //            _shipmentlocationresultsresponseindication[0].style.color = "violet";
+
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/${cargotype}`;
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Door to door'
+               //     props.cargodestinationsetcb((location)=> location = true);
+
+                  } else if ( props.user.authentications.authenticationtype === "Common public" ) {
+
+                    _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+                    _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+                    _cargolocationdestinationstatus[0].style.color = "white";
+                    _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+                    _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+
+                    _shipmentstatusindication[0].innerText ="Private. Less charge transactions.";
+                    _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+                    _shipmentstatusindication[0].style.color = "white";
+                    _shipmentstatusindication[0].style.borderRadius = "20px";
+                    _shipmentstatusindication[0].style.padding = "5px 15px";
+
+                    _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location for cargo was within less charge transactions.`;
+                    _shipmentauthenticationremark.style.color = "dodgerblue";
+
+                //    _shipmentlocationstatus.innerText = `Location: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                    _shipmentlocationstatus.style.color = "dodgerblue";
+
+                    _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+                    _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+
+                 //   _shipmentslocationsresultindication[0].innerText = `Results: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                    _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+                    _shipmentslocationsresultindication[0].style.color = "white";
+                    _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+                    _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+
+                    _shipmentlocationresultsresponseindication[0].innerText = "Location is already had a visual on the map, view.";
+                    _shipmentlocationresultsresponseindication[0].style.color = "violet";
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/Delivery type/Cargo`;
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Delivery'
+                //    props.cargodestinationsetcb((location)=> location = true)
                   } else {
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/Delivery type/Cargo`;
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
-                    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Delivery'
-                    props.cargodestinationsetcb((location)=> location = true)
+                    _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
+                    _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
+                    _cargolocationdestinationstatus[0].style.color = "white";
+                    _cargolocationdestinationstatus[0].style.borderRadius = "20px";
+                    _cargolocationdestinationstatus[0].style.padding = "5px 15px";
+
+                    _shipmentstatusindication[0].innerText ="Private. Less charge transactions.";
+                    _shipmentstatusindication[0].style.backgroundColor ="dodgerblue";
+                    _shipmentstatusindication[0].style.color = "white";
+                    _shipmentstatusindication[0].style.borderRadius = "20px";
+                    _shipmentstatusindication[0].style.padding = "5px 15px";
+
+                    _shipmentauthenticationremark.innerText = `The authentication was ${props.user.authentications.authenticationtype} and location for cargo was within less charge transactions.`;
+                    _shipmentauthenticationremark.style.color = "dodgerblue";
+
+                //    _shipmentlocationstatus.innerText = `Location: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                    _shipmentlocationstatus.style.color = "dodgerblue";
+
+                    _shipmentlatitudestatus.innerText = `Lat: ${locationdestination.lat}`;
+                    _shipmentlongtitudestatus.innerText = `Lon: ${locationdestination.lon}`; 
+
+                 //   _shipmentslocationsresultindication[0].innerText = `Results: ${_privateauthenticationlocation.street}, ${_privateauthenticationlocation.baranggay}, ${_privateauthenticationlocation.city}, ${_privateauthenticationlocation.province}, ${_privateauthenticationlocation.country}`;
+                    _shipmentslocationsresultindication[0].style.backgroundColor ="green";
+                    _shipmentslocationsresultindication[0].style.color = "white";
+                    _shipmentslocationsresultindication[0].style.borderRadius = "20px";
+                    _shipmentslocationsresultindication[0].style.padding = "5px 15px";
+
+                    _shipmentlocationresultsresponseindication[0].innerText = "Location is already had a visual on the map, view.";
+                    _shipmentlocationresultsresponseindication[0].style.color = "violet";
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/Delivery type/Cargo`;
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
+                //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Delivery'
+                //    props.cargodestinationsetcb((location)=> location = true)
                   }
                 
 
                }}>
-         Set as my cargo destination
+       
+         {
+          setascargodestinationloadingindication ? 
+          (
+            <Spinner animation="border" variant="secondary" />
+          )
+          :
+          (
+           <span>Set as my cargo destination</span>
+          )
+         }
+
        </button>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
@@ -975,15 +1440,19 @@ return (
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Standard fee: 100 peso's per kilo to non-mrn and mrn purchases:</p>         
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Set express location</p>
      </Col>
-     <p className='purchasingdetails-mapcontainer-configurationscontainer-typeofselectionconfigurationorheaderindication'>or find your current location via sattelite and adjust cursor for shipping location</p>
      <Col xs={9}
           md={9}
           lg={9}
           id='purchasingdetails-mapcontainer-maptile-searchcontainer'>
       <MapContainer center={locationdestination} 
-                    zoom={13} 
+                    zoom={17} 
                     style={{height:'100%', width: '100%'}}
                     scrollWheelZoom={false}
+                    zoomControl={false}
+                    scrollWheelZoom={false}
+                    doubleClickZoom={false}
+                    touchZoom={false}
+                    boxZoom={false}
                     ref={searchmapreferencecb}>
         <TileLayer attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
@@ -1555,11 +2024,11 @@ function LocationMarker(props) {
 
 const map = useMapEvents({
 click(e) {
- map.locate()
+ //map.locate()
 },
 locationfound(e) {
  props.searchmapmarkerreferencecb(e.latlng)
- map.flyTo(e.latlng, map.getZoom())
+ //map.flyTo(e.latlng, map.getZoom())
 },
 })
 
@@ -1568,6 +2037,7 @@ const [mapmarker, mapmarkercb] = useState(true);
 const markernodereference = useRef(null);
 
 const mapeventhandlers = useMemo(
+
 () => ({
  dragend(e) {
   const marker = markernodereference.current
