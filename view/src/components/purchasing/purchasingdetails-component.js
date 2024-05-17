@@ -36,14 +36,32 @@ import XirbitGraph from '../graph/xirbitgraph-component.js';
 
 export default function PurchasingDetais(props) { 
 
+const [, updateStates] = React.useState()
+const componentupdate = React.useCallback(() => updateStates({}), []);
+
 const [manualcargoaddressdestinationloadingindication, manualcargoaddressdestinationloadingindicationcb] = useState(false);
 
 const [setascargodestinationloadingindication, setascargodestinationloadingindicationcb] = useState(false);
+
+const [purchasingcargodestination, purchasingcargodestinationcb] = useState(",,,,,");
+const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(false);
+
+const [purchasingtotalmerchandisepayment, purchasingtotalmerchandisepaymentcb] = useState(0);
+const [purchasingtotalweight, purchasingtotalweightcb] = useState(0);
+const [purchasingtotalcargofee, purchasingtotalcargofeecb] = useState(0);
+const [purchasigtotalpayment, purchasigtotalpaymentcb] = useState(0);
 
 const [privateauthenticationlocations, privateauthenticationlocationscb] = useState(false);
 
 const [selectedproduct, selectedproductcb] = useState(
 {
+productname: 'Kohaku Yellow',
+rapportname: 'Rapport name',
+definition: 'Product definition',
+authentications: {
+  producttype: 'Product type',
+  productid: 'Product id 0'
+},
 details: {
 product: {
 name: 'Product name',
@@ -51,6 +69,8 @@ rapportname: 'Product rapport name',
 definition: 'Product definition',
 category: 'MRN',
 specification: {
+orderpcs: 0,
+orderspecification: "",
 for: {
 part: 'Product part',
 gender: 'Male',
@@ -517,6 +537,10 @@ xirbit: []
 }
 }
 );
+
+const [selectedproductarray, selectedproductarraycb] = useState([                                                                                                                                                                                                             
+
+]);
 
 const [selectedproductdisplayimages, selectedproductdisplayimagescb] = useState(
 [
@@ -1267,6 +1291,9 @@ return (
                  _cargodestinationaddressheaderindication[0].style.display = "none";
                  _cargodestinationaddressinputfield[0].style.display = "block";
 
+                 purchasingcargodestinationcb((locationaddress)=> locationaddress = ",,,,,");
+                 purchasingcargoaddresssetcb((state)=> state = false);
+
                }}>
          Update cargo destination address
        </button>
@@ -1290,6 +1317,10 @@ return (
                  _cargodestinationaddressheaderindication[0].innerText =  _cargodestinationaddressinputfield[0].value;
                  _cargodestinationaddressheaderindication[0].style.display = "block";
                  _cargodestinationaddressinputfield[0].style.display = "none";
+
+                 
+                 purchasingcargodestinationcb((locationaddress)=> locationaddress = _cargodestinationaddressinputfield[0].value);
+                 purchasingcargoaddresssetcb((state)=> state = true);
 
                 }
 
@@ -1380,8 +1411,10 @@ return (
                 //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].innerText = `Set/Delivery type/Cargo`;
                 //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
                 //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Delivery'
-                //    props.cargodestinationsetcb((location)=> location = true)
+                //    props.cargodestinationsetcb((location)=> location = true);
+
                   } else {
+
                     _cargolocationdestinationstatus[0].innerText = "Cargo location was set. Cargo type/delivery.";
                     _cargolocationdestinationstatus[0].style.backgroundColor ="dodgerblue";
                     _cargolocationdestinationstatus[0].style.color = "white";
@@ -1415,7 +1448,7 @@ return (
                 //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[2].classList.add('purchasingdetails-mapcontainer-maptile-addresscontainer-cargostatusheaderindication');
                 //    document.querySelectorAll('.purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication')[3].innerText = 'Shipment: Cargo type/Delivery'
                 //    props.cargodestinationsetcb((location)=> location = true)
-                  }
+                }
                 
 
                }}>
@@ -1432,6 +1465,7 @@ return (
          }
 
        </button>
+
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'></p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Fee's:</p>
@@ -1439,6 +1473,7 @@ return (
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>All mrn orders within less charge transaction's place's had 100 pesos fee for more than 10 kilo cargo type handling service's:</p>
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Standard fee: 100 peso's per kilo to non-mrn and mrn purchases:</p>         
        <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication'>Set express location</p>
+
      </Col>
      <Col xs={9}
           md={9}
@@ -1518,6 +1553,9 @@ return (
                Per {merchandise.details.product.specification.set.pcs} pcs: {merchandise.details.product.pricesbreakdown.price} peso's equal to {merchandise.details.product.pricesbreakdown.price / merchandise.details.product.specification.set.pcs} peso/peso's. Promo price's are for commoner's and civilian's, bulk wholesale price's only implifie's to store's.
               </p>
               <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication'>
+                Total type's of this product selected: {selectedproductarray.length}
+              </p>
+              <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication'>
                 Total pcs: 0
               </p>
               <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication'>
@@ -1549,10 +1587,108 @@ return (
                            key={stocksidx}
                            className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productselectionimage'
                            alt='Xirbit-ProductImage' 
-                           onClick={(evt)=> {
-                             selectedproductcb((selectedproduct)=> selectedproduct = stocks)
-                             const _selectedproductdetailsandselectionconfigurationmodal = document.querySelectorAll('.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer');
-                             _selectedproductdetailsandselectionconfigurationmodal[merchandiseidx].style.display = 'block';
+                           onClick={ async (evt)=> {
+
+                             const _selectedproductdetailsmodal = document.querySelectorAll('.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer');
+                             const _selectedproductdetailsmodalorderpcsfield = document.querySelectorAll(".purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductpcsindication");
+                             const _selectedproductdetailsmodalorderspecificationfield = document.querySelectorAll("purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication");
+                 
+                             await  selectedproductcb((selectedproduct)=> selectedproduct = stocks);
+
+                             const _selectedproduct = await selectedproductarray.find((data)=> data.authentications.productid === stocks.authentications.productid);
+
+                             if (  _selectedproduct === undefined ) {
+
+                              await selectedproductarray.push({
+                                productname: stocks.productname,
+                                rapportname: stocks.rapportname,
+                                definition: stocks.definition,
+                                authentications: {
+                                  producttype: stocks.authentications.producttype,
+                                  productid: stocks.authentications.productid
+                                },
+                                  details: {
+                                      product: {
+                                       name: stocks.details.product.name,
+                                       rapportname: stocks.details.product.rapportname,
+                                       definition: stocks.details.product.definition,
+                                       category: stocks.details.product.category,
+                                       specification: {
+                                        for: {
+                                        part: stocks.details.product.specification.part,
+                                        gender: stocks.details.product.specification.gender,
+                                        category: stocks.details.product.specification.category 
+                                        },
+                                        set: {
+                                         set: stocks.details.product.specification.set.set,
+                                         productindication: stocks.details.product.specification.set.productindication,
+                                         pcs: stocks.details.product.specification.set.pcs
+                                        },
+                                        size: stocks.details.product.specification.size,
+                                        color: stocks.details.product.specification.color,
+                                        weight: stocks.details.product.specification.weight,
+                                        top: stocks.details.product.specification.top,
+                                        left: stocks.details.product.specification.left,
+                                        bottom: stocks.details.product.specification.bottom,
+                                        right: stocks.details.product.specification.right,
+                                        front: stocks.details.product.specification.front,
+                                        back: stocks.details.product.specification.back
+                                       },
+                                       pricesbreakdown: {
+                                          price: stocks.details.product.pricesbreakdown.price,
+                                          capital: stocks.details.product.pricesbreakdown.capital,
+                                          suggested_retail_price: stocks.details.product.pricesbreakdown.suggested_retail_price,
+                                          vat: stocks.details.product.pricesbreakdown.vat
+                                      },
+                                      cybervisual: {
+                                          images: {
+                                           maindisplayimage: stocks.details.product.cybervisual.images.maindisplayimage,
+                                           maindisplayimages: stocks.details.product.cybervisual.images.maindisplayimages
+                                          },
+                                          videos: stocks.details.product.cybervisual.videos
+                                      },
+                                      },
+                                      locations: {
+                                      operations: stocks.details.locations.operations
+                                      }
+                                      },
+                                      system: {
+                                      request: {
+                                          pcs: 0,
+                                          orderspecification: "",
+                                          product: stocks.system.request.product,
+                                          shipping: {
+                                          category:  stocks.system.request.category,
+                                          weight:  stocks.system.request.weight,
+                                          fee:  stocks.system.request.fee
+                                          }
+                                      },
+                                      stocks: stocks.system.stocks,
+                                      purchase: {
+                                          people: stocks.system.purchase.people,
+                                          xirbit: stocks.system.purchase.xirbit
+                                      }
+                                      }
+                              })
+
+                              _selectedproductdetailsmodalorderpcsfield[0].value = 0;
+                              _selectedproductdetailsmodalorderspecificationfield.value = "";
+
+                             } else {
+
+                              
+                              _selectedproductdetailsmodalorderpcsfield[0].value = _selectedproduct.system.request.pcs;
+                              _selectedproductdetailsmodalorderspecificationfield.value = selectedproduct.system.request.orderspecification;
+
+                             }
+
+                             _selectedproductdetailsmodal[merchandiseidx].style.display = 'block';
+
+                            // console.log(stocks);
+                            // console.log(selectedproduct);
+                             console.log(selectedproductarray);
+                            // console.log(_selectedproduct);
+
                            }}
                        />
 
@@ -1563,6 +1699,9 @@ return (
                 }
                <Col className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer'>
                 <Col className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailscontainer'>
+                  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication'>
+                   Product id: {selectedproduct.authentications.productid}
+                  </p>
                   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication'>
                    Product part: {selectedproduct.details.product.specification.part}
                   </p>
@@ -1579,7 +1718,7 @@ return (
                     Top: {selectedproduct.details.product.specification.top}
                   </p>
                   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication'>
-                    Left: selectedproduct.details.product.specification.left}
+                    Left: {selectedproduct.details.product.specification.left}
                   </p>
                   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication'>
                     Bottom: {selectedproduct.details.product.specification.bottom}
@@ -1613,134 +1752,147 @@ return (
                   <input type='number'
                          className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductpcsindication'
                          placeholder='0'
-                         onChange={(evt)=> {
+                         onChange={ async (evt)=> {
 
                            const _inputfieldvalue = evt.target.value;
-                           const _productspecification = merchandise.system.request.product.find((product)=> product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
-                           const _requestproductspecificationidx = merchandise.system.request.product.findIndex((product)=> product.details.for.gender === merchandise.details.product.specification.for.gender  && product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
-                           const _orderspecification = document.querySelectorAll('.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication');
+                           const _selectedproduct = await selectedproductarray.find((data)=> data.authentications.productid === selectedproduct.authentications.productid);
+
+                           _selectedproduct.system.request.pcs = _inputfieldvalue;
+
+                           const _selectedproducttotalweight = selectedproductarray.reduce((accumulator, item)=> { return accumulator + item.details.product.specification.weight; }, 0);
+
+                           alert(_selectedproducttotalweight);
+
+                           componentupdate();
+
+                           console.log(_selectedproduct);
+                           console.log(selectedproductarray);
+
+                    //       const _productspecification = merchandise.system.request.product.find((product)=> product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
+                    //       const _requestproductspecificationidx = merchandise.system.request.product.findIndex((product)=> product.details.for.gender === merchandise.details.product.specification.for.gender  && product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
+                    //       const _orderspecification = document.querySelectorAll('.purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication');
                            
-                           const _inputfield = evt.target;
-                           const _productspecificationcontainer = _inputfield.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-                           const _productdetailscontainer =  _productspecificationcontainer.children[1];
-                           const _productspecificationlayoutcontainer = _productdetailscontainer.children[0];
-                           const _specificproductpurchasetotalpcs = _productspecificationlayoutcontainer.children[5];
-                           const _specificproductpurchasetotalweight = _productspecificationlayoutcontainer.children[6];
-                           const _needstotalpayment = _productspecificationlayoutcontainer.children[7];
-                           const _getdigitsfromneedstotalpayment = _specificproductpurchasetotalpcs.innerText.match(/(\d+)/);
+                   //        const _inputfield = evt.target;
+                   //        const _productspecificationcontainer = _inputfield.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+                   //        const _productdetailscontainer =  _productspecificationcontainer.children[1];
+                   //        const _productspecificationlayoutcontainer = _productdetailscontainer.children[0];
+                   //        const _specificproductpurchasetotalpcs = _productspecificationlayoutcontainer.children[5];
+                   //        const _specificproductpurchasetotalweight = _productspecificationlayoutcontainer.children[6];
+                   //        const _needstotalpayment = _productspecificationlayoutcontainer.children[7];
+                   //        const _getdigitsfromneedstotalpayment = _specificproductpurchasetotalpcs.innerText.match(/(\d+)/);
 
-                           const _firstfieldcharacter = _inputfieldvalue.charAt(0);
-                           evt.target.value = parseInt( _inputfieldvalue, 10);
+                   //        const _firstfieldcharacter = _inputfieldvalue.charAt(0);
+                   //        evt.target.value = parseInt( _inputfieldvalue, 10);
 
-                           const selecteddata =  {
-                             category: selectedproduct.details.product.category,
-                             pcs: 0,
-                             details: {
-                              for: {
-                                part: selectedproduct.details.product.specification.for.part,
-                                gender: selectedproduct.details.product.specification.for.gender,
-                                category: selectedproduct.details.product.specification.for.category
-                              },
-                              set: {
-                               set: selectedproduct.details.product.specification.set.set,
-                               productindication: selectedproduct.details.product.specification.set.productindication,
-                               pcs: selectedproduct.details.product.specification.set.pcs,
-                              },
-                              size: selectedproduct.details.product.specification.size,
-                              color: selectedproduct.details.product.specification.color,
-                              weight: selectedproduct.details.product.specification.weight,
-                              top: selectedproduct.details.product.specification.top,
-                              left: selectedproduct.details.product.specification.left,
-                              bottom: selectedproduct.details.product.specification.bottom,
-                              right: selectedproduct.details.product.specification.right,
-                              front: selectedproduct.details.product.specification.front,
-                              back: selectedproduct.details.product.specification.back
-                             },
-                             pricesbreakdown: {
-                              price: selectedproduct.details.product.pricesbreakdown.price,
-                              capital: selectedproduct.details.product.pricesbreakdown.capital,
-                              suggested_retail_price: selectedproduct.details.product.pricesbreakdown.suggested_retail_price,
-                              vat: selectedproduct.details.product.pricesbreakdown.vat
-                             },
-                             specification: _orderspecification[merchandiseidx].value
-                           }
+                   //        const selecteddata =  {
+                   //          category: selectedproduct.details.product.category,
+                   //          pcs: 0,
+                   //          details: {
+                   //           for: {
+                   //             part: selectedproduct.details.product.specification.for.part,
+                   //             gender: selectedproduct.details.product.specification.for.gender,
+                   //             category: selectedproduct.details.product.specification.for.category
+                   //           },
+                   //           set: {
+                   //            set: selectedproduct.details.product.specification.set.set,
+                   //            productindication: selectedproduct.details.product.specification.set.productindication,
+                   //            pcs: selectedproduct.details.product.specification.set.pcs,
+                   //           },
+                   //           size: selectedproduct.details.product.specification.size,
+                   //           color: selectedproduct.details.product.specification.color,
+                   //           weight: selectedproduct.details.product.specification.weight,
+                   //           top: selectedproduct.details.product.specification.top,
+                   //           left: selectedproduct.details.product.specification.left,
+                   //           bottom: selectedproduct.details.product.specification.bottom,
+                   //           right: selectedproduct.details.product.specification.right,
+                   //           front: selectedproduct.details.product.specification.front,
+                   //           back: selectedproduct.details.product.specification.back
+                   //          },
+                   //          pricesbreakdown: {
+                  //          price: selectedproduct.details.product.pricesbreakdown.price,
+                 //             capital: selectedproduct.details.product.pricesbreakdown.capital,
+                  //            suggested_retail_price: selectedproduct.details.product.pricesbreakdown.suggested_retail_price,
+                  //            vat: selectedproduct.details.product.pricesbreakdown.vat
+                  //           },
+                //             specification: _orderspecification[merchandiseidx].value
+                 //          }
 
-                           const data =  {
-                             category: selectedproduct.details.product.category,
-                             pcs: Number(parseInt(evt.target.value,10)),
-                             details: {
-                              for: {
-                               part: selectedproduct.details.product.specification.for.part,
-                               gender: selectedproduct.details.product.specification.for.gender,
-                               category: selectedproduct.details.product.specification.for.category
-                              },
-                              set: {
-                               set: selectedproduct.details.product.specification.set.set,
-                               productindication: selectedproduct.details.product.specification.set.productindication,
-                               pcs: selectedproduct.details.product.specification.set.pcs,
-                              },
-                              size: selectedproduct.details.product.specification.size,
-                              color: selectedproduct.details.product.specification.color,
-                              weight: Number(merchandise.details.product.specification.weight) * Number(parseInt(evt.target.value,10)),
-                              top: selectedproduct.details.product.specification.top,
-                              left: selectedproduct.details.product.specification.left,
-                              bottom: selectedproduct.details.product.specification.bottom,
-                              right: selectedproduct.details.product.specification.right,
-                              front: selectedproduct.details.product.specification.front,
-                              back: selectedproduct.details.product.specification.back,
-                              images: [selectedproduct.details.product.cybervisual.images.maindisplayimages]
-                             },
-                             pricesbreakdown: {
-                              price:  Number(parseInt(evt.target.value,10)) * ( selectedproduct.details.product.pricesbreakdown.price / merchandise.details.product.specification.set.pcs ),
-                              capital: selectedproduct.details.product.pricesbreakdown.capital,
-                              suggested_retail_price: selectedproduct.details.product.pricesbreakdown.suggested_retail_price,
-                              vat: selectedproduct.details.product.pricesbreakdown.vat
-                             },
-                             specification: _orderspecification[merchandiseidx].value
-                           }
+                 //          const data =  {
+                //             category: selectedproduct.details.product.category,
+                //             pcs: Number(parseInt(evt.target.value,10)),
+                 //            details: {
+                 //             for: {
+                 //              part: selectedproduct.details.product.specification.for.part,
+                 //              gender: selectedproduct.details.product.specification.for.gender,
+                 //              category: selectedproduct.details.product.specification.for.category
+                //              },
+                //              set: {
+                //               set: selectedproduct.details.product.specification.set.set,
+                //               productindication: selectedproduct.details.product.specification.set.productindication,
+                 //              pcs: selectedproduct.details.product.specification.set.pcs,
+                 //             },
+                 //             size: selectedproduct.details.product.specification.size,
+                 //             color: selectedproduct.details.product.specification.color,
+                 //             weight: Number(merchandise.details.product.specification.weight) * Number(parseInt(evt.target.value,10)),
+                 //             top: selectedproduct.details.product.specification.top,
+                 //             left: selectedproduct.details.product.specification.left,
+                 //             bottom: selectedproduct.details.product.specification.bottom,
+                 //             right: selectedproduct.details.product.specification.right,
+                 //             front: selectedproduct.details.product.specification.front,
+                 //             back: selectedproduct.details.product.specification.back,
+                 //             images: [selectedproduct.details.product.cybervisual.images.maindisplayimages]
+                //             },
+                //             pricesbreakdown: {
+                //              price:  Number(parseInt(evt.target.value,10)) * ( selectedproduct.details.product.pricesbreakdown.price / merchandise.details.product.specification.set.pcs ),
+                //              capital: selectedproduct.details.product.pricesbreakdown.capital,
+                 //             suggested_retail_price: selectedproduct.details.product.pricesbreakdown.suggested_retail_price,
+                 //             vat: selectedproduct.details.product.pricesbreakdown.vat
+                 //            },
+                 //            specification: _orderspecification[merchandiseidx].value
+                 //          }
 
-                           if ( Number(_inputfieldvalue) < 0 ) {
-                             evt.target.value = '0';
-                           } else {
+                 //          if ( Number(_inputfieldvalue) < 0 ) {
+                 //            evt.target.value = '0';
+                 //          } else {
                              
-                           if ( Number(_inputfieldvalue) === 0 || _inputfieldvalue === '0' ) {
-                               merchandise.system.request.product.splice(_requestproductspecificationidx, 1);
-                               _specificproductpurchasetotalpcs.innerText = 'Total pcs: 0';
-                               _specificproductpurchasetotalweight.innerText = 'Total weight: 0';  
-                               _needstotalpayment.innerText = 'Needs: Total payment of 0 pesos';
-                               props.allnonmrnselectedproductcb((purchasing)=> purchasing = []);
-                               props.allmrnselectedproductcb((purchasing)=> purchasing = []);
-                           } else {
+                 //          if ( Number(_inputfieldvalue) === 0 || _inputfieldvalue === '0' ) {
+                //             merchandise.system.request.product.splice(_requestproductspecificationidx, 1);
+                //               _specificproductpurchasetotalpcs.innerText = 'Total pcs: 0';
+                //               _specificproductpurchasetotalweight.innerText = 'Total weight: 0';  
+                //               _needstotalpayment.innerText = 'Needs: Total payment of 0 pesos';
+                //               props.allnonmrnselectedproductcb((purchasing)=> purchasing = []);
+                //               props.allmrnselectedproductcb((purchasing)=> purchasing = []);
+                //           } else {
   
-                               if ( _productspecification === undefined ) {
+               //                if ( _productspecification === undefined ) {
 
-                                  merchandise.system.request.product.push(data)
-                                 _specificproductpurchasetotalpcs.innerText = 'Total pcs: 1';
-                                 _specificproductpurchasetotalweight.innerText = `Total weight: ${merchandise.details.product.specification.weight}`;
-                                 _needstotalpayment.innerText = `Needs: Total payment of ${merchandise.system.request.product.reduce((previousValue, currentValue)=> Number(previousValue) + Number(currentValue.pricesbreakdown.price),0)} pesos`;
+              //                    merchandise.system.request.product.push(data)
+              //                   _specificproductpurchasetotalpcs.innerText = 'Total pcs: 1';
+              //                   _specificproductpurchasetotalweight.innerText = `Total weight: ${merchandise.details.product.specification.weight}`;
+              //                   _needstotalpayment.innerText = `Needs: Total payment of ${merchandise.system.request.product.reduce((previousValue, currentValue)=> Number(previousValue) + Number(currentValue.pricesbreakdown.price),0)} pesos`;
                               
-                               } else {  
-                                 alert(JSON.stringify(_productspecification))
-                                 merchandise.system.request.product.splice(_requestproductspecificationidx,1);
-                                 merchandise.system.request.product.push(data);
-                                _specificproductpurchasetotalpcs.innerText = `Total pcs: ${merchandise.system.request.product.reduce((currentValue, previousValue)=> currentValue + previousValue.pcs , 0)}`;
-                                _specificproductpurchasetotalweight.innerText = `Total weight: ${Number(merchandise.details.product.specification.weight) * Number(data.pcs)}`;
-                                _needstotalpayment.innerText = `Needs: Total payment of ${merchandise.system.request.product.reduce((previousValue, currentValue)=> Number(previousValue) + Number(currentValue.pricesbreakdown.price),0)} pesos`;  
+             //                  } else {  
+              //                   alert(JSON.stringify(_productspecification))
+              //                   merchandise.system.request.product.splice(_requestproductspecificationidx,1);
+              //                   merchandise.system.request.product.push(data);
+              //                  _specificproductpurchasetotalpcs.innerText = `Total pcs: ${merchandise.system.request.product.reduce((currentValue, previousValue)=> currentValue + previousValue.pcs , 0)}`;
+              //                  _specificproductpurchasetotalweight.innerText = `Total weight: ${Number(merchandise.details.product.specification.weight) * Number(data.pcs)}`;
+              //                  _needstotalpayment.innerText = `Needs: Total payment of ${merchandise.system.request.product.reduce((previousValue, currentValue)=> Number(previousValue) + Number(currentValue.pricesbreakdown.price),0)} pesos`;  
 
-                               }
+            //                   }
 
-                           }
+           //                }
 
-                           }
+          //                 }
 
-                           const _allselectedproduct = props.purchasing.map((purchasing)=> purchasing.system.request.product);
-                           props.allselectedproduct.data = _allselectedproduct.flat();   
+          //                 const _allselectedproduct = props.purchasing.map((purchasing)=> purchasing.system.request.product);
+          //                 props.allselectedproduct.data = _allselectedproduct.flat();   
 
-                           props.allnonmrnselectedproductcb((purchasingdata)=> purchasingdata = props.allselectedproduct.data.filter((purchasing)=> purchasing.category === 'nonmrn'));
+          //                 props.allnonmrnselectedproductcb((purchasingdata)=> purchasingdata = props.allselectedproduct.data.filter((purchasing)=> purchasing.category === 'nonmrn'));
 
-                           props.allmrnselectedproductcb((purchasingdata)=> purchasingdata = props.allselectedproduct.data.filter((purchasing)=>   purchasing.category === 'MRN' ));
+          //                 props.allmrnselectedproductcb((purchasingdata)=> purchasingdata = props.allselectedproduct.data.filter((purchasing)=>   purchasing.category === 'MRN' ));
 
-                           props.totalmerchandisepricecb((totalpurchasingpayment)=> totalpurchasingpayment = props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.pricesbreakdown.price,0))
+         //                  props.totalmerchandisepricecb((totalpurchasingpayment)=> totalpurchasingpayment = props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.pricesbreakdown.price,0))
           
                          }}/>
 
@@ -1748,14 +1900,20 @@ return (
                  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-detailsheaderindication'>Order specification</p>
                   <input type='text'
                          className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductorderspecificationindication'
-                         onChange={(evt)=> {
+                         onChange={ async (evt)=> {
 
                            const _inputfieldvalue = evt.target.value;
-                           const _productspecification = merchandise.system.request.product.find((product)=> product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
-                           const _requestproductspecificationidx = merchandise.system.request.product.findIndex((product)=> product.details.for.gender === merchandise.details.product.specification.for.gender  && product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
-                           
-                           _productspecification.specification = _inputfieldvalue
-                           
+
+                           // const _productspecification = merchandise.system.request.product.find((product)=> product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
+                           // const _requestproductspecificationidx = merchandise.system.request.product.findIndex((product)=> product.details.for.gender === merchandise.details.product.specification.for.gender  && product.details.category === merchandise.details.product.specification.category && product.details.color === merchandise.details.product.specification.color && product.details.size === merchandise.details.product.specification.size);
+                           // _productspecification.specification = _inputfieldvalue;
+
+                           const _selectedproduct = await selectedproductarray.find((data)=> data.authentications.productid === selectedproduct.authentications.productid);
+
+                           _selectedproduct.system.request.orderspeicfication = _inputfieldvalue;
+
+                           componentupdate();
+
                          }}/>
                 </Col>
                 <Col className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-selectedproductdetailscontainer-selectedproductclosebuttoncontainer'>
@@ -1766,6 +1924,16 @@ return (
                              const _buttoncontainer = _button.parentElement;
                              const _selectedproductdetailsandselectionconfigurationmodal = _buttoncontainer.parentElement;
                              _selectedproductdetailsandselectionconfigurationmodal.style.display = 'none';
+
+                             for(let i=0; i < selectedproductarray.length; i++ ) { 
+                              if (selectedproductarray[i].system.request.pcs == "0" || selectedproductarray[i].system.request.pcs == "") {
+                                  selectedproductarray.splice(i,1); 
+                              }
+                             }
+
+                             console.log(selectedproductarray);
+
+                             componentupdate();
 
                             }}>
                      close
@@ -1793,10 +1961,11 @@ return (
       md={12}
       lg={12}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer'>
-   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>You have ordered {props.purchasing.length} products, your {props.purchasing.length} purchasing tag's list's {props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.pcs ,0)} items overall weighing {props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.details.weight ,0)} grams</p>
+   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>You have ordered {props.purchasing.length} product (s), your {props.purchasing.length} purchasing tag's list's {selectedproductarray.length} items overall weighing {props.allselectedproduct.data.reduce((purchasing, purchases)=> purchasing + purchases.details.weight ,0)} grams</p>
    <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsrequestlimitreachheaderindication'>{props.requestlimitreacherrormessage}</p>
-   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Scaling was 1000 grams equal to 1 kilo</p>
-   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Door to door or delivery transactions or cargo order/purchase limit: 10,000 kilo's/1 ton</p>
+   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Scaling for weight is 1000 grams equal to 1 kilo</p>
+   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Scaling for common public, public and private cargo type delivery: 100 pesos weighting 100 per kilo or 1 kilo</p>
+   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>All door to door deliverie's transactions and cargo type shimpment limit: 10,000 kilo's/1 ton</p>
  </Col>
 
  <Col xs={12}
@@ -1804,10 +1973,10 @@ return (
       lg={12}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer'>
    <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>
-     The location you provided as cargo destination address: {props.user.details.location.shipment.address.street}, {props.user.details.location.shipment.address.baranggay}, {props.user.details.location.shipment.address.trademark}, {props.user.details.location.shipment.address.province}, {props.user.details.location.shipment.address.city}, {props.user.details.location.shipment.address.country}.
+     The location you provided as cargo destination address: {purchasingcargodestination}
    </p>
    <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>
-     You can navigate to map for your shipping, delivery type or door to door location configuration. Enter latitude and latitude for easy navigation or you can choose addresse's that are Xirbit is within your scope.
+     You can navigate and use map configuration for your shipping, delivery type or door to door location configuration. Enter latitude and latitude for easy navigation or you can choose addresse's that are within Vanguard's scope.
    </p>
  </Col>
 

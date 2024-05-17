@@ -798,13 +798,20 @@ const [products, productscb] = useState([
     definition: 'Product definition',
     authentications: {
      producttype: 'Product type',
-     productid: 'Product id'
+     productid: 'mrn-ricekohaku-1'
     },
     specifications: [
       {
+        productname: 'Kohaku Yellow',
+        rapportname: 'Rapport name',
+        definition: 'Product definition',
+        authentications: {
+          producttype: 'Product type',
+          productid: 'mrn-ricekohaku-1-category1'
+         },
         details: {
         product: {
-         name: 'Kohaku Yellow',
+         name: 'Kokaku / Kohaku Yellow',
          rapportname: 'Product rapport name',
          definition: 'Product definition',
          category: 'MRN',
@@ -821,7 +828,7 @@ const [products, productscb] = useState([
            },
            size: 'Product size',
            color: 'Product color',
-           weight: 'Product weight',
+           weight: 10,
            top: 'Top product specification',
            left: 'Left product specification',
            bottom: 'Bottom product specification',
@@ -881,50 +888,68 @@ const [products, productscb] = useState([
         },
         system: {
           request: {
-            product: [
-             {
-             pcs: 0,
-             details: {
-              for: {
-                  part: 'Product part',
-                  gender: 'Male',
-                  category: 'Adults' 
-              },
-              set: {
-                  set: false,
-                  productindication: 'Oridinary',
-                  pcs: 10
-              },
-              size: 'Product size',
-              color: 'Product color',
-              weight: 'Product weight',
-              top: 'Top product specification',
-              left: 'Left product specification',
-              bottom: 'Bottom product specification',
-              right: 'Right product specification',
-              front: 'Front product specification',
-              back: 'Back product specification'
-             },
-             pricesbreakdown: {
+            pcs: 0,
+            orderspecification: "",
+            merchandise: {
               price: 0,
               capital: 0,
               suggested_retail_price: 0,
-              vat:0
-             },
-             specification: 'Order specification'
-             }
-            ],
+              vat: 0,
+            },
             shipping: {
              category: 'Shipping category',
              weight: 'Shipping weight',
              fee: 0
-            }
+            },
+            totalpayment: {
+              price: 0
+            },
+            products: [
+              {
+              pcs: 0,
+              details: {
+               for: {
+                   part: 'Product part',
+                   gender: 'Male',
+                   category: 'Adults' 
+               },
+               set: {
+                   set: false,
+                   productindication: 'Oridinary',
+                   pcs: 10
+               },
+               size: 'Product size',
+               color: 'Product color',
+               weight: 'Product weight',
+               top: 'Top product specification',
+               left: 'Left product specification',
+               bottom: 'Bottom product specification',
+               right: 'Right product specification',
+               front: 'Front product specification',
+               back: 'Back product specification'
+              },
+              pricesbreakdown: {
+               price: 0,
+               capital: 0,
+               suggested_retail_price: 0,
+               vat:0
+              },
+              specification: 'Order specification'
+              }
+            ],
           },
           stocks: [
             {
+              productname: 'Kohaku / Kohaku Yellow / White Grains',
+              rapportname: 'Rapport name',
+              definition: 'Product definition',
+              authentications: {
+                producttype: 'Product type',
+                productid: 'mrn-ricekohaku-1-category1-product1'
+               },
               details: {
               product: {
-               name: 'Product name',
+               name: 'Kokahu / Kohaku Yellow / White grains',
                rapportname: 'Product rapport name',
                definition: 'Product definition',
                category: 'MRN',
@@ -1001,6 +1026,8 @@ const [products, productscb] = useState([
               },
               system: {
                 request: {
+                  pcs: 0,
+                  orderspecification: "",
                   product: [
                   ],
                   shipping: {
@@ -1009,385 +1036,7 @@ const [products, productscb] = useState([
                    fee: 0
                   }
                 },
-                stocks: [
-                  {
-                    details: {
-                    product: {
-                     name: 'Product name',
-                     rapportname: 'Product rapport name',
-                     definition: 'Product definition',
-                     category: 'MRN',
-                     specification: {
-                      for: {
-                       part: 'Product part',
-                       gender: 'Male',
-                       category: 'Adults' 
-                      },
-                      set: {
-                       set: false,
-                       productindication: 'Oridinary',
-                       pcs: 10
-                      },
-                      size: 'Product size',
-                      color: 'Product color',
-                      weight: 'Product weight',
-                      top: 'Top product specification',
-                      left: 'Left product specification',
-                      bottom: 'Bottom product specification',
-                      right: 'Right product specification',
-                      front: 'Front product specification',
-                      back: 'Back product specification'
-                      },
-                      pricesbreakdown: {
-                        price: 10,
-                        capital: 8,
-                        suggested_retail_price: 10,
-                        vat: 2
-                      },
-                      cybervisual: {
-                        images: {
-                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                          maindisplayimages: [
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          }
-                          ]
-                        },
-                        videos: [
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          }
-                        ]
-                      },
-                    },
-                    locations: {
-                      operations: [
-                        {
-                          street: 'Street',
-                          baranggay: 'Baranggay',
-                          trademark: 'Trademark',
-                          city: 'City',
-                          province: 'Province',
-                          country: 'Country'
-                        }
-                      ]
-                    }
-                    },
-                    system: {
-                      request: {
-                        product: [
-                        
-                        ],
-                        shipping: {
-                         category: 'Shipping category',
-                         weight: 'Shipping weight',
-                         fee: 0
-                        }
-                      },
-                      stocks: [
-                        
-                      ],
-                      purchase: {
-                        people: [],
-                        xirbit: []
-                      }
-                    }
-                  }, 
-                  {
-                    details: {
-                    product: {
-                     name: 'Product name',
-                     rapportname: 'Product rapport name',
-                     definition: 'Product definition',
-                     category: 'MRN',
-                     specification: {
-                      for: {
-                       part: 'Product part',
-                       gender: 'Male',
-                       category: 'Kids' 
-                      },
-                      set: {
-                       set: false,
-                       productindication: 'Oridinary',
-                       pcs: 10
-                      },
-                      size: 'Product size',
-                      color: 'Product color',
-                      weight: 'Product weight',
-                      top: 'Top product specification',
-                      left: 'Left product specification',
-                      bottom: 'Bottom product specification',
-                      right: 'Right product specification',
-                      front: 'Front product specification',
-                      back: 'Back product specification'
-                      },
-                      pricesbreakdown: {
-                        price: 10,
-                        capital: 8,
-                        suggested_retail_price: 10,
-                        vat: 2
-                      },
-                      cybervisual: {
-                        images: {
-                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                          maindisplayimages: [
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          }
-                          ]
-                        },
-                        videos: [
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          }
-                        ]
-                      },
-                    },
-                    locations: {
-                      operations: [
-                        {
-                          street: 'Street',
-                          baranggay: 'Baranggay',
-                          trademark: 'Trademark',
-                          city: 'City',
-                          province: 'Province',
-                          country: 'Country'
-                        }
-                      ]
-                    }
-                    },
-                    system: {
-                      request: {
-                        product: [
-                         {
-                         pcs: 0,
-                         details: {
-                          for: {
-                              part: 'Product part',
-                              gender: 'Male',
-                              category: 'Adults' 
-                          },
-                          set: {
-                              set: false,
-                              productindication: 'Oridinary',
-                              pcs: 10
-                          },
-                          size: 'Product size',
-                          color: 'Product color',
-                          weight: 'Product weight',
-                          top: 'Top product specification',
-                          left: 'Left product specification',
-                          bottom: 'Bottom product specification',
-                          right: 'Right product specification',
-                          front: 'Front product specification',
-                          back: 'Back product specification'
-                         },
-                         pricesbreakdown: {
-                          price: 0,
-                          capital: 0,
-                          suggested_retail_price: 0,
-                          vat:0
-                         },
-                         specification: 'Order specification'
-                         }
-                        ],
-                        shipping: {
-                         category: 'Shipping category',
-                         weight: 'Shipping weight',
-                         fee: 0
-                        }
-                      },
-                      stocks: [
-                        {
-                          details: {
-                            product: {
-                              name: 'Product name',
-                              rapportname: 'Product rapport name',
-                              definition: 'Product definition',
-                              specification: {
-                                for: {
-                                  gender: 'Gender specification',
-                                  category: 'Gender specificaiton category'
-                                },
-                                part: 'Product part',
-                                size: 'Product size',
-                                color: 'Product color',
-                                weight: 'Product weight',
-                                top: 'Top product specification',
-                                left: 'Left product specification',
-                                bottom: 'Bottom product specification',
-                                right: 'Right product specifi ation'
-                              },
-                              pricesbreakdown: {
-                              price: 10,
-                              capital: 8,
-                              suggested_retail_price: 10,
-                              vat: 2
-                              },
-                              cybervisual: {
-                                images: {
-                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                                maindisplayimages: [
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  },
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  },
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  }
-                                ]
-                                },
-                                videos: [
-                                  {
-                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                                  }
-                                ]
-                              },
-                            },
-                            locations: {
-                            operations: [
-                              {
-                                street: 'Street',
-                                baranggay: 'Baranggay',
-                                trademark: 'Trademark',
-                                city: 'City',
-                                province: 'Province',
-                                country: 'Country'
-                              }
-                            ]
-                            }
-                          },
-                          system: {
-                            order: {
-                              specification: 'Order specification'
-                            },
-                            stocks: [],
-                            purchase: {
-                              people: [],
-                              xirbit: []
-                            },
-                            pricesbreakdown: {
-                              shipping: {
-                                category: 'Shipping category',
-                                weight: 'Shipping weight',
-                                fee: 0
-                              }
-                            }
-                          }
-                        },
-                        {
-                          details: {
-                            product: {
-                              name: 'Product name',
-                              rapportname: 'Product rapport name',
-                              definition: 'Product definition',
-                              specification: {
-                                for: {
-                                  gender: 'Gender specification',
-                                  category: 'Gender specificaiton category'
-                                },
-                                part: 'Product part',
-                                size: 'Product size',
-                                color: 'Product color',
-                                weight: 'Product weight',
-                                top: 'Top product specification',
-                                left: 'Left product specification',
-                                bottom: 'Bottom product specification',
-                                right: 'Right product specifi ation'
-                              },
-                              pricesbreakdown: {
-                              price: 10,
-                              capital: 8,
-                              suggested_retail_price: 10,
-                              vat: 2
-                              },
-                              cybervisual: {
-                                images: {
-                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                                maindisplayimages: [
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  }
-                                ]
-                                },
-                                videos: [
-                                  {
-                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                                  }
-                                ]
-                              },
-                            },
-                            locations: {
-                            operations: [
-                              {
-                                street: 'Street',
-                                baranggay: 'Baranggay',
-                                trademark: 'Trademark',
-                                city: 'City',
-                                province: 'Province',
-                                country: 'Country'
-                              }
-                            ]
-                            }
-                          },
-                          system: {
-                            order: {
-                              specification: 'Order specification'
-                            },
-                            stocks: [],
-                            purchase: {
-                              people: [],
-                              xirbit: []
-                            },
-                            pricesbreakdown: {
-                              shipping: {
-                                category: 'Shipping category',
-                                weight: 'Shipping weight',
-                                fee: 0
-                              }
-                            }
-                          }
-                        },
-                      ],
-                      purchase: {
-                        people: [],
-                        xirbit: []
-                      }
-                    }
-                  }
-                ],
+                stocks: [],
                 purchase: {
                   people: [],
                   xirbit: []
@@ -1395,9 +1044,16 @@ const [products, productscb] = useState([
               }
             },
             {
-            details: {
+             productname: 'Kohaku / Kohaku Yellow / White Grains',
+             rapportname: 'Rapport name',
+             definition: 'Product definition',
+             authentications: {
+              producttype: 'Product type',
+              productid: 'mrn-ricekohaku-1-category1-product2'
+             },
+             details: {
               product: {
-               name: 'Product name',
+               name: 'Kohaku / Kohaku Yellow / White big grains',
                rapportname: 'Product rapport name',
                definition: 'Product definition',
                category: 'MRN',
@@ -1471,9 +1127,11 @@ const [products, productscb] = useState([
                   }
                 ]
               }
-            },
-            system: {
+             },
+             system: {
                 request: {
+                  pcs: 0,
+                  orderspecification: "",
                   product: [
                   ],
                   shipping: {
@@ -1482,385 +1140,7 @@ const [products, productscb] = useState([
                    fee: 0
                   }
                 },
-                stocks: [
-                  {
-                    details: {
-                    product: {
-                     name: 'Product name',
-                     rapportname: 'Product rapport name',
-                     definition: 'Product definition',
-                     category: 'MRN',
-                     specification: {
-                      for: {
-                       part: 'Product part',
-                       gender: 'Male',
-                       category: 'Adults' 
-                      },
-                      set: {
-                       set: false,
-                       productindication: 'Oridinary',
-                       pcs: 10
-                      },
-                      size: 'Product size',
-                      color: 'Product color',
-                      weight: 'Product weight',
-                      top: 'Top product specification',
-                      left: 'Left product specification',
-                      bottom: 'Bottom product specification',
-                      right: 'Right product specification',
-                      front: 'Front product specification',
-                      back: 'Back product specification'
-                      },
-                      pricesbreakdown: {
-                        price: 10,
-                        capital: 8,
-                        suggested_retail_price: 10,
-                        vat: 2
-                      },
-                      cybervisual: {
-                        images: {
-                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                          maindisplayimages: [
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          }
-                          ]
-                        },
-                        videos: [
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          }
-                        ]
-                      },
-                    },
-                    locations: {
-                      operations: [
-                        {
-                          street: 'Street',
-                          baranggay: 'Baranggay',
-                          trademark: 'Trademark',
-                          city: 'City',
-                          province: 'Province',
-                          country: 'Country'
-                        }
-                      ]
-                    }
-                    },
-                    system: {
-                      request: {
-                        product: [
-                        
-                        ],
-                        shipping: {
-                         category: 'Shipping category',
-                         weight: 'Shipping weight',
-                         fee: 0
-                        }
-                      },
-                      stocks: [
-                        
-                      ],
-                      purchase: {
-                        people: [],
-                        xirbit: []
-                      }
-                    }
-                  }, 
-                  {
-                    details: {
-                    product: {
-                     name: 'Product name',
-                     rapportname: 'Product rapport name',
-                     definition: 'Product definition',
-                     category: 'MRN',
-                     specification: {
-                      for: {
-                       part: 'Product part',
-                       gender: 'Male',
-                       category: 'Kids' 
-                      },
-                      set: {
-                       set: false,
-                       productindication: 'Oridinary',
-                       pcs: 10
-                      },
-                      size: 'Product size',
-                      color: 'Product color',
-                      weight: 'Product weight',
-                      top: 'Top product specification',
-                      left: 'Left product specification',
-                      bottom: 'Bottom product specification',
-                      right: 'Right product specification',
-                      front: 'Front product specification',
-                      back: 'Back product specification'
-                      },
-                      pricesbreakdown: {
-                        price: 10,
-                        capital: 8,
-                        suggested_retail_price: 10,
-                        vat: 2
-                      },
-                      cybervisual: {
-                        images: {
-                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                          maindisplayimages: [
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          },
-                          {
-                            displayimage: '../images/landingpage/bondpaperimage.jpg'
-                          }
-                          ]
-                        },
-                        videos: [
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          },
-                          {
-                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                          }
-                        ]
-                      },
-                    },
-                    locations: {
-                      operations: [
-                        {
-                          street: 'Street',
-                          baranggay: 'Baranggay',
-                          trademark: 'Trademark',
-                          city: 'City',
-                          province: 'Province',
-                          country: 'Country'
-                        }
-                      ]
-                    }
-                    },
-                    system: {
-                      request: {
-                        product: [
-                         {
-                         pcs: 0,
-                         details: {
-                          for: {
-                              part: 'Product part',
-                              gender: 'Male',
-                              category: 'Adults' 
-                          },
-                          set: {
-                              set: false,
-                              productindication: 'Oridinary',
-                              pcs: 10
-                          },
-                          size: 'Product size',
-                          color: 'Product color',
-                          weight: 'Product weight',
-                          top: 'Top product specification',
-                          left: 'Left product specification',
-                          bottom: 'Bottom product specification',
-                          right: 'Right product specification',
-                          front: 'Front product specification',
-                          back: 'Back product specification'
-                         },
-                         pricesbreakdown: {
-                          price: 0,
-                          capital: 0,
-                          suggested_retail_price: 0,
-                          vat:0
-                         },
-                         specification: 'Order specification'
-                         }
-                        ],
-                        shipping: {
-                         category: 'Shipping category',
-                         weight: 'Shipping weight',
-                         fee: 0
-                        }
-                      },
-                      stocks: [
-                        {
-                          details: {
-                            product: {
-                              name: 'Product name',
-                              rapportname: 'Product rapport name',
-                              definition: 'Product definition',
-                              specification: {
-                                for: {
-                                  gender: 'Gender specification',
-                                  category: 'Gender specificaiton category'
-                                },
-                                part: 'Product part',
-                                size: 'Product size',
-                                color: 'Product color',
-                                weight: 'Product weight',
-                                top: 'Top product specification',
-                                left: 'Left product specification',
-                                bottom: 'Bottom product specification',
-                                right: 'Right product specifi ation'
-                              },
-                              pricesbreakdown: {
-                              price: 10,
-                              capital: 8,
-                              suggested_retail_price: 10,
-                              vat: 2
-                              },
-                              cybervisual: {
-                                images: {
-                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                                maindisplayimages: [
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  },
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  },
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  }
-                                ]
-                                },
-                                videos: [
-                                  {
-                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                                  }
-                                ]
-                              },
-                            },
-                            locations: {
-                            operations: [
-                              {
-                                street: 'Street',
-                                baranggay: 'Baranggay',
-                                trademark: 'Trademark',
-                                city: 'City',
-                                province: 'Province',
-                                country: 'Country'
-                              }
-                            ]
-                            }
-                          },
-                          system: {
-                            order: {
-                              specification: 'Order specification'
-                            },
-                            stocks: [],
-                            purchase: {
-                              people: [],
-                              xirbit: []
-                            },
-                            pricesbreakdown: {
-                              shipping: {
-                                category: 'Shipping category',
-                                weight: 'Shipping weight',
-                                fee: 0
-                              }
-                            }
-                          }
-                        },
-                        {
-                          details: {
-                            product: {
-                              name: 'Product name',
-                              rapportname: 'Product rapport name',
-                              definition: 'Product definition',
-                              specification: {
-                                for: {
-                                  gender: 'Gender specification',
-                                  category: 'Gender specificaiton category'
-                                },
-                                part: 'Product part',
-                                size: 'Product size',
-                                color: 'Product color',
-                                weight: 'Product weight',
-                                top: 'Top product specification',
-                                left: 'Left product specification',
-                                bottom: 'Bottom product specification',
-                                right: 'Right product specifi ation'
-                              },
-                              pricesbreakdown: {
-                              price: 10,
-                              capital: 8,
-                              suggested_retail_price: 10,
-                              vat: 2
-                              },
-                              cybervisual: {
-                                images: {
-                                maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                                maindisplayimages: [
-                                  {
-                                    displayimage: '../images/landingpage/bondpaperimage.jpg'
-                                  }
-                                ]
-                                },
-                                videos: [
-                                  {
-                                  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                                  }
-                                ]
-                              },
-                            },
-                            locations: {
-                            operations: [
-                              {
-                                street: 'Street',
-                                baranggay: 'Baranggay',
-                                trademark: 'Trademark',
-                                city: 'City',
-                                province: 'Province',
-                                country: 'Country'
-                              }
-                            ]
-                            }
-                          },
-                          system: {
-                            order: {
-                              specification: 'Order specification'
-                            },
-                            stocks: [],
-                            purchase: {
-                              people: [],
-                              xirbit: []
-                            },
-                            pricesbreakdown: {
-                              shipping: {
-                                category: 'Shipping category',
-                                weight: 'Shipping weight',
-                                fee: 0
-                              }
-                            }
-                          }
-                        },
-                      ],
-                      purchase: {
-                        people: [],
-                        xirbit: []
-                      }
-                    }
-                  }
-                ],
+                stocks: [],
                 purchase: {
                   people: [],
                   xirbit: []
@@ -1880,6 +1160,13 @@ const [products, productscb] = useState([
 
 const [purchasing, purchasingcb] = useState([
  {
+  productname: 'Kohaku / Kohaku Yellow',
+  rapportname: 'Rapport name',
+  definition: 'Product definition',
+  authentications: {
+   producttype: 'Product type',
+   productid: 'mrn-ricekohaku-1-category1'
+  },
   details: {
   product: {
    name: 'Product name',
@@ -1906,14 +1193,14 @@ const [purchasing, purchasingcb] = useState([
     right: 'Right product specification',
     front: 'Front product specification',
     back: 'Back product specification'
-    },
-    pricesbreakdown: {
+   },
+   pricesbreakdown: {
       price: 10,
       capital: 8,
       suggested_retail_price: 10,
       vat: 2
-    },
-    cybervisual: {
+   },
+   cybervisual: {
       images: {
         maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
         maindisplayimages: [
@@ -1942,7 +1229,7 @@ const [purchasing, purchasingcb] = useState([
           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
         }
       ]
-    },
+   },
   },
   locations: {
     operations: [
@@ -1959,492 +1246,141 @@ const [purchasing, purchasingcb] = useState([
   },
   system: {
     request: {
-      product: [
-      ],
-       shipping: {
+      pcs: 0,
+      orderspecification: "",
+      merchandise: {
+        price: 0,
+        capital: 0,
+        suggested_retail_price: 0,
+        vat: 0,
+      },
+      shipping: {
         category: 'Shipping category',
         weight: 'Shipping weight',
         fee: 0
-       }
-    },
-    stocks: [
-      {
-        details: {
-        product: {
-         name: 'Product name',
-         rapportname: 'Product rapport name',
-         definition: 'Product definition',
-         category: 'MRN',
-         specification: {
-          for: {
-           part: 'Product part',
-           gender: 'Male',
-           category: 'Adults' 
-          },
-          set: {
-           set: false,
-           productindication: 'Oridinary',
-           pcs: 10
-          },
-          size: 'Product size',
-          color: 'Product color',
-          weight: 10,
-          top: 'Top product specification',
-          left: 'Left product specification',
-          bottom: 'Bottom product specification',
-          right: 'Right product specification',
-          front: 'Front product specification',
-          back: 'Back product specification'
-          },
-          pricesbreakdown: {
-            price: 10,
-            capital: 8,
-            suggested_retail_price: 10,
-            vat: 2
-          },
-          cybervisual: {
-            images: {
-              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-              maindisplayimages: [
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              }
-              ]
-            },
-            videos: [
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              }
-            ]
-          },
-        },
-        locations: {
-          operations: [
-            {
-              street: 'Street',
-              baranggay: 'Baranggay',
-              trademark: 'Trademark',
-              city: 'City',
-              province: 'Province',
-              country: 'Country'
-            }
-          ]
-        }
-        },
-        system: {
-          request: {
-            product: [
-            
-            ],
-            shipping: {
-             category: 'Shipping category',
-             weight: 'Shipping weight',
-             fee: 0
-            }
-          },
-          stocks: [
-            
-          ],
-          purchase: {
-            people: [],
-            xirbit: []
-          }
-        }
-      }, 
-      {
-        details: {
-        product: {
-         name: 'Product name',
-         rapportname: 'Product rapport name',
-         definition: 'Product definition',
-         category: 'MRN',
-         specification: {
-          for: {
-           part: 'Product part',
-           gender: 'Male',
-           category: 'Kids' 
-          },
-          set: {
-           set: false,
-           productindication: 'Oridinary',
-           pcs: 10
-          },
-          size: 'Product size',
-          color: 'Product color',
-          weight: 10,
-          top: 'Top product specification',
-          left: 'Left product specification',
-          bottom: 'Bottom product specification',
-          right: 'Right product specification',
-          front: 'Front product specification',
-          back: 'Back product specification'
-          },
-          pricesbreakdown: {
-            price: 10,
-            capital: 8,
-            suggested_retail_price: 10,
-            vat: 2
-          },
-          cybervisual: {
-            images: {
-              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-              maindisplayimages: [
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              }
-              ]
-            },
-            videos: [
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              }
-            ]
-          },
-        },
-        locations: {
-          operations: [
-            {
-              street: 'Street',
-              baranggay: 'Baranggay',
-              trademark: 'Trademark',
-              city: 'City',
-              province: 'Province',
-              country: 'Country'
-            }
-          ]
-        }
-        },
-        system: {
-          request: {
-            product: [
-             {
-             pcs: 0,
-             details: {
-              for: {
-                  part: 'Product part',
-                  gender: 'Male',
-                  category: 'Adults' 
-              },
-              set: {
-                  set: false,
-                  productindication: 'Oridinary',
-                  pcs: 10
-              },
-              size: 'Product size',
-              color: 'Product color',
-              weight: 'Product weight',
-              top: 'Top product specification',
-              left: 'Left product specification',
-              bottom: 'Bottom product specification',
-              right: 'Right product specification',
-              front: 'Front product specification',
-              back: 'Back product specification'
-             },
-             pricesbreakdown: {
-              price: 0,
-              capital: 0,
-              suggested_retail_price: 0,
-              vat:0
-             },
-             specification: 'Order specification'
-             }
-            ],
-            shipping: {
-             category: 'Shipping category',
-             weight: 'Shipping weight',
-             fee: 0
-            }
-          },
-          stocks: [
-            {
-              details: {
-                product: {
-                  name: 'Product name',
-                  rapportname: 'Product rapport name',
-                  definition: 'Product definition',
-                  specification: {
-                    for: {
-                      gender: 'Gender specification',
-                      category: 'Gender specificaiton category'
-                    },
-                    part: 'Product part',
-                    size: 'Product size',
-                    color: 'Product color',
-                    weight: 'Product weight',
-                    top: 'Top product specification',
-                    left: 'Left product specification',
-                    bottom: 'Bottom product specification',
-                    right: 'Right product specifi ation'
-                  },
-                  pricesbreakdown: {
-                  price: 10,
-                  capital: 8,
-                  suggested_retail_price: 10,
-                  vat: 2
-                  },
-                  cybervisual: {
-                    images: {
-                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                    maindisplayimages: [
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      },
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      },
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      }
-                    ]
-                    },
-                    videos: [
-                      {
-                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                      }
-                    ]
-                  },
-                },
-                locations: {
-                operations: [
-                  {
-                    street: 'Street',
-                    baranggay: 'Baranggay',
-                    trademark: 'Trademark',
-                    city: 'City',
-                    province: 'Province',
-                    country: 'Country'
-                  }
-                ]
-                }
-              },
-              system: {
-                order: {
-                  specification: 'Order specification'
-                },
-                stocks: [],
-                purchase: {
-                  people: [],
-                  xirbit: []
-                },
-                pricesbreakdown: {
-                  shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                  }
-                }
-              }
-            },
-            {
-              details: {
-                product: {
-                  name: 'Product name',
-                  rapportname: 'Product rapport name',
-                  definition: 'Product definition',
-                  specification: {
-                    for: {
-                      gender: 'Gender specification',
-                      category: 'Gender specificaiton category'
-                    },
-                    part: 'Product part',
-                    size: 'Product size',
-                    color: 'Product color',
-                    weight: 'Product weight',
-                    top: 'Top product specification',
-                    left: 'Left product specification',
-                    bottom: 'Bottom product specification',
-                    right: 'Right product specifi ation'
-                  },
-                  pricesbreakdown: {
-                  price: 10,
-                  capital: 8,
-                  suggested_retail_price: 10,
-                  vat: 2
-                  },
-                  cybervisual: {
-                    images: {
-                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                    maindisplayimages: [
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      }
-                    ]
-                    },
-                    videos: [
-                      {
-                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                      }
-                    ]
-                  },
-                },
-                locations: {
-                operations: [
-                  {
-                    street: 'Street',
-                    baranggay: 'Baranggay',
-                    trademark: 'Trademark',
-                    city: 'City',
-                    province: 'Province',
-                    country: 'Country'
-                  }
-                ]
-                }
-              },
-              system: {
-                order: {
-                  specification: 'Order specification'
-                },
-                stocks: [],
-                purchase: {
-                  people: [],
-                  xirbit: []
-                },
-                pricesbreakdown: {
-                  shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                  }
-                }
-              }
-            },
-          ],
-          purchase: {
-            people: [],
-            xirbit: []
-          }
-        }
-      }
-    ],
-    purchase: {
-      people: [],
-      xirbit: []
-    }
-  }
- },
- {
-  details: {
-  product: {
-   name: 'Product name',
-   rapportname: 'Product rapport name',
-   definition: 'Product definition',
-   category: 'MRN',
-   specification: {
-    for: {
-     part: 'Product part',
-     gender: 'Male',
-     category: 'Adults' 
-    },
-    set: {
-     set: false,
-     productindication: 'Oridinary',
-     pcs: 10
-    },
-    size: 'Product size',
-    color: 'Product color',
-    weight: 10,
-    top: 'Top product specification',
-    left: 'Left product specification',
-    bottom: 'Bottom product specification',
-    right: 'Right product specification',
-    front: 'Front product specification',
-    back: 'Back product specification'
-    },
-    pricesbreakdown: {
-      price: 10,
-      capital: 8,
-      suggested_retail_price: 10,
-      vat: 2
-    },
-    cybervisual: {
-      images: {
-        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-        maindisplayimages: [
-        {
-          displayimage: '../images/landingpage/bondpaperimage.jpg'
-        },
-        {
-          displayimage: '../images/landingpage/bondpaperimage.jpg'
-        },
-        {
-          displayimage: '../images/landingpage/bondpaperimage.jpg'
-        }
-        ]
-      },
-      videos: [
-        {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-        },
-        {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-        },
-        {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-        },
-        {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-        }
-      ]
-    },
-  },
-  locations: {
-    operations: [
-      {
-        street: 'Street',
-        baranggay: 'Baranggay',
-        trademark: 'Trademark',
-        city: 'City',
-        province: 'Province',
-        country: 'Country'
-      }
-    ]
-  }
-  },
-  system: {
-    request: {
-      product: [
+       },
+       totalpayment: {
+         price: 0
+       },
+      products: [
       ],
-      shipping: {
-       category: 'Shipping category',
-       weight: 'Shipping weight',
-       fee: 0
-      }
     },
     stocks: [
       {
+        productname: 'Kohaku / Kohaku Yellow / White Grains',
+        rapportname: 'Product rapport name',
+        definition: 'Product definition',
+        authentications: {
+          producttype: 'Product type',
+          productid: 'mrn-ricekohaku-1-category1-product1'
+         },
         details: {
+         product: {
+         name: 'Kokahu / Kohaku Yellow / White grains',
+         rapportname: 'Product rapport name',
+         definition: 'Product definition',
+         category: 'MRN',
+         specification: {
+          for: {
+           part: 'Product part',
+           gender: 'Male',
+           category: 'Adults' 
+          },
+          set: {
+           set: false,
+           productindication: 'Oridinary',
+           pcs: 10
+          },
+          size: 'Product size',
+          color: 'Product color',
+          weight: 10,
+          top: 'Top product specification',
+          left: 'Left product specification',
+          bottom: 'Bottom product specification',
+          right: 'Right product specification',
+          front: 'Front product specification',
+          back: 'Back product specification'
+          },
+          pricesbreakdown: {
+            price: 10,
+            capital: 8,
+            suggested_retail_price: 10,
+            vat: 2
+          },
+          cybervisual: {
+            images: {
+              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+              maindisplayimages: [
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              }
+              ]
+            },
+            videos: [
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              }
+            ]
+          },
+         },
+         locations: {
+          operations: [
+            {
+              street: 'Street',
+              baranggay: 'Baranggay',
+              trademark: 'Trademark',
+              city: 'City',
+              province: 'Province',
+              country: 'Country'
+            }
+          ]
+         }
+         },
+         system: {
+          request: {
+            pcs: 0,
+            orderspecification: "",
+            product: [
+            ],
+            shipping: {
+             category: 'Shipping category',
+             weight: 'Shipping weight',
+             fee: 0
+            }
+          },
+          stocks: [],
+          purchase: {
+            people: [],
+            xirbit: []
+          }
+         }
+      },
+      {
+      productname: 'Kohaku / Kohaku Yellow / White Grains',
+      rapportname: 'Product rapport name',
+      definition: 'Product definition',
+      authentications: {
+        producttype: 'Product type',
+        productid: 'mrn-ricekohaku-1-category1-product2'
+      },
+      details: {
         product: {
-         name: 'Product name',
+         name: 'Kohaku / Kohaku Yellow / White big grains',
          rapportname: 'Product rapport name',
          definition: 'Product definition',
          category: 'MRN',
@@ -2518,11 +1454,12 @@ const [purchasing, purchasingcb] = useState([
             }
           ]
         }
-        },
-        system: {
+      },
+      system: {
           request: {
+            pcs: 0,
+            orderspecification: "",
             product: [
-            
             ],
             shipping: {
              category: 'Shipping category',
@@ -2530,293 +1467,12 @@ const [purchasing, purchasingcb] = useState([
              fee: 0
             }
           },
-          stocks: [
-            
-          ],
+          stocks: [],
           purchase: {
             people: [],
             xirbit: []
           }
-        }
-      }, 
-      {
-        details: {
-        product: {
-         name: 'Product name',
-         rapportname: 'Product rapport name',
-         definition: 'Product definition',
-         category: 'MRN',
-         specification: {
-          for: {
-           part: 'Product part',
-           gender: 'Male',
-           category: 'Kids' 
-          },
-          set: {
-           set: false,
-           productindication: 'Oridinary',
-           pcs: 10
-          },
-          size: 'Product size',
-          color: 'Product color',
-          weight: 10,
-          top: 'Top product specification',
-          left: 'Left product specification',
-          bottom: 'Bottom product specification',
-          right: 'Right product specification',
-          front: 'Front product specification',
-          back: 'Back product specification'
-          },
-          pricesbreakdown: {
-            price: 10,
-            capital: 8,
-            suggested_retail_price: 10,
-            vat: 2
-          },
-          cybervisual: {
-            images: {
-              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-              maindisplayimages: [
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              },
-              {
-                displayimage: '../images/landingpage/bondpaperimage.jpg'
-              }
-              ]
-            },
-            videos: [
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              },
-              {
-                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-              }
-            ]
-          },
-        },
-        locations: {
-          operations: [
-            {
-              street: 'Street',
-              baranggay: 'Baranggay',
-              trademark: 'Trademark',
-              city: 'City',
-              province: 'Province',
-              country: 'Country'
-            }
-          ]
-        }
-        },
-        system: {
-          request: {
-            product: [
-             {
-             pcs: 0,
-             details: {
-              for: {
-                  part: 'Product part',
-                  gender: 'Male',
-                  category: 'Adults' 
-              },
-              set: {
-                  set: false,
-                  productindication: 'Oridinary',
-                  pcs: 10
-              },
-              size: 'Product size',
-              color: 'Product color',
-              weight: 'Product weight',
-              top: 'Top product specification',
-              left: 'Left product specification',
-              bottom: 'Bottom product specification',
-              right: 'Right product specification',
-              front: 'Front product specification',
-              back: 'Back product specification'
-             },
-             pricesbreakdown: {
-              price: 0,
-              capital: 0,
-              suggested_retail_price: 0,
-              vat:0
-             },
-             specification: 'Order specification'
-             }
-            ],
-            shipping: {
-             category: 'Shipping category',
-             weight: 'Shipping weight',
-             fee: 0
-            }
-          },
-          stocks: [
-            {
-              details: {
-                product: {
-                  name: 'Product name',
-                  rapportname: 'Product rapport name',
-                  definition: 'Product definition',
-                  specification: {
-                    for: {
-                      gender: 'Gender specification',
-                      category: 'Gender specificaiton category'
-                    },
-                    part: 'Product part',
-                    size: 'Product size',
-                    color: 'Product color',
-                    weight: 'Product weight',
-                    top: 'Top product specification',
-                    left: 'Left product specification',
-                    bottom: 'Bottom product specification',
-                    right: 'Right product specifi ation'
-                  },
-                  pricesbreakdown: {
-                  price: 10,
-                  capital: 8,
-                  suggested_retail_price: 10,
-                  vat: 2
-                  },
-                  cybervisual: {
-                    images: {
-                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                    maindisplayimages: [
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      },
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      },
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      }
-                    ]
-                    },
-                    videos: [
-                      {
-                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                      }
-                    ]
-                  },
-                },
-                locations: {
-                operations: [
-                  {
-                    street: 'Street',
-                    baranggay: 'Baranggay',
-                    trademark: 'Trademark',
-                    city: 'City',
-                    province: 'Province',
-                    country: 'Country'
-                  }
-                ]
-                }
-              },
-              system: {
-                order: {
-                  specification: 'Order specification'
-                },
-                stocks: [],
-                purchase: {
-                  people: [],
-                  xirbit: []
-                },
-                pricesbreakdown: {
-                  shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                  }
-                }
-              }
-            },
-            {
-              details: {
-                product: {
-                  name: 'Product name',
-                  rapportname: 'Product rapport name',
-                  definition: 'Product definition',
-                  specification: {
-                    for: {
-                      gender: 'Gender specification',
-                      category: 'Gender specificaiton category'
-                    },
-                    part: 'Product part',
-                    size: 'Product size',
-                    color: 'Product color',
-                    weight: 'Product weight',
-                    top: 'Top product specification',
-                    left: 'Left product specification',
-                    bottom: 'Bottom product specification',
-                    right: 'Right product specifi ation'
-                  },
-                  pricesbreakdown: {
-                  price: 10,
-                  capital: 8,
-                  suggested_retail_price: 10,
-                  vat: 2
-                  },
-                  cybervisual: {
-                    images: {
-                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                    maindisplayimages: [
-                      {
-                        displayimage: '../images/landingpage/bondpaperimage.jpg'
-                      }
-                    ]
-                    },
-                    videos: [
-                      {
-                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                      }
-                    ]
-                  },
-                },
-                locations: {
-                operations: [
-                  {
-                    street: 'Street',
-                    baranggay: 'Baranggay',
-                    trademark: 'Trademark',
-                    city: 'City',
-                    province: 'Province',
-                    country: 'Country'
-                  }
-                ]
-                }
-              },
-              system: {
-                order: {
-                  specification: 'Order specification'
-                },
-                stocks: [],
-                purchase: {
-                  people: [],
-                  xirbit: []
-                },
-                pricesbreakdown: {
-                  shipping: {
-                    category: 'Shipping category',
-                    weight: 'Shipping weight',
-                    fee: 0
-                  }
-                }
-              }
-            },
-          ],
-          purchase: {
-            people: [],
-            xirbit: []
-          }
-        }
+      }   
       }
     ],
     purchase: {
@@ -2833,10 +1489,10 @@ useEffect(()=> {
    $viewportscreenbreakpoints.mdviewportscreenbreakpoint();
    $viewportscreenbreakpoints.lgviewportscreenbreakpoint();
 
-  //getUIUserAuthenticationData()
-  //getDatabaseData()
+   //getUIUserAuthenticationData()
+   //getDatabaseData()
 
-  loadWelcomeIntroductionModal();
+   loadWelcomeIntroductionModal();
 
 }, [location, $xsviewport, $mdviewport, $lgviewport, viewport, uidata, user, databasedata]);
 

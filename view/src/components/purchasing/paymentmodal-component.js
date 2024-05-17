@@ -100,6 +100,7 @@ export default function PaymentModal(props) {
                md={3}
                lg={3}
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-pricelistcontainer'>
+          {/*
             {
              props.purchasing.map((merchandise,idx)=> {
                 return (
@@ -110,11 +111,13 @@ export default function PaymentModal(props) {
                 )
              })
             }
+          */}
           </Col>
           <Col xs={3}
                md={3}
                lg={3}
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-weightlistcontainer'>
+            {/* 
                 {
                   props.purchasing.map((merchandise,idx)=> {
                     return (
@@ -125,6 +128,7 @@ export default function PaymentModal(props) {
                     )
                   })
                 }
+              */}
           </Col>
           <Col xs={6}
                md={6}

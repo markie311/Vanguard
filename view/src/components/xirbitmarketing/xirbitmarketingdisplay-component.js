@@ -2000,8 +2000,33 @@ function MarketingDisplayPaymentDetails(props) {
        md={12}
        lg={12}
        className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer'>
+
+     {
+       props.selectedmerchandise.specifications.map((selectedmerchandise, selectedmerchandiseidx)=> {
+        return (
+         <Col xs={12}
+               md={6}
+               lg={6}
+               key={selectedmerchandiseidx}
+               className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer'>
+            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>For</p>
+            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>{selectedmerchandise.details.product.specification.for.gender}, {selectedmerchandise.details.product.specification.for.category}</p>
+            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>Dont worry about the EXPERIENCES. All of this was prepared PERSONALLY. PREPARATIONS WILL TELL IT WILL HAVE FREEDOM, BEFORE SELECTING "ALONE".</p>
+             <Col className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingcontainer'>
+              <button className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingbutton'
+                      onClick={(evt)=> {
+                       alert(JSON.stringify(selectedmerchandise))
+                       console.log(selectedmerchandise)
+                       props.purchasingcb((selectedmerchandises) => [...selectedmerchandises, selectedmerchandise])
+                      }}>
+                 add to purchasing
+               </button>
+            </Col>
+          </Col> 
+        )
+       })
+     }
  
-  
 
    </Row>
  )

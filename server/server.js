@@ -9,8 +9,6 @@ const mongodb = require('./lib/mongodb/database');
 const app = express();
 const cors = require('cors');
 
-const axios = require("axios");
-
 const databaseRoute = require('./routes/database/database.js');
 const usersRoute = require('./routes/users/usersRoute.js');
 const requestsRoute = require('./routes/requests/requestsroute.js');
