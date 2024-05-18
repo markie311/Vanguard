@@ -51,6 +51,9 @@ const [purchasingtotalweight, purchasingtotalweightcb] = useState(0);
 const [purchasingtotalcargofee, purchasingtotalcargofeecb] = useState(0);
 const [purchasigtotalpayment, purchasigtotalpaymentcb] = useState(0);
 
+const [purchasingtotalmrnproducts, purchasingtotalmrnproductscb] = useState([]);
+const [purchasingtotalnonmrnprodutcs, purchasingtotalnonmrnproductscb] = useState([]);
+
 const [privateauthenticationlocations, privateauthenticationlocationscb] = useState(false);
 
 const [selectedproduct, selectedproductcb] = useState(
@@ -143,13 +146,24 @@ country: 'Country'
 },
 system: {
 request: {
-product: [
-],
+pcs: 0,
+orderspecification: "",
+merchandise: {
+price: 0,
+capital: 0,
+suggested_retail_price: 0,
+vat: 0,
+},
 shipping: {
 category: 'Shipping category',
 weight: 'Shipping weight',
 fee: 0
-}
+},
+totalpayment: {
+  price: 0
+},
+products: [
+]
 },
 stocks: [
 {
@@ -615,6 +629,107 @@ _cargolocationdestinationheaderindications[9].innerText = `Lon: ${position.coord
 
 function purchasinggetprivateauthenticationlocations(location, location2) {
  alert(location)
+}
+
+function getCargoFee(weight) {
+
+  switch(true) {
+   case 0:
+    return 0;
+   break;
+   case weight === 1000:
+   return 100;
+   break;
+   case weight < 1000:
+    return 100;
+   break;
+   case weight > 1000:
+    return 200;
+   break;
+   case weight === 2000:
+   return 200;
+   break;
+   case weight < 2000:
+    return 200;
+   break;
+   case weight > 2000:
+    return 300;
+   break;
+   case weight === 3000:
+   return 300;
+   break;
+   case weight < 3000:
+    return 300;
+   break;
+   case weight > 3000:
+    return 400;
+   break;
+   case weight === 4000:
+   return 400;
+   break;
+   case weight < 4000:
+    return 400;
+   break;
+   case weight > 4000:
+    return 500;
+   break;
+   case weight === 5000:
+   return 500;
+   break;
+   case weight < 5000:
+    return 500;
+   break;
+   case weight > 5000:
+    return 600;
+   break;
+   case weight === 6000:
+   return 600;
+   break;
+   case weight < 6000:
+    return 600;
+   break;
+   case weight > 6000:
+    return 700;
+   break;
+   case weight === 7000:
+   return 700;
+   break;
+   case weight < 7000:
+    return 700;
+   break;
+   case weight > 7000:
+    return 800;
+   break;
+   case weight === 8000:
+   return 800;
+   break;
+   case weight < 8000:
+    return 800;
+   break;
+   case weight > 8000:
+    return 900;
+   break;
+   case weight === 9000:
+   return 900;
+   break;
+   case weight < 9000:
+    return 900;
+   break;
+   case weight > 9000:
+    return 1000;
+   break;
+   case weight === 10000:
+   return 1000;
+   break;
+   case weight < 10000:
+    return 1000;
+   break;
+   case weight > 10000:
+    return false;
+   break;
+   default:
+  }
+
 }
 
 return (
@@ -1564,6 +1679,9 @@ return (
               <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication'>
                 Needs: Total of 0 pesos
               </p>
+              <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsgridcontainer-merchandisedetailstag-productdetailscontainer-productdetailsheaderindication'>
+                This cargo or shipment or delivery current fee: Total of 0 pesos
+              </p>
             </Col>
           </Col>
           <Col xs={12}
@@ -1607,68 +1725,77 @@ return (
                                   producttype: stocks.authentications.producttype,
                                   productid: stocks.authentications.productid
                                 },
-                                  details: {
-                                      product: {
-                                       name: stocks.details.product.name,
-                                       rapportname: stocks.details.product.rapportname,
-                                       definition: stocks.details.product.definition,
-                                       category: stocks.details.product.category,
-                                       specification: {
-                                        for: {
-                                        part: stocks.details.product.specification.part,
-                                        gender: stocks.details.product.specification.gender,
-                                        category: stocks.details.product.specification.category 
+                                details: {
+                                    product: {
+                                      name: stocks.details.product.name,
+                                      rapportname: stocks.details.product.rapportname,
+                                      definition: stocks.details.product.definition,
+                                      category: stocks.details.product.category,
+                                      specification: {
+                                      for: {
+                                      part: stocks.details.product.specification.part,
+                                      gender: stocks.details.product.specification.gender,
+                                      category: stocks.details.product.specification.category 
+                                      },
+                                      set: {
+                                        set: stocks.details.product.specification.set.set,
+                                        productindication: stocks.details.product.specification.set.productindication,
+                                        pcs: stocks.details.product.specification.set.pcs
+                                      },
+                                      size: stocks.details.product.specification.size,
+                                      color: stocks.details.product.specification.color,
+                                      weight: stocks.details.product.specification.weight,
+                                      top: stocks.details.product.specification.top,
+                                      left: stocks.details.product.specification.left,
+                                      bottom: stocks.details.product.specification.bottom,
+                                      right: stocks.details.product.specification.right,
+                                      front: stocks.details.product.specification.front,
+                                      back: stocks.details.product.specification.back
+                                      },
+                                      pricesbreakdown: {
+                                        price: stocks.details.product.pricesbreakdown.price,
+                                        capital: stocks.details.product.pricesbreakdown.capital,
+                                        suggested_retail_price: stocks.details.product.pricesbreakdown.suggested_retail_price,
+                                        vat: stocks.details.product.pricesbreakdown.vat
+                                    },
+                                    cybervisual: {
+                                        images: {
+                                          maindisplayimage: stocks.details.product.cybervisual.images.maindisplayimage,
+                                          maindisplayimages: stocks.details.product.cybervisual.images.maindisplayimages
                                         },
-                                        set: {
-                                         set: stocks.details.product.specification.set.set,
-                                         productindication: stocks.details.product.specification.set.productindication,
-                                         pcs: stocks.details.product.specification.set.pcs
-                                        },
-                                        size: stocks.details.product.specification.size,
-                                        color: stocks.details.product.specification.color,
-                                        weight: stocks.details.product.specification.weight,
-                                        top: stocks.details.product.specification.top,
-                                        left: stocks.details.product.specification.left,
-                                        bottom: stocks.details.product.specification.bottom,
-                                        right: stocks.details.product.specification.right,
-                                        front: stocks.details.product.specification.front,
-                                        back: stocks.details.product.specification.back
-                                       },
-                                       pricesbreakdown: {
-                                          price: stocks.details.product.pricesbreakdown.price,
-                                          capital: stocks.details.product.pricesbreakdown.capital,
-                                          suggested_retail_price: stocks.details.product.pricesbreakdown.suggested_retail_price,
-                                          vat: stocks.details.product.pricesbreakdown.vat
+                                        videos: stocks.details.product.cybervisual.videos
+                                    },
+                                    },
+                                    locations: {
+                                    operations: stocks.details.locations.operations
+                                    }
+                                },
+                                system: {
+                                request: {
+                                    pcs: 0,
+                                    orderspecification: "",
+                                    merchandise: {
+                                      price: stocks.system.request.merchandise.price,
+                                      capital: stocks.system.request.merchandise.capital,
+                                      suggested_retail_price: stocks.system.request.merchandise.suggested_retail_price,
+                                      vat: stocks.system.request.merchandise.vat,
                                       },
-                                      cybervisual: {
-                                          images: {
-                                           maindisplayimage: stocks.details.product.cybervisual.images.maindisplayimage,
-                                           maindisplayimages: stocks.details.product.cybervisual.images.maindisplayimages
-                                          },
-                                          videos: stocks.details.product.cybervisual.videos
-                                      },
-                                      },
-                                      locations: {
-                                      operations: stocks.details.locations.operations
-                                      }
-                                      },
-                                      system: {
-                                      request: {
-                                          pcs: 0,
-                                          orderspecification: "",
-                                          product: stocks.system.request.product,
-                                          shipping: {
-                                          category:  stocks.system.request.category,
-                                          weight:  stocks.system.request.weight,
-                                          fee:  stocks.system.request.fee
-                                          }
-                                      },
-                                      stocks: stocks.system.stocks,
-                                      purchase: {
-                                          people: stocks.system.purchase.people,
-                                          xirbit: stocks.system.purchase.xirbit
-                                      }
-                                      }
+                                    shipping: {
+                                    category:  stocks.system.request.category,
+                                    weight:  stocks.system.request.weight,
+                                    fee:  stocks.system.request.fee
+                                    },
+                                    totalpayment: {
+                                      price: stocks.system.request.totalpayment.price
+                                    },
+                                    product: stocks.system.request.product,
+                                },
+                                stocks: stocks.system.stocks,
+                                purchase: {
+                                    people: stocks.system.purchase.people,
+                                    xirbit: stocks.system.purchase.xirbit
+                                }
+                                }
                               })
 
                               _selectedproductdetailsmodalorderpcsfield[0].value = 0;
@@ -1754,14 +1881,69 @@ return (
                          placeholder='0'
                          onChange={ async (evt)=> {
 
+                           const _inputfield = evt.target;
                            const _inputfieldvalue = evt.target.value;
+                           const _productspecificationcontainer = _inputfield.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
+                           const _productdetailscontainer =  _productspecificationcontainer.children[1];
+                           const _productspecificationlayoutcontainer = _productdetailscontainer.children[0];
+                           const _specificproductpurchasetotalpcs = _productspecificationlayoutcontainer.children[6];
+                           const _specificproductpurchasetotalweight = _productspecificationlayoutcontainer.children[7];
+                           const _needstotalpayment = _productspecificationlayoutcontainer.children[8];
+                           const _partialcargofee = _productspecificationlayoutcontainer.children[9];
+                           const _getdigitsfromneedstotalpayment = _specificproductpurchasetotalpcs.innerText.match(/(\d+)/);
+
                            const _selectedproduct = await selectedproductarray.find((data)=> data.authentications.productid === selectedproduct.authentications.productid);
 
                            _selectedproduct.system.request.pcs = _inputfieldvalue;
 
-                           const _selectedproducttotalweight = selectedproductarray.reduce((accumulator, item)=> { return accumulator + item.details.product.specification.weight; }, 0);
+                           const _selectedproducttotalweight = _selectedproduct.details.product.specification.weight;
+                           const _selectedproductparsedtotalweight = _selectedproducttotalweight * _inputfieldvalue;
+                           const _selectedproducttotalweightfirstdigit = _selectedproductparsedtotalweight.toString().charAt(0);
 
-                           alert(_selectedproducttotalweight);
+                           const _selectedproducttotalprice = _inputfieldvalue * _selectedproduct.details.product.pricesbreakdown.price;
+                           const _selectedproducttotalcapital = _inputfieldvalue * _selectedproduct.details.product.pricesbreakdown.capital;
+                           const _selectedprodicttotalsrp = _inputfieldvalue * _selectedproduct.details.product.pricesbreakdown.suggested_retail_price;
+                           const _selectedproducttotalvat = _inputfieldvalue * _selectedproduct.details.product.pricesbreakdown.vat;
+
+                           const _cargofee = await getCargoFee(Number(_selectedproductparsedtotalweight));
+
+                           _selectedproduct.system.request.merchandise.price = Number(_cargofee);
+                           _selectedproduct.system.request.merchandise.capital = Number(_selectedproducttotalcapital);
+                           _selectedproduct.system.request.merchandise.suggested_retail_price = Number(_selectedprodicttotalsrp);
+                           _selectedproduct.system.request.merchandise.vat = Number(_selectedproducttotalvat);
+                       
+                           _selectedproduct.system.request.shipping.weight = Number(_selectedproductparsedtotalweight);
+                           _selectedproduct.system.request.shipping.fee = Number(_cargofee);
+
+                           _selectedproduct.system.request.totalpayment = Number( _selectedproducttotalprice) + Number(_cargofee);
+ 
+                           const _purchsaingtotalmerhandiseprice =  selectedproductarray.reduce((accumulator, item)=> { return accumulator + item.details.product.pricesbreakdown.price; }, 0)
+                           const _purchasingtotalmerchandisecargofee = selectedproductarray.reduce((accumulator, item)=> { return accumulator + item.system.request.shipping.fee; }, 0);
+                           const _purchasingtotalweight = selectedproductarray.reduce((accumulator, item)=> { return accumulator + item.system.request.shipping.weight; }, 0);
+
+                           const _totalmrnproducts = selectedproductarray.find((products)=> products.details.product.category === "MRN");
+                           const _totalnonmrnproducts = selectedproductarray.find((products)=> products.details.product.category === "NONMRN");
+
+                           alert(JSON.stringify(_totalmrnproducts));
+                           alert(JSON.stringify(_totalnonmrnproducts));
+
+                           purchasingtotalmerchandisepaymentcb((amount)=> amount = Number(_purchsaingtotalmerhandiseprice));
+                           purchasingtotalweightcb((amount)=> amount = Number(_purchasingtotalweight));
+                           purchasingtotalcargofeecb((amount)=> amount = Number(_purchasingtotalmerchandisecargofee));
+                           purchasigtotalpaymentcb((amount)=> amount = Number(_purchsaingtotalmerhandiseprice) + Number(_purchasingtotalmerchandisecargofee) );
+
+                           _specificproductpurchasetotalpcs.innerText = `Total pcs: ${_inputfieldvalue}`;
+                           _specificproductpurchasetotalweight.innerText = `Total weight: ${ _selectedproductparsedtotalweight} grams`;
+                           _needstotalpayment.innerText = `Needs: Total of ${_selectedproducttotalprice} pesos`;
+                           _partialcargofee.innerText = `This cargo or shipment or delivery current fee: Total of ${_cargofee} pesos`;
+                    
+                           //alert(_selectedproducttotalprice)
+                          // alert(_selectedproducttotalcapital)
+                          // alert(_selectedprodicttotalsrp)
+                          // alert(_selectedproducttotalvat)
+
+                       //    alert(_selectedproductparsedtotalweight);
+                        //   alert(typeof _selectedproductparsedtotalweight);
 
                            componentupdate();
 
@@ -1997,9 +2179,9 @@ return (
       lg={12}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer'>
   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>Authentication: {props.user.authentications.authenticationtype}</p>
-  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>Transaction type: Cargo</p>
+  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>Transaction type: Cargo</p> 
   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>Cargo type: Delivery</p>
-  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>100 peso's per, equal or less 1 kilo</p>
+  <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>100 peso's per equal or less 1 kilo</p>
   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsrequestlimitreachheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-transactionpurchasedetailsheaderindication'>{props.requestlimitreacherrormessage}</p>
  </Col>
 
@@ -2007,7 +2189,7 @@ return (
       md={5}
       lg={5}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer'>
-   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Needs:</p>
+   <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>Needs: {purchasingtotalmerchandisepayment} peso's</p>
  </Col>
 
  <Col xs={6}
@@ -2054,7 +2236,7 @@ return (
       lg={7}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailssubheaderindicationcontainer'>
    <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailssubheaderindication purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication-totalamountheaderindication'>
-     {props.totaldeliveryfee} pesos
+     {purchasingtotalcargofee} pesos
    </p>
  </Col>
 
@@ -2086,7 +2268,7 @@ return (
       lg={7}
       className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer'>
    <p className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-purchasedetailsheaderindication'>
-   {props.totalmerchandiseprice + props.totaldeliveryfee} pesos
+   {purchasigtotalpayment} pesos
    </p>
  </Col>
 

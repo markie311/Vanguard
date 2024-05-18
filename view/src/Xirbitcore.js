@@ -1355,13 +1355,22 @@ const [purchasing, purchasingcb] = useState([
           request: {
             pcs: 0,
             orderspecification: "",
-            product: [
-            ],
+            merchandise: {
+              price: 0,
+              capital: 0,
+              suggested_retail_price: 0,
+              vat: 0
+            },
             shipping: {
              category: 'Shipping category',
              weight: 'Shipping weight',
              fee: 0
-            }
+            },
+            totalpayment: {
+              price: 0
+            },
+            products: [
+            ]
           },
           stocks: [],
           purchase: {
@@ -1456,17 +1465,26 @@ const [purchasing, purchasingcb] = useState([
         }
       },
       system: {
-          request: {
-            pcs: 0,
-            orderspecification: "",
-            product: [
-            ],
-            shipping: {
-             category: 'Shipping category',
-             weight: 'Shipping weight',
-             fee: 0
-            }
+        request: {
+          pcs: 0,
+          orderspecification: "",
+          merchandise: {
+            price: 0,
+            capital: 0,
+            suggested_retail_price: 0,
+            vat: 0
           },
+          shipping: {
+           category: 'Shipping category',
+           weight: 'Shipping weight',
+           fee: 0
+          },
+          totalpayment: {
+            price: 0
+          },
+          products: [
+          ]
+         },
           stocks: [],
           purchase: {
             people: [],
