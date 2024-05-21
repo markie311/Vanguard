@@ -678,8 +678,8 @@ export default function PaymentModal(props) {
 
                       lackingmoneyandfundsdontproceedbuttonloadingstatecb((state)=> state = true);
 
-                      _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
-                      _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'No payment method set.';
+                      _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'white';
+                      _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Payment cancel.';
                       _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
 
                       lackingmoneyandfundsdontproceedbuttonloadingstatecb((state)=> state = false);
