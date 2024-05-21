@@ -394,7 +394,7 @@ const [user, usercb] = useState({
    history: []
  },
  funds: {
-  amount: 10,
+  amount: 100,
   history: []
  }
  },
@@ -790,6 +790,525 @@ const [merchandisescheme, merchandiseschemecb] = useState(
   }
   ]
 )
+
+///// purchasing
+
+const [manualcargoaddressdestinationloadingindication, manualcargoaddressdestinationloadingindicationcb] = useState(false);
+
+const [setascargodestinationloadingindication, setascargodestinationloadingindicationcb] = useState(false);
+
+const [purchasingcargodestination, purchasingcargodestinationcb] = useState(",,,,,");
+const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(true);
+
+const [purchasingtotalmerchandisepayment, purchasingtotalmerchandisepaymentcb] = useState(0);
+const [purchasingtotalweight, purchasingtotalweightcb] = useState(0);
+const [purchasingtotalcargofee, purchasingtotalcargofeecb] = useState(0);
+const [purchasigtotalpayment, purchasigtotalpaymentcb] = useState(0);
+
+const [purchasingtotalmrnproducts, purchasingtotalmrnproductscb] = useState([]);
+const [purchasingmrnproductstotalweight, purchasingmrnproductstotalweightcb] = useState(0);
+const [purchasingtotalnonmrnproducts, purchasingtotalnonmrnproductscb] = useState([]);
+const [purchasingnonmrnproductstotalweight, purchasingnonmrnproductstotalweightcb] = useState(0);
+
+const [selectedproduct, selectedproductcb] = useState(
+{
+productname: 'Kohaku Yellow',
+rapportname: 'Rapport name',
+definition: 'Product definition',
+authentications: {
+producttype: 'Product type',
+productid: 'Product id 0'
+},
+details: {
+product: {
+name: 'Product name',
+rapportname: 'Product rapport name',
+definition: 'Product definition',
+category: 'MRN',
+specification: {
+orderpcs: 0,
+orderspecification: "",
+for: {
+part: 'Product part',
+gender: 'Male',
+category: 'Adults' 
+},
+set: {
+set: false,
+productindication: 'Oridinary',
+pcs: 10
+},
+size: 'Product size',
+color: 'Product color',
+weight: 'Product weight',
+top: 'Top product specification',
+left: 'Left product specification',
+bottom: 'Bottom product specification',
+right: 'Right product specification',
+front: 'Front product specification',
+back: 'Back product specification'
+},
+pricesbreakdown: {
+price: 10,
+capital: 8,
+suggested_retail_price: 10,
+vat: 2
+},
+cybervisual: {
+images: {
+maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+maindisplayimages: [
+{
+displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+displayimage: '../images/landingpage/bondpaperimage.jpg'
+}
+]
+},
+videos: [
+{
+youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+}
+]
+},
+},
+locations: {
+operations: [
+{
+street: 'Street',
+baranggay: 'Baranggay',
+trademark: 'Trademark',
+city: 'City',
+province: 'Province',
+country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+price: 0,
+capital: 0,
+suggested_retail_price: 0,
+vat: 0,
+},
+shipping: {
+category: 'Shipping category',
+weight: 'Shipping weight',
+fee: 0
+},
+totalpayment: {
+price: 0
+},
+products: [
+]
+},
+stocks: [
+{
+details: {
+product: {
+name: 'Product name',
+rapportname: 'Product rapport name',
+definition: 'Product definition',
+category: 'MRN',
+specification: {
+for: {
+part: 'Product part',
+gender: 'Male',
+category: 'Adults' 
+},
+set: {
+set: false,
+productindication: 'Oridinary',
+pcs: 10
+},
+size: 'Product size',
+color: 'Product color',
+weight: 'Product weight',
+top: 'Top product specification',
+left: 'Left product specification',
+bottom: 'Bottom product specification',
+right: 'Right product specification',
+front: 'Front product specification',
+back: 'Back product specification'
+},
+pricesbreakdown: {
+price: 10,
+capital: 8,
+suggested_retail_price: 10,
+vat: 2
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+},
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+product: [
+
+],
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+}
+},
+stocks: [
+
+],
+purchase: {
+people: [],
+xirbit: []
+}
+}
+}, 
+{
+details: {
+product: {
+name: 'Product name',
+rapportname: 'Product rapport name',
+definition: 'Product definition',
+category: 'MRN',
+specification: {
+for: {
+part: 'Product part',
+gender: 'Male',
+category: 'Kids' 
+},
+set: {
+set: false,
+productindication: 'Oridinary',
+pcs: 10
+},
+size: 'Product size',
+color: 'Product color',
+weight: 'Product weight',
+top: 'Top product specification',
+left: 'Left product specification',
+bottom: 'Bottom product specification',
+right: 'Right product specification',
+front: 'Front product specification',
+back: 'Back product specification'
+},
+pricesbreakdown: {
+price: 10,
+capital: 8,
+suggested_retail_price: 10,
+vat: 2
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+},
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+product: [
+  {
+  pcs: 0,
+  details: {
+  for: {
+      part: 'Product part',
+      gender: 'Male',
+      category: 'Adults' 
+  },
+  set: {
+      set: false,
+      productindication: 'Oridinary',
+      pcs: 10
+  },
+  size: 'Product size',
+  color: 'Product color',
+  weight: 'Product weight',
+  top: 'Top product specification',
+  left: 'Left product specification',
+  bottom: 'Bottom product specification',
+  right: 'Right product specification',
+  front: 'Front product specification',
+  back: 'Back product specification'
+  },
+  pricesbreakdown: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat:0
+  },
+  specification: 'Order specification'
+  }
+],
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+}
+},
+stocks: [
+{
+  details: {
+    product: {
+      name: 'Product name',
+      rapportname: 'Product rapport name',
+      definition: 'Product definition',
+      specification: {
+        for: {
+          gender: 'Gender specification',
+          category: 'Gender specificaiton category'
+        },
+        part: 'Product part',
+        size: 'Product size',
+        color: 'Product color',
+        weight: 'Product weight',
+        top: 'Top product specification',
+        left: 'Left product specification',
+        bottom: 'Bottom product specification',
+        right: 'Right product specifi ation'
+      },
+      pricesbreakdown: {
+      price: 10,
+      capital: 8,
+      suggested_retail_price: 10,
+      vat: 2
+      },
+      cybervisual: {
+        images: {
+        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+        maindisplayimages: [
+          {
+            displayimage: '../images/landingpage/bondpaperimage.jpg'
+          },
+          {
+            displayimage: '../images/landingpage/bondpaperimage.jpg'
+          },
+          {
+            displayimage: '../images/landingpage/bondpaperimage.jpg'
+          }
+        ]
+        },
+        videos: [
+          {
+          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+          }
+        ]
+      },
+    },
+    locations: {
+    operations: [
+      {
+        street: 'Street',
+        baranggay: 'Baranggay',
+        trademark: 'Trademark',
+        city: 'City',
+        province: 'Province',
+        country: 'Country'
+      }
+    ]
+    }
+  },
+  system: {
+    order: {
+      specification: 'Order specification'
+    },
+    stocks: [],
+    purchase: {
+      people: [],
+      xirbit: []
+    },
+    pricesbreakdown: {
+      shipping: {
+        category: 'Shipping category',
+        weight: 'Shipping weight',
+        fee: 0
+      }
+    }
+  }
+},
+{
+  details: {
+    product: {
+      name: 'Product name',
+      rapportname: 'Product rapport name',
+      definition: 'Product definition',
+      specification: {
+        for: {
+          gender: 'Gender specification',
+          category: 'Gender specificaiton category'
+        },
+        part: 'Product part',
+        size: 'Product size',
+        color: 'Product color',
+        weight: 'Product weight',
+        top: 'Top product specification',
+        left: 'Left product specification',
+        bottom: 'Bottom product specification',
+        right: 'Right product specifi ation'
+      },
+      pricesbreakdown: {
+      price: 10,
+      capital: 8,
+      suggested_retail_price: 10,
+      vat: 2
+      },
+      cybervisual: {
+        images: {
+        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+        maindisplayimages: [
+          {
+            displayimage: '../images/landingpage/bondpaperimage.jpg'
+          }
+        ]
+        },
+        videos: [
+          {
+          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+          }
+        ]
+      },
+    },
+    locations: {
+    operations: [
+      {
+        street: 'Street',
+        baranggay: 'Baranggay',
+        trademark: 'Trademark',
+        city: 'City',
+        province: 'Province',
+        country: 'Country'
+      }
+    ]
+    }
+  },
+  system: {
+    order: {
+      specification: 'Order specification'
+    },
+    stocks: [],
+    purchase: {
+      people: [],
+      xirbit: []
+    },
+    pricesbreakdown: {
+      shipping: {
+        category: 'Shipping category',
+        weight: 'Shipping weight',
+        fee: 0
+      }
+    }
+  }
+},
+],
+purchase: {
+people: [],
+xirbit: []
+}
+}
+}
+],
+purchase: {
+people: [],
+xirbit: []
+}
+}
+}
+);
+
+const [selectedproductarray, selectedproductarraycb] = useState([]);
+
+const [selectedproductarraylength, selectedproductarraylengthcb] = useState(0);
 
 const [products, productscb] = useState([
   {
@@ -1501,6 +2020,8 @@ const [purchasing, purchasingcb] = useState([
  }
 ]); 
 
+//// purchasing 
+
 useEffect(()=> {
 
    $viewportscreenbreakpoints.xsviewportscreenbreakpoint();
@@ -1537,7 +2058,7 @@ async function assistcommonpublicregistration() {
         }
       })
 
-}
+} 
 
 async function loadWelcomeIntroductionModal() {
  if ( location.pathname === "/" ) {
@@ -1653,7 +2174,39 @@ const navigate = useNavigate();
                                      purchasingcb={purchasingcb}
                                      databasedata={databasedata}
                                      databasedatacb={databasedatacb}
-                                     />}>
+
+                                     manualcargoaddressdestinationloadingindication={manualcargoaddressdestinationloadingindication}
+                                     manualcargoaddressdestinationloadingindicationcb={manualcargoaddressdestinationloadingindicationcb}
+                                     setascargodestinationloadingindication={setascargodestinationloadingindication}
+                                     setascargodestinationloadingindicationcb={setascargodestinationloadingindicationcb}
+                                     purchasingcargodestination={purchasingcargodestination}
+                                     purchasingcargodestinationcb={purchasingcargodestinationcb}
+                                     purchasingcargoaddressset={purchasingcargoaddressset}
+                                     purchasingcargoaddresssetcb={purchasingcargoaddresssetcb}
+                                     purchasingtotalmerchandisepayment={purchasingtotalmerchandisepayment}
+                                     purchasingtotalmerchandisepaymentcb={purchasingtotalmerchandisepaymentcb}
+                                     purchasingtotalweight={purchasingtotalweight}
+                                     purchasingtotalweightcb={purchasingtotalweightcb}
+                                     purchasingtotalcargofee={purchasingtotalcargofee}
+                                     purchasingtotalcargofeecb={purchasingtotalcargofeecb}
+                                     purchasigtotalpayment={purchasigtotalpayment}
+                                     purchasigtotalpaymentcb={purchasigtotalpaymentcb}
+                                     purchasingtotalmrnproducts={purchasingtotalmrnproducts}
+                                     purchasingtotalmrnproductscb={purchasingtotalmrnproductscb}
+                                     purchasingmrnproductstotalweight={purchasingmrnproductstotalweight}
+                                     purchasingmrnproductstotalweightcb={purchasingmrnproductstotalweightcb}
+                                     purchasingtotalnonmrnproducts={purchasingtotalnonmrnproducts}
+                                     purchasingtotalnonmrnproductscb={purchasingtotalnonmrnproductscb}
+                                     purchasingnonmrnproductstotalweight={purchasingnonmrnproductstotalweight}
+                                     purchasingnonmrnproductstotalweightcb={purchasingnonmrnproductstotalweightcb}
+                                     selectedproduct={selectedproduct}
+                                     selectedproductcb={selectedproductcb}
+                                     selectedproductarray={selectedproductarray}
+                                     selectedproductarraycb={selectedproductarraycb}
+                                     selectedproductarraylength={selectedproductarraylength}
+                                     selectedproductarraylengthcb={selectedproductarraylengthcb}
+                                     
+                                    />}>
          </Route>
          <Route path='/office'
                 element={<Office viewport={viewport}

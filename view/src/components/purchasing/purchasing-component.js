@@ -165,9 +165,40 @@ export default function Purchasing(props) {
                              requestlimitreacherrormessage={requestlimitreacherrormessage}
                              
                              cargodestinationset={cargodestinationset}
-                             cargodestinationsecbt={cargodestinationsetcb}
+                             cargodestinationsetcb={cargodestinationsetcb}
                              paymentmethodset={paymentmethodset}
-                             paymentmethodsetcb={paymentmethodsetcb}/>
+                             paymentmethodsetcb={paymentmethodsetcb}
+                             
+                             manualcargoaddressdestinationloadingindication={props.manualcargoaddressdestinationloadingindication}
+                             manualcargoaddressdestinationloadingindicationcb={props.manualcargoaddressdestinationloadingindicationcb}
+                             setascargodestinationloadingindication={props.setascargodestinationloadingindication}
+                             setascargodestinationloadingindicationcb={props.setascargodestinationloadingindicationcb}
+                             purchasingcargodestination={props.purchasingcargodestination}
+                             purchasingcargodestinationcb={props.purchasingcargodestinationcb}
+                             purchasingcargoaddressset={props.purchasingcargoaddressset}
+                             purchasingcargoaddresssetcb={props.urchasingcargoaddresssetcb}
+                             purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
+                             purchasingtotalmerchandisepaymentcb={props.purchasingtotalmerchandisepaymentcb}
+                             purchasingtotalweight={props.purchasingtotalweight}
+                             purchasingtotalweightcb={props.purchasingtotalweightcb}
+                             purchasingtotalcargofee={props.purchasingtotalcargofee}
+                             purchasingtotalcargofeecb={props.purchasingtotalcargofeecb}
+                             purchasigtotalpayment={props.purchasigtotalpayment}
+                             purchasigtotalpaymentcb={props.purchasigtotalpaymentcb}
+                             purchasingtotalmrnproducts={props.purchasingtotalmrnproducts}
+                             purchasingtotalmrnproductscb={props.purchasingtotalmrnproductscb}
+                             purchasingmrnproductstotalweight={props.purchasingmrnproductstotalweight}
+                             purchasingmrnproductstotalweightcb={props.purchasingmrnproductstotalweightcb}
+                             purchasingtotalnonmrnproducts={props.purchasingtotalnonmrnproducts}
+                             purchasingtotalnonmrnproductscb={props.purchasingtotalnonmrnproductscb}
+                             purchasingnonmrnproductstotalweight={props.purchasingnonmrnproductstotalweight}
+                             purchasingnonmrnproductstotalweightcb={props.purchasingnonmrnproductstotalweightcb}
+                             selectedproduct={props.selectedproduct}
+                             selectedproductcb={props.selectedproductcb}
+                             selectedproductarray={props.selectedproductarray}
+                             selectedproductarraycb={props.selectedproductarraycb}
+                             selectedproductarraylength={props.selectedproductarraylength}
+                             selectedproductarraylengthcb={props.selectedproductarraylengthcb}/>
         </Col>
         
       </Row>
@@ -191,10 +222,25 @@ export default function Purchasing(props) {
                         totaldeliveryfee={totaldeliveryfee}
                         requestlimitreacherrormessage={requestlimitreacherrormessage}
                         cargodestinationset={cargodestinationset}
-                        cargodestinationsecbt={cargodestinationsetcb}
+                        cargodestinationsetcb={cargodestinationsetcb}
                         paymentmethodset={paymentmethodset}
                         paymentmethodsetcb={paymentmethodsetcb}
-                        operations={operations} />
+                        operations={operations} 
+                        
+                        purchasingcargodestination={props.purchasingcargodestination}
+                        purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
+                        purchasingtotalweight={props.purchasingtotalweight}
+                        purchasingtotalcargofee={props.purchasingtotalcargofee}
+                        purchasigtotalpayment={props.purchasigtotalpayment}
+
+                        purchasingcargoaddressset={props.purchasingcargoaddressset}
+
+                        purchasingtotalmrnproducts={props.purchasingtotalmrnproducts}
+                        purchasingmrnproductstotalweight={props.purchasingmrnproductstotalweight}
+                        purchasingtotalnonmrnproducts={props.purchasingtotalnonmrnproducts}
+                        purchasingnonmrnproductstotalweight={props.purchasingnonmrnproductstotalweight}
+
+                        selectedproductarray={props.selectedproductarray}/>
          </Row>
 
          <Col id='purchasing-navigationcontainer-closebuttoncontainer'>

@@ -210,8 +210,39 @@ font: auto {
 family: $sub-font;
 }
 color:tomato;
+text-align:center;
 letter-spacing:3px;
 top:2.1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton {
+position:relative;
+background-color:dodgerblue;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+  family: $sub-font;
+}
+color:white;
+letter-spacing:1vh;
+padding:5px 35px;
+margin-top:3.5vh;
+outline-style:none;
+display:none;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton {
+position:relative;
+background-color:red;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+  family: $sub-font;
+}
+color:white;
+letter-spacing:1vh;
+padding:5px 35px;
+margin-top:2vh;
+outline-style:none;
+display:none;
 }
 .paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer {
 position:relative;
@@ -557,8 +588,20 @@ family: $sub-font;
 size:20px;
 }
 color:tomato;
+text-align:center;
 letter-spacing:3px;
-top:2.1vh;
+top:6vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton {
+position:relative;
+background-color:dodgerblue;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+letter-spacing:1vh;
+color:white;
 }
 .paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer {
 position:relative;
