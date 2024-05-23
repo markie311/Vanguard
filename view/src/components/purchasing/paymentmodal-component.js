@@ -622,6 +622,8 @@ export default function PaymentModal(props) {
                     (
                       <span onClick={(evt)=> {
 
+                        alert("Invoked");
+
                         const _nopriceandlocationtobecalculatedheaderindication = document.querySelectorAll('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication');
                         const _deductionscontainer = document.querySelector('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer');
                         
@@ -631,10 +633,12 @@ export default function PaymentModal(props) {
                         const $bothmoneyandfundsbalance = props.user.moneyandfunds.money.amount + props.user.moneyandfunds.funds.amount;
                         const $totalpayment = props.purchasigtotalpayment;
 
+                        const _pricesbreakdowngoldbar = document.querySelectorAll(".paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication");
+
                         lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = true);
 
-                        if ( payment === "Money") {
-                    
+                        if ( payment === "Money" ) {
+
                           if ( $bothmoneyandfundsbalance >= $totalpayment ) {     
                             moneypaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.money.amount );
                             remainingmoneycb((calculation)=> calculation = 0);
@@ -832,34 +836,53 @@ export default function PaymentModal(props) {
 
 
                               const _pricesbreakdownmodal = document.querySelector('#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer');
-                              const _pricesbreakdownmodalgolbar = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer');
+                              const _pricesbreakdownmodalgoldbar = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer');
+                              const _pricesbreakdownmodalgoldbarheaderindication = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication');
 
                               _pricesbreakdownmodal.style.height = "auto";
 
-                              _pricesbreakdownmodalgolbar[0].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[0].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[1].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[1].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[2].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[2].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[3].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[3].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[4].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[4].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[5].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[5].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[6].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[6].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[7].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[7].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[8].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[8].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[9].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[9].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[10].style.marginTop = "3vh";
-                              _pricesbreakdownmodalgolbar[10].style.opacity = "1";
-                              _pricesbreakdownmodalgolbar[11].style.marginBottom = "3vh";
-                              _pricesbreakdownmodalgolbar[11].style.opacity = "1";
+                              const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.suggested_retail_price)}, 0);
+                              const _purchasingvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.vat)}, 0);
+                              const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.capital)}, 0);
+                              const _purchasingoveralltotalpcspricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
+                              const _purchasingopaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.price)}, 0);
+                              const _purchasingcargototalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
+                              const  _purchasingweightpricebreakdown  = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
+                              const _purchasingreciepttotalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+
+                              _pricesbreakdownmodalgoldbarheaderindication[0].innerText = `Total SRP's, ${_purchasingsrppricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[1].innerText = `Total VAT'S, ${_purchasingvatpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[2].innerText = `Total CAPITAL, ${_purchasingoverallcapitalpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[3].innerText = `Overall total pc's, ${_purchasingoveralltotalpcspricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[4].innerText = `Payment, ${_purchasingopaymentpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[5].innerText = `Cargo total, ${_purchasingcargototalpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[6].innerText = `Weight, ${_purchasingweightpricebreakdown} grams`;
+                              _pricesbreakdownmodalgoldbarheaderindication[7].innerText = `Reciept total, ${_purchasingweightpricebreakdown} pesos`;
+
+                              _pricesbreakdownmodalgoldbar[0].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[0].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[1].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[1].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[2].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[2].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[3].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[3].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[4].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[4].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[5].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[5].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[6].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[6].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[7].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[7].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[8].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[8].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[9].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[9].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[10].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgoldbar[10].style.opacity = "1";
+                              _pricesbreakdownmodalgoldbar[11].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgoldbar[11].style.opacity = "1";
                         
 
                               {/*

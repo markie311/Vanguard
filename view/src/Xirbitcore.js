@@ -394,7 +394,7 @@ const [user, usercb] = useState({
    history: []
  },
  funds: {
-  amount: 0,
+  amount: 100,
   history: []
  }
  },
