@@ -347,6 +347,43 @@ color:white;
 overflow-wrap: break-word; 
 text-align:center;
 }
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer {
+position:relative;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer {
+position:relative;
+background-color:red;
+border:0.3vh solid dodgerblue;
+border-radius:40px;
+height:9vh;
+padding:12px 20px;
+margin-top:3vh;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer {
+position:relative;
+background-color:goldenrod;
+border:0.4vh solid brown;
+border-radius:10px;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+  family: $sub-font;
+}
+color:black;
+letter-spacing:0.3vh;
+user-select:none;
+top:1vh;
+}
 #paymentmodal-gridcontainer-aboutpaymentsgraphcontainer {
 position:relative;
 height:50%;
@@ -592,6 +629,74 @@ text-align:center;
 letter-spacing:3px;
 top:6vh;
 }
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer {
+position:relative;
+height:auto;
+width:100vw;
+margin-left:auto;
+margin-right:auto;
+margin-top:7vh;
+padding:0;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer {
+position:relative;
+background-color:red;
+border:0.8vh solid dodgerblue;
+border-radius:40px;
+height:10vh;
+padding:18px 20px;
+margin-top:3vh;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer {
+position:relative;
+background-color:goldenrod;
+border:0.7vh solid brown;
+border-radius:13px;
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:black;
+letter-spacing:0.3vh;
+user-select:none;
+top:1vh;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton {
+position:relative;
+background-color:dodgerblue;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+  family: $sub-font;
+}
+color:white;
+letter-spacing:1vh;
+padding:5px 35px;
+margin-top:3.5vh;
+outline-style:none;
+display:none;
+}
+.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton {
+position:relative;
+background-color:red;
+border:0.1vh solid white;
+border-radius:20px;
+font: auto {
+  family: $sub-font;
+}
+color:white;
+letter-spacing:1vh;
+padding:5px 35px;
+margin-top:2vh;
+outline-style:none;
+display:none;
+}
 .paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton {
 position:relative;
 background-color:dodgerblue;
@@ -707,6 +812,14 @@ family: $sub-font;
 color:white;
 overflow-wrap: break-word; 
 text-align:center;
+}
+#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer {
+position:relative;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+padding:0;
 }
 #paymentmodal-gridcontainer-aboutpaymentsgraphcontainer {
 position:relative;

@@ -898,6 +898,104 @@ export default function PaymentModal(props) {
         
         </Row>
       </Col>
+      <Row id="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer">
+        <Col xs={12}
+             md={12}
+             lg={12}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total SRP'S, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={7}
+             lg={7}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total vat's, </p>
+            </Col>
+        </Col>
+          <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overall capital, </p>
+            </Col>
+        </Col>
+          <Col xs={12}
+             md={2}
+             lg={2}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overalltotalpcs, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={9}
+             lg={9}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Payment, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Cargo total, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Weight, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Reciept total, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Transaction give away, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Your transaction give away, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={3}
+             lg={3}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Shared through all, </p>
+            </Col>
+        </Col>
+        <Col xs={12}
+             md={9}
+             lg={9}
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+           <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Vanguard</p>
+            </Col>
+        </Col>
+      </Row>
       <Col xs={12}
            md={12}
            lg={12}
