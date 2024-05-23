@@ -970,7 +970,7 @@ export default function PaymentModal(props) {
              lg={12}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer1">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total SRP'S, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total SRP'S, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -978,7 +978,7 @@ export default function PaymentModal(props) {
              lg={7}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer2">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total vat's, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total vat's, 0 peso's</p>
             </Col>
         </Col>
           <Col xs={12}
@@ -986,7 +986,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer3">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overall capital, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overall capital, 0 peso's</p>
             </Col>
         </Col>
           <Col xs={12}
@@ -994,7 +994,7 @@ export default function PaymentModal(props) {
              lg={2}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer4">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overalltotalpcs, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overalltotalpcs, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1002,7 +1002,7 @@ export default function PaymentModal(props) {
              lg={9}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer5">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Payment, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Payment, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1010,7 +1010,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer6">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Cargo total, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Cargo total, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1018,7 +1018,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer7">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Weight, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Weight, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1026,7 +1026,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer8">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Reciept total, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Reciept total, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1034,7 +1034,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer9">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Transaction give away, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Transaction give away, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1042,7 +1042,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer10">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Your transaction give away, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Your transaction give away, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1050,7 +1050,7 @@ export default function PaymentModal(props) {
              lg={3}
              className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer11">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
-            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Shared through all, </p>
+            <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Shared through all, 0 peso's</p>
             </Col>
         </Col>
         <Col xs={12}
@@ -1062,7 +1062,6 @@ export default function PaymentModal(props) {
             </Col>
         </Col>
       </Row>
-      <h1>123123</h1>
       <Col xs={12}
            md={12}
            lg={12}
