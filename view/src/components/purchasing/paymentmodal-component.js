@@ -830,6 +830,39 @@ export default function PaymentModal(props) {
                     <button className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentbutton'
                             onClick={ async (evt)=> {
 
+
+                              const _pricesbreakdownmodal = document.querySelector('#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer');
+                              const _pricesbreakdownmodalgolbar = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer');
+
+                              _pricesbreakdownmodal.style.height = "auto";
+
+                              _pricesbreakdownmodalgolbar[0].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[0].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[1].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[1].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[2].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[2].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[3].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[3].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[4].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[4].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[5].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[5].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[6].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[6].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[7].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[7].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[8].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[8].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[9].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[9].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[10].style.marginTop = "3vh";
+                              _pricesbreakdownmodalgolbar[10].style.opacity = "1";
+                              _pricesbreakdownmodalgolbar[11].style.marginBottom = "3vh";
+                              _pricesbreakdownmodalgolbar[11].style.opacity = "1";
+                        
+
+                              {/*
                               const _moneytogglebutton = document.getElementById('paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglebutton')
                               const _moneytogglebuttonmarginproperty = _moneytogglebutton.style.marginLeft
                               const _fundstogglebutton = document.getElementById('paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglebutton')
@@ -838,12 +871,42 @@ export default function PaymentModal(props) {
                               const _paymentresponsemessage = document.querySelector('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication')
                               const _processpaymentbutton =  document.querySelector('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentbutton')
 
+                              const _pricesbreakdownmodal = document.querySelector('#paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer');
+                              const _pricesbreakdownmodalgolbar = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer');
+
+                              alert('Synced')
+                              _pricesbreakdownmodal.style.height = "auto";
+
+                             _pricesbreakdownmodalgolbar[1].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[1].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[2].style.bottom = "0%";
+                             _pricesbreakdownmodalgolbar[2].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[3].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[3].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[4].style.bottom = "0%";
+                             _pricesbreakdownmodalgolbar[4].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[5].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[5].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[6].style.bottom = "0%";
+                             _pricesbreakdownmodalgolbar[6].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[7].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[7].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[8].style.bottom = "0%";
+                             _pricesbreakdownmodalgolbar[8].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[9].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[9].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[10].style.bottom = "0%";
+                             _pricesbreakdownmodalgolbar[10].style.opacity = "1";
+                             _pricesbreakdownmodalgolbar[11].style.top = "0%";
+                             _pricesbreakdownmodalgolbar[11].style.opacity = "1";
+
                               const _userauthenticationtype = props.user.authentications.authenticationtype
                               const _operationscope = props.operations.find((location)=> location.baranggay === props.user.details.location.baranggay && location.street === props.user.details.location.street )
 
                               // alert(JSON.stringify(props.user.authentication))
                               //alert(JSON.stringify(_operationscope))
                               //alert(JSON.stringify(props.operations))
+ 
 
                               if ( _moneytogglebuttonmarginproperty !== '50%' && _fundstogglebuttonmarginproperty !== '50%' ) {
                                 _paymentresponsemessage.style.color = 'white';
@@ -882,6 +945,9 @@ export default function PaymentModal(props) {
                                     
                                                           
                                }
+
+                            */}
+
                              }}>
                        Process payment breakdown   
                     </button>
@@ -902,7 +968,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={12}
              lg={12}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer1">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total SRP'S, </p>
             </Col>
@@ -910,7 +976,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={7}
              lg={7}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer2">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Total vat's, </p>
             </Col>
@@ -918,7 +984,7 @@ export default function PaymentModal(props) {
           <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer3">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overall capital, </p>
             </Col>
@@ -926,7 +992,7 @@ export default function PaymentModal(props) {
           <Col xs={12}
              md={2}
              lg={2}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer4">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">overalltotalpcs, </p>
             </Col>
@@ -934,7 +1000,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={9}
              lg={9}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer5">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Payment, </p>
             </Col>
@@ -942,7 +1008,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer6">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Cargo total, </p>
             </Col>
@@ -950,7 +1016,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer7">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Weight, </p>
             </Col>
@@ -958,7 +1024,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer8">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Reciept total, </p>
             </Col>
@@ -966,7 +1032,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer9">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Transaction give away, </p>
             </Col>
@@ -974,7 +1040,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer10">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Your transaction give away, </p>
             </Col>
@@ -982,7 +1048,7 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={3}
              lg={3}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer11">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Shared through all, </p>
             </Col>
@@ -990,12 +1056,13 @@ export default function PaymentModal(props) {
         <Col xs={12}
              md={9}
              lg={9}
-             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer">
+             className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer12">
            <Col className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-layoutcontainer">
             <p className="paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication">Vanguard</p>
             </Col>
         </Col>
       </Row>
+      <h1>123123</h1>
       <Col xs={12}
            md={12}
            lg={12}
