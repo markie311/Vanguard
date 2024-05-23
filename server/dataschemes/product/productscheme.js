@@ -291,6 +291,7 @@ const productsscheme = new Schema({
   }
  }
 });
+
 /// sysmte detection / with parts 
 const productscheme = new Schema({
  authentications: {

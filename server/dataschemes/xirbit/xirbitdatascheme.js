@@ -3,91 +3,50 @@ const Schema = mongoose.Schema;
 
 const datascheme = require('../data/datascheme');
 const user = require('../user/usersscheme');
+const productscheme = require('../product/productscheme');
+const transactionscheme = require('../transactions/transactionscheme');
 
 const xirbitdatascheme = new Schema({
  _id: {
   type: 'string'
  },
- marketing: [],
- moneyandfunds: [],
- requests: {
-  now: {
-    deposits: {
-      count: {
-        type: 'number'
-      },
-      data: [datascheme]
-    },
-    widthdrawals: {
-     count: {
-       type: 'number'
-     },
-     data: [datascheme]
-    },
-    requests: {
-      count: {
-       type: 'number',
-       default: 0
-      },
-      data: [datascheme]
+ marketing: {
+   products: {                                                                                                        
+    merchandises: [productscheme],
+    nonmernchandises: [productscheme],
+    etc: {
+      load: [productscheme]
     }
-  },
-  recent: {
-   passedtorecent: {
-     count: {
-      type: 'number',
-      default: 0
-     },
-     data: [datascheme]
-   },
-   completeddeposits: {
-    count: {
-     type: 'number'
-    },
-    data: [datascheme]
-    },
-    completedwidthdrawals: {
-     count: {
-      type: 'number'
-     },
-     data: [datascheme]
-    },
-    recentrequests: {
-     count: {
-      type: 'number'
-     },
-     data: [datascheme]
-    }
-  },
-  completion: {
-   now: {
-   deposits: {
-     type: 'number'
-   },
-   widthdrawals: {
-    type: 'number'
    },
    requests: {
-    type: 'number'
-   }
-   },
-   recent: {
-    deposits: {
-      type: 'number'
-    },
-    widthdrawals: {
-     type: 'number'
-    },
-    requests: {
-     type: 'number'
+    merchandises: [transactionscheme],
+    nonmernchandises: [transactionscheme],
+    etc: {
+      load: [transactionscheme]
     }
-  }
-  }
+   },
+  processing: [transactionscheme],
  },
- transactions: [],
- people: [user],
- processing: [],
- history: []
+ moneyandfunds: {
+  request: {
+    deposits: [transactionscheme],
+    widthdrawals: [transactionscheme]
+  },
+  transactions: {
+    deposits: [transactionscheme],
+    widthdrawals: [transactionscheme]
+  },
+  processing: {
+    deposits: [transactionscheme],
+    widthdrawals: [transactionscheme]
+  },
+ },
+ people: {
+  commonpublic: [user],
+  public: [user],
+  private: [user]
+ },
+ history: [transactionscheme]
 })
 
 module.exports = xirbitdatascheme;

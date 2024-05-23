@@ -2350,7 +2350,7 @@ return (
               }
               
             }}>
-      Proceed ●
+      Process payment ●
     </button>
   </Col>
 

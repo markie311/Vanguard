@@ -13,6 +13,9 @@ import barmovementpercentagecalculation  from '../lib/barmovementpercentagecalcu
 
 import axiosCreatedInstance from '../lib/axiosutil.js';
 
+import { timestamp } from '../lib/timestamps';
+
+
 export default function PaymentModal(props) {
 
  const [insufficientpayment, insufficientpaymentcb] = useState(true);
@@ -295,6 +298,7 @@ export default function PaymentModal(props) {
                      
                         if (!$validatepaymentmethod) {
 
+                          paymentcb((payment)=> payment = "No options method");
                           _moneytogglebutton.style.backgroundColor = 'gray';
                           _moneytogglebutton.style.marginLeft = '0%';
                           _paymentresponsemessage.style.color = 'white';
@@ -306,6 +310,7 @@ export default function PaymentModal(props) {
 
                         } else {
 
+                          paymentcb((payment)=> payment = "No options method");
                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'No payment method set.';
                           _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
@@ -315,6 +320,7 @@ export default function PaymentModal(props) {
 
                        } else {
 
+                        paymentcb((payment)=> payment = "Money");
                         _moneytogglebutton.style.backgroundColor = 'dodgerblue';
                         _moneytogglebutton.style.marginLeft = '50%';
                         _fundstogglebutton.style.backgroundColor = 'gray';
@@ -417,7 +423,7 @@ export default function PaymentModal(props) {
                           _fundstogglebutton.style.marginLeft = '50%';
                           _moneytogglebutton.style.backgroundColor = 'gray';
                           _moneytogglebutton.style.marginLeft = '0%';
-
+                         
                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to deduct the remaining amount to your money.';
                           _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
@@ -622,24 +628,42 @@ export default function PaymentModal(props) {
                         const _lackingmoneyandfundsconfirmbutton =  document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton");
                         const _lackingmoneyandfundsdontproceedbutton = document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton");
 
+                        const $bothmoneyandfundsbalance = props.user.moneyandfunds.money.amount + props.user.moneyandfunds.funds.amount;
+                        const $totalpayment = props.purchasigtotalpayment;
+
                         lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = true);
 
-                        if ( payment === "Money ") {
-                   
-                         moneypaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.money.amount );
-                         remainingmoneycb((calculation)=> calculation = 0);
-                         fundspaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.money.amount );
-                         remainingfundscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.money.amount));
-                 
+                        if ( payment === "Money") {
+                    
+                          if ( $bothmoneyandfundsbalance >= $totalpayment ) {     
+                            moneypaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.money.amount );
+                            remainingmoneycb((calculation)=> calculation = 0);
+                            fundspaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.money.amount );
+                            remainingfundscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.money.amount));
+                          } else {
+                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
+                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to add funds in your account for a meantime for transaction give away\'s.';
+                           _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
+                            lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
+                            return;
+                          }
+
                         }
 
                         if ( payment === "Funds" ) {
 
-                          fundspaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount );
-                          remainingmoneycb((calculation)=> calculation = 0);
-                          moneypaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount );
-                          remainingmoneycb((calculation)=> calculation = props.user.moneyandfunds.money.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount));
-
+                          if ( $bothmoneyandfundsbalance >= $totalpayment ) { 
+                            fundspaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount );
+                            remainingmoneycb((calculation)=> calculation = 0);
+                            moneypaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount );
+                            remainingmoneycb((calculation)=> calculation = props.user.moneyandfunds.money.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount));
+                          } else {
+                            _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
+                            _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to add funds in your account for a meantime for transaction give away\'s.';
+                            _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
+                            lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
+                            return;
+                          }
                         }
 
                          _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'gray';
@@ -648,6 +672,7 @@ export default function PaymentModal(props) {
 
                          _deductionscontainer.style.display = "flex";
 
+                         lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
                          lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
 
                       }}>
@@ -858,7 +883,7 @@ export default function PaymentModal(props) {
                                                           
                                }
                              }}>
-                       process payment   
+                       Process payment breakdown   
                     </button>
                   )
                 }

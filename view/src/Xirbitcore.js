@@ -394,7 +394,7 @@ const [user, usercb] = useState({
    history: []
  },
  funds: {
-  amount: 100,
+  amount: 0,
   history: []
  }
  },
@@ -2019,6 +2019,38 @@ const [purchasing, purchasingcb] = useState([
   }
  }
 ]); 
+
+const [ordertransactiondata, ordertransactiondatacb] = useState(
+{
+date: {
+  proccessed: "",
+  submitted: "",
+},
+transaction: {
+  transactionid: "",
+  transactiontype: ""
+},
+status: {
+ current: [],
+ requested: [],
+ confirmedandtobedelivered: [],
+ delayed: [],
+ delivered: [],
+ confirmedasrecieved: []
+}, 
+messages: [],
+products: {
+pricesbreakdown: {
+  productpayment: 0, 
+  cargotype: "",
+  cargoexpress: "",
+  cargofee: 0,
+  weight: 0,
+  totalpayment: 0
+},
+list: []
+}
+});
 
 //// purchasing 
 
