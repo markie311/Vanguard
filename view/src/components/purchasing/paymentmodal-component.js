@@ -622,8 +622,6 @@ export default function PaymentModal(props) {
                     (
                       <span onClick={(evt)=> {
 
-                        alert("Invoked");
-
                         const _nopriceandlocationtobecalculatedheaderindication = document.querySelectorAll('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication');
                         const _deductionscontainer = document.querySelector('.paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer');
                         
