@@ -5,6 +5,7 @@ import React, {
 
 import { Row, 
          Col,
+         Spinner,
          Carousel } from 'react-bootstrap';
 
 import '../../styles/purchasing/purchasing.scss';
@@ -367,11 +368,45 @@ export default function Purchasing(props) {
           </Col>
         </Col>
         <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer">
-          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication">Partial disclose on development. Payment  legitimacy.</h1>
+           <img src="../images/purchasing/checkout/checkoutcheck.png"
+                id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck"
+                alt="VANGUARD-IMAGE-CHECKOUTCHECK"/>
+          <h1 className="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage">Checkoutcheck response message</h1>
+          <h1 className="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage">Checkoutcheck additional information response message</h1>
+          <Spinner animation="border" variant="primary" size="lg" id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"/>
+          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"
+              onClick={(evt)=> {
+
+                 const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
+                 const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
+                 const _checkoutresponseloadingindicator = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"); 
+                 const _checkoutsubmitindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"); 
+                 const _checkoutclosebuttonindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication");
+
+                 _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                 _checkoutresponsedisplayimage.style.display = "block";
+                 _checkoutresponsemessage[0].innerText = "Sucessfully processed a payment";
+                 _checkoutresponsemessage[1].innerText = "Continue to transactions, graph or account";
+                 _checkoutresponsemessage[0].style.display = "block";
+                 _checkoutresponsemessage[1].style.display = "block";
+                 _checkoutsubmitindication.style.display = "none";
+
+           }}>Submit payment</h1> 
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication"
                onClick={()=> {
 
                 const _confirmationcontainer = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer");
+                const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
+                const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
+                const _checkoutresponseloadingindicator = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"); 
+                const _checkoutsubmitindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"); 
+                const _checkoutclosebuttonindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication");
+
+                _checkoutresponsedisplayimage.style.display = "none";
+                _checkoutresponsemessage[0].style.display = "none";
+                _checkoutresponsemessage[1].style.display = "none";
+                _checkoutsubmitindication.style.display = "block";
+
                 _confirmationcontainer.style.display = "none";
 
            }}>close</h1>
