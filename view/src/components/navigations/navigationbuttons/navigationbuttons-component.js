@@ -119,6 +119,7 @@ export default function NavigationButtons(props) {
           )
         }
         if ( button.buttonindication !== 'Xirbit marketing' || button.buttonindication !== 'Sell items' ) {
+          {/*
           return (
             <Col xs={12}
                  md={12}
@@ -128,12 +129,13 @@ export default function NavigationButtons(props) {
                       key={idx}
                       onClick={(evt)=> {
                         //navigate('/marketing/selling');
-                        navigate('/xirbitmarketing');
+                        // navigate('/xirbitmarketing');
                      }}>
                  0{idx}. {button.buttonindication}
               </button>
            </Col>
           )
+        */}
         }
       })
     }
