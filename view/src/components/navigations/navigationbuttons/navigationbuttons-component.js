@@ -25,15 +25,15 @@ export default function NavigationButtons(props) {
   },
   {
     buttonindication: 'Sell items',
-    buttonlink: null
+    buttonlink: '/xirbitmarketing'
   },
   {
     buttonindication: 'Auction',
-    buttonlink: null
+    buttonlink:'/xirbitmarketing'
   },
   {
     buttonindication: 'Bidding',
-    buttonlink: null
+    buttonlink: '/xirbitmarketing'
   }
  ]
  
@@ -68,7 +68,8 @@ export default function NavigationButtons(props) {
                     key={idx}
                     to={button.buttonlink}
                     onClick={(evt)=> {
-                       navigate('/marketing/selling')
+                       //navigate('/marketing/selling');
+                       navigate('/xirbitmarketing');
                     }}>
                 0{idx}. {button.buttonindication}
              </button>
@@ -124,7 +125,11 @@ export default function NavigationButtons(props) {
                  lg={12}
                  className='navigationbuttons-buttonscontainer'>
               <button className='navigationbuttons-button'
-                      key={idx}>
+                      key={idx}
+                      onClick={(evt)=> {
+                        //navigate('/marketing/selling');
+                        navigate('/xirbitmarketing');
+                     }}>
                  0{idx}. {button.buttonindication}
               </button>
            </Col>

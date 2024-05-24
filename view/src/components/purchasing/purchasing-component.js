@@ -367,7 +367,7 @@ export default function Purchasing(props) {
           </Col>
         </Col>
         <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer">
-          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication">Partial disclose on development, payment legitimacy</h1>
+          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication">Partial disclose on development. Payment  legitimacy.</h1>
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication"
                onClick={()=> {
 
