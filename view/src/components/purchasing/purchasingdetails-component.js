@@ -2295,7 +2295,7 @@ return (
     
               const _button = document.querySelector('#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbutton');
 
-              if ( props.purchasingcargoaddressset ) {
+              if ( props.purchasingcargoaddressset || !props.purchasingcargoaddressset ) {
                 props.cargodestinationsetcb((set)=> set = true);
                 const _navigationcontainer = document.getElementById('purchasing-navigationcontainer');
                 _button.innerText = 'Payment';
@@ -2356,7 +2356,6 @@ return (
             if ( _button.innerText.includes("Process payment") ){
               alert('Unpayment set, complete payment service')
             } else {
-              alert('Payment set')
               props.purchasingcheckoutdetailsmodaldisplaypropertycb((display)=> display = "block");
             }
               

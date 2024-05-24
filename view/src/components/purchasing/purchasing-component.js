@@ -337,6 +337,14 @@ export default function Purchasing(props) {
             </Col>
             <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-backreciept">
              <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-backreciept-headerindication">Back reciept</h4>
+             
+             <h4 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-closebuttoncontainer-headerindication"
+                onClick={()=> {
+
+                  const _purchasingcheckdetailsreciept = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer");
+                  purchasingcheckoutdetailsmodaldisplaypropertycb((display)=> display = "none");
+
+             }}>keep</h4>
   
             </Col>
           </Col>
@@ -377,19 +385,56 @@ export default function Purchasing(props) {
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"
               onClick={(evt)=> {
 
+                 alert(props.purchasingcargoaddressset);
+                 alert(props.purchasingpaymentset);
+
                  const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
                  const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
                  const _checkoutresponseloadingindicator = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"); 
                  const _checkoutsubmitindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"); 
                  const _checkoutclosebuttonindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication");
 
-                 _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
-                 _checkoutresponsedisplayimage.style.display = "block";
-                 _checkoutresponsemessage[0].innerText = "Sucessfully processed a payment";
-                 _checkoutresponsemessage[1].innerText = "Continue to transactions, graph or account";
-                 _checkoutresponsemessage[0].style.display = "block";
-                 _checkoutresponsemessage[1].style.display = "block";
-                 _checkoutsubmitindication.style.display = "none";
+                 if ( props.purchasingcargoaddressset === false && props.purchasingpaymentset === true ) {
+                  _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsemessage[0].innerText = "Payment was set yet there's an error occured, ";
+                  _checkoutresponsemessage[1].innerText = "No purchasing cargo destination address";
+                  _checkoutresponsemessage[0].style.display = "block";
+                  _checkoutresponsemessage[1].style.display = "block";
+                 }
+                 if ( props.purchasingpaymentset === false &&  props.purchasingcargoaddressset === true ) {
+                  _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsemessage[0].innerText = "Purchasing cargo destination was set yet there's an error occured, ";
+                  _checkoutresponsemessage[1].innerText = "No payment.";
+                  _checkoutresponsemessage[0].style.display = "block";
+                  _checkoutresponsemessage[1].style.display = "block";
+                 }
+                 if (  props.purchasingpaymentset === false &&  props.purchasingcargoaddressset === false ) {
+                  _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsedisplayimage.style.display = "block";
+                  _checkoutresponsemessage[0].innerText = "Error occured, ";
+                  _checkoutresponsemessage[1].innerText = "No cargo destination address.";
+                  _checkoutresponsemessage[0].style.display = "block";
+                  _checkoutresponsemessage[1].style.display = "block";
+                 }
+                 if ( props.purchasingpaymentset === true &&  props.purchasingcargoaddressset === true ) {
+                    _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                    _checkoutresponsedisplayimage.style.display = "block";
+                    _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                    _checkoutresponsedisplayimage.style.display = "block";
+                    _checkoutresponsemessage[0].innerText = "Sucessfully processed a payment";
+                    _checkoutresponsemessage[1].innerText = "Continue to transactions, graph or account";
+                    _checkoutresponsemessage[0].style.display = "block";
+                    _checkoutresponsemessage[1].style.display = "block";
+                 }
+
+              
+               //  _checkoutsubmitindication.style.display = "none";
 
            }}>Submit payment</h1> 
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication"

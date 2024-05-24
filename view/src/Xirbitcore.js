@@ -798,12 +798,13 @@ const [manualcargoaddressdestinationloadingindication, manualcargoaddressdestina
 const [setascargodestinationloadingindication, setascargodestinationloadingindicationcb] = useState(false);
 
 const [purchasingcargodestination, purchasingcargodestinationcb] = useState(",,,,,");
-const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(true);
+const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(false);
 
 const [purchasingtotalmerchandisepayment, purchasingtotalmerchandisepaymentcb] = useState(0);
 const [purchasingtotalweight, purchasingtotalweightcb] = useState(0);
 const [purchasingtotalcargofee, purchasingtotalcargofeecb] = useState(0);
 const [purchasigtotalpayment, purchasigtotalpaymentcb] = useState(0);
+const [purchasingpaymentset, purchasingpaymentsetcb] = useState(false);
 
 const [purchasingtotalmrnproducts, purchasingtotalmrnproductscb] = useState([]);
 const [purchasingmrnproductstotalweight, purchasingmrnproductstotalweightcb] = useState(0);
@@ -2223,6 +2224,8 @@ const navigate = useNavigate();
                                      purchasingtotalcargofeecb={purchasingtotalcargofeecb}
                                      purchasigtotalpayment={purchasigtotalpayment}
                                      purchasigtotalpaymentcb={purchasigtotalpaymentcb}
+                                     purchasingpaymentset={purchasingpaymentset}
+                                     purchasingpaymentsetcb={purchasingpaymentsetcb}
                                      purchasingtotalmrnproducts={purchasingtotalmrnproducts}
                                      purchasingtotalmrnproductscb={purchasingtotalmrnproductscb}
                                      purchasingmrnproductstotalweight={purchasingmrnproductstotalweight}
