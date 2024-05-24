@@ -410,7 +410,7 @@ export default function Purchasing(props) {
                   _checkoutresponsemessage[0].style.display = "block";
                   _checkoutresponsemessage[1].style.display = "block";
                  }
-                 if (  props.purchasingpaymentset === false &&  props.purchasingcargoaddressset === false ) {
+                 if ( props.purchasingpaymentset === false &&  props.purchasingcargoaddressset === false ) {
                   _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
                   _checkoutresponsedisplayimage.style.display = "block";
                   _checkoutresponsedisplayimage.style.display = "block";
@@ -420,9 +420,7 @@ export default function Purchasing(props) {
                   _checkoutresponsemessage[1].style.display = "block";
                  }
                  if ( props.purchasingpaymentset === true &&  props.purchasingcargoaddressset === true ) {
-                    _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
-                    _checkoutresponsedisplayimage.style.display = "block";
-                    _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkoutcheck.png";
                     _checkoutresponsedisplayimage.style.display = "block";
                     _checkoutresponsemessage[0].innerText = "Sucessfully processed a payment";
                     _checkoutresponsemessage[1].innerText = "Continue to transactions, graph or account";
