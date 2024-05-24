@@ -2342,12 +2342,23 @@ return (
             onClick={(evt)=> {
     
               const _button = document.querySelector('#purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-paymentbutton');
-
+              const _purchasingcheckoutdetailsmodal = document.querySelector('#purchasingdetails-purchasingcheckoutdetailscontainer');
+ 
+             {/*
               if (props.paymentmethodset) {
                 alert('Payment set')
               } else {
                 alert('Unpayment set')
+              props.purchasingcheckoutdetailsmodaldisplaypropertycb((display)=> display = "block");
               }
+            */}
+
+            if ( _button.innerText.includes("Process payment") ){
+              alert('Unpayment set, complete payment service')
+            } else {
+              alert('Payment set')
+              props.purchasingcheckoutdetailsmodaldisplaypropertycb((display)=> display = "block");
+            }
               
             }}>
       Process payment ●
@@ -2403,6 +2414,9 @@ return (
   </Row>
 
   </Col>
+
+ 
+
 
 </Row>
 )

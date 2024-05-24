@@ -48,6 +48,8 @@ export default function Purchasing(props) {
   const [cargodestinationset, cargodestinationsetcb] = useState(false);
   const [paymentmethodset, paymentmethodsetcb] = useState(false);
 
+  const [purchasingcheckoutdetailsmodaldisplayproperty, purchasingcheckoutdetailsmodaldisplaypropertycb] = useState("none");
+
   {/*
   useEffect(()=> {
     calculateTotalMerchandisePrice()
@@ -124,6 +126,7 @@ export default function Purchasing(props) {
   
  return (
     <Row id='purchasing'>
+
       <Row id='purchasing-gridcontainer'>
 
         {/*
@@ -198,9 +201,12 @@ export default function Purchasing(props) {
                              selectedproductarray={props.selectedproductarray}
                              selectedproductarraycb={props.selectedproductarraycb}
                              selectedproductarraylength={props.selectedproductarraylength}
-                             selectedproductarraylengthcb={props.selectedproductarraylengthcb}/>
+                             selectedproductarraylengthcb={props.selectedproductarraylengthcb}
+                             
+                             purchasingcheckoutdetailsmodaldisplayproperty={purchasingcheckoutdetailsmodaldisplayproperty}
+                             purchasingcheckoutdetailsmodaldisplaypropertycb={purchasingcheckoutdetailsmodaldisplaypropertycb}/>
         </Col>
-        
+
       </Row>
       <Col xs={12}
            md={12}
@@ -253,6 +259,125 @@ export default function Purchasing(props) {
            </p>
          </Col>
       </Col>
+
+      <Col id="purchasingdetails-purchasingcheckoutdetailscontainer"
+           style={{display: purchasingcheckoutdetailsmodaldisplayproperty}}>
+        <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer">
+          <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer">
+            <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept">
+            <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-headerindication">Date: 00-00-00, 00:00:00</h4>
+            <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-headerindication">Transaction id: 111111-1111-111</h4>
+            <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-headerindication">Branch: Handled by main branch</h4>
+            <br/>
+            <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-headerindication">Front reciept</h4>
+            <br/>
+            <br/>
+              <Row id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer">
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-headerindication">Payments</h5>
+                </Col>
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                    <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-headerindication">Additional details</h5>
+                </Col>
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL PURCHASE, 0 peso's</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TRANSACTION GIVE AWAY, 0 peso's</h5>
+                </Col>
+                </Col>
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">Vanguard transaction give away covered</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">Online reciept</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">Vanguard holder, common public</h5>
+                </Col>
+                </Col>
+
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                    <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-headerindication">Transaction</h5>
+                </Col>
+
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                    <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-headerindication">|||||||||||||||||||||||||||||</h5>
+                    <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-headerindication">Vanguard's signiture</h5>
+                </Col>
+
+                <Col xs={6}
+                     md={6}
+                     lg={6}
+                     className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
+                <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL PURCHASE, 0 peso's</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TRANSACTION GIVE AWAY, 0 peso's</h5>
+                </Col>
+                </Col>
+
+                
+               
+              </Row>
+            </Col>
+            <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-backreciept">
+             <h4 id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-backreciept-headerindication">Back reciept</h4>
+  
+            </Col>
+          </Col>
+          <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-closebuttoncontainer">
+            <h4 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-closebuttoncontainer-headerindication"
+                onClick={()=> {
+
+                 const _frontreciept = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept");
+                 const _backreciept = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-backreciept");
+
+                 const _recieptflippingcondition = _frontreciept.style.opacity;
+                 
+                 if ( _recieptflippingcondition === "1" ) {
+                  _frontreciept.style.opacity = "0";
+                  _backreciept.style.opacity = "1";
+                 } else {
+                  _frontreciept.style.opacity = "1";
+                  _backreciept.style.opacity = "0";
+                 }
+
+            }}>flip</h4>
+            <h4 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-closebuttoncontainer-headerindication"
+                onClick={()=> {
+
+                  const _confirmationcontainer = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer");
+                  _confirmationcontainer.style.display = "flex";
+
+             }}>payment</h4>
+          </Col>
+        </Col>
+        <Col id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer">
+          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication">Partial disclose on development, payment legitimacy</h1>
+          <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication"
+               onClick={()=> {
+
+                const _confirmationcontainer = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer");
+                _confirmationcontainer.style.display = "none";
+
+           }}>close</h1>
+        </Col>
+     </Col>
+      
     </Row>
  )
 }
