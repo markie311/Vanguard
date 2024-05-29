@@ -8,7 +8,6 @@ $containersonidlebgcolor: #e2e4e1;
 @media only screen and (max-width: 600px) {
 #transactions {
 position:relative;
-border:0.1vh solid white;
 height:auto;
 width:100%;
 padding:0px;
@@ -107,7 +106,22 @@ display: flex;
 flex-wrap: wrap;
 justify-content:space-between;
 padding:0;
+overflow-x:hidden;
 overflow-y:scroll;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar {
+width:5px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white; 
+border-radius: 20px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimage {
 position:relative;
@@ -160,8 +174,11 @@ right:1vh;
 position:absolute;
 background-color:white;
 border-radius:5px;
-height:80vh;
+height:65vh;
 width:100%;
+top:0;
+left:0;
+transform:translate(-50%,-50%);
 overflow-y:scroll;  
 z-index:1;
 padding:10px;
@@ -247,13 +264,13 @@ weight:900;
 color:black;
 text-align:right;
 user-select:none;
+top:1.5vh;
 z-index:10;
 }
 }
 @media only screen and (min-width: 1200px) {
 #transactions {
 position:relative;
-border:0.1vh solid white;
 height:auto;
 width:100%;
 padding:0px;
@@ -261,7 +278,7 @@ padding:0px;
 #transactions-transactionsnavigationcontainer {
 position:relative;
 background-color:white;
-height:10%;
+height:10vh;
 width:100%;
 display:flex;
 align-items:center;
@@ -302,7 +319,7 @@ outline-style:none;
 /// trasnsactions container 
 #transactions-transactionscontainer {
 position:relative;
-height:90%;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -359,7 +376,7 @@ height:auto;
 padding:10px 10px 10px 100px;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar {
-width: 20px;
+width: 5px;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px grey; 

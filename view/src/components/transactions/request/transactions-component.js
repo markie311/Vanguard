@@ -120,10 +120,10 @@ export default function Transactions(props) {
                                    if ( props.viewport === 'xs' ) {
               
                                       if ( _transactiondetailsproductdisplayimage[idx].offsetLeft > 0 ) {
-                                        document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.transform = 'translate(-10%, -45%)';
+                                        document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.transform = 'translate(0%, 0%)';
                                         document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.display = 'block';
                                       } else {
-                                        document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.transform = 'translate(-10%, -45%)';
+                                        document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.transform = 'translate(0%, 0%)';
                                         document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')[listidx].style.display = 'block';
                                       }
               
@@ -337,7 +337,6 @@ export default function Transactions(props) {
                                <Col className='transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindicationcontainer'>
                                 <p className='transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindication'
                                   onClick={(evt)=> {
-                                    alert("Synced")
                                     const _transactiondetialscontainer = document.querySelectorAll('.transactions-transactionscontainer-transactiondetailscontainer')
                                     _transactiondetialscontainer[listidx].style.display = 'none'
                                   }}>
