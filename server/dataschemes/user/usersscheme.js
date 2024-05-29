@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const productscheme = require('../product/productscheme.js');
+const transactionscheme = require('../transactions/product/transactionscheme');
 
 const user = new Schema({
  authentications: {
@@ -100,8 +100,8 @@ const user = new Schema({
     history: []
   }
  },
- transactions: [],
- purchases: [productscheme]
+ transactions: [transactionscheme],
+ purchases: [transactionscheme]
 })
 
 module.exports= user;

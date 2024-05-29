@@ -126,7 +126,8 @@ export default function DatabaseLogin(props) {
         md={12}
         lg={12}
         id='databaselogin-requesttransactioncontainer'>
-     <Transactions viewport={props.viewport}/>
+     <Transactions viewport={props.viewport}
+                   requesttransactiondata={props.requesttransactiondata}/>
    </Col>
    <ConfigurationAuthenticationModal />
    <PasswordSetup />

@@ -130,7 +130,9 @@ const navigate = useNavigate();
                        products={props.products}
                        marketingviewmodaldisplayproperty={marketingviewmodaldisplayproperty}
                        viewport={props.viewport}
-                       transactionsmodaldisplayproperty={transactionsmodaldisplayproperty}/>
+                       transactionsmodaldisplayproperty={transactionsmodaldisplayproperty}
+                       
+                       requesttransactiondata={props.requesttransactiondata}/>
 
    <Col id='xirbitmarketing-xirbitgraphmarketing'>
     <XirbitMarketingGragphContainer />
@@ -182,7 +184,8 @@ function XirbitMarketingView(props) {
                     marketingviewmodaldisplayproperty={props.marketingviewmodaldisplayproperty}/>
 
       <Transactions viewport={props.viewport}
-                    transactionsmodaldisplayproperty={props.transactionsmodaldisplayproperty}/>        
+                    transactionsmodaldisplayproperty={props.transactionsmodaldisplayproperty}
+                    requesttransactiondata={props.requesttransactiondata}/>        
 
    </Col>
 

@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const statusscheme = new Schema({
+const productstatusscheme = new Schema({
  status: {
   type: "string"
  },
@@ -13,4 +13,4 @@ const statusscheme = new Schema({
  }
 });
 
-module.exports = statusscheme;
+module.exports = productstatusscheme;

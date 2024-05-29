@@ -8,6 +8,9 @@ import { Row,
          Spinner,
          Carousel } from 'react-bootstrap';
 
+import { timestamp } from '../lib/timestamps.js';
+import generateInt32StringsDataType from '../lib/generateInt32StringDataType.js';
+
 import '../../styles/purchasing/purchasing.scss';
 
 import WidthdrawalsGrid from '../widthdrawals/widthdrawalsgrid-component.js';
@@ -15,7 +18,10 @@ import PurchasingDetails from '../purchasing/purchasingdetails-component.js';
 import TranasctionMoney from '../transactions/money/transactionmoney-component.js';
 import TransactionFunds from '../transactions/funds/transactionfunds-component.js';
 import PaymentModal from '../purchasing/paymentmodal-component.js';
+
 import { operations } from '../lib/operations.js';
+
+import axiosCreatedInstance from '../lib/axiosutil.js';
 
 export default function Purchasing(props) {
 
@@ -180,7 +186,7 @@ export default function Purchasing(props) {
                              purchasingcargodestination={props.purchasingcargodestination}
                              purchasingcargodestinationcb={props.purchasingcargodestinationcb}
                              purchasingcargoaddressset={props.purchasingcargoaddressset}
-                             purchasingcargoaddresssetcb={props.urchasingcargoaddresssetcb}
+                             purchasingcargoaddresssetcb={props.purchasingcargoaddresssetcb}
                              purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
                              purchasingtotalmerchandisepaymentcb={props.purchasingtotalmerchandisepaymentcb}
                              purchasingtotalweight={props.purchasingtotalweight}
@@ -205,7 +211,10 @@ export default function Purchasing(props) {
                              selectedproductarraylengthcb={props.selectedproductarraylengthcb}
                              
                              purchasingcheckoutdetailsmodaldisplayproperty={purchasingcheckoutdetailsmodaldisplayproperty}
-                             purchasingcheckoutdetailsmodaldisplaypropertycb={purchasingcheckoutdetailsmodaldisplaypropertycb}/>
+                             purchasingcheckoutdetailsmodaldisplaypropertycb={purchasingcheckoutdetailsmodaldisplaypropertycb}
+                             
+                             requesttransactiondata={props.requesttransactiondata}
+                             requesttransactiondatacb={props.requesttransactiondatacb}/>
         </Col>
 
       </Row>
@@ -215,8 +224,8 @@ export default function Purchasing(props) {
            id='purchasing-navigationcontainer'>
 
          <Row id='purchasing-navigationcontainer-contentcontainer'>
-          <TranasctionMoney />
-          <TransactionFunds />
+          <TranasctionMoney  requesttransactiondata={props.requesttransactiondata}/>
+          <TransactionFunds requesttransactiondata={props.requesttransactiondata}/>
           <PaymentModal user={props.user}
                         usercb={props.usercb} 
                         purchasing={props.purchasing}
@@ -238,16 +247,21 @@ export default function Purchasing(props) {
                         purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
                         purchasingtotalweight={props.purchasingtotalweight}
                         purchasingtotalcargofee={props.purchasingtotalcargofee}
-                        purchasigtotalpayment={props.purchasigtotalpayment}
+                        purchasingtotalpayment={props.purchasigtotalpayment}
+                        purchasingpaymentsetcb={props.purchasingpaymentsetcb}
 
                         purchasingcargoaddressset={props.purchasingcargoaddressset}
+
 
                         purchasingtotalmrnproducts={props.purchasingtotalmrnproducts}
                         purchasingmrnproductstotalweight={props.purchasingmrnproductstotalweight}
                         purchasingtotalnonmrnproducts={props.purchasingtotalnonmrnproducts}
                         purchasingnonmrnproductstotalweight={props.purchasingnonmrnproductstotalweight}
 
-                        selectedproductarray={props.selectedproductarray}/>
+                        selectedproductarray={props.selectedproductarray}
+                        
+                        requesttransactiondata={props.requesttransactiondata}
+                        requesttransactiondatacb={props.requesttransactiondatacb}/>
          </Row>
 
          <Col id='purchasing-navigationcontainer-closebuttoncontainer'>
@@ -328,6 +342,7 @@ export default function Purchasing(props) {
                 <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL PURCHASE, 0 peso's</h5>
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TRANSACTION GIVE AWAY, 0 peso's</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">SHARED, 0 peso's</h5>
                 </Col>
                 </Col>
 
@@ -383,7 +398,7 @@ export default function Purchasing(props) {
           <h1 className="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage">Checkoutcheck additional information response message</h1>
           <Spinner animation="border" variant="primary" size="lg" id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"/>
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"
-              onClick={(evt)=> {
+              onClick={ async (evt)=> {
 
                  const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
                  const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
@@ -391,6 +406,195 @@ export default function Purchasing(props) {
                  const _checkoutsubmitindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"); 
                  const _checkoutclosebuttonindication = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-closebuttonindication");
 
+                 const $date = `${timestamp.getDay()}, ${timestamp.getMonth()}, ${timestamp.getDate()}, ${timestamp.getFullYear()}, ${timestamp.getHour()}:${timestamp.getMinutes()}: ${timestamp.getSeconds()}`;
+
+                 const $transactionidfirstsection = generateInt32StringsDataType(12);
+                 const $transactionsecondsection = generateInt32StringsDataType(6);
+                 const $transactionthirdsection = generateInt32StringsDataType(6);
+                 const $transactionid = `${$transactionidfirstsection}-${$transactionsecondsection}-${$transactionthirdsection}`;
+
+                 const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.suggested_retail_price)}, 0);
+                 const _purchasingvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat)}, 0);
+                 const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.capital)}, 0);
+                 const _purchasingoveralltotalpcspricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
+                 const _purchasingproducttotalpaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+                 const _purchasingcargototalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
+                 const _purchasingweightpricebreakdown  = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
+                 const _purchasingreciepttotalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+                
+                 const $purchasertransactiongiveaway =  _purchasingvatpricebreakdown / 2;
+                 const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
+                 const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
+
+                 const _cargo = 100; 
+                 const _cargotransactiongiveaway = _cargo / 4;
+
+                 const _vanguard = _purchasingvatpricebreakdown - ( $purchasertransactiongiveaway +  $authenticationstransactiongiveaway);
+
+                 const authenticationsshare = _purchasingvatpricebreakdown - (  $purchasertransactiongiveaway  +  _vanguard);
+
+                 const _requesttransactiondataprocessdate = {
+                  status: "Submitted",
+                  date: $date,
+                  message: "All data to purchase are gathred"
+                 }
+
+                 const _requesttransactiondatastatus = {
+                  status: "Data",
+                  date: $date,
+                  message: "Data gathered"
+                 }
+                 
+                 const _requesttransactiondatamessage = {
+                  status: "Purchasing details submitted", 
+                  date: $date,
+                  message: "All date are to purchase are gathered",
+                 }
+
+                 const _requesttransactiondata = {
+                  date: [_requesttransactiondataprocessdate],
+                  transaction: {
+                    transactionid: "",
+                    transactiontype: "Submitted"
+                  },
+                  status: {
+                    current: [],
+                    requested: [],
+                    confirmedandtobedelivered: [],
+                    delayed: [],
+                    delivered: [],
+                    confirmedasrecieved: []
+                  }, 
+                  messages: [],
+                  products: {
+                    list: [],
+                    pricesbreakdown: {
+                    merchandise: {
+                      totalpayment: 0,
+                      totalcapital: 0,
+                      total_suggested_retail_price:0,
+                      totalvat: 0,
+                      },
+                      cargo: {
+                      cargotype: "",
+                      cargoexpress: "",
+                      weight: {
+                      type: "",
+                      cargofee: 0,
+                      locations: {
+                        destination: {
+                        street: "",
+                        baranggay: "",
+                        city: "",
+                        province: "",
+                        country: "",
+                        },
+                        branch: {
+                        street: "",
+                        baranggay: "",
+                        city: "",
+                        province: "",
+                        country: "",
+                        }
+                      }
+                      },
+                      totalpayment: 0
+                      }
+                  }
+                  }
+                 };
+
+                 const _requestransactiondatamerhandisepricebreakdown = {
+                  totalpayment: _purchasingproducttotalpaymentpricebreakdown,
+                  totalcapital: _purchasingoverallcapitalpricebreakdown,
+                  total_suggested_retail_price: _purchasingsrppricebreakdown,
+                  totalvat: _purchasingvatpricebreakdown,
+                 }
+
+                 const _requestransactiondatacargopricebreakdown = {
+                  totalpayment: 0,
+                  totalcapital: 0,
+                  total_suggested_retail_price:0,
+                  totalvat: 0,
+                 }
+    
+                 const _requestransactiondatacargo = {
+                  cargotype: "Cargo/Delivery type",
+                  cargoexpress: "Vanguard",
+                  weight: _purchasingweightpricebreakdown,
+                  cargofee: _purchasingcargototalpricebreakdown,
+                  locations: {
+                    destination: props.purchasingcargodestination,
+                    branch: {
+                  street: "",
+                  baranggay: "",
+                  city: "",
+                  province: "",
+                  country: "",
+                   }
+                  }
+                 }
+
+                 const _requestransactiondatatransactiongiveaway = {
+                   purchaser: $purchasertransactiongiveaway,
+                   people: authenticationsshare,
+                   vanguard: _vanguard
+                 }
+
+                //  alert(JSON.stringify(_requestransactiondatamerhandisepricebreakdown));
+                //  alert(JSON.stringify(_requestransactiondatacargopricebreakdown));
+                //  alert(JSON.stringify(_requestransactiondatacargo));
+                //  alert(JSON.stringify(_requestransactiondatatransactiongiveaway));
+
+                 props.requesttransactiondata.date.push(_requesttransactiondataprocessdate);
+                 props.requesttransactiondata.status.current.push(_requesttransactiondatastatus);
+                 props.requesttransactiondata.transactionid = $transactionid;
+                 props.requesttransactiondata.transactiontype = "Cargo/delivery type";
+                 props.requesttransactiondata.messages.push(_requesttransactiondatamessage);
+                 props.requesttransactiondata.products.pricesbreakdown.merchandise =  _requestransactiondatamerhandisepricebreakdown;
+                 props.requesttransactiondata.products.pricesbreakdown.cargo.fee = _requestransactiondatacargopricebreakdown ;
+                 props.requesttransactiondata.cargo = _requestransactiondatacargopricebreakdown;
+                 props.requesttransactiondata.payments.totalproductpayment = _purchasingproducttotalpaymentpricebreakdown;
+                 props.requesttransactiondata.cargo = _requestransactiondatacargo;
+                 props.requesttransactiondata.transactiongiveaway =  _requestransactiondatatransactiongiveaway;
+                     
+                 props.requesttransactiondata.messages.push(_requesttransactiondatamessage);
+                 props.requesttransactiondata.products.list = props.selectedproductarray;
+
+                 await axiosCreatedInstance.post("/purchasing/submitpayment/", {
+                   $requesttransactiondata:  props.requesttransactiondata
+                  }).then((response)=> {
+                    const _responsedata = response.data;
+                    console.log(_responsedata)
+                     if ( _responsedata === "Assist common public account authentication and it's registration" ) {
+                   //    document.cookie = `thisuser=${_responsedata.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
+                   //    welcomeinmtroductionmesssagecb((message)=> message = "commonpublicaccountactivation");
+                   //    loadWelcomeIntroductionModal();
+                    } else {
+                   //     welcomeinmtroductionmesssagecb((message)=> message = "commonpublicaccountconfiguration");  
+                  //     loadWelcomeIntroductionModal();
+                  }
+                 })
+
+                   // _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
+                  //  _checkoutresponsedisplayimage.style.display = "block";
+                  // _checkoutresponsedisplayimage.style.display = "block";
+                  //  _checkoutresponsemessage[0].innerText = "Error occured, ";
+                  //  _checkoutresponsemessage[1].innerText = "No cargo destination address.";
+                  //  _checkoutresponsemessage[0].style.display = "block";
+                  //  _checkoutresponsemessage[1].style.display = "block";
+
+                 
+
+              {/*
+           
+               //   alert(JSON.stringify(props.selectedproductarray));
+               //   alert(JSON.stringify(props.requesttransactiondata));
+              //    console.log(props.requesttransactiondata);
+
+                // props.requesttransactiondata
+
+                 {/*
                  if ( props.purchasingcargoaddressset === false && props.purchasingpaymentset === true ) {
                   _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
                   _checkoutresponsedisplayimage.style.display = "block";
@@ -427,8 +631,8 @@ export default function Purchasing(props) {
                     _checkoutresponsemessage[0].style.display = "block";
                     _checkoutresponsemessage[1].style.display = "block";
                  }
+                 */}
 
-              
                //  _checkoutsubmitindication.style.display = "none";
 
            }}>Submit payment</h1> 

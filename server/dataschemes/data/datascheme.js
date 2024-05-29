@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const productscheme = require('../product/productscheme.js');
+const productscheme = require('../product/product/productscheme');
 
 const locations = new Schema({
  street:  {

@@ -95,15 +95,29 @@ export default function PaymentModal(props) {
                lg={6}
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-merchandiselistcontainer'>
             {
-             props.selectedproductarray.map((merchandise,idx)=> {
-                return (
-                  <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'
-                     key={idx}>
-                     {merchandise.productname}
-                  </p>
-                )
-             })
+              props.selectedproductarray.length === 0 ? 
+             (
+              <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>
+               Empty
+             </p>
+             )
+             :
+             (
+              <React.Fragment>
+              {
+                props.selectedproductarray.map((merchandise,idx)=> {
+                   return (
+                     <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'
+                        key={idx}>
+                        {merchandise.productname}
+                     </p>
+                   )
+                })
+             }
+             </React.Fragment>
+             )
             }
+            
           </Col>
           <Col xs={3}
                md={3}
@@ -149,7 +163,7 @@ export default function PaymentModal(props) {
                md={3}
                lg={3}
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalheaderindicationcontainer'>
-            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasigtotalpayment} peso's</p>
+            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasingtotalpayment} peso's</p>
           </Col>
           
           <Col xs={3}
@@ -201,6 +215,19 @@ export default function PaymentModal(props) {
                md={6}
                lg={6}
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer'>
+            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>Product total</p>
+          </Col>
+          <Col xs={3}
+               md={3}
+               lg={3}
+               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer'>
+            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasingtotalpayment} peso's</p>
+          </Col>
+
+          <Col xs={6}
+               md={6}
+               lg={6}
+               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer'>
             <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>Delivery</p>
           </Col>
           <Col xs={3}
@@ -209,6 +236,20 @@ export default function PaymentModal(props) {
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-deliveryheaderindicationcontainer'>
             <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasingtotalcargofee} peso's</p>
           </Col>
+
+          <Col xs={6}
+               md={6}
+               lg={6}
+               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalsigncontainer'>
+            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>Total payment</p>
+          </Col>
+          <Col xs={3}
+               md={3}
+               lg={3}
+               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalamounttobepaidcontainer'>
+              <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasingtotalpayment + props.purchasingtotalcargofee} peso's</p>
+          </Col>
+
           <Col xs={6}
                md={6}
                lg={6}
@@ -231,12 +272,12 @@ export default function PaymentModal(props) {
                     const $activepaymentmethod = $paymenthod.findIndex((paymentmethod)=> paymentmethod === '50%');
 
                     const _lackingmoneyandfundsconfirmbutton =  document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton");
-                    const _lackingmoneyandfundsdontproceedbutton = document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton");               
+                    const _lackingmoneyandfundsdontproceedbutton = document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton");  
 
-                    if ( props.user.moneyandfunds.money.amount < props.purchasigtotalpayment ) {
+                    if ( props.user.moneyandfunds.money.amount < ( props.purchasingtotalpayment + props.purchasingtotalcargofee ) ) {
 
                         if ( _moneytogglebuttonmarginproperty > 0 ) {
-                     
+                        
                          if (!$validatepaymentmethod) {
 
                            paymentcb((payment)=> payment = "No options method");
@@ -253,9 +294,7 @@ export default function PaymentModal(props) {
 
                           _deductionscontainer.style.display = 'none';
 
-                         } else {
-
-                          paymentcb((payment)=> payment = "Money");
+                         } else { 
 
                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to deduct the remaining amount to your funds.';
@@ -269,13 +308,14 @@ export default function PaymentModal(props) {
                           _fundstogglebutton.style.backgroundColor = 'gray';
                           _fundstogglebutton.style.marginLeft = '0%';
 
+                          
+                          paymentcb((payment)=> payment = "Money"); 
                           _deductionscontainer.style.display = 'flex';
+
 
                          }
                         } else {
 
-                           paymentcb((payment)=> payment = "Money");
-
                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to deduct the remaining amount to your funds.';
                           _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
@@ -289,6 +329,8 @@ export default function PaymentModal(props) {
                           _fundstogglebutton.style.marginLeft = '0%';
 
                           _deductionscontainer.style.display = 'flex';
+
+                          paymentcb((payment)=> payment = "Money");
 
                         }
 
@@ -299,6 +341,12 @@ export default function PaymentModal(props) {
                         if (!$validatepaymentmethod) {
 
                           paymentcb((payment)=> payment = "No options method");
+                          props.purchasingpaymentsetcb((payment)=> payment = false);
+                          props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = false;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = 0;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = false;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = 0;
+
                           _moneytogglebutton.style.backgroundColor = 'gray';
                           _moneytogglebutton.style.marginLeft = '0%';
                           _paymentresponsemessage.style.color = 'white';
@@ -310,7 +358,13 @@ export default function PaymentModal(props) {
 
                         } else {
 
-                          paymentcb((payment)=> payment = "No options method");
+                           paymentcb((payment)=> payment = "No options method");
+                           props.purchasingpaymentsetcb((payment)=> payment = false);
+                           props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = false;
+                           props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = 0;
+                           props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = false;
+                           props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = 0;
+
                           _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                           _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'No payment method set.';
                           _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
@@ -320,7 +374,6 @@ export default function PaymentModal(props) {
 
                        } else {
 
-                        paymentcb((payment)=> payment = "Money");
                         _moneytogglebutton.style.backgroundColor = 'dodgerblue';
                         _moneytogglebutton.style.marginLeft = '50%';
                         _fundstogglebutton.style.backgroundColor = 'gray';
@@ -332,10 +385,18 @@ export default function PaymentModal(props) {
 
                         fundspaymentdeductionscb((deductions)=> deductions = 0);
                         remainingfundscb((money)=> money = props.user.moneyandfunds.funds.amount - 0);
-                        moneypaymentdeductionscb((deductions)=> deductions = props.purchasigtotalpayment);
-                        remainingmoneycb((money)=> money = props.user.moneyandfunds.money.amount - props.purchasigtotalpayment);
+                        moneypaymentdeductionscb((deductions)=> deductions = props.purchasingtotalpayment + props.purchasingtotalcargofee);
+                        remainingmoneycb((money)=> money = props.user.moneyandfunds.money.amount - ( props.purchasingtotalpayment + props.purchasingtotalcargofee));
+
+                        props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = true;
+                        props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = props.purchasingtotalpayment + props.purchasingtotalcargofee;
+                        props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = false;
+                        props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = 0;
 
                         _deductionscontainer.style.display = 'flex';
+
+                        paymentcb((payment)=> payment = "Money");
+                        props.purchasingpaymentsetcb((payment)=> payment = true);
 
                        }
 
@@ -383,7 +444,8 @@ export default function PaymentModal(props) {
                       const _lackingmoneyandfundsconfirmbutton =  document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton");
                       const _lackingmoneyandfundsdontproceedbutton = document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton");               
 
-                      if ( props.user.moneyandfunds.funds.amount < props.purchasigtotalpayment ) { 
+                      if ( props.user.moneyandfunds.funds.amount < ( props.purchasingtotalpayment + props.purchasingtotalcargofee ) ) { 
+
                         if ( _fundstogglebuttonmarginproperty !== '0%' ) {
 
                           if (!$validatepaymentmethod) {
@@ -417,8 +479,6 @@ export default function PaymentModal(props) {
 
                         } else {
 
-                           paymentcb((payment)=> payment = "Funds"); 
-
                           _fundstogglebutton.style.backgroundColor = 'dodgerblue';
                           _fundstogglebutton.style.marginLeft = '50%';
                           _moneytogglebutton.style.backgroundColor = 'gray';
@@ -433,6 +493,8 @@ export default function PaymentModal(props) {
                           _lackingmoneyandfundsconfirmbutton[0].style.display = "block";
                           _lackingmoneyandfundsdontproceedbutton[0].style.display = "block";
 
+                          paymentcb((payment)=> payment = "Funds");
+
 
                          {/*
                           if ( props.user.moneyandfunds.funds.amount < totalpayment ) {
@@ -478,12 +540,20 @@ export default function PaymentModal(props) {
                         */}
 
                         }
+
                       } else {
+
                          if ( _fundstogglebuttonmarginproperty !== '0%' ) {
 
                           if (!$validatepaymentmethod) {
 
                             paymentcb((payment)=> payment = "No options method");
+                            props.purchasingpaymentsetcb((payment)=> payment = false);
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = false;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = 0;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = false;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = 0;
+
                             _fundstogglebutton.style.backgroundColor = 'gray';
                             _fundstogglebutton.style.marginLeft = '0%';
                             _paymentresponsemessage.style.color = 'white';
@@ -496,6 +566,12 @@ export default function PaymentModal(props) {
                           } else {
 
                             paymentcb((payment)=> payment = "No options method");
+                            props.purchasingpaymentsetcb((payment)=> payment = false);
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = false;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = 0;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = false;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = 0;
+
                             _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                             _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'No payment method set.';
                             _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
@@ -503,8 +579,6 @@ export default function PaymentModal(props) {
                           }
 
                         } else {
-
-                          paymentcb((payment)=> payment = "Funds");
 
                           _fundstogglebutton.style.backgroundColor = 'dodgerblue';
                           _fundstogglebutton.style.marginLeft = '50%';
@@ -517,10 +591,18 @@ export default function PaymentModal(props) {
 
                           moneypaymentdeductionscb((deductions)=> deductions = 0);
                           remainingmoneycb((money)=> money = props.user.moneyandfunds.money.amount - 0);
-                          fundspaymentdeductionscb((deductions)=> deductions = props.purchasigtotalpayment);
-                          remainingfundscb((money)=> money = props.user.moneyandfunds.funds.amount - props.purchasigtotalpayment);
+                          fundspaymentdeductionscb((deductions)=> deductions = Number(props.purchasingtotalpayment) + Number(props.purchasingtotalcargofee));
+                          remainingfundscb((money)=> money = Number(props.user.moneyandfunds.funds.amount) - ( Number(props.purchasingtotalpayment) + Number(props.purchasingtotalcargofee) ) );
+
+                          props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = false;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = 0;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = true;
+                          props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = props.purchasingtotalpayment + props.purchasingtotalcargofee;
 
                           _deductionscontainer.style.display = 'flex';
+
+                          paymentcb((payment)=> payment = "Funds");
+                          props.purchasingpaymentsetcb((payment)=> payment = true);
 
                          {/*
                           if ( props.user.moneyandfunds.funds.amount < totalpayment ) {
@@ -563,11 +645,10 @@ export default function PaymentModal(props) {
                          //   props.paymentmethodsetcb((validation)=> validation = true)
    
                           }
-                        */}
+                         */}
 
                         }
                       }
-                     
 
                     }}>
                <div id='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglebutton'>
@@ -587,18 +668,7 @@ export default function PaymentModal(props) {
                className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer'>
             <p className='paymentmodal-gridcontainer-paymentgridcontainer-fundsheaderindication'>Funds</p>
           </Col>
-          <Col xs={6}
-               md={6}
-               lg={6}
-               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalsigncontainer'>
-            <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>Total payment</p>
-          </Col>
-          <Col xs={3}
-               md={3}
-               lg={3}
-               className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-totalamounttobepaidcontainer'>
-              <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindication'>{props.purchasigtotalpayment}</p>
-          </Col>
+        
           <Col xs={0}
                md={6}
                lg={6}
@@ -612,6 +682,9 @@ export default function PaymentModal(props) {
                 props.cargodestinationset ? (
                  <>
                  <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication'>No payment method</p>
+                 <p className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication'></p>
+                 <br />
+                 <br />
                  <button className="paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-confirmbutton">
                   {
                     lackingmoneyandfundsconfirmbuttonloadingstate ?
@@ -629,7 +702,7 @@ export default function PaymentModal(props) {
                         const _lackingmoneyandfundsdontproceedbutton = document.querySelectorAll(".paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-lackingmoneyandfundsheaderindication-dontproceedbutton");
 
                         const $bothmoneyandfundsbalance = props.user.moneyandfunds.money.amount + props.user.moneyandfunds.funds.amount;
-                        const $totalpayment = props.purchasigtotalpayment;
+                        const $totalpayment = props.purchasingtotalpayment + props.purchasingtotalcargofee;
 
                         const _pricesbreakdowngoldbar = document.querySelectorAll(".paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication");
 
@@ -637,17 +710,32 @@ export default function PaymentModal(props) {
 
                         if ( payment === "Money" ) {
 
-                          if ( $bothmoneyandfundsbalance >= $totalpayment ) {     
+                          if ( $bothmoneyandfundsbalance >= $totalpayment ) {  
+
                             moneypaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.money.amount );
                             remainingmoneycb((calculation)=> calculation = 0);
-                            fundspaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.money.amount );
-                            remainingfundscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.money.amount));
+                            fundspaymentdeductionscb((calculation)=> calculation =  ( props.purchasingtotalpayment + props.purchasingtotalcargofee ) - props.user.moneyandfunds.money.amount );
+                            remainingfundscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount - ( $totalpayment - props.user.moneyandfunds.money.amount));
+
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = true;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = props.user.moneyandfunds.money.amount;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = true;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = (  $totalpayment - props.user.moneyandfunds.money.amount ); 
+
+                            paymentcb((payment)=> payment = "Money");
+                            props.purchasingpaymentsetcb((payment)=> payment = true);
+
                           } else {
+
                            _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                            _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to add funds in your account for a meantime for transaction give away\'s.';
                            _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
                             lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
+
+                            paymentcb((payment)=> payment = "No options method");
+                            props.purchasingpaymentsetcb((payment)=> payment = false);
                             return;
+
                           }
 
                         }
@@ -655,18 +743,32 @@ export default function PaymentModal(props) {
                         if ( payment === "Funds" ) {
 
                           if ( $bothmoneyandfundsbalance >= $totalpayment ) { 
+
                             fundspaymentdeductionscb((calculation)=> calculation = props.user.moneyandfunds.funds.amount );
-                            remainingmoneycb((calculation)=> calculation = 0);
-                            moneypaymentdeductionscb((calculation)=> calculation =  props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount );
-                            remainingmoneycb((calculation)=> calculation = props.user.moneyandfunds.money.amount - (props.purchasigtotalpayment - props.user.moneyandfunds.funds.amount));
+                            remainingfundscb((calculation)=> calculation = 0);
+                            moneypaymentdeductionscb((calculation)=> calculation = $totalpayment - props.user.moneyandfunds.funds.amount );
+                            remainingmoneycb((calculation)=> calculation = props.user.moneyandfunds.money.amount - ($totalpayment - props.user.moneyandfunds.funds.amount));
+
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.deducted = true;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.money.amount = (  $totalpayment - props.user.moneyandfunds.funds.amount ); 
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.deducted = true;
+                            props.requesttransactiondata.products.pricesbreakdown.payment.funds.amount = props.user.moneyandfunds.funds.amount;
+
+                            paymentcb((payment)=> payment = "Funds");
+                            props.purchasingpaymentsetcb((payment)=> payment = true);
+
                           } else {
+
                             _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'red';
                             _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'Your payment is insufficient. To complete the payment, allow the system to add funds in your account for a meantime for transaction give away\'s.';
                             _nopriceandlocationtobecalculatedheaderindication[0].style.display = 'block';
                             lackingmoneyandfundsconfirmbuttonloadingstatecb((state)=> state = false);
+                            paymentcb((payment)=> payment = "Funds");
+                            props.purchasingpaymentsetcb((payment)=> payment = false);
                             return;
+
                           }
-                        }
+                        } 
 
                          _nopriceandlocationtobecalculatedheaderindication[0].style.color = 'gray';
                          _nopriceandlocationtobecalculatedheaderindication[0].innerText = 'The lacking balance will be deducted on your Funds.';
@@ -827,7 +929,8 @@ export default function PaymentModal(props) {
                     <Spinner animation="border" 
                              variant="light"
                              className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentloadingspinner' />
-                  ) : 
+                  )
+                  : 
                   (
                     <button className='paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-processpaymentbutton'
                             onClick={ async (evt)=> {
@@ -837,25 +940,37 @@ export default function PaymentModal(props) {
                               const _pricesbreakdownmodalgoldbar = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer');
                               const _pricesbreakdownmodalgoldbarheaderindication = document.querySelectorAll('.paymentmodal-gridcontainer-aboutpaymentsgraphcontainer-pricesbreakdowngridcontainer-colcontainer-headerindication');
 
+                              const $date = `${timestamp.getDay()}, ${timestamp.getMonth()}, ${timestamp.getDate()}, ${timestamp.getFullYear()}, ${timestamp.getHour()}:${timestamp.getMinutes()}: ${timestamp.getSeconds()}`;
+
                               _pricesbreakdownmodal.style.height = "auto";
 
-                              const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.suggested_retail_price)}, 0);
-                              const _purchasingvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.vat)}, 0);
-                              const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.capital)}, 0);
+                              const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.suggested_retail_price)}, 0);
+                              const _purchasingvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat)}, 0);
+                              const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.capital)}, 0);
                               const _purchasingoveralltotalpcspricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
-                              const _purchasingopaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.details.product.pricesbreakdown.price)}, 0);
+                              const _purchasingproducttotalpaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
                               const _purchasingcargototalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
                               const  _purchasingweightpricebreakdown  = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
                               const _purchasingreciepttotalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+            
+                               const $purchasertransactiongiveaway =  _purchasingvatpricebreakdown / 2;
+                               const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
+                               const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
+                               const _vanguard = _purchasingvatpricebreakdown - ( $purchasertransactiongiveaway +  $authenticationstransactiongiveaway);
+                               const authenticationsshare = _purchasingvatpricebreakdown - (  $purchasertransactiongiveaway  +  _vanguard);
 
                               _pricesbreakdownmodalgoldbarheaderindication[0].innerText = `Total SRP's, ${_purchasingsrppricebreakdown} pesos`;
                               _pricesbreakdownmodalgoldbarheaderindication[1].innerText = `Total VAT'S, ${_purchasingvatpricebreakdown} pesos`;
                               _pricesbreakdownmodalgoldbarheaderindication[2].innerText = `Total CAPITAL, ${_purchasingoverallcapitalpricebreakdown} pesos`;
                               _pricesbreakdownmodalgoldbarheaderindication[3].innerText = `Overall total pc's, ${_purchasingoveralltotalpcspricebreakdown} pesos`;
-                              _pricesbreakdownmodalgoldbarheaderindication[4].innerText = `Payment, ${_purchasingopaymentpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[4].innerText = `Payment, ${_purchasingproducttotalpaymentpricebreakdown} pesos`;
                               _pricesbreakdownmodalgoldbarheaderindication[5].innerText = `Cargo total, ${_purchasingcargototalpricebreakdown} pesos`;
                               _pricesbreakdownmodalgoldbarheaderindication[6].innerText = `Weight, ${_purchasingweightpricebreakdown} grams`;
-                              _pricesbreakdownmodalgoldbarheaderindication[7].innerText = `Reciept total, ${_purchasingweightpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[7].innerText = `Reciept total, ${_purchasingproducttotalpaymentpricebreakdown + _purchasingcargototalpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[8].innerText = `Transaction give away, ${_purchasingvatpricebreakdown} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[9].innerText = `Your transaction give away, ${$purchasertransactiongiveaway} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[10].innerText = `Shared through all, ${$authenticationstransactiongiveaway} pesos`;
+                              _pricesbreakdownmodalgoldbarheaderindication[11].innerText = `Vanguard, ${_vanguard} pesos`;
 
                               _pricesbreakdownmodalgoldbar[0].style.marginTop = "3vh";
                               _pricesbreakdownmodalgoldbar[0].style.opacity = "1";
@@ -881,7 +996,16 @@ export default function PaymentModal(props) {
                               _pricesbreakdownmodalgoldbar[10].style.opacity = "1";
                               _pricesbreakdownmodalgoldbar[11].style.marginBottom = "3vh";
                               _pricesbreakdownmodalgoldbar[11].style.opacity = "1";
-                        
+
+                              const _requesttransactiondataprocessdate = {
+                                status: "Processed",
+                                date: $date,
+                                message: "Payment price breakdown was calculated"
+                              }
+
+                              props.requesttransactiondata.date.push(_requesttransactiondataprocessdate);
+
+                           //   alert(JSON.stringify(props.requesttransactiondata));
 
                               {/*
                               const _moneytogglebutton = document.getElementById('paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglebutton')

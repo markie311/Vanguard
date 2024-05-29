@@ -31,6 +31,7 @@ import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 import '../../styles/purchasing/purchasingdetails.scss';
 
 import { operations } from '../lib/operations.js';
+import { timestamp } from '../lib/timestamps.js';
 
 import XirbitGraph from '../graph/xirbitgraph-component.js';
 
@@ -1400,7 +1401,7 @@ return (
         <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsheaderindication'>Results: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsspanheaderindication'></span></p>
         <p className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponseheaderindication'>Response: <span className='purchasingdetails-mapcontainer-maptile-addresscontainer-resultsresponsespanheaderindication'></span></p>
         <p className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication">Marker location: Latitude: {geocoordinatesresult.lat}, Longitude: {geocoordinatesresult.lon} </p>
-        <p className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication">Cargo destination: <span className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication">Cargo destination address here, Complete address.</span> <input className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield" type="text" placeholder="Type your cargo destination address here"/></p>
+        <p className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication">Cargo destination: <span className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationheaderindication">Cargo destination address here, Complete address </span> <input className="purchasingdetails-mapcontainer-maptile-addresscontainer-headerindication-cargodestinationinputfield" type="text" placeholder="Type your cargo destination address here"/></p>
         <button id='purchasingdetails-mapcontainer-maptile-addresscontainer-setascargodestnationaddressbutton'
                 onClick={(evt)=> {
 
@@ -1412,6 +1413,7 @@ return (
 
                   props.purchasingcargodestinationcb((locationaddress)=> locationaddress = ",,,,,");
                   props.purchasingcargoaddresssetcb((state)=> state = false);
+
 
                 }}>
           Update cargo destination address
@@ -1438,8 +1440,11 @@ return (
                   _cargodestinationaddressinputfield[0].style.display = "none";
 
                   
-                  props.ppurchasingcargodestinationcb((locationaddress)=> locationaddress = _cargodestinationaddressinputfield[0].value);
+                  props.purchasingcargodestinationcb((locationaddress)=> locationaddress = _cargodestinationaddressinputfield[0].value);
                   props.purchasingcargoaddresssetcb((state)=> state = true);
+
+                  alert(props.purchasingcargodestination);
+
 
                   }
 
@@ -1721,7 +1726,8 @@ return (
 
                               if (  _selectedproduct === undefined ) {
 
-                                await props.selectedproductarray.push({
+                                await props.selectedproductarray.push(
+                                  {
                                   productname: stocks.productname,
                                   rapportname: stocks.rapportname,
                                   definition: stocks.definition,

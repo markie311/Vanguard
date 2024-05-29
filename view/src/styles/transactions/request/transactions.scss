@@ -82,7 +82,7 @@ position:relative;
 background-color: black;
 border:0.1vh solid white;
 border-radius:10px;
-height:100%;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -103,16 +103,17 @@ color:gray;
 .transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer {
 position:relative;
 height:auto;
-display:flex;
-justify-content:center;
-align-items:center;
+display: flex;
+flex-wrap: wrap;
+justify-content:space-between;
 padding:0;
+overflow-y:scroll;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimage {
 position:relative;
-border:0.1vh solid white;
 height:10vh;
 width:15vh;
+margin-top:3vh;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-somedetailscontainer {
 position:relative;
@@ -133,6 +134,18 @@ family: $sub-font;
 }  
 color:white; 
 }
+.transactions-transactionscontainer-transactionsgridcontainer-transactiongiveawaysnippetindication {
+position:relative;
+background-color:goldenrod;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+letter-spacing:1vh;
+color:black;
+padding:10px 10px;
+}
 .transactions-transactionscontainer-transactionsgridcontainer-viewheaderindication {
 position:relative;
 font: auto {
@@ -146,17 +159,48 @@ right:1vh;
 .transactions-transactionscontainer-transactiondetailscontainer {
 position:absolute;
 background-color:white;
-border:0.1vh solid black;
 border-radius:5px;
-height:75vh;
-width:180%;
+height:80vh;
+width:100%;
+overflow-y:scroll;  
 z-index:1;
+padding:10px;
+display: none;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer {
+position:relative;
+border-top:0.1vh solid green;
+border-left:0.1vh solid green;
+border-bottom:0.1vh solid green;
+height:90%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
 overflow-y:scroll;
-display:none;
+padding:20px 0px;
+}
+/* width */
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar {
+width: 5px;
+}
+/* Track */
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+/* Handle */
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+/* Handle on hover */
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 .transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsheaderindicationcontainer {
 position:relative;
 height:auto;
+width:100%;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -165,27 +209,54 @@ justify-content:center;
 position:relative;
 font: auto {
 family: $sub-font;
+weight:900;
 }
 color:black;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-displayimagescontainercontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-left:auto;
+margin-right:auto;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-displayimagescontainercontainer-maindisplayimage {
+position:relative;
+height:25vh;
+width:70vw;
+margin-top:1vh;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+padding:10px;
 }
 .transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindication {
 position:relative;
 font: auto {
 family: $sub-font;
+weight:900;
 }
 color:black;
 text-align:right;
 user-select:none;
+z-index:10;
 }
 }
 @media only screen and (min-width: 1200px) {
 #transactions {
 position:relative;
 border:0.1vh solid white;
-height:100%;
+height:auto;
 width:100%;
 padding:0px;
-overflow:hidden;
 }
 #transactions-transactionsnavigationcontainer {
 position:relative;
@@ -235,8 +306,6 @@ height:90%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-overflow-y:scroll;
-overflow-x:hidden;
 padding:20px 0px;
 }
 #transactions-transactionscontainer::-webkit-scrollbar {
@@ -286,13 +355,29 @@ color:gray;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer {
 position:relative;
-height:30vh;
+height:auto;
 padding:10px 10px 10px 100px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar {
+width: 20px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.transactions-transactionscontainer-transactionsgridcontainer-productimagecontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 .transactions-transactionscontainer-transactionsgridcontainer-productimage {
 position:relative;
-height:100%;
+border:0.1vh solid white;
+height:30vh;
 width:100%;
+margin-top:1vh;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-somedetailscontainer {
 position:relative;
@@ -302,16 +387,35 @@ padding:5px 0px;
 .transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }  
-color:gray;
+letter-spacing:0.5vh;
+color:white;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication {
 position:relative;
 font: auto {
 family: $sub-font;
+weight:900;
 }  
-color:gray; 
+letter-spacing:0.5vh;
+color:white; 
+}
+.transactions-transactionscontainer-transactionsgridcontainer-transactiongiveawaysnippetindication {
+position:relative;
+background-color:goldenrod;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+height:auto;
+width:60vh;
+color:black;
+text-align:center;
+letter-spacing:1vh;
+padding:10px 10px;
 }
 .transactions-transactionscontainer-transactionsgridcontainer-viewheaderindication {
 position:relative;
@@ -326,14 +430,39 @@ right:1vh;
 .transactions-transactionscontainer-transactiondetailscontainer {
 position:absolute;
 background-color:white;
-border:0.1vh solid white;
 border-radius:20px;
 height:70vh;
 width:50vw;
-overflow-y:scroll;
-z-index:1;
 padding:30px 20px;
+z-index:1;
 display:none;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer {
+position:relative;
+border-top: 0.1vh solid green;
+border-left:0.1vh solid green;
+border-bottom:0.1vh solid green;
+height:95%;
+width:auto;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+padding:20px 5px;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar {
+width: 10px;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 .transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsheaderindicationcontainer {
 position:relative;
@@ -345,14 +474,38 @@ justify-content:center;
 .transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 color:black;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-displayimagescontainercontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-displayimagescontainercontainer-maindisplayimage {
+position:relative;
+height:40vh;
+width:40vw;
+margin-top:1vh;
+}
+.transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindicationcontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
 }
 .transactions-transactionscontainer-transactiondetailscontainer-transactiondetailsclosebuttonheaderindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
+ weight:900;
 }
 color:black;
 text-align:right;

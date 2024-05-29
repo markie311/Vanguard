@@ -343,9 +343,9 @@ const [databasedata, databasedatacb] = useState({
 
 const [user, usercb] = useState({
  authentications: {
-  authenticationtype: 'Private',
+  authenticationtype: 'Public',
   privateauthenticationkey: 'Privateauthenticationkey',
-  authenticationid: 'ASAD-1234-QWERTYTREWQ',
+  authenticationid: '1699791814794-KiSYbr8W',
   password: {
    set: false,
    password: 'String'
@@ -390,7 +390,7 @@ const [user, usercb] = useState({
  },
  moneyandfunds: {
   money: {
-   amount: 100,
+   amount: 200,
    history: []
  },
  funds: {
@@ -1425,37 +1425,6 @@ const [products, productscb] = useState([
               price: 0
             },
             products: [
-              {
-              pcs: 0,
-              details: {
-               for: {
-                   part: 'Product part',
-                   gender: 'Male',
-                   category: 'Adults' 
-               },
-               set: {
-                   set: false,
-                   productindication: 'Oridinary',
-                   pcs: 10
-               },
-               size: 'Product size',
-               color: 'Product color',
-               weight: 'Product weight',
-               top: 'Top product specification',
-               left: 'Left product specification',
-               bottom: 'Bottom product specification',
-               right: 'Right product specification',
-               front: 'Front product specification',
-               back: 'Back product specification'
-              },
-              pricesbreakdown: {
-               price: 0,
-               capital: 0,
-               suggested_retail_price: 0,
-               vat:0
-              },
-              specification: 'Order specification'
-              }
             ],
           },
           stocks: [
@@ -2013,45 +1982,94 @@ const [purchasing, purchasingcb] = useState([
       }   
       }
     ],
-    purchase: {
+    purchases: {
       people: [],
-      xirbit: []
+      vanguard: []
     }
   }
  }
 ]); 
 
-const [ordertransactiondata, ordertransactiondatacb] = useState(
+const [requesttransactiondata, requesttransactiondatacb] = useState(
 {
-date: {
-  proccessed: "",
-  submitted: "",
-},
-transaction: {
-  transactionid: "",
-  transactiontype: ""
-},
+date: [{
+ status: "Purchasing details submitted",  
+ date: "1111-1111-111",
+ message: "All date are to purchase are gathered",
+}],
 status: {
- current: [],
- requested: [],
- confirmedandtobedelivered: [],
- delayed: [],
- delivered: [],
- confirmedasrecieved: []
+  current: [],
+  requested: [],
+  confirmedandtobedelivered: [],
+  delayed: [],
+  delivered: [],
+  confirmedasrecieved: []
+},
+transactionid: "",
+transactiontype: "Practicing",
+user: {
+  authentications: user.authentications,
+  details: user.details,
 }, 
 messages: [],
 products: {
-pricesbreakdown: {
-  productpayment: 0, 
-  cargotype: "",
-  cargoexpress: "",
-  cargofee: 0,
-  weight: 0,
+ list: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+ pricesbreakdown: {
+  merchandise: {
+  totalpayment: 0,
+  totalcapital: 0,
+  total_suggested_retail_price:0,
+  totalvat: 0,
+  },
+  cargo: {
+    fee: 0
+  },
+  payment: {
+  funds: {
+    deducted: false,
+    amount: 0,
+  },
+  money: {
+    deducted: false,
+    amount: 0
+  },
   totalpayment: 0
-},
-list: []
+  }
 }
-});
+},
+cargo: {
+ cargotype: "",
+ cargoexpress: "",
+ weight: 0,
+ fee: 0,
+ locations: {
+  destination: {
+    street: "",
+    baranggay: "",
+    city: "",
+    province: "",
+    country: "",
+  },
+  branch: {
+    street: "",
+    baranggay: "",
+    city: "",
+    province: "",
+    country: "",
+  }
+ }
+},
+payments: {
+  totalproductpayment: 0,
+  cargo: 0
+},
+transactiongiveaway: {
+  purchaser: 0,
+  people: 0,
+  vanguard: 0
+} 
+}
+);
 
 //// purchasing 
 
@@ -2180,17 +2198,20 @@ const navigate = useNavigate();
                                          purchasing={purchasing}
                                          purchasingcb={purchasingcb}
                                          merchandisescheme={merchandisescheme}
-                                         products={products}/>}>
+                                         products={products}
+                                         requesttransactiondata={requesttransactiondata}/>}>
         </Route>
         <Route path='/marketing/selling'
-               element={<Marketing  merchandisescheme={merchandisescheme}/>}>
+               element={<Marketing  merchandisescheme={merchandisescheme}
+                                    requesttransactiondata={requesttransactiondata}/>}>
   
         </Route>
 
         <Route path='/database/account'
                element={<DatabaseLogin viewport={viewport}
                                        user={user}
-                                       usercb={usercb}/>}> 
+                                       usercb={usercb}
+                                       requesttransactiondata={requesttransactiondata}/>}> 
         </Route>
        
          <Route path='/database'
@@ -2240,6 +2261,9 @@ const navigate = useNavigate();
                                      selectedproductarraycb={selectedproductarraycb}
                                      selectedproductarraylength={selectedproductarraylength}
                                      selectedproductarraylengthcb={selectedproductarraylengthcb}
+
+                                     requesttransactiondata={requesttransactiondata}
+                                     requesttransactiondatacb={requesttransactiondatacb}
                                      
                                     />}>
          </Route>

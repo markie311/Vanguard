@@ -3,8 +3,9 @@ const Schema = mongoose.Schema;
 
 const datascheme = require('../data/datascheme');
 const user = require('../user/usersscheme');
-const productscheme = require('../product/productscheme');
-const transactionscheme = require('../transactions/transactionscheme');
+const productscheme = require('../product/product/productscheme');
+const transactionscheme = require('../transactions/product/transactionscheme');
+const moneyandfundstransactionscheme = require('../transactions/moneyandfunds/moneyandfundstransactionscheme.js');
 
 const xirbitdatascheme = new Schema({
  _id: {
@@ -12,10 +13,9 @@ const xirbitdatascheme = new Schema({
  },
  marketing: {
    products: {                                                                                                        
-    merchandises: [productscheme],
-    nonmernchandises: [productscheme],
-    etc: {
-      load: [productscheme]
+    merchandises: [transactionscheme],
+    others: {
+      load: [transactionscheme]
     }
    },
    requests: {
@@ -25,7 +25,7 @@ const xirbitdatascheme = new Schema({
       load: [transactionscheme]
     }
    },
-  processing: [transactionscheme],
+   processing: [transactionscheme],
  },
  moneyandfunds: {
   request: {
@@ -40,13 +40,31 @@ const xirbitdatascheme = new Schema({
     deposits: [transactionscheme],
     widthdrawals: [transactionscheme]
   },
+  people: {
+    storedtransactiongiveaway: [transactionscheme]
+  },
+  credits: {
+    deposits: [moneyandfundstransactionscheme],
+    funds: [moneyandfundstransactionscheme],
+    vanguard: [moneyandfundstransactionscheme],
+    transactiongiveaway: {
+      bank: {
+        type: "number",
+        default: 0
+      }
+    }
+  }
  },
- people: {
-  commonpublic: [user],
-  public: [user],
-  private: [user]
- },
+ people: [user],
  history: [transactionscheme]
 })
 
 module.exports = xirbitdatascheme;
+
+{/*
+{
+  commonpublic: [user],
+  public: [user],
+  private: [user]
+ },
+*/}
