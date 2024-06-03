@@ -907,31 +907,40 @@ padding:0;
 }
 #officehamburger-transactionsdata-navigationcontainer {
 position:relative;
-height:30%;
+height:40%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 padding:0;
 }
 .officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer {
 position:relative;
 height:auto;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
 }
 .officehamburger-transactionsdata-navigationcontainer-navigationbutton {
 position:relative;
-background-color:black;
-border:0.1vh solid white;
+background-color: rgb(241, 192, 68);
+border:0.1vh solid goldenrod;
+border-radius:20px;
 height:90%;
 width:auto;
-border-radius:20px;
+display:block;
 font: auto {
  family:$sub-font;
+ weight:900;
 }
-color:white;
-padding:5px 10px;
+color:black;
+letter-spacing:0.3vh;
+padding:7px 25px;
+margin-top:2vh;
 outline-style:none;
 }
 #officehamburger-transactionsdata-view {
@@ -983,25 +992,27 @@ text-align:center;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication {
 position:relative;
+background-color:green;
+border-radius:20px;
 font: auto {
  family: $sub-font;
 }
 color:white;
 text-align:center;
-text-decoration:underline;
+padding:15px 120px;
 }
 //// baranggays data
 #officehamburger-transactionsdata-baranggaydatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid white;
-height:90%;
+height:auto;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
 transform:translate(6%, 5%);
-padding:0;
+padding:0px 10px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer {
 position:relative;
@@ -1084,12 +1095,13 @@ outline-style:none;
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
-height:90%;
+height:auto;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
 transform:translate(6%, 5%);
+padding:0px 10px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer {
 position:relative;
@@ -1172,12 +1184,13 @@ outline-style:none;
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
-height:90%;
+height:auto;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
 transform:translate(6%, 5%);
+padding:0px 10px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer {
 position:relative;
@@ -1185,8 +1198,6 @@ height:85%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-overflow-x:hidden;
-overflow-y:scroll;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar {
  height:30px;
@@ -1271,12 +1282,13 @@ outline-style:none;
 position:absolute;
 background-color:white;
 border:0.3vh solid $subbgcolor;
-height:90%;
+height:auto;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
 transform:translate(6%, 5%);
+padding:10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer {
 position:relative;
@@ -1313,7 +1325,6 @@ font: auto {
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer {
 position:relative;
 height:auto;
-width:auto;
 margin-left:auto;
 margin-right:auto;
 }
@@ -1327,27 +1338,63 @@ padding:5px 20px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandiseimage {
 position:relative;
-height:10vh;
+height:28vh;
 width:100%;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer {
 position:relative;
+border:0.5vh dotted black;
 height:auto;
-padding:5px;
+width:100%;
+margin-top:5vh;
+padding:10px 5px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationcontainer {
 position:relative;
 height:auto;
 width:auto;
 }
+.officehamburger-transactionsdata-requestdatamodal-requestspecification-headerindicationcontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:100px 0px;
+}
+.officehamburger-transactionsdata-requestdatamodal-requestspecificationinputfield {
+position:relative;
+border:none;
+border-bottom:0.2vh solid black;
+display: block;
+font: auto {
+ family: $sub-font;
+}
+text-align:center;
+letter-spacing:0.3vh;
+}
+.officehamburger-transactionsdata-requestdatamodal-setrequestspecification {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family: $sub-font
+}
+color:white;
+padding:5px 30px;
+margin-top:1.5vh;
+outline-style:none;
+}
 #officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer {
 position:relative;
-border:0.1vh solid black;
 height:15%;
 width:100%;
 display:flex;
 justify-content:flex-end;
 align-items:center;
+padding:30px 0px;
 }
 #officehamburger-transactionsdata-requestdatamodal-closebutton {
 position:relative;
@@ -1358,7 +1405,7 @@ font: auto {
 }
 color:white;
 padding:5px 15px;
-left:1vh;
+right:0.5vh;
 }
 #officehamburger-transactionsdata-requestmapmodal {
 position:absolute;
@@ -2725,27 +2772,65 @@ user-select:none;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication {
 position:relative;
+background-color:green;
+border-radius:20px;
 font: auto {
  family: $sub-font;
  size:24px;
 }
 color:white;
 text-align:center;
-text-decoration:underline;
 user-select:none;
+padding: 10px 280px;
 }
 //// baranggays data
 #officehamburger-transactionsdata-baranggaydatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid white;
-height:90vh;
-width:90%;
+height:140%;
+width:80%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, -25%);
+transform:translate(14.5%, -38%);
 padding:0;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer-emptytransactionheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar {
+height:30px;
+width: 10px;
+border-radius:25px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-thumb {
+background-color: dodgerblue;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer {
 position:relative;
@@ -2753,24 +2838,6 @@ height:85%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-overflow-x:hidden;
-overflow-y:scroll;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar {
-height:30px;
-width: 5px;
-border-radius:25px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-track {
-box-shadow: inset 0 0 5px white;
-border-radius: 10px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb {
-background: black;
-border-radius: 10px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
-background: #b30000;
 }
 .officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -2809,7 +2876,7 @@ padding:5px 20px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -2824,10 +2891,11 @@ font: auto {
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 ///// streets data
-#officehamburger-transactionsdata-streetsdatamodal{
+#officehamburger-transactionsdata-streetsdatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
@@ -2839,30 +2907,48 @@ margin-right:auto;
 display:none;
 transform:translate(5%, -35%);
 }
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer {
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer {
 position:relative;
-height:85%;
+height:90%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
 }
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar {
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer-emptytransactionheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar {
 height:30px;
-width: 5px;
+width: 10px;
 border-radius:25px;
 }
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-track {
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px white;
 border-radius: 10px;
 }
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb {
-background: black;
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-thumb {
+background-color: dodgerblue;
 border-radius: 10px;
 }
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
 background: #b30000;
+}
+#officehamburger-transactionsdata-streetsdatamodal-datacontainer {
+position:relative;
+height:85%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
 }
 .officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -2902,7 +2988,7 @@ padding:5px 20px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -2917,6 +3003,7 @@ font: auto {
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 //// requests data
@@ -2929,33 +3016,52 @@ width:55%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(78%, 20%);
+transform:translate(79%, -10%);
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer {
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer {
 position:relative;
-height:85%;
+height:90%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar {
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar {
 height:30px;
 width: 5px;
 border-radius:25px;
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-track {
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-track {
 box-shadow: inset 0 0 5px white;
 border-radius: 10px;
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb {
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-thumb {
 background: black;
 border-radius: 10px;
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
 background: #b30000;
 }
+#officehamburger-transactionsdata-requestsdatamodal-emptytransactionheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
+}
+#officehamburger-transactionsdata-requestsdatamodal-datacontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer {
 position:relative;
 padding:0;
@@ -2976,7 +3082,7 @@ outline-style:none;
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
-    family: $sub-font;
+ family: $sub-font;
 }
 color:white;
 }
@@ -2985,7 +3091,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
-    family: $sub-font; 
+ family: $sub-font; 
 }
 color:white;
 margin-top:2vh;
@@ -3004,7 +3110,7 @@ padding:10px 5px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -3019,6 +3125,7 @@ font: auto {
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 //// requests data
@@ -3026,26 +3133,26 @@ outline-style:none;
 position:absolute;
 background-color:white;
 border:0.3vh solid $subbgcolor;
-height:90%;
+height:150%;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
+transform:translate(6%, -35%);
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer {
 position:relative;
-height:85%;
+height:90%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
-padding:10px 5px;
+padding:15px 20px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar {
 height:30px;
-width: 5px;
+width: 15px;
 border-radius:25px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-track {
@@ -3057,20 +3164,54 @@ background: black;
 border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb:hover {
-background: #b30000;
+background: dodgerblue;
 }
 .officehamburger-transactionsdata-requestdatamodal-headerindication {
 position:relative;
 font: auto {
 family: $sub-font;
+weight:900;
 }
+}
+.officehamburger-transactionsdata-requestdatamodal-requestspecificationinputfield {
+position:relative;
+border: none;
+border-bottom: 0.1vh solid black;
+height:auto;
+width:40%;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+letter-spacing:0.1vh;
+display:block;
+text-align:center;
+outline-style:none;
+}
+.officehamburger-transactionsdata-requestdatamodal-setrequestspecification {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+outline-style:none;
+padding:10px 30px;
+margin-top:2vh;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer {
 position:relative;
+border:1vh dotted black;
 height:auto;
-width:auto;
+width:100%;
 margin-left:auto;
 margin-right:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:5vh;
+padding:80px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandiseimagecontainer {
 position:relative;
@@ -3082,8 +3223,8 @@ padding:5px 20px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandiseimage {
 position:relative;
-height:10vh;
-width:100%;
+height:80%;
+width:60%;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer {
 position:relative;
@@ -3097,8 +3238,7 @@ width:auto;
 }
 #officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer {
 position:relative;
-border:0.1vh solid black;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:flex-end;

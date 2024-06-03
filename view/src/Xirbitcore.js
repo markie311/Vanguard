@@ -45,7 +45,6 @@ const [landingpagewidthdrwalnavigationwidthproperty, landingpagewidthdrwalnaviga
 const [landingpagewidthdrwalnavigationleftproperty, landingpagewidthdrwalnavigationleftpropertycb] = useState('-90%');
 
 const [uidata, uidatacb] = useState({
-
 });
 
 const [databasedata, databasedatacb] = useState({
@@ -342,66 +341,1439 @@ const [databasedata, databasedatacb] = useState({
 });
 
 const [user, usercb] = useState({
- authentications: {
-  authenticationtype: 'Public',
-  privateauthenticationkey: 'Privateauthenticationkey',
-  authenticationid: '1699791814794-KiSYbr8W',
-  password: {
-   set: false,
-   password: 'String'
-  }
- },
- details: {
-  surials: {
-   firstname: 'Commoner 1 FIRST NAME' ,
-   middlename: 'Commoner 1 MIDDLE NAME',
-   lastname: 'Commoner 1 LAST NAME',
-   nickname: 'Commoner 1 NICKNAME',
+  authentications: {
+   authenticationtype: 'Public',
+   privateauthenticationkey: 'Privateauthenticationkey',
+   authenticationid: '1699791814794-KiSYbr8W',
+   password: {
+    set: false,
+    password: 'String'
+   }
   },
-  location: {
-    address: {
-     street: 'Current address',
-     baranggay: 'Current address',
-     trademark: 'Current address',
-     city: 'Current address',
-     province: 'Current address',
-     country: 'Current address',
-     coordinates: {
-      lat: 0,
-      lon: 0
+  details: {
+   surials: {
+    firstname: 'Commoner 1 FIRST NAME' ,
+    middlename: 'Commoner 1 MIDDLE NAME',
+    lastname: 'Commoner 1 LAST NAME',
+    nickname: 'Commoner 1 NICKNAME',
+   },
+   location: {
+     address: {
+      street: 'Current address',
+      baranggay: 'Current address',
+      trademark: 'Current address',
+      city: 'Current address',
+      province: 'Current address',
+      country: 'Current address',
+      coordinates: {
+       lat: 0,
+       lon: 0
+      }
+     },
+     shipment: {
+       type: 'Delivery',
+       address: {
+         street: '',
+         baranggay: '',
+         trademark: '',
+         city: '',
+         province: '',
+         country: '',
+         coordinates: {
+           lat: 0,
+           lon: 0
+         }
+       }
      }
-    },
-    shipment: {
-      type: 'Delivery',
-      address: {
-        street: '',
-        baranggay: '',
-        trademark: '',
-        city: '',
-        province: '',
-        country: '',
-        coordinates: {
+   },
+  },
+  moneyandfunds: {
+   money: {
+    amount: 200,
+    history: []
+  },
+  funds: {
+   amount: 100,
+   history: []
+  }   
+  },
+  transactions: [
+  {
+  date: [{
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+  }],
+  status: {
+    current: [],
+    requested: [],
+    confirmedandtobedelivered: [],
+    delayed: [],
+    delivered: [],
+    confirmedasrecieved: []
+  },
+  transactionid: "",
+  transactiontype: "Practicing",
+  user: {
+    authentications: {
+      authenticationtype: 'Public',
+      privateauthenticationkey: 'Privateauthenticationkey',
+      authenticationid: '1699791814794-KiSYbr8W',
+      password: {
+       set: false,
+       password: 'String'
+      }
+     },
+     details: {
+      surials: {
+       firstname: 'Commoner 1 FIRST NAME' ,
+       middlename: 'Commoner 1 MIDDLE NAME',
+       lastname: 'Commoner 1 LAST NAME',
+       nickname: 'Commoner 1 NICKNAME',
+      },
+      location: {
+        address: {
+         street: 'Current address',
+         baranggay: 'Current address',
+         trademark: 'Current address',
+         city: 'Current address',
+         province: 'Current address',
+         country: 'Current address',
+         coordinates: {
           lat: 0,
           lon: 0
+         }
+        },
+        shipment: {
+          type: 'Delivery',
+          address: {
+            street: '',
+            baranggay: '',
+            trademark: '',
+            city: '',
+            province: '',
+            country: '',
+            coordinates: {
+              lat: 0,
+              lon: 0
+            }
+          }
         }
-      }
+      },
+     },
+  }, 
+  messages: [
+   {
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+   }
+  ],
+  products: {
+    list: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+    pricesbreakdown: {
+    merchandise: {
+    totalpayment: 0,
+    totalcapital: 0,
+    total_suggested_retail_price:0,
+    totalvat: 0,
+    },
+    cargo: {
+      fee: 0
+    },
+    payment: {
+    funds: {
+      deducted: false,
+      amount: 0,
+    },
+    money: {
+      deducted: false,
+      amount: 0
+    },
+    totalpayment: 0
+    }
+  }
+  },
+  cargo: {
+    cargotype: "",
+    cargoexpress: "",
+    weight: 0,
+    fee: 0,
+    locations: {
+    destination: {
+      street: "",
+      baranggay: "Maa",
+      city: "",
+      province: "",
+      country: "",
+    },
+    branch: {
+      street: "",
+      baranggay: "",
+      city: "",
+      province: "",
+      country: "",
+    }
     }
   },
- },
- moneyandfunds: {
-  money: {
-   amount: 200,
-   history: []
- },
- funds: {
-  amount: 100,
-  history: []
- }
- },
- transactions: [],
- purchases: [],
- upgradedregistrations: []
-})
+  payments: {
+    totalproductpayment: 0,
+    cargo: 0
+  },
+  transactiongiveaway: {
+    purchaser: 0,
+    people: 0,
+    vanguard: 0
+  } 
+  },
+  {
+  date: [
+    {
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+  }
+],
+  status: {
+    current: [],
+    requested: [],
+    confirmedandtobedelivered: [],
+    delayed: [],
+    delivered: [],
+    confirmedasrecieved: []
+  },
+  transactionid: "",
+  transactiontype: "Practicing",
+  user: {
+    authentications: {
+      authenticationtype: 'Public',
+      privateauthenticationkey: 'Privateauthenticationkey',
+      authenticationid: '1699791814794-KiSYbr8W',
+      password: {
+       set: false,
+       password: 'String'
+      }
+     },
+     details: {
+      surials: {
+       firstname: 'Commoner 1 FIRST NAME' ,
+       middlename: 'Commoner 1 MIDDLE NAME',
+       lastname: 'Commoner 1 LAST NAME',
+       nickname: 'Commoner 1 NICKNAME',
+      },
+      location: {
+        address: {
+         street: 'Current address',
+         baranggay: 'Current address',
+         trademark: 'Current address',
+         city: 'Current address',
+         province: 'Current address',
+         country: 'Current address',
+         coordinates: {
+          lat: 0,
+          lon: 0
+         }
+        },
+        shipment: {
+          type: 'Delivery',
+          address: {
+            street: '',
+            baranggay: '',
+            trademark: '',
+            city: '',
+            province: '',
+            country: '',
+            coordinates: {
+              lat: 0,
+              lon: 0
+            }
+          }
+        }
+      },
+     }
+  }, 
+  messages: [
+  {
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+    }
+  ],
+  products: {
+    list: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+    pricesbreakdown: {
+    merchandise: {
+    totalpayment: 0,
+    totalcapital: 0,
+    total_suggested_retail_price:0,
+    totalvat: 0,
+    },
+    cargo: {
+      fee: 0
+    },
+    payment: {
+    funds: {
+      deducted: false,
+      amount: 0,
+    },
+    money: {
+      deducted: false,
+      amount: 0
+    },
+    totalpayment: 0
+    }
+  }
+  },
+  cargo: {
+    cargotype: "",
+    cargoexpress: "",
+    weight: 0,
+    fee: 0,
+    locations: {
+    destination: {
+      street: "",
+      baranggay: "Maa",
+      city: "",
+      province: "",
+      country: "",
+    },
+    branch: {
+      street: "",
+      baranggay: "",
+      city: "",
+      province: "",
+      country: "",
+    }
+    }
+  },
+  payments: {
+    totalproductpayment: 0,
+    cargo: 0
+  },
+  transactiongiveaway: {
+    purchaser: 0,
+    people: 0,
+    vanguard: 0
+  } 
+  },
+  {
+  date: [{
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+  }],
+  status: {
+    current: [],
+    requested: [],
+    confirmedandtobedelivered: [],
+    delayed: [],
+    delivered: [],
+    confirmedasrecieved: []
+  },
+  transactionid: "",
+  transactiontype: "Practicing",
+  user: {
+    authentications: {
+      authenticationtype: 'Public',
+      privateauthenticationkey: 'Privateauthenticationkey',
+      authenticationid: '1699791814794-KiSYbr8W',
+      password: {
+       set: false,
+       password: 'String'
+      }
+     },
+     details: {
+      surials: {
+       firstname: 'Commoner 1 FIRST NAME' ,
+       middlename: 'Commoner 1 MIDDLE NAME',
+       lastname: 'Commoner 1 LAST NAME',
+       nickname: 'Commoner 1 NICKNAME',
+      },
+      location: {
+        address: {
+         street: 'Current address',
+         baranggay: 'Current address',
+         trademark: 'Current address',
+         city: 'Current address',
+         province: 'Current address',
+         country: 'Current address',
+         coordinates: {
+          lat: 0,
+          lon: 0
+         }
+        },
+        shipment: {
+          type: 'Delivery',
+          address: {
+            street: '',
+            baranggay: '',
+            trademark: '',
+            city: '',
+            province: '',
+            country: '',
+            coordinates: {
+              lat: 0,
+              lon: 0
+            }
+          }
+        }
+      },
+     },
+  }, 
+  messages: [
+  {
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+    }
+  ],
+  products: {
+    list: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
+    pricesbreakdown: {
+    merchandise: {
+    totalpayment: 0,
+    totalcapital: 0,
+    total_suggested_retail_price:0,
+    totalvat: 0,
+    },
+    cargo: {
+      fee: 0
+    },
+    payment: {
+    funds: {
+      deducted: false,
+      amount: 0,
+    },
+    money: {
+      deducted: false,
+      amount: 0
+    },
+    totalpayment: 0
+    }
+  }
+  },
+  cargo: {
+    cargotype: "",
+    cargoexpress: "",
+    weight: 0,
+    fee: 0,
+    locations: {
+    destination: {
+      street: "",
+      baranggay: "Trinidad",
+      city: "",
+      province: "",
+      country: "",
+    },
+    branch: {
+      street: "",
+      baranggay: "",
+      city: "",
+      province: "",
+      country: "",
+    }
+    }
+  },
+  payments: {
+    totalproductpayment: 0,
+    cargo: 0
+  },
+  transactiongiveaway: {
+    purchaser: 0,
+    people: 0,
+    vanguard: 0
+  } 
+  }
+  ],
+  purchases: [],
+  upgradedregistrations: [] 
+});
+
+const [vanguarddata, vanguarddatacb] = useState(
+{
+_id: "string",
+marketing: {
+  products: {                                                                                                        
+    merchandises: [
+      {
+        date: [{
+          status: "Purchasing details submitted",  
+          date: "1111-1111-1111-0",
+          message: "All date are to purchase are gathered",
+        }],
+        status: {
+          current: [],
+          requested: [],
+          confirmedandtobedelivered: [],
+          delayed: [],
+          delivered: [],
+          confirmedasrecieved: []
+        },
+        transactionid: "",
+        transactiontype: "Practicing",
+        user: {
+          authentications: user.authentications,
+          details: user.details,
+        }, 
+        messages: [
+         {
+          status: "Purchasing details submitted",  
+          date: "1111-1111-111",
+          message: "All date are to purchase are gathered",
+         }
+        ],
+        products: {
+          list: [
+            {
+              productname: 'Kohaku / Kohaku Yellow',
+              rapportname: 'Rapport name',
+              definition: 'Product definition',
+              authentications: {
+               producttype: 'Product type',
+               productid: 'mrn-ricekohaku-1-category1'
+              },
+              details: {
+              product: {
+               name: 'Product name',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: 'Male',
+                 category: 'Adults' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 10,
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+               },
+               pricesbreakdown: {
+                price: 10,
+                capital: 8,
+                suggested_retail_price: 10,
+                vat: 2
+               },
+               cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+               },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+              },
+              system: {
+                request: {
+                  pcs: 0,
+                  orderspecification: "An order specification",
+                  merchandise: {
+                    price: 100,
+                    capital: 0,
+                    suggested_retail_price: 0,
+                    vat: 0,
+                  },
+                  shipping: {
+                    category: 'Shipping category',
+                    weight: 'Shipping weight',
+                    fee: 0
+                   },
+                   totalpayment: {
+                     price: 0
+                   },
+                  products: [
+                  ],
+                },
+                stocks: [
+                  {
+                    productname: 'Kohaku / Kohaku Yellow / White Grains',
+                    rapportname: 'Product rapport name',
+                    definition: 'Product definition',
+                    authentications: {
+                      producttype: 'Product type',
+                      productid: 'mrn-ricekohaku-1-category1-product1'
+                     },
+                    details: {
+                     product: {
+                     name: 'Kokahu / Kohaku Yellow / White grains',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 10,
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                     },
+                     locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                     }
+                     },
+                     system: {
+                      request: {
+                        pcs: 0,
+                        orderspecification: "",
+                        merchandise: {
+                          price: 0,
+                          capital: 0,
+                          suggested_retail_price: 0,
+                          vat: 0
+                        },
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        },
+                        totalpayment: {
+                          price: 0
+                        },
+                        products: [
+                        ]
+                      },
+                      stocks: [],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                     }
+                  },
+                  {
+                  productname: 'Kohaku / Kohaku Yellow / White Grains',
+                  rapportname: 'Product rapport name',
+                  definition: 'Product definition',
+                  authentications: {
+                    producttype: 'Product type',
+                    productid: 'mrn-ricekohaku-1-category1-product2'
+                  },
+                  details: {
+                    product: {
+                     name: 'Kohaku / Kohaku Yellow / White big grains',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 10,
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                  },
+                  system: {
+                    request: {
+                      pcs: 0,
+                      orderspecification: "",
+                      merchandise: {
+                        price: 0,
+                        capital: 0,
+                        suggested_retail_price: 0,
+                        vat: 0
+                      },
+                      shipping: {
+                       category: 'Shipping category',
+                       weight: 'Shipping weight',
+                       fee: 0
+                      },
+                      totalpayment: {
+                        price: 0
+                      },
+                      products: [
+                      ]
+                     },
+                      stocks: [],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                  }   
+                  }
+                ],
+                purchases: {
+                  people: [],
+                  vanguard: []
+                }
+              }
+            },
+            {
+              productname: 'Kohaku / Kohaku Yellow',
+              rapportname: 'Rapport name',
+              definition: 'Product definition',
+              authentications: {
+               producttype: 'Product type',
+               productid: 'mrn-ricekohaku-1-category1'
+              },
+              details: {
+              product: {
+               name: 'Product name',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: 'Male',
+                 category: 'Adults' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 10,
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+               },
+               pricesbreakdown: {
+                  price: 10,
+                  capital: 8,
+                  suggested_retail_price: 10,
+                  vat: 2
+               },
+               cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+               },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+              },
+              system: {
+                request: {
+                  pcs: 0,
+                  orderspecification: "",
+                  merchandise: {
+                    price: 0,
+                    capital: 0,
+                    suggested_retail_price: 0,
+                    vat: 0,
+                  },
+                  shipping: {
+                    category: 'Shipping category',
+                    weight: 'Shipping weight',
+                    fee: 0
+                   },
+                   totalpayment: {
+                     price: 0
+                   },
+                  products: [
+                  ],
+                },
+                stocks: [
+                  {
+                    productname: 'Kohaku / Kohaku Yellow / White Grains',
+                    rapportname: 'Product rapport name',
+                    definition: 'Product definition',
+                    authentications: {
+                      producttype: 'Product type',
+                      productid: 'mrn-ricekohaku-1-category1-product1'
+                     },
+                    details: {
+                     product: {
+                     name: 'Kokahu / Kohaku Yellow / White grains',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 10,
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                     },
+                     locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                     }
+                     },
+                     system: {
+                      request: {
+                        pcs: 0,
+                        orderspecification: "",
+                        merchandise: {
+                          price: 0,
+                          capital: 0,
+                          suggested_retail_price: 0,
+                          vat: 0
+                        },
+                        shipping: {
+                         category: 'Shipping category',
+                         weight: 'Shipping weight',
+                         fee: 0
+                        },
+                        totalpayment: {
+                          price: 0
+                        },
+                        products: [
+                        ]
+                      },
+                      stocks: [],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                     }
+                  },
+                  {
+                  productname: 'Kohaku / Kohaku Yellow / White Grains',
+                  rapportname: 'Product rapport name',
+                  definition: 'Product definition',
+                  authentications: {
+                    producttype: 'Product type',
+                    productid: 'mrn-ricekohaku-1-category1-product2'
+                  },
+                  details: {
+                    product: {
+                     name: 'Kohaku / Kohaku Yellow / White big grains',
+                     rapportname: 'Product rapport name',
+                     definition: 'Product definition',
+                     category: 'MRN',
+                     specification: {
+                      for: {
+                       part: 'Product part',
+                       gender: 'Male',
+                       category: 'Adults' 
+                      },
+                      set: {
+                       set: false,
+                       productindication: 'Oridinary',
+                       pcs: 10
+                      },
+                      size: 'Product size',
+                      color: 'Product color',
+                      weight: 10,
+                      top: 'Top product specification',
+                      left: 'Left product specification',
+                      bottom: 'Bottom product specification',
+                      right: 'Right product specification',
+                      front: 'Front product specification',
+                      back: 'Back product specification'
+                      },
+                      pricesbreakdown: {
+                        price: 10,
+                        capital: 8,
+                        suggested_retail_price: 10,
+                        vat: 2
+                      },
+                      cybervisual: {
+                        images: {
+                          maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                          maindisplayimages: [
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          },
+                          {
+                            displayimage: '../images/landingpage/bondpaperimage.jpg'
+                          }
+                          ]
+                        },
+                        videos: [
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          },
+                          {
+                            youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                          }
+                        ]
+                      },
+                    },
+                    locations: {
+                      operations: [
+                        {
+                          street: 'Street',
+                          baranggay: 'Baranggay',
+                          trademark: 'Trademark',
+                          city: 'City',
+                          province: 'Province',
+                          country: 'Country'
+                        }
+                      ]
+                    }
+                  },
+                  system: {
+                    request: {
+                      pcs: 0,
+                      orderspecification: "",
+                      merchandise: {
+                        price: 0,
+                        capital: 0,
+                        suggested_retail_price: 0,
+                        vat: 0
+                      },
+                      shipping: {
+                       category: 'Shipping category',
+                       weight: 'Shipping weight',
+                       fee: 0
+                      },
+                      totalpayment: {
+                        price: 0
+                      },
+                      products: [
+                      ]
+                     },
+                      stocks: [],
+                      purchase: {
+                        people: [],
+                        xirbit: []
+                      }
+                  }   
+                  }
+                ],
+                purchases: {
+                  people: [],
+                  vanguard: []
+                }
+              }
+            }
+          ],
+          pricesbreakdown: {
+          merchandise: {
+           totalpayment: 0,
+           totalcapital: 0,
+           total_suggested_retail_price:0,
+           totalvat: 0,
+          },
+          cargo: {
+            fee: 0
+          },
+          payment: {
+          funds: {
+            deducted: false,
+            amount: 0,
+          },
+          money: {
+            deducted: false,
+            amount: 0
+          },
+          totalpayment: 0
+          }
+        }
+        },
+        cargo: {
+          cargotype: "",
+          cargoexpress: "",
+          weight: 0,
+          fee: 0,
+          locations: {
+          destination: {
+            street: "Trinidad",
+            baranggay: "Maa",
+            trademark: "",
+            city: "",
+            province: "",
+            country: "",
+          },
+          branch: {
+            street: "",
+            baranggay: "",
+            city: "",
+            province: "",
+            country: "",
+          }
+          }
+        },
+        payments: {
+          totalproductpayment: 0,
+          cargo: 0
+        },
+        transactiongiveaway: {
+          purchaser: 0,
+          people: 0,
+          vanguard: 0
+        } 
+      },
+      {
+      date: [{
+        status: "Purchasing details submitted",  
+        date: "1111-1111-111",
+        message: "All date are to purchase are gathered",
+      }],
+      status: {
+        current: [],
+        requested: [],
+        confirmedandtobedelivered: [],
+        delayed: [],
+        delivered: [],
+        confirmedasrecieved: []
+      },
+      transactionid: "",
+      transactiontype: "Practicing",
+      user: {
+        authentications: user.authentications,
+        details: user.details,
+      }, 
+      messages: [
+      {
+        status: "Purchasing details submitted",  
+        date: "1111-1111-111",
+        message: "All date are to purchase are gathered",
+        }
+      ],
+      products: {
+        list: [],
+        pricesbreakdown: {
+        merchandise: {
+        totalpayment: 0,
+        totalcapital: 0,
+        total_suggested_retail_price:0,
+        totalvat: 0,
+        },
+        cargo: {
+          fee: 0
+        },
+        payment: {
+        funds: {
+          deducted: false,
+          amount: 0,
+        },
+        money: {
+          deducted: false,
+          amount: 0
+        },
+        totalpayment: 0
+        }
+      }
+      },
+      cargo: {
+        cargotype: "",
+        cargoexpress: "",
+        weight: 0,
+        fee: 0,
+        locations: {
+        destination: {
+          street: "Emp",
+          baranggay: "Maa",
+          trademark: "",
+          city: "",
+          province: "",
+          country: "",
+        },
+        branch: {
+          street: "",
+          baranggay: "",
+          city: "",
+          province: "",
+          country: "",
+        }
+        }
+      },
+      payments: {
+        totalproductpayment: 0,
+        cargo: 0
+      },
+      transactiongiveaway: {
+        purchaser: 0,
+        people: 0,
+        vanguard: 0
+      } 
+      },
+      {
+      date: [{
+        status: "Purchasing details submitted",  
+        date: "1111-1111-111",
+        message: "All date are to purchase are gathered",
+      }],
+      status: {
+        current: [],
+        requested: [],
+        confirmedandtobedelivered: [],
+        delayed: [],
+        delivered: [],
+        confirmedasrecieved: []
+      },
+      transactionid: "",
+      transactiontype: "Practicing",
+      user: {
+        authentications: user.authentications,
+        details: user.details,
+      }, 
+      messages: [
+      {
+        status: "Purchasing details submitted",  
+        date: "1111-1111-111",
+        message: "All date are to purchase are gathered",
+        }
+      ],
+      products: {
+        list: [],
+        pricesbreakdown: {
+          merchandise: {
+          totalpayment: 0,
+          totalcapital: 0,
+          total_suggested_retail_price:0,
+          totalvat: 0,
+        },
+        cargo: {
+          fee: 0
+        },
+        payment: {
+        funds: {
+          deducted: false,
+          amount: 0,
+        },
+        money: {
+          deducted: false,
+          amount: 0
+        },
+        totalpayment: 0
+        }
+      }
+      },
+      cargo: {
+        cargotype: "",
+        cargoexpress: "",
+        weight: 0,
+        fee: 0,
+        locations: {
+        destination: {
+          street: "Quirino",
+          baranggay: "Bangkerohan",
+          trademark: "",
+          city: "",
+          province: "",
+          country: "",
+        },
+        branch: {
+          street: "",
+          baranggay: "",
+          city: "",
+          province: "",
+          country: "",
+        }
+        }
+      },
+      payments: {
+        totalproductpayment: 0,
+        cargo: 0
+      },
+      transactiongiveaway: {
+        purchaser: 0,
+        people: 0,
+        vanguard: 0
+      } 
+      }
+    ],
+    others: {
+      load: []
+    }
+  },
+  requests: {
+    merchandises: [],
+    nonmernchandises: [],
+    etc: {
+      load: []
+    }
+  },
+  processing: [],
+},
+moneyandfunds: {
+  request: {
+    deposits: [],
+    widthdrawals: []
+  },
+  transactions: {
+    deposits: [],
+    widthdrawals: []
+  },
+  processing: {
+    deposits: [],
+    widthdrawals: []
+  },
+  people: {
+    storedtransactiongiveaway: []
+  },
+  credits: {
+    deposits: [],
+    funds: [],
+    vanguard: [],
+    transactiongiveaway: {
+      bank: 0
+    }
+  }
+},
+people: [],
+history: []
+}
+);
 
 const $viewportscreenbreakpoints = {
   xsviewportscreenbreakpoint: async () => {
@@ -2011,7 +3383,13 @@ user: {
   authentications: user.authentications,
   details: user.details,
 }, 
-messages: [],
+messages: [
+{
+  status: "Purchasing details submitted",  
+  date: "1111-1111-111",
+  message: "All date are to purchase are gathered",
+  }
+],
 products: {
  list: ["1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1", "1"],
  pricesbreakdown: {
@@ -2046,6 +3424,7 @@ cargo: {
   destination: {
     street: "",
     baranggay: "",
+    trademark: "",
     city: "",
     province: "",
     country: "",
@@ -2072,7 +3451,6 @@ transactiongiveaway: {
 );
 
 //// purchasing 
-
 useEffect(()=> {
 
    $viewportscreenbreakpoints.xsviewportscreenbreakpoint();
@@ -2217,7 +3595,9 @@ const navigate = useNavigate();
          <Route path='/database'
                 element={<Database viewport={viewport}
                                    databasedata={databasedata}
-                                   databasedatacb={databasedatacb}/>}>
+                                   databasedatacb={databasedatacb}
+                                   
+                                   requesttransactiondata={requesttransactiondata}/>}>
 
          </Route>
          <Route path='/purchasing'
@@ -2269,13 +3649,18 @@ const navigate = useNavigate();
          </Route>
          <Route path='/office'
                 element={<Office viewport={viewport}
-                                     user={user}
-                                     usercb={usercb}
-                                     purchasing={purchasing}
-                                     purchasingcb={purchasingcb}
-                                     databasedata={databasedata}
-                                     databasedatacb={databasedatacb}
-                                     />}>
+                                 user={user}
+                                 usercb={usercb}
+                                 purchasing={purchasing}
+                                 purchasingcb={purchasingcb}
+                                 databasedata={databasedata}
+                                 databasedatacb={databasedatacb}
+
+                                 vanguarddata={vanguarddata}
+                                 vanguardatacb={vanguarddatacb} 
+                                 
+                                 user={user}
+                                 usercb={usercb}/>}>
          </Route>
       </Routes>
     </Container>

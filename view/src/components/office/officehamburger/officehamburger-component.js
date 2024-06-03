@@ -1,6 +1,7 @@
 import React, {
-	        useState,
-                useCallback
+	          useState,
+            useEffect,
+            useCallback
               } from "react";
 
 import { Row, 
@@ -110,16 +111,25 @@ export default function OfficeHamburger(props) {
             }
           ]
         }
-        },system: {
+        },
+        system: {
           request: {
             product: [
              {
-             pcs: 0,                                                                                                                                      details: {                                                                                                                                    for: {
-                  part: 'Product part',                                                                                                                        gender: 'Male',                                                                                                                              category: 'Adults'                                                                                                                       },
-              set: {
-                  set: false,                                                                                                                                  productindication: 'Oridinary',
-                  pcs: 10                                                                                                                                  },
-              size: 'Product size',                                                                                                                        color: 'Product color',
+             pcs: 0,                                                                                                                                     
+              details: {                                                                                                                                   
+                 for: {
+                  part: 'Product part',                                                                                                                       
+                   gender: 'Male',                                                                                                                             
+                    category: 'Adults'                                                                                                                      
+                   },
+                  set: {
+                  set: false,                                                                                                                                  
+                  productindication: 'Oridinary',
+                  pcs: 10                                                                                                                                 
+                 },
+              size: 'Product size',                                                                                                                       
+               color: 'Product color',
               weight: 'Product weight',
               top: 'Top product specification',
               left: 'Left product specification',
@@ -426,7 +436,7 @@ const [officehamburgerproductdatascheme, officehamburgerproductdataschemecb] = u
         }
      }
     ]
-  } );
+} );
 
 const [officehamburgerproductdataschemeproductid, officehamburgerproductdataschemeproductidcb] = useState("");
 
@@ -462,6 +472,105 @@ const [officehamburgercargotransactionshippedloadingindication, officehamburgerc
 
 const [officehamburgertransactiondataheader, officehamburgertransactiondataheadercb] = useState("Commoner accounts");
 
+const [baranggaytransactiondata, baranggaytransactiondatacb] = useState([]);
+const [selectedtransactiondata, selectedtransactiondatacb] = useState([]);
+
+const [officehamburgerrequesttransactiondata, officehamburgerrequesttransactiondatacb] = useState({
+ data:{
+  date: [{
+   status: "Purchasing details submitted",  
+   date: "1111-1111-1111",
+   message: "All date are to purchase are gathered",
+  }],
+  status: {
+    current: [],
+    requested: [],
+    confirmedandtobedelivered: [],
+    delayed: [],
+    delivered: [],
+    confirmedasrecieved: []
+  },
+  transactionid: "",
+  transactiontype: "Practicing",
+  user: {
+    authentications: props.user.authentications,
+    details: props.user.details,
+  }, 
+  messages: [
+   {
+    status: "Purchasing details submitted",  
+    date: "1111-1111-111",
+    message: "All date are to purchase are gathered",
+    }
+  ],
+  products: {
+   list: [],
+   pricesbreakdown: {
+    merchandise: {
+    totalpayment: 0,
+    totalcapital: 0,
+    total_suggested_retail_price:0,
+    totalvat: 0,
+    },
+    cargo: {
+      fee: 0
+    },
+    payment: {
+    funds: {
+      deducted: false,
+      amount: 0,
+    },
+    money: {
+      deducted: false,
+      amount: 0
+    },
+    totalpayment: 0
+    }
+  }
+  },
+  cargo: {
+   cargotype: "",
+   cargoexpress: "",
+   weight: 0,
+   fee: 0,
+   locations: {
+    destination: {
+      street: "",
+      baranggay: "",
+      trademark: "",
+      city: "",
+      province: "",
+      country: "",
+    },
+    branch: {
+      street: "",
+      baranggay: "",
+      city: "",
+      province: "",
+      country: "",
+    }
+   }
+  },
+  payments: {
+    totalproductpayment: 0,
+    cargo: 0
+  },
+  transactiongiveaway: {
+    purchaser: 0,
+    people: 0,
+    vanguard: 0
+  } 
+ }
+}
+);
+
+useEffect(()=> {
+   
+  const uniquebaranggaytransactiondata = [...new Set(props.vanguarddata.marketing.products.merchandises.map(item => item.cargo.locations.destination.baranggay))]; 
+  baranggaytransactiondatacb((transactions)=> transactions = uniquebaranggaytransactiondata );
+
+}, [])
+
 return (
  <Row id="officehamburger">
    <Row id='office-hamburgercontentnavigation'>
@@ -471,8 +580,7 @@ return (
 	        className="office-hamburgercontent-navigationbuttoncontainer"> 
         <button className="office-hamburgercontent-navigationbutton"
             onClick={(evt)=> {
-	                   officehamburgercontentviewcb((view
-                    )=> view = evt.target.innerText);                              
+	           officehamburgercontentviewcb((view)=> view = evt.target.innerText);              
              }}>
          Hamburger
         </button>
@@ -483,9 +591,8 @@ return (
         className="office-hamburgercontent-navigationbuttoncontainer">
           <button className="office-hamburgercontent-navigationbutton"
             onClick={(evt)=> {
-        officehamburgercontentviewcb((view)=> view = evt.target.innerText);
-            }}>e
-            Assistants
+             officehamburgercontentviewcb((view)=> view = evt.target.innerText);
+            }}>e-Assistants
          </button>
    </Col>
    <Col xs={12}
@@ -494,7 +601,7 @@ return (
         className="office-hamburgercontent-navigationbuttoncontainer">
           <button className="office-hamburgercontent-navigationbutton"
             onClick={(evt)=> {
-                      officehamburgercontentviewcb((view)=> view = evt.target.innerText);
+                  officehamburgercontentviewcb((view)=> view = evt.target.innerText);
                     }}>
           Office
           </button>
@@ -505,8 +612,8 @@ return (
         className="office-hamburgercontent-navigationbuttoncontainer">
           <button className="office-hamburgercontent-navigationbutton"
             onClick={(evt) => {
-        props.officemainnavigationcontentviewcb((mainnavigationview)=> mainnavigationview = 'Auth');
-        props.mainnavigationbuttonscontainerdisplaypropertycb((displayproperty)=> displayproperty = 'flex' );
+           props.officemainnavigationcontentviewcb((mainnavigationview)=> mainnavigationview = 'Auth');
+           props.mainnavigationbuttonscontainerdisplaypropertycb((displayproperty)=> displayproperty = 'flex' );
             }}>
           log out
           </button>
@@ -585,7 +692,24 @@ return (
 
 	                            officehamburgertransactionsdataview={officehamburgertransactionsdataview}
 
-                              officehamburgertransactionsdataviewcb={officehamburgertransactionsdataviewcb}/>
+                              officehamburgertransactionsdataviewcb={officehamburgertransactionsdataviewcb}
+                              
+                              vanguarddata={props.vanguarddata}
+                              vanguardatacb={props.vanguarddatacb}
+                              
+                              baranggaytransactiondata={baranggaytransactiondata}
+                              baranggaytransactiondatacb={baranggaytransactiondatacb}
+                              
+                              selectedtransactiondata={selectedtransactiondata}
+                              selectedtransactiondatacb={selectedtransactiondatacb}
+                              
+                              officehamburgerrequesttransactiondata={officehamburgerrequesttransactiondata}
+                              officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
+                              
+                              user={props.user}
+                              usercb={props.usercb}
+                              
+                              compttemptforceupdatetempfunction={compttemptforceupdatetempfunction}/>
 
   </Col>
  </Row>
@@ -666,9 +790,26 @@ function OfficeHamburgerContentView(props) {
 	                          officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
                             officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
 
-	                           officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
+	                          officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
+ 
+                            officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}
+                           
+                            vanguarddata={props.vanguarddata}
+                            vanguardatacb={props.vanguarddatacb}
+                            
+                            baranggaytransactiondata={props.baranggaytransactiondata}
+                            baranggaytransactiondatacb={props.baranggaytransactiondatacb}
+                            
+                            selectedtransactiondata={props.selectedtransactiondata}
+                            selectedtransactiondatacb={props.selectedtransactiondatacb}
 
-                           officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}/>              
+                            officehamburgerrequesttransactiondata={props.officehamburgerrequesttransactiondata}
+                            officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
+                            
+                            user={props.user}
+                            usercb={props.usercb}
+                            
+                            />              
       </Col>
   )
  }
@@ -676,16 +817,20 @@ function OfficeHamburgerContentView(props) {
  if ( props.officehamburgercontentview === "Assistants" ) {
   return (
   <Col id="officehamburgercontentview">
-    <OfficeHamburgerAssistantsView />
+    <OfficeHamburgerAssistantsView vanguarddata={props.vanguarddata}
+                                   vanguardatacb={props.vanguarddatacb}/>
   </Col>
   )
  }
 
  if ( props.officehamburgercontentview === "Office" ) {
-   return (
+   return ( 
     <Col id="officehamburgercontentview">
      <OfficeHamburgerOfficeView officehamburgerformdataconfigurationviewtypeview={props.officehamburgerformdataconfigurationviewtypeview}
-officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}/>
+                                officehamburgerformdataconfigurationviewtypeviewcb={props.officehamburgerformdataconfigurationviewtypeviewcb}
+                                
+                                vanguarddata={props.vanguarddata}
+                                vanguardatacb={props.vanguarddatacb}/>
     </Col>
    )
  }
@@ -842,7 +987,7 @@ function OfficeHamburgerView(props) {
 
 	                        	     officehamburgerrequestsdataview={props.officehamburgerrequestsdataview}
 
-                                  officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
+                                 officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
 
 
 	                               officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
@@ -871,7 +1016,22 @@ function OfficeHamburgerView(props) {
 
                                  officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-                                 officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} />
+                                 officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} 
+                                 
+                                 vanguarddata={props.vanguarddata}
+                                 vanguardatacb={props.vanguarddatacb}
+                                 
+                                 baranggaytransactiondata={props.baranggaytransactiondata}
+                                 baranggaytransactiondatacb={props.baranggaytransactiondatacb}
+                                 
+                                 selectedtransactiondata={props.selectedtransactiondata}
+                                 selectedtransactiondatacb={props.selectedtransactiondatacb}
+                                 
+                                 officehamburgerrequesttransactiondata={props.officehamburgerrequesttransactiondata}
+                                 officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
+                                 
+                                 user={props.user}
+                                 usercb={props.usercb}/>
      </Row>
 
     </Col>
@@ -941,7 +1101,13 @@ return (
 
 	                                   officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-                                     officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} />
+                                     officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} 
+                                     
+                                     vanguarddata={props.vanguarddata}
+                                     vanguardatacb={props.vanguarddatacb}
+                                     
+                                     user={props.user}
+                                     usercb={props.usercb}/>
 
   </Col>
  )
@@ -957,44 +1123,61 @@ return (
  }
  
  if ( props.officehamburgerdataview === "Requests") {
-return (
-  <Col id="officehamburger-dataview-datamodal">
-    <OfficeHamburgerTransactionDataView officehamburgercargodataview={props.officehamburgercargodataview}
+    return (
+      <Col id="officehamburger-dataview-datamodal">
+        <OfficeHamburgerTransactionDataView officehamburgercargodataview={props.officehamburgercargodataview}
 
-                                        officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
+                                            officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
 
-	                                      officehamburgerrequestsdataview={props.officehamburgerrequestsdataview}
+                                            officehamburgerrequestsdataview={props.officehamburgerrequestsdataview}
 
-                                        officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
+                                            officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
 
-                                        officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
+                                            officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
 
-                                        officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
+                                            officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
 
-                                        officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
+                                            officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
 
-                                        officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
+                                            officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
 
-                                        officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
+                                            officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
 
-                                        officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
+                                            officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
 
-                                        officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
+                                            officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
 
-                                        officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
+                                            officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
 
-                                        officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
+                                            officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
 
-                                        officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
+                                            officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
 
-                                        officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
-                                        officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
+                                            officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
+                                            officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
 
-	                                      officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
+                                            officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-                                        officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} />
-  </Col>
- )
+                                            officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} 
+                                            
+                                            vanguarddata={props.vanguarddata}
+                                            vanguardatacb={props.vanguarddatacb}
+                                            
+                                            baranggaytransactiondata={props.baranggaytransactiondata}
+                                            baranggaytransactiondatacb={props.baranggaytransactiondatacb}
+                                            
+                                            selectedtransactiondata={props.selectedtransactiondata}
+                                            selectedtransactiondatacb={props.selectedtransactiondatacb}
+                                            
+                                            officehamburgerrequesttransactiondata={props.officehamburgerrequesttransactiondata}
+                                            officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
+                                            
+                                            user={props.user}
+                                            usercb={props.usercb}
+                                            
+                                            compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}/>
+      </Col>
+    )
  }
 
  if ( props.officehamburgerdataview === "Transactions") {
@@ -1002,40 +1185,37 @@ return (
   <Col id="officehamburger-dataview-datamodal">
    <OfficeHamburgerTransactionDataView officehamburgercargodataview={props.officehamburgercargodataview}
 
-officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
-	                                    officehamburgerrequestsdataview={props.officehamburgerrequestsdataview}
+                                       officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
+                                       officehamburgerrequestsdataview={props.officehamburgerrequestsdataview}
 
-officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
+                                       officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
 
-                             officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
+                                       officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
 
-                              officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
+                                       officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
 
-                                              officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
+                                       officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
 
-officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
+                                       officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
 
-officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
+                                       officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
 
-officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
+                                       officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
 
-officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
+                                       officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
 
-officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
+                                       officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
 
-officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
+                                       officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
 
-officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
+                                       officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
 
-	                       officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
-officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
+                                       officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
+                                       officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
 
-	                       officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
+                                       officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}
-
- 
-/>
+                                       officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}/>
   </Col>
  )
  }
@@ -1045,39 +1225,39 @@ return (
   <Col id="officehamburger-dataview-datamodal">
    <OfficeHamburgerTransactionDataView officehamburgercargodataview={props.officehamburgercargodataview}
 
-officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
-	                      officehamburgercargodataview={props.officehamburgercargodataview}
+                                       officehamburgercargodataviewcb={props.officehamburgercargodataviewcb}
+	                                     officehamburgercargodataview={props.officehamburgercargodataview}
 
-officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
+                                       officehamburgerrequestsdataviewcb={props.officehamburgerrequestsdataviewcb}
 
-                             officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
+                                       officehamburgertransactionsdataview={props.officehamburgertransactionsdataview}
 
-                              officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
-                                                                           officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
+                                       officehamburgertransactionsdataviewcb={props.officehamburgertransactionsdataviewcb}
+                                       officehamburgerrequesttransactionacceptloadingindication={props.officehamburgerrequesttransactionacceptloadingindication}
 
-officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
+                                       officehamburgerrequesttransactionacceptloadingindicationcb={props.officehamburgerrequesttransactionacceptloadingindicationcb}
 
-officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
+                                       officehamburgerrequesttransactionoutofstockloadingindication={props.officehamburgerrequesttransactionoutofstocktloadingindication}
 
-officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
+                                       officehamburgerrequesttransactionoutofstockloadingindicationcb={props.officehamburgerrequesttransactionoutofstockloadingindicationcb}
 
-officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
+                                       officehamburgerrequesttransactionchangeofstockloadingindication={props.officehamburgerrequesttransactionchangeofstockloadingindication}
 
-officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
+                                       officehamburgerrequesttransactionchangeofstockloadingindicationcb={props.officehamburgerrequesttransactionchangeofstockloadingindicationcb}
 
-                   
+                                                              
 
-officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
+                                       officehamburgercargotransactionshippedloadingindication={props.officehamburgercargotransactionshippedloadingindication}
 
-officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
+                                       officehamburgercargotransactionshippedloadingindicationcb={props.officehamburgercargotransactionshippedloadingindicationcb}
 
-	               officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
-officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
+                                       officehamburgertransactionpassedtocargoloadingindication={props.officehamburgertransactionpassedtocargoloadingindication}
+                                       officehamburgertransactionpassedtocargoloadingindicationcb={props.officehamburgertransactionpassedtocargoloadingindicationcb}
 
 
-	                       officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
+                                       officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}
+                                       officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb}
 
  
 />
@@ -1124,7 +1304,25 @@ function OfficeHamburgerTransactionDataView(props) {
 
                                        officehamburgertransactiondataheader={props.officehamburgertransactiondataheader}
 
-                                       officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} />
+                                       officehamburgertransactiondataheadercb={props.officehamburgertransactiondataheadercb} 
+                                       
+                                       vanguarddata={props.vanguarddata}
+                                       vanguardatacb={props.vanguarddatacb} 
+                                       
+                                       baranggaytransactiondata={props.baranggaytransactiondata}
+                                       baranggaytransactiondatacb={props.baranggaytransactiondatacb}
+                                       
+                                       selectedtransactiondata={props.selectedtransactiondata}
+                                       selectedtransactiondatacb={props.selectedtransactiondatacb}
+
+                                       officehamburgerrequesttransactiondata={props.officehamburgerrequesttransactiondata}
+                                       officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
+                                       
+                                       user={props.user}
+                                       usercb={props.usercb}
+                                       
+                                       compttemptforceupdatetempfunction={props.compttemptforceupdatetempfunction}/>
+
    </Row>
   )
 }
@@ -1133,48 +1331,49 @@ function OfficehamburgerTransactionsData(props) {
  return (
   <Col id="officehamburger-transactionsdata">
     <Row id="officehamburger-transactionsdata-navigationcontainer">
-      <Col xs={6}
+      <Col xs={12}
            md={3}
-	   lg={3}
-	   className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
+	         lg={3}
+	        className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
         <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
-	        onClick={(evt)=> {
-                   props.officehamburgertransactiondataheadercb((header)=> header = "Commoner accounts")
-		}}>
-	  Commoner accounts
-	</button>
+	              onClick={(evt)=> {
+                   props.officehamburgertransactiondataheadercb((header)=> header = "Commoner accounts");
+	            	}}>
+	        Commoner accounts
+ 	     </button>
       </Col>
-      <Col xs={6}
+      <Col xs={12}
            md={3}
-	   lg={3}
-	   className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
+	         lg={3}
+	         className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
         <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
 	        onClick={(evt)=> {
-                   props.officehamburgertransactiondataheadercb((header)=> header = "Public accounts")
-		}}>
-	  Public accounts
-	</button>
+               props.officehamburgertransactiondataheadercb((header)=> header = "Public accounts");
+	      	}}>
+	        Public accounts
+	       </button>
       </Col>
-      <Col xs={8}
+      <Col xs={12}
            md={3}
-	   lg={3}
+      	   lg={3}
 	   className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
         <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
 	        onClick={(evt)=> {
-                   props.officehamburgertransactiondataheadercb((header)=> header = "Private accounts authentication")
-		}}>
-	  Private accounts authentications
-	</button>
+              props.officehamburgertransactiondataheadercb((header)=> header = "Private accounts authentication");
+	      	}}>
+	         Private accounts authentications
+	      </button>
       </Col>
     </Row>
     <Col id="officehamburger-transactionsdata-view">
+
      <Row id="officehamburger-transactionsdata-indicationscontainer">
       <Col xs={12}
 	   md={12}
 	   lg={12}
 	   className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer">
        <h1 className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindication">      
-	 {props.officehamburgertransactiondataheader}
+	   {props.officehamburgertransactiondataheader}
       </h1>
      </Col>
      <Col xs={12}
@@ -1183,437 +1382,643 @@ function OfficehamburgerTransactionsData(props) {
 	   className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer"> 
        {
          props.officehamburgerrequestsdataview && 
-	<p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
-	  onClick={(evt)=> {
+	     <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
+	        onClick={(evt)=> {
 
            const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
 
-	   _baranggaydatacontainer.style.display = "block";
+	         _baranggaydatacontainer.style.display = "block";
 
-	  }}>     
+	      }}>     
          Requests
        </p>
-	}
-	{
+	   }
+	   {
          props.officehamburgertransactionsdataview && 
-	<p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
-	  onClick={(evt)=> {
+	     <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
+	        onClick={(evt)=> {
 
            const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
 
-	   _baranggaydatacontainer.style.display = "block";
+	        _baranggaydatacontainer.style.display = "block";
 
-	  }}>     
+	       }}>     
          Transactions
        </p>
-	}
+  	}
 
-        {
+     {
          props.officehamburgercargodataview && 
-	<p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
-	  onClick={(evt)=> {
+	      <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
+	          onClick={(evt)=> {
 
            const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
 
-	   _baranggaydatacontainer.style.display = "block";
+	         _baranggaydatacontainer.style.display = "block";
 
 	  }}>     
          Cargo
        </p>
-	}
+	   }
 
        </Col>
 
      </Row>
 
-     <Row id="officehamburger-transactionsdata-baranggaydatamodal">
-      <Row id="officehamburger-transactionsdata-baranggaydatamodal-datacontainer">
-       <Col xs={12}
-	    md={12}
-	    lg={12}
-	    className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer">
-        <button className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
-         <h1 className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Baranggay: Maa</h1>
-	  <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 requests on 12 different individual streets</p>
-         <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Overall grams to be delivered here, 0 grams</p>
-         <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total requests payment, 0 peso"s</p>
-	 <button className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+
+      <Col id="officehamburger-transactionsdata-baranggaydatamodal">
+
+        <Row id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">
+
+          {
+            props.baranggaytransactiondata.length === 0 ? 
+            (
+              <p id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">Empty</p>
+            )
+            :
+            (
+             <React.Fragment>
+              {
+               props.baranggaytransactiondata.map((location, locationidx)=> {
+
+                const _transactions = props.vanguarddata.marketing.products.merchandises.filter((transactions)=> transactions.cargo.locations.destination.baranggay === location);
+                const _requests = _transactions.length;
+                const _streets = [...new Set(_transactions.map(transactions=> transactions.cargo.locations.destination.street))]; 
+                const _streeetscount = _streets.length;
+                const _requestsweight = _transactions.reduce((accumulator, transactions)=> accumulator + transactions.cargo.weight, 0);
+                const _requestprice = _transactions.reduce((accumulator, transactions)=> accumulator + transactions.products.pricesbreakdown.merchandise.totalpayment, 0);
+       
+                return (
+                 <React.Fragment key={locationidx}>
+                   <Row id="officehamburger-transactionsdata-baranggaydatamodal-datacontainer">
+                    <Col xs={12}
+                         md={12}
+                         lg={12}
+                         className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer">
+                     <button className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
+                       <h1 className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Baranggay: {location}</h1>
+                       <br />
+                       <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There {_requests} requests on {_streeetscount} different individual streets</p>
+                       <br />
+                       <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Overall grams to be delivered here, {_requestsweight} grams</p>
+                       <br />
+                       <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total requests payment, {_requestprice} peso"s</p>
+                       <br />
+                       <button className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                               onClick={(evt)=> {
+
+                                 props.selectedtransactiondatacb((transactions)=> transactions = _transactions);
+
+                                 const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-streetsdatamodal");
+
+                                 _baranggaydatacontainer.style.display = "block";
+       
+                                 }}>View data by Streets</button>
+                       </button>
+                    </Col>
+                   </Row>
+                 </React.Fragment>
+                )
+       
+               })
+              }
+             </React.Fragment>
+            )
+          }
+      
+       </Row>
+
+        <Col id="officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer">
+              <button id="officehamburger-transactionsdata-baranggaydatamodal-closebutton"
+                    onClick={(evt)=> {
+
+                      const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
+
+                      _baranggaydatacontainer.style.display = "none";
+
+              }}>
+                close
+              </button>
+        </Col>
+
+      </Col>
+       
+
+      <Col id="officehamburger-transactionsdata-streetsdatamodal">  
+
+       <Row id="officehamburger-transactionsdata-streetsdatamodal-gridcontainer">
+         {
+          props.selectedtransactiondata.length === 0 ? 
+          (
+            <p id="officehamburger-transactionsdata-streetsdatamodal-gridcontainer-emptytransactionheaderindication">Empty</p>
+          )
+          :
+          (
+            <React.Fragment>
+              {
+
+                props.selectedtransactiondata.map((transaction, transactionidx)=> {
+
+                  const _requests = props.selectedtransactiondata.length;
+                  const _requestsweight = props.selectedtransactiondata.reduce((accumulator, transactions)=> accumulator + transactions.cargo.weight, 0);
+                  const _requestprice = props.selectedtransactiondata.reduce((accumulator, transactions)=> accumulator + transactions.products.pricesbreakdown.merchandise.totalpayment, 0);
+
+                  return (
+                    <Row id="officehamburger-transactionsdata-streetsdatamodal-datacontainer"
+                         key={transactionidx}>
+
+                      <Col xs={12}
+                           md={12}
+                           lg={12}
+                           className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer">
+
+                              <button className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
+                              <h1 className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">{transaction.cargo.locations.destination.street} street</h1>
+                              <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Complete location: {transaction.cargo.locations.destination.street}, {transaction.cargo.locations.destination.baranggay}, {transaction.cargo.locations.destination.trademark}, {transaction.cargo.locations.destination.city}, {transaction.cargo.locations.destination.province}, {transaction.cargo.locations.destination.country}</p>
+                              <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There {_requests} requests on this street</p>
+                              <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Overall grams to be delivered here, {_requestsweight} grams</p>
+                              <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total requests payment, {_requestprice} peso"s</p>
+
+                              <button className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                      onClick={(evt)=> {
+
+                                        const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestsdatamodal");
+            
+                                        _baranggaydatacontainer.style.display = "block";
+
+                                      }}>
+                                  View requests
+                               </button>
+
+                              </button>
+
+                      </Col>
+      
+                    </Row>
+                  )
+                })
+              }
+            </React.Fragment>
+          )
+         }
+       
+       </Row>
+
+        <Col id="officehamburger-transactionsdata-streetsdatamodal-closebuttoncontainer">
+        <button id="officehamburger-transactionsdata-streetsdatamodal-closebutton"
                 onClick={(evt)=> {
 
                   const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-streetsdatamodal");
 
-	   _baranggaydatacontainer.style.display = "block";
+                 _baranggaydatacontainer.style.display = "none";
 
-		}}>View data by Streets</button>
-	</button>
-       </Col>
+          }}>
+          close
+        </button>
+        </Col>
 
-      </Row>
-      <Col id="officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer">
-       <button id="officehamburger-transactionsdata-baranggaydatamodal-closebutton"
-              onClick={(evt)=> {
-
-                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
-
-	        _baranggaydatacontainer.style.display = "none";
-
-	      }}>
-	close
-       </button>
-      </Col>
-     </Row>
-
-    <Row id="officehamburger-transactionsdata-streetsdatamodal">  
-
-      <Row id="officehamburger-transactionsdata-streetsdatamodal-datacontainer">
-
-       <Col xs={12}
-            md={12}
-            lg={12}
-            className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer">
-              <button className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
-              <h1 className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Trinidad street</h1>
-         <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Complete location: Street, barangay, trademark, city, province, country</p>
-         <p className="officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 requests on this street</p>
-         <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Overall grams to be delivered here, 0 grams</p>
-         <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total requests payment, 0 peso"s</p>
-          <button className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                        onClick={(evt)=> {
-
-                          const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestsdatamodal");
-
-            _baranggaydatacontainer.style.display = "block";
-
-            }}>View requests</button>
-          </button>
-       </Col>
-
-      </Row>
-      <Col id="officehamburger-transactionsdata-streetsdatamodal-closebuttoncontainer">
-       <button id="officehamburger-transactionsdata-streetsdatamodal-closebutton"
-              onClick={(evt)=> {
-
-                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-streetsdatamodal");
-
-	        _baranggaydatacontainer.style.display = "none";
-
-	      }}>
-	      close
-       </button>
       </Col>
 
-    </Row>
+      <Row id="officehamburger-transactionsdata-requestsdatamodal">  
 
-    <Row id="officehamburger-transactionsdata-requestsdatamodal">  
-
-      <Row id="officehamburger-transactionsdata-requestsdatamodal-datacontainer">
-
-       <Col xs={12}
-	          md={12}
-	          lg={12}
-	        className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer">
-          <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
-            <h1 className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">First name, Middle name, Last name</h1>
-	          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Complete location: Street, barangay, trademark, city, province, country</p>
-	          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Status: To be process</p>
-	          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 mrn requests on this request</p>
-            <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 non-mrn requests on this request</p>
-
-            <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total mrn grams, 0 grams</p>
-            <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total non-mrn grams, 0 grams</p>
-            <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total payment, 0 peso"s</p>
-	          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total cargo payment, 0 peso"s</p>
-
-	          <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
-
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
-
-	               _baranggaydatacontainer.style.display = "block";
-
-		         }}>
-              View request
-            </button>
-
-        { props.officehamburgerrequestsdataview && 
-	         <Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
-
+        <Row id="officehamburger-transactionsdata-requestsdatamodal-gridcontainer">
           {
-            props.officehamburgerrequesttransactionacceptloadingindication ?
-	          (
-             <Spinner animation="border" variant="secondary" />
+            props.selectedtransactiondata.length === 0 ? 
+            (
+              <p id="officehamburger-transactionsdata-requestsdatamodal-gridcontainer-emptytransactionheaderindication">Empty</p>
             )
-	         :
-	         (
-	         <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                   onClick={(evt)=> {
+            :
+            (
+            <React.Fragment>
 
-                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                {
+                 props.selectedtransactiondata.map((transaction, transactionidx)=> {
+   
+                  const _requestslength = props.selectedtransactiondata.length;
+                  const _requestsweight = props.selectedtransactiondata.reduce((accumulator, transactions)=> accumulator + transactions.cargo.weight, 0);
+                  const _requestprice = props.selectedtransactiondata.reduce((accumulator, transactions)=> accumulator + transactions.products.pricesbreakdown.merchandise.totalpayment, 0);
 
-	                 _baranggaydatacontainer.style.display = "block";
-           }}>
-	          Accept
-  	     </button>
-           )
-        }
+                  return (
 
-	     {
-            props.officehamburgerrequesttransactionacceptloadingindication ?
-	     (
-           <Spinner animation="border" variant="secondary" />
-       )
-	    :
-	    (
-	     <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-               onClick={(evt)=> {
+                    <Row id="officehamburger-transactionsdata-requestsdatamodal-datacontainer">
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                    <Col xs={12}
+                          md={12}
+                          lg={12}
+                          className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer">
 
-	               _baranggaydatacontainer.style.display = "block";
+                          <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay">
+                          <h1 className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Date: {transaction.date[0].date}</h1>
+                          <h1 className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">First name, Middle name, Last name</h1>
+                        
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Complete location: Street, barangay, trademark, city, province, country</p>
 
-		             alert(props.officehamburgerrequesttransactionoutofstockloadingindication) 
-		    }}>
-	       Out of stock
-  	   </button>
-     )
-	  }
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Status: To be process</p>
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 mrn requests on this request</p>
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">There 0 non-mrn requests on this request</p>
 
-          {
-            props.officehamburgerrequesttransactionchangeofstockloadingindication ?
-	   (
-           <Spinner animation="border" variant="secondary" />
-           )
-	   :
-	   (
-	    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                          <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total mrn grams, 0 grams</p>
+                          <p className="officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total non-mrn grams, 0 grams</p>
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total payment, 0 peso"s</p>
+                          <p className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication">Total cargo payment, 0 peso"s</p>
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                          <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                              onClick={(evt)=> {
 
-	          _baranggaydatacontainer.style.display = "block";
+                                props.officehamburgerrequesttransactiondata.data = transaction;
+                                props.compttemptforceupdatetempfunction();
+                                // props.officehamburgerrequesttransactiondata.date = transaction.date;
+                                // props.officehamburgerrequesttransactiondata.status = transaction.status;
+                                // props.officehamburgerrequesttransactiondata.transactionid = transaction.transactionid;
+                                // props.officehamburgerrequesttransactiondata.transactiontype = transaction.transactiontype;
+                                // props.officehamburgerrequesttransactiondata.user = transaction.user;
+                                // props.officehamburgerrequesttransactiondata.messages = transaction.messages;
+                                // props.officehamburgerrequesttransactiondata.products = transaction.products;
+                                // props.officehamburgerrequesttransactiondata.cargo = transaction.cargo;
+                                //  props.officehamburgerrequesttransactiondata.payments = transaction.payments;
+                                //  props.officehamburgerrequesttransactiondata.date = transaction.transactiongiveaway;
 
-		}}>
-	    Change of stock
-  	   </button>
-           )
-	  }
+                                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+
+                                _baranggaydatacontainer.style.display = "block";
+
+                             }}>
+                            View request
+                          </button>
+
+                      {
+                      props.officehamburgerrequestsdataview && 
+                        <Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
+
+                        {
+                          props.officehamburgerrequesttransactionacceptloadingindication ?
+                          (
+                          <Spinner animation="border" variant="secondary" />
+                          )
+                        :
+                        (
+                        <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                onClick={(evt)=> {
+
+                                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+
+                                  _baranggaydatacontainer.style.display = "block";
+
+                                }}>
+                          Accept
+                       </button>
+                        )
+                      }
+
+                    {
+                        props.officehamburgerrequesttransactionacceptloadingindication ?
+                    (
+                        <Spinner animation="border" variant="secondary" />
+                    )
+                    :
+                    (
+                    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                            onClick={(evt)=> {
+
+                                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+
+                              _baranggaydatacontainer.style.display = "block";
+
+                              alert(props.officehamburgerrequesttransactionoutofstockloadingindication) 
+                      }}>
+                      Out of stock
+                    </button>
+                    )
+                    }
+
+                     {
+                          props.officehamburgerrequesttransactionchangeofstockloadingindication ?
+                    (
+                        <Spinner animation="border" variant="secondary" />
+                        )
+                    :
+                    (
+                    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                              onClick={(evt)=> {
+
+                                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+
+                          _baranggaydatacontainer.style.display = "block";
+
+                    }}>
+                    Change of stock
+                    </button>
+                        )
+                    }
 
 
-	</Col>}
+                        </Col>
+                      }
 
-       { props.officehamburgertransactionsdataview && 
-	<Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
+                     { 
+                      props.officehamburgertransactionsdataview && 
+                        <Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
 
-          {
-            props.officehamburgercargotransactionshippedloadingindication ?
-	   (
-           <Spinner animation="border" variant="secondary" />
-           )
-	   :
-	   (
-	    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                            {
+                              props.officehamburgercargotransactionshippedloadingindication ?
+                        (
+                            <Spinner animation="border" variant="secondary" />
+                            )
+                        :
+                        (
+                        <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                  onClick={(evt)=> {
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
 
-	          _baranggaydatacontainer.style.display = "block";
+                              _baranggaydatacontainer.style.display = "block";
 
-		}}>
-	    Passed to cargo
-  	   </button>
-           )
-	  }
-	  
-           {
-            props.officehamburgerrequesttransactionacceptloadingindication ?
-	   (
-           <Spinner animation="border" variant="secondary" />
-           )
-	   :
-	   (
-	    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                        }}>
+                        Passed to cargo
+                        </button>
+                            )
+                        }
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                            {
+                              props.officehamburgerrequesttransactionacceptloadingindication ?
+                        (
+                            <Spinner animation="border" variant="secondary" />
+                            )
+                        :
+                        (
+                        <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                  onClick={(evt)=> {
 
-	          _baranggaydatacontainer.style.display = "block";
+                                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
 
-		  alert(props.officehamburgerrequesttransactionoutofstockloadingindication)
-		}}>
-	    Out of stock
-  	   </button>
-           )
-	  }
+                              _baranggaydatacontainer.style.display = "block";
 
-          {
-            props.officehamburgerrequesttransactionchangeofstockloadingindication ?
-	   (
-           <Spinner animation="border" variant="secondary" />
-           )
-	   :
-	   (
-	    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                                alert(props.officehamburgerrequesttransactionoutofstockloadingindication)
+                        }}>
+                        Out of stock
+                        </button>
+                            )
+                        }
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                       {
+                              props.officehamburgerrequesttransactionchangeofstockloadingindication ?
+                        (
+                            <Spinner animation="border" variant="secondary" />
+                        )
+                        :
+                        (
+                        <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                  onClick={(evt)=> {
 
-	          _baranggaydatacontainer.style.display = "block";
+                                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
 
-		}}>
-	    Change of stock
-  	   </button>
-           )
-	  }
+                              _baranggaydatacontainer.style.display = "block";
 
-	</Col>}
+                        }}>
+                        Change of stock
+                        </button>
+                            )
+                        }
 
-       { props.officehamburgercargodataview && 
-	<Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
+                        </Col>
+                     }
 
-          {
-            props.officehamburgercargotransactionshippedloadingindication ?
-	   (
-           <Spinner animation="border" variant="secondary" />
-           )
-	   :
-	   (
-	    <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                    { 
+                    props.officehamburgercargodataview && 
+                      <Col className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-accountbuttonscontainer">
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+                    {
+                            props.officehamburgercargotransactionshippedloadingindication ?
+                      (
+                          <Spinner animation="border" variant="secondary" />
+                          )
+                      :
+                      (
+                      <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                onClick={(evt)=> {
 
-	          _baranggaydatacontainer.style.display = "block";
+                                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
 
-		}}>
-	    Ship
-  	   </button>
-           )
-	  }
-	  <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
-                onClick={(evt)=> {
+                                _baranggaydatacontainer.style.display = "block";
 
-                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestmapmodal");
+                      }}>
+                      Ship
+                      </button>
+                          )
+                      }
+                      <button className="officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-configurationbutton"
+                                onClick={(evt)=> {
 
-	   _baranggaydatacontainer.style.display = "block";
+                                  const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestmapmodal");
 
-		}}>
-	   Map
-	 </button>
+                                  _baranggaydatacontainer.style.display = "block";
 
-	</Col>}
+                      }}>
+                      Map
+                      </button>
 
-	</button>
-        
-       </Col>
+                      </Col>
+                    }
 
-      </Row>
-      <Col id="officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer">
-       <button id="officehamburger-transactionsdata-requestsdatamodal-closebutton"
+                    </button>
+                      
+                    </Col>
+
+                    </Row>
+
+                  )
+
+                  })
+                }
+
+            </React.Fragment>
+            )
+            }
+        </Row>
+
+       <Col id="officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer">
+      <button id="officehamburger-transactionsdata-requestsdatamodal-closebutton"
               onClick={(evt)=> {
 
                 const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestsdatamodal");
 
-	        _baranggaydatacontainer.style.display = "none";
+              _baranggaydatacontainer.style.display = "none";
 
-	      }}>
-	close
-       </button>
-      </Col>
-
-    </Row>
-
-    <Row id="officehamburger-transactionsdata-requestdatamodal">
-     <Row id="officehamburger-transactionsdata-requestdatamodal-datagridcontainer">
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Name: </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Account number: </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Contact number: </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Transaction id: </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Address:  </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Delivery given address: </p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Product</p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Mrn</p>
-      <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer">
-       <Col xs={7}
-	    md={6}
-	    lg={6}
-	    className="officehamburger-transactionsdata-requestdatamodal-merchandiseimagecontainer">
-	<img src='../images/landingpage/bondpaperimage.jpg'
-	     className="officehamburger-transactionsdata-requestdatamodal-merchandiseimage"
-	     alt="Xirbit-Product-Image"/>
-       </Col>
-       <Col xs={5}
-	    md={6}
-	    lg={6} 
-	    className="officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer">
-        <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer">
- 	 <Col xs={12}
-	      md={6}
-	      lg={6}
-	      className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
-         <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Size: 0 </p>
-         <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Color: 0</p>
-	<p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Part: 10000</p>
-	  <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Pcs: 10000</p>
-         </Col>
-         <Col xs={12}
-	      md={6}
-	      lg={6}
-	      className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
-
-	  <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Price: 10,000</p>
-         </Col>
-         <Col xs={12}
-	      md={6}
-	      lg={6}
-	      className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
-
-          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Weight: 100000</p>
-         </Col>
-        </Row>
-       </Col>
-       <Col xs={12}
-	    md={12}
-	    lg={12}>
-        <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total weight: 0 grams</p>
-        <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total price: 0 peso's</p>
-       </Col>
-      </Row>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Non-mrn</p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Overall total weight: 0 grams</p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Overall total price: 0 peso's</p>
-      <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Overall total shipment: 0 grams</p>
-     <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Overall total payment: 0 grams</p>
-     </Row>
-     <Col id="officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer">
-      <button id="officehamburger-transactionsdata-requestdatamodal-closebutton"
-	      onClick={(evt)=> {
-
-                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
-
-	        _baranggaydatacontainer.style.display = "none";
-
-	      }}>
-       close
+        }}>
+        close
       </button>
-     </Col>
-   </Row>
+       </Col>
 
-   <Row id="officehamburger-transactionsdata-requestmapmodal">
-    <Col id="officehamburger-transactionsdata-requestmapmodal-mapcontainer">
-    </Col>
-    <Col id="officehamburger-transactionsdata-requestmapmodal-closebuttoncontainer">
-     <button id="officehamburger-transactionsdata-requestmapmodal-closebutton"
-	     onClick={(evt)=> {
+      </Row>
 
-                const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestmapmodal");
+      <Row id="officehamburger-transactionsdata-requestdatamodal">
 
-	        _baranggaydatacontainer.style.display = "none";
+        <Row id="officehamburger-transactionsdata-requestdatamodal-datagridcontainer">
 
-	     }}>
-       close
-     </button>
-    </Col>
-   </Row>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Date: {props.officehamburgerrequesttransactiondata.data.date[0].date}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Transaction type: {props.officehamburgerrequesttransactiondata.data.transactiontype}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Transaction id: {props.officehamburgerrequesttransactiondata.data.transactionid}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Name: {props.officehamburgerrequesttransactiondata.data.user.details.surials.firstname}, {props.officehamburgerrequesttransactiondata.data.user.details.surials.middlename}, {props.officehamburgerrequesttransactiondata.data.user.details.surials.lastname}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Account number: {props.officehamburgerrequesttransactiondata.data.user.authentications.authenticationid}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Contact number: </p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Address: {props.officehamburgerrequesttransactiondata.data.user.details.location.address.street}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.baranggay}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.trademark}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.city}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.province}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.country}</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Cargo given address: {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.street}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.baranggay}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.trademark}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.city}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.province}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.country}</p>
+          
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">REQUEST'S: </p>
+
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+
+           {
+            props.officehamburgerrequesttransactiondata.data.products.list.length === 0 ?
+            (
+              <p>Impossible to be empty</p>
+            )
+            :
+            (
+              <React.Fragment>
+                {
+                  props.officehamburgerrequesttransactiondata.data.products.list.map((product, productidx)=> {
+                    return (
+                      <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer"
+                           key={productidx}>
+                        <Col xs={12}
+                             md={6}
+                             lg={6}
+                             className="officehamburger-transactionsdata-requestdatamodal-merchandiseimagecontainer">
+                          <img src='../images/landingpage/bondpaperimage.jpg'
+                                className="officehamburger-transactionsdata-requestdatamodal-merchandiseimage"
+                                alt="Xirbit-Product-Image"/>
+                        </Col>
+                        <Col xs={5}
+                            md={6}
+                            lg={6} 
+                            className="officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer">
+                        <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer">
+                          <Col xs={6}
+                               md={6}
+                               lg={6}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">By pieces</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Size: {product.details.product.specification.size}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Color: {product.details.product.specification.color}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Part: {product.details.product.specification.for.part}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Weight: {product.details.product.specification.weight}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Price: {product.details.product.pricesbreakdown.price}</p>
+                          </Col>
+                          <Col xs={6}
+                               md={6}
+                               lg={6}
+                               className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Totals</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Pcs: 10000</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">This product total payment: {product.system.request.merchandise.price}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">This product total weight: {product.system.request.shipping.weight}</p>
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">This product cargo fee: {product.system.request.shipping.fee}</p>
+                          </Col>
+                          <Col xs={12}
+                              md={12}
+                              lg={12}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+                          </Col>
+                          <Col xs={12}
+                              md={12}
+                              lg={12}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+                          </Col>
+                          <Col xs={12}
+                              md={12}
+                              lg={12}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+                          </Col>
+                          <Col xs={12}
+                              md={12}
+                              lg={12}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+                          </Col>
+                          <Col xs={12}
+                              md={12}
+                              lg={12}
+                              className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
+                            <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Request specification: {product.system.request.orderspecification}</p>
+                          </Col>
+                        </Row>
+                        </Col>
+
+                        <Col xs={12}
+                             md={12}
+                             lg={12} 
+                             className="officehamburger-transactionsdata-requestdatamodal-requestspecification-headerindicationcontainer">
+                          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Request specification</p>
+                          <input type="text"
+                                className="officehamburger-transactionsdata-requestdatamodal-requestspecificationinputfield"/>
+                          <button className="officehamburger-transactionsdata-requestdatamodal-setrequestspecification"
+                                  onClick={()=> {
+                                    alert(JSON.stringify(props.officehamburgerrequesttransactiondata.products.list));
+                                  }}>set</button>
+                        </Col>
+                      </Row>
+                    )
+                  })
+                }
+              </React.Fragment>
+            )
+           }
+ 
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication"></p>
+
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Non-mrn: 0 pcs</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total non-mrn payment: 0 peso's</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total non-mrn weight: 0 grams</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Mrn: 0 pcs</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total mrn payment: 0 peso's</p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Total mrn weight: 0 gram's</p>
+
+        </Row>
+
+        <Col id="officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer">
+          <button id="officehamburger-transactionsdata-requestdatamodal-closebutton"
+            onClick={(evt)=> {
+
+                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestdatamodal");
+
+              _baranggaydatacontainer.style.display = "none";
+
+            }}>
+          close
+          </button>
+        </Col>
+      </Row>
+
+      <Row id="officehamburger-transactionsdata-requestmapmodal">
+        <Col id="officehamburger-transactionsdata-requestmapmodal-mapcontainer">
+        </Col>
+        <Col id="officehamburger-transactionsdata-requestmapmodal-closebuttoncontainer">
+        <button id="officehamburger-transactionsdata-requestmapmodal-closebutton"
+          onClick={(evt)=> {
+
+                    const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestmapmodal");
+
+              _baranggaydatacontainer.style.display = "none";
+
+          }}>
+          close
+        </button>
+        </Col>
+      </Row>
 
    </Col>
   </Col>
@@ -1832,11 +2237,11 @@ function HamburgerMarketingMerchandiseDataView(props) {
           <button className="officehamburger-dataview-datacontainer-datacontainer-merchandisedata-configurationbutton"
                   onClick={(evt)=> {
 
-                          const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
+                    const _merchandisedatacontainer = document.querySelector(".officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer");
 
-              props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
+                    props.officehamburgerformdataconfigurationviewtypeviewcb((configurationdataview)=> configurationdataview = evt.target.innerText);
 
-              _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
+                   _merchandisedatacontainer.classList.toggle("officehamburger-dataview-datacontainer-datacontainer-merchandisetoggleddataresultscontainer");
 
             }}>
             Search
@@ -2037,9 +2442,9 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
   <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer">
    
     <Col xs={12}
-	 md={3}
-	 lg={3}
-	 className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
+	       md={3}
+	       lg={3}
+	       className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindicationcontainer">
       <p className="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication">
         Authentications
       </p>
@@ -3630,7 +4035,6 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 
  }
 
- 
  if ( props.officehamburgerformdataconfigurationviewtypeview === "Edit" ) {
  return (
    <Row id="officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer">
@@ -4750,7 +5154,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
 	       const _imagecontainer = evt.target.parentElement.parentElement;
 	       const _displayimagemodal = _imagecontainer.children[1];
 
-               _displayimagemodal.style.display = "block";
+         _displayimagemodal.style.display = "block";
 
 	 }}/>
         </Col>
@@ -4767,7 +5171,7 @@ function HamburgerMarketingMerchandiseFormDataModal(props) {
              const _closebuttoncontainer = evt.target.parentElement.parentElement.parentElement;
              const _displayimagemodal = _closebuttoncontainer.children[1];
 
-	    _displayimagemodal.style.display = "none";
+	          _displayimagemodal.style.display = "none";
 
 	   }}>
 	   close

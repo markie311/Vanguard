@@ -80,13 +80,42 @@ export default function Transactions(props) {
                    md={6}
                    lg={6}
                    className='transactions-transactionscontainer-transactionsgridcontainer-productindicationheadercontainer'>
-                <p className='transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication'>Date: {props.requesttransactiondata.date.at(-1).date}</p>
+                {
+                  props.requesttransactiondata.date.map((date,dateidx)=> {
+                    return (
+                      <p className='transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication'>{date.date}, {date.status}</p>
+                    )
+                  })
+                }
+                <br/>
+                <br/>
                 <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Transaction id:</p>
                 <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Transaction type:</p>
-                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Transaction type:</p>
-                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Product: 0 pesos's</p>
-                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Cargo: 0 pesos's</p>
+                <br/>
+                <br/>
+                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Product total of 0 pesos's</p>
+                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Cargo total of 0 pesos's</p>
+                <br/>
+                <br/>
                 <p className='transactions-transactionscontainer-transactionsgridcontainer-transactiongiveawaysnippetindication'>Transaction give away covered</p>
+                <br/>
+                <br/>
+                <p className='transactions-transactionscontainer-transactionsgridcontainer-statusheaderindication'>Messages: </p>
+                {
+                  props.requesttransactiondata.messages.map((message, messagesidx)=> {
+                    return (
+                      <>
+                      <p key={messagesidx}
+                         className='transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication'>Date: {message.date}</p>
+                      <p key={messagesidx}
+                         className='transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication'>Status: {message.status}</p>
+                      <p key={messagesidx}
+                         className='transactions-transactionscontainer-transactionsgridcontainer-somedetailsheaderindication'>Message: {message.message}</p>
+                      </>
+                      
+                    )
+                  })
+                }
               </Col>
               <Col xs={12}
                    md={6}

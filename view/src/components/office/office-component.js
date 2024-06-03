@@ -1,5 +1,6 @@
 import React, {
-        useState
+        useState,
+        useEffect
        } from 'react';
 
 import{ Col,
@@ -19,6 +20,7 @@ export default function Office(props) {
 
  return (
   <Row id='office'>
+
     <Row id='office-mainnavigationcontainer'
 	       style={{display: mainnavigationbuttonscontainerdisplayproperty}}>
      <Col xs={12}
@@ -86,7 +88,15 @@ export default function Office(props) {
                                 officemainnavigationcontentview={officemainnavigationcontentview}
                                 officemainnavigationcontentviewcb={officemainnavigationcontentviewcb}
                                 mainnavigationbuttonscontainerdisplayproperty={mainnavigationbuttonscontainerdisplayproperty}
-                                mainnavigationbuttonscontainerdisplaypropertycb={mainnavigationbuttonscontainerdisplaypropertycb}/>
+                                mainnavigationbuttonscontainerdisplaypropertycb={mainnavigationbuttonscontainerdisplaypropertycb}
+                                
+                                vanguarddata={props.vanguarddata}
+                                vanguardatacb={props.vanguarddatacb}
+                                
+                                user={props.user}
+                                usercb={props.usercb}
+                               
+                                />
     </Col>
   </Row>
  )
@@ -98,9 +108,9 @@ function OfficeViewModalsContainer(props) {
   return (
     <Col id="office-officeviewmodalscontainer">
      <OfficeLogin loginauthenticationtype={props.loginauthenticationtype}
-	          officemainnavigationcontentview={props.officemainnavigationcontentview}
-	          officemainnavigationcontentviewcb={props.officemainnavigationcontentviewcb}
-	          mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}/>
+                  officemainnavigationcontentview={props.officemainnavigationcontentview}
+                  officemainnavigationcontentviewcb={props.officemainnavigationcontentviewcb}
+                  mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}/>
     </Col>
    )
  }
@@ -109,7 +119,11 @@ function OfficeViewModalsContainer(props) {
   return (
    <Col id="office-officeviewmodalscontainer">
      <OfficeHamburger officemainnavigationcontentviewcb={props.officemainnavigationcontentviewcb}
-	                   mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}/>
+	                    mainnavigationbuttonscontainerdisplaypropertycb={props.mainnavigationbuttonscontainerdisplaypropertycb}
+                      vanguarddata={props.vanguarddata}
+                      vanguardatacb={props.vanguarddatacb}
+                      user={props.user}
+                      usercb={props.usercb}/>
    </Col>
    )
  }

@@ -247,9 +247,9 @@ function XirbitMarketingNavigationBar(props) {
             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
             <Col xs={4}
-                md={4}
-                lg={4}
-                className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
+                 md={4}
+                 lg={4}
+                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
                 <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>A</h4>
               </div>
