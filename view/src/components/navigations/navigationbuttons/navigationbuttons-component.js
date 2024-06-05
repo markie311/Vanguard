@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {
+                useState,
+                useCallback
+              } from 'react';
 
 import { Row, Col } from 'react-bootstrap';
 
@@ -8,11 +11,14 @@ import '../../../styles/navigations/navigationbuttons/navigationbuttons.scss'
 
 export default function NavigationButtons(props) {
 
+  const [, rerendercomponent] = useState();
+ const compttemptforceupdatetempfunction = useCallback(() => rerendercomponent({}), []);
+
  const navigate = useNavigate();
 
  const navigationbuttons = [
   {
-    buttonindication: 'Graph',
+    buttonindication: 'Vanguard portfolio',
     buttonlink: null
   },
   {
@@ -20,7 +26,7 @@ export default function NavigationButtons(props) {
     buttonlink: null
   },
   {
-    buttonindication: 'Xirbit marketing',
+    buttonindication: 'Vanguard marketing',
     buttonlink: '/xirbitmarketing'
   },
   {
@@ -41,7 +47,7 @@ export default function NavigationButtons(props) {
   <Row id='navigationbuttons'>
     {
       navigationbuttons.map((button, idx)=> {
-        if ( button.buttonindication === 'Xirbit marketing' ) {
+        if ( button.buttonindication === 'Vanguard marketing' ) {
           return (
            <Col xs={12}
                 md={12}
@@ -51,7 +57,7 @@ export default function NavigationButtons(props) {
                     key={idx}
                     to={button.buttonlink}
                     onClick={(evt)=> {
-                       navigate('/xirbitmarketing')
+                       navigate('/xirbitmarketing');
                     }}>
                 0{idx}. {button.buttonindication}
              </button>
@@ -76,7 +82,7 @@ export default function NavigationButtons(props) {
             </Col>
            )
         } 
-        if ( button.buttonindication === 'Graph' ) {
+        if ( button.buttonindication === 'Vanguard portfolio' ) {
           return (
            <Col xs={12}
                 md={12}
@@ -86,11 +92,21 @@ export default function NavigationButtons(props) {
                       key={idx}
                       to={button.buttonlink}
                       onClick={(evt)=> {
+
+                        const _welcomeintroductionmodal = document.getElementById("vanguardwelcomeintroduction");
+                        _welcomeintroductionmodal.style.top = "-100vh";
+                        _welcomeintroductionmodal.style.opacity = "1";
+
                         if ( props.viewport === 'xs' ) {
                           props.landingpagenavigationbargraphleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%')
                           return
                         }
+
                           props.landingpagenavigationbargraphleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%')
+
+                          props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                          props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+
                       }}>
                   0{idx}. {button.buttonindication}
               </button>
@@ -107,11 +123,17 @@ export default function NavigationButtons(props) {
                       key={idx}
                       to={button.buttonlink}
                       onClick={(evt)=> {
+
                         if ( props.viewport === 'xs' ) {
-                          props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-100%' ? '0%' : '-100%')
+                          props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-100%' ? '0%' : '-100%');
                           return
                         }
-                          props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%')
+
+                          props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%');
+
+                          props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                          props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+                          
                       }}>
                   0{idx}. {button.buttonindication}
               </button>

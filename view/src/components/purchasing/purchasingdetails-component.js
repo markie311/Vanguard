@@ -2385,7 +2385,8 @@ return (
           </Col>
           <Col className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer'>
             <Col className='purchasingdetails-purchasedetailsgridcontainer-purchasedetailsheaderindicationcontainer-graphscontainer-carouselcontainer-contentcontainer-contentmodalcontainer'>
-              <XirbitGraph />
+              <XirbitGraph user={props.user}
+                           usercb={props.usercb}/>
             </Col>
           </Col>
         </Carousel.Item>

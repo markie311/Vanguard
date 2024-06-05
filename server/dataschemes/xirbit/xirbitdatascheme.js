@@ -19,11 +19,10 @@ const xirbitdatascheme = new Schema({
     }
    },
    requests: {
-    merchandises: [transactionscheme],
-    nonmernchandises: [transactionscheme],
-    etc: {
-      load: [transactionscheme]
-    }
+    processing: [transactionscheme],
+    accepted: [transactionscheme],
+    delivered: [transactionscheme],
+    waitingforconfirmation: [transactionscheme]
    },
    processing: [transactionscheme],
  },
@@ -56,7 +55,9 @@ const xirbitdatascheme = new Schema({
   }
  },
  people: [user],
- history: [transactionscheme]
+ history: {
+  requests: []
+ }
 })
 
 module.exports = xirbitdatascheme;

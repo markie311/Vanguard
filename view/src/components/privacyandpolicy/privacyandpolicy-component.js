@@ -9,15 +9,11 @@ export default function PrivacyAndPolicy() {
     <Col id='privacyandpolicy'>
       <h1 className='privacyandpolicy-privacyandpolicyheaderindication'>Privacy and policy</h1>
       <h5 className='privacyandpolicy-headerindication'>01. Registrations</h5>
-      <h6 className='privacyandpolicy-subheaderindication'>●Xirbit dont offer registrations. The withdrawals and graph is already shared to the public and can only be accessed through what is displayed and shared. By the moment you decided that you feel you like to have your information within Xirbit, here that you can view contents, Xirbit will be building infrastructure, plots and scopes and feel welcome to visit the given location for participation.</h6>
+      <h6 className='privacyandpolicy-subheaderindication'>● Vandguard registrations are for a life-time and it's free. There are 3 categorie's everyone can select from a commoner, to public then to private. How the registration type's termed they are focused into the Vanguard Community that wanting an authentication type after a registration, from all the topic overall among it will matter on tax.</h6>
       <h5 className='privacyandpolicy-headerindication'>02. Information</h5>
-      <h6 className='privacyandpolicy-subheaderindication'>●Xirbit only ask for an information when it is needed like your contact number and location where to deliver, ship and door to door handing out your needs.</h6>
+      <h6 className='privacyandpolicy-subheaderindication'>● Vanguard only ask for an information what will be important on a need that will be also present coming from a very simpliest form of a transactions that happens daily aside from formal transactions. All infomations are kept into a database that the Vanguard owner can only access.</h6>
       <h5 className='privacyandpolicy-headerindication'>02. Operation</h5>
-      <h6 className='privacyandpolicy-subheaderindication'>●There are no delivery fee's and door to door handing out service's fee's even when the order was above 10 kilos if what you need is Food.</h6>
-      <h6 className='privacyandpolicy-subheaderindication'>●Rest will be ask P50.00 on a overall 10 kilo limit order </h6>
-      <h6 className='privacyandpolicy-subheaderindication'>●All order will follow a 1 day delay shipping and a 2 day delay shipping for out of reach operation that also means, standards payments will be used.</h6>
-      <h5 className='privacyandpolicy-headerindication'>02. Share</h5>
-      <h6 className='privacyandpolicy-subheaderindication'>●Xirbit is throwing a share to the public as a part of it's transactions as a give away. All assistment are equal and will be used as content marketing as a strength for profit raising that it will be used on programs, projects, solified to be connected together for a strong and solid foundation in the future.</h6>
+      <h6 className='privacyandpolicy-subheaderindication'>● All authentications are accepted verified by Vanguard. Transactions can be a walk in purchase or through online. Vanguard's portofolio is public. Each transaction of the user is private.</h6>
     </Col>
  )
 }

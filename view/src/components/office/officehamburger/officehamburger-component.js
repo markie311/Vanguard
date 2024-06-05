@@ -494,7 +494,7 @@ const [officehamburgerrequesttransactiondata, officehamburgerrequesttransactiond
   transactiontype: "Practicing",
   user: {
     authentications: props.user.authentications,
-    details: props.user.details,
+    details: props.user.details
   }, 
   messages: [
    {
@@ -566,7 +566,7 @@ const [officehamburgerrequesttransactiondata, officehamburgerrequesttransactiond
 
 useEffect(()=> {
    
-  const uniquebaranggaytransactiondata = [...new Set(props.vanguarddata.marketing.products.merchandises.map(item => item.cargo.locations.destination.baranggay))]; 
+  const uniquebaranggaytransactiondata = [...new Set(props.vanguarddata.marketing.requests.processing.map(item => item.cargo.locations.destination.baranggay))]; 
   baranggaytransactiondatacb((transactions)=> transactions = uniquebaranggaytransactiondata );
 
 }, [])
@@ -603,7 +603,7 @@ return (
             onClick={(evt)=> {
                   officehamburgercontentviewcb((view)=> view = evt.target.innerText);
                     }}>
-          Office
+             Office
           </button>
    </Col>
    <Col xs={12}
@@ -612,8 +612,8 @@ return (
         className="office-hamburgercontent-navigationbuttoncontainer">
           <button className="office-hamburgercontent-navigationbutton"
             onClick={(evt) => {
-           props.officemainnavigationcontentviewcb((mainnavigationview)=> mainnavigationview = 'Auth');
-           props.mainnavigationbuttonscontainerdisplaypropertycb((displayproperty)=> displayproperty = 'flex' );
+              props.officemainnavigationcontentviewcb((mainnavigationview)=> mainnavigationview = 'Auth');
+              props.mainnavigationbuttonscontainerdisplaypropertycb((displayproperty)=> displayproperty = 'flex');
             }}>
           log out
           </button>
@@ -644,50 +644,50 @@ return (
                                officehamburgerproductcategoryproductspecification={officehamburgerproductcategoryproductspecification} 
 	                             officehamburgerproductcategoryproductspecificationcb={officehamburgerproductcategoryproductspecificationcb}
 
-	                            officehamburgerproductnameproductspecification={officehamburgerproductnameproductspecification} 
-	                            officehamburgerproductnameproductspecificationcb={officehamburgerproductnameproductspecificationcb}
+	                             officehamburgerproductnameproductspecification={officehamburgerproductnameproductspecification} 
+	                             officehamburgerproductnameproductspecificationcb={officehamburgerproductnameproductspecificationcb}
                               
-                              officehamburgerproductrapportnameproductspecification={officehamburgerproductrapportnameproductspecification}
-	                            officehamburgerproductrapportnameproductspecificationcb={officehamburgerproductrapportnameproductspecificationcb}
+                               officehamburgerproductrapportnameproductspecification={officehamburgerproductrapportnameproductspecification}
+	                             officehamburgerproductrapportnameproductspecificationcb={officehamburgerproductrapportnameproductspecificationcb}
                             
-	                            officehamburgerproductdefinitionproductspecification={officehamburgerproductdefinitionproductspecification} 
-	                            officehamburgerproductdefinitionproductspecificationcb={officehamburgerproductdefinitionproductspecificationcb}
+	                             officehamburgerproductdefinitionproductspecification={officehamburgerproductdefinitionproductspecification} 
+	                             officehamburgerproductdefinitionproductspecificationcb={officehamburgerproductdefinitionproductspecificationcb}
                         
- 	                            officehamburgerproductspecification={officehamburgerproductspecification}
-	                            officehamburgerproductspecificationcb={officehamburgerproductspecificationcb}
-	                            compttemptforceupdatetempfunction={compttemptforceupdatetempfunction}
-	 
-	                            officehamburgercargodataview={officehamburgercargodataview}
+ 	                             officehamburgerproductspecification={officehamburgerproductspecification}
+	                             officehamburgerproductspecificationcb={officehamburgerproductspecificationcb}
+	                             compttemptforceupdatetempfunction={compttemptforceupdatetempfunction}
+	  
+	                             officehamburgercargodataview={officehamburgercargodataview}
 
-                              officehamburgercargodataviewcb={officehamburgercargodataviewcb}
+                               officehamburgercargodataviewcb={officehamburgercargodataviewcb}
 
-                              officehamburgerrequesttransactionacceptloadingindication={officehamburgerrequesttransactionacceptloadingindication}
+                               officehamburgerrequesttransactionacceptloadingindication={officehamburgerrequesttransactionacceptloadingindication}
 
-                              officehamburgerrequesttransactionacceptloadingindicationcb={officehamburgerrequesttransactionacceptloadingindicationcb}
+                               officehamburgerrequesttransactionacceptloadingindicationcb={officehamburgerrequesttransactionacceptloadingindicationcb}
 
-                              officehamburgerrequesttransactionoutofstockloadingindication={officehamburgerrequesttransactionoutofstockloadingindication}
+                               officehamburgerrequesttransactionoutofstockloadingindication={officehamburgerrequesttransactionoutofstockloadingindication}
 
-                              officehamburgerrequesttransactionoutofstockloadingindicationcb={officehamburgerrequesttransactionoutofstockloadingindicationcb}
+                               officehamburgerrequesttransactionoutofstockloadingindicationcb={officehamburgerrequesttransactionoutofstockloadingindicationcb}
 
-                              officehamburgerrequesttransactionchangeofstockloadingindication={officehamburgerrequesttransactionchangeofstockloadingindication}
+                               officehamburgerrequesttransactionchangeofstockloadingindication={officehamburgerrequesttransactionchangeofstockloadingindication}
 
-                              officehamburgerrequesttransactionchangeofstockloadingindicationcb={officehamburgerrequesttransactionchangeofstockloadingindicationcb}
+                               officehamburgerrequesttransactionchangeofstockloadingindicationcb={officehamburgerrequesttransactionchangeofstockloadingindicationcb}
 
 
-                              officehamburgercargotransactionshippedloadingindication={officehamburgercargotransactionshippedloadingindication}
+                               officehamburgercargotransactionshippedloadingindication={officehamburgercargotransactionshippedloadingindication}
 
-                              officehamburgercargotransactionshippedloadingindicationcb={officehamburgercargotransactionshippedloadingindicationcb}
+                               officehamburgercargotransactionshippedloadingindicationcb={officehamburgercargotransactionshippedloadingindicationcb}
 
-                              officehamburgertransactionpassedtocargoloadingindication={officehamburgertransactionpassedtocargoloadingindication}
-                              officehamburgertransactionpassedtocargoloadingindicationcb={officehamburgertransactionpassedtocargoloadingindicationcb}
+                               officehamburgertransactionpassedtocargoloadingindication={officehamburgertransactionpassedtocargoloadingindication}
+                               officehamburgertransactionpassedtocargoloadingindicationcb={officehamburgertransactionpassedtocargoloadingindicationcb}
 
-	                            officehamburgertransactiondataheader={officehamburgertransactiondataheader}
+	                             officehamburgertransactiondataheader={officehamburgertransactiondataheader}
 
-                              officehamburgertransactiondataheadercb={officehamburgertransactiondataheadercb}
+                               officehamburgertransactiondataheadercb={officehamburgertransactiondataheadercb}
 
-                              officehamburgerrequestsdataview={officehamburgerrequestsdataview}
+                               officehamburgerrequestsdataview={officehamburgerrequestsdataview}
 
-                              officehamburgerrequestsdataviewcb={officehamburgerrequestsdataviewcb}
+                               officehamburgerrequestsdataviewcb={officehamburgerrequestsdataviewcb} 
 
 
 	                            officehamburgertransactionsdataview={officehamburgertransactionsdataview}
@@ -1842,7 +1842,7 @@ function OfficehamburgerTransactionsData(props) {
 
                 const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestsdatamodal");
 
-              _baranggaydatacontainer.style.display = "none";
+               _baranggaydatacontainer.style.display = "none";
 
         }}>
         close
@@ -1860,7 +1860,7 @@ function OfficehamburgerTransactionsData(props) {
           <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Transaction id: {props.officehamburgerrequesttransactiondata.data.transactionid}</p>
           <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Name: {props.officehamburgerrequesttransactiondata.data.user.details.surials.firstname}, {props.officehamburgerrequesttransactiondata.data.user.details.surials.middlename}, {props.officehamburgerrequesttransactiondata.data.user.details.surials.lastname}</p>
           <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Account number: {props.officehamburgerrequesttransactiondata.data.user.authentications.authenticationid}</p>
-          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Contact number: </p>
+          <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Contact number: {props.officehamburgerrequesttransactiondata.data.user.details.contact[0].number}</p>
           <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Address: {props.officehamburgerrequesttransactiondata.data.user.details.location.address.street}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.baranggay}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.trademark}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.city}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.province}, {props.officehamburgerrequesttransactiondata.data.user.details.location.address.country}</p>
           <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Cargo given address: {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.street}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.baranggay}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.trademark}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.city}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.province}, {props.officehamburgerrequesttransactiondata.data.cargo.locations.destination.country}</p>
           

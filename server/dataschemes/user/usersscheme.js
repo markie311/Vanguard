@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const transactionscheme = require('../transactions/product/transactionscheme');
+const contactscheme = require('../transactions/contact/contactscheme');
 
 const user = new Schema({
  authentications: {
@@ -83,6 +84,7 @@ const user = new Schema({
       }
     }
    },
+   contact: [contactscheme]
  },
  moneyandfunds: {
   money: {

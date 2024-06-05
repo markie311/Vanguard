@@ -125,12 +125,13 @@ font: auto {
 }
 color:white;
 margin-top:3vh;
+user-select:none;
 }
 }
 @media only screen and (min-width:1200px) {
 #maingraphgrid {
 position:relative;
-height:100%;
+height:auto;
 padding:0px 10px;
 }
 #maingraphgrid-graphnavigationcontainer {
@@ -154,7 +155,7 @@ width:100%;
 }
 #maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer {
 position:relative;
-height:60vh;
+height:auto;
 display:flex;
 flex-direction:column;
 justify-content:center;
@@ -259,5 +260,6 @@ weight:900;
 }
 color:white;
 margin-top:10vh;
+user-select:none;
 }
 }

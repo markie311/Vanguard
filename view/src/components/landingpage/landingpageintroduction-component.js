@@ -10,7 +10,7 @@ export default function LandingPageIntroduction() {
    <Row id='landingpageintroduction'>
      <h1 className='landingpageintroduction-header landingpageintroduction-impactandconcernssubheader'>The feeling of the impact, what will be lost as renovation. What are the not suppose to be concern's, replacing confidence</h1>
      <h2 className='landingpageintroduction-header landingpageintroduction-entfordevelopmentheader'> an ENT on development</h2>
-     <h1 className='landingpageintroduction-header landingpageintroduction-hereandisubheader'>Happy here's, there's, for finally that what is lost, comfort's going back there and here, will be the decision  of I's as whole and completes</h1>
+     <h1 className='landingpageintroduction-header landingpageintroduction-hereandisubheader'>Happy here's, there's, for finally that what is lost, comfort's going back there and here, will be the decision  of I's as whole and complete</h1>
     <Col id='landingpageintroduction-container'>
      <h1 className='landingpageintroduction-containerheader landingpageintroduction-containerheader-xirbitheader'>Vanguard</h1>
      <p className='landingpageintroduction-containerheader landingpageintroduction-containerheader-xirbitsubheader2'>charisma with a charm, questionable luck</p>

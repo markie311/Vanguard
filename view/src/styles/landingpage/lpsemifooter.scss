@@ -156,6 +156,7 @@ text-align:center;
 .lpsimefooter-expcontainer {
 position:relative;
 height:70vh;
+padding:30px;
 }
 #lpsemifooter-operationrecieptandpackagingsampleimagecontainer-seeotherusefulimageheader {
 position:relative;
@@ -290,6 +291,10 @@ align-items:center;
 }
 .lpsemifooter-operationrecieptandpackagingsampleimagecontainer-manualcountingrecieptpositioningsequencenumberpartsheader {
 position:relative;
+font: auto {
+ family: $sub-font;
+}
+user-select:none;
 margin-top:3vh;
 }
 .lpsemifooter-operationlocationheader {
@@ -309,6 +314,7 @@ margin-top:5vh;
 }
 #lpsemifooter-operationrecieptandpackagingsampleheaderindicationscontainer {
 position:relative;
+height:auto;
 padding:0px 30px;   
 }
 #lpsemifooter-operationrecieptandpackagingsampleimagecontainer {
@@ -364,11 +370,13 @@ align-items:center;
 position:relative;
 padding:0;
 }
+.lpsimefooter-expcontainer {
+position:relative;
+height:auto;
+padding:30px;
+}
 .lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication {
 position:relative;
-height:10vh;
-width:100%;
-border-radius:20px;
 font: auto {
 family: $sub-font;
 }
@@ -393,6 +401,7 @@ family: $sub-font;
 size:18px;
 }
 color:white;
+user-select:none;
 margin-top:1vh;
 }
 .lpsemifooter-operationrecieptandpackagingsampleimagecontainer-positioningmanualcountingrecieptpartsheader {

@@ -12,8 +12,8 @@ export default function LPSemiFooter() {
         md={6}
         lg={6}
         className='lpsemifooter-headercontainer'>
-     <h1 className='lpsemifooter-header'>R'castillo street, Jerome, Davao City | 09958749222</h1>
-     <p className='lpsemifooter-header lpsemifooter-subheader'>Transactions are wanting the limit operating to place per places. Productions are the key to operate nationwide. What matters is how to solve the availabilitie's amd what is done to the processe's making it fast without the wide conflicts.</p>
+     <h1 className='lpsemifooter-header'>Maa, Trinidad Street, Davao City | 09958749222</h1>
+     <p className='lpsemifooter-header lpsemifooter-subheader'>Transactions are wanting the limit operating per place per place's and roductions are the key to operate nationwide. Solve the availabilitie's and what is suppose to be done to the processe's making it fast more and trustworthy without the wide conflicts.</p>
      <p className='lpsemifooter-seemapforoperationheader'>See map for operations</p>
    </Col>
    <Col xs={12}
@@ -37,8 +37,8 @@ export default function LPSemiFooter() {
         md={6}
         lg={6}
         id='lpsemifooter-operationrecieptandpackagingsampleheaderindicationscontainer'>
-     <h5 className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-header'>Online orders, door to  door delivery transactions, deliveries, shipments</h5>
-     <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-subheader'>This is the basis for the transaction give away to be manually counted and remember by you any moment!!!</p>
+     <h5 className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-header'>Purchase's, Cargo, People, Time, Location, Count, Map and Production through Planting, Creation, Reproductment's</h5>
+     <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-subheader'> The basis for a transaction give away to be manually counted and remember by you any moment by using computer's, the fact was more about a need. Vanguard's opening it's system and transaction for it</p>
      <Row className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer'>
       <Col xs={12}
            md={6}
@@ -56,9 +56,9 @@ export default function LPSemiFooter() {
            md={6}
            lg={6}
            className='lpsimefooter-expcontainer'>
-       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>Text</p>
-       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>| Via walk in/your address |</p>
-       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>Contact number's that is used to deposit, must be the same number binded into this account to be converted as Xitbit CURRENCY.</p>
+       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>ALL ARE MANAUAL DEPOSITS</p>
+       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>|||| Walk in, Gcash ||||</p>
+       <p className='lpsemifooter-operationrecieptandpackagingsampleimagecontainer-nationwidemaindepositsdestinationscontainer-nationdepositsdestinationsheaderindicationscontainer-nationdepositsdestinationheaderindication'>Convert any type of currency into Vanguard Currency. Bar graphs, Numbers, By Locations, Each Transaction's will displayed Honestly. Observe Vanguard's public portfolio ON ALL TYPE'S OF TRANSACTION DISPLAYED.</p>
 
       </Col>
      </Row>

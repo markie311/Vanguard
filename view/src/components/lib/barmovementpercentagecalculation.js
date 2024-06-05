@@ -1,6 +1,7 @@
 
 
 export default function barmovementpercentagecalculation(_barpercentage, _pectagageindication, _barpercentagemovementinterval, claimed, overallcount) {
+   
       var initialvalue = null;
       var width = 0;
     
@@ -12,21 +13,23 @@ export default function barmovementpercentagecalculation(_barpercentage, _pectag
     
     
      function move() {
-      if ( width === _percentage ) {
-         clearInterval(_barpercentagemovementinterval);
-         _barpercentagemovementinterval = setInterval(moveout,10);
-      } else  {
-          initialvalue = width++
-         _barpercentage.style.width = width + '%';
+         if ( width > _percentage ) {
+            clearInterval(_barpercentagemovementinterval);
+            _barpercentagemovementinterval = setInterval(moveout,10);
+         } else  {
+             initialvalue = width++
+            _barpercentage.style.width = width + '%';
+         }
       }
-     }
+
+     
     
      function moveout() {
         if ( width === 0 ) {
             clearInterval(_barpercentagemovementinterval);
             _barpercentagemovementinterval = setInterval(move,1000);
          } else  {
-           initialvalue = width--
+            initialvalue = width--
            _barpercentage.style.width = width + '%';
          }
        }

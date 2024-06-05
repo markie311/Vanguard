@@ -63,7 +63,7 @@ const marketingnavigationbuttons = {
     transactionsmodaldisplaypropertycb((display)=> display = 'none')
     setTimeout(()=>{
       marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none')
-      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'block')  
+      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'flex')  
     }, 3000)
   },
   list: () => {
@@ -120,7 +120,7 @@ const navigate = useNavigate();
    <XirbitMarketingHeader navigate={navigate}
                           marketingnavigationbuttons={marketingnavigationbuttons}/>
 
-  <XirbitMarketingView marketingnavigationbarmodaldisplayproperty={marketingnavigationbarmodaldisplayproperty}
+   <XirbitMarketingView marketingnavigationbarmodaldisplayproperty={marketingnavigationbarmodaldisplayproperty}
                        marketingloadingindicationstatemodaldisplayproperty={marketingloadingindicationstatemodaldisplayproperty}
                        user={props.user}
                        usercb={props.usercb}
@@ -147,17 +147,22 @@ function XirbitMarketingHeader(props) {
   return (
 
     <Row id='xirbitmarketing-navigationheadercontainer'>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>Production</button>
-     <button className='xirbitmarketing-navigationviewbutton'
-             onClick={(evt)=> { props.marketingnavigationbuttons.marketing() }}>Marketing</button>
-     <button className='xirbitmarketing-navigationviewbutton'
-             onClick={(evt)=> { props.marketingnavigationbuttons.list() }}>List</button>
-     <button className='xirbitmarketing-navigationviewbutton'
-             onClick={(evt)=> { props.marketingnavigationbuttons.transactions() }}>Transactions</button>
-     <button className='xirbitmarketing-navigationviewbutton'
-             onClick={(evt)=> { props.navigate('/database') }}>
-          
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+       Production
      </button>
+     <button className='xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.marketing() }}>
+          Marketing
+      </button>
+     <button className='xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.list() }}>
+          Product list
+      </button>
+     <button className='xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.transactions() }}>
+        Transactions
+      </button>
+  
    </Row>
   )
 }
@@ -229,9 +234,10 @@ function XirbitMarketingNavigationBar(props) {
         style={{display: props.marketingnavigationbarmodaldisplayproperty}}>
 
     <Col xs={12}
-         md={5}
-         lg={5}
-         id='xirbitmarketingnavigationbar-navigationcontainer'>   
+         md={12}
+         lg={12} 
+         id='xirbitmarketingnavigationbar-navigationcontainer'> 
+           
      <Col xs={12}
           md={12}
           lg={12}
@@ -239,11 +245,12 @@ function XirbitMarketingNavigationBar(props) {
         <h1 className='xirbitmarketingnavigationbar-headercontainer-headerindication'>Good day, welcome to Xirbit marketing link</h1>
         <p className='xirbitmarketingnavigationbar-headercontainer-subheaderindication'>You can navigate anywhere and check your own Public Marketing Portfolio</p>
      </Col>
+
      <Row id='xirbitmarketingnavigationbar-navigationsnippet-gridcontainer'>
 
         <Col xs={12}
-              md={6}
-              lg={6}
+             md={4}
+             lg={4}
             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
             <Col xs={4}
@@ -251,14 +258,26 @@ function XirbitMarketingNavigationBar(props) {
                  lg={4}
                  className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-                <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>A</h4>
+                <button className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'
+                        onClick={()=> {
+                          const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                          _marketingdetailscontainer.style.display = "block";
+                        }}>A</button>
               </div>
             </Col>
             <Col xs={8}
                 md={8}
                 lg={8}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation A: All</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+                </div>
+              </div>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases last 15 days</p>
               <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
@@ -270,8 +289,8 @@ function XirbitMarketingNavigationBar(props) {
         </Col>
 
         <Col xs={12}
-             md={6}
-             lg={6}
+             md={4}
+             lg={4}
              className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
           <Col xs={4}
@@ -279,27 +298,39 @@ function XirbitMarketingNavigationBar(props) {
                 lg={4}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
             <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>F</h4>
+              <button className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'
+                      onClick={()=> {
+                        const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                        _marketingdetailscontainer.style.display = "block";
+                      }}>F</button>
             </div>
           </Col>
           <Col xs={8}
               md={8}
               lg={8}
               className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation F: Foods</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
+                </div>
               </div>
-            </div>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases last 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+                </div>
+              </div>
           </Col>
         </Row>
         </Col>
 
         <Col xs={12}
-            md={6}
-            lg={6}
+             md={4}
+             lg={4}
             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
           <Col xs={4}
@@ -307,27 +338,39 @@ function XirbitMarketingNavigationBar(props) {
                 lg={4}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
             <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>SN</h4>
+              <button className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'
+                      onClick={()=> {
+                        const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                        _marketingdetailscontainer.style.display = "block";
+                      }}>SN</button>
             </div>
           </Col>
           <Col xs={8}
               md={8}
               lg={8}
               className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+           <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation SN: Snacks</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
+                </div>
               </div>
-            </div>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases last 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+                </div>
+              </div>
           </Col>
         </Row>
         </Col>
 
         <Col xs={12}
-            md={6}
-            lg={6}
+             md={4}
+             lg={4}
             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
             <Col xs={4}
@@ -335,27 +378,39 @@ function XirbitMarketingNavigationBar(props) {
                 lg={4}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
             <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>AP</h4>
+              <button className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'
+                      onClick={()=> {
+                       const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                       _marketingdetailscontainer.style.display = "block";
+                      }}>AP</button>
             </div>
           </Col>
           <Col xs={8}
                 md={8}
                 lg={8}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+           <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation AP: Apparels</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
+                </div>
               </div>
-            </div>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases last 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+                </div>
+              </div>
           </Col>
         </Row>
         </Col>
 
         <Col xs={12}
-            md={6}
-            lg={6}
+             md={4}
+             lg={4}
             className='xirbitmarketingnavigationbar-navigationsnippet-navigationsnippetcontainer'>
           <Row className='xirbitmarketingnavigationbar-navigationsnippet'>
           <Col xs={4}
@@ -363,20 +418,32 @@ function XirbitMarketingNavigationBar(props) {
                 lg={4}
                 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationcontainer'>
             <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheadercontainer'>
-              <h4 className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'>MRN</h4>
+              <button className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheader'
+                      onClick={()=> {
+                        const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                        _marketingdetailscontainer.style.display = "block";
+                      }}>MRN</button>
             </div>
           </Col>
           <Col xs={8}
               md={8}
               lg={8}
               className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases this 15 days public authentication</p>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
-            <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation MRN: Merchandise's</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
 
+                </div>
               </div>
-            </div>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases last 15 days</p>
+              <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
+              <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraphindication'>
+
+                </div>
+              </div>
           </Col>
         </Row>
         </Col>
@@ -385,9 +452,20 @@ function XirbitMarketingNavigationBar(props) {
     </Col>
 
     <Col xs={12}
-         md={7}
-         lg={7}
+         md={12}
+         lg={12}
          id='xirbitmarketingnavigationbar-marketdetailscontainer'>
+      <Col id="xirbitmarketingnavigationbar-marketdetailscontainer-closebuttoncontainer">
+        <button id="xirbitmarketingnavigationbar-marketdetailscontainer-closebuttoncontainer-closebuttonheaderindication"
+                onClick={()=> {
+                    const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
+                    _marketingdetailscontainer.style.display = "none";
+                }}>
+          close
+        </button>
+      </Col>
+      <Row id="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer">
+      </Row>
     </Col>
 
    </Row>

@@ -40,14 +40,15 @@ export default function LandingPage(props) {
              props.landingpagenavigationbargraphleftpropertycb((left)=> left === '90%' ? '0' : '-90%')
              return 
          }
-          props.landingpagenavigationbargraphleftpropertycb((left)=> left === '80%' ? '0' : '-80%')
+             props.landingpagenavigationbargraphleftpropertycb((left)=> left === '80%' ? '0' : '-80%')
         }}>close</p>
      </Col>
      <Col xs={12}
           md={12}
           lg={12}
           id='landingpage-navigationbargraphcomponentcontainer'>
-       <XirbitGraph />
+       <XirbitGraph user={props.user}
+                    usercb={props.usercb}/>
      </Col>
    </Row>
    <Row id='landingpage-widthdrawalsnavigationcontainer'
@@ -80,7 +81,13 @@ export default function LandingPage(props) {
     <NavigationButtons viewport={props.viewport}
                        landingpagenavigationbargraphleftproperty={props.landingpagenavigationbargraphleftproperty}
                        landingpagenavigationbargraphleftpropertycb={props.landingpagenavigationbargraphleftpropertycb}
-                       landingpagewidthdrwalnavigationleftpropertycb={props.landingpagewidthdrwalnavigationleftpropertycb}/>
+                       landingpagewidthdrwalnavigationleftpropertycb={props.landingpagewidthdrwalnavigationleftpropertycb}
+
+                       welcomeintroductiontopprop={props.welcomeintroductiontopprop}
+                       welcomeintroductiontoppropcb={props.welcomeintroductiontoppropcb}
+                       welcomeintroductionopacityprop={props.welcomeintroductionopacityprop}
+                       welcomeintroductionopacitypropcb={props.welcomeintroductionopacitypropcb}/>
+
     <PrivacyAndPolicy />
     <Footer />
    </Col>
@@ -89,6 +96,10 @@ export default function LandingPage(props) {
                            setCommonPublicAccountAuthenticationIDCookie={props.setCommonPublicAccountAuthenticationIDCookie}
                            welcomeinmtroductionmesssage={props.elcomeinmtroductionmesssage}
                            welcomeinmtroductionmesssagecb={props.welcomeinmtroductionmesssagecb}
+                           welcomeintroductiontopprop={props.welcomeintroductiontopprop}
+                           welcomeintroductiontoppropcb={props.welcomeintroductiontoppropcb}
+                           welcomeintroductionopacityprop={props.welcomeintroductionopacityprop}
+                           welcomeintroductionopacitypropcb={props.welcomeintroductionopacitypropcb}
                          />
   </Row>
  )
@@ -101,7 +112,8 @@ function WelcomeIntroduction(props) {
   const [continuewithapracticing, continuewithapracticingcb] = useState(false);
 
   return (
-    <Col id="vanguardwelcomeintroduction">
+    <Col id="vanguardwelcomeintroduction"
+         style={{top: props.welcomeintroductiontopprop, opacity: props.welcomeintroductionopacitypropcb}}>
       <Col id="vanguardwelcomeintroduction-closebuttoncontainer">
       <button id="vanguardwelcomeintroduction-closebutton"
               onClick={(evt)=> {
@@ -111,8 +123,8 @@ function WelcomeIntroduction(props) {
                 const _usercookie = document.cookie;
                 const _parsedcookie = _usercookie.slice(9,31);
 
-                _welcomeintroductionmodal.style.top = "-100vh";
-                _welcomeintroductionmodal.style.opacity = "0";
+                props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
                 const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
                 const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
@@ -130,7 +142,7 @@ function WelcomeIntroduction(props) {
                   _responsemessage.style.visibility = "visible";
                   _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
                   registermenowrequestloadingstatecb((state)=> state = false);
-                  
+
                 }) 
 
               }}>
