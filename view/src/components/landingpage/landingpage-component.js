@@ -138,7 +138,7 @@ function WelcomeIntroduction(props) {
 
                   const responsedata = response.data;
                   const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
-                  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
+                //  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
                   _responsemessage.style.visibility = "visible";
                   _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
                   registermenowrequestloadingstatecb((state)=> state = false);
@@ -159,6 +159,9 @@ function WelcomeIntroduction(props) {
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-registermenowbutton"
                 onClick={()=> {
 
+                  alert("Error: Assisting common public authentications as a practicing account")
+
+                  {/*
                   const _usercookie = document.cookie;
                   const _parsedcookie = _usercookie.slice(9,31);
 
@@ -207,6 +210,7 @@ function WelcomeIntroduction(props) {
                    }
 
                   })  
+                  */}
 
                 }}>
 
@@ -227,6 +231,9 @@ function WelcomeIntroduction(props) {
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountbutton"
                 onClick={(evt)=> {
 
+                  alert("Error: Assisting common public authentications as a practicing account")
+                  
+                  {/*
                   continuewithapracticingcb((state)=> state = true);
 
                   const _usercookie = document.cookie;
@@ -269,6 +276,7 @@ function WelcomeIntroduction(props) {
                     await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
 
                     }) 
+                  */}
 
                 }}>
           {
