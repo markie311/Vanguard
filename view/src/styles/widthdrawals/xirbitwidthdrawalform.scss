@@ -203,6 +203,34 @@ font: auto {
 }
 color:black;
 }
+#xirbitwidthdrawalform-quecontainer {
+position:relative;
+height:100%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+}
+.xirbitwidthdrawalform-quecontainer-headerindication {
+position:relative;
+font: auto {
+  family:$sub-font;
+}
+color:white;
+}
+#xirbitwidthdrawalform-quecontainer-refreshbutton {
+position:relative;
+background-color:magenta;
+border-radius:20px;
+font: auto {
+  family: $sub-font;
+}
+color:white;
+padding:2px 80px;
+margin-top:2vh;
+outline-style:none;
+}
 }
 @media only screen and (min-width:1200px) {
 #xirbitwidthdrawalform {
