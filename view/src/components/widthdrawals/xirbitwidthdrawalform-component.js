@@ -3,7 +3,8 @@ import React, {
        } from 'react';
 
 import { Row, 
-         Col } from 'react-bootstrap';
+         Col,
+         Spinner } from 'react-bootstrap';
 
 import '../../styles/widthdrawals/xirbitwidthdrawalform.scss';
 
@@ -12,6 +13,10 @@ import MoneyWidthdrawalForm from './moneywidthdrawalform-component.js';
 export default function XirbitWidthdrawalForm() {
 
  const [widthdrawal, widthdrawalcb] = useState('');
+
+ const [widthdrawalque, widthdrawalquecb] = useState("Money");
+ const [moneywidthdrawalqueloadingindication, moneywidthdrawalqueloadingindicationcb] = useState(false);
+ const [fundswidthdrawalqueloadingindication, fundswidthdrawalqueloadingindicationcb] = useState(false);
 
  return (
   <Row id='xirbitwidthdrawalform'>   
@@ -48,6 +53,8 @@ export default function XirbitWidthdrawalForm() {
               widthdrawalcb((widthdrawal)=> widthdrawal = 'funds')
              }
 
+             widthdrawalquecb((quedata)=> quedata = "Money");
+
             }}>
         <div className='xirbitwidthdrawalform-moneyandfundsheaderindicationcontainer-moneytogglebuttonindicator'>
 
@@ -74,18 +81,20 @@ export default function XirbitWidthdrawalForm() {
               const _fundstogglebuttonindicator = _fundstogglebutton.style.marginLeft;
   
               if ( _fundstogglebuttonindicator !== '50%') {
-               _fundstogglebutton.style.marginLeft = '50%';
-               _fundstogglebutton.style.backgroundColor = 'dodgerblue';
-               _moneytogglebutton.style.marginLeft = '0%';
-               _moneytogglebutton.style.backgroundColor = 'gray';
-               widthdrawalcb((widthdrawal)=> widthdrawal = 'funds')
+                _fundstogglebutton.style.marginLeft = '50%';
+                _fundstogglebutton.style.backgroundColor = 'dodgerblue';
+                _moneytogglebutton.style.marginLeft = '0%';
+                _moneytogglebutton.style.backgroundColor = 'gray';
+                widthdrawalcb((widthdrawal)=> widthdrawal = 'funds')
               } else {
-               _fundstogglebutton.style.marginLeft = '0%';
-               _fundstogglebutton.style.backgroundColor = 'gray';
-               _moneytogglebutton.style.marginLeft = '50%';
-               _moneytogglebutton.style.backgroundColor = 'dodgerblue';
-               widthdrawalcb((widthdrawal)=> widthdrawal = 'money')
+                _fundstogglebutton.style.marginLeft = '0%';
+                _fundstogglebutton.style.backgroundColor = 'gray';
+                _moneytogglebutton.style.marginLeft = '50%';
+                _moneytogglebutton.style.backgroundColor = 'dodgerblue';
+                widthdrawalcb((widthdrawal)=> widthdrawal = 'money')
               }
+
+              widthdrawalquecb((quedata)=> quedata = "Funds");
  
              }}>
         <div className='xirbitwidthdrawalform-moneyandfundsheaderindicationcontainer-fundstogglebuttonindicator'>
@@ -99,9 +108,62 @@ export default function XirbitWidthdrawalForm() {
          id='xirbitwithdrawalform-widthdrawalformcontainer'>
        <MoneyWidthdrawalForm widthdrawal={widthdrawal}/>
     </Col>
-    <Col id='xirbitwithdrawalform-widthdrawalhistorybuttoncontainer'>
-      <button id='xirbitwithdrawalform-widthdrawalhistorybutton'>History</button>
+    <Col id="xirbitwithdrawalform-widthdrawalhistorybuttoncontainer">
+      <XirbitWidthdrawalQue widthdrawalque={widthdrawalque}
+                            moneywidthdrawalqueloadingindication={moneywidthdrawalqueloadingindication}
+                            moneywidthdrawalqueloadingindicationcb={moneywidthdrawalqueloadingindicationcb}
+                            fundswidthdrawalqueloadingindication={fundswidthdrawalqueloadingindication}
+                            fundswidthdrawalqueloadingindication={fundswidthdrawalqueloadingindication}
+                            fundswidthdrawalqueloadingindicationcb={fundswidthdrawalqueloadingindicationcb}/>
     </Col>
   </Row>
  )
+}
+
+function XirbitWidthdrawalQue(props) {
+ if ( props.widthdrawalque === "Money" ) {
+  return (
+    <Col id="xirbitwidthdrawalform-quecontainer">
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Money widthdrawal que</p>
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Que, 0</p>
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Processe's are done manually sending back your deposited Money through comparing your Vanguard phone number and phone number used by your payments</p>
+      <button id="xirbitwidthdrawalform-quecontainer-refreshbutton"
+              onClick={()=> {
+              }}>
+
+        {
+           props.moneywidthdrawalqueloadingindication ?
+           (
+            <Spinner animation="border" variant="secondary" />
+           )
+           : 
+           (
+            <span>Refresh</span>
+           )
+        }
+
+        </button>
+    </Col>
+  )
+ }
+ if ( props.widthdrawalque === "Funds" ) {
+  return (
+    <Col id="xirbitwidthdrawalform-quecontainer">
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Funds widthdrawal que</p>
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Que, 0</p>
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Processe's are done manually sending back your deposited Money through comparing your Vanguard phone number and phone number used by your payments</p>
+      <button id="xirbitwidthdrawalform-quecontainer-refreshbutton">
+        {
+          props.fundswidthdrawalqueloadingindication ?
+          (
+            <Spinner animation="border" variant="secondary" />
+          ) 
+          :
+          ( 
+           <span>Refresh</span>
+          )
+        }</button>
+    </Col>
+  )
+ }
 }
