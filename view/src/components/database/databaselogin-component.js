@@ -21,7 +21,7 @@ export default function DatabaseLogin(props) {
           className='databaselogin-authenticationpublicitytypecontainer-authenticationpublicitytypecontainer'>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypeheaderindication'>
-	      Three types of holders account
+	      Three types of account holders 
        </p>
        <br/>
        <br/>
@@ -31,16 +31,16 @@ export default function DatabaseLogin(props) {
        </p>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      What: Common public account, all holder of this account means their location are in common public. Share's for transactions and revenue's and Xirbit profit made as a give away will be shared to the same account holders as a sustaining self revenue
+	      What: Common public account, all holder of this account means their location are in the common public, visitor's or a commoner. Share's for transactions are coming from Vanguard revnue's, income. Transaction give away's made by Vanguard will be shared to the public account holder's and private authentications.
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      When: After purchase the data of it including the amount including the data needed to be passed as encription and real amounts are handle by the system sharing it in common public. 
+	      When: By a transaction, simplie'st on a purchase, the data of it, the detail's, that include's amount and information needed to be circled, will be encripted automatically using proggraming and manually by paper reciept's. Real amounts, locations, place's, company and Time are handle by Vanguard with it's system to share it Globally and on each registration with bar graphs or portfolio. 
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      Where: To the common public globally
+	      Where: Globally
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      How: The payments for registrations are accepted in Bank transfer, E-wallet transfer and payments through a Xirbit personel.
+	      How: The payments for registrations are free in Bank transfer, E-wallet transfer and payments through a Vanguard personel, there is no registration fee holding this account.
        </p>
      
       <br/>
