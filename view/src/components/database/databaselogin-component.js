@@ -837,7 +837,7 @@ return (
                const _picturemodal = document.querySelector("#databasemobileidcard-backlayout-cardiddisplaymodal");
 	      _picturemodal.style.display = "block";
 	     }}/>
-         <p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">ID holder signiture</p>
+         <p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">ID HOLDER SIGNITURE</p>
       </Col>
       <Col id="databasemobileidcard-backlayout-cardiddisplaymodal"> 
         <Col id="databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicturecontainer">
