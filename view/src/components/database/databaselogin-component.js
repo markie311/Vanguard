@@ -34,13 +34,13 @@ export default function DatabaseLogin(props) {
 	      What: Common public account, all holder of this account means their location are in the common public, visitor's or a commoner. Share's for transactions are coming from Vanguard revnue's, income. Transaction give away's made by Vanguard will be shared to the public account holder's and private authentications.
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      When: By a transaction, simplie'st on a purchase, the data of it, the detail's, that include's amount and information needed to be circled, will be encripted automatically using proggraming and manually by paper reciept's. Real amounts, locations, place's, company and Time are handle by Vanguard with it's system to share it Globally and on each registration with bar graphs or portfolio. 
+	      When: By a transaction, simplie'st on a purchase, the data of it, the detail's, that include's amount and information needed to be circled, will be encripted automatically using proggraming and manually by paper reciept's. Real amounts, locations, place's, company and Time are handle by Vanguard with it's system to share it Globally and on each registration with bar graphs, on a private portfolio and a Global porfolio. 
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
 	      Where: Globally
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      How: The payments for registrations are free in Bank transfer, E-wallet transfer and payments through a Vanguard personel, there is no registration fee holding this account.
+	      How: The payments for this registrations are free in Bank transfer, E-wallet transfer and payments through a Vanguard personel, there is no registration fee holding this account.
        </p>
      
       <br/>
@@ -50,16 +50,16 @@ export default function DatabaseLogin(props) {
         <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypeheaderindication'>Public account
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      What: Next to common public authentication where holders belonging to the public not commonly refering to all types of Xirbit marketing
+	      What: Next to the common public as visitor's or cmmoner's. Belonging publicly specific by registrations and authentication's. This type of account does not commonly refering by each Location despite through the Vanguard community.
        </p> 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      When: After purchase, all data including credits are passed and shared automatically. 
+	      When:  By a transaction, simplie'st on a purchase, the data of it, the detail's, that include's amount and information needed to be circled, will be encripted automatically using proggraming and manually by paper reciept's. Real amounts, locations, place's, company and Time are handle by Vanguard with it's system to share it to the Private authentication's with bar graphs on a private portfolio and a Global porfolio. 
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      When: After purchase the data of it including the amount including the data needed to be passed as encription and real amounts are handle by the system sharing to the public holders 
+	      Where: Private authentication's.
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      How: The payments for registrations are accepted in Bank transfer, E-wallet transfer and payments through a Xirbit personel.
+	      How: The payments for this registration's are free and on a Life-time. Choose what account you feel that you belonged. Transaction give away's will be following the sequence. Activating less 3% on the 10% widthdrawal commisions you must pay a 100 peso's active within 15 days to have only 7% widthdrawal commosion's. 
        </p>
 
        <br/>
@@ -69,14 +69,14 @@ export default function DatabaseLogin(props) {
        <p className='databaselogin-authenticationpublicitytypecontainer-privateauthenticationpublicitytypeheaderindication'>Private account authentication</p>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-        	All fund's are shared privately among private authentication holders that the holder funds needs more than it needs to sustain self with reasons to have a business or else
+        	What: All transaction give away's are shared Globally among visitor's, commoner's and on the public registration holder's. What is a need that need's to sustain it self, reason's are a business or self reason's.
        </p>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      When: After purchase the data of it including the amount including the data needed to be passed as encription and real amounts are handle by the system sharing to the public holders 
+	     When:  By a transaction, simplie'st on a purchase, the data of it, the detail's, that include's amount and information needed to be circled, will be encripted automatically using proggraming and manually by paper reciept's. Real amounts, locations, place's, company and Time are handle by Vanguard with it's system to share it Globally with bar graphs on a private portfolio and a Global porfolio. 
        </p>
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      How: The payments for registrations are accepted in Bank transfer, E-wallet transfer and payments through a Xirbit personel.
+       How: The payments for this registration's are free and on a Life-time. Choose what account you feel that you belonged. Transaction give away's will be following the sequence. Activating less 5% on the 10% widthdrawal commisions you must pay a 50 peso's active within 15 days to have only 5% widthdrawal commosion's. 
        </p>
 
        <br/>                                                 
@@ -88,15 +88,15 @@ export default function DatabaseLogin(props) {
        </p>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	       Common public account authentication holder 500 peso's for a life-time account converted into any types of currency
+	       Common public account holdor's, as a visitor or a commoner, free and for a life-time, recieving transction give away's privately and sharing Globally through Vanguard.
        </p>
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	        Public authentication holder 1000 pesos for 3 months for a life-time account converted into any types of currency
+        Public account holder's, belonging to a specific registration on any location's, free and for a life-time, recieving transction give away's privately through Vanguard. Activing, 100 peso's within 15 day's for 7% widthdrawal commosion's. 
        </p> 
 
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
-	      Payment account authentication holder 1200 pesos for 3 months for a life-time account converted into any types of currency
+	      Private authentication's, free and for a life-time, sharing Globally and recieving transction give away's privately, Activing, 50 peso's within 15 day's for 5% widthdrawal commosion's. 
        </p>
        
        <br />
