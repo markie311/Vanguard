@@ -90,6 +90,7 @@ height:100%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+padding-bottom:30px;
 }
 #xirbitmarketingnavigationbar-navigationcontainer {
 position:relative;
@@ -173,11 +174,12 @@ position:relative;
 border:0.1vh solid white;
 border-radius:20px;
 height:60%;
-width:100%;
+width:95%;
 margin-left:auto;
 margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
+padding:10px 10px;
 }
 /* width */
 #xirbitmarketingnavigationbar-navigationsnippet-gridcontainer::-webkit-scrollbar {
@@ -323,6 +325,11 @@ height:auto;
 width:100%;
 padding:10px 0px;
 }
+#xirbitmarketing-xirbitgraphmarketing-graph {
+position:relative;
+height:100%;
+width:100%;
+}
 #xirbitmarketing-xirbitgraphmarketing-graph-container1 { 
 position:relative;
 height:100%;
@@ -352,6 +359,13 @@ color: black;
 top:-0.1vh;
 padding:10px 15px;
 }
+.xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
 .xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer {
 position:relative;
 height:auto;
@@ -365,8 +379,8 @@ background-color:black;
 border:1px solid white;
 border-radius:20px;
 color:green;
-height:1vh;
-width:100%;
+height:0.8vh;
+width:90%;
 }
 .xirbitmarketing-xirbitgraphmarketing-graphbarindication {
 position:relative;
@@ -713,16 +727,32 @@ background: darken(gray,20%);
 #xirbitmarketing-xirbitgraphmarketing {
 position:relative;
 border-top:0.3vh solid white;
+height:100vh;
+width:100%;
+}
+#xirbitmarketing-xirbitgraphmarketing-graph {
+position:relative;
 height:100%;
 width:100%;
-padding:60px 15px;
 }
 #xirbitmarketing-xirbitgraphmarketing-graph-container1 {
 position:relative;
 height:100%;
+width:100%;
 }
 #xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer {
 position:relative;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer {
+position:relative;
+height:100%;
+}
+.xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer-gridcontainer {
+position:relative;  
 height:100%;
 width:100%;
 margin-left:auto;
@@ -767,9 +797,5 @@ position:relative;
 background-color:white;
 height:100%;
 width:80%;
-}
-#xirbitmarketing-xirbitgraphmarketing-graph-container2 { 
-position:relative;
-height:100%;
 }
 }

@@ -23,7 +23,7 @@ export default function MoneyWidthdrawalForm(props) {
            lg={7}
            id='moneywidthdrawalform-amountfieldcontainer'>
         <p className='moneywidthdrawalform-fieldheaderindication'>Password</p>
-        <input type='number'
+        <input type='text'
                className='moneywidthdrawalform-field moneywidthdrawalform-passwordfield'/>
         <p></p>
       </Col>

@@ -151,7 +151,7 @@ function XirbitWidthdrawalQue(props) {
     <Col id="xirbitwidthdrawalform-quecontainer">
       <p className="xirbitwidthdrawalform-quecontainer-headerindication">Funds widthdrawal que</p>
       <p className="xirbitwidthdrawalform-quecontainer-headerindication">Que, 0</p>
-      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Processe's are done manually sending back your deposited Money through comparing your Vanguard phone number and phone number used by your payments</p>
+      <p className="xirbitwidthdrawalform-quecontainer-headerindication">Processe's are done manually sending back your recieved Vanguard currency through comparing your Vanguard phone number and phone number used by your payments</p>
       <button id="xirbitwidthdrawalform-quecontainer-refreshbutton">
         {
           props.fundswidthdrawalqueloadingindication ?

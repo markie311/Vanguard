@@ -147,16 +147,22 @@ function XirbitMarketingHeader(props) {
   return (
 
     <Row id='xirbitmarketing-navigationheadercontainer'>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
-       Production
-     </button>
      <button className='xirbitmarketing-navigationviewbutton'
              onClick={(evt)=> { props.marketingnavigationbuttons.marketing() }}>
-          Marketing
-      </button>
+       Marketing
+     </button>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+       Companies
+     </button>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+      Businesses
+     </button>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+        Vanguard Production
+     </button>
      <button className='xirbitmarketing-navigationviewbutton'
              onClick={(evt)=> { props.marketingnavigationbuttons.list() }}>
-          Product list
+       ALL PRODUCT LIST
       </button>
      <button className='xirbitmarketing-navigationviewbutton'
              onClick={(evt)=> { props.marketingnavigationbuttons.transactions() }}>
@@ -503,77 +509,155 @@ function XirbitMarketingGragphContainer(props) {
  return (
   <Col id='xirbitmarketing-xirbitgraphmarketing-graph'>
   
-   <Col xs={12}
-        md={4}
-        lg={4}
-        id='xirbitmarketing-xirbitgraphmarketing-graph-container1'>
+   <Col id='xirbitmarketing-xirbitgraphmarketing-graph-container1'>
     <Row id='xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer'>
       <Col xs={12}
            md={6}
            lg={6}
-           className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>All <span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>A</span></p>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'></p>
-        <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
-         <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
-           
-         </div>
-        </div>
-       </Col>
-       <Col xs={12}
-           md={6}
-           lg={6}
-           className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Food <span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span></p>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'></p>
-        <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
-         <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+           className="xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer">
+        <Row className="xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer-gridcontainer">
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Within this coming 15 days</p>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>A</span> All</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+              
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Food </p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
 
-         </div>
-        </div>
-       </Col>
-       <Col xs={12}
-           md={6}
-           lg={6}
-           className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Snacks <span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span></p>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'></p>
-        <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
-         <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
-          
-         </div>
-        </div>
-       </Col>
-       <Col xs={12}
-           md={6}
-           lg={6}
-           className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Apparels <span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span></p>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'></p>
-        <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
-         <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Snacks</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+              
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Apparels</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
 
-         </div>
-        </div>
-        </Col>
-        <Col xs={12}
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span> Merchandise</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+
+            </div>
+            </div>
+          </Col>
+        </Row>
+      </Col>
+      <Col  xs={12}
            md={6}
            lg={6}
-           className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Merchandise <span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span></p>
-        <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'></p>
-        <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
-         <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+           className="xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer">
+       <Row className="xirbitmarketing-xirbitgraphmarketing-graph-gridcontainer-colcontainer-gridcontainer"> 
+         <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Last 15 days</p>
+         </Col>
+         <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>A</span> All</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+              
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Food </p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
 
-         </div>
-        </div>
-       </Col>
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Snacks</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+              
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Apparels</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+
+            </div>
+            </div>
+          </Col>
+          <Col xs={12}
+              md={6}
+              lg={6}
+              className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span> Merchandise</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
+            <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
+
+            </div>
+            </div>
+          </Col>
+      </Row>
+      </Col>
      </Row>
-   </Col>
-   <Col xs={12}
-        md={12}
-        lg={12}
-        id='xirbitmarketing-xirbitgraphmarketing-graph-container2'>
    </Col>
 
   </Col>
