@@ -322,7 +322,7 @@ function ConfigurationAuthenticationModal() {
        id='configurationauthenticationdetailsmodal'>
 
     <hr />
-     <p>Account details configuration</p>
+     <p className='configurationauthenticationdetailsmodal-headerindication'>Account details configuration</p>
     <hr />
    
     <Col xs={12}
@@ -860,14 +860,14 @@ return (
 	   md={6}
 	   lg={6}
 	   className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer">
-	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">My contact number</p>
+	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">My CONTACT NUMBER</p>
 	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication">00000000000</p>
       </Col>
       <Col xs={6}
 	   md={6}
 	   lg={6}
 	   className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer">
-	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">Xirbit main contact number</p>
+	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">VANGUARD MAIN CONTAINER NUMBER</p>
 	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication">00000000000</p>
       </Col>
      </Row>

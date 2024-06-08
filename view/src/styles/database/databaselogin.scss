@@ -522,9 +522,9 @@ padding:5px;
 #databasemobileidcard  {
 position:relative;
 background-color:$subbgcolor;
-border:0.1vh solid black;
+border:1vh solid dodgerblue;
 border-radius:20px;
-height:65vh;
+height:80%;
 width:95%;
 margin-left:auto;
 margin-right:auto;
@@ -545,22 +545,27 @@ backface-visibility:hidden;
 }
 #databasemobileidcard-frontlayout-cardidpicturecontainer {
 position:relative;
-height:40%;
+height:30vh;
 width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
 padding:10px;
 }
 #databasemobileidcard-frontlayout-cardiduserpicture {
 position:relative;
-height:100%;
-width:45%;
+height:70%;
+width:55%;
 }
 #databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer {
 position:relative;
-height:60%;
+height:30vh;
 width:100%;
 display:flex;
 flex-direction:column;
-padding:15px 10px;
+justify-content:flex-start;
+align-items:center;
+padding:0px 10px;
 }
 .databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication {
 position:relative;
@@ -636,12 +641,12 @@ padding:10px;
 }
 #databasemobileidcard-backlayout-cardiduserpicture {
 position:relative;
-height:85%;
+height:45%;
 width:85%;
 }
 #databasemobileidcard-backlayout-cardidpicturescontainer-backdetailsgridcontainer {
 position:relative;
-height:17vh;
+height:23vh;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -663,7 +668,7 @@ padding:0;
 position:relative;
 font: auto {
  family: $sub-font;
- size:16px;
+ size:14px;
 }
 color:white;
 text-align:center;
@@ -1223,10 +1228,10 @@ padding:5px;
 #databasemobileidcard  {
 position:relative;
 background-color:$subbgcolor;
-border:0.1vh solid black;
-border-radius:20px;
-height:45vh;
-width:45%;
+border:2vh solid dodgerblue;
+border-radius:30px;
+height:75%;
+width:60%;
 margin-left:auto;
 margin-right:auto;
 transform-style:preserve-3d;
@@ -1238,7 +1243,7 @@ transform:rotateY(180deg);
 #databasemobileidcard-frontlayout {
 position:absolute;
 background-color:$subbgcolor;
-border-radius:20px;
+border-radius:30px;
 height:100%;
 width:100%;
 padding:10px;
@@ -1246,7 +1251,7 @@ backface-visibility:hidden;
 }
 #databasemobileidcard-frontlayout-cardidpicturecontainer {
 position:relative;
-height:30vh;
+height:35vh;
 width:100%;
 padding:10px;
 }
@@ -1328,7 +1333,7 @@ backface-visibility:hidden;
 }
 #databasemobileidcard-backlayout-cardidpicturecontainer {
 position:relative;
-height:30vh;
+height:35vh;
 width:100%;
 display:flex;
 flex-direction:column;
@@ -1343,7 +1348,7 @@ width:45%;
 }
 #databasemobileidcard-backlayout-cardidpicturescontainer-backdetailsgridcontainer {
 position:relative;
-height:10vh;
+height:35%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
