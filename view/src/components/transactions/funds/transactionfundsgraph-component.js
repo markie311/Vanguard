@@ -16,7 +16,7 @@ export default function TransactionFundsGraph() {
             md={6}
             lg={6}
             className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed funds out of total deposits this public authentication</p>
+         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed funds out of total deposits using current currencie's this authentication</p>
          <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -28,7 +28,7 @@ export default function TransactionFundsGraph() {
             md={6}
             lg={6}
             className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed funds out of total deposits last public authentication</p>
+         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed Vanguard currency out of total current Vanguard currency deposited last authentication</p>
          <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -40,7 +40,7 @@ export default function TransactionFundsGraph() {
             md={6}
             lg={6}
             className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawals out of funds this public authentication</p>
+         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawals out of all Vanguard Currency</p>
          <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -64,7 +64,7 @@ export default function TransactionFundsGraph() {
             md={12}
             lg={12}
             className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Payments using funds</p>
+         <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-headerindication'>Total payments using Vanguard Currency</p>
          <p className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionfundsgraph-transactionfundsgraphgridcontainer-graphcontentcontainer-bargraphindication'>

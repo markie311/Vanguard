@@ -16,7 +16,7 @@ export default function TransactionMoneyGraph() {
             md={6}
             lg={6}
             className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed money out of total deposits this public authentication</p>
+         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed money out of total deposits using current currencie's this authentication</p>
          <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -28,7 +28,7 @@ export default function TransactionMoneyGraph() {
             md={6}
             lg={6}
             className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed money out of total deposits last public authentication</p>
+         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawed Vanguard currency out of total current money currency deposited last authentication</p>
          <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -40,7 +40,7 @@ export default function TransactionMoneyGraph() {
             md={6}
             lg={6}
             className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawals out of deposited count</p>
+         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Widthdrawals out of all deposited count</p>
          <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraphindication'>
@@ -52,7 +52,7 @@ export default function TransactionMoneyGraph() {
             md={12}
             lg={12}
             className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer'>
-         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Payments using money</p>
+         <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-headerindication'>Total payments using money</p>
          <p className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-percentageheaderindication'></p>
          <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraph'>
           <div className='transactionmoneygraph-transactionmoneygraphgridcontainer-graphcontentcontainer-bargraphindication'>
