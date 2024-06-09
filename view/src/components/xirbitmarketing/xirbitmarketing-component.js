@@ -433,14 +433,14 @@ function XirbitMarketingNavigationBar(props) {
                       onClick={()=> {
                         const _marketingdetailscontainer = document.querySelector("#xirbitmarketingnavigationbar-marketdetailscontainer");
                         _marketingdetailscontainer.style.display = "block";
-                      }}>MRN</button>
+                      }}>MN</button>
             </div>
           </Col>
           <Col xs={8}
               md={8}
               lg={8}
               className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer'>
-            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation MRN: Merchandise's</p>
+            <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Abrreviation MN: Merchandise's</p>
               <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication'>Total purchases within this 15 days</p>
               <p className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-headerindication xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-percentageheaderindication'></p>
               <div className='xirbitmarketingnavigationbar-navigationsnippet-categoryindicationheaderandbargraphcontainer-bargraph'>
