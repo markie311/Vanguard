@@ -12,7 +12,7 @@ export default function Footer() {
         md={12}
         lg={12}
         id='footer-footercontainer1'>
-     <p className='footer-header footer-footercontainer1-footerfirstheader'>© 2022 with the expectations that is longing to happen and stops, Xirbit. All rights reserved. </p>
+     <p className='footer-header footer-footercontainer1-footerfirstheader'>© 2022 with the expectations that is longing to happen and stops, Vanguard. All rights reserved. </p>
    </Col>
   </Row>
  )
