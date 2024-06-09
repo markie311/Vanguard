@@ -167,8 +167,13 @@ function XirbitMarketingHeader(props) {
      <button className='xirbitmarketing-navigationviewbutton'
              onClick={(evt)=> { props.marketingnavigationbuttons.transactions() }}>
         Transactions
-      </button>
-  
+     </button>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+      Export's
+     </button>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+      Import's
+     </button>
    </Row>
   )
 }
@@ -526,7 +531,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>A</span> All</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Rice Kohaku White Grains</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -538,7 +543,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Food </p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Rice Kohaku Black Grains </p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -550,7 +555,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Snacks</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Lumpia shanghai</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -562,7 +567,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Apparels</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Clark's white immitation shoe's</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -574,7 +579,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span> Merchandise</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> SoFab clarkson's sandal's</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -599,7 +604,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>A</span> All</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Kohaku Black Grains</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -611,7 +616,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Food </p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Kohaku Jasmine Grains </p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -623,7 +628,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Snacks</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>SN</span> Happy</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -635,7 +640,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Apparels</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Nike</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
@@ -647,7 +652,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span> Merchandise</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>MRN</span> Judge White T-shirt</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
