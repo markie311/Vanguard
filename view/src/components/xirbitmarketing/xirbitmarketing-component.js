@@ -525,7 +525,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Within this coming 15 days</p>
+              <h1 className='xirbitmarketing-xirbitgraphmarketing-graph-barmainheader'>WITHIN THIS COMING 15 DAYS</h1>
           </Col>
           <Col xs={12}
               md={6}
@@ -540,8 +540,8 @@ function XirbitMarketingGragphContainer(props) {
             </div>
           </Col>
           <Col xs={12}
-              md={6}
-              lg={6}
+               md={6}
+               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>F</span> Rice Kohaku Black Grains </p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
@@ -598,7 +598,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'>Last 15 days</p>
+             <h1 className='xirbitmarketing-xirbitgraphmarketing-graph-barmainheader'>LAST 15 DAYS</h1>
          </Col>
          <Col xs={12}
               md={6}
