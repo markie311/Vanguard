@@ -1495,7 +1495,7 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
              <Col className='marketing-merchandisescontainer-merchandisemodal-merchandisemaindisplaycontainer'>
 
               <p className='marketing-merchandisecontainer-merchandisemodal-merchandiseviewdisplaybuttoncontainer'>
-                  {merchandise.productname} 
+                 {merchandise.productname} 
               </p>
 
               <p className='marketing-merchandisecontainer-merchandisemodal-merchandiseviewdisplaybuttoncontainer'
