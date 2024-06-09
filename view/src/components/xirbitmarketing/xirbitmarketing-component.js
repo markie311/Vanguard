@@ -640,7 +640,7 @@ function XirbitMarketingGragphContainer(props) {
               md={6}
               lg={6}
               className='xirbitmarketing-xirbitgraphmarketing-graph-barandbarindicationcontainer'>
-            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Nike</p>
+            <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader'><span className='xirbitmarketing-xirbitgraphmarketing-graph-barheaderabbereviation'>AP</span> Nike Seasonal White Shoe's</p>
             <p className='xirbitmarketing-xirbitgraphmarketing-graph-barheader xirbitmarketing-xirbitgraphmarketing-graph-barheaderpercentageheaderindication'>0%</p>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbar'>
             <div className='xirbitmarketing-xirbitgraphmarketing-graphbarindication'>
