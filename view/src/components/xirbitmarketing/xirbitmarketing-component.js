@@ -17,6 +17,9 @@ import MarketingDisplay from './xirbitmarketingdisplay-component.js';
 import Transactions from '../transactions/request/transactions-component.js';
 import CompaniesPortfolio from '../portfolios/companiesportfolio-component.js';
 import BusinessesPortfolio from '../portfolios/businessesportfolio-component.js';
+import VanguardProduction from '../vanguardproduction/vanguardproduction-component.js';
+import Exports from '../exportsimports/exports-component.js';
+import Imports from '../exportsimports/imports-component.js';
 
 import barmovementpercentacalculation  from '../lib/barmovementpercentagecalculation.js';
 
@@ -55,12 +58,27 @@ useEffect(()=> {
 */}
 
 const marketingnavigationbuttons = {
-  production: () => {
-    
+  vanguardproduction: () => {
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    setTimeout(()=>{
+      document.querySelector("#vanguardproductioncontainer").style.display = "block";
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    }, 3000)
   },
   marketing: () => {
     document.querySelector("#companiesportfoliocontainer").style.display = "none";
     document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
     marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
     marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     marketingviewmodaldisplaypropertycb((display)=> display = 'none');
@@ -72,6 +90,9 @@ const marketingnavigationbuttons = {
   },
   companies: () => {
     document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
     marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
     marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     marketingviewmodaldisplaypropertycb((display)=> display = 'none');
@@ -84,6 +105,9 @@ const marketingnavigationbuttons = {
   },
   businesses: () => {
     document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
     marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
     marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     marketingviewmodaldisplaypropertycb((display)=> display = 'none');
@@ -97,6 +121,9 @@ const marketingnavigationbuttons = {
   list: () => {
     document.querySelector("#companiesportfoliocontainer").style.display = "none";
     document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
     marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
     marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     marketingviewmodaldisplaypropertycb((display)=> display = 'none');
@@ -109,6 +136,9 @@ const marketingnavigationbuttons = {
   transactions: () => {
     document.querySelector("#companiesportfoliocontainer").style.display = "none";
     document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
     marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
     marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     marketingviewmodaldisplaypropertycb((display)=> display = 'none');
@@ -116,6 +146,36 @@ const marketingnavigationbuttons = {
     setTimeout(()=>{
       marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
       transactionsmodaldisplaypropertycb((display)=> display = 'block');
+    }, 3000)
+  },
+  exports: () => {
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#importscontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    setTimeout(()=>{
+      document.querySelector("#exportscontainer").style.display = "block";
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    }, 3000)
+  },
+  imports: () => {
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    document.querySelector("#vanguardproductioncontainer").style.display = "none";
+    document.querySelector("#exportscontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    setTimeout(()=>{
+      document.querySelector("#importscontainer").style.display = "block";
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      transactionsmodaldisplaypropertycb((display)=> display = 'none');
     }, 3000)
   }
 }
@@ -197,7 +257,8 @@ function XirbitMarketingHeader(props) {
              onClick={(evt)=> { props.marketingnavigationbuttons.businesses() }}>
       Businesses
      </button>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.vanguardproduction() }}>
         Vanguard Production
      </button>
      <button className='xirbitmarketing-navigationviewbutton'
@@ -208,10 +269,12 @@ function XirbitMarketingHeader(props) {
              onClick={(evt)=> { props.marketingnavigationbuttons.transactions() }}>
         Transactions
      </button>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.exports() }}>
       Export's
      </button>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.imports() }}>
       Import's
      </button>
    </Row>
@@ -458,6 +521,18 @@ function XirbitMarketingView(props) {
 
       <Col id="businessportfoliocontainer">
          <BusinessesPortfolio businesses={props.businesess}/>
+      </Col>
+
+      <Col id="vanguardproductioncontainer">
+        <VanguardProduction />
+      </Col>
+
+      <Col id="exportscontainer">
+       <Exports />
+      </Col>
+
+      <Col id="importscontainer">
+       <Imports />
       </Col>
 
    </Col>
