@@ -1498,6 +1498,10 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
                  {merchandise.productname} 
               </p>
 
+              <p className='marketing-merchandisecontainer-merchandisemodal-merchandiseviewdisplaybuttoncontainer'>
+                 {merchandise.category} 
+              </p>
+
               <p className='marketing-merchandisecontainer-merchandisemodal-merchandiseviewdisplaybuttoncontainer'
                  onClick={(evt, idx)=> {
                   selectedmerchandisecb((viewedmerchandise)=> viewedmerchandise = merchandise)

@@ -15,6 +15,8 @@ import '../../styles/xirbitmarketing/xirbitmarketing.scss';
 
 import MarketingDisplay from './xirbitmarketingdisplay-component.js';
 import Transactions from '../transactions/request/transactions-component.js';
+import CompaniesPortfolio from '../portfolios/companiesportfolio-component.js';
+import BusinessesPortfolio from '../portfolios/businessesportfolio-component.js';
 
 import barmovementpercentacalculation  from '../lib/barmovementpercentagecalculation.js';
 
@@ -54,36 +56,66 @@ useEffect(()=> {
 
 const marketingnavigationbuttons = {
   production: () => {
-
+    
   },
   marketing: () => {
-    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex')
-    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none')
-    marketingviewmodaldisplaypropertycb((display)=> display = 'none')
-    transactionsmodaldisplaypropertycb((display)=> display = 'none')
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
     setTimeout(()=>{
-      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none')
-      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'flex')  
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'flex');
+    }, 3000)
+  },
+  companies: () => {
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    setTimeout(()=>{
+      document.querySelector("#companiesportfoliocontainer").style.display = "block";
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    }, 3000)
+  },
+  businesses: () => {
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
+    setTimeout(()=>{
+      document.querySelector("#businessportfoliocontainer").style.display = "block";
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
     }, 3000)
   },
   list: () => {
-    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex')
-    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none')
-    marketingviewmodaldisplaypropertycb((display)=> display = 'none')
-    transactionsmodaldisplaypropertycb((display)=> display = 'none')
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
     setTimeout(()=>{
       marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none')
       marketingviewmodaldisplaypropertycb((display)=> display = 'block')  
     }, 3000)
   },
   transactions: () => {
-    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex')
-    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none')
-    marketingviewmodaldisplaypropertycb((display)=> display = 'none')
-    transactionsmodaldisplaypropertycb((display)=> display = 'none')
+    document.querySelector("#companiesportfoliocontainer").style.display = "none";
+    document.querySelector("#businessportfoliocontainer").style.display = "none";
+    marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'flex');
+    marketingnavigationbarmodaldisplaypropertycb((display)=> display = 'none');
+    marketingviewmodaldisplaypropertycb((display)=> display = 'none');
+    transactionsmodaldisplaypropertycb((display)=> display = 'none');
     setTimeout(()=>{
-      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none')
-      transactionsmodaldisplaypropertycb((display)=> display = 'block')  
+      marketingloadingindicationstatemodaldisplaypropertycb((display)=> display = 'none');
+      transactionsmodaldisplaypropertycb((display)=> display = 'block');
     }, 3000)
   }
 }
@@ -154,10 +186,12 @@ function XirbitMarketingHeader(props) {
              onClick={(evt)=> { props.marketingnavigationbuttons.marketing() }}>
        Marketing
      </button>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.companies() }}>
        Companies
      </button>
-     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
+     <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'
+             onClick={(evt)=> { props.marketingnavigationbuttons.businesses() }}>
       Businesses
      </button>
      <button className='xirbitmarketing-navigationpositioningviewbutton xirbitmarketing-navigationviewbutton'>
@@ -413,6 +447,14 @@ function XirbitMarketingView(props) {
             close
           </p>
         </Col>
+      </Col>
+
+      <Col id="companiesportfoliocontainer">
+         <CompaniesPortfolio />
+      </Col>
+
+      <Col id="businessportfoliocontainer">
+         <BusinessesPortfolio />
       </Col>
 
    </Col>

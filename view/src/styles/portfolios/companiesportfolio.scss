@@ -1,0 +1,48 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width: 600px) { 
+#companiesportfolio {
+position:relative;
+border:0.1vh solid white;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.companiesportfolio-headerindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
+}
+
+@media only screen and (min-width: 1200px) { 
+#companiesportfolio {
+position:relative;
+border:0.1vh solid white;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+.companiesportfolio-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+}
