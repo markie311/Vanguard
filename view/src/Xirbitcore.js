@@ -4704,9 +4704,17 @@ const [products, productscb] = useState([
     productname: 'Kohaku',
     rapportname: 'Rapport name',
     definition: 'Product definition',
+    category: 'Food/Rice',
     authentications: {
      producttype: 'Product type',
      productid: 'mrn-ricekohaku-1'
+    },
+    specification: {
+      for: {
+       part: '50kg',
+       gender: "Male or Female, for all type's of gender",
+       category: 'For adults and children around 6 months' 
+      }
     },
     specifications: [ 
       {
@@ -4722,21 +4730,21 @@ const [products, productscb] = useState([
           name: 'Kokaku / Kohaku Yellow',
           rapportname: 'Product rapport name',
           definition: 'Product definition',
-          category: 'MRN',
+          category: 'Food/Rice',
           specification: {
            for: {
-            part: 'Product part',
-            gender: "Male of Female, for all type's of gender",
-            category: 'For adults and children above 4-6 months' 
+            part: '50kg',
+            gender: "Male or Female, for all type's of gender",
+            category: 'For adults and children around 6 months' 
            },
            set: {
             set: false,
-            productindication: 'Oridinary',
-            pcs: 10
+            productindication: 'Special',
+            pcs: 0
            },
            size: 'Product size',
            color: 'Product color',
-           weight: 10,
+           weight: 50000,
            top: 'Top product specification',
            left: 'Left product specification',
            bottom: 'Bottom product specification',
