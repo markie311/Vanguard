@@ -167,7 +167,10 @@ const navigate = useNavigate();
                        requesttransactiondata={props.requesttransactiondata}
                        
                        companies={props.companies}
-                       companiescb={props.companiescb}/>
+                       companiescb={props.companiescb}
+                       
+                       businesess={props.businesess}
+                       businessescbb={props.businessescb}/>
 
    <Col id='xirbitmarketing-xirbitgraphmarketing'>
     <XirbitMarketingGragphContainer />
@@ -450,11 +453,11 @@ function XirbitMarketingView(props) {
       </Col>
 
       <Col id="companiesportfoliocontainer">
-         <CompaniesPortfolio />
+         <CompaniesPortfolio companies={props.companies}/>
       </Col>
 
       <Col id="businessportfoliocontainer">
-         <BusinessesPortfolio />
+         <BusinessesPortfolio businesses={props.businesess}/>
       </Col>
 
    </Col>
@@ -714,6 +717,7 @@ function XirbitMarketingNavigationBar(props) {
         </Col>
 
      </Row>
+
     </Col>
 
     <Col xs={12}
@@ -746,12 +750,6 @@ function XirbitMarketingNavigationBar(props) {
 
                     <p className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">{companyproduct.productname}'s, {companyproduct.productname}</p>
                     <p className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">Made 0 peso's as profit and revenue on all marketed product's</p>
-                    <p className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">Kukaku also gave contributions to commoner's, to the public and private authentication's through Vanguards transactions giving the VAT as it's self profit and revenue.</p>
-                    <p className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">{company.details.companyname} contributed to Vanguard, <button className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication-seeprojectsbutton"
-                      onClick={()=> {
-                        const _companyprojectscontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer");
-                        _companyprojectscontainer[0].style.display = "block";
-                        }}>see project's</button></p>
                     <p className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">{companyproduct.productname}'s available product's depending on variations</p>
 
                     <Col className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistscontainer-productspecificationcontainer">
