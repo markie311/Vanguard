@@ -837,11 +837,15 @@ function XirbitMarketingNavigationBar(props) {
                              <button className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistscontainer-productspecificationcontainer-productspecification-buttonscontainer-viewbutton"
                                       onClick={()=> { 
                                         const _productdetailscontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer");
+                                       //_productdetailscontainer[0].style.height = "95%";
+                                      //  _productdetailscontainer[0].style.top = "50%";
                                         _productdetailscontainer[0].style.display = "block";
                                      }}>view product</button>
                              <button className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistscontainer-productspecificationcontainer-productspecification-buttonscontainer-graphbutton"
                                       onClick={()=> {
                                         const _productgraphcontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer");
+                                      //  _productgraphcontainer[0].style.height = "40%";
+                                      //  _productgraphcontainer[0].style.top = "50%";
                                         _productgraphcontainer[0].style.display = "block";
                                        }}>
                                 graph
