@@ -34,6 +34,7 @@ export default function BusinessesPortfolio(props) {
                   <p className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">{business.details.businessname} contributed to Vanguard, <button className="xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication-seeprojectsbutton"
                   onClick={()=> {
                      const _businessprojectscontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer");
+                     _businessprojectscontainer[0].style.height = "95%";
                      _businessprojectscontainer[0].style.display = "block";
                      }}>see project's</button></p>
                   <p className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistsheaderindication">{businessproduct.productname}'s available product's depending on variations</p>
@@ -48,11 +49,13 @@ export default function BusinessesPortfolio(props) {
                            <button className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistscontainer-productspecificationcontainer-productspecification-buttonscontainer-viewbutton"
                                     onClick={()=> { 
                                     const _productdetailscontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer");
+                                    _productdetailscontainer[0].style.height = "95%";
                                     _productdetailscontainer[0].style.display = "block";
                                  }}>view product</button>
                            <button className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-detailsgridcontainer-colcontainer-companyproductslistscontainer-productspecificationcontainer-productspecification-buttonscontainer-graphbutton"
                                     onClick={()=> {
                                     const _productgraphcontainer = document.querySelectorAll(".xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer");
+                                    _productgraphcontainer[0].style.height = "95%";
                                     _productgraphcontainer[0].style.display = "block";
                                     }}>
                               graph
