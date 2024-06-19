@@ -143,6 +143,249 @@ color:white;
 letter-spacing:0.3vh;
 padding:10px 30px;
 }
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+border-radius:40px;
+height:95%;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 3%);
+padding:0px 20px;
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+text-align:center;
+top:1vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-bargraph {
+position:relative;
+border:0.2vh solid white;
+border-radius:20px;
+height:1vh;
+width:100%;
+top:-0.8vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-bargraphindication {
+position:relative;
+background-color:white;
+height:100%;
+width:1%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer {
+position:relative;
+height:35%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar {
+width: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer {
+position:relative;
+height:65%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-aboutmaindataheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+size:16px;
+}
+color:white;
+text-align:center;
+top:1.5vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailsclosebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailsclosebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+user-select:none;
+top:0.8vh;
+right:0vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+border-radius:40px;
+height:95%;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 3%);
+padding:0px 20px;
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer {
+position:relative;
+height:95%;
+width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar {
+width: 5px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer {
+position:relative;
+background-color:red;
+border:1vh dotted white;
+height:auto;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+margin-top:3vh;
+padding:30px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer-locationcontainer {
+position:relative;
+border:1vh dotted white;
+height:auto;
+width:auto;
+padding:10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+user-select:none;
+top:0.8vh;
+right:0vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:20px;
+height:95%;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 3%);
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-productdetailscontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+user-select:none;
+top:0.8vh;
+right:3.5vh;
+}
 }
 
 @media only screen and (min-width: 1200px) { 
@@ -282,5 +525,248 @@ font: auto {
 color:white;
 letter-spacing:0.3vh;
 padding:10px 30px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+border-radius:40px;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 0%);
+padding:0px 20px;
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer {
+position:relative;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+text-align:center;
+top:1vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-bargraph {
+position:relative;
+border:0.2vh solid white;
+border-radius:20px;
+height:1vh;
+width:100%;
+top:-0.8vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-bargraphindication {
+position:relative;
+background-color:white;
+height:100%;
+width:1%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer {
+position:relative;
+height:35%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar {
+width: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-historycontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer {
+position:relative;
+height:65%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailscontentcontainer-gridcontainer-colcontainer-aboutmaindataheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+size:16px;
+}
+color:white;
+text-align:center;
+top:1.5vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailsclosebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productgraphcontainer-graphdetailsclosebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+user-select:none;
+top:0.8vh;
+right:0vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+border-radius:40px;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 0%);
+padding:0px 20px;
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer {
+position:relative;
+height:95%;
+width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar {
+width: 5px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectscontentcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer {
+position:relative;
+background-color:red;
+border:1vh dotted white;
+height:auto;
+width:95%;
+margin-left:auto;
+margin-right:auto;
+margin-top:3vh;
+padding:30px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer-locationcontainer {
+position:relative;
+border:1vh dotted white;
+height:auto;
+width:auto;
+padding:10px;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectdetailscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family:$sub-font;
+}
+color:white;
+user-select:none;
+top:0.8vh;
+right:0vh;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer {
+position:absolute;
+background-color:white;
+border:0.1vh solid black;
+border-radius:40px;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+top:0;
+left:0;
+right:0;
+bottom:0;
+transform: translate(0%, 0%);
+z-index:99;
+display:none;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-productdetailscontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+.businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+user-select:none;
+top:0.8vh;
+right:3.5vh;
 }
 }
