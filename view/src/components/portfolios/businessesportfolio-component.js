@@ -260,7 +260,7 @@ export default function BusinessesPortfolio(props) {
       <Col className="businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer">
       <p className="businessesportfolio-xirbitmarketingnavigationbarxirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer-projectsclosebuttoncontainer-closebuttonheaderindication"
           onClick={()=> {
-          const _companyprojectscontainer = document.querySelectorAll("businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer");
+          const _companyprojectscontainer = document.querySelectorAll(".businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-companyprojectcontainer");
           _companyprojectscontainer[0].style.display = "none";
           }}>
         close
@@ -274,7 +274,7 @@ export default function BusinessesPortfolio(props) {
         <Col className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer">
           <p className="businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer-closebuttoncontainer-closebuttonheaderindication"
             onClick={()=> {
-              const _productdetailscontainer = document.querySelectorAll("businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer");
+              const _productdetailscontainer = document.querySelectorAll(".businessesportfolio-xirbitmarketingnavigationbar-marketdetailscontainer-productdetailscontainer");
               _productdetailscontainer[0].style.display = "none";
             }}>
             close
