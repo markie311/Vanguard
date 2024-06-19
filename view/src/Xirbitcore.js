@@ -6324,6 +6324,412 @@ const [businesess, businessescb] = useState([
      }
     ]
   },
+  {
+    details: {
+      businessname: "MCKENZIE",
+      description: {
+       businessdescription: "Business description",
+       businessmotto: "Business motto"
+      }
+    },
+    locations: {
+     farm: [],
+     plantations: [],
+     manufacturing: [],
+     packaging: [],
+     distributing: [],
+     offices: {
+       main: [ 
+         {
+         location: {
+           street: "Street",
+           baranggay: "Baranggay",
+           trademark: "Trademark",
+           city: "City",
+           province: "Province",
+           country: "Country"
+         },
+         contact: {
+           telephone: "0",
+           phonenumber: "0",
+           emailaddress: "None",
+           website: "None"
+         }
+        }
+       ],
+       branch: [],
+       franchise: []
+     }
+    },
+    product: {
+      list: [
+       {
+         productname: 'Kohaku',
+         rapportname: 'Rapport name',
+         definition: 'Product definition',
+         authentications: {
+          producttype: 'Product type',
+          productid: 'mrn-ricekohaku-1'
+         },
+         specifications: [ 
+           {
+             productname: 'Kohaku Yellow',
+             rapportname: 'Rapport name',
+             definition: 'Product definition',
+             authentications: {
+               producttype: 'Product type',
+               productid: 'mrn-ricekohaku-1-category1'
+             },
+             details: {
+              product: {
+               name: 'Kokaku / Kohaku Yellow',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: "Male of Female, for all type's of gender",
+                 category: 'For adults and children above 4-6 months' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 10,
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+               },
+               pricesbreakdown: {
+                 price: 10,
+                 capital: 8,
+                 suggested_retail_price: 10,
+                 vat: 2
+               },
+               cybervisual: {
+                 images: {
+                   maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                   maindisplayimages: [
+                   {
+                     displayimage: '../images/landingpage/bondpaperimage.jpg'
+                   },
+                   {
+                     displayimage: '../images/landingpage/bondpaperimage.jpg'
+                   },
+                   {
+                     displayimage: '../images/landingpage/bondpaperimage.jpg'
+                   }
+                   ]
+                 },
+                 videos: [
+                   {
+                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                   },
+                   {
+                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                   },
+                   {
+                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                   },
+                   {
+                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                   }
+                 ]
+               }
+             },
+             locations: {
+               operations: [
+                 {
+                   street: 'Street',
+                   baranggay: 'Baranggay',
+                   trademark: 'Trademark',
+                   city: 'City',
+                   province: 'Province',
+                   country: 'Country'
+                 }
+               ]
+             }
+             },
+             system: {
+               request: {
+                 pcs: 0,
+                 orderspecification: "",
+                 merchandise: {
+                   price: 0,
+                   capital: 0,
+                   suggested_retail_price: 0,
+                   vat: 0,
+                 },
+                 shipping: {
+                  category: 'Shipping category',
+                  weight: 'Shipping weight',
+                  fee: 0
+                 },
+                 totalpayment: {
+                   price: 0
+                 },
+                 products: [
+                 ],
+               },
+               stocks: [
+                 {
+                   productname: 'Kohaku / Kohaku Yellow / White Grains',
+                   rapportname: 'Rapport name',
+                   definition: 'Product definition',
+                   authentications: {
+                     producttype: 'Product type',
+                     productid: 'mrn-ricekohaku-1-category1-product1'
+                    },
+                   details: {
+                   product: {
+                    name: 'Kokahu / Kohaku Yellow / White grains',
+                    rapportname: 'Product rapport name',
+                    definition: 'Product definition',
+                    category: 'MRN',
+                    specification: {
+                     for: {
+                      part: 'Product part',
+                      gender: 'Male',
+                      category: 'Adults' 
+                     },
+                     set: {
+                      set: false,
+                      productindication: 'Oridinary',
+                      pcs: 10
+                     },
+                     size: 'Product size',
+                     color: 'Product color',
+                     weight: 'Product weight',
+                     top: 'Top product specification',
+                     left: 'Left product specification',
+                     bottom: 'Bottom product specification',
+                     right: 'Right product specification',
+                     front: 'Front product specification',
+                     back: 'Back product specification'
+                     },
+                     pricesbreakdown: {
+                       price: 10,
+                       capital: 8,
+                       suggested_retail_price: 10,
+                       vat: 2
+                     },
+                     cybervisual: {
+                       images: {
+                         maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                         maindisplayimages: [
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         },
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         },
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         }
+                         ]
+                       },
+                       videos: [
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         }
+                       ]
+                     },
+                   },
+                   locations: {
+                     operations: [
+                       {
+                         street: 'Street',
+                         baranggay: 'Baranggay',
+                         trademark: 'Trademark',
+                         city: 'City',
+                         province: 'Province',
+                         country: 'Country'
+                       }
+                     ]
+                   }
+                   },
+                   system: {
+                     request: {
+                       pcs: 0,
+                       orderspecification: "",
+                       product: [
+                       ],
+                       shipping: {
+                        category: 'Shipping category',
+                        weight: 'Shipping weight',
+                        fee: 0
+                       }
+                     },
+                     stocks: [],
+                     purchase: {
+                       people: [],
+                       xirbit: []
+                     }
+                   }
+                 },
+                 {
+                  productname: 'Kohaku / Kohaku Yellow / White Grains',
+                  rapportname: 'Rapport name',
+                  definition: 'Product definition',
+                  authentications: {
+                   producttype: 'Product type',
+                   productid: 'mrn-ricekohaku-1-category1-product2'
+                  },
+                  details: {
+                   product: {
+                    name: 'Kohaku / Kohaku Yellow / White big grains',
+                    rapportname: 'Product rapport name',
+                    definition: 'Product definition',
+                    category: 'MRN',
+                    specification: {
+                     for: {
+                      part: 'Product part',
+                      gender: 'Male',
+                      category: 'Adults' 
+                     },
+                     set: {
+                      set: false,
+                      productindication: 'Oridinary',
+                      pcs: 10
+                     },
+                     size: 'Product size',
+                     color: 'Product color',
+                     weight: 'Product weight',
+                     top: 'Top product specification',
+                     left: 'Left product specification',
+                     bottom: 'Bottom product specification',
+                     right: 'Right product specification',
+                     front: 'Front product specification',
+                     back: 'Back product specification'
+                     },
+                     pricesbreakdown: {
+                       price: 10,
+                       capital: 8,
+                       suggested_retail_price: 10,
+                       vat: 2
+                     },
+                     cybervisual: {
+                       images: {
+                         maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                         maindisplayimages: [
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         },
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         },
+                         {
+                           displayimage: '../images/landingpage/bondpaperimage.jpg'
+                         }
+                         ]
+                       },
+                       videos: [
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         },
+                         {
+                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                         }
+                       ]
+                     },
+                   },
+                   locations: {
+                     operations: [
+                       {
+                         street: 'Street',
+                         baranggay: 'Baranggay',
+                         trademark: 'Trademark',
+                         city: 'City',
+                         province: 'Province',
+                         country: 'Country'
+                       }
+                     ]
+                   }
+                  },
+                  system: {
+                     request: {
+                       pcs: 0,
+                       orderspecification: "",
+                       product: [
+                       ],
+                       shipping: {
+                        category: 'Shipping category',
+                        weight: 'Shipping weight',
+                        fee: 0
+                       }
+                     },
+                     stocks: [],
+                     purchase: {
+                       people: [],
+                       xirbit: []
+                     }
+                 }   
+                 }      
+               ],
+               purchase: {
+                 people: [],
+                 xirbit: []
+               }
+             }
+           }
+         ]
+       }
+      ]
+    },
+    projects: [
+     {
+     date: "111-111-111",
+     purpose: "Purpose",
+     status: "Status",
+     contributions: {
+       contributioncompletion: "0",
+       contributed: 0
+     },
+     locations: [
+       {
+       date: "111-111-111",
+       contribution: "0",
+       purpose: "Project purpose",
+       location: {
+         street: "Street",
+         trademark: "Trademark",
+         baranggay: "Baranggay",
+         city: "City",
+         province: "Province",
+         coutnry: "Country"
+       },
+       status: "Contributed must be complete to complete the project",
+       contributions: {
+         contributioncompletion: "0",  
+         contributed: 0
+       }
+       }
+     ]
+     }
+    ]
+  }
 ]);
 
 const [products, productscb] = useState([
