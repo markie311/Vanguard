@@ -19,7 +19,7 @@ import NavigationButtons from '../navigations/navigationbuttons/navigationbutton
 import Footer from '../footer/footer-component.js';
 import XirbitGraph from '../graph/xirbitgraph-component.js';
 import WidthdrawalsGrid from '../widthdrawals/widthdrawalsgrid-component.js';
-import PrivacyAndPolicy from '../privacyandpolicy/privacyandpolicy-component.js'
+import PrivacyAndPolicy from '../privacyandpolicy/privacyandpolicy-component.js';
 
 export default function LandingPage(props) { 
 
@@ -60,10 +60,10 @@ export default function LandingPage(props) {
         <p id='landingpage-widthdrawalsnavigationcontainerclosebutton'
            onClick={(evt)=> {
           if ( props.viewport === 'xs' ) {
-            props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-90%' ? '0' : '-90%')
+            props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-90%' ? '0' : '-90%');
             return 
           }
-            props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-100%' ? '0' : '-100%')
+            props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-100%' ? '0' : '-100%');
          }}>close</p>
      </Col>
      <Col id='landingpage-widthdrawalsnavigationcontainer-widthdrawalsnavigationcomponentcontainer'>

@@ -10,10 +10,13 @@ import '../../styles/graph/maingraphgrid.scss';
 
 import barmovementpercentacalculation from '../lib/barmovementpercentagecalculation.js';
 
+import { useNavigate }  from 'react-router-dom';
+
 export default function MainGraphGrid(props) {
 
  const [pageloaded, pageloadedcb] = useState(false);
 
+ const navigate = useNavigate();
 
  useEffect(()=> {
 
@@ -251,7 +254,10 @@ export default function MainGraphGrid(props) {
              </div>
          </Col>
          </Col>
-        <p id='maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionscontainer-seeimportantcontentsheader'>View complete Vanguard portfolio -></p>
+        <p id='maingraphgrid-graphnavigationcontainer-graphmainnavigationcontainer-contributionscontainer-seeimportantcontentsheader'
+           onClick={()=> {
+            navigate('/vanguardportfolio')
+           }}>View complete Vanguard portfolio -></p>
        </Col>
       </Row>
     </Col>

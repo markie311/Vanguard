@@ -7,12 +7,12 @@ import { Row,
          Col,
          Spinner } from 'react-bootstrap';
 
-import '../../styles/vanguardproduction/vanguardportfolio.scss';
+import '../../styles/portfolios/vanguardportfolio.scss';
 
 export default function VanguardPortfolio() {
  return (
     <Row id="vanguardproduction">
-            
+      <h1 className="vanguardproduction-headerindication">Vanguard portfolio</h1>
     </Row>
  )
 }

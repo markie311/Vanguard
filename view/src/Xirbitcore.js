@@ -24,6 +24,7 @@ import DatabaseLogin from './components/database/databaselogin-component.js';
 import Database  from './components/database/database-component.js';
 import Office from './components/office/office-component.js';
 import Purchasing from './components/purchasing/purchasing-component.js'
+import VanguardPorttfolio from './components/portfolios/vanguardportfolio-component.js';
 
 import  barpercentagecalculation from './components/lib/barmovementpercentagecalculation.js';
 
@@ -7679,6 +7680,11 @@ const navigate = useNavigate();
                                    databasedatacb={databasedatacb}
                                    
                                    requesttransactiondata={requesttransactiondata}/>}>
+
+         </Route>
+
+          <Route path='/vanguardportfolio'
+                  element={<VanguardPorttfolio />}>
 
          </Route>
          <Route path='/purchasing'
