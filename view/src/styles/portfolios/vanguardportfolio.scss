@@ -9,42 +9,95 @@ $containersonidlebgcolor: #e2e4e1;
 @media only screen and (max-width:600px) { 
 #vanguardporfolio {
 position:relative;
-border:1vh solid gray;
+background-color:black;
 height:100%;
 width:100%;
+padding:30px 10px;
+overflow-x:hidden;
+overflow-y:scroll;
 }
-.vanguardporfolio-porfolioscontainer {
-
+#vanguardporfolio::-webkit-scrollbar {
+display: none;
+}
+#vanguardporfolio {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
+}
+.vanguardporfolio-porfolioscontainer-buttoncontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.vanguardporfolio-porfolioscontainer-buttoncontainer-button {
+position:relative;
+border-radius:20px;
+background-color:black;
+font: auto {
+family: $sub-font;
+}
+color:white;
+height:5vh;
+width:auto;
+padding:10px 25px;
+outline-style:none;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar {
+width: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer-layoutcontainer {
+position:relative;
+transition: all 1s ease;
 }
 .vanguardporfolio-headerindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
-display:flex;
-justify-content:center;
-align-items:center;
 }
 }
 @media only screen and (min-width:1200px) { 
 #vanguardporfolio {
 position:relative;
-border:1vh solid gray;
-height:auto;
+background-color:black;
+height:100%;
 width:100%;
 padding:30px 10px;
-overflow-x:scroll;
+overflow-x:hidden;
+overflow-y:scroll;
 }
-.vanguardporfolio-porfolioscontainer {
-position:relative;
-border:0.1vh solid red;
-height:auto;
-width:100%;
+#vanguardporfolio::-webkit-scrollbar {
+display: none;
+}
+#vanguardporfolio {
+-ms-overflow-style: none;  
+scrollbar-width: none;  
 }
 .vanguardporfolio-porfolioscontainer-buttoncontainer {
 position:relative;
-border:0.1vh solid green;
 height:10vh;
 width:100%;
 display:flex;
@@ -66,16 +119,30 @@ outline-style:none;
 }
 .vanguardporfolio-porfolioscontainer-porfolioscontainer {
 position:relative;
-border:1vh solid green;
 height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar {
+width: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+.vanguardporfolio-porfolioscontainer-porfolioscontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 .vanguardporfolio-porfolioscontainer-porfolioscontainer-layoutcontainer {
 position:relative;
-border:1vh solid dodgerblue;
-height:auto;
+transition: all 1s ease;
 }
 .vanguardporfolio-headerindication {
 position:relative;

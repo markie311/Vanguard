@@ -14,15 +14,23 @@ import BusinessesPortfolio from '../portfolios/businessesportfolio-component.js'
 import VanguardProduction from '../vanguardproduction/vanguardproduction-component.js';
 
 export default function VanguardPortfolio(props) {
+
+  const [vanguardcompaniesportfolio, vanguardcompaniesportfoliocb] = useState('0vh');
+  const [vanguardbusinessesportfolio, vanguardbusinessesportfoliocb] = useState('0vh');
+
  return (
     <Col id="vanguardporfolio">
       <Col className="vanguardporfolio-porfolioscontainer">
         <Col className="vanguardporfolio-porfolioscontainer-buttoncontainer">
-          <button className="vanguardporfolio-porfolioscontainer-buttoncontainer-button">
+          <button className="vanguardporfolio-porfolioscontainer-buttoncontainer-button"
+                  onClick={()=> {
+                    vanguardcompaniesportfoliocb((height)=> height === "0vh" ? "100vh" : "0vh");
+                  }}>
             Companies
           </button>
         </Col>
-        <Row className="vanguardporfolio-porfolioscontainer-porfolioscontainer">
+        <Row className="vanguardporfolio-porfolioscontainer-porfolioscontainer"
+             style={{height: vanguardcompaniesportfolio}}>
           <Col xs={12}
                md={12}
                lg={12}
@@ -33,16 +41,20 @@ export default function VanguardPortfolio(props) {
       </Col>
       <Col className="vanguardporfolio-porfolioscontainer">
         <Col className="vanguardporfolio-porfolioscontainer-buttoncontainer">
-          <button className="vanguardporfolio-porfolioscontainer-buttoncontainer-button">
-            Companies
+          <button className="vanguardporfolio-porfolioscontainer-buttoncontainer-button"
+                    onClick={()=> {
+                      vanguardbusinessesportfoliocb((height)=> height === "0vh" ? "100vh" : "0vh");
+                    }}>
+            Businesses
           </button>
         </Col>
         <Row className="vanguardporfolio-porfolioscontainer-porfolioscontainer">
           <Col xs={12}
                md={12}
                lg={12}
-               className="vanguardporfolio-porfolioscontainer-porfolioscontainer-layoutcontainer">
-            <BusinessesPortfolio companies={props.businesses}/>
+               className="vanguardporfolio-porfolioscontainer-porfolioscontainer-layoutcontainer"
+               style={{height: vanguardbusinessesportfolio}}>
+            <BusinessesPortfolio businesses={props.businesses}/>
           </Col>
         </Row>
       </Col>
