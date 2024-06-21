@@ -5918,7 +5918,7 @@ const [companies, companiescb] = useState([
   }
 ])
 
-const [businesess, businessescb] = useState([
+const [businesses, businessescb] = useState([
   {
     details: {
       businessname: "MCKENZIE",
@@ -7655,9 +7655,9 @@ const navigate = useNavigate();
                                          
                                          companies={companies}
                                          companiescb={companiescb}
-
-                                         businesess={businesess}
-                                         businessescbb={businessescb}
+                                         
+                                         businesses={businesses}
+                                         businessescb={businessescb}
 
                                          />}>
         </Route>
@@ -7684,7 +7684,10 @@ const navigate = useNavigate();
          </Route>
 
           <Route path='/vanguardportfolio'
-                  element={<VanguardPorttfolio />}>
+                  element={<VanguardPorttfolio companies={companies}
+                                               companiescb={companiescb}
+                                               businesses={businesses}
+                                               businessescb={businessescb}/>}>
 
          </Route>
          <Route path='/purchasing'

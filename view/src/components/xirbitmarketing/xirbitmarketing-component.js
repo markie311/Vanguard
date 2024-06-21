@@ -213,24 +213,25 @@ const navigate = useNavigate();
                           marketingnavigationbuttons={marketingnavigationbuttons}/>
 
    <XirbitMarketingView marketingnavigationbarmodaldisplayproperty={marketingnavigationbarmodaldisplayproperty}
-                       marketingloadingindicationstatemodaldisplayproperty={marketingloadingindicationstatemodaldisplayproperty}
-                       user={props.user}
-                       usercb={props.usercb}
-                       purchasing={props.purchasing}
-                       purchasingcb={props.purchasingcb}
-                       merchandisescheme={props.merchandisescheme}
-                       products={props.products}
-                       marketingviewmodaldisplayproperty={marketingviewmodaldisplayproperty}
-                       viewport={props.viewport}
-                       transactionsmodaldisplayproperty={transactionsmodaldisplayproperty}
-                       
-                       requesttransactiondata={props.requesttransactiondata}
-                       
-                       companies={props.companies}
-                       companiescb={props.companiescb}
-                       
-                       businesess={props.businesess}
-                       businessescbb={props.businessescb}/>
+                        marketingloadingindicationstatemodaldisplayproperty={marketingloadingindicationstatemodaldisplayproperty}
+                        user={props.user}
+                        usercb={props.usercb}
+                        purchasing={props.purchasing}
+                        purchasingcb={props.purchasingcb}
+                        merchandisescheme={props.merchandisescheme}
+                        products={props.products}
+                        marketingviewmodaldisplayproperty={marketingviewmodaldisplayproperty}
+                        viewport={props.viewport}
+                        transactionsmodaldisplayproperty={transactionsmodaldisplayproperty}
+                        
+                        requesttransactiondata={props.requesttransactiondata}
+                        
+                        companies={props.companies}
+                        companiescb={props.companiescb}
+                        
+                        businesses={props.businesses}
+                        businessescb={props.businessescb}
+                        />
 
    <Col id='xirbitmarketing-xirbitgraphmarketing'>
     <XirbitMarketingGragphContainer />
@@ -291,8 +292,8 @@ function XirbitMarketingView(props) {
         id='xirbitmarketing-viewcontainer'>
 
      <XirbitMarketingNavigationBar marketingnavigationbarmodaldisplayproperty={props.marketingnavigationbarmodaldisplayproperty}
-                                  companies={props.companies}
-                                  companiescb={props.companiescb}/>
+                                   companies={props.companies}
+                                   companiescb={props.companiescb}/>
 
      <XirbitMarketingLoadingIndicationStateModal marketingloadingindicationstatemodaldisplayproperty={props.marketingloadingindicationstatemodaldisplayproperty}/>
 
@@ -518,9 +519,11 @@ function XirbitMarketingView(props) {
       <Col id="companiesportfoliocontainer">
          <CompaniesPortfolio companies={props.companies}/>
       </Col>
-
+    
       <Col id="businessportfoliocontainer">
-         <BusinessesPortfolio businesses={props.businesess}/>
+         <BusinessesPortfolio  businesses={props.businesses}
+                               businessescb={props.businessescb}
+                               companies={props.companies}/>
       </Col>
 
       <Col id="vanguardproductioncontainer">
