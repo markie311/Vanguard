@@ -709,7 +709,7 @@ return (
                               user={props.user}
                               usercb={props.usercb}
                               
-                              compttemptforceupdatetempfunction={compttemptforceupdatetempfunction}/>
+                               compttemptforceupdatetempfunction={compttemptforceupdatetempfunction}/>
 
   </Col>
  </Row>
@@ -807,8 +807,7 @@ function OfficeHamburgerContentView(props) {
                             officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
                             
                             user={props.user}
-                            usercb={props.usercb}
-                            
+                           usercb={props.usercb}
                             />              
       </Col>
   )
@@ -858,7 +857,7 @@ function OfficeHamburgerView(props) {
 	                onClick={(evt)=> {
                     props.officehamburgerdataviewcb((view)=> view = evt.target.innerText);
 		     }}>
-	         Monitoring
+	          Monitoring
 	        </button>
         </Col>
 
@@ -870,7 +869,7 @@ function OfficeHamburgerView(props) {
 	                 onClick={(evt)=> {
                    props.officehamburgerdataviewcb((view)=> view = evt.target.innerText);
 		        }}>
-	         People
+	          People
 	        </button>
         </Col>
 
@@ -932,7 +931,7 @@ function OfficeHamburgerView(props) {
 	         md={3}
 	         lg={3}
 	         className="officehamburger-dataview-navigationgridcontainer-navigationbuttoncontainer">
-	     <button className="officehamburger-dataview-navigationgridcontainer-navigationbutton" 
+	      <button className="officehamburger-dataview-navigationgridcontainer-navigationbutton" 
 	            onClick={(evt)=> {
 	              props.officehamburgercargodataviewcb((transaction)=> transaction = true)
 	              props.officehamburgerrequestsdataviewcb((transaction)=> transaction = false)
@@ -1031,7 +1030,7 @@ function OfficeHamburgerView(props) {
                                  officehamburgerrequesttransactiondatacb={props.officehamburgerrequesttransactiondatacb}
                                  
                                  user={props.user}
-                                 usercb={props.usercb}/>
+                                usercb={props.usercb}/>
      </Row>
 
     </Col>
@@ -1330,6 +1329,7 @@ function OfficeHamburgerTransactionDataView(props) {
 function OfficehamburgerTransactionsData(props) {
  return (
   <Col id="officehamburger-transactionsdata">
+
     <Row id="officehamburger-transactionsdata-navigationcontainer">
       <Col xs={12}
            md={3}
@@ -1346,7 +1346,7 @@ function OfficehamburgerTransactionsData(props) {
            md={3}
 	         lg={3}
 	         className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
-        <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
+         <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
 	        onClick={(evt)=> {
                props.officehamburgertransactiondataheadercb((header)=> header = "Public accounts");
 	      	}}>
@@ -1356,7 +1356,7 @@ function OfficehamburgerTransactionsData(props) {
       <Col xs={12}
            md={3}
       	   lg={3}
-	   className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
+      	   className="officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer">
         <button className="officehamburger-transactionsdata-navigationcontainer-navigationbutton"
 	        onClick={(evt)=> {
               props.officehamburgertransactiondataheadercb((header)=> header = "Private accounts authentication");
@@ -1365,21 +1365,22 @@ function OfficehamburgerTransactionsData(props) {
 	      </button>
       </Col>
     </Row>
+
     <Col id="officehamburger-transactionsdata-view">
 
      <Row id="officehamburger-transactionsdata-indicationscontainer">
       <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer">
+	         md={12}
+	         lg={12}
+	         className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer">
        <h1 className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindication">      
-	   {props.officehamburgertransactiondataheader}
-      </h1>
-     </Col>
-     <Col xs={12}
-	   md={12}
-	   lg={12}
-	   className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer"> 
+	      {props.officehamburgertransactiondataheader}
+       </h1>
+      </Col>
+      <Col xs={12}
+	         md={12}
+	         lg={12}
+	         className="officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer"> 
        {
          props.officehamburgerrequestsdataview && 
 	     <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
@@ -1394,9 +1395,9 @@ function OfficehamburgerTransactionsData(props) {
        </p>
 	   }
 	   {
-         props.officehamburgertransactionsdataview && 
-	     <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
-	        onClick={(evt)=> {
+       props.officehamburgertransactionsdataview && 
+	      <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
+	         onClick={(evt)=> {
 
            const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-baranggaydatamodal");
 
@@ -1407,8 +1408,8 @@ function OfficehamburgerTransactionsData(props) {
        </p>
   	}
 
-     {
-         props.officehamburgercargodataview && 
+    {
+       props.officehamburgercargodataview && 
 	      <p className="officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication"
 	          onClick={(evt)=> {
 
@@ -1421,25 +1422,24 @@ function OfficehamburgerTransactionsData(props) {
        </p>
 	   }
 
-       </Col>
-
+      </Col>
      </Row>
 
 
-      <Col id="officehamburger-transactionsdata-baranggaydatamodal">
+    <Col id="officehamburger-transactionsdata-baranggaydatamodal">
 
-        <Row id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">
+      <Row id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">
 
-          {
-            props.baranggaytransactiondata.length === 0 ? 
-            (
-              <p id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">Empty</p>
-            )
-            :
-            (
-             <React.Fragment>
-              {
-               props.baranggaytransactiondata.map((location, locationidx)=> {
+       {
+         props.baranggaytransactiondata.length === 0 ? 
+          (
+           <p id="officehamburger-transactionsdata-baranggaydatamodal-gridcontainer">Empty</p>
+          )
+          :
+          (
+           <React.Fragment>
+           {
+           props.baranggaytransactiondata.map((location, locationidx)=> {
 
                 const _transactions = props.vanguarddata.marketing.products.merchandises.filter((transactions)=> transactions.cargo.locations.destination.baranggay === location);
                 const _requests = _transactions.length;
@@ -1486,9 +1486,9 @@ function OfficehamburgerTransactionsData(props) {
             )
           }
       
-       </Row>
+      </Row>
 
-        <Col id="officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer">
+      <Col id="officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer">
               <button id="officehamburger-transactionsdata-baranggaydatamodal-closebutton"
                     onClick={(evt)=> {
 
@@ -1499,9 +1499,9 @@ function OfficehamburgerTransactionsData(props) {
               }}>
                 close
               </button>
-        </Col>
-
       </Col>
+
+    </Col>
        
 
       <Col id="officehamburger-transactionsdata-streetsdatamodal">  
@@ -1837,16 +1837,16 @@ function OfficehamburgerTransactionsData(props) {
         </Row>
 
        <Col id="officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer">
-      <button id="officehamburger-transactionsdata-requestsdatamodal-closebutton"
-              onClick={(evt)=> {
+         <button id="officehamburger-transactionsdata-requestsdatamodal-closebutton"
+                onClick={(evt)=> {
 
                 const _baranggaydatacontainer = document.querySelector("#officehamburger-transactionsdata-requestsdatamodal");
 
                _baranggaydatacontainer.style.display = "none";
 
         }}>
-        close
-      </button>
+          close
+        </button>
        </Col>
 
       </Row>
@@ -5434,7 +5434,7 @@ function OfficeHamburgerMoneyAndFundsDataView() {
              lg={6}
              className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
           <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
-            <h6 className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Widthdrawals</h6>
+            <h6 className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Money Widthdrawals</h6>
             <br />
             <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests, 0</p>
             <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests completion, <span>0</span> out <span>0</span></p>
@@ -5444,13 +5444,6 @@ function OfficeHamburgerMoneyAndFundsDataView() {
                       _requestsdatamodal[0].style.display = "block";
                     }}>
               Money
-            </button>
-            <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-fundsbutton"
-                    onClick={()=> {
-                      const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
-                      _requestsdatamodal[0].style.display = "block";
-                    }}>
-              Funds
             </button>
           </Col>
           <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
@@ -5479,6 +5472,106 @@ function OfficeHamburgerMoneyAndFundsDataView() {
               })
              }
             </Col>
+          </Col>
+        </Col>
+        <Col xs={12}
+               md={6}
+               lg={6}
+               className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+            <h6 className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Funds Widthdrawals</h6>
+            <br />
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests, 0</p>
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests completion, <span>0</span> out <span>0</span></p>
+            <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-fundsbutton"
+                    onClick={()=> {
+                      const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                      _requestsdatamodal[1].style.display = "block";
+                    }}>
+              Funds
+            </button>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+            <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer">
+              <button id="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-closebutton"
+                      onClick={(evt)=> {
+                        const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                        _requestsdatamodal[1].style.display = "none";
+                      }}>
+                close
+              </button>
+              {
+              ["0", "1", "2", "3"].map((widthdrawaldata, widthdrawaldataidx)=> {
+                return (
+                  <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-datacontainer">
+                     <p key={widthdrawaldataidx}
+                        className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication">
+                     <span>Amount: 30</span> <span>Date: Mar 1, 2024, 24:23</span> <span>Name: Mark Beloy</span> <span>Authentication ID: ASAD-1234-QWERTYTREWQ</span> <span>Phone number: 09958749222</span></p>
+                     <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusandaccomodationbuttoncontainer">
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton">Status: <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusheaderindication">Accomodate</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                      <p></p>
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton"><span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateheaderindication">Confirmed and Money was already sent</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                     </div>
+                  </div>
+                )
+              })
+             }
+            </Col>
+          </Col>
+        </Col>
+        <Col xs={12}
+             md={6}
+             lg={6}
+             className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+            <h6 className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Deposits</h6>
+            <br />
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests, 0</p>
+            <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">Requests completion, <span>0</span> out <span>0</span></p>
+            <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-moneybutton"
+                    onClick={()=> {
+                      const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                      _requestsdatamodal[2].style.display = "block";
+                    }}>
+              Money deposits
+            </button>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
+            <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer">
+              <button id="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-closebutton"
+                      onClick={(evt)=> {
+                        const _requestsdatamodal = document.querySelectorAll(".officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer");
+                        _requestsdatamodal[2].style.display = "none";
+                      }}>
+                close
+              </button>
+              {
+              ["0", "1", "2", "3"].map((widthdrawaldata, widthdrawaldataidx)=> {
+                return (
+                  <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-datacontainer">
+                     <p key={widthdrawaldataidx}
+                        className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication">
+                     <span>Amount: 30</span> <span>Date: Mar 1, 2024, 24:23</span> <span>Name: Mark Beloy</span> <span>Authentication ID: ASAD-1234-QWERTYTREWQ</span> <span>Phone number: 09958749222</span></p>
+                     <div className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusandaccomodationbuttoncontainer">
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton">Status: <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusheaderindication">Accomodate</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                      <p></p>
+                      <button className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton"><span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateheaderindication">Confirmed and Money was already sent</span> <span className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication"><Spinner animation="border" variant="primary" /></span></button>
+                     </div>
+                  </div>
+                )
+              })
+             }
+            </Col>
+          </Col>
+        </Col>
+        <Col xs={12}
+             md={6}
+             lg={6}
+             className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer">
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer">
+           <p className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication">History</p>
+          </Col>
+          <Col className="officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer">
           </Col>
         </Col>
         <Col xs={12}

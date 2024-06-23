@@ -9,13 +9,14 @@ $containersonidlebgcolor: #e2e4e1;
 @media only screen and (max-width:600px) {
 #officehamburger {
 position:relative; 
-height:100%; 
+height:auto; 
 width:100%;
 margin-left:auto;
 margin-right:auto;
 }
 #office-hamburgercontentnavigation {
 position:relative;
+border:none;
 height:auto;
 width:100%;
 margin-left:auto;
@@ -26,16 +27,15 @@ padding:30px 0px;
 position:relative;
 height:7vh;
 display:flex;
-justify-content:center;
+justify-content:flex-start;
 align-items:center;
-padding:30px 0px;
 }
 .office-hamburgercontent-navigationbutton {
 position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 15px;
@@ -43,14 +43,22 @@ outline-style:none;
 }
 #office-hamburgercontent {
 position:relative;
-height:125vh;
-margin-left:auto;                                 margin-right:auto;
+border:0.3vh solid white;
+border-radius:40px;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-padding:0;
+padding:30px 0px;
 overflow-x:hidden;
 overflow-y:scroll;
+}
+#office-hamburgercontent::-webkit-scrollbar {
+display: none;
+}
+#office-hamburgercontent {
+-ms-overflow-style: none; 
+scrollbar-width: none; 
 }
 #office-hamburgerofficeview {
 position:relative; 
@@ -61,28 +69,39 @@ margin-right:auto;
 }
 #officehamburgercontentview {
 position:relative;  
-height:auto;                                      width:100%;                                       margin-left:auto;                                 margin-right:auto;
+border:1vh solid yellow;
+height:auto;                                    
+width:100%;                                   
+margin-left:auto;                              
+margin-right:auto;
 }
 #officehamburgerview {
 position:relative;
+border:1vh solid green;
 height:auto; 
 width:100%;
-margin-left:auto;                                 margin-right:auto;
+margin-left:auto;                                 
+margin-right:auto;
 }
 #officehamburger-dataview {
 position:relative;
-height:auto;                                      width:100%;
-margin-left:auto;                                 margin-right:auto;
+border:1vh solid dodgerblue;
+height:auto;                                      
+width:100%;
+margin-left:auto;                                 
+margin-right:auto;
 }
 #officehamburger-dataview-navigationpositioningcontainer {
 position:relative;
-height:35%;
+border:1vh solid skyblue;
+height:auto;
 width:100%;
 padding:0;
 }
 #officehamburger-dataview-navigationgridcontainer {
 position:relative;
-height:100%;
+border:1vh solid maroon;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -104,7 +123,7 @@ background-color:black;
 border:0.1 solid white;
 border-radius:20px;
 font: auto {
- family: $sub-font
+family: $sub-font
 }
 color:white;
 padding: 5px 20px;
@@ -113,6 +132,7 @@ outline-style:none;
 ///// data 
 #officehamburger-dataview-datacontainer {
 position:relative;
+border:1vh solid green;
 height:auto;
 width:100%;
 margin-left:auto;
@@ -125,35 +145,105 @@ width:100%;
 }
 #officehamburger-dataview-datamodal {
 position:relative;
+border:1vh solid red;
 height:auto;
 width:100%;
 padding:0;
 }
 //// monitoring 
 #officehamburger-dataview-datacontainer-monitoring {
- position:relative;
- border:1vh solid yellow;
- height:auto;
- width:100%;
- margin-left:auto;
- margin-right:auto;
+position:relative;
+border:1vh solid yellow;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
 }
 ///// people 
 #officehamburger-dataview-datacontainer-people {
- position:relative;
- border:1vh solid red;
- height:auto;
- width:100%; 
- margin-left:auto;
- margin-right:auto;
+position:relative;
+border-top:0.3vh solid white;
+height:100vh;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
+padding:20px 10px;
+}
+#officehamburger-dataview-datacontainer-people-datagridcontainer {
+position:absolute;
+height:100%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer {
+position:relative;
+height:50%;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+.officehamburger-dataview-datacontainer-people-datagridcontainer-colcontainer-subheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.1vh;
+user-select:none;
+text-decoration:underline;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer {
+position:absolute;
+background-color: $mainbgcolor;
+border:0.1vh solid white;
+border-radius:20px;
+height:80%;
+width:70%;
+top:0;
+left:0;
+transform: translate(20%,10%);
+padding:0;
+display:none;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-closebuttoncontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-closebuttoncontainer-closebutton {
+position:relative;
+font: auto {
+family: $sub-font;
+size:16px;
+}
+letter-spacing:0.5vh;
+color:white;
+user-select:none;
+top:0.5vh;
+right:1vh;
+}
+#officehamburger-dataview-datacontainer-people-modalcontainer-contentcontainer {
+position:relative;
+border:0.1vh solid white;
+height:90%;
+width:100%;
+padding:0;
 }
 ///// marketing
 #officehamburger-dataview-datacontainer-marketing {
- position:relative;
- height:auto;
- width:100%; 
- margin-left:auto;
- margin-right:auto;
+position:relative;
+height:auto;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
 }
 #officehamburger-dataview-datacontainer-marketingnavigtionbuttongridcontainer {
 position:relative;
@@ -174,7 +264,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 15px;
@@ -183,7 +273,7 @@ outline-style:none;
 #officehamburger-dataview-datacontainer-datacontainer {
 position:relative;
 border:0.1vh solid black;
-height:70vh;
+height:90vh;
 width:100%;
 margin-top:10vh;
 overflow:hidden;
@@ -193,6 +283,22 @@ padding:0px;
 position:relative;
 height:100%;
 width:100%;
+//overflow-x:hidden;
+//overflow-y:scroll;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar {
+width: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+#officehamburger-dataview-datacontainer-datacontainer-dataview::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
 }
 //// marketing merchandise
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer {
@@ -231,7 +337,7 @@ padding:5px 0px;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-enterproductidheaderindication {
 position: relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 }
@@ -241,17 +347,18 @@ background-color: transparent;
 border:none;
 border-bottom:0.1vh solid white;
 height:5vh;
-width:90%;
+width:30%;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color: white;
+text-align:center;
 outline-style:none;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedata-searchcontainer-searchfieldresponsemessage {
 position: relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 top:2vh;
@@ -279,7 +386,7 @@ position: relative;
 background-color: black;
 border-radius: 20px;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 padding: 5px 15px;
@@ -289,8 +396,8 @@ user-select:none;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer {
 position:absolute;
 background-color:white;
-height:100%;
-width:100%;
+height:80%;
+width:80%;
 left:-100%;
 z-index:1;
 transition:0.5s ease;
@@ -309,6 +416,7 @@ transition:0.5s ease;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer {
 position:relative;
 border:0.3vh solid black;
+border:1vh solid red;
 border-radius:35px;
 height:100%;
 width:100%;
@@ -317,33 +425,34 @@ overflow-x:hidden;
 overflow-y:scroll;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar {
- height:10px;
- width: 5px;
- border-radius:25px;
+height:10px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
+background: #b30000;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultslayoutcontainer-closebuttoncontainer {
 position: relative;
-height:10%;
+border:1vh solid red;
+height:5%;
 width:100%;
 display:flex;
 justify-content:flex-end;
-align-items:flex-end;
+align-items:center;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color: black;
 letter-spacing:2px;
@@ -353,7 +462,8 @@ right:1.5vh;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataresultscontainer-merchandisedataresultscontainer-formdatamodalcontainer {
 position:relative;
-height:auto;
+border:1vh solid red;
+height:95%;
 width:100%;
 padding:0
 }
@@ -372,8 +482,6 @@ height:90%;
 width:90%;
 transform:translate(5%, 5%) scale(1, 1);
 transition: 1s ease;
-overflow-x:hidden;
-overflow-y:scroll;
 padding:15px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer {
@@ -385,13 +493,41 @@ width:100%;
 overflow-x:hidden;
 overflow-y:scroll;
 }
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar {
+width: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-thumb {
+background: dodgerblue; 
+border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar {
+width: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer ::-webkit-scrollbar-thumb {
+background: red; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-layoutcontainer ::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindicationcontainer {
 position:relative;
-height:10%;
+height:5%;
 width:100%;
 display:flex;
 justify-content:flex-end;
-align-items:flex-end;
+align-items:center;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedataconfigurationcontainer-closebuttonheaderindication {
 position:relative;
@@ -419,7 +555,8 @@ padding:10px 0px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-primaryheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+weight:900;
 }
 user-select:none;
 }
@@ -445,7 +582,8 @@ padding:30px 0px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-dataheaderindication {
 position:relative;
 font: auto {
- family:$sub-font;
+family:$sub-font;
+weight:900;
 }
 user-select:none;
 }
@@ -456,29 +594,30 @@ border-radius:20px;
 height:5vh;
 width:80%;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
+text-align:center;
 padding:5px 10px;
 outline-style:none;
 }
 //// display images
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer { 
 position:relative;
-border:1vh solid red;
 height:auto;
 width:100%;
 }
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimageheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 text-align:center;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-displayimagecategoryheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+weight:900;
 }
 top:1vh;
 }
@@ -504,7 +643,7 @@ border-radius:15px;
 height:5vh;
 width:30vh;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:red;
 user-select:none;
@@ -558,7 +697,7 @@ align-items:center;
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-imagedisplaymodalcontainer-closebutton {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 letter-spacing:2px;
 user-select:none;
@@ -588,7 +727,7 @@ border-radius:15px;
 height:5vh;
 width:95%;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 outline-style:none;
 padding:5px 15px;
@@ -604,8 +743,8 @@ display:none;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagecontainer-responsemessage {
 position:relative;
 font: auto {
- family:$sub-font;
- weight:900;
+family:$sub-font;
+weight:900;
 }
 user-select:none;
 }
@@ -643,7 +782,8 @@ padding:30px 20px;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-productspeficationformdatacontainer-adddifferentproductspecificationheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+weight:900;
 }
 text-align:center;
 user-select:none;
@@ -652,7 +792,7 @@ user-select:none;
 position:relative;
 height:auto;
 display:flex;
-justify-content:flex-end;
+justify-content:flex-start;
 align-items:center;
 padding:0;
 }
@@ -670,13 +810,12 @@ background-color:black;
 border:0.1vh solid black;
 border-radius:20px;
 height:100%;
-width:90%;
+width:25%;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 20px;
-right:1.5vh;
 outline-style:none;
 }
 //// main display images
@@ -686,25 +825,25 @@ height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-padding:0;
+padding:30px 0px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer {
 position:relative;
-height:20vh;
+height:23vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
-padding:0;
+padding:30px 0px;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimagecontainer {
 position:absolute;
 background-color:white;
 border-radius:50%;
-height:80%;
-width:50%;
+height:95%;
+width:14%;
 padding:3px;
 }
-.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage{
+.officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagecontainer-displayimage {
 position:relative;
 border-radius:50%;
 height:100%;
@@ -713,11 +852,13 @@ width:100%;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer {
 position:absolute;
 background-color:white;
-border:0.1vh solid;
+border:0.1vh solid black;
 border-radius:20px;
-height:50vh;
-width:100%;
-transform:translate(0%, 10%);
+height:70vh;
+width:80%;
+top:0;
+left:0;
+transform:translate(15%, -32%);
 display:none;
 z-index:1;
 padding:15px 20px;
@@ -727,11 +868,14 @@ position:relative;
 background-color:chocolate;
 height:85%;
 width:100%;
+display:flex;
+justify-content:center;
+align-items:center;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-displayimage {
 position:relative;
-height:100%;
-width:100%;
+height:80%;
+width:40%;
 }
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttoncontainer {
 position:relative;
@@ -744,7 +888,8 @@ justify-content:flex-end;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-maindisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+weight:900;
 }
 letter-spacing:2px;
 top:2vh;
@@ -814,7 +959,7 @@ justify-content:flex-end;
 .officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer-displayimagescontainer-selectiondisplayimagesgridcontainer-maindisplayimagemodalcontainer-closebuttonheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 letter-spacing:2px;
 top:2vh;
@@ -837,10 +982,12 @@ padding:0;
 ////
 #officehamburger-dataview-datacontainer-datacontainer-merchandisedatacontainer-merchandiseformdatacontainer {
 position:relative;
-height:auto;
+height:95vh;
 width:100%;
 margin-left:auto;
 margin-right:auto;
+margin-top:auto;
+margin-bottom:auto;
 padding:10px;
 }
 //// marketing load products
@@ -883,20 +1030,227 @@ transition: 1s ease;
 }
 ///// money and funds 
 #officehamburger-dataview-datacontainer-moneyandfunds {
- position:relative;
- border:1vh solid red;
- height:auto;
- width:100%; 
- margin-left:auto;
- margin-right:auto;
+position:relative;
+border:1vh solid chocolate;
+height:auto;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
+padding:30px 10px;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-navigationscontainer {
+position:relative;
+border:1vh solid green;
+height:auto;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:30px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-navigationscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+transition:all 1s ease;
+user-select:none;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer {
+position:relative;
+border:1vh solid yellow;
+height:100vh;
+overflow-y:scroll;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer {
+position:absolute;
+border:1vh solid green;
+height:auto;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer {
+position:relative;
+border:1vh solid gray;
+height:30vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:100px 10px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindicationcontainer {
+position:absolute;
+height:10%;
+width:100%;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+user-select:none;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-moneybutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+margin-top:1.5vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-headerindication-fundsbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:5px 30px;
+margin-top:1.5vh;
+left:3vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer {
+position:absolute;
+background-color:$mainbgcolor;
+border:0.5vh solid red;
+border-radius:20px;
+height:90vh;
+width:100%;
+overflow-x:hidden;
+overflow-y:scroll;
+top:0;
+left:0;
+transform: translate(-0%,-0%);
+transform:all 1s ease;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar {
+width: 5px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-thumb {
+background:dodgerblue; 
+border-radius: 10px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000; 
+}
+//// main data indications 
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 5px;
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-closebutton {
+position:relative;
+background-color:black;
+border-radius:5px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.5vh;
+padding:5px 15px;
+left:48%;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-datacontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:30px;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusandaccomodationbuttoncontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content: space-between;
+align-items: space-between;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton {
+position:relative;
+background-color: chocolate;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:black;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+left:-1vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-statusbutton-statusloadingindication {
+position:relative;
+display:none;   
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton {
+position:relative;
+background-color:dodgerblue;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+color:white;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+right:-4vh;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication {
+position:relative;
+display:none;
+}
+.officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer-maindataindicationscontainer-headerindication-accomodatebutton-accomodateloadingindication {
+position:relative;
+display:none;   
+}
+#officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentmodal {
+position:absolute;
+background-color:$mainbgcolor;
+border:0.1vh solid white;
+border-radius:30px;
+height:80%;
+width:70%;
+top:0;
+left:0;
+transform: translate(22%,10%);
+display:none;
 }
 ///// cargo 
-#officehamburger-dataview-datacontainer-cargo{
- position:relative;
- height:auto;
- width:100%; 
- margin-left:auto;
- margin-right:auto;
+#officehamburger-dataview-datacontainer-cargo {
+position:relative;
+height:auto;
+width:100%; 
+margin-left:auto;
+margin-right:auto;
 }
 /// transaction list data
 #officehamburger-transactionsdata {
@@ -907,21 +1261,17 @@ padding:0;
 }
 #officehamburger-transactionsdata-navigationcontainer {
 position:relative;
-height:40%;
+height:30%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
 padding:0;
 }
 .officehamburger-transactionsdata-navigationcontainer-navigationbuttoncontainer {
 position:relative;
 height:auto;
+width:33.3%;
 display:flex;
-flex-direction:column;
 justify-content:center;
 align-items:center;
 }
@@ -929,18 +1279,15 @@ align-items:center;
 position:relative;
 background-color: rgb(241, 192, 68);
 border:0.1vh solid goldenrod;
+height:30%;
+width:60%;
 border-radius:20px;
-height:90%;
-width:auto;
-display:block;
 font: auto {
- family:$sub-font;
- weight:900;
+family:$sub-font;
+weight:900;
 }
 color:black;
-letter-spacing:0.3vh;
-padding:7px 25px;
-margin-top:2vh;
+padding:5px 10px;
 outline-style:none;
 }
 #officehamburger-transactionsdata-view {
@@ -959,20 +1306,20 @@ margin-right:auto;
 padding:15px 0px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar {
- height:30px;
- width: 5px;
- border-radius:25px;
+height:30px;
+width: 5px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-indicationscontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
+background: #b30000;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindicationcontainer {
 position:relative;
@@ -985,34 +1332,73 @@ align-items:center;
 .officehamburger-transactionsdata-indicationscontainer-transactiondataheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 text-align:center;
+user-select:none;
 }
 .officehamburger-transactionsdata-indicationscontainer-transactiondataunderlinedheaderindication {
 position:relative;
 background-color:green;
 border-radius:20px;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+size:24px;
 }
 color:white;
 text-align:center;
-padding:15px 120px;
+user-select:none;
+padding: 10px 280px;
 }
 //// baranggays data
 #officehamburger-transactionsdata-baranggaydatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid white;
-height:auto;
-width:90%;
+height:140%;
+width:80%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
-padding:0px 10px;
+transform:translate(14.5%, -38%);
+padding:0;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer-emptytransactionheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar {
+height:30px;
+width: 10px;
+border-radius:25px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-thumb {
+background-color: dodgerblue;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-baranggaydatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-datacontainer {
 position:relative;
@@ -1020,24 +1406,6 @@ height:85%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-overflow-x:hidden;
-overflow-y:scroll;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer ::-webkit-scrollbar {
- height:30px;
- width: 5px;
- border-radius:25px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-baranggaydatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
 }
 .officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -1048,15 +1416,18 @@ position:relative;
 border-radius:20px;
 background-color:black;
 height:auto;
-width:100%;
+width:70%;
+display:block;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:60px 10px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-baranggaydatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 }
@@ -1065,7 +1436,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family: $sub-font; 
+family: $sub-font; 
 }
 color:white;
 outline-style:none;
@@ -1073,7 +1444,7 @@ padding:5px 20px;
 }
 #officehamburger-transactionsdata-baranggaydatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -1084,24 +1455,61 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 ///// streets data
-#officehamburger-transactionsdata-streetsdatamodal{
+#officehamburger-transactionsdata-streetsdatamodal {
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
-height:auto;
-width:90%;
+border-radius:20px; 
+height:100%;
+width:50%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
-padding:0px 10px;
+transform:translate(5%, -35%);
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer-emptytransactionheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar {
+height:30px;
+width: 10px;
+border-radius:25px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-thumb {
+background-color: dodgerblue;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-streetsdatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000;
 }
 #officehamburger-transactionsdata-streetsdatamodal-datacontainer {
 position:relative;
@@ -1109,24 +1517,6 @@ height:85%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
-overflow-x:hidden;
-overflow-y:scroll;
-}
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar {
- height:30px;
- width: 5px;
- border-radius:25px;
-}
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-streetsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
 }
 .officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer {
 position:relative;
@@ -1137,15 +1527,19 @@ position:relative;
 border-radius:20px;
 background-color:black;
 height:auto;
-width:100%;
+width: 70%;
+display:flex;
+flex-direction:column;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:50px 20px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-streetsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 }
@@ -1154,7 +1548,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family: $sub-font; 
+family: $sub-font; 
 }
 color:white;
 outline-style:none;
@@ -1162,7 +1556,7 @@ padding:5px 20px;
 }
 #officehamburger-transactionsdata-streetsdatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -1173,10 +1567,11 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 //// requests data
@@ -1184,55 +1579,78 @@ outline-style:none;
 position:absolute;
 background-color:$subbgcolor;
 border:0.1vh solid gray;
-height:auto;
-width:90%;
+height:90%;
+width:55%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
-padding:0px 10px;
+transform:translate(79%, -10%);
+}
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer {
+position:relative;
+height:90%;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+overflow-x:hidden;
+overflow-y:scroll;
+}
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar {
+height:30px;
+width: 5px;
+border-radius:25px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-thumb {
+background: black;
+border-radius: 10px;
+}
+#officehamburger-transactionsdata-requestsdatamodal-gridcontainer::-webkit-scrollbar-thumb:hover {
+background: #b30000;
+}
+#officehamburger-transactionsdata-requestsdatamodal-emptytransactionheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+top:2vh;
+left:1vh;
+user-select:none;
 }
 #officehamburger-transactionsdata-requestsdatamodal-datacontainer {
 position:relative;
-height:85%;
+height:auto;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 }
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar {
- height:30px;
- width: 5px;
- border-radius:25px;
-}
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
-}
-#officehamburger-transactionsdata-requestsdatamodal-datacontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
-}
+
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer {
 position:relative;
 padding:0;
 }
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay {
 position:relative;
-border-radius:20px;
 background-color:black;
+border-radius:20px;
 height:auto;
-width:100%;
+width:70%;
+display:block;
 margin-top:3vh;
-padding:10px;
+margin-left:auto;
+margin-right:auto;
+padding:30px 30px;
 outline-style:none;
 }
 .officehamburger-transactionsdata-requestsdatamodal-datacontainer-indicationscontainer-indicationcontainerasabuttontodisplay-headerindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 }
@@ -1241,7 +1659,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family: $sub-font; 
+family: $sub-font; 
 }
 color:white;
 margin-top:2vh;
@@ -1260,7 +1678,7 @@ padding:10px 5px;
 }
 #officehamburger-transactionsdata-requestsdatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:end;
@@ -1271,10 +1689,11 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family:$sub-font;
+family:$sub-font;
 }
 color:white;
 padding:5px 20px;
+right:1vh;
 outline-style:none;
 }
 //// requests data
@@ -1282,51 +1701,85 @@ outline-style:none;
 position:absolute;
 background-color:white;
 border:0.3vh solid $subbgcolor;
-height:auto;
+height:150%;
 width:90%;
 margin-left:auto;
 margin-right:auto;
 display:none;
-transform:translate(6%, 5%);
-padding:10px;
+transform:translate(6%, -35%);
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer {
 position:relative;
-height:85%;
+height:90%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
 overflow-x:hidden;
 overflow-y:scroll;
-padding:10px 5px;
+padding:15px 20px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar {
- height:30px;
- width: 5px;
- border-radius:25px;
+height:30px;
+width: 15px;
+border-radius:25px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-track {
- box-shadow: inset 0 0 5px white;
- border-radius: 10px;
+box-shadow: inset 0 0 5px white;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb {
- background: black;
- border-radius: 10px;
+background: black;
+border-radius: 10px;
 }
 #officehamburger-transactionsdata-requestdatamodal-datagridcontainer::-webkit-scrollbar-thumb:hover {
- background: #b30000;
+background: dodgerblue;
 }
 .officehamburger-transactionsdata-requestdatamodal-headerindication {
 position:relative;
 font: auto {
- family: $sub-font;
+family: $sub-font;
+weight:900;
 }
+}
+.officehamburger-transactionsdata-requestdatamodal-requestspecificationinputfield {
+position:relative;
+border: none;
+border-bottom: 0.1vh solid black;
+height:auto;
+width:40%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+letter-spacing:0.1vh;
+display:block;
+text-align:center;
+outline-style:none;
+}
+.officehamburger-transactionsdata-requestdatamodal-setrequestspecification {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+outline-style:none;
+padding:10px 30px;
+margin-top:2vh;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer {
 position:relative;
+border:1vh dotted black;
 height:auto;
+width:100%;
 margin-left:auto;
 margin-right:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+margin-top:5vh;
+padding:80px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandiseimagecontainer {
 position:relative;
@@ -1338,74 +1791,37 @@ padding:5px 20px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandiseimage {
 position:relative;
-height:28vh;
-width:100%;
+height:80%;
+width:60%;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer {
 position:relative;
-border:0.5vh dotted black;
 height:auto;
-width:100%;
-margin-top:5vh;
-padding:10px 5px;
+padding:5px;
 }
 .officehamburger-transactionsdata-requestdatamodal-merchandisespecificationcontainer {
 position:relative;
 height:auto;
 width:auto;
 }
-.officehamburger-transactionsdata-requestdatamodal-requestspecification-headerindicationcontainer {
-position:relative;
-height:auto;
-width:100%;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-padding:100px 0px;
-}
-.officehamburger-transactionsdata-requestdatamodal-requestspecificationinputfield {
-position:relative;
-border:none;
-border-bottom:0.2vh solid black;
-display: block;
-font: auto {
- family: $sub-font;
-}
-text-align:center;
-letter-spacing:0.3vh;
-}
-.officehamburger-transactionsdata-requestdatamodal-setrequestspecification {
-position:relative;
-background-color:black;
-border-radius:20px;
-font: auto {
- family: $sub-font
-}
-color:white;
-padding:5px 30px;
-margin-top:1.5vh;
-outline-style:none;
-}
 #officehamburger-transactionsdata-requestdatamodal-closebuttoncontainer {
 position:relative;
-height:15%;
+height:10%;
 width:100%;
 display:flex;
 justify-content:flex-end;
 align-items:center;
-padding:30px 0px;
 }
 #officehamburger-transactionsdata-requestdatamodal-closebutton {
 position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 padding:5px 15px;
-right:0.5vh;
+left:1vh;
 }
 #officehamburger-transactionsdata-requestmapmodal {
 position:absolute;
@@ -1438,7 +1854,7 @@ position:relative;
 background-color:black;
 border-radius:20px;
 font: auto {
- family: $sub-font;
+family: $sub-font;
 }
 color:white;
 padding:5px 15px;
@@ -1451,7 +1867,8 @@ background-color:red;
 border:1vh solid red;
 height:80%; 
 width:80%;
-margin-left:auto;                           margin-right:auto;
+margin-left:auto;                        
+margin-right:auto;
 top:0;
 left:0;
 transform: translate(12.5%, 0%) scale(0, 0);
@@ -2553,13 +2970,15 @@ left:3vh;
 .officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer {
 position:absolute;
 background-color:$mainbgcolor;
-border:0.1vh solid white;
+border:0.5vh solid red;
 border-radius:20px;
 height:90%;
 width:90%;
 display:none;
 overflow-x:hidden;
 overflow-y:scroll;
+top:0;
+left:0;
 }
 .officehamburger-dataview-datacontainer-moneyandfunds-contentcontainer-contentgridcontainer-colcontainer-datacontainer::-webkit-scrollbar {
 width: 5px;
