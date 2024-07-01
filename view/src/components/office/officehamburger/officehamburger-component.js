@@ -1340,7 +1340,7 @@ function OfficehamburgerTransactionsData(props) {
                    props.officehamburgertransactiondataheadercb((header)=> header = "Commoner accounts");
 	            	}}>
 	        Commoner accounts
- 	     </button>
+ 	      </button>
       </Col>
       <Col xs={12}
            md={3}
@@ -1898,8 +1898,8 @@ function OfficehamburgerTransactionsData(props) {
                             md={6}
                             lg={6} 
                             className="officehamburger-transactionsdata-requestdatamodal-merchandisecargodetailscontainer">
-                        <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer">
-                          <Col xs={6}
+                        <Row className="officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer officehamburger-transactionsdata-requestdatamodal-merchandisespecificationgridcontainer2">
+                          <Col xs={12}
                                md={6}
                                lg={6}
                               className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
@@ -1910,7 +1910,7 @@ function OfficehamburgerTransactionsData(props) {
                             <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Weight: {product.details.product.specification.weight}</p>
                             <p className="officehamburger-transactionsdata-requestdatamodal-headerindication">Price: {product.details.product.pricesbreakdown.price}</p>
                           </Col>
-                          <Col xs={6}
+                          <Col xs={12}
                                md={6}
                                lg={6}
                                className="officehamburger-transactionsdata-requestdatamodal-indicationcontainer">
