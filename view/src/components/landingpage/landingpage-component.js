@@ -18,6 +18,7 @@ import LPSemiFooter from './lpsemifooter-component';
 import NavigationButtons from '../navigations/navigationbuttons/navigationbuttons-component.js';
 import Footer from '../footer/footer-component.js';
 import XirbitGraph from '../graph/xirbitgraph-component.js';
+import Deposit from '../deposit/deposit-component.js';
 import WidthdrawalsGrid from '../widthdrawals/widthdrawalsgrid-component.js';
 import PrivacyAndPolicy from '../privacyandpolicy/privacyandpolicy-component.js';
 
@@ -34,14 +35,14 @@ export default function LandingPage(props) {
           md={12}
           lg={12}
           id='landingpage-navigationbargraphheadercontainer'>
-     <p id='landingpage-navigationbargraphclosebutton'
-        onClick={(evt)=> {
-         if ( props.viewport === 'xs' ) {
-             props.landingpagenavigationbargraphleftpropertycb((left)=> left === '90%' ? '0' : '-90%')
-             return 
-         }
-             props.landingpagenavigationbargraphleftpropertycb((left)=> left === '80%' ? '0' : '-80%')
-        }}>close</p>
+      <p id='landingpage-navigationbargraphclosebutton'
+         onClick={(evt)=> {
+          if ( props.viewport === 'xs' ) {
+              props.landingpagenavigationbargraphleftpropertycb((left)=> left === '90%' ? '0' : '-90%');
+              return 
+          }
+              props.landingpagenavigationbargraphleftpropertycb((left)=> left === '80%' ? '0' : '-80%');
+         }}>close</p>
      </Col>
      <Col xs={12}
           md={12}
@@ -51,6 +52,18 @@ export default function LandingPage(props) {
                     usercb={props.usercb}/>
      </Col>
    </Row>
+   <Col id="landingpage-depositnavigationcontainer"
+        style={{left: props.landingpagedepositnavigationleftproperty}}>
+     <Col id="landingpage-depositnavigationcontainer-navigationcontainer">
+       <Deposit />
+     </Col>
+     <Col id="landingpage-depositnavigationcontainer-closebuttoncontainer">
+       <p id="landingpage-depositnavigationcontainer-closebuttoncontainer-closebutton"
+          onClick={()=> {
+            props.landingpagedepositnavigationleftpropertycb((left)=> left = '-100%');
+          }}>close</p>
+     </Col>
+   </Col>
    <Row id='landingpage-widthdrawalsnavigationcontainer'
         style={{width: props.landingpagewidthdrwalnavigationwidthproperty, left: props.landingpagewidthdrwalnavigationleftproperty}}>
       <Col xs={12}
@@ -79,8 +92,13 @@ export default function LandingPage(props) {
     <LandingPageIntroduction />
     <LPSemiFooter />
     <NavigationButtons viewport={props.viewport}
+
                        landingpagenavigationbargraphleftproperty={props.landingpagenavigationbargraphleftproperty}
                        landingpagenavigationbargraphleftpropertycb={props.landingpagenavigationbargraphleftpropertycb}
+
+                       landingpagedepositnavigationleftproperty={props.landingpagedepositnavigationleftproperty}
+                       landingpagedepositnavigationleftpropertycb={props.landingpagedepositnavigationleftpropertycb}
+
                        landingpagewidthdrwalnavigationleftpropertycb={props.landingpagewidthdrwalnavigationleftpropertycb}
 
                        welcomeintroductiontopprop={props.welcomeintroductiontopprop}

@@ -1,0 +1,357 @@
+$main-font: "Titillium Web", sans-serif;
+$sub-font: "Quicksand", sans-serif;
+$robotic-font: "Nova Round", cursive;
+$mainbgcolor: #2b2b31;
+$subbgcolor: #27272b;
+$containersonidlebgcolor: #e2e4e1;
+
+@media only screen and (max-width: 600px) {
+#deposit { 
+position:relative;
+height:100%;
+width:100%;
+}
+#deposit-headerindicationscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+padding:10px 5px;
+}
+#deposit-mainheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:18px;
+}
+color:white;
+}
+.deposit-secondarymainheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;    
+}
+.deposit-subheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+}
+.deposit-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+letter-spacing:0.2vh;
+}
+#deposit-depositconfigurationcontainer {
+position:relative;
+height:70%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 5px;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttonscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content: space-evenly;
+align-items:center;
+padding:20px 15px;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:10px 25px;
+outline-style:none;
+}
+#deposit-choosetypeoftransactionheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+}
+#deposit-depositconfigurationcontainer-deposittransactiontypecontainer {
+position:relative;
+height:auto;
+width:100%;
+padding:15px;
+}
+#deposittransactiontypecontainer {
+position:relative;
+height:100%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.deposittransactiontypecontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.2vh;
+}
+#deposittransactiontypecontainer-processesheaderindicationscontainer {
+position:relative;
+height: auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+top:2vh;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer {
+position:relative;
+height: 90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+top:4vh;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer-notifythetelleraboutthisrequest {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+size:14px;
+weight:900;
+}
+color:white;
+padding:0px 35px;
+letter-spacing:0.3vh;
+outline-style:none;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer-notifythetellerthatyouwillalreadysendtheamount {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+padding:10px 35px;
+outline-style:none; 
+letter-spacing:0.3vh;  
+display:none;
+}
+#deposittransactiontypecontainer-depositconfigurationresponsemessageheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:14px;
+}
+color:white;
+text-align:center;
+user-select:none;
+top:4vh;
+display:none;
+}
+}
+@media only screen and (min-width: 1200px) {
+#deposit { 
+position:relative;
+height:100%;
+width:100%;
+}
+#deposit-headerindicationscontainer {
+position:relative;
+height:30%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:flex-start;
+}
+#deposit-mainheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:30px;
+}
+color:white;
+}
+.deposit-secondarymainheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+    size:30px;
+}
+color:white;    
+}
+.deposit-subheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:25px;
+}
+color:white;
+}
+.deposit-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.2vh;
+}
+#deposit-depositconfigurationcontainer {
+position:relative;
+height:70%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttonscontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+justify-content: space-evenly;
+align-items:center;
+}
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:10px 25px;
+outline-style:none;
+}
+#deposit-choosetypeoftransactionheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:30px;
+}
+color:white;
+}
+#deposit-depositconfigurationcontainer-deposittransactiontypecontainer {
+position:relative;
+height:auto;
+width:100%;
+}
+#deposittransactiontypecontainer {
+position:relative;
+height:100%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.deposittransactiontypecontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.2vh;
+}
+#deposittransactiontypecontainer-processesheaderindicationscontainer {
+position:relative;
+height: 10%;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0px 50px;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer {
+position:relative;
+height: 90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer-notifythetelleraboutthisrequest {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:white;
+padding:10px 35px;
+letter-spacing:0.3vh;
+outline-style:none;
+}
+#deposittransactiontypecontainer-configurationbuttoncontainer-notifythetellerthatyouwillalreadysendtheamount {
+position:relative;
+background-color:black;
+border-radius:20px;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:10px 35px;
+outline-style:none; 
+letter-spacing:0.3vh;  
+display:none;
+}
+#deposittransactiontypecontainer-depositconfigurationresponsemessageheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+user-select:none;
+display:none;
+}
+}

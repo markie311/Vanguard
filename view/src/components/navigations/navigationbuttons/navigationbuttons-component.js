@@ -7,11 +7,11 @@ import { Row, Col } from 'react-bootstrap';
 
 import { useNavigate }  from 'react-router-dom';
 
-import '../../../styles/navigations/navigationbuttons/navigationbuttons.scss'
+import '../../../styles/navigations/navigationbuttons/navigationbuttons.scss';
 
 export default function NavigationButtons(props) {
 
-  const [, rerendercomponent] = useState();
+ const [, rerendercomponent] = useState();
  const compttemptforceupdatetempfunction = useCallback(() => rerendercomponent({}), []);
 
  const navigate = useNavigate();
@@ -19,6 +19,10 @@ export default function NavigationButtons(props) {
  const navigationbuttons = [
   {
     buttonindication: 'Vanguard portfolio',
+    buttonlink: null
+  },
+  {
+    buttonindication: 'Deposit',
     buttonlink: null
   },
   {
@@ -107,6 +111,33 @@ export default function NavigationButtons(props) {
                           props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
                           props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
+                      }}>
+                  0{idx}. {button.buttonindication}
+              </button>
+         </Col>
+          )
+        }
+        if ( button.buttonindication === 'Deposit' ) {
+          return (
+           <Col xs={12}
+                md={12}
+                lg={12}
+                className='navigationbuttons-buttonscontainer'>
+              <button className='navigationbuttons-button navigationbuttons-buttonlink'
+                      key={idx}
+                      to={button.buttonlink}
+                      onClick={(evt)=> {
+
+                        if ( props.viewport === 'xs' ) {
+                            props.landingpagedepositnavigationleftpropertycb((left)=> left = '0%');
+                          return
+                        }
+
+                        props.landingpagedepositnavigationleftpropertycb((left)=> left = '0%');
+
+                        props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                        props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+                          
                       }}>
                   0{idx}. {button.buttonindication}
               </button>

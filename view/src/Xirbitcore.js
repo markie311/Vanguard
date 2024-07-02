@@ -44,6 +44,8 @@ const [welcomeintroductionopacityprop, welcomeintroductionopacitypropcb] = useSt
 const [landingpagenavigationbargraphwidthproperty, landingpagenavigationbargraphwidthpropertycb] = useState('90%');
 const [landingpagenavigationbargraphleftproperty, landingpagenavigationbargraphleftpropertycb] = useState('-100%'); 
 
+const [landingpagedepositnavigationleftproperty, landingpagedepositnavigationleftpropertycb] = useState('-100%');
+
 const [landingpagewidthdrwalnavigationwidthproperty, landingpagewidthdrwalnavigationwidthpropertycb] = useState('90%');
 const [landingpagewidthdrwalnavigationleftproperty, landingpagewidthdrwalnavigationleftpropertycb] = useState('-90%');
 
@@ -7635,6 +7637,9 @@ const navigate = useNavigate();
                                       landingpagenavigationbargraphwidthpropertycb={landingpagenavigationbargraphwidthpropertycb}
                                       landingpagenavigationbargraphleftproperty={landingpagenavigationbargraphleftproperty}
                                       landingpagenavigationbargraphleftpropertycb={landingpagenavigationbargraphleftpropertycb}
+
+                                      landingpagedepositnavigationleftproperty={landingpagedepositnavigationleftproperty}
+                                      landingpagedepositnavigationleftpropertycb={landingpagedepositnavigationleftpropertycb}
 
                                       landingpagewidthdrwalnavigationwidthproperty={landingpagewidthdrwalnavigationwidthproperty}
                                       landingpagewidthdrwalnavigationwidthpropertycb={landingpagewidthdrwalnavigationwidthpropertycb}

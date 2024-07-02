@@ -132,6 +132,39 @@ display: none;
 -ms-overflow-style: none;  
 scrollbar-width: none;  
 }
+#landingpage-depositnavigationcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+height:100vh;
+width:100vw;
+z-index:1;
+transition: all 1s ease;
+}
+#landingpage-depositnavigationcontainer-navigationcontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+#landingpage-depositnavigationcontainer-closebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 15px;
+}
+#landingpage-depositnavigationcontainer-closebuttoncontainer-closebutton {
+position:relative;
+font: auto {
+    family: $sub-font;
+    weight:900;
+}
+color:white;
+letter-spacing: 0.3vh;
+user-select:none;
+}
 #vanguardwelcomeintroduction {
 position:absolute;
 background-color: rgb(2, 58, 114);
@@ -382,6 +415,39 @@ display: none;
 #landingpage-content {
 -ms-overflow-style: none;  
 scrollbar-width: none;  
+}
+#landingpage-depositnavigationcontainer {
+position:absolute;
+background-color:black;
+border:0.1vh solid white;
+height:100%;
+width:100%;
+z-index:1;
+transition: all 1s ease;
+}
+#landingpage-depositnavigationcontainer-navigationcontainer {
+position:relative;
+height:95%;
+width:100%;
+}
+#landingpage-depositnavigationcontainer-closebuttoncontainer {
+position:relative;
+height:5%;
+width:100%;
+display:flex;
+justify-content:flex-end;
+align-items:center;
+padding:0px 15px;
+}
+#landingpage-depositnavigationcontainer-closebuttoncontainer-closebutton {
+position:relative;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:white;
+letter-spacing: 0.3vh;
+user-select:none;
 }
 #vanguardwelcomeintroduction {
 position:absolute;
