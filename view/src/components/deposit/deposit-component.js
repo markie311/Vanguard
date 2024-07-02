@@ -27,13 +27,13 @@ export default function Deposit() {
       <Col id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer">
         <p className="deposit-secondarymainheaderindication">CHOOSE TYPE OF TRANSACTION</p>
         <Col id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttonscontainer">
-         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer"
+         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-button"
                  onClick={()=> {
                   const _deposittoggledtransactiontyperesponsmessage = document.querySelector('#deposit-choosetypeoftransactionheaderindication');
                   deposittransactiontypecb((deposittransactiontype)=> deposittransactiontype = "Gcash");
                   _deposittoggledtransactiontyperesponsmessage.innerText = "Gcash account number:  0 9 5 3 9 9 5 9 0 2 5";
                  }}>Gcash</button>
-         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer"
+         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-button"
                    onClick={()=> {
                     const _deposittoggledtransactiontyperesponsmessage = document.querySelector('#deposit-choosetypeoftransactionheaderindication');
                     deposittransactiontypecb((deposittransactiontype)=> deposittransactiontype = "Walk in");
@@ -41,7 +41,7 @@ export default function Deposit() {
                    }} >
              Walk in
          </button>
-         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer"
+         <button id="deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-button"
                    onClick={()=> {
                     const _deposittoggledtransactiontyperesponsmessage = document.querySelector('#deposit-choosetypeoftransactionheaderindication');
                     deposittransactiontypecb((deposittransactiontype)=> deposittransactiontype = "");
