@@ -187,6 +187,104 @@ user-select:none;
 top:4vh;
 display:none;
 }
+//// walk in deposits 
+#deposittransactiontypecontainer-credentialsformcontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+padding: 50px 10px;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-vanguardfullnamefield {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:90%;
+font: auto {
+ family: $sub-font;
+ weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-vanguardgcashphonenumberfield {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:90%;
+font: auto {
+family: $sub-font;
+weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-amountphonenumberfield {
+position:relative;
+background-color:black;
+border-radius:20px;
+height:5vh;
+width:90%;
+font: auto {
+ family: $sub-font;
+ weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-depositbutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:5vh;
+width:80%;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+letter-spacing:0.7vh;
+outline-style:none;
+margin-top:10vh;
+}
+#deposittransactiontypecontainer-responsemessagecontainer {
+position:absolute;
+background-color:$subbgcolor;
+border:0.7vh dotted white;
+height:45vh;
+width:90%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+top:0;
+left:0;
+transform: translate(5%, 5%);
+display: none;
+transition: all 3s ease;
+}
+.deposittransactiontypecontainer-responsemessagecontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+text-decoration:underline;
+}
 }
 @media only screen and (min-width: 1200px) {
 #deposit { 
@@ -260,8 +358,9 @@ width:100%;
 display:flex;
 justify-content: space-evenly;
 align-items:center;
+padding:50px 5px;
 }
-#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-buttoncontainer {
+#deposit-depositconfigurationcontainer-depositaccountsbuttonscontainer-button {
 position:relative;
 background-color:black;
 border-radius:20px;
@@ -354,5 +453,104 @@ font: auto {
 color:white;
 user-select:none;
 display:none;
+}
+//// walk in deposits 
+#deposittransactiontypecontainer-credentialsformcontainer {
+position:relative;
+height:auto;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-evenly;
+align-items:center;
+padding: 50px 10px;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-vanguardfullnamefield {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:25%;
+font: auto {
+family: $sub-font;
+weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-vanguardgcashphonenumberfield {
+position:relative;
+background-color:black;
+border:0.1vh solid white;
+border-radius:20px;
+height:5vh;
+width:25%;
+font: auto {
+family: $sub-font;
+weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-amountphonenumberfield {
+position:relative;
+background-color:black;
+border-radius:20px;
+height:5vh;
+width:25%;
+font: auto {
+family: $sub-font;
+weight: 900;
+}
+color:white;
+text-align:center;
+padding:10px 40px;
+outline-style:none;
+}
+#deposittransactiontypecontainer-credentialsformcontainer-depositbutton {
+position:relative;
+background-color:gray;
+border-radius:20px;
+height:5vh;
+width:30%;
+font: auto {
+family: $sub-font;
+weight:900;
+}
+letter-spacing:0.7vh;
+outline-style:none;
+margin-top:10vh;
+}
+#deposittransactiontypecontainer-responsemessagecontainer {
+position:absolute;
+background-color:$subbgcolor;
+border:0.7vh dotted white;
+height:75vh;
+width:90%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:10px 20px;
+top:0;
+left:0;
+transform: translate(5%, -45%);
+display: none;
+transition: all 3s ease;
+}
+.deposittransactiontypecontainer-responsemessagecontainer-closebuttonheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+letter-spacing:0.3vh;
+user-select:none;
+text-decoration:underline;
 }
 }

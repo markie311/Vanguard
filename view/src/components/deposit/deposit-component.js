@@ -37,7 +37,7 @@ export default function Deposit() {
                    onClick={()=> {
                     const _deposittoggledtransactiontyperesponsmessage = document.querySelector('#deposit-choosetypeoftransactionheaderindication');
                     deposittransactiontypecb((deposittransactiontype)=> deposittransactiontype = "Walk in");
-                    _deposittoggledtransactiontyperesponsmessage.innerText = "Input credentials";
+                    _deposittoggledtransactiontyperesponsmessage.innerText = "Credentials";
                    }} >
              Walk in
          </button>
@@ -129,7 +129,36 @@ function DepositTransactionType(props) {
   if ( props.deposittransactiontype === "Walk in" ) {
     return (
      <Col id="deposittransactiontypecontainer">
-       <p className="deposittransactiontypecontainer-headerindication">Walk in</p>
+      <Col id="deposittransactiontypecontainer-credentialsformcontainer">
+        <input type='text'
+               id="deposittransactiontypecontainer-credentialsformcontainer-vanguardfullnamefield"
+               placeholder="Vanguard fullname"/>
+        <br />
+        <input type='number'
+               id="deposittransactiontypecontainer-credentialsformcontainer-vanguardgcashphonenumberfield"
+               placeholder="Gcash account number"/>
+        <br />
+        <input type='number'
+               id="deposittransactiontypecontainer-credentialsformcontainer-amountphonenumberfield"
+               placeholder="Amount"/>
+        <button id="deposittransactiontypecontainer-credentialsformcontainer-depositbutton"
+                onClick={()=> {
+                  const _responsemessagecontainer = document.querySelector("#deposittransactiontypecontainer-responsemessagecontainer");
+                  _responsemessagecontainer.style.display = "flex";
+                }}>
+          DEPOSIT
+        </button>
+      </Col>
+      <Col id="deposittransactiontypecontainer-responsemessagecontainer">
+       <p className="deposittransactiontypecontainer-headerindication">A teller is required for a confirmation sync</p>
+       <p className="deposittransactiontypecontainer-responsemessagecontainer-closebuttonheaderindication"
+          onClick={()=> {
+            const _responsemessagecontainer = document.querySelector("#deposittransactiontypecontainer-responsemessagecontainer");
+            _responsemessagecontainer.style.display = "none";
+          }}>
+        CLOSE
+       </p>
+      </Col>
      </Col>
     )
  }
