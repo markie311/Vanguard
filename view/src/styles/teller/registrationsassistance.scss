@@ -8,31 +8,148 @@ $containersonidlebgcolor: #e2e4e1;
 @media only screen and (max-width:600px) {
 #registrationsassistance {
 position:relative;
-border:0.1vh solid white;
 height:100%;
 width:100%;
+}
+#registrationsassistance-registrationtypecontainer-registrationassistancecontainer {
+position:relative;
+height:25%;
+width:100%;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
+padding:20px 0px;
 }
 #registrationsassistance-mainheaderindication {
 position:relative;
 font: auto {
- family: $sub-font;
- size:18px;
+family: $sub-font;
 }
 color:white;
+text-align:center;
+}
+.registrationsassistance-subheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+text-align:center;
+}
+#registrationsassistance-registrationtypeheaderindicationcontainer {
+position:relative;
+height:15%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px 0px;
+}
+#registrationsassistance-registrationtypecontainer-registrationttypemainheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+size:25px;
+}
+color:white;
+}
+#registrationsassistance-registrationtypecontainer-registrationttypesubheaderindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+#registrationsassistance-configurationcontainer {
+position:relative;
+height:60%;
+width:100%;
+}
+#registrationsassistance-configurationcontainer-quecontainer {
+position:relative;
+height:60%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+align-items:center;
+padding:0px 15px;
+}
+.registrationsassistance-configurationcontainer-quecontainer-headerindication {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+}
+#registrationsassistance-configurationcontainer-configurationcontainer {
+position:relative;
+height:40%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-notifythetellerconfigurationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+height: auto;
+width: 80%;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:15px 30px;
+outline-style:none;
+margin-top:3vh;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton{
+position:relative;
+background-color:black;
+border-radius:20px;
+height: auto;
+width:25vw;
+font: auto {
+family: $sub-font;
+}
+color:white;
+padding:15px 30px;
+outline-style:none;
+margin-top:3vh;
+display:none;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton-sendtheamount {
+position:relative;
+font: auto {
+family: $sub-font;
+}
+color:white;
+display:none;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton-sendtheamount-loadingindicator {
+position:relative;
+display:none;
 }
 }
 @media only screen and (min-width:1200px) {
 #registrationsassistance {
 position:relative;
-border:0.1vh solid white;
 height:100%;
 width:100%;
+}
+#registrationsassistance-registrationtypecontainer-registrationassistancecontainer {
+position:relative;
+height:20%;
+width:100%;
 display:flex;
+flex-direction:column;
 justify-content:center;
 align-items:center;
+padding:20px 0px;
 }
 #registrationsassistance-mainheaderindication {
 position:relative;
@@ -40,5 +157,108 @@ font: auto {
  family: $sub-font;
 }
 color:white;
+}
+.registrationsassistance-subheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+#registrationsassistance-registrationtypeheaderindicationcontainer {
+position:relative;
+height:20%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:20px 0px;
+}
+#registrationsassistance-registrationtypecontainer-registrationttypemainheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:25px;
+}
+color:white;
+}
+#registrationsassistance-registrationtypecontainer-registrationttypesubheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+#registrationsassistance-configurationcontainer {
+position:relative;
+height:60%;
+width:100%;
+}
+#registrationsassistance-configurationcontainer-quecontainer {
+position:relative;
+height:10%;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:0px 150px;
+}
+.registrationsassistance-configurationcontainer-quecontainer-headerindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
+#registrationsassistance-configurationcontainer-configurationcontainer {
+position:relative;
+height:90%;
+width:100%;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-notifythetellerconfigurationbutton {
+position:relative;
+background-color:black;
+border-radius:20px;
+height: auto;
+width:25vw;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:15px 30px;
+outline-style:none;
+margin-top:3vh;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton{
+position:relative;
+background-color:black;
+border-radius:20px;
+height: auto;
+width:25vw;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+padding:15px 30px;
+outline-style:none;
+margin-top:3vh;
+display:none;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton-sendtheamount {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+display:none;
+}
+.registrationsassistance-configurationcontainer-configurationcontainer-configurationbutton-sendtheamount-loadingindicator {
+position:relative;
+display:none;
 }
 }
