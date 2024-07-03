@@ -59,15 +59,14 @@ color:white;
 }
 #databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication-navigatetotellerregistrationsdashboardbutton {
 position:relative;
-background-color:rgb(255, 123, 0);
+background-color:$subbgcolor;
 border-radius:20px;
 height:auto;
 width:55vw;
 font: auto {
  family: $sub-font;
- weight:900;
 }
-color:black;
+color:white;
 padding: 10px 5px;
 outline-style:none; 
 margin-top:3vh;
@@ -798,15 +797,14 @@ left:1vh;
 }
 #databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication-navigatetotellerregistrationsdashboardbutton {
 position:relative;
-background-color:rgb(255, 123, 0);
+background-color:$subbgcolor;
 border-radius:20px;
 height:auto;
 width:55vw;
 font: auto {
  family: $sub-font;
- weight:900;
 }
-color:black;
+color:white;
 padding: 10px 5px;
 outline-style:none; 
 margin-top:3vh;
