@@ -307,6 +307,7 @@ export default function Purchasing(props) {
                 <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL PURCHASE, 0 peso's</h5>
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TRANSACTION GIVE AWAY, 0 peso's</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">SHARED, 0 peso's</h5>
                 </Col>
                 </Col>
                 <Col xs={6}
@@ -341,6 +342,7 @@ export default function Purchasing(props) {
                      className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer">
                 <Col className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindicationcontainer">
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL PURCHASE, 0 peso's</h5>
+                 <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TOTAL ONLINE SHIPPING, 0 peso's</h5>
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">TRANSACTION GIVE AWAY, 0 peso's</h5>
                  <h5 className="purchasingdetails-purchasingcheckoutdetailscontainer-configurationcontainer-resultscontainer-frontreciept-detailsgridcontainer-colcontainer-mainheaderindication">SHARED, 0 peso's</h5>
                 </Col>

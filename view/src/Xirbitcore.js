@@ -25,6 +25,7 @@ import Database  from './components/database/database-component.js';
 import Office from './components/office/office-component.js';
 import Purchasing from './components/purchasing/purchasing-component.js'
 import VanguardPorttfolio from './components/portfolios/vanguardportfolio-component.js';
+import RegistrationsAssistance from './components/teller/registrationsassistance-component.js';
 
 import  barpercentagecalculation from './components/lib/barmovementpercentagecalculation.js';
 
@@ -7757,6 +7758,12 @@ const navigate = useNavigate();
                                  user={user}
                                  usercb={usercb}/>}>
          </Route>
+
+         <Route path='/registrationsassistance'
+                       element={<RegistrationsAssistance />}>
+                        
+         </Route>
+
       </Routes>
     </Container>
   );

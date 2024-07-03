@@ -2359,10 +2359,10 @@ return (
               }
             */}
 
-            if ( _button.innerText.includes("Process payment") ){
+            if ( _button.innerText.includes("Process payment") ) {
               alert('Unpayment set, complete payment service')
             } else {
-              props.purchasingcheckoutdetailsmodaldisplaypropertycb((display)=> display = "block");
+              props.purchasingcheckoutdetailsmodaldisplayproperty((display)=> display = "block");
             }
               
             }}>

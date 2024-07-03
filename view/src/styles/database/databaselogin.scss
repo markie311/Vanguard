@@ -57,6 +57,21 @@ size:16px;
 }
 color:white;
 }
+#databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication-navigatetotellerregistrationsdashboardbutton {
+position:relative;
+background-color:rgb(255, 123, 0);
+border-radius:20px;
+height:auto;
+width:55vw;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:black;
+padding: 10px 5px;
+outline-style:none; 
+margin-top:3vh;
+}
 .databaselogin-authenticationpublicitytypecontainer-privateauthenticationpublicitytypeheaderindication {
 position:relative;
 width:5vh;
@@ -780,6 +795,21 @@ font: auto {
 color:white;
 margin-top:3.5vh;
 left:1vh;
+}
+#databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication-navigatetotellerregistrationsdashboardbutton {
+position:relative;
+background-color:rgb(255, 123, 0);
+border-radius:20px;
+height:auto;
+width:55vw;
+font: auto {
+ family: $sub-font;
+ weight:900;
+}
+color:black;
+padding: 10px 5px;
+outline-style:none; 
+margin-top:3vh;
 }
 .databaselogin-authenticationpublicitytypecontainer-privateauthenticationpublicitytypeheaderindication {
 position:relative;

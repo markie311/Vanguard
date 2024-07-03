@@ -4,6 +4,8 @@ import { Row,
          Col,
          Spinner } from 'react-bootstrap';
 
+import { useNavigate } from 'react-router-dom';
+
 import '../../styles/database/databaselogin.scss';
 
 import TransactionMoneyGraph from '../transactions/money/transactionmoneygraph-component.js';
@@ -11,7 +13,12 @@ import MoneyTransaction from '../transactions/money/moneytransaction-component.j
 import TransactionFundsGraph from '../transactions/funds/transactionfundsgraph-component.js';
 import Transactions from '../transactions/request/transactions-component.js';
 
+import { timestamp } from '../../components/lib/timestamps';
+
 export default function DatabaseLogin(props) {
+
+  const navigate = useNavigate();
+
  return (
   <Col id='databaselogin'>
    <Row id='databaselogin-authenticationpublicitytypecontainer'>
@@ -42,6 +49,7 @@ export default function DatabaseLogin(props) {
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
 	      How: The payments for this registrations are free in Bank transfer, E-wallet transfer and payments through a Vanguard personel, there is no registration fee holding this account.
        </p>
+      
      
       <br/>
       <br/>
@@ -61,6 +69,7 @@ export default function DatabaseLogin(props) {
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
 	      How: The payments for this registration's are free and on a Life-time. Choose what account you feel that you belonged. Transaction give away's will be following the sequence. Activating less 3% on the 10% widthdrawal commisions you must pay a 100 peso's active within 15 days to have only 7% widthdrawal commosion's. 
        </p>
+     
 
        <br/>
        <br/>
@@ -78,6 +87,7 @@ export default function DatabaseLogin(props) {
        <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
        How: The payments for this registration's are free and on a Life-time. Choose what account you feel that you belonged. Transaction give away's will be following the sequence. Activating less 5% on the 10% widthdrawal commisions you must pay a 50 peso's active within 15 days to have only 5% widthdrawal commosion's. 
        </p>
+     
 
        <br/>                                                 
        <br/>                                                
@@ -111,6 +121,30 @@ export default function DatabaseLogin(props) {
 	       0995874922 - Gcash account number
        </p>
 
+       <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypeheaderindication'>
+	      Changing accounts                                                                                                                                                                         
+       </p>
+
+       <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
+	       Common public account - Only on 15 and 30 date's 8am-8pm PH standard time
+       </p>
+
+       <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
+	       Public account - Only on 15 and 30 date's 8am-8pm PH standard time
+       </p>
+
+       <p className='databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication'>
+	       Private account - Only on 15 and 30 date's 8am-8pm PH standard time
+       </p>
+
+       <button id="databaselogin-authenticationpublicitytypecontainer-publicauthenticationpublicitytypesubeaderindication-navigatetotellerregistrationsdashboardbutton"
+               onClick={()=> {
+                 navigate('/registrationsassistance');
+               }}
+       >
+        Navigate to teller registration's dashboard
+        </button>
+
     </Col>   
      <Col xs={12}
           md={6}
@@ -142,7 +176,7 @@ function PublicAuthenticationDetails(props) {
       <Col xs={12}
            md={12}
            lg={12}>
-        <h1 id='publicahtneticationdetails-publicauthenticationdetailsheaderindication'>Public authentication</h1>
+        <h1 id='publicahtneticationdetails-publicauthenticationdetailsheaderindication'>Practicing authentication</h1>
       </Col>
       <Col xs={12}
            md={5}
