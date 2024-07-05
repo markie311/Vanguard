@@ -41,6 +41,668 @@ margin-left: auto;
 margin-right:auto;
 padding: 0px 5px;
 }
+///// food department
+#marketing-merchandisescontainer-fooddepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-fooddepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 40px;
+user-select:none;
+}
+#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// condiments department
+#marketing-merchandisescontainer-condimentsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// meat
+#marketing-merchandisescontainer-meatdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-meatdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-meatdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// fruits
+#marketing-merchandisescontainer-fruitsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// bathing essentials
+#marketing-merchandisescontainer-bathingessentialsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// beauty products
+#marketing-merchandisescontainer-beautyproductsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:16px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:90%;
+margin-left:auto;
+margin-right:auto;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:14px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
 .marketing-merchandisescontainer-merchandisemodal {
 position:relative;
 height:auto;
@@ -579,48 +1241,8 @@ margin-left: auto;
 margin-right:auto;
 padding: 0px 5px;
 }
-///// vanguard product departments
+///// food department
 #marketing-merchandisescontainer-fooddepartment {
-position:relative;
-height:auto;
-width:100%;
-overflow:hidden;
-transition:all 1s ease;
-}
-//// condiments 
-#marketing-merchandisescontainer-condimentsdepartment {
-position:relative;
-height:auto;
-width:100%;
-overflow:hidden;
-transition:all 1s ease;
-}
-//// meat
-#marketing-merchandisescontainer-meatdepartment {
-position:relative;
-height:auto;
-width:100%;
-overflow:hidden;
-transition:all 1s ease;
-}
-//// fruits
-#marketing-merchandisescontainer-fruitsdepartment {
-position:relative;
-height:auto;
-width:100%;
-overflow:hidden;
-transition:all 1s ease;
-}
-//// bathing essentials
-#marketing-merchandisescontainer-bathingdepartment {
-position:relative;
-height:auto;
-width:100%;
-overflow:hidden;
-transition:all 1s ease;
-}
-//// beauty products
-#marketing-merchandisescontainer-beautyproductsdepartment {
 position:relative;
 height:auto;
 width:100%;
@@ -633,7 +1255,25 @@ height:10vh;
 width:100%;
 padding:10px 0px;
 }
-//// food department layout container
+#marketing-merchandisescontainer-fooddepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
 #marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
 position:relative;
 height:0px;
@@ -641,25 +1281,6 @@ width:100%;
 transition:all 1s ease;
 overflow:hidden;
 }
-.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
-position:relative;
-height:0px;
-width:100%;
-transition:all 1s ease;
-overflow:hidden;
-}
-//// condiments department layoutcontainer
-#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
-position:relative;
-height:0px;
-width:100%;
-transition:all 1s ease;
-overflow:hidden;
-}
-//// meat department layout container
-//// fruits department layout container
-//// bathing essentials department layout container
-//// beauty products department layout container
 .marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
 position:relative;
 height:auto;
@@ -676,17 +1297,18 @@ align-items:center;
 }
 .marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
 position:relative;
-background-color:white;
+background-color:dodgerblue;
+border:0.5vh dotted white;
 border-radius:20px;
 height:auto;
-width:30vw;
+width:20vw;
 font: auto {
 family: $sub-font;
 weight:900;
 style:italic;
 size:30px;
 }
-color:black;
+color:white;
 text-align:center;
 letter-spacing:0.5vh;
 padding:10px 30px;
@@ -698,40 +1320,565 @@ height:0px;
 width:100%;
 transition:all 1s ease;
 }
-#marketing-merchandisescontainer-fooddepartment-categoryheaderindication {
+//// condiments department
+#marketing-merchandisescontainer-condimentsdepartment {
 position:relative;
-background-color:white;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
 border-radius:20px;
 height:auto;
 width:30vw;
 font: auto {
- family: $sub-font;
- weight:900;
- style:italic;
- size:30px;
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
 }
-color:black;
+color:white;
 text-align:center;
 letter-spacing:0.5vh;
 padding:10px 30px;
 user-select:none;
 }
-#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindication {
+#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
 position:relative;
-background-color:white;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:20vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// meat
+#marketing-merchandisescontainer-meatdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-meatdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
 border-radius:20px;
 height:auto;
 width:30vw;
 font: auto {
- family: $sub-font;
- weight:900;
- style:italic;
- size:25px;
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
 }
-color:black;
+color:white;
 text-align:center;
 letter-spacing:0.5vh;
-padding:10px 30px  
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:20vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-meatdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-meatdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// fruits
+#marketing-merchandisescontainer-fruitsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:20vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fruitsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// bathing essentials
+#marketing-merchandisescontainer-bathingessentialsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:20vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-bathingessentialsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+//// beauty products
+#marketing-merchandisescontainer-beautyproductsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryheaderindication {
+position:relative;
+background-color:rgb(250, 47, 20);
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:dodgerblue;
+border:0.5vh dotted white;
+border-radius:20px;
+height:auto;
+width:20vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:white;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+#marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-beautyproductsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
 }
 .marketing-merchandisescontainer-merchandisemodal {
 position:relative;
