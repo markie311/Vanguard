@@ -1481,6 +1481,901 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
 
     <Row id='marketing-merchandisescontainer'>
 
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainer-fooddepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _fooddepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _fooddepartmentcategoryspecificationmodal = document.querySelector("#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+        
+              if (_fooddepartmentcategoryspecificationmodal.style.height === "0px") {
+                _fooddepartmentcategoryspecificationmodal.style.height = "auto";
+              } else {
+                _fooddepartmentcategoryspecificationmodal.style.height = "0px";
+              }
+
+           }}>Food department</p>
+       </Col>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainer-condimentsdepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _condimentsdepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _condimentsdepartmentcategoryspecificationmodal = document.querySelector("#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+
+              if ( _condimentsdepartmentcategoryspecificationmodal.style.height === "0px" ) {
+                _condimentsdepartmentcategoryspecificationmodal.style.height = "auto";
+              } else {
+                _condimentsdepartmentcategoryspecificationmodal.style.height = "0px";
+              }
+
+           }}>Condiments</p>
+       </Col>
+       <Col id="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainer-meatdepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _fooddepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _meatdepartmentcategoryspecificationmodal = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+        
+              if (_meatdepartmentcategoryspecificationmodal[2].style.height === "0px") {
+                _meatdepartmentcategoryspecificationmodal[2].style.height = "auto";
+              } else {
+                _meatdepartmentcategoryspecificationmodal[2].style.height = "0px";
+              }
+
+           }}>Meat</p>
+       </Col>
+       <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainer-fruitdepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _fooddepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _fruitdepartmentcategoryspecificationmodal = document.querySelectorAll("#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+        
+              if (_fruitdepartmentcategoryspecificationmodal[3].style.height === "0px") {
+                _fruitdepartmentcategoryspecificationmodal[3].style.height = "auto";
+              } else {
+                _fruitdepartmentcategoryspecificationmodal[3].style.height = "0px";
+              }
+
+           }}>Fruits</p>
+       </Col>
+       <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainer-bathingessentialsdepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _bathingessentialsdepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _bathingessentialsdepartmentcategoryspecificationmodal = document.querySelectorALL(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+        
+              if (_bathingessentialsdepartment[4].style.height === "0px") {
+                _bathingessentialsdepartment[4].style.height = "auto";
+              } else {
+                _bathingessentialsdepartment[4].style.height = "0px";
+              }
+
+           }}>Bathing essentials</p>
+       </Col>
+       <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
+     <Col xs={12}
+          md={12}
+          lg={12}
+          id='marketing-merchandisescontainerbeautyproductsdepartment'>
+       <Col id="marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer">
+        <p id="marketing-merchandisescontainer-fooddepartment-categoryheaderindication"
+           onClick={()=> {
+
+             const _fooddepartment = document.querySelector("#marketing-merchandisescontainer-fooddepartment");
+             const _beautyproductsdepartmentcategoryspecificationmodal = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer");
+        
+              if (_beautyproductsdepartmentcategoryspecificationmodal[5].style.height === "0px") {
+                _beautyproductsdepartmentcategoryspecificationmodal[5].style.height = "auto";
+              } else {
+                _beautyproductsdepartmentcategoryspecificationmodal[5].style.height = "0px";
+              }
+
+           }}>Beauty products</p>
+       </Col>
+       <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[0].style.height = "0px";
+            }
+               }}>Rice</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
+            }
+               }}>Canned</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+           <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+              onClick={()=> {
+               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+            
+           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
+             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
+            } else {
+               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
+           }
+              }}>Cupped</p>
+          </Col>
+          <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+          </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
+            }
+               }}>Bread</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
+            }
+               }}>Snacks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
+            }
+               }}>Meat</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+         <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
+            <p className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
+               onClick={()=> {
+                const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
+             
+            if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "") {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
+              _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
+             } else {
+                _fooddepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
+            }
+               }}>Drinks</p>
+           </Col>
+           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
+           </Col>
+         </Col>
+       </Col>
+     </Col>
+
       {
       props.products.map((merchandise, idx)=> {
         return (
@@ -1520,7 +2415,7 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
        }) 
       }
 
-       <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainer'>
+      <Row className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainer'>
 
          <Col xs={12}
               md={12}
@@ -1549,7 +2444,7 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
 
           </Col>
 
-       </Row>
+      </Row>
 
     </Row>
 

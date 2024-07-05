@@ -546,7 +546,7 @@ color:white;
 @media only screen and (min-width:1200px) {
 #xirbitmarketingdisplay {
 position:relative;
-height:100%;
+height:auto;
 width:100%;
 margin-left: auto;
 margin-right: auto;
@@ -573,11 +573,165 @@ padding:10px;
 //// merchandise container
 #marketing-merchandisescontainer {
 position:relative;
-height:86vh;
+height:auto;
 width:100%;
 margin-left: auto;
 margin-right:auto;
 padding: 0px 5px;
+}
+///// vanguard product departments
+#marketing-merchandisescontainer-fooddepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+//// condiments 
+#marketing-merchandisescontainer-condimentsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+//// meat
+#marketing-merchandisescontainer-meatdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+//// fruits
+#marketing-merchandisescontainer-fruitsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+//// bathing essentials
+#marketing-merchandisescontainer-bathingdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+//// beauty products
+#marketing-merchandisescontainer-beautyproductsdepartment {
+position:relative;
+height:auto;
+width:100%;
+overflow:hidden;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fooddepartment-categotyheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+padding:10px 0px;
+}
+//// food department layout container
+#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+//// condiments department layoutcontainer
+#marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+overflow:hidden;
+}
+//// meat department layout container
+//// fruits department layout container
+//// bathing essentials department layout container
+//// beauty products department layout container
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer {
+position:relative;
+height:auto;
+width:100%;
+transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer {
+position:relative;
+height:10vh;
+width:100%;
+display:flex;
+justify-content:flex-start;
+align-items:center;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+family: $sub-font;
+weight:900;
+style:italic;
+size:30px;
+}
+color:black;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer {
+position:relative;
+height:0px;
+width:100%;
+transition:all 1s ease;
+}
+#marketing-merchandisescontainer-fooddepartment-categoryheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+ family: $sub-font;
+ weight:900;
+ style:italic;
+ size:30px;
+}
+color:black;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px;
+user-select:none;
+}
+#marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindication {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:auto;
+width:30vw;
+font: auto {
+ family: $sub-font;
+ weight:900;
+ style:italic;
+ size:25px;
+}
+color:black;
+text-align:center;
+letter-spacing:0.5vh;
+padding:10px 30px  
 }
 .marketing-merchandisescontainer-merchandisemodal {
 position:relative;
