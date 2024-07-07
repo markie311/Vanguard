@@ -231,6 +231,20 @@ const navigate = useNavigate();
                         
                         businesses={props.businesses}
                         businessescb={props.businessescb}
+
+                        fooddepartment={props.fooddepartment}
+                        fooddepartmentcb={props.fooddepartment}
+                        condiments={props.condiments}
+                        condimentscb={props.condimentscb}
+                        meat={props.meat}
+                        meatcb={props.meatcb}
+                        fruits={props.fruits}
+                        fruitscb={props.fruitscb}
+                        bathingessentials={props.bathingessentials}
+                        bathingessentialscb={props.bathingessentialscb}
+                        beautyproducts={props.beautyproducts}
+                        beautyproductscb={props.beautyproductscb}
+
                         />
 
    <Col id='xirbitmarketing-xirbitgraphmarketing'>
@@ -303,7 +317,20 @@ function XirbitMarketingView(props) {
                     purchasingcb={props.purchasingcb}
                     merchandisescheme={props.merchandisescheme}
                     products={props.products}
-                    marketingviewmodaldisplayproperty={props.marketingviewmodaldisplayproperty}/>
+                    marketingviewmodaldisplayproperty={props.marketingviewmodaldisplayproperty}
+                    
+                    fooddepartment={props.fooddepartment}
+                    fooddepartmentcb={props.fooddepartment}
+                    condiments={props.condiments}
+                    condimentscb={props.condimentscb}
+                    meat={props.meat}
+                    meatcb={props.meatcb}
+                    fruits={props.fruits}
+                    fruitscb={props.fruitscb}
+                    bathingessentials={props.bathingessentials}
+                    bathingessentialscb={props.bathingessentialscb}
+                    beautyproducts={props.beautyproducts}
+                    beautyproductscb={props.beautyproductscb}/>
 
       <Transactions viewport={props.viewport}
                     transactionsmodaldisplayproperty={props.transactionsmodaldisplayproperty}
@@ -896,7 +923,20 @@ function MarketingView(props) {
                        purchasingcb={props.purchasingcb}
                        viewport={props.viewport}
                        merchandisescheme={props.merchandisescheme}
-                       products={props.products}/>
+                       products={props.products}
+                       
+                       fooddepartment={props.fooddepartment}
+                       fooddepartmentcb={props.fooddepartment}
+                       condiments={props.condiments}
+                       condimentscb={props.condimentscb}
+                       meat={props.meat}
+                       meatcb={props.meatcb}
+                       fruits={props.fruits}
+                       fruitscb={props.fruitscb}
+                       bathingessentials={props.bathingessentials}
+                       bathingessentialscb={props.bathingessentialscb}
+                       beautyproducts={props.beautyproducts}
+                       beautyproductscb={props.beautyproductscb}/>
     </Col>
   </Col>
  )

@@ -6758,6 +6758,7 @@ const [products, productscb] = useState([
         productname: 'Kohaku Yellow',
         rapportname: 'Rapport name',
         definition: 'Product definition',
+        category: 'Food/Rice',
         authentications: {
           producttype: 'Product type',
           productid: 'mrn-ricekohaku-1-category1'
@@ -6881,8 +6882,8 @@ const [products, productscb] = useState([
                specification: {
                 for: {
                  part: 'Product part',
-                 gender: 'Male',
-                 category: 'Adults' 
+                 gender: "Male or Female, for all type's of gender",
+                 category: 'For adults and children around 6 months' 
                 },
                 set: {
                  set: false,
@@ -6985,8 +6986,342 @@ const [products, productscb] = useState([
                specification: {
                 for: {
                  part: 'Product part',
-                 gender: 'Male',
-                 category: 'Adults' 
+                 gender: "Male or Female, for all type's of gender",
+                 category: 'For adults and children around 6 months' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 'Product weight',
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+                },
+                pricesbreakdown: {
+                  price: 10,
+                  capital: 8,
+                  suggested_retail_price: 10,
+                  vat: 2
+                },
+                cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+                },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+             },
+             system: {
+                request: {
+                  pcs: 0,
+                  orderspecification: "",
+                  product: [
+                  ],
+                  shipping: {
+                   category: 'Shipping category',
+                   weight: 'Shipping weight',
+                   fee: 0
+                  }
+                },
+                stocks: [],
+                purchase: {
+                  people: [],
+                  xirbit: []
+                }
+            }   
+            }      
+          ],
+          purchase: {
+            people: {
+              withinthiscoming15days: [],
+              last15days: [],
+              history: []
+            },
+            vanguard: {
+              withinthiscoming15days: [],
+              last15days: [],
+              history: []
+            }
+          }
+        }
+      },
+      {
+        productname: 'Kohaku Yellow',
+        rapportname: 'Rapport name',
+        definition: 'Product definition',
+        category: 'Food/Rice',
+        authentications: {
+          producttype: 'Product type',
+          productid: 'mrn-ricekohaku-1-category1'
+        },
+        details: {
+         product: {
+          name: 'Kokaku / Kohaku Yellow',
+          rapportname: 'Product rapport name',
+          definition: 'Product definition',
+          category: 'Food/Rice',
+          specification: {
+           for: {
+            part: '50kg',
+            gender: "Male or Female, for all type's of gender",
+            category: 'For adults and children around 6 months' 
+           },
+           set: {
+            set: false,
+            productindication: 'Special',
+            pcs: 0
+           },
+           size: 'Product size',
+           color: 'Product color',
+           weight: 50000,
+           top: 'Top product specification',
+           left: 'Left product specification',
+           bottom: 'Bottom product specification',
+           right: 'Right product specification',
+           front: 'Front product specification',
+           back: 'Back product specification',
+           facts: {
+            ingredients: []
+           }
+          },
+          pricesbreakdown: {
+            price: 10,
+            capital: 8,
+            suggested_retail_price: 10,
+            vat: 2
+          },
+          cybervisual: {
+            images: {
+              maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+              maindisplayimages: [
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              },
+              {
+                displayimage: '../images/landingpage/bondpaperimage.jpg'
+              }
+              ]
+            },
+            videos: [
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              },
+              {
+                youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+              }
+            ]
+          }
+        },
+        locations: {
+          operations: [
+            {
+              street: 'Street',
+              baranggay: 'Baranggay',
+              trademark: 'Trademark',
+              city: 'City',
+              province: 'Province',
+              country: 'Country'
+            }
+          ]
+        }
+        },
+        system: {
+          request: {
+            pcs: 0,
+            orderspecification: "",
+            merchandise: {
+              price: 0,
+              capital: 0,
+              suggested_retail_price: 0,
+              vat: 0,
+            },
+            shipping: {
+             category: 'Shipping category',
+             weight: 'Shipping weight',
+             fee: 0
+            },
+            totalpayment: {
+              price: 0
+            },
+            products: [
+            ],
+          },
+          stocks: [
+            {
+              productname: 'Kohaku / Kohaku Yellow / White Grains',
+              rapportname: 'Rapport name',
+              definition: 'Product definition',
+              authentications: {
+                producttype: 'Product type',
+                productid: 'mrn-ricekohaku-1-category1-product1'
+               },
+              details: {
+              product: {
+               name: 'Kokahu / Kohaku Yellow / White grains',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: "Male or Female, for all type's of gender",
+                 category: 'For adults and children around 6 months' 
+                },
+                set: {
+                 set: false,
+                 productindication: 'Oridinary',
+                 pcs: 10
+                },
+                size: 'Product size',
+                color: 'Product color',
+                weight: 'Product weight',
+                top: 'Top product specification',
+                left: 'Left product specification',
+                bottom: 'Bottom product specification',
+                right: 'Right product specification',
+                front: 'Front product specification',
+                back: 'Back product specification'
+                },
+                pricesbreakdown: {
+                  price: 10,
+                  capital: 8,
+                  suggested_retail_price: 10,
+                  vat: 2
+                },
+                cybervisual: {
+                  images: {
+                    maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                    maindisplayimages: [
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    },
+                    {
+                      displayimage: '../images/landingpage/bondpaperimage.jpg'
+                    }
+                    ]
+                  },
+                  videos: [
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    },
+                    {
+                      youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                    }
+                  ]
+                },
+              },
+              locations: {
+                operations: [
+                  {
+                    street: 'Street',
+                    baranggay: 'Baranggay',
+                    trademark: 'Trademark',
+                    city: 'City',
+                    province: 'Province',
+                    country: 'Country'
+                  }
+                ]
+              }
+              },
+              system: {
+                request: {
+                  pcs: 0,
+                  orderspecification: "",
+                  product: [
+                  ],
+                  shipping: {
+                   category: 'Shipping category',
+                   weight: 'Shipping weight',
+                   fee: 0
+                  }
+                },
+                stocks: [],
+                purchase: {
+                  people: [],
+                  xirbit: []
+                }
+              }
+            },
+            {
+             productname: 'Kohaku / Kohaku Yellow / White Grains',
+             rapportname: 'Rapport name',
+             definition: 'Product definition',
+             authentications: {
+              producttype: 'Product type',
+              productid: 'mrn-ricekohaku-1-category1-product2'
+             },
+             details: {
+              product: {
+               name: 'Kohaku / Kohaku Yellow / White big grains',
+               rapportname: 'Product rapport name',
+               definition: 'Product definition',
+               category: 'MRN',
+               specification: {
+                for: {
+                 part: 'Product part',
+                 gender: "Male or Female, for all type's of gender",
+                 category: 'For adults and children around 6 months' 
                 },
                 set: {
                  set: false,
@@ -7090,6 +7425,13 @@ const [products, productscb] = useState([
     ]
   }
 ]);
+
+const [fooddepartment, fooddepartmentcb] = useState([]);
+const [condiments, condimentscb] = useState([]);
+const [meat, meatcb] = useState([]);
+const [fruits, fruitscb] = useState([]);
+const [bathingessentials, bathingessentialscb] = useState([]);
+const [beautyproducts, beautyproductscb] = useState([]);
 
 const [purchasing, purchasingcb] = useState([
  {
@@ -7523,6 +7865,12 @@ transactiongiveaway: {
 );
 
 //// purchasing 
+/// handling product categories 
+
+async function handleproductcategories() {
+  const _foodproducts = await products.filter((products)=> products.category.includes("Food"));
+  await fooddepartmentcb((fooddepartment)=> fooddepartment = _foodproducts);
+}
 
 useEffect(()=> {
 
@@ -7532,11 +7880,13 @@ useEffect(()=> {
 
    //getUIUserAuthenticationData()
    //getDatabaseData()
-
+ 
+   handleproductcategories();
    loadWelcomeIntroductionModal();
 
 }, []);
 
+//// fooddepartment, condiments,fruits ,bathingessentials, beautyproducts
 function setCommonPublicAccountAuthenticationIDCookie(userauthentication) {
   document.cookie = `thisuser=${userauthentication.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
 }
@@ -7664,6 +8014,19 @@ const navigate = useNavigate();
                                          
                                          businesses={businesses}
                                          businessescb={businessescb}
+
+                                         fooddepartment={fooddepartment}
+                                         fooddepartmentcb={fooddepartmentcb}
+                                         condiments={condiments}
+                                         condimentscb={condimentscb}
+                                         meat={meat}
+                                         meatcb={meatcb}
+                                         fruits={fruits}
+                                         fruitscb={fruitscb}
+                                         bathingessentials={bathingessentials}
+                                         bathingessentialscb={bathingessentialscb}
+                                         beautyproducts={beautyproducts}
+                                         beautyproductscb={beautyproductscb}
 
                                          />}>
         </Route>

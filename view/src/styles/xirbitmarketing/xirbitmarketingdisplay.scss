@@ -123,6 +123,58 @@ position:relative;
 height:0px;
 width:100%;
 transition:all 1s ease;
+overflow:hidden;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer {
+position: relative;
+height:auto;
+width:100%;
+padding:50px 25px;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productnameheaderindiation {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:auto;
+width:25vh;
+font: auto {
+ family: $sub-font;
+ size:20px;
+  weight:900;
+}
+color:black;
+letter-spacing:0.3vh;
+padding:5px 20px;
+left:-1vh;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productcategoryheaderindiation {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:20px;
+}
+color:white;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiesheaderindiation {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:20px;
+}
+color:white;
+letter-spacing:0.1vh;
+margin-top:5vh;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiescontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiescontainer-productspecificationcontainer {
+position:relative;
+height:auto;
 }
 //// condiments department
 #marketing-merchandisescontainer-condimentsdepartment {
@@ -706,6 +758,7 @@ transition:all 1s ease;
 .marketing-merchandisescontainer-merchandisemodal {
 position:relative;
 height:auto;
+width:100%;
 padding:5px;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandise {
@@ -1204,6 +1257,17 @@ font: auto {
 }
 color:white;
 }
+.marketing-merchandisecontainer-merchandisemodal-addtopurchasingbutton {
+position:relative;
+background-color:dodgerblue;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 15px;
+outline-style:none;
+}
 }
 @media only screen and (min-width:1200px) {
 #xirbitmarketingdisplay {
@@ -1318,7 +1382,59 @@ user-select:none;
 position:relative;
 height:0px;
 width:100%;
+overflow:hidden;
 transition:all 1s ease;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer {
+position: relative;
+height:auto;
+width:100%;
+padding:50px 25px;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productnameheaderindiation {
+position:relative;
+background-color:white;
+border-radius:20px;
+height:auto;
+width:25vh;
+font: auto {
+ family: $sub-font;
+ size:20px;
+ weight:900;
+}
+color:black;
+letter-spacing:0.3vh;
+padding:5px 20px;
+left:-1vh;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productcategoryheaderindiation {
+position:relative;
+font: auto {
+    family: $sub-font;
+    size:20px;
+}
+color:white;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiesheaderindiation {
+position:relative;
+font: auto {
+ family: $sub-font;
+ size:20px;
+}
+color:white;
+letter-spacing:0.1vh;
+margin-top:5vh;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiescontainer {
+position:relative;
+height:auto;
+width:100%;
+margin-left:auto;
+margin-right:auto;
+}
+.marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer-productcontainer-productavailabilitiescontainer-productspecificationcontainer {
+position:relative;
+height:auto;
 }
 //// condiments department
 #marketing-merchandisescontainer-condimentsdepartment {
@@ -1883,6 +1999,7 @@ transition:all 1s ease;
 .marketing-merchandisescontainer-merchandisemodal {
 position:relative;
 height:auto;
+width:auto;
 padding:5px;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandise {
@@ -1953,11 +2070,11 @@ position:relative;
 height:100%;
 overflow:hidden;
 padding:0;
-}
+} 
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-navigationheadercontainer {
 position:relative;
 background-color:white;
-height:7%;
+height:2%;
 width:100%;
 margin-left:auto;
 margin-right:auto;
@@ -2395,5 +2512,16 @@ font: auto {
  family: $sub-font;
 }
 color:white;
+}
+.marketing-merchandisecontainer-merchandisemodal-addtopurchasingbutton {
+position:relative;
+background-color:dodgerblue;
+border-radius:20px;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+padding:5px 15px;
+outline-style:none;
 }
 }
