@@ -348,36 +348,36 @@ const [databasedata, databasedatacb] = useState({
 
 const [user, usercb] = useState({
   authentications: {
-   authenticationtype: 'Public',
-   privateauthenticationkey: 'Privateauthenticationkey',
-   authenticationid: '1699791814794-KiSYbr8W',
+   authenticationtype: 'Practicing',
+   privateauthenticationkey: 'Privateauthenticationkeysample',
+   authenticationid: '111111111-111111-1111',
    password: {
     set: false,
-    password: 'String'
+    password: 'password'
    }
   },
   details: {
    surials: {
-    firstname: 'Commoner 1 FIRST NAME' ,
-    middlename: 'Commoner 1 MIDDLE NAME',
-    lastname: 'Commoner 1 LAST NAME',
-    nickname: 'Commoner 1 NICKNAME',
+    firstname: 'Practicing account firstname' ,
+    middlename: 'Practicing account middlename',
+    lastname: 'Practicing account lastname',
+    nickname: 'Practicing account nickname',
    },
    location: {
      address: {
-      street: 'Current address',
-      baranggay: 'Current address',
-      trademark: 'Current address',
-      city: 'Current address',
-      province: 'Current address',
-      country: 'Current address',
+      street: 'Your current street address',
+      baranggay: 'Your current baranggay address',
+      trademark: 'Your current trademark address',
+      city: 'Your current city address',
+      province: 'Your current province address',
+      country: 'Your current country address',
       coordinates: {
        lat: 0,
        lon: 0
       }
      },
      shipment: {
-       type: 'Delivery',
+       type: '',
        address: {
          street: '',
          baranggay: '',
@@ -394,14 +394,14 @@ const [user, usercb] = useState({
    },
    contact: [
     {
-     provider: "Globe",
+     provider: "TM",
      type: "Phone number",
-     number: "123-123-123",
+     number: "09539959025",
      date: [
       {
        status: "Configured",
        date: "123-123-123",
-       message: "New contact number added. Telecom/Globe"
+       message: "New contact number added/TM"
       } 
      ]
     }

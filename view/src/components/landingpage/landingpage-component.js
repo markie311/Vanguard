@@ -141,27 +141,37 @@ function WelcomeIntroduction(props) {
                 const _usercookie = document.cookie;
                 const _parsedcookie = _usercookie.slice(9,31);
 
-                props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
-                props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+                const _registermenowwithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                const _registermenowwithacommoneraccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
 
-                const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
-                const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+                _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+                _registermenowwithacommoneraccountresponsemessage.style.display = "none";
 
-                _registermenowresponsemessage.style.visibility = "hidden";
-                _continuewithapracticingaccountresponsemessage.style.visibility = "hidden";
+                 props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                 props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
-                axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
-                  $usercookie: _parsedcookie
-                }).then( async (response)=> {
 
-                  const responsedata = response.data;
-                  const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+             //   props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+             //   props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+
+             //   const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+             //   const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+
+             //   _registermenowresponsemessage.style.visibility = "hidden";
+             //   _continuewithapracticingaccountresponsemessage.style.visibility = "hidden";
+
+            //    axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
+            //      $usercookie: _parsedcookie
+            //    }).then( async (response)=> {
+
+           //       const responsedata = response.data;
+           //       const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
                 //  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
-                  _responsemessage.style.visibility = "visible";
-                  _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
-                  registermenowrequestloadingstatecb((state)=> state = false);
+           //       _responsemessage.style.visibility = "visible";
+         //         _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+         //         registermenowrequestloadingstatecb((state)=> state = false);
 
-                }) 
+         //}) 
 
               }}>
         x
@@ -177,7 +187,13 @@ function WelcomeIntroduction(props) {
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-registermenowbutton"
                 onClick={()=> {
 
-                  alert("Error: Assisting common public authentications as a practicing account")
+                 // alert("Error: Assisting common public authentications as a practicing account")
+                 const _registermenowwithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                 const _registermenowwithacommoneraccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+
+                 _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                 _registermenowwithapracticingaccountresponsemessage.innerText = "Registered and authenticated. Your practicing account is ready to use the data on Vanguard with freedom. All activitivie's only for practicing. You change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's";
+                 _registermenowwithapracticingaccountresponsemessage.style.display = "block";
 
                   {/*
                   const _usercookie = document.cookie;
@@ -239,18 +255,25 @@ function WelcomeIntroduction(props) {
             )
             :
             (
-              <span>Register and authenticate me now to practice this public website</span>
+              <span>REGISTER AND AUTHENTICATE ME NOW WITH A PRACTICING ACCOUNT TO PRACTICE THIS PUBLIC WEBSITE</span>
             )
            }
 
         </button>
+
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage">You are already done with this process</p>
 
         <button id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountbutton"
                 onClick={(evt)=> {
 
-                  alert("Error: Assisting common public authentications as a practicing account")
-                  
+                 // alert("Error: Assisting common public authentications as a practicing account")
+                  const _registermenowwithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                  const _registermenowwithacommoneraccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+
+                  _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+                  _registermenowwithacommoneraccountresponsemessage.innerText = "You are now registered and authenticated as a commoner. Your transaction's are real and all the change's made will be saved and will have a record authenticated physically and following Vanguard's authentication's policie's";
+                  _registermenowwithacommoneraccountresponsemessage.style.display = "block";
+
                   {/*
                   continuewithapracticingcb((state)=> state = true);
 
@@ -305,12 +328,13 @@ function WelcomeIntroduction(props) {
            :
            (
             <span>
-              Continue with a practicing accounts to practice this public website
+              REGISTER AND AUTHENTICATE ME NOW WITH A COMMONER ACCOUNT WHILE PRACTICING AND USING THIS PUBLIC WEBSITE
             </span>
            )
 
           }
         </button>
+
         <p id="vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage">You can close the modal now</p>
 
       </Col>
