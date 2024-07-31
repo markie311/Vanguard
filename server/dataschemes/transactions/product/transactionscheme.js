@@ -128,7 +128,7 @@ const transactionscheme = new Schema(
   }, 
   messages: [transactionmessagescheme],
   products: {
-   list: [],
+   list: [ productspecificationscheme],
    pricesbreakdown: {
     merchandise: {
     totalpayment: {

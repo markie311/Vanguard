@@ -38,6 +38,8 @@ const $lgviewport = window.matchMedia('(min-width: 1200px)');
 
 const [viewport, viewportcb] = useState('xs');
 
+const [maintenance, maintenancecb] = useState(true);
+
 const [welcomeinmtroductionmesssage, welcomeinmtroductionmesssagecb] = useState("commonpublicaccountactivation");
 const [welcomeintroductiontopprop, welcomeintroductiontoppropcb] = useState("-100vh");
 const [welcomeintroductionopacityprop, welcomeintroductionopacitypropcb] = useState("-100vh");
@@ -7887,8 +7889,9 @@ useEffect(()=> {
 }, []);
 
 //// fooddepartment, condiments,fruits ,bathingessentials, beautyproducts
+
 function setCommonPublicAccountAuthenticationIDCookie(userauthentication) {
-  document.cookie = `thisuser=${userauthentication.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
+  document.cookie = `thisuser=${userauthentication.userauthentication.authentications.authenticationid}; expires=${timestamp.getDay()}, ${timestamp.getDate()} ${timestamp.getMonth()} ${timestamp.getFullYear() + 1} ${timestamp.getHour()}:${timestamp.getMinutes()}:${timestamp.getSeconds()} UTC`;
 }
 
 async function assistcommonpublicregistration() {
@@ -7969,33 +7972,36 @@ const navigate = useNavigate();
        }}>navigate</button>
       <Routes>
         <Route path='/'
-               element={<LandingPage viewport={viewport}
+               element={<LandingPage maintenance={maintenance}
+                                     maintenancecb={maintenancecb}
 
-                                      user={user}
-                                      usercb={usercb}
+                                     viewport={viewport}
+                    
+                                     user={user}
+                                     usercb={usercb}
 
-                                      setCommonPublicAccountAuthenticationIDCookie={setCommonPublicAccountAuthenticationIDCookie}
+                                     setCommonPublicAccountAuthenticationIDCookie={setCommonPublicAccountAuthenticationIDCookie}
 
-                                      welcomeinmtroductionmesssage={welcomeinmtroductionmesssage}
-                                      welcomeinmtroductionmesssagecb={welcomeinmtroductionmesssagecb}
+                                     welcomeinmtroductionmesssage={welcomeinmtroductionmesssage}
+                                     welcomeinmtroductionmesssagecb={welcomeinmtroductionmesssagecb}
 
-                                      welcomeintroductiontopprop={welcomeintroductiontopprop}
-                                      welcomeintroductiontoppropcb={welcomeintroductiontoppropcb}
-                                      welcomeintroductionopacityprop={welcomeintroductionopacityprop}
-                                      welcomeintroductionopacitypropcb={welcomeintroductionopacitypropcb}
+                                     welcomeintroductiontopprop={welcomeintroductiontopprop}
+                                     welcomeintroductiontoppropcb={welcomeintroductiontoppropcb}
+                                     welcomeintroductionopacityprop={welcomeintroductionopacityprop}
+                                     welcomeintroductionopacitypropcb={welcomeintroductionopacitypropcb}
 
-                                      landingpagenavigationbargraphwidthproperty={landingpagenavigationbargraphwidthproperty}
-                                      landingpagenavigationbargraphwidthpropertycb={landingpagenavigationbargraphwidthpropertycb}
-                                      landingpagenavigationbargraphleftproperty={landingpagenavigationbargraphleftproperty}
-                                      landingpagenavigationbargraphleftpropertycb={landingpagenavigationbargraphleftpropertycb}
+                                     landingpagenavigationbargraphwidthproperty={landingpagenavigationbargraphwidthproperty}
+                                     landingpagenavigationbargraphwidthpropertycb={landingpagenavigationbargraphwidthpropertycb}
+                                     landingpagenavigationbargraphleftproperty={landingpagenavigationbargraphleftproperty}
+                                     landingpagenavigationbargraphleftpropertycb={landingpagenavigationbargraphleftpropertycb}
 
-                                      landingpagedepositnavigationleftproperty={landingpagedepositnavigationleftproperty}
-                                      landingpagedepositnavigationleftpropertycb={landingpagedepositnavigationleftpropertycb}
+                                     landingpagedepositnavigationleftproperty={landingpagedepositnavigationleftproperty}
+                                     landingpagedepositnavigationleftpropertycb={landingpagedepositnavigationleftpropertycb}
 
-                                      landingpagewidthdrwalnavigationwidthproperty={landingpagewidthdrwalnavigationwidthproperty}
-                                      landingpagewidthdrwalnavigationwidthpropertycb={landingpagewidthdrwalnavigationwidthpropertycb}
-                                      landingpagewidthdrwalnavigationleftproperty={landingpagewidthdrwalnavigationleftproperty}
-                                      landingpagewidthdrwalnavigationleftpropertycb={landingpagewidthdrwalnavigationleftpropertycb}
+                                     landingpagewidthdrwalnavigationwidthproperty={landingpagewidthdrwalnavigationwidthproperty}
+                                     landingpagewidthdrwalnavigationwidthpropertycb={landingpagewidthdrwalnavigationwidthpropertycb}
+                                     landingpagewidthdrwalnavigationleftproperty={landingpagewidthdrwalnavigationleftproperty}
+                                     landingpagewidthdrwalnavigationleftpropertycb={landingpagewidthdrwalnavigationleftpropertycb}
 
                                      />}>
         </Route>

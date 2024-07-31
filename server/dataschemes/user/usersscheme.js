@@ -3,6 +3,8 @@ const Schema = mongoose.Schema;
 
 const transactionscheme = require('../transactions/product/transactionscheme');
 const contactscheme = require('../transactions/contact/contactscheme');
+const privateauthenticationkey = require('../transactions/privateauthenticationkey/privateauthenticationkeyscheme');
+const upgradedregistrations = require('../transactions/upgradedregistrations/upgradedregistrationsscheme');
 
 const user = new Schema({
  authentications: {
@@ -12,6 +14,7 @@ const user = new Schema({
   authenticationid: {
     type: 'string'
   },
+  privateauthenticationkey: [privateauthenticationkey],
   password: {
     set: {
       type: 'boolean',
@@ -56,31 +59,51 @@ const user = new Schema({
       },
       country: {
       type: 'string'
-      }
+      },
+      coordinates: {
+        lat: {
+          type: 'number',
+          default: 0,
+        },
+        lon: {
+          type: 'number',
+          default: 0,
+        }
+       }
     },
     shipment: {
       type: {
         type: 'string'
       },
-      location: {
-      street: {
+      address: {
+       street: {
+         type: 'string'
+       },
+       baranggay: {
         type: 'string'
-      },
-      baranggay: {
-        type: 'string'
-      },
-      trademark: {
-        type: 'string'
-      },
-      city: {
-        type: 'string'
-      },
-      province: {
-        type: 'string'
-      },
+       },
+       trademark: {
+         type: 'string'
+       },
+       city: {
+         type: 'string'
+       },
+       province: {
+         type: 'string'
+       },
       country: {
         type: 'string'
-      }
+      },
+      coordinates: {
+        lat: {
+          type: 'number',
+          default: 0,
+        },
+        lon: {
+          type: 'number',
+          default: 0,
+        }
+       }
       }
     }
    },
@@ -92,18 +115,23 @@ const user = new Schema({
      type: 'number',
      default: 0
     },
-    history: []
+    history: [transactionscheme]
   },
   funds: {
     amount: {
      type: 'number',
      default: 0
     },
-    history: []
+    history: [transactionscheme]
   }
  },
  transactions: [transactionscheme],
- purchases: [transactionscheme]
+ purchases: {
+  current: [transactionscheme],
+  last15days: [transactionscheme],
+  history: [transactionscheme]
+ },
+ upgradedregistrations: [upgradedregistrations] 
 })
 
 module.exports= user;

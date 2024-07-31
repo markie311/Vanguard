@@ -174,7 +174,7 @@ const productspecificationscheme = new Schema({
       },
       products: []
      },
-      stocks: [],
+     stocks: [],
       purchase: {
         people: [],
         xirbit: []
