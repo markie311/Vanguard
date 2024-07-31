@@ -154,7 +154,7 @@ function WelcomeIntroduction(props) {
                 _registermenowwithapracticingaccountresponsemessage.style.display = "none";
                 _registermenowwithacommoneraccountresponsemessage.style.display = "none";
 
-                 props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                 props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
                  props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
 
