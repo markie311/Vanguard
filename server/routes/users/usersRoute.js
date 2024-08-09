@@ -15,7 +15,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
   const _userauthenticationid = `${timestamps.dateNow()}-${generateint32stringdatatype(8)}-FGH`;
   const _date = `${timestamps.getDay()}, ${timestamps.getMonth()}, ${timestamps.getDate()},${timestamps.getFullYear()}, ${timestamps.getHour()}:${timestamps.getMinutes()}:${timestamps.getSeconds()},`
   
- 
+  /// try and catch block for new users 
   if ( _user === "" ) {
 
     const _upgradedregistrations = {
@@ -47,7 +47,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
 
     const _practicingaccount = {
       authentications: {
-       authenticationtype: 'Practicing account',
+       authenticationtype: 'Practicing',
        authenticationid: _userauthenticationid,
        privateauthenticationkey: [],
        password: {
@@ -123,7 +123,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
 
       const VanguardUserData =  mongoose.model('data', data);
       const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
-
+      
       newvanguarduserdata.people.push(_practicingaccount);
 
       await newvanguarduserdata.save()
@@ -137,7 +137,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
         });
 
       }) 
-
+      
     } catch(err) {
 
       const _upgradedregistrationsregistrationfaildefaultaccount = {
@@ -169,7 +169,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
   
       const _practicingaccountregistrationfaildefaultaccount = {
         authentications: {
-         authenticationtype: 'Practicing account',
+         authenticationtype: 'Practicing',
          authenticationid: _userauthenticationid,
          privateauthenticationkey: [],
          password: {
@@ -243,10 +243,13 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
 
     } 
 
-  } else {
+  } 
+  /// try and catch function for users who registered an old process with the new FGH new authentication process.
+  else {
 
-     /// condition learning the user account if it was using an old version of registration process or not.
-     /// FGH code, new code for new registrations stated on authentication ID'S on newer version of a regitrations process
+    /// condition learning the user account if it was using an old version of registration process or not.
+    /// FGH code, new code for new registrations stated on authentication ID'S on newer version of a regitrations process.
+
      if ( _user.includes('FGH') === true ) {
 
       try {
@@ -288,7 +291,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
               }
             }
           ]
-        }
+        };
     
         const _tryfghnewresgistrationtypepracticingaccount = {
           authentications: {
@@ -357,13 +360,28 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
           upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
         };
 
-        console.log("User already registered with a practicing account");    
+        ///// practicing account validation / for it's appropriate response of practicing accounts to be only change in the user dashboard
+        if (  _currentlysaveuserauthentication.authentications.authenticationtype === "Practicing" ) {
 
-        res.status(200).send({
-         userauthentication: _tryfghnewresgistrationtypepracticingaccount,
-         message: "User already registered with a practicing account"
-        });
+          console.log('User already registered with a practing account');   
+        
+          res.status(200).send({
+           userauthentication: _tryfghnewresgistrationtypepracticingaccount,
+           message: `User already registered with a practicing account: Your current authentication was already a ${_currentlysaveuserauthentication.authentications.authenticationtype} account`
+          });
 
+        } 
+        ///// commoner account's and private account's validation / for it's appropriate response of the said accounts to be only change in the user dashboard
+        else {
+
+          console.log(`User already registered with a ${_currentlysaveuserauthentication.authentications.authenticationtype.toLowerCase()} account`);   
+        
+          res.status(200).send({
+           userauthentication: _tryfghnewresgistrationtypepracticingaccount,
+           message: `User already registered with a ${_currentlysaveuserauthentication.authentications.authenticationtype.toLowerCase()} account: You can only go back changing your current authenteticaion to be a practicing one in your dashboard.`
+          });
+
+        }
 
       } catch(err) {
   
@@ -379,20 +397,18 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
 
         const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _user);
 
-        console.log(`User already was already registered on a new registration process authentication FGH, the validation failed: ${err}`);
+        console.log(`User already was already registered on a new registration process authentication FGH. The validation failed. Check your internet connection or go to your neighborhood for assistance: ${err}`);
 
         res.status(200).send({
           userauthentication: _currentlysaveuserauthentication,
-          message: `User already was already registered on a new registration process authentication FGH, the validation failed: ${err}`
+          message: `User already was already registered on a new registration process authentication FGH. The validation failed. Check your internet connection or go to your neighborhood for assistance: ${err}`
         });
-  
-  
+
       } 
 
      } else {
 
       try {
-
 
         await mongodb.connect(process.env.ATLAS_URI, {
           useNewUrlParser: true,
@@ -436,7 +452,7 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
     
         const _trynewfghnewresgistrationtypepracticingaccount = {
           authentications: {
-          authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
+          authenticationtype:  "Practicing account",
           authenticationid: `${_currentlysaveuserauthentication.authentications.authenticationid}-FGH`,
           privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
           password: {
@@ -510,127 +526,127 @@ Router.route("/assistpracticingaccountauthentication").post( async (req,res)=> {
           console.log('New practicing account type FGH authentication account registration changed and saved');
           res.status(200).send({ 
                                 userauthentication: _trynewfghnewresgistrationtypepracticingaccount,
-                                message: "New account type practicing registration account changed and saved"
+                                message: "New practicing account type FGH authentication account registration changed and saved"
                               });
 
         })
-
-     } catch(err) {
+        
+      } catch(err) {
+      
+        await mongodb.connect(process.env.ATLAS_URI, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+          dbName: 'Database',
+          autoCreate: false
+        })
     
-      await mongodb.connect(process.env.ATLAS_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        dbName: 'Database',
-        autoCreate: false
-      })
-  
-      const VanguardUserData =  mongoose.model('data', data);
-      const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+        const VanguardUserData =  mongoose.model('data', data);
+        const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
 
-      const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _user);
+        const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _user);
 
-      const _catchfghnewresgistrationtypenewupgradedregistrations = {
-        date: _date,
-        status: [
-        {
+        const _catchfghnewresgistrationtypenewupgradedregistrations = {
           date: _date,
-          status: '',
-          type: 'Practicing account authentication'
-        }
-        ],
-        registration: {
-          type: 'Practicing account',
-          registrationspan: 'life-time',
-          authenticationspan: 'life-time'
-        },
-        messages: [
+          status: [
           {
             date: _date,
-            status: 'Practicing account authenticated',
-            payments: {
-              amount: 0,
-              currency: "undefined/practicing account authentication",
-              paymenttype: 'undefined/practicing account authentication'
-            }
+            status: '',
+            type: 'Practicing account authentication'
           }
-        ]
-      }
-  
-      const _catchnewfghnewresgistrationtypepracticingaccount = {
-        authentications: {
-        authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
-        authenticationid: `${_currentlysaveuserauthentication.authentications.authenticationid}-FGH`,
-        privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
-        password: {
-          set:  _currentlysaveuserauthentication.authentications.password.set,
-          password:  _currentlysaveuserauthentication.authentications.password.password
-        }
-        },
-        details: {
-          surials: {
-            firstname:  _currentlysaveuserauthentication.details.surials.firstname,
-            middlename:  _currentlysaveuserauthentication.details.surials.middlename,
-            lastname:  _currentlysaveuserauthentication.details.surials.lastname,
-            nickname:  _currentlysaveuserauthentication.details.surials.nickname,
+          ],
+          registration: {
+            type: 'Practicing account',
+            registrationspan: 'life-time',
+            authenticationspan: 'life-time'
           },
-          location: {
-            address: {
-              street: _currentlysaveuserauthentication.details.location.address.street,
-              baranggay: _currentlysaveuserauthentication.details.location.address.baranggay,
-              trademark: _currentlysaveuserauthentication.details.location.address.trademark,
-              city: _currentlysaveuserauthentication.details.location.address.city,
-              province: _currentlysaveuserauthentication.details.location.address.province,
-              country: _currentlysaveuserauthentication.details.location.address.country,
-              coordinates: {
-              lat: _currentlysaveuserauthentication.details.location.address.coordinates.lat,
-              lon: _currentlysaveuserauthentication.details.location.address.coordinates.lon
+          messages: [
+            {
+              date: _date,
+              status: 'Practicing account authenticated',
+              payments: {
+                amount: 0,
+                currency: "undefined/practicing account authentication",
+                paymenttype: 'undefined/practicing account authentication'
               }
+            }
+          ]
+        }
+    
+        const _catchnewfghnewresgistrationtypepracticingaccount = {
+          authentications: {
+          authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
+          authenticationid: `${_currentlysaveuserauthentication.authentications.authenticationid}-FGH`,
+          privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
+          password: {
+            set:  _currentlysaveuserauthentication.authentications.password.set,
+            password:  _currentlysaveuserauthentication.authentications.password.password
+          }
+          },
+          details: {
+            surials: {
+              firstname:  _currentlysaveuserauthentication.details.surials.firstname,
+              middlename:  _currentlysaveuserauthentication.details.surials.middlename,
+              lastname:  _currentlysaveuserauthentication.details.surials.lastname,
+              nickname:  _currentlysaveuserauthentication.details.surials.nickname,
             },
-            shipment: {
-              type:  _currentlysaveuserauthentication.details.location.shipment.type,
+            location: {
               address: {
-                street:  _currentlysaveuserauthentication.details.location.shipment.address.street,
-                baranggay:  _currentlysaveuserauthentication.details.location.shipment.address.baranggay,
-                trademark:  _currentlysaveuserauthentication.details.location.shipment.address.trademark,
-                city:  _currentlysaveuserauthentication.details.location.shipment.address.city,
-                province:  _currentlysaveuserauthentication.details.location.shipment.address.province,
-                country:  _currentlysaveuserauthentication.details.location.shipment.address.country,
+                street: _currentlysaveuserauthentication.details.location.address.street,
+                baranggay: _currentlysaveuserauthentication.details.location.address.baranggay,
+                trademark: _currentlysaveuserauthentication.details.location.address.trademark,
+                city: _currentlysaveuserauthentication.details.location.address.city,
+                province: _currentlysaveuserauthentication.details.location.address.province,
+                country: _currentlysaveuserauthentication.details.location.address.country,
                 coordinates: {
-                  lat:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lat,
-                  lon:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lon
+                lat: _currentlysaveuserauthentication.details.location.address.coordinates.lat,
+                lon: _currentlysaveuserauthentication.details.location.address.coordinates.lon
+                }
+              },
+              shipment: {
+                type:  _currentlysaveuserauthentication.details.location.shipment.type,
+                address: {
+                  street:  _currentlysaveuserauthentication.details.location.shipment.address.street,
+                  baranggay:  _currentlysaveuserauthentication.details.location.shipment.address.baranggay,
+                  trademark:  _currentlysaveuserauthentication.details.location.shipment.address.trademark,
+                  city:  _currentlysaveuserauthentication.details.location.shipment.address.city,
+                  province:  _currentlysaveuserauthentication.details.location.shipment.address.province,
+                  country:  _currentlysaveuserauthentication.details.location.shipment.address.country,
+                  coordinates: {
+                    lat:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lat,
+                    lon:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lon
+                  }
                 }
               }
-            }
+            },
+            contact:  _currentlysaveuserauthentication.details.contact
           },
-          contact:  _currentlysaveuserauthentication.details.contact
-        },
-        moneyandfunds: {
-        money: {
-          amount:  _currentlysaveuserauthentication.moneyandfunds.money.amount,
+          moneyandfunds: {
+          money: {
+            amount:  _currentlysaveuserauthentication.moneyandfunds.money.amount,
+            history: _currentlysaveuserauthentication.moneyandfunds.money.history
+          },
+          funds: {
+          amount: _currentlysaveuserauthentication.moneyandfunds.funds.amount,
           history: _currentlysaveuserauthentication.moneyandfunds.money.history
-        },
-        funds: {
-        amount: _currentlysaveuserauthentication.moneyandfunds.funds.amount,
-        history: _currentlysaveuserauthentication.moneyandfunds.money.history
-        }   
-        },
-        transactions: _currentlysaveuserauthentication.transactions,
-        purchases: {
-          current: _currentlysaveuserauthentication.purchases.current,
-          last15days: _currentlysaveuserauthentication.purchases.last15days,
-          history: _currentlysaveuserauthentication.purchases.history
-        },
-        upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
-      };
+          }   
+          },
+          transactions: _currentlysaveuserauthentication.transactions,
+          purchases: {
+            current: _currentlysaveuserauthentication.purchases.current,
+            last15days: _currentlysaveuserauthentication.purchases.last15days,
+            history: _currentlysaveuserauthentication.purchases.history
+          },
+          upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
+        };
 
-      console.log(`New practicing account type FGH authentication account registration failed: ${err}`);
-      
-      res.status(200).send({ 
-                            userauthentication: _catchnewfghnewresgistrationtypepracticingaccount,
-                            message: `New practicing account type FGH authentication account registration failed: ${err}`
-                          });
+        console.log(`New practicing account type FGH authentication account registration failed: ${err}`);
+        
+        res.status(200).send({ 
+                              userauthentication: _catchnewfghnewresgistrationtypepracticingaccount,
+                              message: `New practicing account type FGH authentication account registration failed: ${err}`
+                            });
 
-     }
+      }
 
      }
 
@@ -645,6 +661,7 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
   const _userauthenticationid = `${timestamps.dateNow()}-${generateint32stringdatatype(8)}-FGH`;
   const _date = `${timestamps.getDay()}, ${timestamps.getMonth()}, ${timestamps.getDate()},${timestamps.getFullYear()}, ${timestamps.getHour()}:${timestamps.getMinutes()}:${timestamps.getSeconds()},`
   
+  /// try and catch block for new users 
   if ( _user === "" ) {
 
     const _upgradedregistrations = {
@@ -676,7 +693,7 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
 
     const _commoneraccount = {
       authentications: {
-       authenticationtype: 'Commoner account',
+       authenticationtype: 'Commoner',
        authenticationid: _userauthenticationid,
        privateauthenticationkey: [],
        password: {
@@ -872,10 +889,13 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
 
     } 
 
-  } else {
+  } 
+  
+   /// try and catch function for users who registered using an old process or new validating the authentication only for practicing accounts to register as commonner successfully.
+   /// condition learning the user account if it was using an old version of registration process or not.
+   /// FGH code, new code for new registrations stated on authentication ID'S on newer version of a regitrations process.
 
-     /// condition learning the user account if it was using an old version of registration process or not.
-     /// FGH code, new code for new registrations stated on authentication ID'S on newer version of a regitrations process
+  else {
 
      if ( _user.includes('FGH') === true ) {
 
@@ -892,108 +912,223 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
         const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
 
         const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _user);
+        const _currentlysaveuserauthenticationregistrationrecordindex =  newvanguarduserdata.people.indexOf(_currentlysaveuserauthentication);
 
-        const _tryfghnewresgistrationtypeupgradedregistrations = {
-          date: _date,
-          status: [
-           {
+        if ( _currentlysaveuserauthentication.authentications.authenticationtype === "Practicing" ) {
+
+          const _tryfghnewresgistrationtypepracticingtocommonerupgradedregistrations = {
             date: _date,
-            status: '',
-            type: 'Commoner account authentication'
-           }
-          ],
-          registration: {
-            type: 'Commoner account',
-            registrationspan: 'life-time',
-            authenticationspan: 'life-time'
-          },
-          messages: [
-            {
+            status: [
+             {
               date: _date,
-              status: 'Commoner account authenticated',
-              payments: {
-                amount: 0,
-                currency: "undefined/commoner account authentication",
-                paymenttype: 'undefined/commoner account authentication'
+              status: '',
+              type: 'Commoner account authentication'
+             }
+            ],
+            registration: {
+              type: 'Commoner account',
+              registrationspan: 'life-time',
+              authenticationspan: 'life-time'
+            },
+            messages: [
+              {
+                date: _date,
+                status: 'Commoner account authenticated',
+                payments: {
+                  amount: 0,
+                  currency: "undefined/commoner account authentication",
+                  paymenttype: 'undefined/commoner account authentication'
+                }
               }
-            }
-          ]
-        }
-    
-        const _tryfghnewresgistrationtypecommoneraccount = {
-          authentications: {
-           authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
-           authenticationid: _currentlysaveuserauthentication.authentications.authenticationid,
-           privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
-           password: {
-            set:  _currentlysaveuserauthentication.authentications.password.set,
-            password:  _currentlysaveuserauthentication.authentications.password.password
-           }
-          },
-          details: {
-           surials: {
-            firstname:  _currentlysaveuserauthentication.details.surials.firstname,
-            middlename:  _currentlysaveuserauthentication.details.surials.middlename,
-            lastname:  _currentlysaveuserauthentication.details.surials.lastname,
-            nickname:  _currentlysaveuserauthentication.details.surials.nickname,
-           },
-           location: {
-             address: {
-              street: _currentlysaveuserauthentication.details.location.address.street,
-              baranggay: _currentlysaveuserauthentication.details.location.address.baranggay,
-              trademark: _currentlysaveuserauthentication.details.location.address.trademark,
-              city: _currentlysaveuserauthentication.details.location.address.city,
-              province: _currentlysaveuserauthentication.details.location.address.province,
-              country: _currentlysaveuserauthentication.details.location.address.country,
-              coordinates: {
-               lat: _currentlysaveuserauthentication.details.location.address.coordinates.lat,
-               lon: _currentlysaveuserauthentication.details.location.address.coordinates.lon
-              }
+            ]
+          }
+      
+          const _tryfghnewresgistrationtypepracticingtocommonercommoneraccount = {
+            authentications: {
+             authenticationtype:  "Commoner",
+             authenticationid: _currentlysaveuserauthentication.authentications.authenticationid,
+             privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
+             password: {
+              set:  _currentlysaveuserauthentication.authentications.password.set,
+              password:  _currentlysaveuserauthentication.authentications.password.password
+             }
+            },
+            details: {
+             surials: {
+              firstname:  _currentlysaveuserauthentication.details.surials.firstname,
+              middlename:  _currentlysaveuserauthentication.details.surials.middlename,
+              lastname:  _currentlysaveuserauthentication.details.surials.lastname,
+              nickname:  _currentlysaveuserauthentication.details.surials.nickname,
              },
-             shipment: {
-               type:  _currentlysaveuserauthentication.details.location.shipment.type,
+             location: {
                address: {
-                 street:  _currentlysaveuserauthentication.details.location.shipment.address.street,
-                 baranggay:  _currentlysaveuserauthentication.details.location.shipment.address.baranggay,
-                 trademark:  _currentlysaveuserauthentication.details.location.shipment.address.trademark,
-                 city:  _currentlysaveuserauthentication.details.location.shipment.address.city,
-                 province:  _currentlysaveuserauthentication.details.location.shipment.address.province,
-                 country:  _currentlysaveuserauthentication.details.location.shipment.address.country,
-                 coordinates: {
-                   lat:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lat,
-                   lon:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lon
+                street: _currentlysaveuserauthentication.details.location.address.street,
+                baranggay: _currentlysaveuserauthentication.details.location.address.baranggay,
+                trademark: _currentlysaveuserauthentication.details.location.address.trademark,
+                city: _currentlysaveuserauthentication.details.location.address.city,
+                province: _currentlysaveuserauthentication.details.location.address.province,
+                country: _currentlysaveuserauthentication.details.location.address.country,
+                coordinates: {
+                 lat: _currentlysaveuserauthentication.details.location.address.coordinates.lat,
+                 lon: _currentlysaveuserauthentication.details.location.address.coordinates.lon
+                }
+               },
+               shipment: {
+                 type:  _currentlysaveuserauthentication.details.location.shipment.type,
+                 address: {
+                   street:  _currentlysaveuserauthentication.details.location.shipment.address.street,
+                   baranggay:  _currentlysaveuserauthentication.details.location.shipment.address.baranggay,
+                   trademark:  _currentlysaveuserauthentication.details.location.shipment.address.trademark,
+                   city:  _currentlysaveuserauthentication.details.location.shipment.address.city,
+                   province:  _currentlysaveuserauthentication.details.location.shipment.address.province,
+                   country:  _currentlysaveuserauthentication.details.location.shipment.address.country,
+                   coordinates: {
+                     lat:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lat,
+                     lon:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lon
+                   }
                  }
                }
+             },
+             contact:  _currentlysaveuserauthentication.details.contact
+            },
+            moneyandfunds: {
+             money: {
+              amount:  _currentlysaveuserauthentication.moneyandfunds.money.amount,
+              history: _currentlysaveuserauthentication.moneyandfunds.money.history
+            },
+            funds: {
+             amount: _currentlysaveuserauthentication.moneyandfunds.funds.amount,
+             history: _currentlysaveuserauthentication.moneyandfunds.money.history
+            }   
+            },
+            transactions: _currentlysaveuserauthentication.transactions,
+            purchases: {
+              current: _currentlysaveuserauthentication.purchases.current,
+              last15days: _currentlysaveuserauthentication.purchases.last15days,
+              history: _currentlysaveuserauthentication.purchases.history
+            },
+            upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
+          };
+
+          newvanguarduserdata.people.splice(_currentlysaveuserauthenticationregistrationrecordindex, 1);
+          newvanguarduserdata.people.push(_tryfghnewresgistrationtypepracticingtocommonercommoneraccount);
+  
+          await newvanguarduserdata.save()
+          .then(async(response)=> {
+    
+            console.log("Practicing account was validated and change into a commoner account by request. All your transactions are expected to be saved with records that will be affecting the Vanguard portfolio");    
+    
+            res.status(200).send({
+              userauthentication:_tryfghnewresgistrationtypepracticingtocommonercommoneraccount,
+              message: "Practicing account was validated and change into a commoner account by request. All your transactions are expected to be saved with records that will be affecting the Vanguard portfolio"
+            });
+    
+          }) 
+
+        } else {
+
+          const _commonerresgistrationtypeupgradedregistrations = {
+            date: _date,
+            status: [
+             {
+              date: _date,
+              status: '',
+              type: 'Commoner account authentication'
              }
-           },
-           contact:  _currentlysaveuserauthentication.details.contact
-          },
-          moneyandfunds: {
-           money: {
-            amount:  _currentlysaveuserauthentication.moneyandfunds.money.amount,
-            history: _currentlysaveuserauthentication.moneyandfunds.money.history
-          },
-          funds: {
-           amount: _currentlysaveuserauthentication.moneyandfunds.funds.amount,
-           history: _currentlysaveuserauthentication.moneyandfunds.money.history
-          }   
-          },
-          transactions: _currentlysaveuserauthentication.transactions,
-          purchases: {
-            current: _currentlysaveuserauthentication.purchases.current,
-            last15days: _currentlysaveuserauthentication.purchases.last15days,
-            history: _currentlysaveuserauthentication.purchases.history
-          },
-          upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
-        };
+            ],
+            registration: {
+              type: 'Commoner account',
+              registrationspan: 'life-time',
+              authenticationspan: 'life-time'
+            },
+            messages: [
+              {
+                date: _date,
+                status: 'Commoner account authenticated',
+                payments: {
+                  amount: 0,
+                  currency: "undefined/commoner account authentication",
+                  paymenttype: 'undefined/commoner account authentication'
+                }
+              }
+            ]
+          }
+      
+          const _commonerresgistrationtypecommoneraccount = {
+            authentications: {
+             authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
+             authenticationid: _currentlysaveuserauthentication.authentications.authenticationid,
+             privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
+             password: {
+              set:  _currentlysaveuserauthentication.authentications.password.set,
+              password:  _currentlysaveuserauthentication.authentications.password.password
+             }
+            },
+            details: {
+             surials: {
+              firstname:  _currentlysaveuserauthentication.details.surials.firstname,
+              middlename:  _currentlysaveuserauthentication.details.surials.middlename,
+              lastname:  _currentlysaveuserauthentication.details.surials.lastname,
+              nickname:  _currentlysaveuserauthentication.details.surials.nickname,
+             },
+             location: {
+               address: {
+                street: _currentlysaveuserauthentication.details.location.address.street,
+                baranggay: _currentlysaveuserauthentication.details.location.address.baranggay,
+                trademark: _currentlysaveuserauthentication.details.location.address.trademark,
+                city: _currentlysaveuserauthentication.details.location.address.city,
+                province: _currentlysaveuserauthentication.details.location.address.province,
+                country: _currentlysaveuserauthentication.details.location.address.country,
+                coordinates: {
+                 lat: _currentlysaveuserauthentication.details.location.address.coordinates.lat,
+                 lon: _currentlysaveuserauthentication.details.location.address.coordinates.lon
+                }
+               },
+               shipment: {
+                 type:  _currentlysaveuserauthentication.details.location.shipment.type,
+                 address: {
+                   street:  _currentlysaveuserauthentication.details.location.shipment.address.street,
+                   baranggay:  _currentlysaveuserauthentication.details.location.shipment.address.baranggay,
+                   trademark:  _currentlysaveuserauthentication.details.location.shipment.address.trademark,
+                   city:  _currentlysaveuserauthentication.details.location.shipment.address.city,
+                   province:  _currentlysaveuserauthentication.details.location.shipment.address.province,
+                   country:  _currentlysaveuserauthentication.details.location.shipment.address.country,
+                   coordinates: {
+                     lat:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lat,
+                     lon:  _currentlysaveuserauthentication.details.location.shipment.address.coordinates.lon
+                   }
+                 }
+               }
+             },
+             contact:  _currentlysaveuserauthentication.details.contact
+            },
+            moneyandfunds: {
+             money: {
+              amount:  _currentlysaveuserauthentication.moneyandfunds.money.amount,
+              history: _currentlysaveuserauthentication.moneyandfunds.money.history
+            },
+            funds: {
+             amount: _currentlysaveuserauthentication.moneyandfunds.funds.amount,
+             history: _currentlysaveuserauthentication.moneyandfunds.money.history
+            }   
+            },
+            transactions: _currentlysaveuserauthentication.transactions,
+            purchases: {
+              current: _currentlysaveuserauthentication.purchases.current,
+              last15days: _currentlysaveuserauthentication.purchases.last15days,
+              history: _currentlysaveuserauthentication.purchases.history
+            },
+            upgradedregistrations: _currentlysaveuserauthentication.upgradedregistrations
+          };
+  
+          console.log(`User already registered with a ${_currentlysaveuserauthentication.authentications.authenticationtype.toLowerCase()} account. You can go back to a practicing account to practice using this public website with overall freedom not affecting other's and Vanguard portfolio`);    
+  
+          res.status(200).send({
+           userauthentication: _commonerresgistrationtypecommoneraccount,
+           message: `User already registered with a ${_currentlysaveuserauthentication.authentications.authenticationtype.toLowerCase()} account. You can go back to a practicing account to practice using this public website with overall freedom not affecting other's and Vanguard portfolio`
+          });
 
-        console.log("User already registered with a commoner account");    
-
-        res.status(200).send({
-         userauthentication:_tryfghnewresgistrationtypecommoneraccount,
-         message: "User already registered with a commoner account"
-        });
-
+        }
 
       } catch(err) {
   
@@ -1022,7 +1157,6 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
      } else {
 
       try {
-
 
         await mongodb.connect(process.env.ATLAS_URI, {
           useNewUrlParser: true,
@@ -1066,7 +1200,7 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
     
         const _trynewfghnewresgistrationtypecommoneraccount = {
           authentications: {
-          authenticationtype:  _currentlysaveuserauthentication.authentications.authenticationtytpe,
+          authenticationtype: 'Commoner',
           authenticationid: `${_currentlysaveuserauthentication.authentications.authenticationid}-FGH`,
           privateauthenticationkey:  _currentlysaveuserauthentication.authentications.privateauthenticationkey,
           password: {
@@ -1132,20 +1266,20 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
         };
 
         newvanguarduserdata.people.splice(_currentlysaveuserauthenticationregistrationrecordindex, 1);
-        newvanguarduserdata.people.push(_trynewfghnewresgistrationtypepracticingaccount);
+        newvanguarduserdata.people.push(_trynewfghnewresgistrationtypecommoneraccount);
 
         await newvanguarduserdata.save()
         .then(async(response)=> {
-
-          console.log('New practicing account type FGH authentication account registration changed and saved');
+          
+          console.log('New commoner account type FGH authentication account registration changed and saved');
           res.status(200).send({ 
                                 userauthentication: _trynewfghnewresgistrationtypecommoneraccount,
-                                message: "New account type practicing registration account changed and saved"
+                                message: "New commoner account type FGH authentication account registration changed and saved"
                               });
 
         })
 
-     } catch(err) {
+      } catch(err) {
     
       await mongodb.connect(process.env.ATLAS_URI, {
         useNewUrlParser: true,
@@ -1260,9 +1394,273 @@ Router.route("/registercommoneraccountauthentication").post( async (req,res)=> {
                             message: `New commoner account type FGH authentication account registration failed: ${err}`
                           });
 
-     }
+      }
 
      }
+
+  }
+
+})
+
+//// user configuration firstname change route
+Router.route("/changefirstname").post( async (req, res)=> {
+
+  const _firstname = req.body.$userconfigurationfirstname;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.surials.firstname = _firstname;
+
+  await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your firstname was successful');
+          res.status(200).send({ 
+                                message: `Changing your firstname was successful`
+                              });
+          
+        })
+
+  } catch(err) {
+
+      console.log(`Changing your firstname failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your firstname failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+//// user configuration middlename change route
+Router.route("/changemiddlename").post( async (req, res)=> {
+
+  const _middlename = req.body.$userconfigurationmiddlename;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.surials.middlename = _middlename;
+
+  await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your middlename was successful');
+          res.status(200).send({ 
+                                message: `Changing your middlename was successful`
+                              });
+          
+        })
+
+  } catch(err) {
+
+      console.log(`Changing your middlename failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your middlename failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// user configuration last name change route 
+Router.route("/changelastname").post( async (req, res)=> {
+
+  const _lastname = req.body.$userconfigurationlastname;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.surials.lastname = _lastname;
+
+  await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your lastname was successful');
+          res.status(200).send({ 
+                                message: `Changing your lastname was successful`
+                              });
+          
+        })
+   
+  } catch(err) {
+
+      console.log(`Changing your lastname failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your lastname failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// user configuration nick name change route 
+Router.route("/changenickname").post( async (req, res)=> {
+
+  const _nickname = req.body.$userconfigurationnickname;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.surials.nickname = _nickname;
+  
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your nickname was successful');
+          res.status(200).send({ 
+                                message: `Changing your nickname was successful`
+                              });
+          
+        })
+   
+  } catch(err) {
+
+      console.log(`Changing your nickname failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your nickname failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+//// user configuration change street address
+Router.route("/changestreetaddress").post( async (req, res)=> {
+
+  const _streetaddress = req.body.$userconfigurationstreetaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.location.address.street = _streetaddress;
+
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your street address was successful');
+          res.status(200).send({ 
+                                message: `Changing your street address was successful`
+                              });
+          
+        })
+   
+  } catch(err) {
+
+      console.log(`Changing your street address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your street address failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+//// user configuration change baranggay address
+Router.route("/changebaranggayaddress").post( async (req, res)=> {
+
+  const _baranggayaddress = req.body.$userconfigurationbaranggayaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.location.address.baranggay = _baranggayaddress;
+  
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your baranggay address was successful');
+          res.status(200).send({ 
+                                message: `Changing your baranggay address was successful`
+                              });
+          
+        })
+  
+  } catch(err) {
+
+      console.log(`Changing your baranggay address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your baranggay address failed. Error: ${err}`
+                          });
+
 
   }
 

@@ -1,4 +1,7 @@
-import React from 'react';
+import React, {
+         useState,
+         useCallback
+       } from 'react';
 
 import { Row,
          Col,
@@ -6,7 +9,10 @@ import { Row,
 
 import { useNavigate } from 'react-router-dom';
 
+import axiosCreatedInstance from '../lib/axiosutil.js';
+
 import '../../styles/database/databaselogin.scss';
+
 
 import TransactionMoneyGraph from '../transactions/money/transactionmoneygraph-component.js';
 import MoneyTransaction from '../transactions/money/moneytransaction-component.js';
@@ -18,6 +24,42 @@ import { timestamp } from '../../components/lib/timestamps';
 export default function DatabaseLogin(props) {
 
   const navigate = useNavigate();
+  const [, states] = useState();
+  const deepupdate = useCallback(() => states({}), []);
+
+  const [userconfigurationfirstname, userconfigurationfirstnamecb] = useState("");
+  const [userconfigurationfirstnameloadingindication, userconfigurationfirstnameloadingindicationcb] = useState(false);
+ 
+  const [userconfigurationmiddlename, userconfigurationmiddlenamecb] = useState("");
+  const [userconfigurationmiddlenameloadingindication, userconfigurationmiddlenameloadingindicationcb] = useState(false);
+
+  const [userconfigurationlastname, userconfigurationlastnamecb] = useState("");
+  const [userconfigurationlastnameloadingindication, userconfigurationlastnameloadingindicationcb] = useState(false);
+
+  const [userconfigurationnickname, userconfigurationnicknamecb] = useState("");
+  const [userconfigurationnicknameloadingindication, userconfigurationnicknameloadingindicationcb] = useState(false);
+
+  const [userconfigurationstreetaddress, userconfigurationstreetaddresscb] = useState("");
+  const [userconfigurationstreetaddressloadingindication, userconfigurationstreetaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationbaranggayaddress, userconfigurationbaranggayaddresscb] = useState("");
+  const [userconfigurationbaranggayaddressloadingindication, userconfigurationbaranggayaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationtrademarkaddress, userconfigurationtrademarkaddresscb] = useState("");
+  const [userconfigurationtrademarkaddressloadingindication, userconfigurationtrademarkaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationcityaddress, userconfigurationcityaddresscb] = useState("");
+  const [userconfigurationcityaddressloadingindication, userconfigurationcityaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationprovinceaddress, userconfigurationprovinceaddresscb] = useState("");
+  const [userconfigurationprovinceaddressloadingindication, userconfigurationprovinceaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationcountryaddress, userconfigurationcountryaddresscb] = useState("");
+  const [userconfigurationcountryaddressloadingindication, userconfigurationcountryaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationuserpicture, userconfigurationuserpicturecb] = useState("");
+
+  const [userconfigurationusersigniture, userconfigurationusersigniturecb] = useState("");
 
  return (
   <Col id='databaselogin'>
@@ -163,7 +205,75 @@ export default function DatabaseLogin(props) {
      <Transactions viewport={props.viewport}
                    requesttransactiondata={props.requesttransactiondata}/>
    </Col>
-   <ConfigurationAuthenticationModal />
+   <ConfigurationAuthenticationModal user={props.user}
+                                     usercb={props.usercb}
+                                     
+                                     userconfigurationfirstname={userconfigurationfirstname}
+                                     userconfigurationfirstnamecb={userconfigurationfirstnamecb}
+
+                                     userconfigurationfirstnameloadingindication={userconfigurationfirstnameloadingindication}
+                                     userconfigurationfirstnameloadingindicationcb={userconfigurationfirstnameloadingindicationcb}
+                                     
+                                     userconfigurationmiddlename={userconfigurationmiddlename}
+                                     userconfigurationmiddlenamecb={userconfigurationmiddlenamecb}
+
+                                     userconfigurationmiddlenameloadingindication={userconfigurationmiddlenameloadingindication}
+                                     userconfigurationmiddlenameloadingindicationcb={userconfigurationmiddlenameloadingindicationcb}
+
+                                     userconfigurationlastname={userconfigurationlastname}
+                                     userconfigurationlastnamecb={userconfigurationlastnamecb}
+
+                                     userconfigurationlastnameloadingindication={userconfigurationlastnameloadingindication}
+                                     userconfigurationlastnameloadingindicationcb={userconfigurationlastnameloadingindicationcb}
+
+                                     userconfigurationnickname={userconfigurationnickname}
+                                     userconfigurationnicknamecb={userconfigurationnicknamecb}
+
+                                     userconfigurationnicknameloadingindication={userconfigurationnicknameloadingindication}
+                                     userconfigurationnicknameloadingindicationcb={userconfigurationnicknameloadingindicationcb}
+
+                                     userconfigurationstreetaddress={userconfigurationstreetaddress}
+                                     userconfigurationstreetaddresscb={userconfigurationstreetaddresscb}
+
+                                     userconfigurationstreetaddressloadingindication={userconfigurationstreetaddressloadingindication}
+                                     userconfigurationstreetaddressloadingindicationcb={userconfigurationstreetaddressloadingindicationcb}
+
+                                     userconfigurationbaranggayaddress={userconfigurationbaranggayaddress}
+                                     userconfigurationbaranggayaddresscb={userconfigurationbaranggayaddresscb}
+
+                                     userconfigurationbaranggayaddressloadingindication={userconfigurationbaranggayaddressloadingindication}
+                                     userconfigurationbaranggayaddressloadingindicationcb={userconfigurationbaranggayaddressloadingindicationcb}
+
+                                     userconfigurationtrademarkaddress={userconfigurationtrademarkaddress}
+                                     userconfigurationtrademarkaddresscb={userconfigurationtrademarkaddresscb}
+
+                                     userconfigurationtrademarkaddressloadingindication={userconfigurationtrademarkaddressloadingindication}
+                                     userconfigurationtrademarkaddressloadingindicationcb={userconfigurationtrademarkaddressloadingindicationcb}
+
+                                     userconfigurationcityaddress={userconfigurationcityaddress}
+                                     userconfigurationcityaddresscb={userconfigurationcityaddresscb}
+
+                                     userconfigurationcityaddressloadingindication={userconfigurationcityaddressloadingindication}
+                                     userconfigurationcityaddressloadingindicationcb={userconfigurationcityaddressloadingindicationcb}
+
+                                     userconfigurationprovinceaddress={userconfigurationprovinceaddress}
+                                     userconfigurationprovinceaddresscb={userconfigurationprovinceaddresscb}
+
+                                     userconfigurationprovinceaddressloadingindication={userconfigurationprovinceaddressloadingindication}
+                                     userconfigurationprovinceaddressloadingindicationcb={userconfigurationprovinceaddressloadingindicationcb}
+
+                                     userconfigurationcountryaddress={userconfigurationcountryaddress}
+                                     userconfigurationcountryaddresscb={userconfigurationcountryaddresscb}
+
+                                     userconfigurationcountryaddressloadingindication={userconfigurationcountryaddressloadingindication}
+                                     userconfigurationcountryaddressloadingindicationcb={userconfigurationcountryaddressloadingindicationcb}
+
+                                     userconfigurationuserpicture={userconfigurationuserpicture}
+                                     userconfigurationuserpicturecb={userconfigurationuserpicturecb}
+                                     userconfigurationusersigniture={userconfigurationusersigniture}
+                                     userconfigurationusersigniturecb={userconfigurationusersigniturecb}
+
+                                     deepupdate={deepupdate}/>
    <PasswordSetup />
    <DatabasePictureContainer user={props.user}/>
   </Col>
@@ -348,7 +458,7 @@ function Funds(props) {
  )
 }
 
-function ConfigurationAuthenticationModal() {
+function ConfigurationAuthenticationModal(props) {
  return (
   <Row xs={12}
        md={12}
@@ -370,21 +480,69 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationfirstname}
+             onChange={(evt)=> {
+               const _userconfigurationfirstnameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationfirstnamecb((firstname)=> firstname = evt.target.value);
+             }}/>
     </Col>
 
     <Col xs={12}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+       {
+          props.userconfigurationfirstnameloadingindication ?  
+          (
+          <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+            <Spinner animation="border" variant="secondary" />
+          </Col>
+          )
+          :
+          (
+            <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+
+              <button className='configurationauthenticationdetailsmodal-savebutton'
+                      onClick={ async (evt)=> {
+    
+                        const _userconfigurationfirstnameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+    
+                        await props.userconfigurationfirstnameloadingindicationcb((loadingindication)=> loadingindication = true);
+    
+                        axiosCreatedInstance.post("/userauthentication/changefirstname", {
+                          $userconfigurationfirstname:  props.userconfigurationfirstname,
+                          $userauthenticationid: props.user.authentications.authenticationid
+                        }).then( async (response)=> {
+    
+                            const _responsedatamessage = response.data.message; 
+    
+                            switch(true) {
+                            case _responsedatamessage.includes("Changing your firstname was successful"):
+                              _userconfigurationfirstnameresponssemessage[0].style.color = "dodgerblue";
+                              _userconfigurationfirstnameresponssemessage[0].innerText = _responsedatamessage;  
+                              await props.userconfigurationfirstnameloadingindicationcb((loadingindication)=> loadingindication = false);
+                              break;
+                              case _responsedatamessage.includes("Changing your firstname failed. Error:"):
+                              _userconfigurationfirstnameresponssemessage[0].style.color = "tomato";
+                              _userconfigurationfirstnameresponssemessage[0].innerText = _responsedatamessage;  
+                              await props.userconfigurationfirstnameloadingindicationcb((loadingindication)=> loadingindication = false);
+                              break;
+                            }
+    
+                            
+                        })
+    
+                        
+                      }}>
+              save
+              </button>
+   
+            </Col>
+          )
+       }
+   
+    
     </Col>
       
     <Col xs={12}
@@ -406,21 +564,67 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationmiddlename}
+             onChange={(evt)=> {
+               const _userconfigurationmiddlenameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationmiddlenamecb((middlename)=> middlename = evt.target.value);
+             }}/>
     </Col>
 
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+      {
+        props.userconfigurationmiddlenameloadingindication ? 
+        (
+         <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+          <Spinner animation="border" variant="secondary" />
+         </Col>
+        )
+        :
+        (
+         <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+          <button className='configurationauthenticationdetailsmodal-savebutton'
+                  onClick={ async (evt)=> {
+      
+                    const _userconfigurationmiddlenameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+  
+                    await props.userconfigurationmiddlenameloadingindicationcb((loadingindication)=> loadingindication = true);
+  
+                    axiosCreatedInstance.post("/userauthentication/changemiddlename", {
+                      $userconfigurationmiddlename:  props.userconfigurationmiddlename,
+                      $userauthenticationid: props.user.authentications.authenticationid
+                    }).then( async (response)=> {
+  
+                        const _responsedatamessage = response.data.message; 
+  
+                        switch(true) {
+                        case _responsedatamessage.includes("Changing your middlename was successful"):
+                          _userconfigurationmiddlenameresponssemessage[1].style.color = "dodgerblue";
+                          _userconfigurationmiddlenameresponssemessage[1].innerText = _responsedatamessage;  
+                          await props.userconfigurationmiddlenameloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                          case _responsedatamessage.includes("Changing your middlename failed. Error:"):
+                          _userconfigurationmiddlenameresponssemessage[1].style.color = "tomato";
+                          _userconfigurationmiddlenameresponssemessage[1].innerText = _responsedatamessage;  
+                          await props.userconfigurationmiddlenameloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                        }
+  
+                        
+                    })
+  
+                    
+                  }}>
+           save
+          </button>
+         </Col>
+        )
+      }
+  
+      
     </Col>
     
     <Col xs={12}
@@ -441,20 +645,64 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationlastname}
+             onChange={(evt)=> {
+               const _userconfigurationlastnameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationlastnamecb((lastname)=> lastname = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+       {
+        props.userconfigurationlastnameloadingindication ? 
+        (
+          <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+           <Spinner animation="border" variant="secondary" />
+          </Col>
+        )
+        :
+        (
+          <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+           <button className='configurationauthenticationdetailsmodal-savebutton'
+                   onClick={ async (evt)=> {
+        
+                    const _userconfigurationlastnameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+  
+                    await props.userconfigurationlastnameloadingindicationcb((loadingindication)=> loadingindication = true);
+  
+                    axiosCreatedInstance.post("/userauthentication/changelastname", {
+                      $userconfigurationlastname:  props.userconfigurationlastname,
+                      $userauthenticationid: props.user.authentications.authenticationid
+                    }).then( async (response)=> {
+  
+                        const _responsedatamessage = response.data.message; 
+  
+                        switch(true) {
+                          case _responsedatamessage.includes("Changing your lastname was successful"):
+                          _userconfigurationlastnameresponssemessage[2].style.color = "dodgerblue";
+                          _userconfigurationlastnameresponssemessage[2].innerText = _responsedatamessage;  
+                          await props.userconfigurationlastnameloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;  
+                          case _responsedatamessage.includes("Changing your lastname failed. Error:"):
+                          _userconfigurationlastnameresponssemessage[2].style.color = "tomato";
+                            _userconfigurationlastnameresponssemessage[2].innerText = _responsedatamessage;  
+                          await props.userconfigurationlastnameloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                        }
+  
+                        
+                    })
+  
+                    
+                   }}>
+           save
+          </button>
+          </Col>
+        )
+       }
     </Col>
     <Col xs={12}
          md={6}
@@ -475,20 +723,66 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationnickname}
+             onChange={(evt)=> {
+               const _userconfigurationnicknameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationnicknamecb((lastname)=> lastname = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+      
+          {
+             props.userconfigurationnicknameloadingindication ?
+             (
+              <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+               <Spinner animation="border" variant="secondary" />
+              </Col>
+             )
+             :
+             (
+              <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+                <button className='configurationauthenticationdetailsmodal-savebutton'
+                        onClick={ async (evt)=> {
+                
+                          const _userconfigurationnicknameresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                          await props.userconfigurationnicknameloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                          axiosCreatedInstance.post("/userauthentication/changenickname", {
+                            $userconfigurationnickname:  props.userconfigurationnickname,
+                            $userauthenticationid: props.user.authentications.authenticationid
+                          }).then( async (response)=> {
+
+                              const _responsedatamessage = response.data.message; 
+
+                              switch(true) {
+                                case _responsedatamessage.includes("Changing your nickname was successful"):
+                                _userconfigurationnicknameresponssemessage[3].style.color = "dodgerblue";
+                                _userconfigurationnicknameresponssemessage[3].innerText = _responsedatamessage;  
+                                await props.userconfigurationnicknameloadingindicationcb((loadingindication)=> loadingindication = false);
+                                break;  
+                                case _responsedatamessage.includes("Changing your nickname failed. Error:"):
+                                  _userconfigurationnicknameresponssemessage[3].style.color = "tomato";
+                                  _userconfigurationnicknameresponssemessage[3].innerText = _responsedatamessage;  
+                                await props.userconfigurationnicknameloadingindicationcb((loadingindication)=> loadingindication = false);
+                                break;
+                              }
+
+                              
+                          })
+
+                          
+                        }}>
+                save
+                </button>
+              </Col>
+             )
+          }
+
     </Col>
     <Col xs={12}
          md={6}
@@ -518,20 +812,64 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationstreetaddress}
+             onChange={(evt)=> {
+               const _userconfigurationstreetaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationstreetaddresscb((streetaddress)=> streetaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+      {
+        props.userconfigurationstreetaddressloadingindication ?
+        (
+         <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+           <Spinner animation="border" variant="secondary" />
+         </Col>
+        )
+        :
+        (
+         <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+          <button className='configurationauthenticationdetailsmodal-savebutton'
+                   onClick={ async (evt)=> {
+                
+                    const _userconfigurationstreetaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                    await props.userconfigurationstreetaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                    axiosCreatedInstance.post("/userauthentication/changestreetaddress", {
+                      $userconfigurationstreetaddress:  props.userconfigurationstreetaddress,
+                      $userauthenticationid: props.user.authentications.authenticationid
+                    }).then( async (response)=> {
+
+                        const _responsedatamessage = response.data.message; 
+
+                        switch(true) {
+                          case _responsedatamessage.includes("Changing your street address was successful"):
+                          _userconfigurationstreetaddressresponssemessage[4].style.color = "dodgerblue";
+                          _userconfigurationstreetaddressresponssemessage[4].innerText = _responsedatamessage;  
+                          await props.userconfigurationstreetaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;  
+                          case _responsedatamessage.includes("Changing your street address failed. Error:"):
+                            _userconfigurationstreetaddressresponssemessage[4].style.color = "tomato";
+                            _userconfigurationstreetaddressresponssemessage[4].innerText = _responsedatamessage;  
+                          await props.userconfigurationstreetaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                        }
+
+                        
+                    })
+
+                    
+                  }}>
+           save
+          </button>
+         </Col>
+        )
+      }
     </Col>
     <Col xs={12}
          md={6}
@@ -551,20 +889,65 @@ function ConfigurationAuthenticationModal() {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationbaranggayddress}
+             onChange={(evt)=> {
+               const _userconfigurationbaranggayaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationbaranggayaddresscb((baranggayaddress)=> baranggayaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
+    {
+      props.userconfigurationbaranggayaddressloadingindication ?
+      (
       <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
          <Spinner animation="border" variant="secondary" />
       </Col>
+      )
+      :
+      (
+        <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+        <button className='configurationauthenticationdetailsmodal-savebutton'
+                onClick={ async (evt)=> {
+                
+                  const _userconfigurationbaranggayaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                  await props.userconfigurationbaranggayaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                  axiosCreatedInstance.post("/userauthentication/changebaranggayaddress", {
+                    $userconfigurationbaranggayaddress:  props.userconfigurationbaranggayaddress,
+                    $userauthenticationid: props.user.authentications.authenticationid
+                  }).then( async (response)=> {
+
+                      const _responsedatamessage = response.data.message; 
+
+                      switch(true) {
+                        case _responsedatamessage.includes("Changing your baranggay address was successful"):
+                         _userconfigurationbaranggayaddressresponssemessage[5].style.color = "dodgerblue";
+                         _userconfigurationbaranggayaddressresponssemessage[5].innerText = _responsedatamessage;  
+                        await props.userconfigurationbaranggayaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                        break;  
+                        case _responsedatamessage.includes("Changing your baranggay address failed. Error:"):
+                          _userconfigurationbaranggayaddressresponssemessage[5].style.color = "tomato";
+                          _userconfigurationbaranggayaddressresponssemessage[5].innerText = _responsedatamessage;  
+                        await props.userconfigurationbaranggayaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                        break;
+                      }
+
+                      
+                  })
+
+                  
+                }}>
+         save
+        </button>
+      </Col>
+      )
+    }
+
     </Col>
     <Col xs={12}
          md={6}

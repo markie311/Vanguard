@@ -29,7 +29,7 @@ import RegistrationsAssistance from './components/teller/registrationsassistance
 
 import  barpercentagecalculation from './components/lib/barmovementpercentagecalculation.js';
 
-function XirbitCore() {
+function VanguardCore() {
 
 const location = useLocation();
 const $xsviewport= window.matchMedia('(max-width: 600px)');
@@ -352,7 +352,7 @@ const [user, usercb] = useState({
   authentications: {
    authenticationtype: 'Practicing',
    privateauthenticationkey: 'Privateauthenticationkeysample',
-   authenticationid: '111111111-111111-1111',
+   authenticationid: '1722868338756-m9Z2hw6P-FGH',
    password: {
     set: false,
     password: 'password'
@@ -8138,4 +8138,4 @@ const navigate = useNavigate();
   );
 }
 
-export default XirbitCore;
+export default VanguardCore;

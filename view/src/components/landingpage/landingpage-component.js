@@ -157,29 +157,30 @@ function WelcomeIntroduction(props) {
                  props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
                  props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
+         {/*
+                props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
-             //   props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
-             //   props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
+                const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
 
-             //   const _registermenowresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
-             //   const _continuewithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
+                _registermenowresponsemessage.style.visibility = "hidden";
+                _continuewithapracticingaccountresponsemessage.style.visibility = "hidden";
 
-             //   _registermenowresponsemessage.style.visibility = "hidden";
-             //   _continuewithapracticingaccountresponsemessage.style.visibility = "hidden";
+                axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
+                  $usercookie: _parsedcookie
+                }).then( async (response)=> {
 
-            //    axiosCreatedInstance.post("/userauthentication/assistcommonpublicauthentication", {
-            //      $usercookie: _parsedcookie
-            //    }).then( async (response)=> {
+                  const responsedata = response.data;
+                  const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
+                  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
+                  _responsemessage.style.visibility = "visible";
+                  _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
+                  registermenowrequestloadingstatecb((state)=> state = false);
 
-           //       const responsedata = response.data;
-           //       const _responsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
-                //  await props.setCommonPublicAccountAuthenticationIDCookie(responsedata.userauthentication);
-           //       _responsemessage.style.visibility = "visible";
-         //         _responsemessage.innerText = "You are now registered. Dont forget to have a copy of your authentication ID somewhere else for future verification. You may configure your current address and different address for other purposes like shippings, pick ups and develiries.";
-         //         registermenowrequestloadingstatecb((state)=> state = false);
-
-         //}) 
-
+              }) 
+            */}
+            
               }}>
         x
       </button>
@@ -201,88 +202,118 @@ function WelcomeIntroduction(props) {
                    const _registermenowwithacommoneraccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
 
                    if ( props.maintenance === false ) {
-                    
-                    registermenowrequestloadingstatecb((state)=> state = true);
 
-                    axiosCreatedInstance.post("/userauthentication/assistpracticingaccountauthentication", {
-                      $usercookie: _parsedcookie
-                    }).then( async (response)=> {
+                      registermenowrequestloadingstatecb((state)=> state = true);
 
-                    const responsedata = response.data;
-                    const responsedatamessage = responsedata.message;
-                    const authenticationtype = responsedata.userauthentication.authentications.authenticationtype;
+                      axiosCreatedInstance.post("/userauthentication/assistpracticingaccountauthentication", {
+                        $usercookie: _parsedcookie
+                      }).then( async (response)=> {
 
-                    switch(true) {
-                      case responsedatamessage.includes('Practicing account registered'):
+                      const responsedata = response.data;
+                      const responsedatamessage = responsedata.message;
+                      const authenticationtype = responsedata.userauthentication.authentications.authenticationtype;
 
-                        await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
+                      switch(true) {
 
-                       _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                       _registermenowwithapracticingaccountresponsemessage.innerText = "Registered. Your practicing account is ready to use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
-                       _registermenowwithapracticingaccountresponsemessage.style.display = "block";
-
-                       await registermenowrequestloadingstatecb((state)=> state = false);
-
-                      break;
-                      case responsedatamessage.includes('Practicing account registration failed'):
-
-                      _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-
-                      _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                      _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                      _registermenowwithapracticingaccountresponsemessage.style.display = "block";
-
-                      await registermenowrequestloadingstatecb((state)=> state = false);
-
-                      break;
-                      case responsedatamessage.includes('User already registered with a practicing account'):
-
-                        _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                         
-                        _registermenowwithapracticingaccountresponsemessage.style.color = "orange";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                        _registermenowwithapracticingaccountresponsemessage.style.display = "block";
-
-                        await registermenowrequestloadingstatecb((state)=> state = false);
-
-                      break;
-                      case responsedatamessage.includes('User already was already registered on a new registration process authentication FGH, the validation failed'):
-
-                        _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                         
-                        _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                        _registermenowwithapracticingaccountresponsemessage.style.display = "block";
-
-                        await registermenowrequestloadingstatecb((state)=> state = false);
-
-                      break;
-                      case responsedatamessage.includes('New practicing account type FGH authentication account registration changed and saved'):
+                        case responsedatamessage.includes('Practicing account registered'):
 
                         await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
 
                         _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = "System detected that you are present on early developments of Vanguard. Your practicing account was changed following a new registration process of authencation F-G-H. Your authentication ID was only change and all the data are only possible to change whenever there is an update that what was saved, follow Vanguard's rules to record manually on papers, on databases and through messaging recieving the transacions IDS important for evaluation that is also your solid proofs. You can still use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
+
+                        _registermenowwithapracticingaccountresponsemessage.style.color = "rgb(79, 255, 79)";
+                        _registermenowwithapracticingaccountresponsemessage.innerText = "Registered. Your practicing account is ready to use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more on observing change's on validation's like a successfull recieved transaction give away. You can change your commoner, public and private account's into practicing account's any moment without any change's on your transaction's or personal account's";
                         _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                         await registermenowrequestloadingstatecb((state)=> state = false);
+
+                       break;
+                        case responsedatamessage.includes('Practicing account registration failed'):
+
+                          _registermenowwithacommoneraccountresponsemessage.style.display = "none"; 
+
+                          _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
+                          _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                          _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                          await registermenowrequestloadingstatecb((state)=> state = false);
+
+                        break;
+                        case responsedatamessage.includes('User already registered with a practicing account'):
+
+                          _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         
+                          _registermenowwithapracticingaccountresponsemessage.style.color = "orange";
+                          _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                          _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                          await registermenowrequestloadingstatecb((state)=> state = false);
+
+                        break;
+                        case responsedatamessage.includes('User already registered with a commoner account'):
+
+                          _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         
+                          _registermenowwithapracticingaccountresponsemessage.style.color = "orange";
+                          _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                          _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                          await registermenowrequestloadingstatecb((state)=> state = false);
+
+                        break;
+                        case responsedatamessage.includes('User already registered with a private account'):
+
+                          _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         
+                          _registermenowwithapracticingaccountresponsemessage.style.color = "orange";
+                          _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                          _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                          await registermenowrequestloadingstatecb((state)=> state = false);
+
+                        break;
+                        case responsedatamessage.includes('User already was already registered on a new registration process authentication FGH. The validation failed. Check your internet connection or go to your neighborhood for assistance'):
+
+                         _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         
+                         _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
+                         _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                         _registermenowwithapracticingaccountresponsemessage.style.display = "block";
 
                         await registermenowrequestloadingstatecb((state)=> state = false);
 
+                       break;
+                        case responsedatamessage.includes('New practicing account type FGH authentication account registration changed and saved'):
+
+                          await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
+
+                          _registermenowwithacommoneraccountresponsemessage.style.display = "none";  
+
+                          _registermenowwithapracticingaccountresponsemessage.style.color = "rgb(79, 255, 79)";
+                          _registermenowwithapracticingaccountresponsemessage.innerText = "System detected that you are present on early developments of Vanguard. Your practicing account was changed following a new registration process of authencation F-G-H. Your authentication ID was only change and all the data are only possible to change whenever there is an update that what was saved, follow Vanguard's rules to record manually on papers, on databases and through messaging recieving the transacions IDS important for evaluation that is also your solid proofs. You can still use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
+                          _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+
+                         await registermenowrequestloadingstatecb((state)=> state = false); 
+
                       break;
-                      case responsedatamessage.includes('New practicing account type FGH authentication account registration failed'):
+                        case responsedatamessage.includes('New practicing account type FGH authentication account registration failed'):
                         
-                      _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         _registermenowwithacommoneraccountresponsemessage.style.display = "none";
                        
-                      _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                      _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                      _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                         _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
+                         _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
+                         _registermenowwithapracticingaccountresponsemessage.style.display = "block";
 
-                      await registermenowrequestloadingstatecb((state)=> state = false);
+                         await registermenowrequestloadingstatecb((state)=> state = false);
 
                       break;
-                     
-                    }
-                    })  
-                   
+                      
+                      }
+
+                      })  
+
+                      return;
+                      
                    } {
 
                     _registermenowwithacommoneraccountresponsemessage.style.display = "none";
@@ -317,11 +348,9 @@ function WelcomeIntroduction(props) {
                   const _registermenowwithapracticingaccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-registermenowresponsemessage");
                   const _registermenowwithacommoneraccountresponsemessage = document.getElementById("vanguardwelcomeintroduction-welcomeintroductionheader-continuewithapracticingaccountresponsemessage");
 
-                  continuewithapracticingcb((state)=> state = true);
-
                    if ( props.maintenance === false ) {
                     
-                    registermenowrequestloadingstatecb((state)=> state = true);
+                    continuewithapracticingcb((state)=> state = true);
 
                     axiosCreatedInstance.post("/userauthentication/registercommoneraccountauthentication", {
                       $usercookie: _parsedcookie
@@ -334,46 +363,73 @@ function WelcomeIntroduction(props) {
                     await continuewithapracticingcb((state)=> state = false);
 
                     switch(true) {
+                      
                       case responsedatamessage.includes('Commoner account registered'):
 
                         await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
 
-                       _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                       _registermenowwithapracticingaccountresponsemessage.innerText = "Registered. Your commoner account is ready to use all the data on Vanguard with freedom. All activitivie's and the all type of records on each transaction will always be remembered and saved. Consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
-                       _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "rgb(79, 255, 79)";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = "Registered. Your commoner account is ready to use all the data on Vanguard with freedom. All activitivie's and the all type of records on each transaction will always be remembered and saved. Consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
                        await continuewithapracticingcb((state)=> state = false);
 
                       break;
                       case responsedatamessage.includes('Commoner account registration failed'):
 
-                      _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
 
-                      _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                      _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                      _registermenowwithapracticingaccountresponsemessage.style.display = "block";
-
-                      await continuewithapracticingcb((state)=> state = false);
+                        _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
+    
+                        await continuewithapracticingcb((state)=> state = false);
 
                       break;
-                      case responsedatamessage.includes('User already registered with a commoner account'):
+                      case responsedatamessage.includes('Practicing account was validated and change into a commoner account by request. All your transactions are expected to be saved with records that will be affecting the Vanguard portfolio'):
 
-                        _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                         await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
                          
-                        _registermenowwithapracticingaccountresponsemessage.style.color = "orange";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                        _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+                         
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "orange";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
+
+                        await continuewithapracticingcb((state)=> state = false);
+
+                      break;                              
+                      case responsedatamessage.includes('User already registered with a commoner account. You can go back to a practicing account to practice using this public website with overall freedom not affecting other\'s and Vanguard portfolio'):
+                        
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+                         
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "orange";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
                         await continuewithapracticingcb((state)=> state = false);
 
                       break;
+                      case responsedatamessage.includes('User already registered with a private account. You can go back to a practicing account to practice using this public website with overall freedom not affecting other\'s and Vanguard portfolio'):
+                        
+                      _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+                       
+                      _registermenowwithacommoneraccountresponsemessage.style.color = "orange";
+                      _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                      _registermenowwithacommoneraccountresponsemessage.style.display = "block";
+
+                      await continuewithapracticingcb((state)=> state = false);
+
+                    break;
                       case responsedatamessage.includes('User already was already registered on a new registration process authentication FGH, the validation failed'):
 
-                        _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
                          
-                        _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                        _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "tomato";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
                         await continuewithapracticingcb((state)=> state = false);
 
@@ -382,33 +438,36 @@ function WelcomeIntroduction(props) {
 
                         await props.setCommonPublicAccountAuthenticationIDCookie(responsedata);
 
-                        _registermenowwithacommoneraccountresponsemessage.style.display = "none";
-                        _registermenowwithapracticingaccountresponsemessage.innerText = "System detected that you are present on early developments of Vanguard. Your commoner account was changed following a new registration process of authencation F-G-H. Your authentication ID was only change and all the data are only possible to change whenever there is an update that what was saved, follow Vanguard's rules to record manually on papers, on databases and through messaging recieving the transacions IDS important for evaluation that is also your solid proofs. You can still use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
-                        _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "rgb(79, 255, 79)";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = "System detected that you are present on early developments of Vanguard. Your commoner account was changed following a new registration process of authencation F-G-H. Your authentication ID was only change and all the data are only possible to change whenever there is an update that what was saved, follow Vanguard's rules to record manually on papers, on databases and through messaging recieving the transacions IDS important for evaluation that is also your solid proofs. You can still use all the data on Vanguard with freedom. All activitivie's are for practicing only and the records on each transaction made are still saved on a consideration to practice more observing change's on validation's. You can change your commoner, public and private account's into a practicing account any moment without any change's on your transaction's or personal account's";
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
                         await continuewithapracticingcb((state)=> state = false);
 
                       break;
                       case responsedatamessage.includes('New commoner account type FGH authentication account registration failed'):
                         
-                      _registermenowwithacommoneraccountresponsemessage.style.display = "none";
+                        _registermenowwithapracticingaccountresponsemessage.style.display = "none";
                        
-                      _registermenowwithapracticingaccountresponsemessage.style.color = "tomato";
-                      _registermenowwithapracticingaccountresponsemessage.innerText = responsedatamessage;
-                      _registermenowwithapracticingaccountresponsemessage.style.display = "block";
+                        _registermenowwithacommoneraccountresponsemessage.style.color = "tomato";
+                        _registermenowwithacommoneraccountresponsemessage.innerText = responsedatamessage;
+                        _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
-                      await continuewithapracticingcb((state)=> state = false);
+                         await continuewithapracticingcb((state)=> state = false);
 
-                      break;
+                      break;                                                          
                      
                     }
                     })  
-                   
+                    return 
                    } {
 
                      _registermenowwithapracticingaccountresponsemessage.style.display = "none";
+
                      _registermenowwithacommoneraccountresponsemessage.innerText = "Current in maintenance sample response message: You are now registered and authenticated as a commoner. Your transaction's are real and all the change's made will be saved and will have a record authenticated physically and following Vanguard's authentication's policie's";
-                    _registermenowwithacommoneraccountresponsemessage.style.display = "block";
+                     _registermenowwithacommoneraccountresponsemessage.style.display = "block";
 
                    }
 

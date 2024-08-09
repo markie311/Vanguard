@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
-import XirbitCore from './Xirbitcore';
+import  VanguardCore from './Xirbitcore';
 import { BrowserRouter } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
 
@@ -9,7 +9,7 @@ const xirbitcore = ReactDOM.createRoot(document.getElementById('root'));
 xirbitcore.render(
   <React.StrictMode>
     <BrowserRouter>
-      <XirbitCore />
+      <VanguardCore />
     </BrowserRouter>
   </React.StrictMode>
 );
