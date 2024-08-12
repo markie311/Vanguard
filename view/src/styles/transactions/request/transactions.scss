@@ -71,6 +71,13 @@ border-radius: 10px;
 #transactions-transactionscontainer::-webkit-scrollbar-thumb:hover {
 background: #b30000; 
 }
+.transactions-transactionscontainer-zerorequeststransactionsheaderindication {
+position:relative;
+font: auto {
+    family: $sub-font;
+}
+color:white;
+}
 .transactions-transactionscontainer-transactions {
 position:relative;
 height:auto;
@@ -324,6 +331,13 @@ width:100%;
 margin-left:auto;
 margin-right:auto;
 padding:20px 0px;
+}
+.transactions-transactionscontainer-zerorequeststransactionsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
 }
 #transactions-transactionscontainer::-webkit-scrollbar {
 height:10px;

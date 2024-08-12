@@ -1666,6 +1666,354 @@ Router.route("/changebaranggayaddress").post( async (req, res)=> {
 
 })
 
+//// user configuration change trademark address
+Router.route("/changetrademarkaddress").post( async (req, res)=> {
+
+  const _trademarkaddress = req.body.$userconfigurationtrademarkaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.location.address.trademark = _trademarkaddress;
+  
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your trademark address was successful');
+          res.status(200).send({ 
+                                message: `Changing your trademark address was successful`
+                              });
+          
+        })
+  
+  } catch(err) {
+
+      console.log(`Changing your trademark address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your trademark address failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// user configuration change city address
+Router.route("/changecityaddress").post( async (req, res)=> {
+
+  const _cityaddress = req.body.$userconfigurationcityaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.location.address.city = _cityaddress;
+
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your city address was successful');
+          res.status(200).send({ 
+                                message: `Changing your city address was successful`
+                              });
+          
+        })
+  
+  } catch(err) {
+
+      console.log(`Changing your city address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your city address failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// user configuration change province address
+Router.route("/changeprovinceaddress").post( async (req, res)=> {
+
+  const _provinceaddress = req.body.$userconfigurationprovinceaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+  await mongodb.connect(process.env.ATLAS_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    dbName: 'Database',
+    autoCreate: false
+  })
+
+  const VanguardUserData =  mongoose.model('data', data);
+  const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+
+  const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+  _currentlysaveuserauthentication.details.location.address.province = _provinceaddress;
+
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your province address was successful');
+          res.status(200).send({ 
+                                message: `Changing your province address was successful`
+                              });
+          
+        })
+  
+  } catch(err) {
+
+      console.log(`Changing your province address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your province address failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// user configuration change country address 
+Router.route("/changecountryaddress").post( async (req, res)=> {
+
+  const _countryaddress = req.body.$userconfigurationcountryaddress;
+  const _userauthenticationid = req.body.$userauthenticationid;
+
+  try {
+
+    await mongodb.connect(process.env.ATLAS_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      dbName: 'Database',
+      autoCreate: false
+    })
+  
+    const VanguardUserData =  mongoose.model('data', data);
+    const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+  
+    const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+   
+    _currentlysaveuserauthentication.details.location.address.country = _countryaddress;
+
+   await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Changing your country address was successful');
+          res.status(200).send({ 
+                                message: `Changing your country address was successful`
+                              });
+          
+        })
+
+  } catch(err) {
+
+      console.log(`Changing your province address failed. Error, ${err}`);
+      res.status(200).send({ 
+                            message: `Changing your country address failed. Error: ${err}`
+                          });
+
+
+  }
+
+})
+
+/// phone number route / save 
+Router.route("/vanguardphonenumber/save").post( async (req, res)=> {
+
+  const _phonenumber = Number(req.body.$userconfigurationphonenumber);
+  const _userauthenticationid = req.body.$userauthenticationid;
+  const _date = `${timestamps.getDay()}, ${timestamps.getMonth()}, ${timestamps.getDate()},${timestamps.getFullYear()}, ${timestamps.getHour()}:${timestamps.getMinutes()}:${timestamps.getSeconds()},`
+
+  try {
+
+    await mongodb.connect(process.env.ATLAS_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      dbName: 'Database',
+      autoCreate: false
+    })
+  
+    const VanguardUserData =  mongoose.model('data', data);
+    const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+  
+    const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+ 
+    if ( _currentlysaveuserauthentication.details.contact.length === 0 ) {
+
+      _currentlysaveuserauthentication.details.contact.push({
+        provider: "Globe, TM, Talk N Text, Smart, SUN, or DITO",
+        type: "Set",
+        number: _phonenumber,
+        date: []
+      });
+  
+      if ( _currentlysaveuserauthentication.details.contact[0].date.length === 0 ) {
+  
+        _currentlysaveuserauthentication.details.contact[0].date.push({
+          status: "Set",
+          date: _date,
+          message: `${_currentlysaveuserauthentication.details.surials.firstname}, ${_currentlysaveuserauthentication.details.surials.middlename}, ${_currentlysaveuserauthentication.details.surials.lastname} set his phone number ${_phonenumber}`,
+        });
+  
+        await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Phone number successfully saved and set');
+          res.status(200).send({ 
+                                message: `Phone number successfully saved and set`
+                              });
+          
+        })
+  
+      } else {
+  
+        _currentlysaveuserauthentication.details.contact[0].date.push({
+          status: "Changed",
+          date: _date,
+          message: `${_currentlysaveuserauthentication.details.surials.firstname}, ${_currentlysaveuserauthentication.details.surials.middlename}, ${_currentlysaveuserauthentication.details.surials.lastname} changed his phone number ${_phonenumber}`,
+        });
+  
+        await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Phone number successfully changed and set');
+          res.status(200).send({ 
+                                message: `Phone number successfully changed and set`
+                              });
+          
+        })
+  
+      }
+
+    } else {
+
+      if ( _currentlysaveuserauthentication.details.contact[0].date.length === 0 ) {
+  
+        _currentlysaveuserauthentication.details.contact[0].date.push({
+          status: "Set",
+          date: _date,
+          message: `${_currentlysaveuserauthentication.details.surials.firstname}, ${_currentlysaveuserauthentication.details.surials.middlename}, ${_currentlysaveuserauthentication.details.surials.lastname} set his phone number ${_phonenumber}`,
+        });
+  
+        await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Phone number successfully saved and set');
+          res.status(200).send({ 
+                                message: `Phone number successfully saved and set`
+                              });
+          
+        })
+  
+      } else {
+  
+        _currentlysaveuserauthentication.details.contact[0].date.push({
+          status: "Changed",
+          date: _date,
+          message: `${_currentlysaveuserauthentication.details.surials.firstname}, ${_currentlysaveuserauthentication.details.surials.middlename}, ${_currentlysaveuserauthentication.details.surials.lastname} changed his phone number ${_phonenumber}`,
+        });
+  
+        await newvanguarduserdata.save()
+        .then(async(response)=> {
+          
+          console.log('Phone number successfully changed and set');
+          res.status(200).send({ 
+                                message: `Phone number successfully changed and set`
+                              });
+          
+        })
+  
+      }
+      
+    }
+ 
+
+  } catch(err) {
+
+    console.log(`Saving phone number failed. Error, ${err}`);
+    res.status(200).send({ 
+                          message: `Saving phone number failed. Error: ${err}`
+                        });
+
+  }
+
+})
+
+/// password configuration route / configure
+Router.route("/passwordconfiguration").post( async (req, res)=> {
+  
+  const _password = req.body.$userconfigurationpassword;
+  const _userauthenticationid = req.body.$userauthenticationid;
+  const _date = `${timestamps.getDay()}, ${timestamps.getMonth()}, ${timestamps.getDate()},${timestamps.getFullYear()}, ${timestamps.getHour()}:${timestamps.getMinutes()}:${timestamps.getSeconds()},`
+
+  try {
+    
+    await mongodb.connect(process.env.ATLAS_URI, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+      dbName: 'Database',
+      autoCreate: false
+    })
+  
+    const VanguardUserData =  mongoose.model('data', data);
+    const newvanguarduserdata = await VanguardUserData.findById("codetocode-1131143");
+  
+    const _currentlysaveuserauthentication = newvanguarduserdata.people.find((users)=> users.authentications.authenticationid === _userauthenticationid);
+
+    _currentlysaveuserauthentication.authentications.password.set = true;
+    _currentlysaveuserauthentication.authentications.password.password = _password;
+    
+    console.log(_password);
+    console.log(_currentlysaveuserauthentication.authentications.password.set);
+    console.log( _currentlysaveuserauthentication.authentications.password.passsword);
+
+    await newvanguarduserdata.save()
+    .then( async (response)=> {
+      
+      console.log('Password successfully saved and set');
+      res.status(200).send({ 
+                            message: `Password successfully saved and set`
+                          });
+      
+    })
+  
+
+  } catch(err) {
+
+    console.log(`Password configuration failed. Error, ${err}`);
+    res.status(200).send({ 
+                          message: `Password configuration failed. Error: ${err}`
+                        });
+
+  }
+
+})
+
 Router.route("/assistcommonpublicauthentication/practicingaccount").post( async (req, res)=> {
 
 try {
@@ -1796,6 +2144,7 @@ try {
 
 })
 
+//// 
 Router.route("/").post(async (req, res)=> {
   
   try {

@@ -38,6 +38,13 @@ width:100%;
 display:flex;
 flex-wrap: wrap;
 }
+#moneytransaction-moneytransactiongridcontainer-historycontainer-notransactionsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
+}
 .moneytransaction-moneytransactiongridcontainer-transaction {
 background-color:white;
 border-radius:50%;
@@ -152,6 +159,13 @@ width:100%;
 display:flex;
 flex-wrap: wrap;
 padding:0px 35px;
+}
+#moneytransaction-moneytransactiongridcontainer-historycontainer-notransactionsheaderindication {
+position:relative;
+font: auto {
+ family: $sub-font;
+}
+color:white;
 }
 .moneytransaction-moneytransactiongridcontainer-transaction {
 background-color:white;

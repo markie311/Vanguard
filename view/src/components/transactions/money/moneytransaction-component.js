@@ -20,50 +20,64 @@ export default function MoneyTransaction(props) {
       </Col>
       <Col id='moneytransaction-moneytransactiongridcontainer-historycontainer'>
         {
-         [].map((transaction,idx)=> {
-           return (
-            <div key={idx}
-                 className='moneytransaction-moneytransactiongridcontainer-transaction'>
-              <div className='moneytransaction-moneytransactiongridcontainer-transactioncontentcontainer'>
-                <Col className='moneytransaction-moneytransactiongridcontainer-transactioncontent'>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Date: </p>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Transaction id:</p>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Status</p>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Message</p>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Transaction type: </p>
-                 <p className='moneytransaction-moneytransactiongridcontainer-transactioncontentclosebuttonheaderindication'
+        [].length === 0 ? 
+        (
+         <p id="moneytransaction-moneytransactiongridcontainer-historycontainer-notransactionsheaderindication">No transaction's</p>
+        ) 
+        :
+        (
+        <React.Fragment>
+          {
+          
+            [].map((transaction,idx)=> {
+              return (
+              <div key={idx}
+                    className='moneytransaction-moneytransactiongridcontainer-transaction'>
+                <div className='moneytransaction-moneytransactiongridcontainer-transactioncontentcontainer'>
+                  <Col className='moneytransaction-moneytransactiongridcontainer-transactioncontent'>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Date: </p>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Transaction id:</p>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Status</p>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Message</p>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontenheaderindication'>Transaction type: </p>
+                    <p className='moneytransaction-moneytransactiongridcontainer-transactioncontentclosebuttonheaderindication'
+                      onClick={(evt)=> {
+                        const _node = evt.target;
+                        const _detailscontainer = _node.parentElement.parentElement;
+                        _detailscontainer.style.display = 'none';
+                      }}>
+                      close
+                    </p>
+                  </Col>
+                </div>
+                <p className='moneytransaction-moneytransactiongridcontainer-transaction-transactionheaderindication'
                     onClick={(evt)=> {
-                      const _node = evt.target;
-                      const _detailscontainer = _node.parentElement.parentElement;
-                      _detailscontainer.style.display = 'none';
+                  const _node = evt.target;
+                  const _transaction =_node.parentElement;
+                  const _detailscontainer = _transaction.children[0];
+                  const _transactiondisplayoffsettopproperty = _transaction.offsetTop;
+                  const _detailscontaineroffsettop = _transactiondisplayoffsettopproperty / 10;
+                  if ( props.viewport === 'xs' ) {
+                    const _translation = `${'translate(1%,' + _detailscontaineroffsettop + '%)'}`;
+                    _detailscontainer.style.transform = _translation;
+                    _detailscontainer.style.display = 'block';
+                  } else {
+                    const _translation = `${'translate(21%,' + _detailscontaineroffsettop + '%)'}`;
+                    _detailscontainer.style.transform = _translation;
+                    _detailscontainer.style.display = 'block';
+                  }
+                  
                     }}>
-                    close
-                 </p>
-                </Col>
+                  {transaction}
+                </p>
               </div>
-              <p className='moneytransaction-moneytransactiongridcontainer-transaction-transactionheaderindication'
-                 onClick={(evt)=> {
-                const _node = evt.target;
-                const _transaction =_node.parentElement;
-                const _detailscontainer = _transaction.children[0];
-                const _transactiondisplayoffsettopproperty = _transaction.offsetTop;
-                const _detailscontaineroffsettop = _transactiondisplayoffsettopproperty / 10;
-                if ( props.viewport === 'xs' ) {
-                  const _translation = `${'translate(1%,' + _detailscontaineroffsettop + '%)'}`;
-                  _detailscontainer.style.transform = _translation;
-                  _detailscontainer.style.display = 'block';
-                } else {
-                  const _translation = `${'translate(21%,' + _detailscontaineroffsettop + '%)'}`;
-                  _detailscontainer.style.transform = _translation;
-                  _detailscontainer.style.display = 'block';
-                }
-               
-                 }}>
-                {transaction}
-              </p>
-            </div>
-           )
-         })
+              )
+
+            })
+
+          }
+        </React.Fragment>
+        )
         }
       </Col>
     </Row>

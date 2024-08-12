@@ -17,6 +17,7 @@ import '../../styles/database/databaselogin.scss';
 import TransactionMoneyGraph from '../transactions/money/transactionmoneygraph-component.js';
 import MoneyTransaction from '../transactions/money/moneytransaction-component.js';
 import TransactionFundsGraph from '../transactions/funds/transactionfundsgraph-component.js';
+import FundsTransaction from '../transactions/funds/fundstransaction-component.js';
 import Transactions from '../transactions/request/transactions-component.js';
 
 import { timestamp } from '../../components/lib/timestamps';
@@ -56,6 +57,12 @@ export default function DatabaseLogin(props) {
 
   const [userconfigurationcountryaddress, userconfigurationcountryaddresscb] = useState("");
   const [userconfigurationcountryaddressloadingindication, userconfigurationcountryaddressloadingindicationcb] = useState(false);
+
+  const [userconfigurationphonenumber, userconfigurationphonenumbercb] = useState("XXXX-XXXX-XXX-X");
+  const [userconfigurationphonenumberloadingindication, userconfigurationphonenumberloadingindicationcb] = useState(false);
+
+  const [userconfigurationpassword, userconfigurationpasswordcb] = useState("");
+  const [userconfigurationpasswordloadingindication, userconfigurationpasswordloadingindicationcb] = useState(false);
 
   const [userconfigurationuserpicture, userconfigurationuserpicturecb] = useState("");
 
@@ -273,8 +280,19 @@ export default function DatabaseLogin(props) {
                                      userconfigurationusersigniture={userconfigurationusersigniture}
                                      userconfigurationusersigniturecb={userconfigurationusersigniturecb}
 
+                                     userconfigurationphonenumber={userconfigurationphonenumber}
+                                     userconfigurationphonenumbercb={ userconfigurationphonenumbercb}
+                                     userconfigurationphonenumberloadingindication={userconfigurationphonenumberloadingindication}
+                                     userconfigurationphonenumberloadingindicationcb={userconfigurationphonenumberloadingindicationcb}
+
                                      deepupdate={deepupdate}/>
-   <PasswordSetup />
+   <PasswordSetup  user={props.user}
+                   usercb={props.usercb}
+                   userconfigurationpassword={userconfigurationpassword}
+                   userconfigurationpasswordcb={userconfigurationpasswordcb}
+                   userconfigurationpasswordloadingindication={userconfigurationpasswordloadingindication}
+                   userconfigurationpasswordloadingindicationcb={userconfigurationpasswordloadingindicationcb}/>
+
    <DatabasePictureContainer user={props.user}/>
   </Col>
  )
@@ -377,7 +395,7 @@ function PublicAuthenticationDetails(props) {
               if ( _userfirstname[16].innerText.includes("●")) {
                 _userfirstname[16].innerText = `Firstname: ${props.user.details.surials.firstname}`;
               } else {
-                _userfirstname[16].innerText = "Firstname: ●●●●●";
+                _userfirstname[16].innerText = "Firstname: ●●●●●●●●●●●●●●●●";
               }
             }}>
        show
@@ -389,7 +407,7 @@ function PublicAuthenticationDetails(props) {
               if ( _userfirstname[17].innerText.includes("●")) {
                 _userfirstname[17].innerText = `Middle name: ${props.user.details.surials.middlename}`;
               } else {
-                _userfirstname[17].innerText = "Middle name: ●●●●●";
+                _userfirstname[17].innerText = "Middle name: ●●●●●●●●●●●●●●●●";
               }
           }}>show</p>
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>Last name: ●●●●●●●●●●●●●●●●</p>
@@ -399,7 +417,7 @@ function PublicAuthenticationDetails(props) {
         if ( _userfirstname[18].innerText.includes("●")) {
                 _userfirstname[18].innerText = `Last name: ${props.user.details.surials.lastname}`;
               } else {
-                _userfirstname[18].innerText = "Last name: ●●●●●";
+                _userfirstname[18].innerText = "Last name: ●●●●●●●●●●●●●●●●";
          }
       }}>show</p>
       <p className='publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication'>or</p>
@@ -408,7 +426,7 @@ function PublicAuthenticationDetails(props) {
             onClick={(evt)=> {
                const _userfirstname = document.querySelectorAll(".publicahtneticationdetails-publicauthenticationdetailsheaderindication-publicauthenticationdetailsheaderindication");
               if ( _userfirstname[20].innerText.includes("●")) {
-                _userfirstname[20].innerText = `Nick name: ${props.user.details.surials.nickname}`;
+                _userfirstname[20].innerText = `Nickname: ${props.user.details.surials.nickname}`;
               } else {
                 _userfirstname[20].innerText = "Nick name: ●●●●●";
          }
@@ -452,7 +470,7 @@ function Funds(props) {
 
   <TransactionFundsGraph viewport={props.viewport}/>
 
-  <MoneyTransaction viewport={props.viewport}/>
+  <FundsTransaction viewport={props.viewport}/>
 
 </Row>
  )
@@ -466,7 +484,12 @@ function ConfigurationAuthenticationModal(props) {
        id='configurationauthenticationdetailsmodal'>
 
     <hr />
+    <Col xs={12}
+         md={12}
+         lg={12}
+         className='configurationauthenticationdetailsmodal-mainheaderindicationcontainer'>
      <p className='configurationauthenticationdetailsmodal-headerindication'>Account details configuration</p>
+    </Col>
     <hr />
    
     <Col xs={12}
@@ -967,20 +990,64 @@ function ConfigurationAuthenticationModal(props) {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationtrademarkddress}
+             onChange={(evt)=> {
+               const _userconfigurationtrademarkaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationtrademarkaddresscb((trademarkaddress)=> trademarkaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
+    {
+      props.userconfigurationtrademarkaddressloadingindication ? 
+      (
       <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
          <Spinner animation="border" variant="secondary" />
       </Col>
+      )
+      :
+      (
+      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+        <button className='configurationauthenticationdetailsmodal-savebutton'
+                onClick={ async (evt)=> {
+                
+                  const _userconfigurationtrademarkaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                  await props.userconfigurationtrademarkaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                  axiosCreatedInstance.post("/userauthentication/changetrademarkaddress", {
+                    $userconfigurationtrademarkaddress:  props.userconfigurationtrademarkaddress,
+                    $userauthenticationid: props.user.authentications.authenticationid
+                  }).then( async (response)=> {
+
+                      const _responsedatamessage = response.data.message; 
+
+                      switch(true) {
+                        case _responsedatamessage.includes("Changing your trademark address was successful"):
+                         _userconfigurationtrademarkaddressresponssemessage[6].style.color = "dodgerblue";
+                         _userconfigurationtrademarkaddressresponssemessage[6].innerText = _responsedatamessage;  
+                        await props.userconfigurationtrademarkaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                        break;  
+                        case _responsedatamessage.includes("Changing your trademark address failed. Error:"):
+                          _userconfigurationtrademarkaddressresponssemessage[6].style.color = "tomato";
+                          _userconfigurationtrademarkaddressresponssemessage[6].innerText = _responsedatamessage;  
+                        await props.userconfigurationtrademarkaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                        break;
+                      }
+
+                      
+                  })
+
+                  
+                }}>
+         save
+        </button>
+      </Col>
+      )
+    }
     </Col>
     <Col xs={12}
          md={6}
@@ -1000,20 +1067,65 @@ function ConfigurationAuthenticationModal(props) {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationcityddress}
+             onChange={(evt)=> {
+               const _userconfigurationcityaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationcityaddresscb((trademarkaddress)=> trademarkaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+     {
+      props.userconfigurationcityaddressloadingindication ? 
+      (
+       <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+        <Spinner animation="border" variant="secondary" />
+       </Col>
+      )
+      :
+      (
+        <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+          <button className='configurationauthenticationdetailsmodal-savebutton'
+                  onClick={ async (evt)=> {
+                  
+                    const _userconfigurationcityaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                    await props.userconfigurationcityaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                    axiosCreatedInstance.post("/userauthentication/changecityaddress", {
+                      $userconfigurationcityaddress:  props.userconfigurationcityaddress,
+                      $userauthenticationid: props.user.authentications.authenticationid
+                    }).then( async (response)=> {
+
+                        const _responsedatamessage = response.data.message; 
+
+                        switch(true) {
+                          case _responsedatamessage.includes("Changing your city address was successful"):
+                          _userconfigurationcityaddressresponssemessage[7].style.color = "dodgerblue";
+                          _userconfigurationcityaddressresponssemessage[7].innerText = _responsedatamessage;  
+                          await props.userconfigurationcityaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;  
+                          case _responsedatamessage.includes("Changing your city address failed. Error:"):
+                            _userconfigurationcityaddressresponssemessage[7].style.color = "tomato";
+                            _userconfigurationcityaddressresponssemessage[7].innerText = _responsedatamessage;  
+                          await props.userconfigurationcityaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                        }
+
+                        
+                    })
+
+                  }}>
+          save
+          </button>
+       </Col>
+      )
+     }
+    
+   
     </Col>
     <Col xs={12}
          md={6}
@@ -1033,20 +1145,63 @@ function ConfigurationAuthenticationModal(props) {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationprovinceddress}
+             onChange={(evt)=> {
+               const _userconfigurationprovinceddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationprovinceaddresscb((trademarkaddress)=> trademarkaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+      {
+        props.userconfigurationprovinceaddressloadingindication ?
+        (
+          <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+            <Spinner animation="border" variant="secondary" />
+          </Col>
+        )
+        :
+        (
+        <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+          <button className='configurationauthenticationdetailsmodal-savebutton'
+                  onClick={ async (evt)=> {
+                
+                    const _userconfigurationprovinceaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+  
+                    await props.userconfigurationprovinceaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+  
+                    axiosCreatedInstance.post("/userauthentication/changeprovinceaddress", {
+                      $userconfigurationprovinceaddress:  props.userconfigurationprovinceaddress,
+                      $userauthenticationid: props.user.authentications.authenticationid
+                    }).then( async (response)=> {
+  
+                        const _responsedatamessage = response.data.message; 
+  
+                        switch(true) {
+                          case _responsedatamessage.includes("Changing your province address was successful"):
+                            _userconfigurationprovinceaddressresponssemessage[8].style.color = "dodgerblue";
+                            _userconfigurationprovinceaddressresponssemessage[8].innerText = _responsedatamessage;  
+                          await props.userconfigurationprovinceaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;  
+                          case _responsedatamessage.includes("Changing your province address failed. Error:"):
+                            _userconfigurationprovinceaddressresponssemessage[8].style.color = "tomato";
+                            _userconfigurationprovinceaddressresponssemessage[8].innerText = _responsedatamessage;  
+                          await props.userconfigurationprovinceaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                          break;
+                        }
+  
+                        
+                    })
+
+                  }}>
+           save
+          </button>
+        </Col>
+        )
+      }
     </Col>
     <Col xs={12}
          md={6}
@@ -1065,20 +1220,64 @@ function ConfigurationAuthenticationModal(props) {
          lg={2}
          className='configurationauthenticationdetailsmodal-fieldcontainer'>
       <input type='text'
-             className='configurationauthenticationdetailsmodal-field'/>
+             className='configurationauthenticationdetailsmodal-field'
+             value={props.userconfigurationcountryddress}
+             onChange={(evt)=> {
+               const _userconfigurationcountryaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+               props.userconfigurationcountryaddresscb((trademarkaddress)=> trademarkaddress = evt.target.value);
+             }}/>
     </Col>
     <Col xs={4}
          md={2}
          lg={2}
          className='configurationauthenticationdetailsmodal-savebuttonandloadingindicationcontainer'>
-      <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
-        <button className='configurationauthenticationdetailsmodal-savebutton'>
-         save
-        </button>
-      </Col>
-      <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
-         <Spinner animation="border" variant="secondary" />
-      </Col>
+      {
+        props.userconfigurationcountryaddressloadingindication ? 
+        (
+        <Col className='configurationauthenticationdetailsmodal-loadingindicationcontainer'>
+          <Spinner animation="border" variant="secondary" />
+        </Col>
+        )
+        :
+        (
+        <Col className='configurationauthenticationdetailsmodal-savebuttoncontainer'>
+             <button className='configurationauthenticationdetailsmodal-savebutton' 
+                     onClick={ async (evt)=> {
+                        
+                          const _userconfigurationcountryaddressresponssemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-responsemessage");
+
+                          await props.userconfigurationcountryaddressloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                          axiosCreatedInstance.post("/userauthentication/changecountryaddress", {
+                            $userconfigurationcountryaddress:  props.userconfigurationcountryaddress,
+                            $userauthenticationid: props.user.authentications.authenticationid
+                          }).then( async (response)=> {
+
+                              const _responsedatamessage = response.data.message; 
+
+                              switch(true) {
+                                case _responsedatamessage.includes("Changing your country address was successful"):
+                                  _userconfigurationcountryaddressresponssemessage[9].style.color = "dodgerblue";
+                                  _userconfigurationcountryaddressresponssemessage[9].innerText = _responsedatamessage;  
+                                await props.userconfigurationcountryaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                                break;  
+                                case _responsedatamessage.includes("Changing your country address failed. Error:"):
+                                  _userconfigurationcountryaddressresponssemessage[9].style.color = "tomato";
+                                  _userconfigurationcountryaddressresponssemessage[9].innerText = _responsedatamessage;  
+                                await props.userconfigurationcountryaddressloadingindicationcb((loadingindication)=> loadingindication = false);
+                                break;
+                              }
+
+                              
+                          })
+
+                     }}>
+                save
+             </button>
+        </Col>
+        )
+      }
+
     </Col>
     <Col xs={12}
          md={6}
@@ -1087,106 +1286,164 @@ function ConfigurationAuthenticationModal(props) {
       <p className='configurationauthenticationdetailsmodal-responsemessage'>Response message</p>
     </Col>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+    <Col xs={12}
+         md={12}
+         lg={12}
+         className="configurationauthenticationdetailsmodal-contactmodalcontainer">
+      <Col className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer">
+        <Row className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer">
+          <Col xs={12}
+               md={3}
+               lg={4}
+               className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-contactdetailindicationtypecontainer">
+                <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-contactdetailindicationtypecontainer-contactdetailsheaderindication">Phone number</p>
+          </Col>
+                                 
+          <Col xs={12}
+               md={9}
+               lg={8}
+               className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-contactdetailbuttonsindicationscontainer"
+               type="text"
+               value={props.userconfigurationphonenumber}
+               onChange={(evt)=> {
+                  const _fieldvalue = evt.target.value
+                  props.userconfigurationphonenumbercb((contactnumber)=> contactnumber = _fieldvalue);
+               }}>
 
-    <hr />
-     <p>User picture</p>
-    <hr />
+              <input className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-contactnumberfield"/>
 
-    <br />
-    <br />
+              <button className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-configurationbutton"
+                       onClick={()=> {
+                        const _phonenumberrequirementsmodalconfirmationmodalcontainer = document.querySelectorAll(".configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer");
+                        const _phonenumberrequestresponsemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-responsemessageheaderindication");
+                        if (  props.userconfigurationphonenumber === "XXXX-XXXX-XXX-X" ||  props.userconfigurationphonenumber === "" || props.userconfigurationphonenumber.length < 10) {
+                          _phonenumberrequestresponsemessage[0].innerText = "Make sure to provide your phone number in correct digits";
+                          _phonenumberrequestresponsemessage[0].style.visibility = "visible";
+                        } else {
+                          _phonenumberrequirementsmodalconfirmationmodalcontainer[0].style.display = "flex";
+                        }
 
-     <Col xs={12}
-        md={12}
-	lg={12}
-        className="configurationauthenticationdetailsmodal-cardidpicturescontainer-frontdetailscontainer">
-     <Col className="configurationauthenticationdetailsmodal-cardidpicturecontainer"> 
-         <img src="../images/landingpage/bondpaperimage.jpg"
-              id="configurationauthenticationdetailsmodal-cardiduserpicture"
-	      onClick={(evt)=> {
-               const _picturemodal = document.querySelectorAll(".configurationauthenticationdetailsmodal-cardiddisplaymodal");
-	      _picturemodal[0].style.display = "block";
-	     }}/>
-       <Col className="configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebuttoncontainer">
-	<input type="file" id="configurationauthenticationdetailsmodal-userpicture"/>
-	 <label for="configurationauthenticationdetailsmodal-userpicture"
-                className="configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebutton">
-	 change user picture
-	 </label>
+                        
+                       }}>
+                 save
+               </button>
+
+              <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-responsemessageheaderindication">Response message</p>
+          </Col>
+        </Row>
       </Col>
-
-      </Col>
-      <Col className="configurationauthenticationdetailsmodal-cardiddisplaymodal"> 
-        <Col id="databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicturecontainer">
-          <img src="../images/landingpage/bondpaperimage.jpg"
-               id="configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicture"/>
+      <Row className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer">
+        <Col xs={12}
+             md={12}
+             lg={12}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer">
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication">transaction give away phone number contact card</p>
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication"></p>
         </Col>
-        <Col id="databasemobileidcard-frontlayout-cardiddisplaymodal-closebuttoncontainer">
-         <button id="databasemobileidcard-frontlayout-cardiddisplaymodal-closebutton"
-                onClick={(evt)=> {
-                 const _picturemodal = document.querySelectorAll(".configurationauthenticationdetailsmodal-cardiddisplaymodal");
-	        _picturemodal[0].style.display = "none";
-	     }}>
-	   close
-        </button>
+        <Col xs={6}
+             md={4}
+             lg={3}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer">
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication">Phone number: {props.userconfigurationphonenumber}</p>
         </Col>
-      </Col>
+        <Col xs={6}
+             md={4}
+             lg={3}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer">
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication">Gcash account number √ </p>
+        </Col>
+        <Col xs={6}
+             md={4}
+             lg={3}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer">
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication">Main active gcash account number √ </p>
+        </Col>
+        <Col xs={6}
+             md={4}
+             lg={3}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer">
+          <p className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-headerindication">
+          Globe, TM, Talk N Text, Smart, SUN, or DITO √ </p>
+        </Col>
+        <Col xs={12}
+             md={12}
+             lg={12}
+             className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-requirementbuttoncolcontainer">
+            {
+              props.userconfigurationphonenumberloadingindication ? 
+              (
+                <Spinner className="configurationauthenticationdetailsmodal-loadingindicationcontainer-loadingindicationspinner"
+                animation="border" 
+                variant="secondary" />
+              )
+              :
+              (
+                <button className="configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer-colcontainer-requirementsbutton"
+                onClick={ async ()=> {
+
+                  const _phonenumberrequirementsmodalconfirmationmodalcontainer = document.querySelectorAll(".configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailslistscontainer");
+                  const _phonenumberrequestresponsemessage = document.querySelectorAll(".configurationauthenticationdetailsmodal-contactmodalcontainer-contactdetailscontainer-contactdetailsheaderindicationcontainer-responsemessageheaderindication");
+                     
+                  await props.userconfigurationphonenumberloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                  axiosCreatedInstance.post("/userauthentication/vanguardphonenumber/save", {
+                    $userconfigurationphonenumber: props.userconfigurationphonenumber,
+                    $userauthenticationid: props.user.authentications.authenticationid
+                  }).then( async (response)=> {
+
+                      const _responsedatamessage = response.data.message; 
+
+                      switch(true) {
+                        case _responsedatamessage.includes("Phone number successfully saved and set"):
+                          _phonenumberrequestresponsemessage[0].style.color = "dodgerblue";
+                          _phonenumberrequestresponsemessage[0].innerText = _responsedatamessage;  
+                          _phonenumberrequestresponsemessage[0].style.visibility = "visible";
+                        await props.userconfigurationphonenumberloadingindicationcb((loadingindication)=> loadingindication = false);
+                        _phonenumberrequirementsmodalconfirmationmodalcontainer[0].style.display = "none";
+                        break;  
+                        case _responsedatamessage.includes("Phone number successfully changed and set"):
+                          _phonenumberrequestresponsemessage[0].style.color = "dodgerblue";
+                          _phonenumberrequestresponsemessage[0].innerText = _responsedatamessage;  
+                          _phonenumberrequestresponsemessage[0].style.visibility = "visible";
+                        await props.userconfigurationphonenumberloadingindicationcb((loadingindication)=> loadingindication = false);
+                        _phonenumberrequirementsmodalconfirmationmodalcontainer[0].style.display = "none";
+                        break; 
+                        case _responsedatamessage.includes("Saving phone number failed. Error:"):
+                          _phonenumberrequestresponsemessage[0].style.color = "tomato";
+                          _phonenumberrequestresponsemessage[0].innerText = _responsedatamessage;  
+                          _phonenumberrequestresponsemessage[0].style.visibility = "visible";
+                        await props.userconfigurationphonenumberloadingindicationcb((loadingindication)=> loadingindication = false);
+                        _phonenumberrequirementsmodalconfirmationmodalcontainer[0].style.display = "none";
+                        break;
+                      }
+
+                      
+                  })
+
+                }}>
+                 I have check and verified the following requirements complied using this phone number as Vanguard contact
+               </button>
+              )
+            }
+        </Col>
+      </Row>
     </Col>
 
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
 
-    <hr id="configurationauthenticationdetailsmodal-usersigniturehr"/>
-     <p>User signiture</p>
-    <hr />
-
-    <br />
-    <br />
-
-   <Col xs={12}
-        md={12}
-	      lg={12}
-        className="configurationauthenticationdetailsmodal-cardidpicturescontainer-backdetailscontainer">
-     <Col className="configurationauthenticationdetailsmodal-cardidpicturecontainer"> 
-         <img src="../images/landingpage/bondpaperimage.jpg"
-              id="configurationauthenticationdetailsmodal-cardiduserpicture"
-	      onClick={(evt)=> {
-               const _picturemodal = document.querySelectorAll(".configurationauthenticationdetailsmodal-cardiddisplaymodal");
-	      _picturemodal[1].style.display = "block";
-	     }}/>
-        <Col className="configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebuttoncontainer">
-	 <input type="file" id="configurationauthenticationdetailsmodal-usersigniture"/>
-	 <label for="configurationauthenticationdetailsmodal-usersigniture"
-         className="configurationauthenticationdetailsmodal-cardidpicturecontainer-changeuserpicturebutton">change user signiture
-	 </label>
-	</Col>
-      </Col>
-      <Col className="configurationauthenticationdetailsmodal-cardiddisplaymodal"> 
-        <Col id="databasemobileidcard-frontlayout-cardiddisplaymodal-cardiduserpicturecontainer">
-          <img src="../images/landingpage/bondpaperimage.jpg"
-               id="configurationauthenticationdetailsmodal-cardiddisplaymodal-cardiduserpicture"/>
-        </Col>
-        <Col id="databasemobileidcard-frontlayout-cardiddisplaymodal-closebuttoncontainer">
-         <button id="databasemobileidcard-frontlayout-cardiddisplaymodal-closebutton"
-                onClick={(evt)=> {
-                 const _picturemodal = document.querySelectorAll(".configurationauthenticationdetailsmodal-cardiddisplaymodal");
-	        _picturemodal[1].style.display = "none";
-	     }}>
-	   close
-        </button>
-        </Col>
-      </Col>
-    </Col>
+  
 
   </Row>
  )
 }
 
-function PasswordSetup() {
+function PasswordSetup(props) {
  return (
   <Row id='passwordsetup'>
     <Col xs={12}
@@ -1195,15 +1452,77 @@ function PasswordSetup() {
          className='passwordsetup-fieldandheaderindicationcontainer'>
      <p className='passwordsetup-fieldandheaderindicationcontainer-fieldheaderindcation'>Password</p>
      <input className='passwordsetup-fieldandheaderindicationcontainer-field'
-            type='password'/>
+            type='password'
+            value={props.userconfigurationpassword}
+            onChange={(evt)=> {
+              props.userconfigurationpasswordcb((password)=> password = evt.target.value);
+            }}/>
      <p className='passwordsetup-fieldandheaderindicationcontainer-responsemessage'>Response message</p>
     </Col>
     <Col xs={12}
          md={6}
          lg={6}
          className='passwordsetup-fieldandheaderindicationcontainer'>
-      <button className='passwordsetup-button'>show</button>
-      <button className='passwordsetup-button'>configure</button>
+
+      <button className='passwordsetup-button'
+              onClick={(evt)=> {
+
+                const _passwordvisibilitytogglebutton = evt.target;
+                const _passwordvalue = document.querySelectorAll(".passwordsetup-fieldandheaderindicationcontainer-field")[0];
+
+                if ( _passwordvalue.type === "password" ) {
+                  _passwordvalue.type = "text";
+                  _passwordvisibilitytogglebutton.innerText = "hide";
+                } else {
+                  _passwordvalue.type = "password";
+                  _passwordvisibilitytogglebutton.innerText = "show";
+                }
+
+              }}>show</button>
+      <button className='passwordsetup-button'>
+        {
+         props.userconfigurationpasswordloadingindication ?
+         (
+          <Spinner className="configurationauthenticationdetailsmodal-loadingindicationcontainer-loadingindicationspinner"
+                  animation="border" 
+                  variant="secondary" />
+         )
+         :
+         (
+          <span onClick={ async (evt)=> {
+                
+                const _userconfigurationtpasswordrequestconfigurationresponssemessage = document.querySelectorAll(".passwordsetup-fieldandheaderindicationcontainer-responsemessage");
+
+                await props.userconfigurationpasswordloadingindicationcb((loadingindication)=> loadingindication = true);
+
+                axiosCreatedInstance.post("/userauthentication/passwordconfiguration", {
+                  $userconfigurationpassword:  props.userconfigurationpassword,
+                  $userauthenticationid: props.user.authentications.authenticationid
+                }).then( async (response)=> {
+
+                    const _responsedatamessage = response.data.message; 
+
+                    switch(true) {
+                      case _responsedatamessage.includes("Password successfully saved and set"):
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].style.color = "skyblue";
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].innerText = _responsedatamessage;  
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].style.visibility = "visible";
+                      await props.userconfigurationpasswordloadingindicationcb((loadingindication)=> loadingindication = false);
+                      break;  
+                      case _responsedatamessage.includes("Password configuration failed. Error:"):
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].style.color = "red";
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].innerText = _responsedatamessage;  
+                        _userconfigurationtpasswordrequestconfigurationresponssemessage[0].style.visibility = "visible";
+                      await props.userconfigurationpasswordloadingindicationcb((loadingindication)=> loadingindication = false);
+                      break;
+                    }
+                    
+                })
+
+          }}>configure</span> 
+         )
+        }
+      </button>
     </Col>
   </Row>
  )
@@ -1214,6 +1533,7 @@ return (
 <Col id="databasemobileidcard-layoutcontainer">
  <Row id="databasemobileidcard"> 
    <Col id="databasemobileidcard-frontlayout">
+   <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsmainheaderindication">Vanguard mobile ID</p>
     <Col id="databasemobileidcard-frontlayout-cardidpicturescontainer">
       <Col id="databasemobileidcard-frontlayout-cardidpicturecontainer"> 
          <img src="../images/landingpage/bondpaperimage.jpg"
@@ -1232,16 +1552,16 @@ return (
          <button id="databasemobileidcard-frontlayout-cardiddisplaymodal-closebutton"
                 onClick={(evt)=> {
                  const _picturemodal = document.querySelector("#databasemobileidcard-frontlayout-cardiddisplaymodal");
-	        _picturemodal.style.display = "none";
-	     }}>
-	   close
+	              _picturemodal.style.display = "none";
+	             }}>
+	          close
         </button>
         </Col>
       </Col>
      </Col>
      <Col id="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainer">
        <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">{props.user.details.surials.firstname} {props.user.details.surials.middlename} {props.user.details.surials.lastname}</p>
-       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">{props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street},</p>
+       <p className="databasemobileidcard-frontlayout-cardidpicturescontainer-frontdetailscontainerfrontdetailsheaderindication">{props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}, {props.user.details.location.address.street}</p>
      </Col>
     </Col>
 
@@ -1252,9 +1572,9 @@ return (
               id="databasemobileidcard-backlayout-cardiduserpicture"
 	      onClick={(evt)=> {
                const _picturemodal = document.querySelector("#databasemobileidcard-backlayout-cardiddisplaymodal");
-	      _picturemodal.style.display = "block";
+	            _picturemodal.style.display = "block";
 	     }}/>
-         <p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">ID HOLDER SIGNITURE</p>
+         <p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">VANGUARD ID HOLDER VANGUARD SIGNITURE</p>
       </Col>
       <Col id="databasemobileidcard-backlayout-cardiddisplaymodal"> 
         <Col id="databasemobileidcard-backlayout-cardiddisplaymodal-cardiduserpicturecontainer">
@@ -1265,8 +1585,8 @@ return (
          <button id="databasemobileidcard-backlayout-cardiddisplaymodal-closebutton"
 	         onClick={(evt)=> {
                    const _picturemodal = document.querySelector("#databasemobileidcard-backlayout-cardiddisplaymodal");
-	           _picturemodal.style.display = "none";
-	     }}>
+	                _picturemodal.style.display = "none";
+	         }}>
 	   close
         </button>
         </Col>
@@ -1274,17 +1594,17 @@ return (
      </Col>
      <Row id="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailsgridcontainer">
       <Col xs={6}
-	   md={6}
-	   lg={6}
+	         md={6}
+	         lg={6}
 	   className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer">
-	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">My CONTACT NUMBER</p>
+	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">MY CONTACT NUMBER</p>
 	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication">00000000000</p>
       </Col>
       <Col xs={6}
 	   md={6}
 	   lg={6}
 	   className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer">
-	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">VANGUARD MAIN CONTAINER NUMBER</p>
+	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailsheaderindication">VANGUARD MAIN CONTACT NUMBER</p>
 	<p className="databasemobileidcard-backlayout-cardidpicturescontainer-backdetailscontainer-backdetailssubheaderindication">00000000000</p>
       </Col>
      </Row>
