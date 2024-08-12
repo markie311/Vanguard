@@ -1459,7 +1459,7 @@ function MarketingDisplayMerchandiseDetails(props) {
           props.productdisplayimages.length === 0 ? 
           (
             <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainerdetailscontainer-merchandiseimagelistpreparingforadisplayheaderindication'>
-              Choose a merchandise details find view image's and video's to be displayed on the modal
+              Find merchandise details and choose a product specefication to load image's on this modal
             </p>
           )
           :
@@ -1526,7 +1526,7 @@ function MarketingDisplayMerchandiseDetails(props) {
          props.productavailablevideos.length === 0 ? 
          (
           <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainerdetailscontainer-merchandiseimagelistpreparingforadisplayheaderindication'>
-           Choose a merchandise details find view image's and video's to be displayed on the modal
+          Find merchandise details and choose a product specefication to load video's on this modal
           </p>
          )
          :
