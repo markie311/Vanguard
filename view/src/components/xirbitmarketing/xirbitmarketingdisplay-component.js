@@ -790,7 +790,7 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
                           {
                             ricespecification.specifications.map((productspecification, productspecificationidx)=> {
                               return (
-                                <Col xs={6}
+                                <Col xs={12}
                                      md={2}
                                      lg={2}
                                      key={productspecificationidx}
