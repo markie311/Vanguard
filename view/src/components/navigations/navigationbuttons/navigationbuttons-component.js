@@ -61,6 +61,8 @@ export default function NavigationButtons(props) {
                     key={idx}
                     to={button.buttonlink}
                     onClick={(evt)=> {
+                       props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
+                       props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
                        navigate('/xirbitmarketing');
                     }}>
                 0{idx}. {button.buttonindication}
