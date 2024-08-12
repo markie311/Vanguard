@@ -98,17 +98,19 @@ export default function NavigationButtons(props) {
                       onClick={(evt)=> {
 
                         const _welcomeintroductionmodal = document.getElementById("vanguardwelcomeintroduction");
-                        _welcomeintroductionmodal.style.top = "-100vh";
-                        _welcomeintroductionmodal.style.opacity = "1";
+                       // _welcomeintroductionmodal.style.top = "-100vh";
+                       // _welcomeintroductionmodal.style.opacity = "1";
 
                         if ( props.viewport === 'xs' ) {
                           props.landingpagenavigationbargraphleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%')
+                          props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
+                          props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
                           return
                         }
 
                           props.landingpagenavigationbargraphleftpropertycb((left)=> left === '-90%' ? '0%' : '-90%')
 
-                          props.welcomeintroductiontoppropcb((top)=> top = "-110vh");
+                          props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
                           props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
 
                       }}>
@@ -130,6 +132,8 @@ export default function NavigationButtons(props) {
 
                         if ( props.viewport === 'xs' ) {
                             props.landingpagedepositnavigationleftpropertycb((left)=> left = '0%');
+                            props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
+                            props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
                           return
                         }
 
@@ -157,6 +161,8 @@ export default function NavigationButtons(props) {
 
                         if ( props.viewport === 'xs' ) {
                           props.landingpagewidthdrwalnavigationleftpropertycb((left)=> left === '-100%' ? '0%' : '-100%');
+                          props.welcomeintroductiontoppropcb((top)=> top = "-150vh");
+                          props.welcomeintroductionopacitypropcb((opacity)=> opacity = "0");
                           return
                         }
 
