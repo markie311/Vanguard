@@ -109,8 +109,14 @@ const productspecificationscheme = new Schema({
           default: 0
         },
         vat: {
-          type: 'number',
-          default: 0
+          business: {
+           type: 'number',
+           default: 0
+          },
+          vanguard: {
+           type: 'number',
+           default: 0
+          },
         }
       },
       cybervisual: {
@@ -159,7 +165,8 @@ const productspecificationscheme = new Schema({
           type: 'string',
         },
         weight: {
-          type: 'string'
+          type: "number",
+          default: 0
         },
         fee: {
           type: 'number',

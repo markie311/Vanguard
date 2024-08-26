@@ -1226,7 +1226,6 @@ width:100%;
 ////// payment details container
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer {
 position:relative;
-border:1vh solid white;
 height:100%;
 width:100%;
 margin-left:auto;
@@ -2482,7 +2481,7 @@ width:32%;
 ////// payment details container
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer {
 position:relative;
-border:1vh solid white;
+border:0.3vh solid white;
 height:100%;
 width:100%;
 margin-left:auto;
@@ -2508,9 +2507,8 @@ background: #b30000;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer {
 position:relative;
-border-bottom:0.2vh dotted white;
 height:auto;
-padding:20px 5px;
+padding:40px 120px 40px 35px;
 }
 .marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication {
 position:relative;
@@ -2525,9 +2523,10 @@ background-color:dodgerblue;
 border-radius:20px;
 font: auto {
  family: $sub-font;
+ weight:900;
 }
 color:white;
-padding:5px 15px;
+padding:10px 40px;
 outline-style:none;
 }
 }

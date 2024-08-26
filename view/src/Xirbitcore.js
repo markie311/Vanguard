@@ -350,7 +350,7 @@ const [databasedata, databasedatacb] = useState({
 
 const [user, usercb] = useState({
   authentications: {
-   authenticationtype: 'Practicing',
+   authenticationtype: 'Private',
    privateauthenticationkey: 'Privateauthenticationkeysample',
    authenticationid: '1722868338756-m9Z2hw6P-FGH',
    password: {
@@ -3783,17 +3783,25 @@ const [manualcargoaddressdestinationloadingindication, manualcargoaddressdestina
 const [setascargodestinationloadingindication, setascargodestinationloadingindicationcb] = useState(false);
 
 const [purchasingcargodestination, purchasingcargodestinationcb] = useState(",,,,,");
-const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(false);
+const [purchasingcargoaddressset, purchasingcargoaddresssetcb] = useState(true);
 
 const [purchasingtotalmerchandisepayment, purchasingtotalmerchandisepaymentcb] = useState(0);
+const [purchasingtotalitems, purchasingtotalitemscb] = useState(0);
 const [purchasingtotalweight, purchasingtotalweightcb] = useState(0);
 const [purchasingtotalcargofee, purchasingtotalcargofeecb] = useState(0);
 const [purchasigtotalpayment, purchasigtotalpaymentcb] = useState(0);
 const [purchasingpaymentset, purchasingpaymentsetcb] = useState(false);
 
-const [purchasingtotalmrnproducts, purchasingtotalmrnproductscb] = useState([]);
+const [purchasingtotalmrnproducts, purchasingtotalmrnproductscb] = useState({
+                                                                             data: []
+                                                                            });
+const [purchasingtotalpricemrnproducts, purchasingtotalpricemrnproductscb] = useState(0);
 const [purchasingmrnproductstotalweight, purchasingmrnproductstotalweightcb] = useState(0);
-const [purchasingtotalnonmrnproducts, purchasingtotalnonmrnproductscb] = useState([]);
+const [purchasingtotalnonmrnproducts, purchasingtotalnonmrnproductscb] = useState({
+                                                                                    data: []
+                                                                                  });
+                                                                                  
+const [purchasingtotalpricenonmrnproducts, purchasingtotalpricenonmrnproductscb] = useState(0);
 const [purchasingnonmrnproductstotalweight, purchasingnonmrnproductstotalweightcb] = useState(0);
 
 const [selectedproduct, selectedproductcb] = useState(
@@ -3803,7 +3811,7 @@ rapportname: 'Rapport name',
 definition: 'Product definition',
 authentications: {
 producttype: 'Product type',
-productid: 'Product id 0'
+productid: 'Product id 11111'
 },
 details: {
 product: {
@@ -3942,44 +3950,44 @@ vat: 2
 },
 cybervisual: {
 images: {
-  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-  maindisplayimages: [
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  },
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  },
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  }
-  ]
+maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+maindisplayimages: [
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+}
+]
 },
 videos: [
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  }
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+}
 ]
 },
 },
 locations: {
 operations: [
 {
-  street: 'Street',
-  baranggay: 'Baranggay',
-  trademark: 'Trademark',
-  city: 'City',
-  province: 'Province',
-  country: 'Country'
+street: 'Street',
+baranggay: 'Baranggay',
+trademark: 'Trademark',
+city: 'City',
+province: 'Province',
+country: 'Country'
 }
 ]
 }
@@ -3990,9 +3998,9 @@ product: [
 
 ],
 shipping: {
-  category: 'Shipping category',
-  weight: 'Shipping weight',
-  fee: 0
+category: 'Shipping category',
+weight: 'Shipping weight',
+fee: 0
 }
 },
 stocks: [
@@ -4040,44 +4048,44 @@ vat: 2
 },
 cybervisual: {
 images: {
-  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-  maindisplayimages: [
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  },
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  },
-  {
-    displayimage: '../images/landingpage/bondpaperimage.jpg'
-  }
-  ]
+maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+maindisplayimages: [
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+},
+{
+  displayimage: '../images/landingpage/bondpaperimage.jpg'
+}
+]
 },
 videos: [
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  },
-  {
-    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-  }
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+},
+{
+  youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+}
 ]
 },
 },
 locations: {
 operations: [
 {
-  street: 'Street',
-  baranggay: 'Baranggay',
-  trademark: 'Trademark',
-  city: 'City',
-  province: 'Province',
-  country: 'Country'
+street: 'Street',
+baranggay: 'Baranggay',
+trademark: 'Trademark',
+city: 'City',
+province: 'Province',
+country: 'Country'
 }
 ]
 }
@@ -4085,196 +4093,196 @@ operations: [
 system: {
 request: {
 product: [
-  {
-  pcs: 0,
-  details: {
-  for: {
-      part: 'Product part',
-      gender: 'Male',
-      category: 'Adults' 
-  },
-  set: {
-      set: false,
-      productindication: 'Oridinary',
-      pcs: 10
-  },
-  size: 'Product size',
-  color: 'Product color',
-  weight: 'Product weight',
-  top: 'Top product specification',
-  left: 'Left product specification',
-  bottom: 'Bottom product specification',
-  right: 'Right product specification',
-  front: 'Front product specification',
-  back: 'Back product specification'
-  },
-  pricesbreakdown: {
-  price: 0,
-  capital: 0,
-  suggested_retail_price: 0,
-  vat:0
-  },
-  specification: 'Order specification'
-  }
+{
+pcs: 0,
+details: {
+for: {
+    part: 'Product part',
+    gender: 'Male',
+    category: 'Adults' 
+},
+set: {
+    set: false,
+    productindication: 'Oridinary',
+    pcs: 10
+},
+size: 'Product size',
+color: 'Product color',
+weight: 'Product weight',
+top: 'Top product specification',
+left: 'Left product specification',
+bottom: 'Bottom product specification',
+right: 'Right product specification',
+front: 'Front product specification',
+back: 'Back product specification'
+},
+pricesbreakdown: {
+price: 0,
+capital: 0,
+suggested_retail_price: 0,
+vat:0
+},
+specification: 'Order specification'
+}
 ],
 shipping: {
-  category: 'Shipping category',
-  weight: 'Shipping weight',
-  fee: 0
+category: 'Shipping category',
+weight: 'Shipping weight',
+fee: 0
 }
 },
 stocks: [
 {
-  details: {
-    product: {
-      name: 'Product name',
-      rapportname: 'Product rapport name',
-      definition: 'Product definition',
-      specification: {
-        for: {
-          gender: 'Gender specification',
-          category: 'Gender specificaiton category'
-        },
-        part: 'Product part',
-        size: 'Product size',
-        color: 'Product color',
-        weight: 'Product weight',
-        top: 'Top product specification',
-        left: 'Left product specification',
-        bottom: 'Bottom product specification',
-        right: 'Right product specifi ation'
+details: {
+  product: {
+    name: 'Product name',
+    rapportname: 'Product rapport name',
+    definition: 'Product definition',
+    specification: {
+      for: {
+        gender: 'Gender specification',
+        category: 'Gender specificaiton category'
       },
-      pricesbreakdown: {
-      price: 10,
-      capital: 8,
-      suggested_retail_price: 10,
-      vat: 2
-      },
-      cybervisual: {
-        images: {
-        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-        maindisplayimages: [
-          {
-            displayimage: '../images/landingpage/bondpaperimage.jpg'
-          },
-          {
-            displayimage: '../images/landingpage/bondpaperimage.jpg'
-          },
-          {
-            displayimage: '../images/landingpage/bondpaperimage.jpg'
-          }
-        ]
-        },
-        videos: [
-          {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-          }
-        ]
-      },
-    },
-    locations: {
-    operations: [
-      {
-        street: 'Street',
-        baranggay: 'Baranggay',
-        trademark: 'Trademark',
-        city: 'City',
-        province: 'Province',
-        country: 'Country'
-      }
-    ]
-    }
-  },
-  system: {
-    order: {
-      specification: 'Order specification'
-    },
-    stocks: [],
-    purchase: {
-      people: [],
-      xirbit: []
+      part: 'Product part',
+      size: 'Product size',
+      color: 'Product color',
+      weight: 'Product weight',
+      top: 'Top product specification',
+      left: 'Left product specification',
+      bottom: 'Bottom product specification',
+      right: 'Right product specifi ation'
     },
     pricesbreakdown: {
-      shipping: {
-        category: 'Shipping category',
-        weight: 'Shipping weight',
-        fee: 0
-      }
+    price: 10,
+    capital: 8,
+    suggested_retail_price: 10,
+    vat: 2
+    },
+    cybervisual: {
+      images: {
+      maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+      maindisplayimages: [
+        {
+          displayimage: '../images/landingpage/bondpaperimage.jpg'
+        },
+        {
+          displayimage: '../images/landingpage/bondpaperimage.jpg'
+        },
+        {
+          displayimage: '../images/landingpage/bondpaperimage.jpg'
+        }
+      ]
+      },
+      videos: [
+        {
+        youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+        }
+      ]
+    },
+  },
+  locations: {
+  operations: [
+    {
+      street: 'Street',
+      baranggay: 'Baranggay',
+      trademark: 'Trademark',
+      city: 'City',
+      province: 'Province',
+      country: 'Country'
     }
+  ]
   }
 },
-{
-  details: {
-    product: {
-      name: 'Product name',
-      rapportname: 'Product rapport name',
-      definition: 'Product definition',
-      specification: {
-        for: {
-          gender: 'Gender specification',
-          category: 'Gender specificaiton category'
-        },
-        part: 'Product part',
-        size: 'Product size',
-        color: 'Product color',
-        weight: 'Product weight',
-        top: 'Top product specification',
-        left: 'Left product specification',
-        bottom: 'Bottom product specification',
-        right: 'Right product specifi ation'
-      },
-      pricesbreakdown: {
-      price: 10,
-      capital: 8,
-      suggested_retail_price: 10,
-      vat: 2
-      },
-      cybervisual: {
-        images: {
-        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-        maindisplayimages: [
-          {
-            displayimage: '../images/landingpage/bondpaperimage.jpg'
-          }
-        ]
-        },
-        videos: [
-          {
-          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-          }
-        ]
-      },
-    },
-    locations: {
-    operations: [
-      {
-        street: 'Street',
-        baranggay: 'Baranggay',
-        trademark: 'Trademark',
-        city: 'City',
-        province: 'Province',
-        country: 'Country'
-      }
-    ]
-    }
+system: {
+  order: {
+    specification: 'Order specification'
   },
-  system: {
-    order: {
-      specification: 'Order specification'
-    },
-    stocks: [],
-    purchase: {
-      people: [],
-      xirbit: []
-    },
-    pricesbreakdown: {
-      shipping: {
-        category: 'Shipping category',
-        weight: 'Shipping weight',
-        fee: 0
-      }
+  stocks: [],
+  purchase: {
+    people: [],
+    xirbit: []
+  },
+  pricesbreakdown: {
+    shipping: {
+      category: 'Shipping category',
+      weight: 'Shipping weight',
+      fee: 0
     }
   }
+}
+},
+{
+details: {
+  product: {
+    name: 'Product name',
+    rapportname: 'Product rapport name',
+    definition: 'Product definition',
+    specification: {
+      for: {
+        gender: 'Gender specification',
+        category: 'Gender specificaiton category'
+      },
+      part: 'Product part',
+      size: 'Product size',
+      color: 'Product color',
+      weight: 'Product weight',
+      top: 'Top product specification',
+      left: 'Left product specification',
+      bottom: 'Bottom product specification',
+      right: 'Right product specifi ation'
+    },
+    pricesbreakdown: {
+    price: 10,
+    capital: 8,
+    suggested_retail_price: 10,
+    vat: 2
+    },
+    cybervisual: {
+      images: {
+      maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+      maindisplayimages: [
+        {
+          displayimage: '../images/landingpage/bondpaperimage.jpg'
+        }
+      ]
+      },
+      videos: [
+        {
+        youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+        }
+      ]
+    },
+  },
+  locations: {
+  operations: [
+    {
+      street: 'Street',
+      baranggay: 'Baranggay',
+      trademark: 'Trademark',
+      city: 'City',
+      province: 'Province',
+      country: 'Country'
+    }
+  ]
+  }
+},
+system: {
+  order: {
+    specification: 'Order specification'
+  },
+  stocks: [],
+  purchase: {
+    people: [],
+    xirbit: []
+  },
+  pricesbreakdown: {
+    shipping: {
+      category: 'Shipping category',
+      weight: 'Shipping weight',
+      fee: 0
+    }
+  }
+}
 },
 ],
 purchase: {
@@ -4384,7 +4392,10 @@ const [companies, companiescb] = useState([
                 price: 10,
                 capital: 8,
                 suggested_retail_price: 10,
-                vat: 2
+                vat: {
+                  business: 2,
+                  vanguard: 2
+                }
               },
               cybervisual: {
                 images: {
@@ -4790,7 +4801,10 @@ const [companies, companiescb] = useState([
                  price: 10,
                  capital: 8,
                  suggested_retail_price: 10,
-                 vat: 2
+                 vat: {
+                   business: 2,
+                   vanguard: 2
+                 }
                },
                cybervisual: {
                  images: {
@@ -5110,410 +5124,413 @@ const [companies, companiescb] = useState([
     ]
   },
   {
-    details: {
-      companyname: "Kukaku",
-      description: {
-       companydescription: "Company description",
-       companymotto: "Company motto"
-      }
-    },
-    locations: {
-     farm: [],
-     plantations: [],
-     manufacturing: [],
-     packaging: [],
-     distributing: [],
-     offices: {
-       main: [ 
-         {
-         location: {
-           street: "Street",
-           baranggay: "Baranggay",
-           trademark: "Trademark",
-           city: "City",
-           province: "Province",
-           country: "Country"
-         },
-         contact: {
-           telephone: "0",
-           phonenumber: "0",
-           emailaddress: "None",
-           website: "None"
-         }
-        }
-       ],
-       branch: [],
-       franchise: []
+   details: {
+     companyname: "Kukaku",
+     description: {
+      companydescription: "Company description",
+      companymotto: "Company motto"
      }
-    },
-    product: {
-      list: [
-       {
-         productname: 'Kohaku',
-         rapportname: 'Rapport name',
-         definition: 'Product definition',
-         authentications: {
-          producttype: 'Product type',
-          productid: 'mrn-ricekohaku-1'
-         },
-         specifications: [ 
-           {
-             productname: 'Kohaku Yellow',
-             rapportname: 'Rapport name',
-             definition: 'Product definition',
-             authentications: {
-               producttype: 'Product type',
-               productid: 'mrn-ricekohaku-1-category1'
-             },
-             details: {
-              product: {
-               name: 'Kokaku / Kohaku Yellow',
-               rapportname: 'Product rapport name',
-               definition: 'Product definition',
-               category: 'MRN',
-               specification: {
-                for: {
-                 part: 'Product part',
-                 gender: "Male of Female, for all type's of gender",
-                 category: 'For adults and children above 4-6 months' 
+   },
+   locations: {
+    farm: [],
+    plantations: [],
+    manufacturing: [],
+    packaging: [],
+    distributing: [],
+    offices: {
+      main: [ 
+        {
+        location: {
+          street: "Street",
+          baranggay: "Baranggay",
+          trademark: "Trademark",
+          city: "City",
+          province: "Province",
+          country: "Country"
+        },
+        contact: {
+          telephone: "0",
+          phonenumber: "0",
+          emailaddress: "None",
+          website: "None"
+        }
+       }
+      ],
+      branch: [],
+      franchise: []
+    }
+   },
+   product: {
+     list: [
+      {
+        productname: 'Kohaku',
+        rapportname: 'Rapport name',
+        definition: 'Product definition',
+        authentications: {
+         producttype: 'Product type',
+         productid: 'mrn-ricekohaku-1'
+        },
+        specifications: [ 
+          {
+            productname: 'Kohaku Yellow',
+            rapportname: 'Rapport name',
+            definition: 'Product definition',
+            authentications: {
+              producttype: 'Product type',
+              productid: 'mrn-ricekohaku-1-category1'
+            },
+            details: {
+             product: {
+              name: 'Kokaku / Kohaku Yellow',
+              rapportname: 'Product rapport name',
+              definition: 'Product definition',
+              category: 'MRN',
+              specification: {
+               for: {
+                part: 'Product part',
+                gender: "Male of Female, for all type's of gender",
+                category: 'For adults and children above 4-6 months' 
+               },
+               set: {
+                set: false,
+                productindication: 'Oridinary',
+                pcs: 10
+               },
+               size: 'Product size',
+               color: 'Product color',
+               weight: 10,
+               top: 'Top product specification',
+               left: 'Left product specification',
+               bottom: 'Bottom product specification',
+               right: 'Right product specification',
+               front: 'Front product specification',
+               back: 'Back product specification'
+              },
+              pricesbreakdown: {
+                price: 10,
+                capital: 8,
+                suggested_retail_price: 10,
+                vat: {
+                  business: 2,
+                  vanguard: 2
+                }
+              },
+              cybervisual: {
+                images: {
+                  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                  maindisplayimages: [
+                  {
+                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                  },
+                  {
+                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                  },
+                  {
+                    displayimage: '../images/landingpage/bondpaperimage.jpg'
+                  }
+                  ]
                 },
-                set: {
-                 set: false,
-                 productindication: 'Oridinary',
-                 pcs: 10
+                videos: [
+                  {
+                    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                  },
+                  {
+                    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                  },
+                  {
+                    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                  },
+                  {
+                    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                  }
+                ]
+              }
+            },
+            locations: {
+              operations: [
+                {
+                  street: 'Street',
+                  baranggay: 'Baranggay',
+                  trademark: 'Trademark',
+                  city: 'City',
+                  province: 'Province',
+                  country: 'Country'
+                }
+              ]
+            }
+            },
+            system: {
+              request: {
+                pcs: 0,
+                orderspecification: "",
+                merchandise: {
+                  price: 0,
+                  capital: 0,
+                  suggested_retail_price: 0,
+                  vat: 0,
                 },
-                size: 'Product size',
-                color: 'Product color',
-                weight: 10,
-                top: 'Top product specification',
-                left: 'Left product specification',
-                bottom: 'Bottom product specification',
-                right: 'Right product specification',
-                front: 'Front product specification',
-                back: 'Back product specification'
-               },
-               pricesbreakdown: {
-                 price: 10,
-                 capital: 8,
-                 suggested_retail_price: 10,
-                 vat: 2
-               },
-               cybervisual: {
-                 images: {
-                   maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                   maindisplayimages: [
-                   {
-                     displayimage: '../images/landingpage/bondpaperimage.jpg'
-                   },
-                   {
-                     displayimage: '../images/landingpage/bondpaperimage.jpg'
-                   },
-                   {
-                     displayimage: '../images/landingpage/bondpaperimage.jpg'
-                   }
-                   ]
-                 },
-                 videos: [
-                   {
-                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                   },
-                   {
-                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                   },
-                   {
-                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                   },
-                   {
-                     youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                   }
-                 ]
-               }
-             },
-             locations: {
-               operations: [
-                 {
-                   street: 'Street',
-                   baranggay: 'Baranggay',
-                   trademark: 'Trademark',
-                   city: 'City',
-                   province: 'Province',
-                   country: 'Country'
-                 }
-               ]
-             }
-             },
-             system: {
-               request: {
-                 pcs: 0,
-                 orderspecification: "",
-                 merchandise: {
-                   price: 0,
-                   capital: 0,
-                   suggested_retail_price: 0,
-                   vat: 0,
-                 },
-                 shipping: {
-                  category: 'Shipping category',
-                  weight: 'Shipping weight',
-                  fee: 0
-                 },
-                 totalpayment: {
-                   price: 0
-                 },
-                 products: [
-                 ],
-               },
-               stocks: [
-                 {
-                   productname: 'Kohaku / Kohaku Yellow / White Grains',
-                   rapportname: 'Rapport name',
-                   definition: 'Product definition',
-                   authentications: {
-                     producttype: 'Product type',
-                     productid: 'mrn-ricekohaku-1-category1-product1'
-                    },
-                   details: {
-                   product: {
-                    name: 'Kokahu / Kohaku Yellow / White grains',
-                    rapportname: 'Product rapport name',
-                    definition: 'Product definition',
-                    category: 'MRN',
-                    specification: {
-                     for: {
-                      part: 'Product part',
-                      gender: 'Male',
-                      category: 'Adults' 
-                     },
-                     set: {
-                      set: false,
-                      productindication: 'Oridinary',
-                      pcs: 10
-                     },
-                     size: 'Product size',
-                     color: 'Product color',
-                     weight: 'Product weight',
-                     top: 'Top product specification',
-                     left: 'Left product specification',
-                     bottom: 'Bottom product specification',
-                     right: 'Right product specification',
-                     front: 'Front product specification',
-                     back: 'Back product specification'
-                     },
-                     pricesbreakdown: {
-                       price: 10,
-                       capital: 8,
-                       suggested_retail_price: 10,
-                       vat: 2
-                     },
-                     cybervisual: {
-                       images: {
-                         maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                         maindisplayimages: [
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         },
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         },
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         }
-                         ]
-                       },
-                       videos: [
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         }
-                       ]
-                     },
-                   },
-                   locations: {
-                     operations: [
-                       {
-                         street: 'Street',
-                         baranggay: 'Baranggay',
-                         trademark: 'Trademark',
-                         city: 'City',
-                         province: 'Province',
-                         country: 'Country'
-                       }
-                     ]
-                   }
-                   },
-                   system: {
-                     request: {
-                       pcs: 0,
-                       orderspecification: "",
-                       product: [
-                       ],
-                       shipping: {
-                        category: 'Shipping category',
-                        weight: 'Shipping weight',
-                        fee: 0
-                       }
-                     },
-                     stocks: [],
-                     purchase: {
-                       people: [],
-                       xirbit: []
-                     }
-                   }
-                 },
-                 {
+                shipping: {
+                 category: 'Shipping category',
+                 weight: 'Shipping weight',
+                 fee: 0
+                },
+                totalpayment: {
+                  price: 0
+                },
+                products: [
+                ],
+              },
+              stocks: [
+                {
                   productname: 'Kohaku / Kohaku Yellow / White Grains',
                   rapportname: 'Rapport name',
                   definition: 'Product definition',
                   authentications: {
-                   producttype: 'Product type',
-                   productid: 'mrn-ricekohaku-1-category1-product2'
-                  },
-                  details: {
-                   product: {
-                    name: 'Kohaku / Kohaku Yellow / White big grains',
-                    rapportname: 'Product rapport name',
-                    definition: 'Product definition',
-                    category: 'MRN',
-                    specification: {
-                     for: {
-                      part: 'Product part',
-                      gender: 'Male',
-                      category: 'Adults' 
-                     },
-                     set: {
-                      set: false,
-                      productindication: 'Oridinary',
-                      pcs: 10
-                     },
-                     size: 'Product size',
-                     color: 'Product color',
-                     weight: 'Product weight',
-                     top: 'Top product specification',
-                     left: 'Left product specification',
-                     bottom: 'Bottom product specification',
-                     right: 'Right product specification',
-                     front: 'Front product specification',
-                     back: 'Back product specification'
-                     },
-                     pricesbreakdown: {
-                       price: 10,
-                       capital: 8,
-                       suggested_retail_price: 10,
-                       vat: 2
-                     },
-                     cybervisual: {
-                       images: {
-                         maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
-                         maindisplayimages: [
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         },
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         },
-                         {
-                           displayimage: '../images/landingpage/bondpaperimage.jpg'
-                         }
-                         ]
-                       },
-                       videos: [
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         },
-                         {
-                           youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
-                         }
-                       ]
-                     },
+                    producttype: 'Product type',
+                    productid: 'mrn-ricekohaku-1-category1-product1'
                    },
-                   locations: {
-                     operations: [
-                       {
-                         street: 'Street',
-                         baranggay: 'Baranggay',
-                         trademark: 'Trademark',
-                         city: 'City',
-                         province: 'Province',
-                         country: 'Country'
-                       }
-                     ]
-                   }
+                  details: {
+                  product: {
+                   name: 'Kokahu / Kohaku Yellow / White grains',
+                   rapportname: 'Product rapport name',
+                   definition: 'Product definition',
+                   category: 'MRN',
+                   specification: {
+                    for: {
+                     part: 'Product part',
+                     gender: 'Male',
+                     category: 'Adults' 
+                    },
+                    set: {
+                     set: false,
+                     productindication: 'Oridinary',
+                     pcs: 10
+                    },
+                    size: 'Product size',
+                    color: 'Product color',
+                    weight: 'Product weight',
+                    top: 'Top product specification',
+                    left: 'Left product specification',
+                    bottom: 'Bottom product specification',
+                    right: 'Right product specification',
+                    front: 'Front product specification',
+                    back: 'Back product specification'
+                    },
+                    pricesbreakdown: {
+                      price: 10,
+                      capital: 8,
+                      suggested_retail_price: 10,
+                      vat: 2
+                    },
+                    cybervisual: {
+                      images: {
+                        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                        maindisplayimages: [
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        },
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        },
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        }
+                        ]
+                      },
+                      videos: [
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        }
+                      ]
+                    },
+                  },
+                  locations: {
+                    operations: [
+                      {
+                        street: 'Street',
+                        baranggay: 'Baranggay',
+                        trademark: 'Trademark',
+                        city: 'City',
+                        province: 'Province',
+                        country: 'Country'
+                      }
+                    ]
+                  }
                   },
                   system: {
-                     request: {
-                       pcs: 0,
-                       orderspecification: "",
-                       product: [
-                       ],
-                       shipping: {
-                        category: 'Shipping category',
-                        weight: 'Shipping weight',
-                        fee: 0
-                       }
-                     },
-                     stocks: [],
-                     purchase: {
-                       people: [],
-                       xirbit: []
-                     }
-                 }   
-                 }      
-               ],
-               purchase: {
-                 people: [],
-                 xirbit: []
-               }
-             }
-           }
-         ]
-       }
-      ]
-    },
-    projects: [
-     {
-     date: "111-111-111",
-     purpose: "Purpose",
-     status: "Status",
-     contributions: {
-       contributioncompletion: "0",
-       contributed: 0
-     },
-     locations: [
-       {
-       date: "111-111-111",
-       contribution: "0",
-       purpose: "Project purpose",
-       location: {
-         street: "Street",
-         trademark: "Trademark",
-         baranggay: "Baranggay",
-         city: "City",
-         province: "Province",
-         coutnry: "Country"
-       },
-       status: "Contributed must be complete to complete the project",
-       contributions: {
-         contributioncompletion: "0",  
-         contributed: 0
-       }
-       }
+                    request: {
+                      pcs: 0,
+                      orderspecification: "",
+                      product: [
+                      ],
+                      shipping: {
+                       category: 'Shipping category',
+                       weight: 'Shipping weight',
+                       fee: 0
+                      }
+                    },
+                    stocks: [],
+                    purchase: {
+                      people: [],
+                      xirbit: []
+                    }
+                  }
+                },
+                {
+                 productname: 'Kohaku / Kohaku Yellow / White Grains',
+                 rapportname: 'Rapport name',
+                 definition: 'Product definition',
+                 authentications: {
+                  producttype: 'Product type',
+                  productid: 'mrn-ricekohaku-1-category1-product2'
+                 },
+                 details: {
+                  product: {
+                   name: 'Kohaku / Kohaku Yellow / White big grains',
+                   rapportname: 'Product rapport name',
+                   definition: 'Product definition',
+                   category: 'MRN',
+                   specification: {
+                    for: {
+                     part: 'Product part',
+                     gender: 'Male',
+                     category: 'Adults' 
+                    },
+                    set: {
+                     set: false,
+                     productindication: 'Oridinary',
+                     pcs: 10
+                    },
+                    size: 'Product size',
+                    color: 'Product color',
+                    weight: 'Product weight',
+                    top: 'Top product specification',
+                    left: 'Left product specification',
+                    bottom: 'Bottom product specification',
+                    right: 'Right product specification',
+                    front: 'Front product specification',
+                    back: 'Back product specification'
+                    },
+                    pricesbreakdown: {
+                      price: 10,
+                      capital: 8,
+                      suggested_retail_price: 10,
+                      vat: 2
+                    },
+                    cybervisual: {
+                      images: {
+                        maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+                        maindisplayimages: [
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        },
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        },
+                        {
+                          displayimage: '../images/landingpage/bondpaperimage.jpg'
+                        }
+                        ]
+                      },
+                      videos: [
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        },
+                        {
+                          youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+                        }
+                      ]
+                    },
+                  },
+                  locations: {
+                    operations: [
+                      {
+                        street: 'Street',
+                        baranggay: 'Baranggay',
+                        trademark: 'Trademark',
+                        city: 'City',
+                        province: 'Province',
+                        country: 'Country'
+                      }
+                    ]
+                  }
+                 },
+                 system: {
+                    request: {
+                      pcs: 0,
+                      orderspecification: "",
+                      product: [
+                      ],
+                      shipping: {
+                       category: 'Shipping category',
+                       weight: 'Shipping weight',
+                       fee: 0
+                      }
+                    },
+                    stocks: [],
+                    purchase: {
+                      people: [],
+                      xirbit: []
+                    }
+                }   
+                }      
+              ],
+              purchase: {
+                people: [],
+                xirbit: []
+              }
+            }
+          }
+        ]
+      }
      ]
-     }
+   },
+   projects: [
+    {
+    date: "111-111-111",
+    purpose: "Purpose",
+    status: "Status",
+    contributions: {
+      contributioncompletion: "0",
+      contributed: 0
+    },
+    locations: [
+      {
+      date: "111-111-111",
+      contribution: "0",
+      purpose: "Project purpose",
+      location: {
+        street: "Street",
+        trademark: "Trademark",
+        baranggay: "Baranggay",
+        city: "City",
+        province: "Province",
+        coutnry: "Country"
+      },
+      status: "Contributed must be complete to complete the project",
+      contributions: {
+        contributioncompletion: "0",  
+        contributed: 0
+      }
+      }
     ]
+    }
+   ]
   },
   {
     details: {
@@ -5602,7 +5619,10 @@ const [companies, companiescb] = useState([
                  price: 10,
                  capital: 8,
                  suggested_retail_price: 10,
-                 vat: 2
+                 vat: {
+                   business: 2,
+                   vanguard: 2
+                 }
                },
                cybervisual: {
                  images: {
@@ -6008,10 +6028,13 @@ const [businesses, businessescb] = useState([
                 back: 'Back product specification'
                },
                pricesbreakdown: {
-                 price: 10,
-                 capital: 8,
-                 suggested_retail_price: 10,
-                 vat: 2
+                 price: 62,
+                 capital: 57,
+                 suggested_retail_price: 60,
+                 vat: {
+                  business: 3,
+                  vanguard: 2
+                 }
                },
                cybervisual: {
                  images: {
@@ -6417,7 +6440,10 @@ const [businesses, businessescb] = useState([
                  price: 10,
                  capital: 8,
                  suggested_retail_price: 10,
-                 vat: 2
+                 vat: {
+                  business: 2,
+                  vanguard: 2
+                 }
                },
                cybervisual: {
                  images: {
@@ -6738,6 +6764,8 @@ const [businesses, businessescb] = useState([
   }
 ]);
 
+//// recent products data 
+{/*
 const [products, productscb] = useState([
   {
     productname: 'Kohaku',
@@ -6796,10 +6824,13 @@ const [products, productscb] = useState([
            }
           },
           pricesbreakdown: {
-            price: 10,
-            capital: 8,
-            suggested_retail_price: 10,
-            vat: 2
+            price: 62,
+            capital: 57,
+            suggested_retail_price: 60,
+            vat: {
+              business: 3,
+              vanguard: 2
+            }
           },
           cybervisual: {
             images: {
@@ -7130,10 +7161,13 @@ const [products, productscb] = useState([
            }
           },
           pricesbreakdown: {
-            price: 10,
-            capital: 8,
-            suggested_retail_price: 10,
-            vat: 2
+            price: 62,
+            capital: 57,
+            suggested_retail_price: 60,
+            vat: {
+              business: 3,
+              vanguard: 2
+            }
           },
           cybervisual: {
             images: {
@@ -7427,6 +7461,827 @@ const [products, productscb] = useState([
     ]
   }
 ]);
+*/}
+
+const [products, productscb] = useState([
+{
+productname: 'Kohaku',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 50 kilogram's of kohaku rice, sold per 1 sack weighting 25 kilogram's of kohaku rice, sold per 1 bag weighting kilogram's 7 of kohaku rice, sold per 1 bag weighting kilogram's 5 of kohaku rice, sold per 1 bag weighting kilogram's 1  of kohaku rice",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1'
+},
+specification: {
+for: {
+part: "50 kilogram's, 25 kilogram's, 7 kilogram's, 5 kilogram's, 1 kilogram's",
+gender: "Male, Female, All type's of gender",
+category: "For adult's and for children's above 6 months"
+}
+},
+specifications: [ 
+{
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 50 kilogram's of kohaku rice, sold per 1 sack weighting 25 kilogram's of kohaku rice, sold per 1 bag weighting kilogram's 7 of kohaku rice, sold per 1 bag weighting kilogram's 5 of kohaku rice, sold per 1 bag weighting kilogram's 1  of kohaku rice",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 50 kilogram's of kohaku rice, sold per 1 sack weighting 25 kilogram's of kohaku rice, sold per 1 bag weighting kilogram's 7 of kohaku rice, sold per 1 bag weighting kilogram's 5 of kohaku rice, sold per 1 bag weighting kilogram's 1  of kohaku rice",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '50kg, 25kg, 7kg, 1kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 50000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+bottom: 'Covered with color yellow',
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: "Color yellow",
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  {
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 50 kilogram's of kohaku rice, sold per 1 sack weighting 25 kilogram's of kohaku rice, sold per 1 bag weighting kilogram's 7 of kohaku rice, sold per 1 bag weighting kilogram's 5 of kohaku rice, sold per 1 bag weighting kilogram's 1  of kohaku rice",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1-50kg'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 50 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '50kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 50000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+bottom: 'Covered with color yellow',
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: 'Color yellow',
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+},    
+{
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 25 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1-25kg'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 25 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '25kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 25000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+bottom: "Covered with color yellow",
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: 'Color yellow',
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+},       
+{
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 bag weighting 7 kilogram's.",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1-7kg'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 7 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '7kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 7000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+bottom: 'Covered with color yellow',
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: 'Color yellow',
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+},    
+{
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 bag weighting 5 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1-5kg'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 sack weighting 5 kilogram's of kohaku rice.",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '5kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 5000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+bottom: 'Covered with color yellow',
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: 'Color yellow',
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+},
+{
+productname: 'Kohaku plus jasmine rice ( Yellow )',
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 bag weighting 1 kilogram of kohaku rice",
+category: 'Food/Rice',
+authentications: {
+producttype: 'Food',
+productid: 'nonmrn-ricekohaku-1-category1-1kg'
+},
+details: {
+product: {
+name: "Kohaku plus jasmine rice ( Yellow )",
+rapportname: "As you cook this rice, your kitchen will be filled with a captivating aroma. It entices the senses and creates anticipation for a truly delightful meal",
+definition: "This premium rice variety is known for it's exquisite aroma, delicate flavor, and fluffy texture. Each grain of rice is long, slender, and separate. Sold per 1 bag weighting 1 kilogram of kohaku rice.",
+category: 'Food/Rice',
+specification: {
+for: {
+part: '1kg',
+gender: "Male, Female, All type's of gender",
+category: "For adult's, for children's above 6 months"
+},
+set: {
+set: false,
+productindication: 'Special',
+pcs: 0
+},
+size: 'To determine',
+color: 'Yellow',
+weight: 1000,
+top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom",
+bottom: 'Covered with color yellow',
+right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom",
+front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+back: 'Color yellow',
+facts: {
+ingredients: []
+}
+},
+pricesbreakdown: {
+price: 62,
+capital: 57,
+suggested_retail_price: 60,
+vat: {
+  business: 3,
+  vanguard: 2
+}
+},
+cybervisual: {
+images: {
+  maindisplayimage: '../images/landingpage/bondpaperimage.jpg',
+  maindisplayimages: [
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  },
+  {
+    displayimage: '../images/landingpage/bondpaperimage.jpg'
+  }
+  ]
+},
+videos: [
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  },
+  {
+    youtubelink: 'https://www.youtube.com/watch?v=Kr3oqC5YgKw'
+  }
+]
+}
+},
+locations: {
+operations: [
+{
+  street: 'Street',
+  baranggay: 'Baranggay',
+  trademark: 'Trademark',
+  city: 'City',
+  province: 'Province',
+  country: 'Country'
+}
+]
+}
+},
+system: {
+request: {
+pcs: 0,
+orderspecification: "",
+merchandise: {
+  price: 0,
+  capital: 0,
+  suggested_retail_price: 0,
+  vat: {
+    business: 0,
+    vanguard: 0
+  },
+},
+shipping: {
+  category: 'Shipping category',
+  weight: 'Shipping weight',
+  fee: 0
+},
+totalpayment: {
+  price: 0
+},
+products: [
+],
+},
+stocks: [
+  
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+}
+],
+purchase: {
+people: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+},
+vanguard: {
+  withinthiscoming15days: [],
+  last15days: [],
+  history: []
+}
+}
+}
+}
+]
+}
+]);
+
 
 const [fooddepartment, fooddepartmentcb] = useState([]);
 const [condiments, condimentscb] = useState([]);
@@ -7441,8 +8296,32 @@ const [purchasing, purchasingcb] = useState([
   rapportname: 'Rapport name',
   definition: 'Product definition',
   authentications: {
-   producttype: 'Product type',
+   producttype: 'Food',
    productid: 'mrn-ricekohaku-1-category1'
+  },
+  specification: {
+    for: {
+    part: '50kg, 25kg, 7kg, 1kg',
+    gender: "Male, Female, All type's of gender",
+    category: "For adult's, for children's above 6 months"
+    },
+    set: {
+    set: false,
+    productindication: 'Special',
+    pcs: 0
+    },
+    size: 'To determine',
+    color: 'Yellow',
+    weight: 50000,
+    top: "The sack opening. Backgrounded color yellow that has white color threads for the sack's closure and for it's opening",
+    left: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+    bottom: 'Covered with color yellow',
+    right: "A wide red line indicating additional information's like contact numbers. This design occupy the sack's left side from top to bottom ",
+    front: "Backgrounded color yellow in design with white and red colors for it's lettering indicating the name of the product, it's product rapport and additional information's like the specification product specification and the product logo",
+    back: "Color yellow",
+    facts: {
+    ingredients: []
+    }
   },
   details: {
   product: {
@@ -7475,7 +8354,10 @@ const [purchasing, purchasingcb] = useState([
       price: 10,
       capital: 8,
       suggested_retail_price: 10,
-      vat: 2
+      vat: {
+        business: 0,
+        vanguard: 0
+      }
    },
    cybervisual: {
       images: {
@@ -7529,16 +8411,19 @@ const [purchasing, purchasingcb] = useState([
         price: 0,
         capital: 0,
         suggested_retail_price: 0,
-        vat: 0,
+        vat: {
+          business: 0,
+          vanguard: 0
+        },
       },
       shipping: {
         category: 'Shipping category',
-        weight: 'Shipping weight',
+        weight: 0,
         fee: 0
-       },
-       totalpayment: {
+      },
+      totalpayment: {
          price: 0
-       },
+      },
       products: [
       ],
     },
@@ -7778,13 +8663,94 @@ const [purchasing, purchasingcb] = useState([
  }
 ]); 
 
+const [purchasingtransactiondata, purchasingtransactiondatacb] = useState(
+  {
+  date: [],
+  status: {
+    current: [],
+    requested: [],
+    confirmedandtobedelivered: [],
+    delayed: [],
+    delivered: [],
+    confirmedasrecieved: []
+  },
+  transactionid: "",
+  transactiontype: "",
+  user: {
+    authentications: user.authentications,
+    details: user.details
+  }, 
+  messages: [
+  ],
+  products: {
+   list: [],
+   pricesbreakdown: {
+    merchandise: {
+    totalpayment: 0,
+    totalcapital: 0,
+    total_suggested_retail_price:0,
+    totalvat: 0,
+    },
+    cargo: {
+      fee: 0
+    },
+    payment: {
+    funds: {
+      deducted: false,
+      amount: 0,
+    },
+    money: {
+      deducted: false,
+      amount: 0
+    },
+    totalpayment: 0
+    }
+  }
+  },
+  cargo: {
+   cargotype: "",
+   cargoexpress: "",
+   weight: 0,
+   fee: 0,
+   locations: {
+    destination: {
+      street: "",
+      baranggay: "",
+      trademark: "",
+      city: "",
+      province: "",
+      country: "",
+    },
+    branch: {
+      street: "",
+      baranggay: "",
+      city: "",
+      province: "",
+      country: "",
+    }
+   }
+  },
+  payments: {
+    totalproductpayment: 0,
+    cargo: 0
+  },
+  transactiongiveaway: {
+    purchaser: 0,
+    people: 0,
+    vanguard: 0
+  } 
+  }
+);
+
 const [requesttransactiondata, requesttransactiondatacb] = useState(
 {
-date: [{
+date: [
+  {
  status: "Purchasing details submitted",  
  date: "1111-1111-111",
  message: "All date are to purchase are gathered",
-}],
+}
+],
 status: {
   current: [],
   requested: [],
@@ -8073,7 +9039,6 @@ const navigate = useNavigate();
                                      purchasingcb={purchasingcb}
                                      databasedata={databasedata}
                                      databasedatacb={databasedatacb}
-
                                      manualcargoaddressdestinationloadingindication={manualcargoaddressdestinationloadingindication}
                                      manualcargoaddressdestinationloadingindicationcb={manualcargoaddressdestinationloadingindicationcb}
                                      setascargodestinationloadingindication={setascargodestinationloadingindication}
@@ -8084,6 +9049,8 @@ const navigate = useNavigate();
                                      purchasingcargoaddresssetcb={purchasingcargoaddresssetcb}
                                      purchasingtotalmerchandisepayment={purchasingtotalmerchandisepayment}
                                      purchasingtotalmerchandisepaymentcb={purchasingtotalmerchandisepaymentcb}
+                                     purchasingtotalitems={purchasingtotalitems}
+                                     purchasingtotalitemscb={purchasingtotalitemscb}
                                      purchasingtotalweight={purchasingtotalweight}
                                      purchasingtotalweightcb={purchasingtotalweightcb}
                                      purchasingtotalcargofee={purchasingtotalcargofee}
@@ -8107,8 +9074,16 @@ const navigate = useNavigate();
                                      selectedproductarraylength={selectedproductarraylength}
                                      selectedproductarraylengthcb={selectedproductarraylengthcb}
 
+                                     purchasingtotalpricemrnproducts={purchasingtotalpricemrnproducts}
+                                     purchasingtotalpricemrnproductscb={purchasingtotalpricemrnproductscb} 
+                                     purchasingtotalpricenonmrnproducts={purchasingtotalpricenonmrnproducts}
+                                     purchasingtotalpricenonmrnproductscb={purchasingtotalpricenonmrnproductscb}
+
                                      requesttransactiondata={requesttransactiondata}
                                      requesttransactiondatacb={requesttransactiondatacb}
+
+                                     purchasingpaymentset={purchasingpaymentset}
+                                     purchasingpaymentsetcb={purchasingpaymentsetcb}
                                      
                                     />}>
          </Route>

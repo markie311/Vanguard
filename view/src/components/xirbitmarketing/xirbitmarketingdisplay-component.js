@@ -971,7 +971,7 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
            }}>Condiments</p>
        </Col>
        <Col id="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer">
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
+       <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
            <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
             <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
                onClick={()=> {
@@ -988,116 +988,6 @@ const [selectedmerchandise, selectedmerchandisecb] = useState({
                }}>Rice</p>
            </Col>
            <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-           </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-            <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-               onClick={()=> {
-                const _condimentsdepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-             
-            if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[1].style.height === "") {
-                _condimentsdepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
-             } else if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[1].style.height === "0px" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[1].style.height = "100vh";
-             } else {
-                _condimentsdepartmentcategoryspecificationproductlistcontainer[1].style.height = "0px";
-            }
-               }}>Canned</p>
-           </Col>
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-           </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-          <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-           <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-              onClick={()=> {
-               const _fooddepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-            
-           if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "") {
-               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
-            } else if ( _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height === "0px" ) {
-             _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "100vh";
-            } else {
-               _fooddepartmentcategoryspecificationproductlistcontainer[2].style.height = "0px";
-           }
-              }}>Cupped</p>
-          </Col>
-          <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-          </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-            <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-               onClick={()=> {
-                const _condimentsdepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-             
-            if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[3].style.height === "") {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
-             } else if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[3].style.height === "0px" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[3].style.height = "100vh";
-             } else {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[3].style.height = "0px";
-            }
-               }}>Bread</p>
-           </Col>
-           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-           </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-            <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-               onClick={()=> {
-                const _condimentsdepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-             
-            if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[4].style.height === "") {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
-             } else if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[4].style.height === "0px" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[4].style.height = "100vh";
-             } else {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[4].style.height = "0px";
-            }
-               }}>Snacks</p>
-           </Col>
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-           </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-            <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-               onClick={()=> {
-                const _condimentsdepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-             
-            if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[5].style.height === "") {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
-             } else if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[5].style.height === "0px" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[5].style.height = "100vh";
-             } else {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[5].style.height = "0px";
-            }
-               }}>Meat</p>
-           </Col>
-           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
-           </Col>
-         </Col>
-         <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-layoutcontainer-categoryspecificationcontainer">
-           <Col className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryspecificationheaderindicationcontainer">
-            <p className="marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-categoryheaderindication"
-               onClick={()=> {
-
-                const _condimentsdepartmentcategoryspecificationproductlistcontainer = document.querySelectorAll(".marketing-merchandisescontainer-condimentsdepartment-categoryspecificationheaderindicationcontainer-productlistcontainer");
-             
-            if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[6].style.height === "" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
-             } else if ( _condimentsdepartmentcategoryspecificationproductlistcontainer[6].style.height === "0px" ) {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[6].style.height = "100vh";
-             } else {
-              _condimentsdepartmentcategoryspecificationproductlistcontainer[6].style.height = "0px";
-            }
-
-              }}>Drinks</p>
-           </Col>
-           <Col className="marketing-merchandisescontainer-fooddepartment-categoryspecificationheaderindicationcontainer-productlistcontainer">
            </Col>
          </Col>
        </Col>
@@ -1614,7 +1504,7 @@ function MarketingDisplayMerchandiseDetails(props) {
                 return (
                   <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-stocksspecificationsheaderindication'
                       key={stocksidx}>
-                      0{stocksidx}. product category, xs size, color green weighting 0 grams, that has a front design, that has a back design, that has a top design, that has a left design, that has a bottom design, that has a right design -> <br /> <span className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton'
+                      0{stocksidx}. {stocks.details.product.specification.for.part},  {stocks.details.product.specification.for.gender}, {stocks.details.product.specification.for.category}. Product cateroy is {stocks.details.product.category}, size is {stocks.details.product.specification.size}, color is {stocks.details.product.specification.color}, weighting {stocks.details.product.specification.weight} grams, that has a {stocks.details.product.specification.front} front design, that has a {stocks.details.product.specification.back} back design, that has a top {stocks.details.product.specification.top} design, that has a {stocks.details.product.specification.left} left design, that has a {stocks.details.product.specification.bottom} bottom design, that has a {stocks.details.product.specification.right} right design -> <br /> <span className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton'
                                                                                                                                                                                                                                               onClick={(evt)=> {
 
                                                                                                                                                                                                                                                 const _allbuttons = document.querySelectorAll('.marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-merchandisedetailscontainer-detailscontainer-merchandisedetailscontainermerchandisedetailscontainer-merchandisedetailsheaderindication-viewproductparcelboxspanbutton');
@@ -1756,8 +1646,8 @@ function MarketingDisplayPaymentDetails(props) {
                key={selectedmerchandiseidx}
                className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer'>
             <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>For</p>
-            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>{selectedmerchandise.details.product.specification.for.gender}, {selectedmerchandise.details.product.specification.for.category}</p> 
-            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>Dont worry about the experience's. All of this was prepared personally. Preparations will tell it have freedom before selecting "ALONE".</p>
+            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>{selectedmerchandise.details.product.specification.for.part}, {selectedmerchandise.details.product.specification.for.gender}, {selectedmerchandise.details.product.specification.for.category}. Product cateroy is {selectedmerchandise.details.product.category}, size is {selectedmerchandise.details.product.specification.size}, color is {selectedmerchandise.details.product.specification.color}, weighting {selectedmerchandise.details.product.specification.weight} grams, that has a {selectedmerchandise.details.product.specification.front} front design, that has a {selectedmerchandise.details.product.specification.back} back design, that has a {selectedmerchandise.details.product.specification.top} top design, that has a {selectedmerchandise.details.product.specification.left} left design, that has a {selectedmerchandise.details.product.specification.bottom} bottom design, that has a {selectedmerchandise.details.product.specification.right} right design.</p> 
+            <p className='marketing-merchandisescontainer-merchandisemodal-merchandiseviewgridcontainerheader-paymentdetailscontainer-layoutcontainer-headerindication'>Dont worry about the experience's. All of this was prepared personally. Preparations will tell it have freedom before selecting "ADD TO PURCHASING".</p>
              <Col className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingcontainer'>
               <button className='marketing-merchandisecontainer-merchandisemodal-addtopurchasingbutton'
                       onClick={(evt)=> {

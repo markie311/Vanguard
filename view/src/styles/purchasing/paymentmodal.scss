@@ -636,8 +636,7 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center; 
-padding:10px;
-padding-top:4vh;
+padding:25px 30px;
 }
 .paymentmodal-gridcontainer-paymentgridcontainer-moneyheaderindication {
 position:relative;
@@ -666,7 +665,7 @@ position:relative;
 border:0.1vh solid white;
 border-radius:40px;
 height:5vh;
-width:10%;
+width:15%;
 overflow:hidden;
 }
 #paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-moneyheaderindicationcontainer-togglebutton {
@@ -683,15 +682,14 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center; 
-padding:10px;
-padding-top:4vh;
+padding-top:10px 30px;
 }
 #paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglecontainer {
 position:relative;
 border:0.1vh solid white;
 border-radius:40px;
 height:5vh;
-width:10%;
+width:15%;
 overflow:hidden;
 }
 #paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-fundsheaderindicationcontainer-togglebutton {
@@ -980,8 +978,8 @@ color:white;
 .paymentmodal-gridcontainer-paymentgridcontainer-headerindicationcontainer-paymentresponsemessagecontainer-moneyandfundsdeductionsgridcontainer {
 position:relative;
 height:auto;
-width:100%;
-margin-top:5vh;
+width:150%;
+margin-top:15vh;
 margin-left:auto;
 margin-right:auto;
 display:none;
@@ -1037,7 +1035,7 @@ font: auto {
 }
 color:tomato;
 letter-spacing:3px;
-top:2vh;
+top:6vh;
 right:2vh;
 }
 .paymentmodal-gridcontainer-paymentgridcontainer-merchandiselistheaderindication {

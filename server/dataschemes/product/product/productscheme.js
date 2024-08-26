@@ -609,6 +609,18 @@ authentications: {
   type: "string"
 },
 },
+specification: {
+for: {
+part: {
+ type: 'string'
+},
+gender: {
+  type: 'string'
+},
+category: {
+  type: 'string'
+ }
+},
 specifications: [transactionproductspecificationscheme]
 });
 

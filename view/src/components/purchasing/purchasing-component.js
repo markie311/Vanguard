@@ -156,7 +156,7 @@ export default function Purchasing(props) {
              lg={12}
              className='purchasing-gridcontainer-gridcontentcontainer'>
           <PurchasingDetails user={props.user}
-
+ 
                              allselectedproduct={allselectedproduct}
                              allselectedproductcb={allselectedproductcb}
                              allnonmrnselectedproduct={allnonmrnselectedproduct}
@@ -189,6 +189,8 @@ export default function Purchasing(props) {
                              purchasingcargoaddresssetcb={props.purchasingcargoaddresssetcb}
                              purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
                              purchasingtotalmerchandisepaymentcb={props.purchasingtotalmerchandisepaymentcb}
+                             purchasingtotalitems={props.purchasingtotalitems}
+                             purchasingtotalitemscb={props.purchasingtotalitemscb}
                              purchasingtotalweight={props.purchasingtotalweight}
                              purchasingtotalweightcb={props.purchasingtotalweightcb}
                              purchasingtotalcargofee={props.purchasingtotalcargofee}
@@ -212,9 +214,17 @@ export default function Purchasing(props) {
                              
                              purchasingcheckoutdetailsmodaldisplayproperty={purchasingcheckoutdetailsmodaldisplayproperty}
                              purchasingcheckoutdetailsmodaldisplaypropertycb={purchasingcheckoutdetailsmodaldisplaypropertycb}
+
+                             purchasingtotalpricemrnproducts={props.purchasingtotalpricemrnproducts}
+                             purchasingtotalpricemrnproductscb={props.purchasingtotalpricemrnproductscb} 
+                             purchasingtotalpricenonmrnproducts={props.purchasingtotalpricenonmrnproducts}
+                             purchasingtotalpricenonmrnproductscb={props.purchasingtotalpricenonmrnproductscb}
                              
                              requesttransactiondata={props.requesttransactiondata}
-                             requesttransactiondatacb={props.requesttransactiondatacb}/>
+                             requesttransactiondatacb={props.requesttransactiondatacb}
+                             
+                             purchasingpaymentset={props.purchasingpaymentset}
+                             purchasingpaymentsetcb={props.purchasingpaymentsetcb}/>
         </Col>
 
       </Row>
@@ -242,16 +252,20 @@ export default function Purchasing(props) {
                         paymentmethodset={paymentmethodset}
                         paymentmethodsetcb={paymentmethodsetcb}
                         operations={operations} 
-                        
                         purchasingcargodestination={props.purchasingcargodestination}
                         purchasingtotalmerchandisepayment={props.purchasingtotalmerchandisepayment}
                         purchasingtotalweight={props.purchasingtotalweight}
                         purchasingtotalcargofee={props.purchasingtotalcargofee}
                         purchasingtotalpayment={props.purchasigtotalpayment}
+                        purchasingpaymentset={props.purchasingpaymentset}
                         purchasingpaymentsetcb={props.purchasingpaymentsetcb}
 
                         purchasingcargoaddressset={props.purchasingcargoaddressset}
 
+                        purchasingtotalpricemrnproducts={props.purchasingtotalpricemrnproducts}
+                        purchasingtotalpricemrnproductscb={props.purchasingtotalpricemrnproductscb} 
+                        purchasingtotalpricenonmrnproducts={props.purchasingtotalpricenonmrnproducts}
+                        purchasingtotalpricenonmrnproductscb={props.purchasingtotalpricenonmrnproductscb}
 
                         purchasingtotalmrnproducts={props.purchasingtotalmrnproducts}
                         purchasingmrnproductstotalweight={props.purchasingmrnproductstotalweight}
