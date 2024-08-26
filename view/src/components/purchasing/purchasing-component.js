@@ -416,6 +416,7 @@ export default function Purchasing(props) {
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"
               onClick={ async (evt)=> {
 
+                 alert("On development");
                  const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
                  const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
                  const _checkoutresponseloadingindicator = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"); 
@@ -576,7 +577,7 @@ export default function Purchasing(props) {
                      
                  props.requesttransactiondata.messages.push(_requesttransactiondatamessage);
                  props.requesttransactiondata.products.list = props.selectedproductarray;
-
+                {/*
                  await axiosCreatedInstance.post("/purchasing/submitpayment/", {
                    $requesttransactiondata:  props.requesttransactiondata
                   }).then((response)=> {
@@ -591,7 +592,7 @@ export default function Purchasing(props) {
                   //     loadWelcomeIntroductionModal();
                   }
                  })
-
+                */}
                    // _checkoutresponsedisplayimage.src = "../images/purchasing/checkout/checkouterror.png";
                   //  _checkoutresponsedisplayimage.style.display = "block";
                   // _checkoutresponsedisplayimage.style.display = "block";
