@@ -8351,13 +8351,13 @@ const [purchasing, purchasingcb] = useState([
     back: 'Back product specification'
    },
    pricesbreakdown: {
-      price: 10,
-      capital: 8,
-      suggested_retail_price: 10,
-      vat: {
-        business: 0,
-        vanguard: 0
-      }
+    price: 62,
+    capital: 57,
+    suggested_retail_price: 60,
+    vat: {
+      business: 3,
+      vanguard: 2
+    }
    },
    cybervisual: {
       images: {

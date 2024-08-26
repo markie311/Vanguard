@@ -839,16 +839,16 @@ useEffect(()=> {
 
                           _pricesbreakdownmodal.style.height = "auto";
 
-                          const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.suggested_retail_price)}, 0);
-                          const _purchasingbusinessvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.business)}, 0);
-                          const _purchasingvanguardvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.vanguard)}, 0);
-                          const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.capital)}, 0);
-                          const _purchasingoveralltotalpcspricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
-                          const _purchasingproducttotalpaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
-                          const _purchasingcargototalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
-                          const  _purchasingweightpricebreakdown  = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
-                          const _purchasingreciepttotalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
-
+                          const _purchasingsrppricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.suggested_retail_price)}, 0);
+                          const _purchasingbusinessvatpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.business)}, 0);
+                          const _purchasingvanguardvatpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.vanguard)}, 0);
+                          const _purchasingoverallcapitalpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.capital)}, 0);
+                          const _purchasingoveralltotalpcspricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
+                          const _purchasingproducttotalpaymentpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+                          const _purchasingcargototalpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
+                          const  _purchasingweightpricebreakdown  = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
+                          const _purchasingreciepttotalpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
+                          
                           const $purchasertransactiongiveaway =  _purchasingbusinessvatpricebreakdown / 2;
                           const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
                           const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
