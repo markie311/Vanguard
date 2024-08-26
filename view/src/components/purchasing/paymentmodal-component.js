@@ -840,7 +840,8 @@ useEffect(()=> {
                           _pricesbreakdownmodal.style.height = "auto";
 
                           const _purchasingsrppricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.suggested_retail_price)}, 0);
-                          const _purchasingvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat)}, 0);
+                          const _purchasingbusinessvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.business)}, 0);
+                          const _purchasingvanguardvatpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.vat.vanguard)}, 0);
                           const _purchasingoverallcapitalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.capital)}, 0);
                           const _purchasingoveralltotalpcspricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.pcs)}, 0);
                           const _purchasingproducttotalpaymentpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
@@ -848,21 +849,21 @@ useEffect(()=> {
                           const  _purchasingweightpricebreakdown  = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
                           const _purchasingreciepttotalpricebreakdown = props.selectedproductarray.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
 
-                            const $purchasertransactiongiveaway =  _purchasingvatpricebreakdown / 2;
-                            const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
-                            const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
-                            const _vanguard = _purchasingvatpricebreakdown - ( $purchasertransactiongiveaway +  $authenticationstransactiongiveaway);
-                            const authenticationsshare = _purchasingvatpricebreakdown - (  $purchasertransactiongiveaway  +  _vanguard);
+                          const $purchasertransactiongiveaway =  _purchasingbusinessvatpricebreakdown / 2;
+                          const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
+                          const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
+                          const _vanguard = _purchasingbusinessvatpricebreakdown - ( $purchasertransactiongiveaway +  $authenticationstransactiongiveaway);
+                          const authenticationsshare = _purchasingbusinessvatpricebreakdown - (  $purchasertransactiongiveaway  +  _vanguard);
 
                           _pricesbreakdownmodalgoldbarheaderindication[0].innerText = `Total SRP's, ${_purchasingsrppricebreakdown} pesos`;
-                          _pricesbreakdownmodalgoldbarheaderindication[1].innerText = `Total VAT'S, ${_purchasingvatpricebreakdown} pesos`;
+                          _pricesbreakdownmodalgoldbarheaderindication[1].innerText = `Total VAT'S, ${_purchasingbusinessvatpricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[2].innerText = `Total CAPITAL, ${_purchasingoverallcapitalpricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[3].innerText = `Overall total pc's, ${_purchasingoveralltotalpcspricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[4].innerText = `Payment, ${_purchasingproducttotalpaymentpricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[5].innerText = `Cargo total, ${_purchasingcargototalpricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[6].innerText = `Weight, ${_purchasingweightpricebreakdown} grams`;
                           _pricesbreakdownmodalgoldbarheaderindication[7].innerText = `Reciept total, ${_purchasingproducttotalpaymentpricebreakdown + _purchasingcargototalpricebreakdown} pesos`;
-                          _pricesbreakdownmodalgoldbarheaderindication[8].innerText = `Transaction give away, ${_purchasingvatpricebreakdown} pesos`;
+                          _pricesbreakdownmodalgoldbarheaderindication[8].innerText = `Transaction give away, ${_purchasingbusinessvatpricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[9].innerText = `Your transaction give away, ${$purchasertransactiongiveaway} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[10].innerText = `Shared through all, ${$authenticationstransactiongiveaway} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[11].innerText = `Vanguard, ${_vanguard} pesos`;
@@ -946,7 +947,6 @@ useEffect(()=> {
                           // alert(JSON.stringify(props.user.authentication))
                           //alert(JSON.stringify(_operationscope))
                           //alert(JSON.stringify(props.operations))
-
 
                           if ( _moneytogglebuttonmarginproperty !== '50%' && _fundstogglebuttonmarginproperty !== '50%' ) {
                             _paymentresponsemessage.style.color = 'white';
