@@ -411,11 +411,11 @@ const [user, usercb] = useState({
   },
   moneyandfunds: {
    money: {
-    amount: 200,
+    amount: 10000,
     history: []
   },
   funds: {
-   amount: 100,
+   amount: 10000,
    history: []
   }   
   },
@@ -8342,7 +8342,7 @@ const [purchasing, purchasingcb] = useState([
     },
     size: 'Product size',
     color: 'Product color',
-    weight: 10,
+    weight: 1000,
     top: 'Top product specification',
     left: 'Left product specification',
     bottom: 'Bottom product specification',
