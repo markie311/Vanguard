@@ -848,12 +848,11 @@ useEffect(()=> {
                           const _purchasingcargototalpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.fee)}, 0);
                           const  _purchasingweightpricebreakdown  = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.shipping.weight)}, 0);
                           const _purchasingreciepttotalpricebreakdown = props.purchasing.reduce((previousValue, currentValue)=> { return Number(previousValue) + Number(currentValue.system.request.merchandise.price)}, 0);
-                          
-                          const $purchasertransactiongiveaway =  _purchasingbusinessvatpricebreakdown / 2;
-                          const $transactiongiveawaypurchaserdeducted = $purchasertransactiongiveaway;
-                          const $authenticationstransactiongiveaway = $transactiongiveawaypurchaserdeducted / 2.5;
-                          const _vanguard = _purchasingbusinessvatpricebreakdown - ( $purchasertransactiongiveaway +  $authenticationstransactiongiveaway);
-                          const authenticationsshare = _purchasingbusinessvatpricebreakdown - (  $purchasertransactiongiveaway  +  _vanguard);
+
+                          const $purchasertransactiongiveaway =  _purchasingbusinessvatpricebreakdown;
+                          const $authenticationstransactiongiveaway = $purchasertransactiongiveaway;
+                          const _vanguard = _purchasingvanguardvatpricebreakdown;
+                          const authenticationsshare = _vanguard;
 
                           _pricesbreakdownmodalgoldbarheaderindication[0].innerText = `Total SRP's, ${_purchasingsrppricebreakdown} pesos`;
                           _pricesbreakdownmodalgoldbarheaderindication[1].innerText = `Total VAT'S, ${_purchasingbusinessvatpricebreakdown} pesos`;
