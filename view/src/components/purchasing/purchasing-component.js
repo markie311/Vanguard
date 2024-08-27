@@ -416,7 +416,9 @@ export default function Purchasing(props) {
           <h1 id="purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-submitindication"
               onClick={ async (evt)=> {
 
-                 alert("On development");
+                
+
+                alert("On development");
                  const _checkoutresponsedisplayimage = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck");
                  const _checkoutresponsemessage = document.querySelectorAll(".purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-responsemessage"); 
                  const _checkoutresponseloadingindicator = document.querySelector("#purchasingdetails-purchasingcheckoutdetailscontainer-confirmationcontainer-checkoutcheck-loadingindicator"); 

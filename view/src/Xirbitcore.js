@@ -8282,7 +8282,6 @@ vanguard: {
 }
 ]);
 
-
 const [fooddepartment, fooddepartmentcb] = useState([]);
 const [condiments, condimentscb] = useState([]);
 const [meat, meatcb] = useState([]);
